@@ -35,11 +35,10 @@ jobs:
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
 
+      # Requisito previo (una sola vez, en el repositorio):
+      # Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
       - uses: actions/configure-pages@v5
         id: pages
-        with:
-          # Activa Pages en el repositorio si el owner todavia no lo hizo.
-          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
