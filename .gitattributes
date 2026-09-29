@@ -1,0 +1,16 @@
+# Normaliza finales de linea en el repo (CRLF en Windows, LF en Linux/CI).
+* text=auto eol=lf
+
+# Binarios: no tocar
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.stl binary
+*.glb binary
+*.gltf binary
+*.mp4 binary

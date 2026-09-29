@@ -1,0 +1,33 @@
+{
+  "slug": "apostol-pablo",
+  "nombre": "Apóstol Pablo",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol de los gentiles",
+  "resumen": "De perseguidor a heraldo: el evangelio sin fronteras hasta Roma.",
+  "tags": ["Apóstoles", "Epístolas", "Misiones", "Roma"],
+  "portada": "/img/personajes/ApostolPablo/ApostolPabloPoseNormal.webp",
+  "escenas": [
+    "/img/personajes/ApostolPablo/ApostolPabloCortandoHerejias.webp",
+    "/img/personajes/ApostolPablo/ApostolPabloSeñalando.webp",
+    "/img/personajes/ApostolPablo/Escenas_de_Vida/ApostolPablo1.webp",
+    "/img/personajes/ApostolPablo/Escenas_de_Vida/ApostolPablo2.webp",
+    "/img/personajes/ApostolPablo/Escenas_de_Vida/ApostolPablo3.webp",
+    "/img/personajes/ApostolPablo/Escenas_de_Vida/ApostolPablo4.webp",
+    "/img/personajes/ApostolPablo/Escenas_de_Vida/ApostolPablo5.webp",
+    "/img/personajes/ApostolPablo/Escenas_de_Vida/ApostolPablo7.webp",
+    "/img/personajes/ApostolPablo/Escenas_de_Vida/ApostolPablo8.webp"
+  ],
+  "bio": [
+    "Saulo de Tarso, fariseo formado a los pies de Gamaliel, perseguía a la Iglesia con celo legal cuando el Resucitado lo detuvo en el camino a Damasco. El mayor adversario del cristianismo temprano se convirtió en su heraldo incansable.",
+    "Recorrió el mundo mediterráneo fundando iglesias y escribió catorce cartas —desde la argumentación de Romanos hasta la ternura de Filemón—. Aceptó cadenas con alegría: «Cuando estoy débil, entonces soy fuerte» (2 Co 12, 10). Tras dos años preso en Roma, fue decapitado bajo Nerón."
+  ],
+  "timeline": [
+    { "anio": "≈8-10 d. C.", "evento": "Nace en Tarso con ciudadanía romana; se forma como fariseo en Jerusalén." },
+    { "anio": "33 d. C.", "evento": "Conversión camino a Damasco tras perseguir a la Iglesia (Hechos 9, 1-19)." },
+    { "anio": "45-48 d. C.", "evento": "Primer viaje misionero con Bernabé: Chipre y Galacia (Hechos 13-14)." },
+    { "anio": "50-56 d. C.", "evento": "Corinto, Éfeso y Macedonia: funda iglesias y escribe Gálatas, 1-2 Tesalonicenses y Romanos." },
+    { "anio": "57-60 d. C.", "evento": "Arresto en Jerusalén, apelación a César, naufragio y dos años en Roma (Hechos 28)." },
+    { "anio": "64-67 d. C.", "evento": "Mártir en Roma bajo Nerón; la tradición recuerda su decapitación." }
+  ],
+  "estudio": null
+}

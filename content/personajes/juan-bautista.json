@@ -1,0 +1,25 @@
+{
+  "slug": "juan-bautista",
+  "nombre": "Juan el Bautista",
+  "epoca": "siglo I d. C.",
+  "rol": "Precursor del Mesías",
+  "resumen": "La voz que gritó en el desierto y preparó el camino del Señor.",
+  "tags": ["Evangelios", "Predicación", "Bautismo"],
+  "portada": "/img/personajes/JuanBautista/JuanBautistaCoverPersonaje.webp",
+  "escenas": [
+    "/img/personajes/JuanBautista/JuanBautistaPersonajeManoDerechaAbajo.webp"
+  ],
+  "bio": [
+    "Juan fue hijo de Zacarías y Elisabet, sacerdote y profeta que vivió en las cuevas del desierto de Judea. Su nacimiento, anunciado por el ángel, marcó el punto de inflexión entre el Antiguo y el Nuevo Testamento: el último de los profetas de Israel se adelantó a preparar el camino al Mesías.",
+    "Su predicación era severa y esperanzada a la vez: «Arrependíos, porque el Reino de los cielos se ha acercado». Bautizó a Jesús en el Jordán reconociendo no ser digno ni de desatar sus sandalias, y más tarde perdió la cabeza por haber reprendido la ley de Herodes."
+  ],
+  "timeline": [
+    { "anio": "≈1 a. C.", "evento": "Nace de padres ancianos; su padre profetiza en el Benedictus (Lc 1, 67-79)." },
+    { "anio": "27-28 d. C.", "evento": "Predica en el desierto de Judea: «Preparad el camino del Señor» (Mt 3, 3)." },
+    { "anio": "28 d. C.", "evento": "Bautiza a Jesús en el Jordán; el cielo se abre sobre él (Mt 3, 16-17)." },
+    { "anio": "28-29 d. C.", "evento": "Declara que él debe crecer y Jesús menguar (Jn 3, 30)." },
+    { "anio": "29-30 d. C.", "evento": "Encarcelado en Máquerus por denunciar el adulterio de Herodes (Mt 14, 3-4)." },
+    { "anio": "≈30 d. C.", "evento": "Decapitado; sus discípulos entierran el cuerpo (Mt 14, 10-12)." }
+  ],
+  "estudio": "03-personajes--juan-el-bautista"
+}

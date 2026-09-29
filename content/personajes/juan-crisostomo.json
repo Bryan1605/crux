@@ -1,0 +1,33 @@
+{
+  "slug": "juan-crisostomo",
+  "nombre": "Juan Crisóstomo",
+  "epoca": "siglo IV",
+  "rol": "Patriarca de Constantinopla",
+  "resumen": "La boca de oro: la Escritura predicada sin miedo al poder.",
+  "tags": ["Padres de la Iglesia", "Homilías", "Constantinopla"],
+  "portada": "/img/personajes/JuanCrisostomo/Juan Crisostomo.webp",
+  "escenas": [
+    "/img/personajes/JuanCrisostomo/Juan CrisostomoEnseñando.webp",
+    "/img/personajes/JuanCrisostomo/Juan CrisostomoOrando.webp",
+    "/img/personajes/JuanCrisostomo/Escenas_de_Vida/JuanCrisostomo1.webp",
+    "/img/personajes/JuanCrisostomo/Escenas_de_Vida/JuanCrisostomo2.webp",
+    "/img/personajes/JuanCrisostomo/Escenas_de_Vida/JuanCrisostomo3.webp",
+    "/img/personajes/JuanCrisostomo/Escenas_de_Vida/JuanCrisostomo4.webp",
+    "/img/personajes/JuanCrisostomo/Escenas_de_Vida/JuanCrisostomo5.webp",
+    "/img/personajes/JuanCrisostomo/Escenas_de_Vida/JuanCrisostomo6.webp",
+    "/img/personajes/JuanCrisostomo/Escenas_de_Vida/JuanCrisostomo7.webp"
+  ],
+  "bio": [
+    "Nacido en Antioquía hacia el 347, Juan quedó huérfano muy joven y fue criado por su madre Antonina, quien le dio una formación rigurosa en la fe y en las letras. Sus homilías —más de ochocientas se conservan— le dieron el apodo de Crisóstomo, «la boca de oro».",
+    "Como patriarca de Constantinopla predicó sin miedo contra la corrupción, las fiestas teatrales y la riqueza ostentosa; por eso fue desterrado dos veces y murió camino del exilio en Comana el 407, con la oración de los salmos en los labios."
+  ],
+  "timeline": [
+    { "anio": "≈347", "evento": "Nace en Antioquía; pierde a su padre siendo niño y es educado por su madre." },
+    { "anio": "381-386", "evento": "Diácono y luego sacerdote en Antioquía; sus homilías contra Anabas estremecen la ciudad." },
+    { "anio": "398", "evento": "Nombrado patriarca de Constantinopla en contra de su propia voluntad." },
+    { "anio": "399-403", "evento": "Reforma el clero y las costumbres; predicación incisiva contra la opulencia de la corte." },
+    { "anio": "403", "evento": "Depuesto y desterrado a Nicomedia; la ciudad se subleva y lo devuelve." },
+    { "anio": "407", "evento": "Desterrado de nuevo; muere en Comana con la última palabra: «Gloria a Dios por todo»." }
+  ],
+  "estudio": null
+}

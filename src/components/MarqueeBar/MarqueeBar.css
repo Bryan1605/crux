@@ -1,0 +1,45 @@
+.marquee-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 800;
+  pointer-events: auto;
+}
+
+.marquee-bar__close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(10, 10, 11, 0.85);
+  color: #f4f4f5;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.marquee-bar__close:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.marquee-bar__close:focus-visible {
+  outline: 2px solid #f4f4f5;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .marquee-bar__close {
+    width: 30px;
+    height: 30px;
+    right: 8px;
+  }
+}

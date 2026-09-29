@@ -1,0 +1,148 @@
+/* --- hero con la cruz 3D ------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--bg);
+  padding-bottom: var(--marquee-h, 0px);
+}
+
+.hero__stage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__copy {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: clamp(2rem, 6vh, 4rem);
+  pointer-events: none;
+}
+
+.hero__copy .btn {
+  pointer-events: auto;
+}
+
+.hero__copy h1 {
+  max-width: 16ch;
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+
+.hero__copy .lead {
+  max-width: 52ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+@media (max-width: 620px) {
+  .hero {
+    min-height: 92svh;
+  }
+
+  .hero__stage {
+    bottom: 38%;
+  }
+}
+
+/* --- manifiesto (ScrollReveal) ------------------------------------------- */
+
+.manifesto__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 8vh, 5rem);
+}
+
+.manifesto .scroll-reveal {
+  max-width: 24ch;
+}
+
+.manifesto .scroll-reveal:nth-child(2) {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.manifesto .scroll-reveal-text {
+  color: var(--text);
+}
+
+@media (max-width: 620px) {
+  .manifesto .scroll-reveal,
+  .manifesto .scroll-reveal:nth-child(2) {
+    max-width: none;
+    align-self: stretch;
+    text-align: left;
+  }
+}
+
+/* --- banner liquid --------------------------------------------------------- */
+
+.banner {
+  position: relative;
+  height: clamp(320px, 60vh, 600px);
+  background: #0c0c0e;
+  border-block: 1px solid var(--border);
+}
+
+.banner .liquid-swap {
+  height: 100%;
+}
+
+.banner__placeholder {
+  height: 100%;
+}
+
+.banner__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.banner__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-5);
+}
+
+.banner__row .btn {
+  pointer-events: auto;
+}
+
+.banner__kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(10, 10, 11, 0.72);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+}
+
+/* --- puentes -------------------------------------------------------------- */
+
+.bridges__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+.bridge-card {
+  min-height: 240px;
+}

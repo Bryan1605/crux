@@ -1,0 +1,95 @@
+.bm {
+  --bm-font: 20px;
+  --bm-height: 130px;
+  --bm-bend: 35deg;
+  --bm-band: #111113;
+  --bm-text: #fafafa;
+  position: relative;
+  width: 100%;
+  height: var(--bm-height);
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.bm__panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 33.34%;
+  overflow: hidden;
+  background: var(--bm-band);
+}
+
+.bm__panel--left {
+  left: 0;
+  transform: rotateY(var(--bm-bend));
+  transform-origin: right center;
+}
+
+.bm__panel--center {
+  left: 33.33%;
+}
+
+.bm__panel--right {
+  left: 66.66%;
+  transform: rotateY(calc(-1 * var(--bm-bend)));
+  transform-origin: left center;
+}
+
+.bm__strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.bm__panel--center .bm__strip {
+  margin-left: calc(-1 * var(--bm-panel-w, 0px));
+}
+
+.bm__panel--right .bm__strip {
+  margin-left: calc(-2 * var(--bm-panel-w, 0px));
+}
+
+.bm__run {
+  font-family: var(--font-display);
+  font-size: var(--bm-font);
+  letter-spacing: 0.02em;
+  color: var(--bm-text);
+  padding-right: 0;
+}
+
+.bm.is-ready .bm__strip {
+  animation: bm-scroll var(--bm-duration, 30s) linear infinite;
+}
+
+@keyframes bm-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-1 * var(--bm-distance, 2000px)), 0, 0);
+  }
+}
+
+.bm--pause:hover .bm__strip {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bm.is-ready .bm__strip {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bm {
+    --bm-font: 15px;
+    --bm-height: 86px;
+    --bm-bend: 26deg;
+  }
+}

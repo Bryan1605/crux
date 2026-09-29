@@ -1,0 +1,69 @@
+.dolly-gallery {
+  position: relative;
+  overflow: hidden;
+  height: min(72vh, 620px);
+  outline: none;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.dolly-gallery:active {
+  cursor: grabbing;
+}
+
+.dolly-gallery__stage {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.dolly-gallery__item {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  background: var(--bg-alt, #111113);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  will-change: transform, opacity;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: auto;
+}
+
+.dolly-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.dolly-gallery__item[data-near='1'] {
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
+}
+
+.dolly-gallery__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.dolly-gallery__overlay > * {
+  pointer-events: auto;
+}
+
+@media (max-width: 720px) {
+  .dolly-gallery {
+    height: min(64vh, 520px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dolly-gallery__item {
+    transition: none;
+  }
+}

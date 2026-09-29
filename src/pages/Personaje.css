@@ -1,0 +1,92 @@
+/* Ficha de personaje — reutiliza Estudio.css (breadcrumb, head, aside) */
+
+.personaje__portada {
+  margin: 0 0 var(--sp-5);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+}
+
+.personaje__portada img {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 46vh, 460px);
+  object-fit: contain;
+  object-position: center;
+  background: var(--panel);
+}
+
+.personaje__bio {
+  margin: 0 0 var(--sp-4);
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  max-width: 68ch;
+}
+
+.personaje__section {
+  margin-top: var(--sp-6);
+}
+
+.personaje__section h2 {
+  margin-bottom: var(--sp-4);
+}
+
+.personaje__section-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+}
+
+.personaje__section-head h2 {
+  margin-bottom: var(--sp-4);
+}
+
+.personaje__hint {
+  margin-left: auto;
+  text-align: right;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+@media (max-width: 620px) {
+  .personaje__section-head {
+    flex-wrap: wrap;
+  }
+
+  .personaje__hint {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.personaje__escena {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.personaje__escena img {
+  display: block;
+  width: 100%;
+  height: clamp(300px, 44vh, 440px);
+  object-fit: cover;
+  object-position: top center;
+}
+
+.personaje__escena--zoomable {
+  cursor: zoom-in;
+}
+
+.personaje__escena--zoomable:focus-visible {
+  outline: 2px solid #ca8700;
+  outline-offset: 3px;
+}
+
+/* --- línea de tiempo -------------------------------------------------------- */
+

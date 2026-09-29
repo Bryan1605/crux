@@ -1,0 +1,129 @@
+.skewed-carousel {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 0 3rem;
+  outline: none;
+  user-select: none;
+  touch-action: pan-y;
+  overflow-x: clip;
+}
+
+.skewed-carousel__viewport {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.skewed-carousel__slide {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  overflow: hidden;
+  background: var(--bg-alt, #111113);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.12));
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.skewed-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.skewed-carousel__slide.is-active {
+  cursor: default;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
+}
+
+.skewed-carousel__tilt {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.18s ease-out;
+  will-change: transform;
+}
+
+.skewed-carousel__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.6rem 0.8rem 0.7rem;
+  font-size: 0.85rem;
+  text-align: center;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.82));
+  transition: filter 0.3s ease;
+}
+
+.skewed-carousel__nav {
+  position: absolute;
+  top: 40%;
+  z-index: 300;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.16));
+  background: var(--glass, rgba(17, 17, 19, 0.8));
+  color: var(--text, #fff);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.skewed-carousel__nav:hover {
+  background: var(--text, #fff);
+  color: var(--ink, #0a0a0b);
+  transform: scale(1.06);
+}
+
+.skewed-carousel__nav.is-prev {
+  left: max(8px, 4%);
+}
+
+.skewed-carousel__nav.is-next {
+  right: max(8px, 4%);
+}
+
+.skewed-carousel__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 300;
+}
+
+.skewed-carousel__dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.28);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.skewed-carousel__dots button.is-active {
+  background: var(--text, #fff);
+  transform: scale(1.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skewed-carousel__slide,
+  .skewed-carousel__tilt,
+  .skewed-carousel__nav,
+  .skewed-carousel__dots button,
+  .skewed-carousel__caption {
+    transition: none;
+  }
+}

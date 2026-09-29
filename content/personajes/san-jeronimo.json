@@ -1,0 +1,31 @@
+{
+  "slug": "san-jeronimo",
+  "nombre": "San Jerónimo",
+  "epoca": "siglos IV–V",
+  "rol": "Doctor de la Iglesia y traductor",
+  "resumen": "El erudito del desierto que dio a Occidente su Biblia: la Vulgata.",
+  "tags": ["Padres de la Iglesia", "Vulgata", "Escritura"],
+  "portada": "/img/personajes/SanJeronimo/SanJeronimo.webp",
+  "escenas": [
+    "/img/personajes/SanJeronimo/SanJeronimo1.webp",
+    "/img/personajes/SanJeronimo/SanJeronimo2.webp",
+    "/img/personajes/SanJeronimo/SanJeronimo3.webp",
+    "/img/personajes/SanJeronimo/SanJeronimo4.webp",
+    "/img/personajes/SanJeronimo/SanJeronimo5.webp",
+    "/img/personajes/SanJeronimo/SanJeronimo6.webp",
+    "/img/personajes/SanJeronimo/SanJeronimoV2final.webp"
+  ],
+  "bio": [
+    "Eusebio Sofronio Jerónimo, nacido en Dalmacia hacia el 347, estudió en Roma y aprendió hebreo en Palestina tras una conversión que lo llevó desde la biblioteca al desierto. Amigo de los grandes y combativo con los herejes, traducía la Biblia con la paciencia de un copista y la pasión de un profeta.",
+    "Su traducción de la Escritura al latín —la Vulgata— se convirtió en la Biblia de Occidente durante más de mil años. Murió en Belén el 420, en la cueva donde la tradición sitúa el nacimiento del Mesías."
+  ],
+  "timeline": [
+    { "anio": "≈347", "evento": "Nace en Stridon (Dalmacia); se educa en Roma con graves escrúpulos de conciencia." },
+    { "anio": "373-379", "evento": "Ermitaño en el desierto de Calcis, sirio; escribe desde el desierto al corazón de Roma." },
+    { "anio": "382-385", "evento": "Secretario del papa Dámaso; emprende la revisión de las traducciones latinas." },
+    { "anio": "386-390", "evento": "Traduce los Salmos y gran parte de la Biblia al latín desde el hebreo y el griego (Vulgata)." },
+    { "anio": "395-420", "evento": "En Belén dirige monasterios, comenta los Profetas y sostiene polémicas teológicas." },
+    { "anio": "420", "evento": "Muere en Belén; su traducción acompaña a la Iglesia desde entonces." }
+  ],
+  "estudio": null
+}

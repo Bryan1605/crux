@@ -1,0 +1,32 @@
+{
+  "slug": "apostol-pedro",
+  "nombre": "Apóstol Pedro",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol y columna de la Iglesia",
+  "resumen": "El pescador convertido en roca: de la traición en el patio a la voz de Pentecostés.",
+  "tags": ["Apóstoles", "Hechos", "Epístolas", "Roma"],
+  "portada": "/img/personajes/ApostolPedro/ApostolPedroPoseNormal.webp",
+  "escenas": [
+    "/img/personajes/ApostolPedro/ApostolPedroCortandoHerejia.webp",
+    "/img/personajes/ApostolPedro/ApostolPedroSeñalando.webp",
+    "/img/personajes/ApostolPedro/Escenas_de_Vida/ApostolPedro4.webp",
+    "/img/personajes/ApostolPedro/Escenas_de_Vida/ApostolPedro5.webp",
+    "/img/personajes/ApostolPedro/Escenas_de_Vida/ApostolPedro6.webp",
+    "/img/personajes/ApostolPedro/Escenas_de_Vida/ApostolPedro7.webp",
+    "/img/personajes/ApostolPedro/Escenas_de_Vida/ApostolPedro8.webp",
+    "/img/personajes/ApostolPedro/Escenas_de_Vida/ApostolPedro9.webp"
+  ],
+  "bio": [
+    "Simón, pescador de Betsaida, fue llamado por Jesús junto a su hermano Andrés con una promesa que definió su vida: «De ti haré pescador de hombres». Jesús lo rebautizó con el nombre de Cephas —Pedro—, la roca sobre la que prometió edificar su Iglesia (Mt 16, 18).",
+    "Fue testigo de la transfiguración, caminó sobre las aguas y falló la noche de la traición. Restaurado junto al fuego de la playa del Tiberíades, llegó a ser la voz de Pentecostés y el puente entre judíos y gentiles. Murió en Roma, crucificado boca abajo bajo el emperador Nerón."
+  ],
+  "timeline": [
+    { "anio": "27 d. C.", "evento": "Jesús lo llama en Galilea; deja las redes y lo sigue (Mc 1, 16-20)." },
+    { "anio": "30 d. C.", "evento": "Confiesa a Jesús como el Mesías en Cesarea de Filipo (Mt 16, 16)." },
+    { "anio": "30 d. C.", "evento": "Niega a su Señor tres veces antes del canto del gallo (Lc 22, 54-62)." },
+    { "anio": "33 d. C.", "evento": "Predica en Pentecostés y tres mil creen (Hechos 2, 14-41)." },
+    { "anio": "49 d. C.", "evento": "Defiende la apertura a los gentiles en el concilio de Jerusalén (Hechos 15, 7-11)." },
+    { "anio": "64-67 d. C.", "evento": "Martirizado en Roma: crucificado boca abajo por no considerarse digno de morir como su Señor." }
+  ],
+  "estudio": null
+}

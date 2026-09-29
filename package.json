@@ -1,0 +1,36 @@
+{
+  "name": "web-crux",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "index:wiki": "node scripts/migrate-content.mjs"
+  },
+  "dependencies": {
+    "@hugeicons/core-free-icons": "^4.3.5",
+    "@hugeicons/react": "^1.1.10",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "@react-three/rapier": "^2.2.0",
+    "@use-gesture/react": "^10.3.1",
+    "gsap": "^3.15.0",
+    "marked": "^18.0.14",
+    "meshline": "^3.3.1",
+    "motion": "^13.4.4",
+    "ogl": "^1.0.11",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-icons": "^5.7.0",
+    "react-router-dom": "^7.18.4",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "puppeteer-core": "^25.12.0",
+    "sharp": "^0.35.4",
+    "vite": "^8.3.1"
+  }
+}

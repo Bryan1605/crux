@@ -1,0 +1,105 @@
+.video-card {
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+}
+
+.video-card__thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-alt);
+  overflow: hidden;
+}
+
+.video-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-card__play {
+  position: absolute;
+  inset: auto 0.75rem 0.75rem auto;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(10, 10, 11, 0.78);
+  border: 1px solid var(--border-strong);
+  font-size: 0.85rem;
+}
+
+.video-card .card__meta,
+.video-card .card__title,
+.video-card .card__desc {
+  padding-inline: var(--sp-5);
+}
+
+.video-card .card__meta {
+  padding-top: var(--sp-4);
+}
+
+.video-card .card__desc {
+  padding-bottom: var(--sp-5);
+}
+
+.video-card .card__title {
+  margin-top: var(--sp-2);
+}
+
+/* --- modal ---------------------------------------------------------------- */
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: rgba(6, 6, 7, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-5);
+}
+
+.video-modal__panel {
+  width: min(960px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.video-modal__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.video-modal__close {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-sm);
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.video-modal__close:hover {
+  border-color: var(--text);
+}
+
+.video-modal__frame {
+  aspect-ratio: 16 / 9;
+}
+
+.video-modal__frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}

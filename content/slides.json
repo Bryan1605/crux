@@ -1,0 +1,17 @@
+[
+  {
+    "image": "/img/banners/herobanner1.webp",
+    "caption": "Estudios bíblicos",
+    "href": "/estudio"
+  },
+  {
+    "image": "/img/banners/herobanner2-patristica.webp",
+    "caption": "Biblia Patrística",
+    "href": "/biblia"
+  },
+  {
+    "image": "/img/banners/herobanner3-reforma.webp",
+    "caption": "La Reforma",
+    "href": "/estudio"
+  }
+]

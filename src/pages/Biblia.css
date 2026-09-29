@@ -1,0 +1,425 @@
+/* Biblia Patrística — reutiliza Estudio.css (page-head, breadcrumb, prose) */
+
+.biblia__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: clamp(6rem, 16vh, 10rem) 0;
+}
+
+/* --- domo hero ------------------------------------------------------------- */
+
+.biblia__dome {
+  position: relative;
+  overflow: hidden;
+  height: min(880px, 92vh);
+  min-height: 540px;
+  background: var(--bg, #0a0a0b);
+}
+
+.biblia__dome-head {
+  position: absolute;
+  left: clamp(1.25rem, 5vw, 4rem);
+  bottom: clamp(4.5rem, 9vh, 7rem);
+  z-index: 2;
+  max-width: min(560px, 84vw);
+  pointer-events: none;
+}
+
+.biblia__dome-head .eyebrow {
+  color: #ca8700;
+}
+
+.biblia__dome-head h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin: 0.35rem 0 0;
+}
+
+.biblia__dome-lead {
+  margin-top: 0.9rem;
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 46ch;
+}
+
+.biblia__dome-cue {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(48px + 14px);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg, #0a0a0b) 72%, transparent);
+  backdrop-filter: blur(6px);
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.biblia__dome-cue:hover,
+.biblia__dome-cue:focus-visible {
+  color: var(--text);
+  border-color: #ca8700;
+}
+
+.biblia__dome-cue span {
+  display: inline-block;
+  animation: biblia-cue-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes biblia-cue-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+/* --- acerca de la obra ----------------------------------------------------- */
+
+.biblia__about {
+  padding-top: clamp(3.5rem, 8vh, 6rem);
+}
+
+.biblia__about-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+
+.biblia__cover {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+}
+
+.biblia__cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+.biblia__about-copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  line-height: 1.12;
+  margin: 0.4rem 0 1.1rem;
+}
+
+.biblia__about-lead {
+  font-size: clamp(1.02rem, 1.6vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 1rem;
+  min-height: 5.2em;
+}
+
+.biblia__about-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+.biblia__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-top: clamp(1.6rem, 4vh, 2.6rem);
+  padding-top: clamp(1.4rem, 3vh, 2rem);
+  border-top: 1px solid var(--border);
+}
+
+.biblia__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.biblia__stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  line-height: 1;
+  color: var(--text);
+}
+
+.biblia__stat-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* --- índice (landing) ------------------------------------------------------ */
+
+.biblia__index-section {
+  padding-bottom: clamp(4rem, 10vh, 7rem);
+}
+
+.biblia__index-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+
+.biblia__index-side h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0.3rem 0 0.8rem;
+}
+
+.biblia__index-hint {
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* --- menú desplegable (BranchedMenu) --------------------------------------- */
+
+.biblia__menu {
+  position: sticky;
+  top: 84px;
+  align-self: start;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.biblia__menu-summary {
+  display: none;
+}
+
+.biblia__menu-body {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md, 14px);
+  background: var(--panel);
+  padding: clamp(0.6rem, 1.4vw, 1rem) clamp(0.5rem, 1.2vw, 0.85rem);
+}
+
+.biblia__menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.biblia__menu::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}
+
+/* --- buscador -------------------------------------------------------------- */
+
+.biblia__search {
+  margin-top: var(--sp-5);
+  max-width: 660px;
+}
+
+.biblia__results {
+  margin-top: var(--sp-3);
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: var(--r-md);
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.biblia__results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.biblia__results li + li {
+  border-top: 1px solid var(--border);
+}
+
+.biblia__result {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  padding: var(--sp-3) var(--sp-4);
+  cursor: pointer;
+}
+
+.biblia__result:hover,
+.biblia__result:focus-visible {
+  background: var(--panel-hover);
+}
+
+.biblia__result-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.biblia__result-snippet {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.biblia__result-snippet mark {
+  background: rgba(202, 135, 0, 0.35);
+  color: var(--text);
+  border-radius: 3px;
+  padding: 0 0.12em;
+}
+
+/* --- lector ---------------------------------------------------------------- */
+
+.biblia__reader-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 64px);
+  padding-top: clamp(6rem, 10vh, 7.5rem);
+  padding-bottom: var(--sp-4);
+}
+
+.biblia__reader {
+  padding-top: 0;
+  padding-bottom: var(--sp-4);
+  min-width: 0;
+}
+
+.biblia__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
+}
+
+.biblia__toolbar--end {
+  margin-top: var(--sp-6);
+  justify-content: center;
+}
+
+.biblia__pager {
+  display: flex;
+  gap: var(--sp-3);
+}
+
+.biblia__toolbar .btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.biblia__prose {
+  margin-top: var(--sp-4);
+}
+
+/* --- responsive ------------------------------------------------------------ */
+
+@media (max-width: 960px) {
+  .biblia__menu {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+    grid-column: 1 / -1;
+  }
+
+  .biblia__menu-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--r-md, 14px);
+    background: var(--panel);
+    user-select: none;
+  }
+
+  .biblia__menu-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .biblia__menu-summary:hover,
+  .biblia__menu-summary:focus-visible {
+    color: var(--text);
+    border-color: #ca8700;
+  }
+
+  .biblia__menu-body {
+    margin-top: var(--sp-3);
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .biblia__index-grid,
+  .biblia__reader-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-5);
+  }
+
+  .biblia__about-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--sp-6);
+  }
+
+  .biblia__cover {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 700px) {
+  .biblia__dome-head {
+    bottom: clamp(5rem, 11vh, 7rem);
+  }
+
+  .biblia__dome-cue {
+    bottom: calc(44px + 10px);
+  }
+
+  .biblia__toolbar {
+    justify-content: center;
+  }
+
+  .biblia__stats {
+    gap: 1.4rem 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .biblia__dome-cue,
+  .biblia__dome-cue span {
+    animation: none;
+    transition: none;
+  }
+}
