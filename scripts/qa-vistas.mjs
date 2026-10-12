@@ -288,6 +288,27 @@ try {
   const apple = await fetch(`${BASE}/icons/apple-touch-icon.png`);
   check('apple-touch-icon', apple.ok, String(apple.status));
 
+  // ---------------------------------------------------------------- imágenes de personaje
+  const personajeImgs = [
+    '/img/personajes/JuanBautista/JuanBautistaPortada.webp',
+    '/img/personajes/JuanBautista/JuanBautistaNace.webp',
+    '/img/personajes/JuanBautista/JuanPredicaenelDesierto.webp'
+  ];
+  for (const src of personajeImgs) {
+    const res = await fetch(`${BASE}${src}`);
+    check(`imagen servida ${src.split('/').pop()}`, res.ok && /image\//.test(res.headers.get('content-type') || ''), String(res.status));
+  }
+  const personajePage = await makePage();
+  await personajePage.goto(`${BASE}/estudio/personajes/juan-bautista`, { waitUntil: 'domcontentloaded' });
+  await wait(2500);
+  const brokenImgs = await personajePage.evaluate(() =>
+    [...document.querySelectorAll('img')]
+      .filter(i => i.complete && i.naturalWidth === 0)
+      .map(i => i.getAttribute('src'))
+  );
+  check('la ficha de Juan el Bautista sin imágenes rotas', brokenImgs.length === 0, brokenImgs.join(' | ') || 'todas cargan');
+  await personajePage.close();
+
   // ---------------------------------------------------------------- reduced motion
   const reduced = await makePage('reduce');
   await reduced.goto(`${BASE}/estudio`, { waitUntil: 'domcontentloaded' });

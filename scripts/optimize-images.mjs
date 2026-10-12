@@ -36,7 +36,7 @@ for (const src of walk(pjRoot)) {
 
 // Banners → public/img/banners/<name>.webp
 const bannerSources = [
-  [join(ROOT, 'public', 'HeroBanner1.jpg'), join(OUT, 'banners', 'herobanner1.webp')],
+  [join(IMG, 'HeroBanner1.jpg'), join(OUT, 'banners', 'herobanner1.webp')],
   [join(IMG, 'HeroBanner2Patristica.jpg'), join(OUT, 'banners', 'herobanner2-patristica.webp')],
   [join(IMG, 'HeroBanner3Reforma.jpg'), join(OUT, 'banners', 'herobanner3-reforma.webp')],
 ];

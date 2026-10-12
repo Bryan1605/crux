@@ -182,7 +182,7 @@ function main() {
   if (!fs.existsSync(videosFile)) fs.writeFileSync(videosFile, '[]\n', 'utf8');
   const slidesFile = path.join(CONTENT, 'slides.json');
   if (!fs.existsSync(slidesFile)) {
-    fs.writeFileSync(slidesFile, `${JSON.stringify([{ image: '/HeroBanner1.jpg', caption: 'Estudios bíblicos', href: '/estudio' }], null, 2)}\n`, 'utf8');
+    fs.writeFileSync(slidesFile, `${JSON.stringify([{ image: '/img/banners/herobanner1.webp', caption: 'Estudios bíblicos', href: '/estudio' }], null, 2)}\n`, 'utf8');
   }
   const versiculosFile = path.join(CONTENT, 'versiculos.json');
   if (!fs.existsSync(versiculosFile)) fs.writeFileSync(versiculosFile, '[]\n', 'utf8');

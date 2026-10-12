@@ -9,10 +9,10 @@
     "Predicación",
     "Bautismo"
   ],
-  "portada": "/img/juanbautistaportada.jpg",
+  "portada": "/img/personajes/JuanBautista/JuanBautistaPortada.webp",
   "escenas": [
-    "/img/juanbautistanace.jpg",
-    "/img/juanpredicaeneldesierto.jpg"
+    "/img/personajes/JuanBautista/JuanBautistaNace.webp",
+    "/img/personajes/JuanBautista/JuanPredicaenelDesierto.webp"
   ],
   "bio": [
     "Juan fue hijo de Zacarías y Elisabet, sacerdote y profeta que vivió en las cuevas del desierto de Judea. Su nacimiento, anunciado por el ángel, marcó el punto de inflexión entre el Antiguo y el Nuevo Testamento: el último de los profetas de Israel se adelantó a preparar el camino al Mesías.",
