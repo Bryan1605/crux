@@ -1,0 +1,356 @@
+/* --- línea de tiempo global ------------------------------------------------- */
+
+.timeline-section {
+  padding-block: var(--sp-6);
+}
+
+.timeline__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+
+.timeline__head h2 {
+  margin: 0;
+}
+
+.timeline__hint {
+  margin-left: auto;
+  text-align: right;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.timeline__chips {
+  margin-bottom: var(--sp-5);
+}
+
+.timeline {
+  position: relative;
+}
+
+/* --- línea de eras ---------------------------------------------------------- */
+
+.timeline__rail {
+  position: relative;
+  margin-bottom: var(--sp-4);
+  padding: 0 8px;
+}
+
+.timeline__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #26262d, #ca8700 55%, #e2a014);
+  opacity: 0.85;
+}
+
+.timeline__eras {
+  position: relative;
+  height: 40px;
+}
+
+.timeline__era {
+  position: absolute;
+  top: 0;
+  left: calc(var(--p, 50) * 1%);
+  transform: translateX(-50%);
+  padding-top: 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  white-space: nowrap;
+}
+
+.timeline__era-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2.5px solid #ca8700;
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+/* --- carrete de tarjetas ---------------------------------------------------- */
+
+.timeline__scroller-wrap {
+  position: relative;
+}
+
+.timeline__scroller {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: var(--sp-1) 6px var(--sp-4);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(202, 135, 0, 0.55) transparent;
+  outline: none;
+}
+
+.timeline__scroller:focus-visible {
+  outline: 2px solid #ca8700;
+  outline-offset: 4px;
+  border-radius: var(--r-sm);
+}
+
+.timeline__scroller::-webkit-scrollbar {
+  height: 6px;
+}
+
+.timeline__scroller::-webkit-scrollbar-thumb {
+  background: rgba(202, 135, 0, 0.55);
+  border-radius: 3px;
+}
+
+.timeline__scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.timeline__item {
+  flex: 0 0 252px;
+  scroll-snap-align: start;
+  animation: timeline-in 0.55s ease both;
+  animation-delay: calc(var(--i, 0) * 42ms);
+}
+
+.timeline__card {
+  --tipo-color: var(--faint);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  min-height: 218px;
+  padding: var(--sp-4) var(--sp-4) var(--sp-5);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--panel);
+  text-decoration: none;
+  transition:
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+/* sin enlace (evento suelto): se ve igual pero sin cursor de link */
+article.timeline__card {
+  cursor: default;
+}
+
+@keyframes timeline-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a.timeline__card:hover {
+    border-color: var(--border-strong);
+    background: var(--panel-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  a.timeline__card:hover .timeline__go {
+    transform: translateX(4px);
+    color: #e2a014;
+  }
+}
+
+.timeline__date {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e2a014;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.timeline__era-note {
+  display: block;
+  margin-top: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.timeline__badge {
+  align-self: flex-start;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--tipo-color);
+  background: var(--glass);
+}
+
+.timeline__badge[data-tipo='personaje'] {
+  --tipo-color: #e2a014;
+  border-color: rgba(202, 135, 0, 0.4);
+}
+
+.timeline__badge[data-tipo='concilio'] {
+  --tipo-color: #8fb7ff;
+  border-color: rgba(111, 150, 255, 0.4);
+}
+
+.timeline__badge[data-tipo='herejia'] {
+  --tipo-color: #ff9d9d;
+  border-color: rgba(255, 120, 120, 0.4);
+}
+
+.timeline__badge[data-tipo='doctrina'] {
+  --tipo-color: #8fe3c0;
+  border-color: rgba(110, 220, 175, 0.4);
+}
+
+.timeline__title {
+  margin-top: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.timeline__text {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.timeline__go {
+  margin-top: auto;
+  align-self: flex-end;
+  font-size: 1.15rem;
+  color: var(--faint);
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease;
+}
+
+article.timeline__card .timeline__go {
+  visibility: hidden;
+}
+
+.timeline__empty {
+  padding: var(--sp-4);
+  color: var(--faint);
+}
+
+/* --- navegación ‹ › ---------------------------------------------------------- */
+
+.timeline__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: rgba(16, 16, 20, 0.88);
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.timeline__nav:first-of-type {
+  left: -18px;
+}
+
+.timeline__nav:last-of-type {
+  right: -18px;
+}
+
+.timeline__nav:hover {
+  background: rgba(28, 28, 34, 0.95);
+  border-color: #ca8700;
+  color: #e2a014;
+}
+
+/* --- móvil -------------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .timeline__head {
+    flex-wrap: wrap;
+  }
+
+  .timeline__hint {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .timeline__nav {
+    display: none;
+  }
+
+  .timeline__item {
+    flex-basis: min(74vw, 252px);
+  }
+}
+
+@media (max-width: 560px) {
+  .timeline__era {
+    font-size: 0;
+  }
+
+  .timeline__era-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline__item {
+    animation: none;
+  }
+
+  .timeline__card,
+  .timeline__go {
+    transition: none;
+  }
+
+  a.timeline__card:hover {
+    transform: none;
+  }
+}

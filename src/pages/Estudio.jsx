@@ -3,9 +3,11 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 import ConcaveCarousel from '../components/ConcaveCarousel/ConcaveCarousel';
 import SkewedCarousel from '../components/SkewedCarousel/SkewedCarousel';
+import Timeline from '../components/Timeline/Timeline';
 import ViewToggle from '../components/ViewToggle/ViewToggle';
 import { STUDIES, STUDY_CATEGORIES } from '../data/estudios';
 import { PERSONAJES } from '../data/personajes';
+import { TIMELINE } from '../data/timeline';
 import { useSite, useSeo } from '../lib/site';
 
 import './Estudio.css';
@@ -378,6 +380,8 @@ export default function Estudio() {
           </div>
         </section>
       )}
+
+      {!isFiltered && <Timeline events={TIMELINE} />}
 
       <section className="section">
         <div className="container">

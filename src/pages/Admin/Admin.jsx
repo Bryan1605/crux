@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import EstudioEditor from './EstudioEditor';
 import PersonajesEditor from './PersonajesEditor';
+import TimelineEditor from './TimelineEditor';
 import CategoriasEditor from './CategoriasEditor';
 import SiteEditor from './SiteEditor';
 import MediaLibrary from './MediaLibrary';
@@ -18,6 +19,7 @@ const TABS = [
   { id: 'slides', label: 'Banner' },
   { id: 'versiculos', label: 'Versículos' },
   { id: 'anuncios', label: 'Anuncios' },
+  { id: 'timeline', label: 'Línea de tiempo' },
   { id: 'categorias', label: 'Categorías' },
   { id: 'site', label: 'Ajustes del sitio' },
   { id: 'media', label: 'Medios' }
@@ -56,6 +58,7 @@ export default function Admin() {
       {tab === 'slides' && <SlidesEditor />}
       {tab === 'versiculos' && <VersiculosEditor />}
       {tab === 'anuncios' && <AnunciosEditor />}
+      {tab === 'timeline' && <TimelineEditor />}
       {tab === 'categorias' && <CategoriasEditor />}
       {tab === 'site' && <SiteEditor />}
       {tab === 'media' && <MediaLibrary />}

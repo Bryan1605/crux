@@ -181,6 +181,55 @@ export function validateAnuncios(obj) {
   return true;
 }
 
+const TIMELINE_TIPOS = new Set(['personaje', 'concilio', 'herejia', 'doctrina', 'evento']);
+
+/** ¿Resuelve el href a una ruta real del sitio? (ctx: { studies, personajes }) */
+function resolveHref(href, ctx) {
+  const path = String(href).split(/[?#]/)[0];
+  if (!path.startsWith('/')) return false;
+  if (path === '/') return true;
+  if (['/estudio', '/biblia', '/videos'].includes(path)) return true; // /biblia?pag=… se recorta arriba
+  if (path.startsWith('/estudio/personajes/')) {
+    const slug = path.replace('/estudio/personajes/', '').replace(/\/+$/, '');
+    return Boolean(ctx.personajes && ctx.personajes.includes(slug));
+  }
+  if (path.startsWith('/estudio/')) {
+    const slug = path.replace('/estudio/', '').replace(/\/+$/, '');
+    return Boolean(ctx.studies && ctx.studies.includes(slug));
+  }
+  return false;
+}
+
+export function validateTimeline(obj, slug, ctx = {}) {
+  if (!isArray(obj)) throw new Error('timeline: debe ser un array');
+  const seen = new Set();
+  for (const [i, ev] of obj.entries()) {
+    const label = `timeline[${i}]`;
+    required(ev, 'id', 'string', label);
+    if (!/^[a-z0-9-]+$/.test(ev.id)) throw new Error(`${label}: id "${ev.id}" solo a-z 0-9 guión`);
+    if (seen.has(ev.id)) throw new Error(`${label}: id duplicado "${ev.id}"`);
+    seen.add(ev.id);
+    required(ev, 'anio', 'number', label);
+    if (!Number.isFinite(ev.anio)) throw new Error(`${label}: anio debe ser un número`);
+    required(ev, 'anio_label', 'string', label);
+    required(ev, 'tipo', 'string', label);
+    if (!TIMELINE_TIPOS.has(ev.tipo)) {
+      throw new Error(`${label}: tipo "${ev.tipo}" no es válido (${[...TIMELINE_TIPOS].join('|')})`);
+    }
+    required(ev, 'titulo', 'string', label);
+    required(ev, 'texto', 'string', label);
+    optional(ev, 'href', 'string', label, '');
+    optional(ev, 'estudio', 'string', label, null);
+    if ('estudio' in ev && ev.estudio !== null && !isString(ev.estudio)) {
+      throw new Error(`${label}: estudio debe ser texto o null`);
+    }
+    if (ctx.routes && ev.href && !resolveHref(ev.href, ctx.routes)) {
+      throw new Error(`${label}: href "${ev.href}" no resuelve a una ruta conocida`);
+    }
+  }
+  return true;
+}
+
 export function validatePersonaje(obj, slug) {
   required(obj, 'slug', 'string', `personajes/${slug}`);
   required(obj, 'nombre', 'string', `personajes/${slug}`);
@@ -224,11 +273,12 @@ export const VALIDATORS = {
   slides: validateSlides,
   versiculos: validateVersiculos,
   anuncios: validateAnuncios,
-  personaje: validatePersonaje
+  personaje: validatePersonaje,
+  timeline: validateTimeline
 };
 
-export function validate(name, data, slug) {
+export function validate(name, data, slug, ctx) {
   const fn = VALIDATORS[name];
   if (!fn) throw new Error(`No hay validador para "${name}"`);
-  return fn(data, slug);
+  return fn(data, slug, ctx);
 }

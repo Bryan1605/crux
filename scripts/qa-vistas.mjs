@@ -81,6 +81,89 @@ try {
   check('preferencia persistida = cards', initial.stored === 'cards', String(initial.stored));
   await page.screenshot({ path: `${OUT}/v-cards.png` });
 
+  // ---------------------------------------------------------------- línea de tiempo
+  const tlPage = await makePage();
+  await tlPage.goto(`${BASE}/estudio`, { waitUntil: 'domcontentloaded' });
+  await wait(2600);
+  await tlPage.evaluate(() => document.querySelector('.timeline-section')?.scrollIntoView({ block: 'start' }));
+  await wait(800);
+
+  const tl = await tlPage.evaluate(() => {
+    const section = document.querySelector('.timeline-section');
+    const cards = [...document.querySelectorAll('.timeline__card')];
+    const eras = [...document.querySelectorAll('.timeline__era')].map(e => e.textContent.trim());
+    const chips = [...document.querySelectorAll('.timeline__chips .chip')].map(c => ({
+      label: c.textContent.trim(),
+      pressed: c.getAttribute('aria-pressed')
+    }));
+    const scroller = document.querySelector('.timeline__scroller');
+    return {
+      section: Boolean(section),
+      cards: cards.length,
+      linked: cards.filter(c => c.tagName === 'A').length,
+      withDate: cards.filter(c => c.querySelector('.timeline__date')).length,
+      withTitle: cards.filter(c => c.querySelector('.timeline__title')).length,
+      eras,
+      chips,
+      scrollable: scroller ? scroller.scrollWidth > scroller.clientWidth : false,
+      t0: scroller?.scrollLeft ?? 0
+    };
+  });
+  check('sección línea de tiempo en /estudio', tl.section);
+  check('pinta los hitos de los personajes', tl.cards >= 24, `${tl.cards} tarjetas`);
+  check('todas las tarjetas tienen fecha y título', tl.withDate === tl.cards && tl.withTitle === tl.cards, `${tl.withDate}/${tl.withTitle}`);
+  check('todas las tarjetas enlazan a su ficha', tl.linked === tl.cards, `${tl.linked}/${tl.cards} con href`);
+  check('línea de eras pintada', tl.eras.length >= 3, tl.eras.join(' · '));
+  check('filtros por tipo presentes', tl.chips.length >= 2, tl.chips.map(c => c.label).join(' | '));
+  check('el carrete tiene recorrido horizontal', tl.scrollable, '');
+  await tlPage.screenshot({ path: `${OUT}/v-timeline.png` });
+
+  const tlScroll = await tlPage.$eval('.timeline__scroller', el => {
+    el.scrollLeft = 0;
+    return el.scrollLeft;
+  });
+  check('carrete inicia a la izquierda', tlScroll <= 6, `${tlScroll}px`);
+
+  // Flecha → desplaza y teclado también
+  await tlPage.evaluate(() => {
+    const btns = [...document.querySelectorAll('.timeline__nav')];
+    btns[btns.length - 1].click();
+  });
+  await wait(800);
+  const tlAfterArrow = await tlPage.$eval('.timeline__scroller', el => el.scrollLeft);
+  check('el botón → desplaza la línea', tlAfterArrow > 100, `${tlAfterArrow}px`);
+
+  await tlPage.evaluate(() => document.querySelector('.timeline__scroller').scrollLeft = 0);
+  await wait(300);
+  await tlPage.focus('.timeline__scroller');
+  await tlPage.keyboard.press('ArrowRight');
+  await wait(800);
+  const tlAfterKey = await tlPage.$eval('.timeline__scroller', el => el.scrollLeft);
+  check('la tecla → desplaza la línea', tlAfterKey > 100, `${tlAfterKey}px`);
+
+  // El filtro por tipo marca el chip
+  await tlPage.evaluate(() => {
+    const chip = [...document.querySelectorAll('.timeline__chips .chip')].find(c => /personaje/i.test(c.textContent));
+    chip?.click();
+  });
+  await wait(500);
+  const chipState = await tlPage.evaluate(() => {
+    const pressed = [...document.querySelectorAll('.timeline__chips .chip')].filter(c => c.getAttribute('aria-pressed') === 'true');
+    return { n: pressed.length, label: pressed[0]?.textContent.trim() };
+  });
+  check('el filtro Personajes se marca', chipState.n === 1 && /personaje/i.test(chipState.label || ''), JSON.stringify(chipState));
+
+  // Un hito navega a su ficha (todo el camino, no solo href)
+  const firstHref = await tlPage.$eval('.timeline__card', el => el.getAttribute('href'));
+  await tlPage.click('.timeline__card');
+  await wait(1400);
+  const afterNav = tlPage.url();
+  check('clic en un hito navega a su ficha', afterNav.includes('/estudio/personajes/') && afterNav !== `${BASE}/estudio`, `${firstHref}`);
+  await tlPage.screenshot({ path: `${OUT}/v-timeline-personaje.png` });
+  await tlPage.goBack();
+  await wait(1600);
+  await tlPage.close();
+
   // Lista
   check('clic en Lista', await clickView(page, 'lista'));
   await wait(700);
@@ -163,6 +246,22 @@ try {
   const mobile = await makePage('no-preference', 390, 844);
   await mobile.goto(`${BASE}/estudio`, { waitUntil: 'domcontentloaded' });
   await wait(2200);
+
+  const mobileTl = await mobile.evaluate(() => {
+    const scroller = document.querySelector('.timeline__scroller');
+    const nav = document.querySelector('.timeline__nav');
+    return {
+      has: Boolean(scroller),
+      scrollWidth: scroller?.scrollWidth || 0,
+      clientWidth: scroller?.clientWidth || 0,
+      navDisplay: nav ? getComputedStyle(nav).display : 'none'
+    };
+  });
+  check('línea de tiempo en móvil', mobileTl.has && mobileTl.scrollWidth > mobileTl.clientWidth, `ancho ${mobileTl.scrollWidth}px`);
+  check('sin botones ‹ › en móvil (gesto táctil)', mobileTl.navDisplay === 'none', String(mobileTl.navDisplay));
+  await checkNoOverflow(mobile, 'móvil línea de tiempo');
+  await mobile.screenshot({ path: `${OUT}/v-mobile-timeline.png` });
+
   await clickView(mobile, 'carrusel');
   await wait(900);
   const mobileCar = await mobile.evaluate(() => {
@@ -203,6 +302,15 @@ try {
     'reduced-motion sin transformaciones 3D',
     reducedCar.transform === 'none',
     JSON.stringify(reducedCar)
+  );
+  const reducedTl = await reduced.evaluate(() => {
+    const item = document.querySelector('.timeline__item');
+    return { has: Boolean(item), animation: item ? getComputedStyle(item).animationName : 'sin-item' };
+  });
+  check(
+    'reduced-motion sin animación de entrada',
+    reducedTl.has && reducedTl.animation === 'none',
+    String(reducedTl.animation)
   );
   await reduced.close();
 

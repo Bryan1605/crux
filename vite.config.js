@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import contentApi from './plugins/content-api.mjs';
 import { writeIndex } from './scripts/content-lib.mjs';
 import { validate } from './scripts/validate-content.mjs';
+import { checkTimelineLabels } from './src/lib/timeline.js';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT = path.join(ROOT, 'content');
@@ -80,14 +81,25 @@ function contentGuard() {
 
       // personajes
       const pDir = path.join(CONTENT, 'personajes');
+      const personajesData = [];
       if (fs.existsSync(pDir)) {
         for (const f of fs.readdirSync(pDir).filter(x => x.endsWith('.json'))) {
           const slug = f.replace(/\.json$/, '');
           try {
-            validate('personaje', JSON.parse(fs.readFileSync(path.join(pDir, f), 'utf8')), slug);
+            const data = JSON.parse(fs.readFileSync(path.join(pDir, f), 'utf8'));
+            validate('personaje', data, slug);
+            personajesData.push(data);
           } catch (e) {
             errors.push(`content/personajes/${f} → ${e.message}`);
           }
+        }
+      }
+
+      // Línea de tiempo: todas las fechas display deben convertirse a número.
+      if (fs.existsSync(pDir)) {
+        const { broken } = checkTimelineLabels(personajesData);
+        for (const b of broken.slice(0, 8)) {
+          errors.push(`timeline: fecha sin convertir "${b.anio}" (${b.slug}): edita la ficha o añade anio_label`);
         }
       }
 
@@ -96,6 +108,21 @@ function contentGuard() {
         writeIndex(CONTENT);
       } catch (e) {
         errors.push(`No se pudo regenerar content/estudios.json → ${e.message}`);
+      }
+
+      // Destinos de los eventos curated: deben resolver a rutas reales.
+      const tFile = path.join(CONTENT, 'timeline.json');
+      if (fs.existsSync(tFile)) {
+        try {
+          const indexNow = JSON.parse(fs.readFileSync(path.join(CONTENT, 'estudios.json'), 'utf8'));
+          const routes = {
+            studies: new Set((indexNow.studies || []).map(s => s.slug)),
+            personajes: new Set(personajesData.map(p => p.slug))
+          };
+          validate('timeline', JSON.parse(fs.readFileSync(tFile, 'utf8')), undefined, { routes });
+        } catch (e) {
+          errors.push(`content/timeline.json → ${e.message}`);
+        }
       }
 
       if (errors.length) {
