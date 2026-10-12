@@ -116,7 +116,7 @@ export default function Personaje() {
 
         <div className="study-detail__meta">
           <div className="study-detail__meta-group">
-            <h3>Etiquetas</h3>
+            <h2>Etiquetas</h2>
             <div className="tag-list">
               {personaje.tags.map(t => (
                 <span className="tag" key={t}>

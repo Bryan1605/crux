@@ -46,7 +46,7 @@ export default function Videos() {
         <div className="container">
           {VIDEOS.length === 0 ? (
             <div className="empty-state">
-              <h3>Todavía no hay videos publicados</h3>
+              <h2>Todavía no hay videos publicados</h2>
               <p>
                 Añade el primero en <code>content/videos.json</code>
                 {import.meta.env.DEV && <> (o desde el panel en desarrollo: <code>/admin</code>)</>} con su

@@ -407,9 +407,14 @@ p {
   }
 }
 
-.empty-state h3 {
+.empty-state :is(h2, h3) {
   margin-bottom: var(--sp-2);
   color: var(--text);
+}
+
+/* En un estado vacío el h2 se lee como un h3 para no romper el diseño. */
+.empty-state h2 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
 /* --- footer ---------------------------------------------------------------- */

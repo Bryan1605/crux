@@ -14,8 +14,9 @@
     "qa:timeline": "node scripts/check-timeline.mjs",
     "qa:concilios": "node scripts/qa-concilios.mjs",
     "qa:buscar": "node scripts/qa-buscar.mjs",
+    "qa:a11y": "node scripts/qa-a11y.mjs",
     "qa:prod": "node scripts/check-prod.mjs",
-    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia"
+    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:a11y"
   },
   "dependencies": {
     "@hugeicons/core-free-icons": "^4.3.5",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
+    "axe-core": "^4.14.0",
     "puppeteer-core": "^25.12.0",
     "sharp": "^0.35.4",
     "vite": "^8.3.1"

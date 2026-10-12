@@ -446,6 +446,12 @@ export default function Biblia() {
             )}
           </nav>
 
+          <h1 className="sr-only">
+            {page.partId === 'p-intro'
+              ? 'Biblia Patrística — Introducción'
+              : `Biblia Patrística — Parte ${book.partById.get(page.partId)?.num || ''}`}
+          </h1>
+
           <div className="reader__bar">
             <div className="reader__bar-group">
               <Link className="rb-btn" to="/biblia" title="Volver al índice">
@@ -514,7 +520,7 @@ export default function Biblia() {
                   className="rb-btn rb-btn--icon"
                   onClick={() => setFontSize(size => clampSize(size - FS_STEP))}
                   disabled={fontSize <= FS_MIN}
-                  aria-label="Reducir el tamaño de letra"
+                  aria-label="Reducir el tamaño de letra: A−"
                 >
                   A−
                 </button>
@@ -523,7 +529,7 @@ export default function Biblia() {
                   className="rb-btn rb-btn--icon"
                   onClick={() => setFontSize(size => clampSize(size + FS_STEP))}
                   disabled={fontSize >= FS_MAX}
-                  aria-label="Aumentar el tamaño de letra"
+                  aria-label="Aumentar el tamaño de letra: A+"
                 >
                   A+
                 </button>

@@ -54,7 +54,7 @@ export default function Home() {
             <ScrollReveal
               key={i}
               containerClassName="manifesto__line"
-              baseOpacity={0.08}
+              baseOpacity={0.4}
               baseRotation={i % 2 === 0 ? 4 : -3}
               blurStrength={8}
             >

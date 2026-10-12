@@ -643,7 +643,7 @@ export default function DomeGallery({
         ['--image-filter']: grayscale ? 'grayscale(1)' : 'none'
       }}
     >
-      <main ref={mainRef} className="sphere-main">
+      <div ref={mainRef} className="sphere-main">
         <div className="stage">
           <div ref={sphereRef} className="sphere">
             {items.map((it, i) => (
@@ -689,7 +689,7 @@ export default function DomeGallery({
           <div ref={scrimRef} className="scrim" />
           <div ref={frameRef} className="frame" />
         </div>
-      </main>
+      </div>
     </div>
   );
 }

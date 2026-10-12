@@ -102,18 +102,30 @@
   z-index: 300;
 }
 
+/* El punto visible es pequeño, pero el área pulsable cumple los 24×24 px. */
 .skewed-carousel__dots button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.skewed-carousel__dots button::before {
+  content: '';
   width: 8px;
   height: 8px;
-  padding: 0;
   border-radius: 50%;
-  border: none;
   background: rgba(255, 255, 255, 0.28);
-  cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.skewed-carousel__dots button.is-active {
+.skewed-carousel__dots button.is-active::before {
   background: var(--text, #fff);
   transform: scale(1.35);
 }
@@ -122,7 +134,7 @@
   .skewed-carousel__slide,
   .skewed-carousel__tilt,
   .skewed-carousel__nav,
-  .skewed-carousel__dots button,
+  .skewed-carousel__dots button::before,
   .skewed-carousel__caption {
     transition: none;
   }

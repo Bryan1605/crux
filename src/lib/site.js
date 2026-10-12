@@ -31,7 +31,7 @@ const DEFAULTS = {
       textColor: '#f4f4f5',
       links: [
         { label: 'Todos los videos', href: '/videos', ariaLabel: 'Ver todos los videos' },
-        { label: 'Canal de YouTube', href: '/videos', ariaLabel: 'Ir a los videos del canal' }
+        { label: 'Canal de YouTube', href: '/videos', ariaLabel: 'Ir al canal de YouTube' }
       ]
     },
     {

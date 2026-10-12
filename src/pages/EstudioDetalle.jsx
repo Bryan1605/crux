@@ -120,7 +120,7 @@ export default function EstudioDetalle() {
           <div className="study-detail__meta">
             {study.aliases.length > 0 && (
               <div className="study-detail__meta-group">
-                <h3>También conocido como</h3>
+                <h2>También conocido como</h2>
                 <div className="tag-list">
                   {study.aliases.map(a => (
                     <span className="tag" key={a}>
@@ -133,7 +133,7 @@ export default function EstudioDetalle() {
 
             {study.tags.length > 0 && (
               <div className="study-detail__meta-group">
-                <h3>Etiquetas</h3>
+                <h2>Etiquetas</h2>
                 <div className="tag-list">
                   {study.tags.map(t => (
                     <span className="tag" key={t}>

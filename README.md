@@ -34,7 +34,15 @@ npm run dev         # servidor de desarrollo (incluye el panel /admin)
 npm run build       # build de producción (valida el contenido y regenera el índice)
 npm run preview     # sirve localmente el build de producción
 npm run index:wiki  # regenera content/ desde el wiki de origen (destructivo, ver abajo)
+npm run qa          # QA completa (datos + navegador; requiere `npm run dev` en otra terminal)
+npm run qa:a11y     # audita la accesibilidad con axe-core (0 critical/serious)
 ```
+
+`npm run qa` agrupa: `check:search`, `qa:timeline`, `qa:concilios`, `qa:buscar`,
+`qa:vistas`, `qa:biblia` y `qa:a11y`. Todas las suites de navegador necesitan el
+servidor de desarrollo en `http://localhost:5173` (y Chrome instalado). Para auditar
+el sitio publicado, ejecuta `qa:a11y` con `CRUX_BASE=https://bryan1605.github.io/crux`.
+El informe queda en `%TEMP%\opencode\crux\a11y\a11y-report.json`.
 
 ---
 

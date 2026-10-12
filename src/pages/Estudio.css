@@ -419,7 +419,7 @@
   gap: 0.35rem var(--sp-3);
 }
 
-.study-detail__meta-group h3 {
+.study-detail__meta-group :is(h2, h3) {
   font-size: 0.8rem;
   font-family: var(--font-sans);
   letter-spacing: 0.08em;

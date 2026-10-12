@@ -10,7 +10,7 @@ const ScrollReveal = ({
   children,
   scrollContainerRef,
   enableBlur = true,
-  baseOpacity = 0.1,
+  baseOpacity = 0.4,
   baseRotation = 3,
   blurStrength = 4,
   containerClassName = '',
@@ -35,6 +35,9 @@ const ScrollReveal = ({
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
+
+    // Con «reducir movimiento» el texto queda quieto y a plena opacidad.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const scroller = scrollContainerRef && scrollContainerRef.current ? scrollContainerRef.current : window;
 
