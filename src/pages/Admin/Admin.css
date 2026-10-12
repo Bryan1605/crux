@@ -280,6 +280,248 @@
   font-size: 0.92rem;
 }
 
+/* --- tarjetas de sección (videos, slides, nav, personajes) --------------- */
+
+.admin__card {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.admin__card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.admin__card-head strong {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.admin__row--tight {
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+.admin__section {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  margin: 0;
+}
+
+.admin__section legend {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+  padding: 0 0.5rem;
+}
+
+.admin__field-hint {
+  font-style: normal;
+  color: var(--faint);
+  font-size: 0.78em;
+  margin-left: 0.4rem;
+}
+
+.admin__dirty {
+  color: #f5c97b;
+  font-size: 0.85em;
+  margin-left: 0.5rem;
+}
+
+.admin__thumb {
+  max-width: 220px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.admin__thumb--pick {
+  margin-top: 0.5rem;
+}
+
+/* --- biblioteca de medios ----------------------------------------------- */
+
+.admin__media-picker,
+.admin__media-library {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.admin__media-field {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin__media-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--sp-3);
+}
+
+.admin__media-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: var(--sp-3);
+  background: var(--bg);
+}
+
+.admin__media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 0.5rem;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.admin__media-item {
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--panel);
+  aspect-ratio: 1;
+}
+
+.admin__media-item img,
+.admin__media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.admin__media-item.is-active {
+  outline: 2px solid var(--text);
+}
+
+.admin__media-library {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: var(--sp-3);
+}
+
+.admin__media-card {
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.admin__media-card img {
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+}
+
+.admin__media-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.admin__media-meta span {
+  font-size: 0.85rem;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin__media-meta small {
+  color: var(--faint);
+  font-size: 0.72rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- publicar / diff ----------------------------------------------------- */
+
+.admin__publish {
+  margin-top: var(--sp-5);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--panel);
+}
+
+.admin__publish-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+
+.admin__publish-changes {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  color: var(--faint);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.admin__diff {
+  margin-top: var(--sp-4);
+  font-size: 0.82rem;
+}
+
+.admin__diff summary {
+  cursor: pointer;
+  color: var(--faint);
+}
+
+.admin__diff-body {
+  margin-top: 0.6rem;
+  max-height: 320px;
+  overflow: auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  white-space: pre;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.admin__history-list {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  max-height: 220px;
+  overflow: auto;
+  font-size: 0.8rem;
+  color: var(--faint);
+}
+
+/* --- editor de personajes ------------------------------------------------ */
+
+.admin__editor .admin__editor {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
 .admin code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.88em;

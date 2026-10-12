@@ -1,11 +1,32 @@
-/* Biblia Patrística — reutiliza Estudio.css (page-head, breadcrumb, prose) */
+/* Biblia Patrística — portada, índice y lector tipo libro */
+
+.biblia__shell {
+  width: min(1240px, calc(100% - 2rem));
+  margin-inline: auto;
+}
 
 .biblia__loading {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--sp-4);
-  padding: clamp(6rem, 16vh, 10rem) 0;
+  padding: clamp(5rem, 14vh, 9rem) 0;
+}
+
+.biblia__loading--inline {
+  padding: clamp(2.5rem, 8vh, 4rem) 0;
+}
+
+.biblia__notfound {
+  padding: clamp(5rem, 14vh, 9rem) 0;
+  max-width: 60ch;
+}
+
+.biblia__notfound h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0.4rem 0 0.9rem;
 }
 
 /* --- domo hero ------------------------------------------------------------- */
@@ -45,6 +66,11 @@
   line-height: 1.6;
   color: var(--muted);
   max-width: 46ch;
+}
+
+.biblia__resume {
+  margin: 1.3rem 0 0;
+  pointer-events: auto;
 }
 
 .biblia__dome-cue {
@@ -100,7 +126,7 @@
 
 .biblia__about-grid {
   display: grid;
-  grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 380px) minmax(0, 1fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: start;
 }
@@ -172,229 +198,329 @@
   color: var(--faint);
 }
 
-/* --- índice (landing) ------------------------------------------------------ */
+/* --- índice (portada y lector) --------------------------------------------- */
 
 .biblia__index-section {
   padding-bottom: clamp(4rem, 10vh, 7rem);
 }
 
-.biblia__index-grid {
-  display: grid;
-  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
-  gap: clamp(28px, 5vw, 72px);
-  align-items: start;
+.biblia__index-head {
+  max-width: 62ch;
+  margin-bottom: clamp(1.5rem, 4vh, 2.4rem);
 }
 
-.biblia__index-side h2 {
+.biblia__index-head h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  line-height: 1.12;
   margin: 0.3rem 0 0.8rem;
 }
 
 .biblia__index-hint {
   color: var(--muted);
   line-height: 1.65;
-  max-width: 56ch;
   margin: 0;
 }
 
-/* --- menú desplegable (BranchedMenu) --------------------------------------- */
+/* --- lector ---------------------------------------------------------------- */
 
-.biblia__menu {
+.biblia__reader {
+  padding-top: clamp(5rem, 9vh, 7rem);
+  padding-bottom: clamp(2rem, 6vh, 4rem);
+  min-width: 0;
+}
+
+.biblia__crumbs {
+  margin-bottom: var(--sp-4);
+}
+
+.reader__bar {
   position: sticky;
-  top: 84px;
-  align-self: start;
-  max-height: calc(100vh - 110px);
-  overflow-y: auto;
-  padding-right: 4px;
+  top: 76px;
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 0.75rem;
+  padding: 0.5rem 0.6rem;
+  margin-bottom: var(--sp-4);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg, #0a0a0b) 88%, transparent);
+  backdrop-filter: blur(10px);
 }
 
-.biblia__menu-summary {
-  display: none;
+.reader__bar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
-.biblia__menu-body {
+.reader__bar-group--center {
+  gap: 0.55rem;
+}
+
+.reader__size {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0 0.2rem;
+  border-inline: 1px solid var(--border);
+}
+
+.rb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.42rem 0.7rem;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.82rem;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    color 0.16s ease,
+    background 0.16s ease;
+}
+
+.rb-btn:hover:not(:disabled),
+.rb-btn.is-active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.rb-btn:disabled {
+  opacity: 0.32;
+  cursor: default;
+}
+
+.rb-btn:focus-visible {
+  outline: 2px solid #ca8700;
+  outline-offset: 2px;
+}
+
+.rb-btn--icon {
+  justify-content: center;
+  min-width: 2.1rem;
+  padding: 0.42rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+.reader__status {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.reader__status strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.reader__where {
+  max-width: 22ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--faint);
+}
+
+.reader__panel {
+  margin-bottom: var(--sp-4);
+  padding: clamp(0.9rem, 2.4vw, 1.4rem);
   border: 1px solid var(--border);
   border-radius: var(--r-md, 14px);
   background: var(--panel);
-  padding: clamp(0.6rem, 1.4vw, 1rem) clamp(0.5rem, 1.2vw, 0.85rem);
-}
-
-.biblia__menu::-webkit-scrollbar {
-  width: 8px;
-}
-
-.biblia__menu::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 8px;
-}
-
-/* --- buscador -------------------------------------------------------------- */
-
-.biblia__search {
-  margin-top: var(--sp-5);
-  max-width: 660px;
-}
-
-.biblia__results {
-  margin-top: var(--sp-3);
-  border: 1px solid var(--border);
-  background: var(--panel);
-  border-radius: var(--r-md);
-  max-height: 340px;
+  max-height: min(62vh, 620px);
   overflow-y: auto;
 }
 
-.biblia__results ul {
+.reader__search .search__input {
+  width: 100%;
+}
+
+.reader__results {
+  margin-top: var(--sp-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm, 10px);
+  overflow: hidden;
+}
+
+.reader__results ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.biblia__results li + li {
+.reader__results li + li {
   border-top: 1px solid var(--border);
 }
 
-.biblia__result {
+.reader__result {
   display: block;
   width: 100%;
-  text-align: left;
+  padding: var(--sp-3) var(--sp-4);
+  color: inherit;
   background: none;
   border: 0;
-  color: inherit;
   font: inherit;
-  padding: var(--sp-3) var(--sp-4);
+  text-align: left;
   cursor: pointer;
 }
 
-.biblia__result:hover,
-.biblia__result:focus-visible {
-  background: var(--panel-hover);
+.reader__result:hover,
+.reader__result:focus-visible {
+  background: var(--panel-hover, rgba(255, 255, 255, 0.05));
 }
 
-.biblia__result-title {
-  display: block;
+.reader__result-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
-.biblia__result-snippet {
+.reader__result-folio {
+  color: var(--faint);
+  font-size: 0.76rem;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+.reader__result-snippet {
   display: block;
-  margin-top: 0.25rem;
-  font-size: 0.85rem;
-  line-height: 1.55;
+  margin-top: 0.3rem;
   color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
 }
 
-.biblia__result-snippet mark {
+.reader__result-snippet mark {
+  padding: 0 0.12em;
   background: rgba(202, 135, 0, 0.35);
   color: var(--text);
   border-radius: 3px;
-  padding: 0 0.12em;
 }
 
-/* --- lector ---------------------------------------------------------------- */
-
-.biblia__reader-grid {
-  display: grid;
-  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
-  gap: clamp(28px, 5vw, 64px);
-  padding-top: clamp(6rem, 10vh, 7.5rem);
-  padding-bottom: var(--sp-4);
-}
-
-.biblia__reader {
-  padding-top: 0;
-  padding-bottom: var(--sp-4);
-  min-width: 0;
-}
-
-.biblia__toolbar {
+.reader__stage {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: var(--sp-4);
-  margin: var(--sp-5) 0;
-}
-
-.biblia__toolbar--end {
-  margin-top: var(--sp-6);
-  justify-content: center;
-}
-
-.biblia__pager {
-  display: flex;
   gap: var(--sp-3);
+  padding-block: var(--sp-2) var(--sp-4);
 }
 
-.biblia__toolbar .btn:disabled {
-  opacity: 0.35;
-  cursor: default;
-  pointer-events: none;
+.reader__hint {
+  margin: 0;
+  color: var(--faint);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
-.biblia__prose {
-  margin-top: var(--sp-4);
+/* Modo scroll continuo */
+
+.reader__scroll {
+  max-width: 74ch;
+  margin-inline: auto;
+  padding-block: var(--sp-4) var(--sp-8);
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.reader__scroll > * + * {
+  margin-top: 0.85em;
+}
+
+.scroll-block {
+  scroll-margin-top: 130px;
+}
+
+.scroll-block--part {
+  margin-top: 3rem !important;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--border);
+}
+
+.scroll-block--heading {
+  margin-top: 2.2rem !important;
+}
+
+.reader__scroll .book-block--part {
+  font-size: 1.9rem;
+  color: var(--text);
+}
+
+.reader__scroll .book-block--h3 {
+  font-size: 1.25rem;
+}
+
+.reader__scroll .book-block--h4 {
+  font-size: 1.05rem;
+}
+
+.reader__scroll .book-block--md strong {
+  color: var(--text);
+}
+
+.reader__scroll .book-block--md blockquote {
+  color: var(--muted);
+}
+
+/* Tintes del entorno según el papel */
+
+.papel--sepia {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(122, 96, 55, 0.16), transparent 70%);
+}
+
+.papel--noche {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(90, 90, 130, 0.14), transparent 70%);
 }
 
 /* --- responsive ------------------------------------------------------------ */
 
-@media (max-width: 960px) {
-  .biblia__menu {
-    position: static;
-    max-height: none;
-    overflow: visible;
-    padding-right: 0;
-    grid-column: 1 / -1;
-  }
-
-  .biblia__menu-summary {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    cursor: pointer;
-    list-style: none;
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 0.7rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: var(--r-md, 14px);
-    background: var(--panel);
-    user-select: none;
-  }
-
-  .biblia__menu-summary::-webkit-details-marker {
+@media (max-width: 1120px) {
+  .book-stage__arrow {
     display: none;
   }
+}
 
-  .biblia__menu-summary:hover,
-  .biblia__menu-summary:focus-visible {
-    color: var(--text);
-    border-color: #ca8700;
-  }
-
-  .biblia__menu-body {
-    margin-top: var(--sp-3);
-    max-height: 60vh;
-    overflow-y: auto;
-  }
-
-  .biblia__index-grid,
-  .biblia__reader-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--sp-5);
-  }
-
+@media (max-width: 960px) {
   .biblia__about-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--sp-6);
   }
 
   .biblia__cover {
-    max-width: 460px;
+    max-width: 420px;
+  }
+
+  .reader__bar {
+    border-radius: var(--r-md, 14px);
+  }
+
+  .reader__bar-group--center {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rb-btn__text {
+    display: none;
   }
 }
 
@@ -407,12 +533,12 @@
     bottom: calc(44px + 10px);
   }
 
-  .biblia__toolbar {
-    justify-content: center;
-  }
-
   .biblia__stats {
     gap: 1.4rem 2rem;
+  }
+
+  .reader__where {
+    display: none;
   }
 }
 

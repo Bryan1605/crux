@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import LiquidSwap from '../components/LiquidSwap/LiquidSwap';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal';
+import { useSite, useSeo, interpolateHomeBridge } from '../lib/site';
 
 const CrossLanyard = lazy(() => import('../components/CrossLanyard/CrossLanyard'));
 
@@ -12,7 +13,12 @@ import { STUDIES, STUDY_CATEGORIES } from '../data/estudios';
 import './Home.css';
 
 export default function Home() {
+  const site = useSite();
+  const { home } = site;
   const total = STUDIES.length;
+  const catCount = STUDY_CATEGORIES.length;
+
+  useSeo({ title: site.seo.title, description: site.seo.description });
 
   return (
     <main id="main">
@@ -26,18 +32,15 @@ export default function Home() {
 
         <div className="hero__copy">
           <div className="container">
-            <p className="eyebrow">Crux</p>
-            <h1>La fe se estudia, no se improvisa</h1>
-            <p className="lead">
-              Estudios, videos y notas reunidos en un solo lugar para abrir la Escritura con tiempo,
-              método y contexto.
-            </p>
+            <p className="eyebrow">{home.hero.eyebrow}</p>
+            <h1>{home.hero.title}</h1>
+            <p className="lead">{home.hero.lead}</p>
             <div className="hero__actions">
-              <Link className="btn btn--primary" to="/estudio">
-                Explorar el estudio
+              <Link className="btn btn--primary" to={home.hero.ctaPrimary.href}>
+                {home.hero.ctaPrimary.label}
               </Link>
-              <Link className="btn btn--ghost" to="/videos">
-                Ver los videos
+              <Link className="btn btn--ghost" to={home.hero.ctaSecondary.href}>
+                {home.hero.ctaSecondary.label}
               </Link>
             </div>
           </div>
@@ -47,17 +50,17 @@ export default function Home() {
       {/* Textos que aparecen al bajar */}
       <section className="section manifesto">
         <div className="container manifesto__inner">
-          <ScrollReveal containerClassName="manifesto__line" baseOpacity={0.08} baseRotation={4} blurStrength={8}>
-            Crux es el punto de partida: una sola cruz, y debajo todo lo que he aprendido estudiando la
-            Biblia.
-          </ScrollReveal>
-          <ScrollReveal containerClassName="manifesto__line" baseOpacity={0.08} baseRotation={-3} blurStrength={8}>
-            Cada ficha resume un tema completo: pasaje clave, contexto, exégesis y aplicación, lista para
-            leer en diez minutos o para estudiar con calma.
-          </ScrollReveal>
-          <ScrollReveal containerClassName="manifesto__line" baseOpacity={0.08} baseRotation={3} blurStrength={8}>
-            Y los videos acompañan lo que la página enseña: lo mismo, contado en voz alta.
-          </ScrollReveal>
+          {home.manifesto.map((line, i) => (
+            <ScrollReveal
+              key={i}
+              containerClassName="manifesto__line"
+              baseOpacity={0.08}
+              baseRotation={i % 2 === 0 ? 4 : -3}
+              blurStrength={8}
+            >
+              {line}
+            </ScrollReveal>
+          ))}
         </div>
       </section>
 
@@ -72,9 +75,10 @@ export default function Home() {
         />
         <div className="banner__overlay">
           <div className="container banner__row">
-            <span className="banner__kicker">Del banner al estudio</span>
-            <Link className="btn btn--primary" to={SLIDES[0]?.href || '/estudio'}>
-              Abrir el estudio <span aria-hidden="true">→</span>
+            <span className="banner__kicker">{home.banner.kicker}</span>
+            {SLIDES[0]?.caption && <span className="banner__caption">{SLIDES[0].caption}</span>}
+            <Link className="btn btn--primary" to={SLIDES[0]?.href || home.banner.cta.href}>
+              {home.banner.cta.label} <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -84,46 +88,36 @@ export default function Home() {
       <section className="section bridges">
         <div className="container">
           <div className="bridges__head">
-            <p className="eyebrow">Por dónde seguir</p>
-            <h2>Dos puertas: el estudio y los videos</h2>
+            <p className="eyebrow">{home.bridges.eyebrow}</p>
+            <h2>{home.bridges.title}</h2>
           </div>
 
           <div className="grid grid--2">
             <Link className="card bridge-card" to="/estudio">
               <div className="card__meta">
-                <span>{total} estudios</span>
+                <span>{interpolateHomeBridge(home.bridges.cards[0].meta1, { total, categories: catCount })}</span>
                 <span aria-hidden="true">·</span>
-                <span>{STUDY_CATEGORIES.length} categorías</span>
+                <span>{interpolateHomeBridge(home.bridges.cards[0].meta2, { total, categories: catCount })}</span>
               </div>
-              <h3 className="card__title">El estudio</h3>
-              <p className="card__desc">
-                Fundamentos doctrinales, parábolas, personajes, apologética y Apocalipsis: fichas ordenadas
-                con pasaje clave y resumen.
-              </p>
+              <h3 className="card__title">{home.bridges.cards[0].title}</h3>
+              <p className="card__desc">{home.bridges.cards[0].desc}</p>
               <div className="card__footer">
-                <span>Entrar al índice</span>
-                <span className="arrow" aria-hidden="true">
-                  →
-                </span>
+                <span>{home.bridges.cards[0].cta}</span>
+                <span className="arrow" aria-hidden="true">→</span>
               </div>
             </Link>
 
             <Link className="card bridge-card" to="/videos">
               <div className="card__meta">
-                <span>Video</span>
+                <span>{home.bridges.cards[1].meta1}</span>
                 <span aria-hidden="true">·</span>
-                <span>Clases y explicaciones</span>
+                <span>{home.bridges.cards[1].meta2}</span>
               </div>
-              <h3 className="card__title">Los videos</h3>
-              <p className="card__desc">
-                Las clases grabadas, ordenadas en una sola parrilla: el mismo contenido del estudio,
-                dicho en voz alta.
-              </p>
+              <h3 className="card__title">{home.bridges.cards[1].title}</h3>
+              <p className="card__desc">{home.bridges.cards[1].desc}</p>
               <div className="card__footer">
-                <span>Ver los videos</span>
-                <span className="arrow" aria-hidden="true">
-                  →
-                </span>
+                <span>{home.bridges.cards[1].cta}</span>
+                <span className="arrow" aria-hidden="true">→</span>
               </div>
             </Link>
           </div>

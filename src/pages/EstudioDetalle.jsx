@@ -6,6 +6,7 @@ import { renderProse } from '../lib/markdown';
 import ScrapbookGallery from '../components/ScrapbookGallery/ScrapbookGallery';
 import { studyBySlug, STUDIES, STUDY_CATEGORIES } from '../data/estudios';
 import { PERSONAJES } from '../data/personajes';
+import { useSite, useSeo } from '../lib/site';
 
 import './Estudio.css';
 
@@ -16,8 +17,15 @@ const contentModules = import.meta.glob('../../content/estudios/*.md', {
 
 export default function EstudioDetalle() {
   const { slug } = useParams();
+  const site = useSite();
   const study = studyBySlug(slug);
   const [doc, setDoc] = useState({ status: 'idle', html: '' });
+
+  useSeo({
+    title: study ? `${study.title} — ${site.marca.nombre}` : `${site.marca.nombre} — Estudio`,
+    description: study ? study.description : site.seo.description,
+    ogImage: (study && study.portada) || site.seo.ogImage
+  });
 
   useEffect(() => {
     if (!study) {
@@ -81,6 +89,12 @@ export default function EstudioDetalle() {
           <span aria-hidden="true">/</span>
           <Link to={`/estudio?cat=${study.category}`}>{study.categoryLabel}</Link>
         </nav>
+
+        {study.portada && (
+          <figure className="study-detail__hero">
+            <img src={study.portada} alt="" />
+          </figure>
+        )}
 
         <header className="study-detail__head">
           <p className="eyebrow">

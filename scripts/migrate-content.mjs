@@ -8,10 +8,14 @@
  *   content/estudios.json        índice (categories + studies) para la web
  *   content/videos.json          parrilla de videos
  *   content/slides.json          banner de portada
+ *   content/categorias.json      categorías (se crea si no existe, NO se sobrescribe)
  *
- * ATENCIÓN: sobrescribe content/estudios/*.md (pierde ediciones hechas en /admin).
- * La fuente de verdad de este script es el wiki; las ediciones del panel viven
- * en content/ y solo se reescriben ejecutando este script.
+ * SEGURIDAD: por defecto NO sobrescribe content/estudios/*.md si ya existen.
+ * Si hay estudios previos, el script aborta y pide ejecutar con --force.
+ * Con --force hace una copia de seguridad en content/.history/ antes de borrar.
+ * Esto evita perder por accidente las ediciones hechas en /admin.
+ *
+ *   npm run index:wiki -- --force   (regenerar desde el wiki, con backup)
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -19,7 +23,6 @@ import { fileURLToPath } from 'node:url';
 
 import { writeIndex } from './content-lib.mjs';
 import {
-  CATEGORIES,
   descriptionFrom,
   parseFrontmatter,
   parseIndexDescriptions,
@@ -37,6 +40,33 @@ const WIKI = 'D:/Biblia/SegundoCerebroBiblico/wiki';
 const ROOT = path.resolve(__dirname, '..');
 const CONTENT = path.join(ROOT, 'content');
 const SKIP_FILES = new Set(['_index.md', '_log.md', '_meta.md']);
+
+// Cargar categorías desde content/categorias.json o usar fallback
+function loadCategorias() {
+  const file = path.join(CONTENT, 'categorias.json');
+  if (fs.existsSync(file)) {
+    try {
+      const raw = fs.readFileSync(file, 'utf8');
+      const data = JSON.parse(raw);
+      if (Array.isArray(data)) return data.sort((a, b) => a.orden - b.orden);
+    } catch {
+      // fallback
+    }
+  }
+  // fallback hardcoded (compatibilidad con index-wiki.mjs)
+  return [
+    { id: '01-fundamentos', label: 'Fundamentos', short: 'Doctrina fundamental desde la NTV', orden: 1 },
+    { id: '02-libros-biblicos', label: 'Libros bíblicos', short: 'Un estudio por cada libro', orden: 2 },
+    { id: '03-personajes', label: 'Personajes', short: 'Vidas de la Biblia con contexto', orden: 3 },
+    { id: '04-doctrinas', label: 'Doctrinas', short: 'Sistematización bíblica', orden: 4 },
+    { id: '05-estudios', label: 'Estudios temáticos', short: 'Planes de estudio prácticos', orden: 5 },
+    { id: '06-apologetica', label: 'Apologética', short: 'Defensa de la fe y sectas', orden: 6 },
+    { id: '07-herramientas', label: 'Herramientas', short: 'Métodos y guías de estudio', orden: 7 },
+    { id: '08-recursos', label: 'Recursos', short: 'Bibliotecas y materiales', orden: 8 },
+    { id: '09-parabolas', label: 'Parábolas', short: 'Las parábolas de Jesús, una a una', orden: 9 },
+    { id: '10-apocalipsis', label: 'Apocalipsis', short: 'El último libro, sección por sección', orden: 10 }
+  ];
+}
 
 function bodyFromWiki(text) {
   let body = text;
@@ -69,13 +99,45 @@ function preprocessBody(body) {
 }
 
 function main() {
+  const FORCE = process.argv.includes('--force');
+  const studiesDir = path.join(CONTENT, 'estudios');
+
+  // Sin el wiki disponible, al menos regeneramos el índice desde el Markdown
+  // ya existente en content/ (no destructivo).
   if (!fs.existsSync(WIKI)) {
-    console.error(`No se encontró el wiki: ${WIKI}`);
+    console.warn(`Aviso: no se encontró el wiki (${WIKI}).`);
+    if (fs.existsSync(studiesDir)) {
+      const index = writeIndex(CONTENT);
+      console.log(`Índice regenerado desde content/estudios/*.md → ${index.studies.length} estudios.`);
+      return;
+    }
+    console.error('No hay wiki ni content/estudios/ para migrar. Nada que hacer.');
     process.exit(1);
   }
 
+  // Guarda: no borrar ediciones del panel sin permiso explícito.
+  if (fs.existsSync(studiesDir)) {
+    const existing = fs.readdirSync(studiesDir).filter(f => f.endsWith('.md'));
+    if (existing.length > 0 && !FORCE) {
+      console.error(
+        `Se encontraron ${existing.length} estudios en content/estudios/. ` +
+          'Este comando los sobrescribiría con la versión del wiki y perderías ' +
+          'las ediciones hechas en /admin.\n' +
+          'Si de verdad quieres regenerarlos desde el wiki, ejecuta:\n' +
+          '  npm run index:wiki -- --force   (se guarda un backup en content/.history/)'
+      );
+      process.exit(1);
+    }
+    if (existing.length > 0 && FORCE) {
+      const backupDir = path.join(CONTENT, '.history', `estudios-${new Date().toISOString().replace(/[:.]/g, '-')}`);
+      fs.mkdirSync(backupDir, { recursive: true });
+      for (const f of existing) fs.copyFileSync(path.join(studiesDir, f), path.join(backupDir, f));
+      console.log(`Backup de ${existing.length} estudios → ${path.relative(ROOT, backupDir)}`);
+    }
+  }
+
+  const CATEGORIES = loadCategorias();
   const descriptions = parseIndexDescriptions();
-  const studiesDir = path.join(CONTENT, 'estudios');
   fs.rmSync(studiesDir, { recursive: true, force: true });
   fs.mkdirSync(studiesDir, { recursive: true });
 
@@ -121,6 +183,22 @@ function main() {
   const slidesFile = path.join(CONTENT, 'slides.json');
   if (!fs.existsSync(slidesFile)) {
     fs.writeFileSync(slidesFile, `${JSON.stringify([{ image: '/HeroBanner1.jpg', caption: 'Estudios bíblicos', href: '/estudio' }], null, 2)}\n`, 'utf8');
+  }
+  const versiculosFile = path.join(CONTENT, 'versiculos.json');
+  if (!fs.existsSync(versiculosFile)) fs.writeFileSync(versiculosFile, '[]\n', 'utf8');
+  const anunciosFile = path.join(CONTENT, 'anuncios.json');
+  if (!fs.existsSync(anunciosFile)) fs.writeFileSync(anunciosFile, `${JSON.stringify({ enabled: true, dismissable: true, items: [] }, null, 2)}\n`, 'utf8');
+
+  // Categorías: solo crear si no existe (NO sobrescribir ediciones del admin)
+  const categoriasFile = path.join(CONTENT, 'categorias.json');
+  if (!fs.existsSync(categoriasFile)) {
+    fs.writeFileSync(categoriasFile, `${JSON.stringify(CATEGORIES, null, 2)}\n`, 'utf8');
+  }
+
+  // site.json: solo crear si no existe
+  const siteFile = path.join(CONTENT, 'site.json');
+  if (!fs.existsSync(siteFile)) {
+    // Se crea por separado (ya existe en content/)
   }
 
   const index = writeIndex(CONTENT);

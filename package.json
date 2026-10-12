@@ -1,7 +1,7 @@
 {
   "name": "web-crux",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,6 @@
     "marked": "^18.0.14",
     "meshline": "^3.3.1",
     "motion": "^13.4.4",
-    "ogl": "^1.0.11",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-icons": "^5.7.0",

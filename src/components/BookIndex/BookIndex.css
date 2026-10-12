@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Índice de la obra — estilo de libro impreso
+   ========================================================================== */
+
+.toc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.toc__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.toc__input {
+  flex: 1 1 16rem;
+  min-width: 0;
+  padding: 0.62rem 0.85rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.92rem;
+}
+
+.toc__input::placeholder {
+  color: var(--faint);
+}
+
+.toc__input:focus-visible {
+  outline: 2px solid #ca8700;
+  outline-offset: 2px;
+}
+
+.toc__meta {
+  color: var(--faint);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.toc__empty {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.toc__list {
+  columns: 2;
+  column-gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc--compact .toc__list {
+  columns: 1;
+}
+
+.toc__item {
+  break-inside: avoid;
+  margin-bottom: 1.15rem;
+}
+
+.toc__item.is-active > .toc__row--part {
+  color: #e0a53a;
+}
+
+.toc__sub {
+  margin: 0.15rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc__sub .toc__sub {
+  padding-left: 0.9rem;
+}
+
+.toc__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  width: 100%;
+  padding: 0.2rem 0;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.16s ease;
+}
+
+.toc__row:hover {
+  color: var(--text);
+}
+
+.toc__row:focus-visible {
+  outline: 2px solid #ca8700;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.toc__row--part {
+  padding: 0.3rem 0 0.35rem;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.toc__row--h3 {
+  font-size: 0.92rem;
+}
+
+.toc__row--h4 {
+  font-size: 0.85rem;
+  color: var(--faint);
+}
+
+.toc__row--h3 .toc__label,
+.toc__row--h4 .toc__label {
+  padding-left: 0.55rem;
+}
+
+.toc__num {
+  flex: 0 0 auto;
+  min-width: 2.1rem;
+  color: #ca8700;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.toc__label {
+  flex: 0 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toc__dots {
+  flex: 1 1 auto;
+  min-width: 1.25rem;
+  border-bottom: 1px dotted var(--border-strong);
+  transform: translateY(-0.15em);
+  opacity: 0.7;
+}
+
+.toc__folio {
+  flex: 0 0 auto;
+  color: var(--faint);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.toc__row:hover .toc__folio,
+.toc__row--part .toc__folio {
+  color: var(--text);
+}
+
+@media (max-width: 760px) {
+  .toc__list {
+    columns: 1;
+  }
+}

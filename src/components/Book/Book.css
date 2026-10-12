@@ -1,0 +1,407 @@
+/* ==========================================================================
+   Libro — páginas, tipografía y vuelta de hoja 3D
+   ========================================================================== */
+
+.book-measure,
+.book-stage {
+  --book-pad: 28px;
+  --paper: #fbf8f1;
+  --ink: #2b2723;
+  --ink-soft: #6f6659;
+  --rule: rgba(43, 39, 35, 0.16);
+}
+
+.book-stage[data-theme='sepia'] {
+  --paper: #f4e9d6;
+  --ink: #3a2f22;
+  --ink-soft: #7d6c53;
+  --rule: rgba(58, 47, 34, 0.2);
+}
+
+.book-stage[data-theme='noche'] {
+  --paper: #16161a;
+  --ink: #e9e6df;
+  --ink-soft: #a39c90;
+  --rule: rgba(233, 230, 223, 0.18);
+}
+
+/* --- medición (fuera de pantalla) ----------------------------------------- */
+
+.book-measure {
+  position: absolute;
+  top: 0;
+  left: -100000px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.book-measure__page {
+  box-sizing: border-box;
+  padding: var(--book-pad);
+}
+
+/* --- escena --------------------------------------------------------------- */
+
+.book-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  perspective: 2600px;
+}
+
+.book {
+  position: relative;
+  display: grid;
+  background: var(--paper);
+  border-radius: 4px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 26px 60px -26px rgba(0, 0, 0, 0.75),
+    0 2px 0 rgba(0, 0, 0, 0.35);
+  transform-style: preserve-3d;
+}
+
+.book--spread {
+  grid-template-columns: 1fr 1fr;
+}
+
+.book--single {
+  grid-template-columns: 1fr;
+}
+
+.book:focus-visible {
+  outline: 2px solid #ca8700;
+  outline-offset: 6px;
+}
+
+.book__page {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.book__page--left {
+  border-radius: 4px 0 0 4px;
+}
+
+.book__page--right,
+.book__page--single {
+  border-radius: 0 4px 4px 0;
+}
+
+.book--single .book__page--single {
+  border-radius: 4px;
+}
+
+/* Lomo: sombra interior que da volumen al pliegue central. */
+.book__spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 46px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.16) 42%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.16) 58%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* --- hoja que gira -------------------------------------------------------- */
+
+.book__leaf {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  will-change: transform;
+  z-index: 3;
+}
+
+.book--single .book__leaf {
+  width: 100%;
+}
+
+.book__face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 0 4px 4px 0;
+}
+
+.book__face--back {
+  transform: rotateY(180deg);
+  border-radius: 4px 0 0 4px;
+}
+
+.book__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--leaf-shade, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0) 62%);
+}
+
+.book--single .book__leaf .book__shade {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0) 70%);
+}
+
+.book__paper {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+/* --- flechas de margen ---------------------------------------------------- */
+
+.book-stage__arrow {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.book-stage__arrow:hover:not(:disabled) {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-strong);
+}
+
+.book-stage__arrow:disabled {
+  opacity: 0.28;
+  cursor: default;
+}
+
+/* --- página --------------------------------------------------------------- */
+
+.book-page__frame {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--book-pad);
+}
+
+.book-page__head {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 24px;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.book-page__head > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-page__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  color: var(--ink);
+  font-family: var(--font-display);
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.book-page__body--measure {
+  flex: none;
+  height: auto;
+  overflow: visible;
+}
+
+.book-page__foot {
+  flex: 0 0 auto;
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* En un libro impreso el folio va al lado exterior del pliego. */
+.book-page__foot--left {
+  justify-content: flex-start;
+  padding-left: 0.35rem;
+}
+
+.book-page__foot--right {
+  justify-content: flex-end;
+  padding-right: 0.35rem;
+}
+
+/* --- bloques de texto ----------------------------------------------------- */
+
+.book-page__body > * + * {
+  margin-top: 0.72em;
+}
+
+.book-block--md > p {
+  margin: 0;
+}
+
+.book-block--md > * + * {
+  margin-top: 0.6em;
+}
+
+.book-block--md em {
+  font-style: italic;
+}
+
+.book-block--md strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.book-block--md a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.book-block--md ul,
+.book-block--md ol {
+  margin: 0;
+  padding-left: 1.15em;
+}
+
+.book-block--md li + li {
+  margin-top: 0.28em;
+}
+
+.book-block--md blockquote {
+  margin: 0;
+  padding-left: 0.85em;
+  border-left: 2px solid var(--rule);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.book-block--md hr {
+  border: 0;
+  height: 1px;
+  margin: 1.1em auto;
+  width: 42%;
+  background: var(--rule);
+}
+
+.book-block--md table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.8em;
+  line-height: 1.35;
+  text-align: left;
+  hyphens: none;
+}
+
+.book-block--md th,
+.book-block--md td {
+  padding: 0.35em 0.5em;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.book-block--md th {
+  color: var(--ink);
+  font-size: 0.95em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom-color: var(--ink-soft);
+}
+
+.book-block--part {
+  margin: 0;
+  font-size: 1.42em;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+.book-block--part::after {
+  content: '';
+  display: block;
+  width: 46px;
+  height: 2px;
+  margin-top: 0.5em;
+  background: #b9861f;
+}
+
+.book-block--h3 {
+  margin: 1.6em 0 0;
+  font-size: 1.1em;
+  line-height: 1.25;
+  text-align: left;
+  color: var(--ink);
+}
+
+.book-block--h3 + * {
+  margin-top: 0.5em;
+}
+
+.book-block--h4 {
+  margin: 1.2em 0 0;
+  font-size: 0.98em;
+  line-height: 1.3;
+  text-align: left;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+}
+
+.book-block--h4 + * {
+  margin-top: 0.4em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book__leaf {
+    transition: none !important;
+  }
+}

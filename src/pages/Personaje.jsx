@@ -8,6 +8,7 @@ import CycleTimeline from '../components/CycleTimeline/CycleTimeline';
 import { parseFrontmatter } from '../lib/frontmatter';
 import { renderProse } from '../lib/markdown';
 import { PERSONAJES, personajeBySlug } from '../data/personajes';
+import { useSite, useSeo } from '../lib/site';
 
 import './Estudio.css';
 import './Personaje.css';
@@ -19,7 +20,15 @@ const contentModules = import.meta.glob('../../content/estudios/*.md', {
 
 export default function Personaje() {
   const { slug } = useParams();
+  const site = useSite();
+  const personajesCat = site.personajesCategoryId;
   const personaje = personajeBySlug(slug);
+
+  useSeo({
+    title: personaje ? `${personaje.nombre} — ${site.marca.nombre}` : `${site.marca.nombre} — Personaje`,
+    description: personaje ? personaje.resumen : site.seo.description
+  });
+
   const [doc, setDoc] = useState({ status: 'idle', html: '' });
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
@@ -57,7 +66,7 @@ export default function Personaje() {
             <h1 className="study-detail__missing">Personaje no encontrado</h1>
             <p>La ficha que buscas no existe o cambió de nombre.</p>
             <p>
-              <Link className="btn btn--primary" to="/estudio?cat=03-personajes">
+              <Link className="btn btn--primary" to={`/estudio?cat=${personajesCat}`}>
                 Volver a personajes
               </Link>
             </p>
@@ -82,7 +91,7 @@ export default function Personaje() {
           <span aria-hidden="true">/</span>
           <Link to="/estudio">Estudio</Link>
           <span aria-hidden="true">/</span>
-          <Link to="/estudio?cat=03-personajes">Personajes</Link>
+          <Link to={`/estudio?cat=${personajesCat}`}>Personajes</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{personaje.nombre}</span>
         </nav>
@@ -211,7 +220,7 @@ export default function Personaje() {
             caption: `${p.nombre} · ${p.epoca}`
           }))}
           footer={
-            <Link className="btn btn--ghost" to="/estudio?cat=03-personajes">
+            <Link className="btn btn--ghost" to={`/estudio?cat=${personajesCat}`}>
               Ver todos
             </Link>
           }

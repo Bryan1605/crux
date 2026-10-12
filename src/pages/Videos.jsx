@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import { VIDEOS } from '../data/videos';
+import { useSite, useSeo } from '../lib/site';
 
 import './Videos.css';
 
@@ -8,8 +9,11 @@ const thumb = id => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 const embed = id => `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
 
 export default function Videos() {
+  const site = useSite();
   const [active, setActive] = useState(null);
   const dialogRef = useRef(null);
+
+  useSeo({ title: `${site.marca.nombre} — Videos`, description: site.seo.description });
 
   useEffect(() => {
     if (!active) return undefined;

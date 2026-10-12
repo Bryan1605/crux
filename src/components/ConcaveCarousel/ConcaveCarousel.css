@@ -1,0 +1,135 @@
+/* --- muro curvo de tarjetas ---------------------------------------------- */
+
+.concave-carousel {
+  --cc-w: 300px;
+  --cc-gap: 32px;
+  --cc-h: 360px;
+  position: relative;
+}
+
+.concave-carousel__hint {
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: var(--sp-3);
+}
+
+.concave-carousel__viewport {
+  position: relative;
+  /* Difumina los extremos para que la pared parezca continuar. */
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.concave-carousel__scroller {
+  display: flex;
+  align-items: center;
+  gap: var(--cc-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Deja la primera y la última tarjeta centrables. */
+  padding: 2.2rem calc(50% - var(--cc-w) / 2);
+  perspective: 1500px;
+  perspective-origin: 50% 50%;
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.concave-carousel__scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.concave-carousel__scroller.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.concave-carousel__item {
+  flex: 0 0 var(--cc-w);
+  width: var(--cc-w);
+  height: var(--cc-h);
+  scroll-snap-align: center;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  transition: opacity 0.25s ease;
+}
+
+.concave-carousel__item > * {
+  width: 100%;
+  height: 100%;
+}
+
+.concave-carousel__item .study-card {
+  min-height: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.concave-carousel__item .card__desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.concave-carousel__nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-3);
+  margin-top: var(--sp-2);
+}
+
+.concave-carousel__btn {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.concave-carousel__btn:hover {
+  background: var(--panel-hover);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .concave-carousel__item {
+    transition: none;
+  }
+
+  .concave-carousel__btn {
+    transition: none;
+  }
+
+  .concave-carousel__btn:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .concave-carousel {
+    --cc-w: min(78vw, 300px);
+  }
+
+  .concave-carousel__scroller {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}

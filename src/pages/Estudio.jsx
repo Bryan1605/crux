@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
-import DollyGallery from '../components/DollyGallery/DollyGallery';
+import ConcaveCarousel from '../components/ConcaveCarousel/ConcaveCarousel';
 import SkewedCarousel from '../components/SkewedCarousel/SkewedCarousel';
+import ViewToggle from '../components/ViewToggle/ViewToggle';
 import { STUDIES, STUDY_CATEGORIES } from '../data/estudios';
 import { PERSONAJES } from '../data/personajes';
+import { useSite, useSeo } from '../lib/site';
 
 import './Estudio.css';
 
@@ -16,6 +18,18 @@ const normalize = s =>
 
 const COVERED_SLUGS = new Set(PERSONAJES.map(p => p.estudio).filter(Boolean));
 
+const VIEWS = ['cards', 'list', 'carousel'];
+const VIEW_KEY = 'crux:estudio-vista';
+
+function readView() {
+  try {
+    const saved = localStorage.getItem(VIEW_KEY);
+    return VIEWS.includes(saved) ? saved : 'cards';
+  } catch {
+    return 'cards';
+  }
+}
+
 function pickFeatured(count) {
   const pool = [...STUDIES];
   const picks = [];
@@ -25,9 +39,14 @@ function pickFeatured(count) {
   return picks;
 }
 
-function cardBody(s, Tag = 'h2') {
+function cardBody(s, Tag = 'h2', withCover = true) {
   return (
     <>
+      {withCover && s.portada && (
+        <div className="study-card__img">
+          <img src={s.portada} alt="" loading="lazy" draggable={false} />
+        </div>
+      )}
       <div className="card__meta">
         <span>{s.categoryLabel}</span>
         {s.subcategory && (
@@ -49,13 +68,108 @@ function cardBody(s, Tag = 'h2') {
   );
 }
 
+/** Tarjeta de la rejilla (estudio o personaje). */
+function GridCard({ entry, index }) {
+  const isPersonaje = entry.kind === 'personaje';
+  const d = entry.data;
+
+  return (
+    <Link
+      className={`card study-card${isPersonaje ? ' personaje-card' : ''}`}
+      to={entry.href}
+      style={{ '--reveal-d': `${(index % 9) * 55}ms` }}
+    >
+      {isPersonaje ? (
+        <>
+          <div className="personaje-card__img">
+            <img src={d.portada} alt="" loading="lazy" />
+          </div>
+          <div className="card__meta">
+            <span>{d.epoca}</span>
+          </div>
+          <h2 className="card__title">{d.nombre}</h2>
+          <p className="card__desc">{d.resumen}</p>
+          <div className="card__footer">
+            <span>{d.rol}</span>
+            <span className="arrow" aria-hidden="true">
+              →
+            </span>
+          </div>
+        </>
+      ) : (
+        cardBody(d)
+      )}
+    </Link>
+  );
+}
+
+/** Fila compacta de la vista de lista. */
+function ListRow({ entry, index }) {
+  const isPersonaje = entry.kind === 'personaje';
+  const d = entry.data;
+  const meta = isPersonaje ? d.epoca : d.categoryLabel;
+  const sub = isPersonaje ? d.rol : d.subcategory;
+  const desc = isPersonaje ? d.resumen : d.description;
+  const aside = isPersonaje ? d.rol : d.passage || 'Ficha de estudio';
+
+  return (
+    <Link className="row-card" to={entry.href}>
+      <span className="row-card__num" aria-hidden="true">
+        {String(index + 1).padStart(2, '0')}
+      </span>
+      <span className="row-card__thumb">
+        {d.portada ? (
+          <img src={d.portada} alt="" loading="lazy" />
+        ) : (
+          <span className="row-card__initial" aria-hidden="true">
+            {(isPersonaje ? d.nombre : d.title).trim().charAt(0)}
+          </span>
+        )}
+      </span>
+      <span className="row-card__body">
+        <span className="row-card__meta">
+          {meta}
+          {sub && (
+            <>
+              {' · '}
+              {sub}
+            </>
+          )}
+        </span>
+        <span className="row-card__title">{isPersonaje ? d.nombre : d.title}</span>
+        <span className="row-card__desc">{desc}</span>
+      </span>
+      <span className="row-card__aside">{aside}</span>
+      <span className="arrow" aria-hidden="true">
+        →
+      </span>
+    </Link>
+  );
+}
+
 export default function Estudio() {
+  const site = useSite();
+  const personajesCat = site.personajesCategoryId;
   const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
   const activeCat = params.get('cat') || 'all';
   const initialQuery = params.get('q') || '';
   const [query, setQuery] = useState(initialQuery);
+  const [view, setView] = useState(readView);
   const gridRef = useRef(null);
+
+  useSeo({
+    title: `${site.marca.nombre} — Estudio`,
+    description: site.seo.description
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(VIEW_KEY, view);
+    } catch {
+      /* modo privado: la preferencia vive solo en memoria */
+    }
+  }, [view]);
 
   const featured = useMemo(() => pickFeatured(5), []);
 
@@ -69,7 +183,7 @@ export default function Estudio() {
   const filtered = useMemo(() => {
     const q = normalize(query.trim());
     return STUDIES.filter(s => {
-      if (activeCat === '03-personajes' && COVERED_SLUGS.has(s.slug)) return false;
+      if (activeCat === personajesCat && COVERED_SLUGS.has(s.slug)) return false;
       if (activeCat !== 'all' && s.category !== activeCat) return false;
       if (!q) return true;
       const haystack = normalize(
@@ -77,10 +191,10 @@ export default function Estudio() {
       );
       return haystack.includes(q);
     });
-  }, [activeCat, query]);
+  }, [activeCat, query, personajesCat]);
 
   const isFiltered = activeCat !== 'all' || query.trim().length > 0;
-  const isPersonajesCat = activeCat === '03-personajes';
+  const isPersonajesCat = activeCat === personajesCat;
 
   const personajes = useMemo(() => {
     if (!isPersonajesCat) return [];
@@ -91,26 +205,32 @@ export default function Estudio() {
     );
   }, [isPersonajesCat, query]);
 
-  const personajeItems = useMemo(() => {
-    if (!isPersonajesCat) return [];
-    return [
-      ...personajes.map(p => ({ kind: 'personaje', slug: p.slug, data: p })),
-      ...filtered.map(s => ({ kind: 'estudio', slug: s.slug, data: s }))
-    ];
-  }, [isPersonajesCat, personajes, filtered]);
+  /** El índice visible, en un único formato para las tres vistas. */
+  const entries = useMemo(
+    () => [
+      ...personajes.map(p => ({
+        kind: 'personaje',
+        slug: p.slug,
+        data: p,
+        href: `/estudio/personajes/${p.slug}`
+      })),
+      ...filtered.map(s => ({ kind: 'estudio', slug: s.slug, data: s, href: `/estudio/${s.slug}` }))
+    ],
+    [personajes, filtered]
+  );
 
-  const dollyItems = isPersonajesCat
-    ? personajeItems
-    : filtered.map(s => ({ kind: 'estudio', slug: s.slug, data: s }));
-  const isDolly = isFiltered && dollyItems.length >= 2 && dollyItems.length <= 9;
-  const isEmpty = filtered.length === 0 && personajes.length === 0;
+  const isEmpty = entries.length === 0;
+  const showGrid = view === 'cards';
 
-  const activeLabel =
-    activeCat === 'all' ? 'Todos' : STUDY_CATEGORIES.find(c => c.id === activeCat)?.label || 'Todos';
+  const activeCatObj = STUDY_CATEGORIES.find(c => c.id === activeCat);
+  const activeLabel = activeCat === 'all' ? 'Todos' : activeCatObj?.label || 'Todos';
+  const activeShort = activeCat === 'all' ? '' : activeCatObj?.short || '';
 
+  // Reveal al entrar en pantalla + inclinación 3D siguiendo el puntero.
+  // Sólo aplica a la rejilla: lista y carrusel tienen su propia animación.
   useEffect(() => {
     const grid = gridRef.current;
-    if (!grid || isDolly) return undefined;
+    if (!grid || !showGrid) return undefined;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const cards = Array.from(grid.querySelectorAll('.study-card'));
 
@@ -120,8 +240,8 @@ export default function Estudio() {
     }
 
     const io = new IntersectionObserver(
-      entries => {
-        for (const entry of entries) {
+      entriesToCheck => {
+        for (const entry of entriesToCheck) {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-revealed');
             io.unobserve(entry.target);
@@ -162,7 +282,7 @@ export default function Estudio() {
       grid.removeEventListener('pointermove', onMove);
       grid.removeEventListener('pointerleave', onLeave);
     };
-  }, [filtered, personajes, isDolly]);
+  }, [entries, showGrid]);
 
   return (
     <main id="main" className="estudio">
@@ -176,19 +296,23 @@ export default function Estudio() {
           </p>
 
           <div className="estudio__tools">
-            <div className="search">
-              <label className="sr-only" htmlFor="buscador-estudio">
-                Buscar estudios
-              </label>
-              <input
-                id="buscador-estudio"
-                type="search"
-                className="search__input"
-                placeholder="Buscar por tema, pasaje o palabra…"
-                value={query}
-                onChange={e => setQuery(e.target.value)}
-                autoComplete="off"
-              />
+            <div className="estudio__toolbar">
+              <div className="search">
+                <label className="sr-only" htmlFor="buscador-estudio">
+                  Buscar estudios
+                </label>
+                <input
+                  id="buscador-estudio"
+                  type="search"
+                  className="search__input"
+                  placeholder="Buscar por tema, pasaje o palabra…"
+                  value={query}
+                  onChange={e => setQuery(e.target.value)}
+                  autoComplete="off"
+                />
+              </div>
+
+              <ViewToggle value={view} onChange={setView} />
             </div>
 
             <div className="chips" role="group" aria-label="Filtrar por categoría">
@@ -209,7 +333,7 @@ export default function Estudio() {
                   onClick={() => setCategory(cat.id)}
                 >
                   {cat.label}{' '}
-                  <span className="chip__count">{cat.id === '03-personajes' ? PERSONAJES.length : cat.count}</span>
+                  <span className="chip__count">{cat.id === personajesCat ? PERSONAJES.length : cat.count}</span>
                 </button>
               ))}
             </div>
@@ -223,6 +347,7 @@ export default function Estudio() {
             )}
             {filtered.length} {filtered.length === 1 ? 'estudio' : 'estudios'} · {activeLabel}
           </p>
+          {activeShort && <p className="estudio__cat-desc">{activeShort}</p>}
         </div>
       </header>
 
@@ -248,7 +373,7 @@ export default function Estudio() {
               loop
               showTitles={false}
               onItemClick={s => navigate(`/estudio/${s.slug}`)}
-              renderItem={s => <article className="card study-card featured-card">{cardBody(s, 'h3')}</article>}
+              renderItem={s => <article className="card study-card featured-card">{cardBody(s, 'h3', false)}</article>}
             />
           </div>
         </section>
@@ -273,84 +398,34 @@ export default function Estudio() {
                 </button>
               </p>
             </div>
-          ) : isDolly ? (
-            <>
-              <p className="estudio__dolly-hint" aria-hidden="true">
-                Rueda, arrastra o usa ← → · Enter para abrir
-              </p>
-              <DollyGallery
-                images={dollyItems}
-                itemWidth={330}
-                aspectRatio={0.78}
-                grayscale={0}
-                spacing={720}
-                infinite={dollyItems.length > 5}
-                onItemClick={item =>
-                  navigate(item.kind === 'personaje' ? `/estudio/personajes/${item.slug}` : `/estudio/${item.slug}`)
-                }
-                renderItem={item =>
-                  item.kind === 'personaje' ? (
-                    <article className="card study-card dolly-card personaje-card">
-                      <div className="personaje-card__img">
-                        <img src={item.data.portada} alt="" draggable={false} />
-                      </div>
-                      <div className="card__meta">
-                        <span>{item.data.epoca}</span>
-                      </div>
-                      <h3 className="card__title">{item.data.nombre}</h3>
-                      <div className="card__footer">
-                        <span>{item.data.rol}</span>
-                        <span className="arrow" aria-hidden="true">
-                          →
-                        </span>
-                      </div>
-                    </article>
-                  ) : (
-                    <article className="card study-card dolly-card">{cardBody(item.data)}</article>
-                  )
-                }
-              />
-            </>
           ) : (
             <>
               <h2 className="sr-only">
                 {isPersonajesCat ? 'Índice de personajes y estudios' : 'Índice de estudios'}
               </h2>
-              <div ref={gridRef} className="grid grid--3 estudio__grid">
-                {personajes.map((p, i) => (
-                  <Link
-                    key={`p-${p.slug}`}
-                    className="card study-card personaje-card"
-                    to={`/estudio/personajes/${p.slug}`}
-                    style={{ '--reveal-d': `${(i % 9) * 55}ms` }}
-                  >
-                    <div className="personaje-card__img">
-                      <img src={p.portada} alt="" loading="lazy" />
-                    </div>
-                    <div className="card__meta">
-                      <span>{p.epoca}</span>
-                    </div>
-                    <h3 className="card__title">{p.nombre}</h3>
-                    <p className="card__desc">{p.resumen}</p>
-                    <div className="card__footer">
-                      <span>{p.rol}</span>
-                      <span className="arrow" aria-hidden="true">
-                        →
-                      </span>
-                    </div>
-                  </Link>
-                ))}
-                {filtered.map((s, i) => (
-                  <Link
-                    key={s.slug}
-                    className="card study-card"
-                    to={`/estudio/${s.slug}`}
-                    style={{ '--reveal-d': `${((i + personajes.length) % 9) * 55}ms` }}
-                  >
-                    {cardBody(s)}
-                  </Link>
-                ))}
-              </div>
+
+              {view === 'list' ? (
+                <div className="estudio__list">
+                  {entries.map((entry, i) => (
+                    <ListRow key={`${entry.kind}-${entry.slug}`} entry={entry} index={i} />
+                  ))}
+                </div>
+              ) : view === 'carousel' ? (
+                <ConcaveCarousel
+                  items={entries}
+                  itemWidth={300}
+                  height={372}
+                  label={isPersonajesCat ? 'Carrusel de personajes y estudios' : 'Carrusel de estudios'}
+                  getKey={entry => `${entry.kind}-${entry.slug}`}
+                  renderItem={(entry, i) => <GridCard entry={entry} index={i} />}
+                />
+              ) : (
+                <div ref={gridRef} className="grid grid--3 estudio__grid">
+                  {entries.map((entry, i) => (
+                    <GridCard key={`${entry.kind}-${entry.slug}`} entry={entry} index={i} />
+                  ))}
+                </div>
+              )}
             </>
           )}
         </div>

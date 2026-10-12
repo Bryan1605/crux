@@ -1,0 +1,12 @@
+[
+  { "id": "01-fundamentos", "label": "Fundamentos", "short": "Doctrina fundamental desde la NTV", "orden": 1 },
+  { "id": "02-libros-biblicos", "label": "Libros bíblicos", "short": "Un estudio por cada libro", "orden": 2 },
+  { "id": "03-personajes", "label": "Personajes", "short": "Vidas de la Biblia con contexto", "orden": 3 },
+  { "id": "04-doctrinas", "label": "Doctrinas", "short": "Sistematización bíblica", "orden": 4 },
+  { "id": "05-estudios", "label": "Estudios temáticos", "short": "Planes de estudio prácticos", "orden": 5 },
+  { "id": "06-apologetica", "label": "Apologética", "short": "Defensa de la fe y sectas", "orden": 6 },
+  { "id": "07-herramientas", "label": "Herramientas", "short": "Métodos y guías de estudio", "orden": 7 },
+  { "id": "08-recursos", "label": "Recursos", "short": "Bibliotecas y materiales", "orden": 8 },
+  { "id": "09-parabolas", "label": "Parábolas", "short": "Las parábolas de Jesús, una a una", "orden": 9 },
+  { "id": "10-apocalipsis", "label": "Apocalipsis", "short": "El último libro, sección por sección", "orden": 10 }
+]
