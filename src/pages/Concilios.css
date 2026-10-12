@@ -1,0 +1,322 @@
+/* --- encabezado de página ------------------------------------------------- */
+
+.concilios-page .page-head {
+  padding: clamp(6.5rem, 14vh, 9rem) 0 var(--sp-6);
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.concilios-page .page-head h1 {
+  margin: var(--sp-3) 0 var(--sp-4);
+  max-width: 18ch;
+}
+
+/* --- cabecera de cada sección -------------------------------------------- */
+
+.concilios__head {
+  margin-bottom: var(--sp-6);
+}
+
+.concilios__head .eyebrow {
+  margin-bottom: var(--sp-2);
+}
+
+.concilios__head h2 {
+  margin-bottom: var(--sp-3);
+}
+
+.concilios__desc {
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+.concilios__desc a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- concilios ------------------------------------------------------------ */
+
+.concilios__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+  counter-reset: concilios;
+}
+
+.concilios__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+  scroll-margin-top: calc(6rem + var(--sp-4));
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.concilios__card:hover {
+  background: var(--panel-hover);
+  border-color: var(--border-strong);
+}
+
+.concilios__card:target {
+  border-color: rgba(202, 135, 0, 0.55);
+  box-shadow: 0 0 0 3px rgba(202, 135, 0, 0.16);
+}
+
+.concilios__card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.concilios__date {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(202, 135, 0, 0.4);
+  background: rgba(202, 135, 0, 0.12);
+  color: #e2a014;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.concilios__ordinal {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: rgba(226, 160, 20, 0.5);
+  letter-spacing: 0.04em;
+}
+
+.concilios__nombre {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+.concilios__conv {
+  font-size: 0.88rem;
+  color: var(--faint);
+}
+
+.concilios__resumen {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.concilios__decisiones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.concilios__decisiones li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.concilios__decisiones li::before {
+  content: '✜';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #e2a014;
+  font-size: 0.8rem;
+}
+
+.concilios__herejias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.concilios__herejia-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 120, 120, 0.4);
+  background: rgba(255, 120, 120, 0.08);
+  color: #ffb3b3;
+  font-size: 0.82rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.concilios__herejia-chip:hover {
+  color: #ffd0d0;
+  border-color: rgba(255, 120, 120, 0.65);
+  background: rgba(255, 120, 120, 0.14);
+}
+
+.concilios__foot {
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.concilios__estudio {
+  font-weight: 600;
+  color: #e2a014;
+  transition: color 0.2s ease;
+}
+
+.concilios__estudio:hover {
+  color: #f4c15c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.concilios__soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.38rem 0.85rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: 999px;
+  color: var(--faint);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.concilios__soon i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+/* --- herejías ------------------------------------------------------------- */
+
+.herejias__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: var(--sp-4);
+}
+
+.herejia__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-5);
+  scroll-margin-top: calc(6rem + var(--sp-4));
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.herejia__card:hover {
+  background: var(--panel-hover);
+  border-color: var(--border-strong);
+}
+
+.herejia__card:target {
+  border-color: rgba(255, 120, 120, 0.55);
+  box-shadow: 0 0 0 3px rgba(255, 120, 120, 0.14);
+}
+
+.herejia__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.herejia__nombre {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+}
+
+.herejia__siglo {
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--faint);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.herejia__resumen {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.6;
+}
+
+.herejia__foot {
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.herejia__condena {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.herejia__condena a {
+  color: #ffb3b3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 120, 120, 0.45);
+  transition: color 0.2s ease;
+}
+
+.herejia__condena a:hover {
+  color: #ffd0d0;
+}
+
+.herejia__estudio {
+  font-weight: 600;
+  color: #e2a014;
+  transition: color 0.2s ease;
+}
+
+.herejia__estudio:hover {
+  color: #f4c15c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- responsivo ----------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .concilios__list {
+    grid-template-columns: 1fr;
+  }
+}

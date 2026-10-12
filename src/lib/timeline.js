@@ -155,6 +155,58 @@ export function centuryBands(minAnio, maxAnio) {
   }));
 }
 
+/**
+ * Convierte content/concilios.json en eventos de la línea de tiempo.
+ * Los concilios usan su año; las herejías heredan el año del concilio que
+ * las condenó (condenada_en) — nunca se inventa una fecha.
+ */
+export function conciliosToEvents(list = []) {
+  const concilios = list.filter(c => c.tipo === 'concilio');
+  const byId = new Map(concilios.map(c => [c.id, c]));
+  const out = [];
+
+  for (const c of concilios) {
+    const anio = Number.isFinite(c.anio) ? c.anio : null;
+    out.push({
+      id: `concilio-${c.id}`,
+      anio,
+      anio_label: c.anio_label || (anio === null ? '' : `${anio} d. C.`),
+      era: anio === null ? '' : eraOf(anio).label,
+      tipo: 'concilio',
+      titulo: c.nombre,
+      texto: c.resumen,
+      href: `/concilios#${c.id}`,
+      estudio: c.estudio ?? null,
+      _seq: 0,
+      _fuente: 'concilio'
+    });
+  }
+
+  for (const h of list) {
+    if (h.tipo !== 'herejia') continue;
+    const c = h.condenada_en ? byId.get(h.condenada_en) : null;
+    const anio = c && Number.isFinite(c.anio) ? c.anio : null;
+    // Sin un concilio que la condene con fecha verificable no entra a la línea:
+    // se queda solo en la página de concilios (nunca se inventa un año).
+    if (anio === null) continue;
+    out.push({
+      id: `herejia-${h.id}`,
+      anio,
+      anio_label: anio === null ? '' : `${anio} d. C.`,
+      era: anio === null ? '' : eraOf(anio).label,
+      tipo: 'herejia',
+      titulo: h.nombre,
+      texto: h.resumen,
+      href: `/concilios#${h.id}`,
+      estudio: h.estudio ?? null,
+      _seq: 0,
+      _fuente: 'herejia'
+    });
+  }
+
+  return out;
+}
+
 /** Reporta las etiquetas de año que no se pueden convertir (para corregir). */
 export function checkTimelineLabels(personajes = []) {
   const ok = [];

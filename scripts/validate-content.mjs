@@ -182,13 +182,14 @@ export function validateAnuncios(obj) {
 }
 
 const TIMELINE_TIPOS = new Set(['personaje', 'concilio', 'herejia', 'doctrina', 'evento']);
+const CONCILIO_TIPOS = new Set(['concilio', 'herejia']);
 
 /** ¿Resuelve el href a una ruta real del sitio? (ctx: { studies, personajes }) */
 function resolveHref(href, ctx) {
   const path = String(href).split(/[?#]/)[0];
   if (!path.startsWith('/')) return false;
   if (path === '/') return true;
-  if (['/estudio', '/biblia', '/videos'].includes(path)) return true; // /biblia?pag=… se recorta arriba
+  if (['/estudio', '/biblia', '/videos', '/concilios'].includes(path)) return true; // /biblia?pag=… se recorta arriba
   if (path.startsWith('/estudio/personajes/')) {
     const slug = path.replace('/estudio/personajes/', '').replace(/\/+$/, '');
     return Boolean(ctx.personajes && ctx.personajes.includes(slug));
@@ -225,6 +226,60 @@ export function validateTimeline(obj, slug, ctx = {}) {
     }
     if (ctx.routes && ev.href && !resolveHref(ev.href, ctx.routes)) {
       throw new Error(`${label}: href "${ev.href}" no resuelve a una ruta conocida`);
+    }
+  }
+  return true;
+}
+
+export function validateConcilios(obj) {
+  if (!isArray(obj)) throw new Error('concilios: debe ser un array');
+  const ids = new Set();
+  const concilios = [];
+  const herejias = [];
+  for (const [i, c] of obj.entries()) {
+    const label = `concilios[${i}]`;
+    required(c, 'id', 'string', label);
+    if (!/^[a-z0-9-]+$/.test(c.id)) throw new Error(`${label}: id "${c.id}" solo a-z 0-9 guión`);
+    if (ids.has(c.id)) throw new Error(`${label}: id duplicado "${c.id}"`);
+    ids.add(c.id);
+    required(c, 'tipo', 'string', label);
+    if (!CONCILIO_TIPOS.has(c.tipo)) throw new Error(`${label}: tipo "${c.tipo}" no es válido (concilio|herejia)`);
+    required(c, 'nombre', 'string', label);
+    required(c, 'resumen', 'string', label);
+    if ('estudio' in c && c.estudio !== null) optional(c, 'estudio', 'string', label, null);
+    if (c.tipo === 'concilio') {
+      required(c, 'anio', 'number', label);
+      if (!Number.isFinite(c.anio)) throw new Error(`${label}: anio debe ser un número`);
+      optional(c, 'anio_label', 'string', label, '');
+      optional(c, 'convocante', 'string', label, '');
+      optional(c, 'ordinal', 'number', label, null);
+      optional(c, 'decisiones', 'array', label, []);
+      optional(c, 'herejias', 'array', label, []);
+      for (const h of c.herejias) {
+        if (!isString(h) || !/^[a-z0-9-]+$/.test(h)) {
+          throw new Error(`${label}: herejía "${h}" no es un id válido`);
+        }
+      }
+      concilios.push(c);
+    } else {
+      optional(c, 'contexto', 'string', label, '');
+      if ('condenada_en' in c && c.condenada_en !== null) optional(c, 'condenada_en', 'string', label, null);
+      herejias.push(c);
+    }
+  }
+  // referencias cruzadas: herejías ↔ concilios
+  const concilioIds = new Set(concilios.map(c => c.id));
+  const herejiaIds = new Set(herejias.map(h => h.id));
+  for (const c of concilios) {
+    for (const h of c.herejias) {
+      if (!herejiaIds.has(h)) {
+        throw new Error(`concilios: "${c.id}" referencia la herejía inexistente "${h}"`);
+      }
+    }
+  }
+  for (const h of herejias) {
+    if (h.condenada_en && !concilioIds.has(h.condenada_en)) {
+      throw new Error(`concilios: herejía "${h.id}" referencia el concilio inexistente "${h.condenada_en}"`);
     }
   }
   return true;
@@ -274,7 +329,8 @@ export const VALIDATORS = {
   versiculos: validateVersiculos,
   anuncios: validateAnuncios,
   personaje: validatePersonaje,
-  timeline: validateTimeline
+  timeline: validateTimeline,
+  concilios: validateConcilios
 };
 
 export function validate(name, data, slug, ctx) {

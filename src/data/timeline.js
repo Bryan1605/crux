@@ -1,6 +1,8 @@
-// Línea de tiempo global: personajes (derivada) + eventos de content/timeline.json.
-import { buildTimeline } from '../lib/timeline';
+// Línea de tiempo global: personajes (derivada) + content/timeline.json
+// + concilios y herejías (derivados).
+import { buildTimeline, conciliosToEvents } from '../lib/timeline';
 import { PERSONAJES } from './personajes';
+import { CONCILIOS } from './concilios';
 
 const modules = import.meta.glob('../../content/timeline.json', {
   eager: true,
@@ -9,7 +11,7 @@ const modules = import.meta.glob('../../content/timeline.json', {
 
 const EXTRA = Object.values(modules)[0] || [];
 
-export const TIMELINE = buildTimeline(PERSONAJES, EXTRA);
+export const TIMELINE = buildTimeline(PERSONAJES, [...EXTRA, ...conciliosToEvents(CONCILIOS)]);
 
 /** Tipos presentes, con su recuento, para los filtros. */
 export const TIMELINE_TIPOS = Object.entries(

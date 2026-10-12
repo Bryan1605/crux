@@ -35,7 +35,7 @@ const CONTENT = path.join(ROOT, 'content');
 const PUBLIC_IMG = path.join(ROOT, 'public', 'img');
 const HISTORY = path.join(CONTENT, '.history');
 const SLUG_RE = /^[a-z0-9][a-z0-9-]*$/;
-const JSON_FILES = new Set(['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias', 'timeline']);
+const JSON_FILES = new Set(['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias', 'timeline', 'concilios']);
 const PERSONAJES_DIR = path.join(CONTENT, 'personajes');
 
 // --- helpers ---

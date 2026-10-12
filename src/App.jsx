@@ -15,6 +15,7 @@ import EstudioDetalle from './pages/EstudioDetalle';
 import Personaje from './pages/Personaje';
 import Biblia from './pages/Biblia';
 import Videos from './pages/Videos';
+import Concilios from './pages/Concilios';
 import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
@@ -86,6 +87,7 @@ export default function App() {
           <Route path="/estudio/:slug" element={<EstudioDetalle />} />
           <Route path="/biblia" element={<Biblia />} />
           <Route path="/videos" element={<Videos />} />
+          <Route path="/concilios" element={<Concilios />} />
           {import.meta.env.DEV && (
             <Route
               path="/admin"

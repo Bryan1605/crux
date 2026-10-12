@@ -74,7 +74,7 @@ function contentGuard() {
       };
       const readJson = name => JSON.parse(fs.readFileSync(path.join(CONTENT, `${name}.json`), 'utf8'));
 
-      for (const name of ['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias']) {
+      for (const name of ['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias', 'concilios']) {
         const file = path.join(CONTENT, `${name}.json`);
         if (fs.existsSync(file)) check(name, () => readJson(name));
       }
@@ -141,7 +141,7 @@ function seoFiles(env) {
     apply: 'build',
     generateBundle() {
       const siteUrl = (env.SITE_URL || 'https://bryan1605.github.io/crux').replace(/\/$/, '');
-      const routes = new Set(['/', '/estudio', '/biblia', '/videos']);
+      const routes = new Set(['/', '/estudio', '/biblia', '/videos', '/concilios']);
       try {
         const index = JSON.parse(fs.readFileSync(path.join(CONTENT, 'estudios.json'), 'utf8'));
         for (const s of index.studies || []) routes.add(`/estudio/${s.slug}`);

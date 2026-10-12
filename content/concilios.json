@@ -1,0 +1,213 @@
+[
+  {
+    "id": "jerusalen",
+    "tipo": "concilio",
+    "nombre": "Concilio de Jerusalén",
+    "anio": 49,
+    "anio_label": "49 d. C.",
+    "convocante": "Apóstoles y ancianos",
+    "resumen": "Los apóstoles y ancianos se reúnen para decidir si los creyentes gentiles deben circuncidarse (Hechos 15). Resuelven que la salvación no exige la Ley de Moisés y redactan una carta con cuatro abstenciones.",
+    "decisiones": [
+      "Los gentiles no deben circuncidarse para salvarse (Hechos 15, 19-20)",
+      "Carta a los gentiles: abstenerse de lo sacrificado a ídolos, de sangre, de lo ahogado y de la fornicación (Hechos 15, 28-29)"
+    ],
+    "herejias": ["judaizantes"],
+    "estudio": null
+  },
+  {
+    "id": "nicea",
+    "tipo": "concilio",
+    "nombre": "Concilio de Nicea",
+    "anio": 325,
+    "anio_label": "325 d. C.",
+    "ordinal": 1,
+    "convocante": "Constantino I",
+    "resumen": "Primer concilio ecuménico. Constantino lo convoca tras reunificar el imperio para zanjar la disputa arriana y unificar la fecha de la Pascua.",
+    "decisiones": [
+      "El Hijo es consustancial (homooúsios) al Padre",
+      "Condena del arrianismo",
+      "Cómputo común de la fecha de la Pascua"
+    ],
+    "herejias": ["arrianismo"],
+    "estudio": null
+  },
+  {
+    "id": "constantinopla-i",
+    "tipo": "concilio",
+    "nombre": "Concilio de Constantinopla I",
+    "anio": 381,
+    "anio_label": "381 d. C.",
+    "ordinal": 2,
+    "convocante": "Teodosio I",
+    "resumen": "Reafirma la fe de Nicea y responde a las dudas sobre el Espíritu Santo, completando la confesión trinitaria.",
+    "decisiones": [
+      "Credo niceno-constantinopolitano",
+      "Afirmación de la divinidad del Espíritu Santo",
+      "Reafirmación de la condena del arrianismo"
+    ],
+    "herejias": [],
+    "estudio": null
+  },
+  {
+    "id": "efeso",
+    "tipo": "concilio",
+    "nombre": "Concilio de Éfeso",
+    "anio": 431,
+    "anio_label": "431 d. C.",
+    "ordinal": 3,
+    "convocante": "Teodosio II",
+    "resumen": "Defiende la unidad de Cristo al proclamar a María Theotókos (Madre de Dios) y condena el nestorianismo.",
+    "decisiones": [
+      "María es Theotókos: Madre de Dios",
+      "Condena del nestorianismo",
+      "Confirmación de la condena del pelagianismo"
+    ],
+    "herejias": ["nestorianismo", "pelagianismo"],
+    "estudio": null
+  },
+  {
+    "id": "calcedonia",
+    "tipo": "concilio",
+    "nombre": "Concilio de Calcedonia",
+    "anio": 451,
+    "anio_label": "451 d. C.",
+    "ordinal": 4,
+    "convocante": "Marciano",
+    "resumen": "Define que Cristo es una sola persona en dos naturalezas, sin confusión ni separación, y condena el monofisismo.",
+    "decisiones": [
+      "Definición de Calcedonia: dos naturalezas, una persona",
+      "Condena del monofisismo"
+    ],
+    "herejias": ["monofisismo"],
+    "estudio": null
+  },
+  {
+    "id": "constantinopla-ii",
+    "tipo": "concilio",
+    "nombre": "Concilio de Constantinopla II",
+    "anio": 553,
+    "anio_label": "553 d. C.",
+    "ordinal": 5,
+    "convocante": "Justiniano I",
+    "resumen": "Confirma los concilios anteriores y condena los «Tres Capítulos», escritos teológicos que se acercaban al nestorianismo.",
+    "decisiones": [
+      "Condena de los «Tres Capítulos»",
+      "Reafirmación de Éfeso y Calcedonia"
+    ],
+    "herejias": [],
+    "estudio": null
+  },
+  {
+    "id": "constantinopla-iii",
+    "tipo": "concilio",
+    "nombre": "Concilio de Constantinopla III",
+    "anio": 680,
+    "anio_label": "680-681 d. C.",
+    "ordinal": 6,
+    "convocante": "Constantino IV",
+    "resumen": "Cierra la crisis cristológica al condenar el monotelismo: Cristo tiene también voluntad humana.",
+    "decisiones": [
+      "Condena del monotelismo",
+      "Cristo tiene dos voluntades: divina y humana"
+    ],
+    "herejias": ["monotelismo"],
+    "estudio": null
+  },
+  {
+    "id": "nicea-ii",
+    "tipo": "concilio",
+    "nombre": "Concilio de Nicea II",
+    "anio": 787,
+    "anio_label": "787 d. C.",
+    "ordinal": 7,
+    "convocante": "Irene (emperatriz bizantina)",
+    "resumen": "Último concilio ecuménico reconocido por las grandes tradiciones. Distingue la veneración de las imágenes de la adoración y condena la iconoclasia.",
+    "decisiones": [
+      "La veneración de imágenes es legítima; la adoración solo a Dios",
+      "Condena de la iconoclasia"
+    ],
+    "herejias": ["iconoclasia"],
+    "estudio": null
+  },
+  {
+    "id": "gnosticismo",
+    "tipo": "herejia",
+    "nombre": "Gnosticismo",
+    "contexto": "siglos I-II",
+    "resumen": "Corriente que distinguía un Dios bueno de un demiurgo inferior, negaba la encarnación real de Cristo y reservaba la salvación a un conocimiento secreto. Combatida por los primeros apologistas e Ireneo.",
+    "condenada_en": null,
+    "estudio": null
+  },
+  {
+    "id": "judaizantes",
+    "tipo": "herejia",
+    "nombre": "Judaizantes",
+    "contexto": "siglo I",
+    "resumen": "Grupo que enseñaba que los creyentes gentiles debían guardar la Ley de Moisés —circuncisión, sábado y alimentos— para ser salvos.",
+    "condenada_en": "jerusalen",
+    "estudio": "06-apologetica--judaizantes"
+  },
+  {
+    "id": "arrianismo",
+    "tipo": "herejia",
+    "nombre": "Arrianismo",
+    "contexto": "siglo IV",
+    "resumen": "Negaba la divinidad plena del Hijo y lo presentaba como la primera criatura de Dios, subordinada al Padre.",
+    "condenada_en": "nicea",
+    "estudio": null
+  },
+  {
+    "id": "donatismo",
+    "tipo": "herejia",
+    "nombre": "Donatismo",
+    "contexto": "siglos IV-V",
+    "resumen": "Sostenía que eran inválidos los sacramentos administrados por sacerdotes que habían apostatado durante las persecuciones; se separó de la Iglesia en el norte de África y fue condenado en concilios locales.",
+    "condenada_en": null,
+    "estudio": null
+  },
+  {
+    "id": "pelagianismo",
+    "tipo": "herejia",
+    "nombre": "Pelagianismo",
+    "contexto": "siglo V",
+    "resumen": "Exaltaba la libertad humana hasta negar que la gracia sea necesaria para salvarse. Agustín lo combatió; fue condenado en concilios africanos y en Éfeso.",
+    "condenada_en": "efeso",
+    "estudio": null
+  },
+  {
+    "id": "nestorianismo",
+    "tipo": "herejia",
+    "nombre": "Nestorianismo",
+    "contexto": "siglo V",
+    "resumen": "Separaba en Cristo a dos personas —el Verbo y el hombre Jesús— y por eso rechazaba llamar a María Madre de Dios. Provocó la convocatoria de Éfeso.",
+    "condenada_en": "efeso",
+    "estudio": null
+  },
+  {
+    "id": "monofisismo",
+    "tipo": "herejia",
+    "nombre": "Monofisismo",
+    "contexto": "siglo V",
+    "resumen": "Afirmaba una sola naturaleza en Cristo, fundiendo lo divino y lo humano; su error quedó definido y condenado en Calcedonia.",
+    "condenada_en": "calcedonia",
+    "estudio": null
+  },
+  {
+    "id": "monotelismo",
+    "tipo": "herejia",
+    "nombre": "Monotelismo",
+    "contexto": "siglo VII",
+    "resumen": "Aceptaba dos naturalezas en Cristo pero una sola voluntad; condenado en Constantinopla III, que afirmó también su voluntad humana.",
+    "condenada_en": "constantinopla-iii",
+    "estudio": null
+  },
+  {
+    "id": "iconoclasia",
+    "tipo": "herejia",
+    "nombre": "Iconoclasia",
+    "contexto": "siglo VIII",
+    "resumen": "Movimiento que prohibía y destruía las imágenes sagradas. Nicea II lo rechazó distinguiendo la veneración (permisible) de la adoración (solo a Dios).",
+    "condenada_en": "nicea-ii",
+    "estudio": null
+  }
+]

@@ -59,7 +59,7 @@ export default function TimelineEditor() {
     if (!href) return true;
     const p = String(href).split(/[?#]/)[0];
     if (p === '/') return true;
-    if (['/estudio', '/biblia', '/videos'].includes(p)) return true;
+    if (['/estudio', '/biblia', '/videos', '/concilios'].includes(p)) return true;
     if (p.startsWith('/biblia')) return true;
     if (p.startsWith('/estudio/personajes/')) return personajeSlugs.has(p.replace('/estudio/personajes/', ''));
     if (p.startsWith('/estudio/')) return studySlugs.has(p.replace('/estudio/', ''));
