@@ -40,9 +40,9 @@ const DEFAULTS = {
       textColor: '#f4f4f5',
       links: [
         { label: 'Biblia Patrística', href: '/biblia', ariaLabel: 'Leer la Biblia Patrística completa' },
-        { label: 'Personajes', href: '/estudio?cat=03-personajes', ariaLabel: 'Estudios de personajes bíblicos' },
-        { label: 'Doctrinas', href: '/estudio?cat=04-doctrinas', ariaLabel: 'Estudios de doctrina sistemática' },
-        { label: 'Apocalipsis', href: '/estudio?cat=10-apocalipsis', ariaLabel: 'Estudios del libro de Apocalipsis' }
+        { label: 'Concilios', href: '/concilios', ariaLabel: 'Concilios y herejías de la historia de la Iglesia' },
+        { label: 'Temas', href: '/temas', ariaLabel: 'Explorar todos los temas del estudio' },
+        { label: 'Buscar', href: '/buscar', ariaLabel: 'Buscar en todo el sitio' }
       ]
     }
   ],
@@ -51,6 +51,9 @@ const DEFAULTS = {
     links: [
       { label: 'Inicio', href: '/' },
       { label: 'Estudio', href: '/estudio' },
+      { label: 'Concilios', href: '/concilios' },
+      { label: 'Temas', href: '/temas' },
+      { label: 'Buscar', href: '/buscar' },
       { label: 'Biblia Patrística', href: '/biblia' },
       { label: 'Videos', href: '/videos' }
     ],

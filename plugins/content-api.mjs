@@ -26,7 +26,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 
-import { writeIndex } from '../scripts/content-lib.mjs';
+import { writeIndexes } from '../scripts/content-lib.mjs';
 import { parseFrontmatter } from '../src/lib/frontmatter.js';
 import { validate } from '../scripts/validate-content.mjs';
 
@@ -157,7 +157,7 @@ export default function contentApi(env = {}) {
 
           // --- índice de estudios ---
           if (p === '/estudios' && method === 'GET') {
-            const index = writeIndex(CONTENT);
+            const index = writeIndexes(CONTENT);
             return send(res, 200, index);
           }
 
@@ -192,7 +192,7 @@ export default function contentApi(env = {}) {
                 if (old && fs.existsSync(old)) fs.unlinkSync(old);
               }
               fs.writeFileSync(file, raw.endsWith('\n') ? raw : `${raw}\n`, 'utf8');
-              const index = writeIndex(CONTENT);
+              const index = writeIndexes(CONTENT);
               return send(res, 200, { ok: true, index });
             }
             if (method === 'DELETE') {
@@ -201,7 +201,7 @@ export default function contentApi(env = {}) {
                 backupFile(file);
                 fs.unlinkSync(file);
               }
-              const index = writeIndex(CONTENT);
+              const index = writeIndexes(CONTENT);
               return send(res, 200, { ok: true, index });
             }
           }
@@ -229,6 +229,8 @@ export default function contentApi(env = {}) {
               }
               if (fs.existsSync(file)) backupFile(file);
               writeJson(file, data);
+              // Concilios y videos alimentan el índice de búsqueda.
+              if (name === 'concilios' || name === 'videos') writeIndexes(CONTENT);
               return send(res, 200, { ok: true });
             }
           }
@@ -263,6 +265,7 @@ export default function contentApi(env = {}) {
               validate('personaje', data, newSlug);
               if (fs.existsSync(file)) backupFile(file);
               writeJson(file, data);
+              writeIndexes(CONTENT);
               return send(res, 200, { ok: true });
             }
             if (slug && method === 'DELETE') {
@@ -271,6 +274,7 @@ export default function contentApi(env = {}) {
                 backupFile(file);
                 fs.unlinkSync(file);
               }
+              writeIndexes(CONTENT);
               return send(res, 200, { ok: true });
             }
           }
@@ -343,7 +347,7 @@ export default function contentApi(env = {}) {
             if (!dest.startsWith(CONTENT + path.sep)) return send(res, 400, { error: 'Ruta inválida' });
             if (fs.existsSync(dest)) backupFile(dest);
             fs.copyFileSync(src, dest);
-            if (file === 'estudios.json') writeIndex(CONTENT);
+            if (file === 'estudios.json') writeIndexes(CONTENT);
             return send(res, 200, { ok: true });
           }
 

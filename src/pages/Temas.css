@@ -1,0 +1,104 @@
+/* --- encabezado de página ------------------------------------------------- */
+
+.temas-page .page-head {
+  padding: clamp(6.5rem, 14vh, 9rem) 0 var(--sp-6);
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.temas-page .page-head h1 {
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+
+/* --- títulos de sección --------------------------------------------------- */
+
+.temas__h2 {
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  margin-bottom: var(--sp-3);
+}
+
+.temas__desc {
+  max-width: 62ch;
+  color: var(--muted);
+  margin-bottom: var(--sp-6);
+}
+
+.temas__desc a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- categorías ----------------------------------------------------------- */
+
+.temas__cats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  gap: var(--sp-4);
+}
+
+.temas__cat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  height: 100%;
+  padding: var(--sp-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.temas__cat:hover {
+  background: var(--panel-hover);
+  border-color: var(--border-strong);
+}
+
+.temas__cat:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.temas__cat-label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.temas__cat-short {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.temas__cat-count {
+  margin-top: auto;
+  padding-top: var(--sp-2);
+  color: var(--faint);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --- nube de temas -------------------------------------------------------- */
+
+.temas__cloud {
+  gap: var(--sp-2);
+}
+
+.temas__hint {
+  margin-top: var(--sp-6);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.temas__hint a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import contentApi from './plugins/content-api.mjs';
-import { writeIndex } from './scripts/content-lib.mjs';
+import { writeIndexes } from './scripts/content-lib.mjs';
 import { validate } from './scripts/validate-content.mjs';
 import { checkTimelineLabels } from './src/lib/timeline.js';
 
@@ -103,11 +103,11 @@ function contentGuard() {
         }
       }
 
-      // Regenerar el índice de estudios para que nunca quede desincronizado.
+      // Regenerar el índice de estudios y el de búsqueda para que nunca queden desincronizados.
       try {
-        writeIndex(CONTENT);
+        writeIndexes(CONTENT);
       } catch (e) {
-        errors.push(`No se pudo regenerar content/estudios.json → ${e.message}`);
+        errors.push(`No se pudieron regenerar los índices (estudios/búsqueda) → ${e.message}`);
       }
 
       // Destinos de los eventos curated: deben resolver a rutas reales.
@@ -141,7 +141,7 @@ function seoFiles(env) {
     apply: 'build',
     generateBundle() {
       const siteUrl = (env.SITE_URL || 'https://bryan1605.github.io/crux').replace(/\/$/, '');
-      const routes = new Set(['/', '/estudio', '/biblia', '/videos', '/concilios']);
+      const routes = new Set(['/', '/estudio', '/biblia', '/videos', '/concilios', '/temas', '/buscar']);
       try {
         const index = JSON.parse(fs.readFileSync(path.join(CONTENT, 'estudios.json'), 'utf8'));
         for (const s of index.studies || []) routes.add(`/estudio/${s.slug}`);

@@ -1,0 +1,2571 @@
+{
+  "v": 1,
+  "tipos": {
+    "estudio": 171,
+    "personaje": 5,
+    "concilio": 8,
+    "herejia": 9
+  },
+  "items": [
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--01-perdon",
+      "href": "/estudio/01-fundamentos--01-perdon",
+      "title": "Perdón",
+      "sub": "Fundamentos · 1 Juan 1:9",
+      "desc": "Perdón es Dios quitando la culpa y la deuda del pecado completamente, basado en el sacrificio de Cristo, restaurando la relación rota.",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "perdon fundamentos 1 juan 1:9 perdon es dios quitando la culpa y la deuda del pecado completamente, basado en el sacrificio de cristo, restaurando la relacion rota. fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--02-justificacion",
+      "href": "/estudio/01-fundamentos--02-justificacion",
+      "title": "Justificación",
+      "sub": "Fundamentos · Romanos 3:22-24",
+      "desc": "Justificación es el acto legal por el cual Dios declara justo al pecador que cree en Jesucristo. No es un proceso de \"volverse justo\" — es una declaración judicial inmediata. Dios no hace…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "justificacion fundamentos romanos 3:22-24 justificacion es el acto legal por el cual dios declara justo al pecador que cree en jesucristo. no es un proceso de \"volverse justo\" — es una declaracion judicial inmediata. dios no hace… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--03-reconciliacion",
+      "href": "/estudio/01-fundamentos--03-reconciliacion",
+      "title": "Reconciliación",
+      "sub": "Fundamentos · 2 Corintios 5:18-19",
+      "desc": "Reconciliación es la restauración de la relación rota entre Dios y el ser humano. Dios, que estaba ofendido por el pecado, tomó la iniciativa de hacer la paz por medio de la muerte de…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "reconciliacion fundamentos 2 corintios 5:18-19 reconciliacion es la restauracion de la relacion rota entre dios y el ser humano. dios, que estaba ofendido por el pecado, tomo la iniciativa de hacer la paz por medio de la muerte de… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--04-llegar-a-ser-hijo-de-dios",
+      "href": "/estudio/01-fundamentos--04-llegar-a-ser-hijo-de-dios",
+      "title": "Llegar a ser hijo de Dios",
+      "sub": "Fundamentos · Juan 1:12-13",
+      "desc": "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios que recibe al que cree.",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "llegar a ser hijo de dios fundamentos juan 1:12-13 se llega a ser hijo de dios por fe en jesucristo y nuevo nacimiento espiritual. no es por nacimiento fisico, religion, herencia o esfuerzo moral. es un acto de dios que recibe al que cree. fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--05-de-que-son-salvos",
+      "href": "/estudio/01-fundamentos--05-de-que-son-salvos",
+      "title": "¿De qué son salvos los hijos de Dios?",
+      "sub": "Fundamentos · Efesios 2:1-5",
+      "desc": "Los hijos de Dios son salvos de la muerte espiritual, el poder del pecado, la ira de Dios, la condenación eterna y el dominio del diablo. La salvación no es solo \"ir al cielo\" — es un…",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "¿de que son salvos los hijos de dios? fundamentos efesios 2:1-5 los hijos de dios son salvos de la muerte espiritual, el poder del pecado, la ira de dios, la condenacion eterna y el dominio del diablo. la salvacion no es solo \"ir al cielo\" — es un… fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--06-puede-un-hijo-dejar-de-serlo",
+      "href": "/estudio/01-fundamentos--06-puede-un-hijo-dejar-de-serlo",
+      "title": "¿Puede un hijo de Dios dejar de serlo?",
+      "sub": "Fundamentos · Juan 10:27-29",
+      "desc": "No. La salvación es eterna, irrevocable y segura. Un hijo de Dios no puede dejar de serlo porque la salvación no depende de su desempeño sino de la fidelidad de Dios. El creyente es…",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "¿puede un hijo de dios dejar de serlo? fundamentos juan 10:27-29 no. la salvacion es eterna, irrevocable y segura. un hijo de dios no puede dejar de serlo porque la salvacion no depende de su desempeno sino de la fidelidad de dios. el creyente es… fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--07-informacion-vs-revelacion",
+      "href": "/estudio/01-fundamentos--07-informacion-vs-revelacion",
+      "title": "Información por la razón vs. Información por revelación",
+      "sub": "Fundamentos · 1 Corintios 2:9-14",
+      "desc": "La información por la razón es el conocimiento que el ser humano puede obtener por su capacidad intelectual natural. La información por revelación es el conocimiento que el Espíritu Santo…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "informacion por la razon vs. informacion por revelacion fundamentos 1 corintios 2:9-14 la informacion por la razon es el conocimiento que el ser humano puede obtener por su capacidad intelectual natural. la informacion por revelacion es el conocimiento que el espiritu santo… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--08-mejorar-la-salvacion-con-conducta",
+      "href": "/estudio/01-fundamentos--08-mejorar-la-salvacion-con-conducta",
+      "title": "¿Puede un hijo de Dios mejorar por su conducta el regalo de la Salvación?",
+      "sub": "Fundamentos · Efesios 2:8-9",
+      "desc": "No. La salvación no es un premio ni un salario — es un regalo. Un regalo no se mejora con lo que el receptor hace. Si pudieras mejorarlo con tu conducta, ya no sería un regalo sino una…",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "¿puede un hijo de dios mejorar por su conducta el regalo de la salvacion? fundamentos efesios 2:8-9 no. la salvacion no es un premio ni un salario — es un regalo. un regalo no se mejora con lo que el receptor hace. si pudieras mejorarlo con tu conducta, ya no seria un regalo sino una… fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--09-mejorar-la-filiacion-con-conducta",
+      "href": "/estudio/01-fundamentos--09-mejorar-la-filiacion-con-conducta",
+      "title": "¿Puede un hijo de Dios mejorar por su conducta el regalo de ser hijo de Dios?",
+      "sub": "Fundamentos · 1 Juan 3:1",
+      "desc": "No. La filiación (ser hijo de Dios) no se adquiere por conducta ni se mejora con ella. Es un estatus recibido por adopción y nuevo nacimiento. Un hijo natural no se vuelve \"más hijo\" por…",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "¿puede un hijo de dios mejorar por su conducta el regalo de ser hijo de dios? fundamentos 1 juan 3:1 no. la filiacion (ser hijo de dios) no se adquiere por conducta ni se mejora con ella. es un estatus recibido por adopcion y nuevo nacimiento. un hijo natural no se vuelve \"mas hijo\" por… fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--10-mejorar-la-vida-eterna-con-conducta",
+      "href": "/estudio/01-fundamentos--10-mejorar-la-vida-eterna-con-conducta",
+      "title": "¿Puede mejorar un hijo de Dios por su conducta el regalo de la Vida Eterna?",
+      "sub": "Fundamentos · Juan 10:28",
+      "desc": "No. La vida eterna es eterna por definición. No es \"vida larga\" ni \"vida condicional\". Si pudiera mejorarse, perderse o aumentarse por la conducta, no sería eterna. El regalo es tan…",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "¿puede mejorar un hijo de dios por su conducta el regalo de la vida eterna? fundamentos juan 10:28 no. la vida eterna es eterna por definicion. no es \"vida larga\" ni \"vida condicional\". si pudiera mejorarse, perderse o aumentarse por la conducta, no seria eterna. el regalo es tan… fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--11-santificacion",
+      "href": "/estudio/01-fundamentos--11-santificacion",
+      "title": "Santificación",
+      "sub": "Fundamentos · 1 Tesalonicenses 4:3",
+      "desc": "Santificación es el proceso por el cual Dios nos hace más parecidos a Cristo. No es opcional — es la voluntad de Dios para cada creyente. No es para ser más salvos, sino para reflejar mejor…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "santificacion fundamentos 1 tesalonicenses 4:3 santificacion es el proceso por el cual dios nos hace mas parecidos a cristo. no es opcional — es la voluntad de dios para cada creyente. no es para ser mas salvos, sino para reflejar mejor… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--12-purificacion",
+      "href": "/estudio/01-fundamentos--12-purificacion",
+      "title": "Purificación",
+      "sub": "Fundamentos · 1 Juan 1:7-9",
+      "desc": "Purificación es el proceso por el cual Dios limpia al creyente del pecado que daña la comunión diaria. Mientras la justificación es una declaración única que nos hace perfectos en posición,…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "purificacion fundamentos 1 juan 1:7-9 purificacion es el proceso por el cual dios limpia al creyente del pecado que dana la comunion diaria. mientras la justificacion es una declaracion unica que nos hace perfectos en posicion,… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--13-consagracion",
+      "href": "/estudio/01-fundamentos--13-consagracion",
+      "title": "Consagración",
+      "sub": "Fundamentos · Romanos 12:1",
+      "desc": "Consagración es el acto de dedicar toda la vida a Dios como respuesta a Su misericordia. No es un voto religioso ni un acto de mérito; es la entrega total y voluntaria de uno mismo a Dios…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "consagracion fundamentos romanos 12:1 consagracion es el acto de dedicar toda la vida a dios como respuesta a su misericordia. no es un voto religioso ni un acto de merito; es la entrega total y voluntaria de uno mismo a dios… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--14-madurez-espiritual",
+      "href": "/estudio/01-fundamentos--14-madurez-espiritual",
+      "title": "Madurez espiritual",
+      "sub": "Fundamentos · Hebreos 5:12-14",
+      "desc": "Madurez espiritual es el crecimiento en el conocimiento y la obediencia a Dios que lleva al creyente a discernir el bien del mal y a vivir de acuerdo a la voluntad de Dios. No es automática…",
+      "tags": [
+        "fundamento",
+        "doctrina/santificacion"
+      ],
+      "fold": "madurez espiritual fundamentos hebreos 5:12-14 madurez espiritual es el crecimiento en el conocimiento y la obediencia a dios que lleva al creyente a discernir el bien del mal y a vivir de acuerdo a la voluntad de dios. no es automatica… fundamento doctrina/santificacion"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--15-testigo-de-jesus",
+      "href": "/estudio/01-fundamentos--15-testigo-de-jesus",
+      "title": "Testigo de Jesús",
+      "sub": "Fundamentos · Hechos 1:8",
+      "desc": "Un testigo de Jesús es alguien que habla de Cristo por experiencia personal. No es un profesional de la religión; es cualquier creyente que comparte lo que ha visto y oído. El testimonio no…",
+      "tags": [
+        "fundamento",
+        "discipulado"
+      ],
+      "fold": "testigo de jesus fundamentos hechos 1:8 un testigo de jesus es alguien que habla de cristo por experiencia personal. no es un profesional de la religion; es cualquier creyente que comparte lo que ha visto y oido. el testimonio no… fundamento discipulado"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--16-obrero-en-la-mies",
+      "href": "/estudio/01-fundamentos--16-obrero-en-la-mies",
+      "title": "Obrero en su mies",
+      "sub": "Fundamentos · Mateo 9:37-38",
+      "desc": "Un obrero en la mies es todo creyente que participa activamente en la cosecha espiritual que Dios está recogiendo. No es solo el pastor o el misionero; es cualquier discípulo que ora, va y…",
+      "tags": [
+        "fundamento",
+        "discipulado"
+      ],
+      "fold": "obrero en su mies fundamentos mateo 9:37-38 un obrero en la mies es todo creyente que participa activamente en la cosecha espiritual que dios esta recogiendo. no es solo el pastor o el misionero; es cualquier discipulo que ora, va y… fundamento discipulado"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--17-soldado-en-la-milicia",
+      "href": "/estudio/01-fundamentos--17-soldado-en-la-milicia",
+      "title": "Soldado en su milicia",
+      "sub": "Fundamentos · 2 Timoteo 2:3-4",
+      "desc": "Un soldado en la milicia de Dios es un creyente que soporta dificultades con disciplina para cumplir la misión que Cristo le encomendó. La vida cristiana no es un paseo; es una batalla…",
+      "tags": [
+        "fundamento",
+        "discipulado"
+      ],
+      "fold": "soldado en su milicia fundamentos 2 timoteo 2:3-4 un soldado en la milicia de dios es un creyente que soporta dificultades con disciplina para cumplir la mision que cristo le encomendo. la vida cristiana no es un paseo; es una batalla… fundamento discipulado"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--18-la-salvacion-no-se-pierde",
+      "href": "/estudio/01-fundamentos--18-la-salvacion-no-se-pierde",
+      "title": "La salvación no se pierde (refutación bíblica)",
+      "sub": "Fundamentos · Juan 10:27-29",
+      "desc": "La salvación es eterna, irrevocable y segura para todo el que ha creído genuinamente en Jesucristo. Un verdadero hijo de Dios no puede perder su salvación, porque esta no depende del…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "la salvacion no se pierde (refutacion biblica) fundamentos juan 10:27-29 la salvacion es eterna, irrevocable y segura para todo el que ha creido genuinamente en jesucristo. un verdadero hijo de dios no puede perder su salvacion, porque esta no depende del… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--19-embajador-de-jesucristo",
+      "href": "/estudio/01-fundamentos--19-embajador-de-jesucristo",
+      "title": "Embajador de Jesucristo",
+      "sub": "Fundamentos · 2 Corintios 5:18-20",
+      "desc": "Un embajador de Jesucristo es un representante oficial del reino de Dios ante el mundo. Así como un embajador representa a su nación en tierra extranjera, el creyente representa a Cristo en…",
+      "tags": [
+        "fundamento",
+        "discipulado",
+        "doctrina/cristologia"
+      ],
+      "fold": "embajador de jesucristo fundamentos 2 corintios 5:18-20 un embajador de jesucristo es un representante oficial del reino de dios ante el mundo. asi como un embajador representa a su nacion en tierra extranjera, el creyente representa a cristo en… fundamento discipulado doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--20-discipulo",
+      "href": "/estudio/01-fundamentos--20-discipulo",
+      "title": "Discípulo",
+      "sub": "Fundamentos · Mateo 28:19-20",
+      "desc": "Un discípulo es un seguidor de Jesús que aprende de Él para vivir como Él. No es solo alguien que cree en Jesús mentalmente; es alguien que lo sigue, lo imita y lo obedece. El discipulado…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "discipulo fundamentos mateo 28:19-20 un discipulo es un seguidor de jesus que aprende de el para vivir como el. no es solo alguien que cree en jesus mentalmente; es alguien que lo sigue, lo imita y lo obedece. el discipulado… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--21-sello-del-espiritu-santo",
+      "href": "/estudio/01-fundamentos--21-sello-del-espiritu-santo",
+      "title": "El sello del Espíritu Santo",
+      "sub": "Fundamentos · Efesios 1:13-14",
+      "desc": "El sello del Espíritu Santo es la marca de propiedad y seguridad que Dios pone en cada creyente en el momento de la salvación. El Espíritu Santo es la garantía de que Dios cumplirá Su…",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "el sello del espiritu santo fundamentos efesios 1:13-14 el sello del espiritu santo es la marca de propiedad y seguridad que dios pone en cada creyente en el momento de la salvacion. el espiritu santo es la garantia de que dios cumplira su… fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--22-arrepentimiento",
+      "href": "/estudio/01-fundamentos--22-arrepentimiento",
+      "title": "Arrepentimiento",
+      "sub": "Fundamentos · Hechos 3:19",
+      "desc": "Arrepentimiento no es simplemente sentirse mal por haber pecado. Es un cambio radical de mente que resulta en un cambio de dirección. Es volverse de la rebelión contra Dios a la fe en…",
+      "tags": [
+        "fundamento",
+        "doctrina/soteriologia"
+      ],
+      "fold": "arrepentimiento fundamentos hechos 3:19 arrepentimiento no es simplemente sentirse mal por haber pecado. es un cambio radical de mente que resulta en un cambio de direccion. es volverse de la rebelion contra dios a la fe en… fundamento doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--23-redencion",
+      "href": "/estudio/01-fundamentos--23-redencion",
+      "title": "Redención",
+      "sub": "Fundamentos · Efesios 1:7",
+      "desc": "Redención significa ser comprado de vuelta o ser liberado mediante el pago de un rescate. En el Antiguo Testamento, un pariente redentor (goel) pagaba para rescatar a un familiar esclavo o…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "redencion fundamentos efesios 1:7 redencion significa ser comprado de vuelta o ser liberado mediante el pago de un rescate. en el antiguo testamento, un pariente redentor (goel) pagaba para rescatar a un familiar esclavo o… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--24-propiciacion",
+      "href": "/estudio/01-fundamentos--24-propiciacion",
+      "title": "Propiciación",
+      "sub": "Fundamentos · Romanos 3:25",
+      "desc": "Propiciación significa apartar la ira de Dios mediante un sacrificio. La santidad de Dios demanda justicia contra el pecado, pero Cristo tomó sobre Sí la ira que nosotros merecíamos,…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "propiciacion fundamentos romanos 3:25 propiciacion significa apartar la ira de dios mediante un sacrificio. la santidad de dios demanda justicia contra el pecado, pero cristo tomo sobre si la ira que nosotros mereciamos,… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--25-expiacion",
+      "href": "/estudio/01-fundamentos--25-expiacion",
+      "title": "Expiación",
+      "sub": "Fundamentos · Romanos 3:25",
+      "desc": "Expiación significa cubrir o eliminar el pecado mediante un sacrificio. Mientras la propiciación se enfoca en el Dios cuya ira es apartada, la expiación se enfoca en el pecado que es…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "expiacion fundamentos romanos 3:25 expiacion significa cubrir o eliminar el pecado mediante un sacrificio. mientras la propiciacion se enfoca en el dios cuya ira es apartada, la expiacion se enfoca en el pecado que es… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--26-regeneracion",
+      "href": "/estudio/01-fundamentos--26-regeneracion",
+      "title": "Regeneración (nacer de nuevo)",
+      "sub": "Fundamentos · Juan 3:3",
+      "desc": "Regeneración es el acto soberano de Dios por el cual imparte vida espiritual a una persona que estaba muerta espiritualmente. Es el \"nuevo nacimiento\" o \"nacer de nuevo\". No es una reforma…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "regeneracion (nacer de nuevo) fundamentos juan 3:3 regeneracion es el acto soberano de dios por el cual imparte vida espiritual a una persona que estaba muerta espiritualmente. es el \"nuevo nacimiento\" o \"nacer de nuevo\". no es una reforma… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--27-suficiencia-de-las-escrituras",
+      "href": "/estudio/01-fundamentos--27-suficiencia-de-las-escrituras",
+      "title": "Suficiencia de las Escrituras",
+      "sub": "Fundamentos · 2 Timoteo 3:16-17",
+      "desc": "La suficiencia de las Escrituras significa que la Biblia contiene todo lo que el ser humano necesita para ser salvo y vivir una vida que agrada a Dios. No necesita ser aumentada con…",
+      "tags": [
+        "fundamento",
+        "doctrina/bibliologia"
+      ],
+      "fold": "suficiencia de las escrituras fundamentos 2 timoteo 3:16-17 la suficiencia de las escrituras significa que la biblia contiene todo lo que el ser humano necesita para ser salvo y vivir una vida que agrada a dios. no necesita ser aumentada con… fundamento doctrina/bibliologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--28-preexistencia-de-cristo",
+      "href": "/estudio/01-fundamentos--28-preexistencia-de-cristo",
+      "title": "La preexistencia de Cristo",
+      "sub": "Fundamentos · Juan 1:1-3",
+      "desc": "La preexistencia de Cristo significa que Jesús existía antes de nacer en Belén. Él no comenzó a existir cuando fue concebido en el vientre de María. Jesús siempre ha existido porque Él es…",
+      "tags": [
+        "fundamento",
+        "doctrina/cristologia"
+      ],
+      "fold": "la preexistencia de cristo fundamentos juan 1:1-3 la preexistencia de cristo significa que jesus existia antes de nacer en belen. el no comenzo a existir cuando fue concebido en el vientre de maria. jesus siempre ha existido porque el es… fundamento doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--29-encarnacion",
+      "href": "/estudio/01-fundamentos--29-encarnacion",
+      "title": "La encarnación — por qué Jesús tuvo que ser 100% Dios y 100% hombre",
+      "sub": "Fundamentos · Juan 1:14",
+      "desc": "La encarnación significa que Dios el Hijo se hizo hombre. Jesús no dejó de ser Dios para volverse hombre; siendo Dios, añadió la naturaleza humana. Desde el momento de la concepción, Jesús…",
+      "tags": [
+        "fundamento"
+      ],
+      "fold": "la encarnacion — por que jesus tuvo que ser 100% dios y 100% hombre fundamentos juan 1:14 la encarnacion significa que dios el hijo se hizo hombre. jesus no dejo de ser dios para volverse hombre; siendo dios, anadio la naturaleza humana. desde el momento de la concepcion, jesus… fundamento"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--30-virginidad-de-jesus",
+      "href": "/estudio/01-fundamentos--30-virginidad-de-jesus",
+      "title": "La virginidad de Jesús",
+      "sub": "Fundamentos · Mateo 1:18-25",
+      "desc": "La virginidad de Jesús significa que Jesús fue concebido en el vientre de María sin intervención de un padre humano, por el poder milagroso del Espíritu Santo. María era virgen cuando…",
+      "tags": [
+        "fundamento",
+        "doctrina/cristologia"
+      ],
+      "fold": "la virginidad de jesus fundamentos mateo 1:18-25 la virginidad de jesus significa que jesus fue concebido en el vientre de maria sin intervencion de un padre humano, por el poder milagroso del espiritu santo. maria era virgen cuando… fundamento doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--31-humanidad-de-cristo",
+      "href": "/estudio/01-fundamentos--31-humanidad-de-cristo",
+      "title": "La humanidad de Cristo (tentaciones, emociones, limitaciones voluntarias)",
+      "sub": "Fundamentos · Hebreos 4:15",
+      "desc": "La humanidad de Cristo significa que Jesús fue completamente humano, como nosotros en todo menos en el pecado. Tuvo un cuerpo real, emociones reales, necesidades físicas reales, y…",
+      "tags": [
+        "fundamento",
+        "doctrina/cristologia"
+      ],
+      "fold": "la humanidad de cristo (tentaciones, emociones, limitaciones voluntarias) fundamentos hebreos 4:15 la humanidad de cristo significa que jesus fue completamente humano, como nosotros en todo menos en el pecado. tuvo un cuerpo real, emociones reales, necesidades fisicas reales, y… fundamento doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--32-kenosis",
+      "href": "/estudio/01-fundamentos--32-kenosis",
+      "title": "La kenosis — Cristo se despojó a sí mismo (Filipenses 2:5-11)",
+      "sub": "Fundamentos · Filipenses 2:5-8",
+      "desc": "Kenosis viene del griego κένωσις (kenōsis), que significa \"vaciamiento, despojamiento\". Describe el acto voluntario de Cristo de dejar a un lado los privilegios de Su deidad para tomar…",
+      "tags": [
+        "fundamento",
+        "doctrina/cristologia"
+      ],
+      "fold": "la kenosis — cristo se despojo a si mismo (filipenses 2:5-11) fundamentos filipenses 2:5-8 kenosis viene del griego κένωσις (kenōsis), que significa \"vaciamiento, despojamiento\". describe el acto voluntario de cristo de dejar a un lado los privilegios de su deidad para tomar… fundamento doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--33-resurreccion-de-cristo",
+      "href": "/estudio/01-fundamentos--33-resurreccion-de-cristo",
+      "title": "La resurrección de Cristo — centralidad, evidencia y significado",
+      "sub": "Fundamentos · 1 Corintios 15:17",
+      "desc": "La resurrección de Cristo significa que Jesús realmente volvió a la vida después de haber estado muerto. No fue una reanimación temporal (como Lázaro, que volvió a morir), sino una…",
+      "tags": [
+        "fundamento",
+        "doctrina/cristologia"
+      ],
+      "fold": "la resurreccion de cristo — centralidad, evidencia y significado fundamentos 1 corintios 15:17 la resurreccion de cristo significa que jesus realmente volvio a la vida despues de haber estado muerto. no fue una reanimacion temporal (como lazaro, que volvio a morir), sino una… fundamento doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--34-ascension-y-exaltacion",
+      "href": "/estudio/01-fundamentos--34-ascension-y-exaltacion",
+      "title": "La ascensión y exaltación de Cristo",
+      "sub": "Fundamentos · Hechos 1:9-11",
+      "desc": "La ascensión es el evento en el que Jesús fue elevado corporalmente al cielo cuarenta días después de Su resurrección, ante los ojos de Sus discípulos. La exaltación es la posición de…",
+      "tags": [
+        "fundamento",
+        "doctrina/cristologia"
+      ],
+      "fold": "la ascension y exaltacion de cristo fundamentos hechos 1:9-11 la ascension es el evento en el que jesus fue elevado corporalmente al cielo cuarenta dias despues de su resurreccion, ante los ojos de sus discipulos. la exaltacion es la posicion de… fundamento doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--35-cristo-mediador-y-sumo-sacerdote",
+      "href": "/estudio/01-fundamentos--35-cristo-mediador-y-sumo-sacerdote",
+      "title": "Cristo como Mediador y Sumo Sacerdote",
+      "sub": "Fundamentos · 1 Timoteo 2:5-6",
+      "desc": "Cristo es nuestro Mediador porque es el único puente entre Dios y los hombres. Y es nuestro Sumo Sacerdote porque se presenta delante de Dios en nuestro favor, ofreciendo Su propio…",
+      "tags": [
+        "fundamento",
+        "doctrina/cristologia"
+      ],
+      "fold": "cristo como mediador y sumo sacerdote fundamentos 1 timoteo 2:5-6 cristo es nuestro mediador porque es el unico puente entre dios y los hombres. y es nuestro sumo sacerdote porque se presenta delante de dios en nuestro favor, ofreciendo su propio… fundamento doctrina/cristologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--36-la-trinidad",
+      "href": "/estudio/01-fundamentos--36-la-trinidad",
+      "title": "La Trinidad",
+      "sub": "Fundamentos · 2 Corintios 13:14",
+      "desc": "La doctrina de la Trinidad enseña que Dios es un solo ser eterno que existe en tres personas distintas: el Padre, el Hijo y el Espíritu Santo. Las tres personas son igualmente Dios,…",
+      "tags": [
+        "fundamento",
+        "doctrina/trinidad"
+      ],
+      "fold": "la trinidad fundamentos 2 corintios 13:14 la doctrina de la trinidad ensena que dios es un solo ser eterno que existe en tres personas distintas: el padre, el hijo y el espiritu santo. las tres personas son igualmente dios,… fundamento doctrina/trinidad"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--37-el-padre",
+      "href": "/estudio/01-fundamentos--37-el-padre",
+      "title": "El Padre",
+      "sub": "Fundamentos · Efesios 1:3-6",
+      "desc": "El Padre es la primera Persona de la Trinidad: la fuente y origen de todas las cosas, el soberano que planifica y ejecuta la redención. El Padre no es \"el único Dios\" en detrimento del Hijo…",
+      "tags": [
+        "fundamento",
+        "doctrina/trinidad"
+      ],
+      "fold": "el padre fundamentos efesios 1:3-6 el padre es la primera persona de la trinidad: la fuente y origen de todas las cosas, el soberano que planifica y ejecuta la redencion. el padre no es \"el unico dios\" en detrimento del hijo… fundamento doctrina/trinidad"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--38-el-hijo",
+      "href": "/estudio/01-fundamentos--38-el-hijo",
+      "title": "El Hijo",
+      "sub": "Fundamentos · Filipenses 2:5-11",
+      "desc": "El Hijo es la segunda Persona de la Trinidad: el Verbo eterno de Dios que se encarnó en Jesús de Nazaret. Es igualmente Dios que el Padre, eterno y todopoderoso, pero en la obra de la…",
+      "tags": [
+        "fundamento",
+        "doctrina/trinidad"
+      ],
+      "fold": "el hijo fundamentos filipenses 2:5-11 el hijo es la segunda persona de la trinidad: el verbo eterno de dios que se encarno en jesus de nazaret. es igualmente dios que el padre, eterno y todopoderoso, pero en la obra de la… fundamento doctrina/trinidad"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--39-el-espiritu-santo-trinidad",
+      "href": "/estudio/01-fundamentos--39-el-espiritu-santo-trinidad",
+      "title": "El Espíritu Santo (Trinidad)",
+      "sub": "Fundamentos · Juan 14:16-17",
+      "desc": "El Espíritu Santo es la tercera Persona de la Trinidad: Dios presente con nosotros, que habita en los creyentes, nos transforma y nos guía hacia toda la verdad. No es una fuerza impersonal,…",
+      "tags": [
+        "fundamento",
+        "doctrina/trinidad"
+      ],
+      "fold": "el espiritu santo (trinidad) fundamentos juan 14:16-17 el espiritu santo es la tercera persona de la trinidad: dios presente con nosotros, que habita en los creyentes, nos transforma y nos guia hacia toda la verdad. no es una fuerza impersonal,… fundamento doctrina/trinidad"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--40-atributos-de-dios",
+      "href": "/estudio/01-fundamentos--40-atributos-de-dios",
+      "title": "Atributos de Dios",
+      "sub": "Fundamentos · Salmo 139:1-6",
+      "desc": "Los atributos de Dios son las cualidades esenciales que describen quién es Dios. No son partes de Dios; son la totalidad de quién es Él en cada atributo. Dios es santo al 100%, amor al…",
+      "tags": [
+        "fundamento",
+        "doctrina/trinidad"
+      ],
+      "fold": "atributos de dios fundamentos salmo 139:1-6 los atributos de dios son las cualidades esenciales que describen quien es dios. no son partes de dios; son la totalidad de quien es el en cada atributo. dios es santo al 100%, amor al… fundamento doctrina/trinidad"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--41-la-persona-del-espiritu-santo",
+      "href": "/estudio/01-fundamentos--41-la-persona-del-espiritu-santo",
+      "title": "La persona del Espíritu Santo",
+      "sub": "Fundamentos · Hechos 13:2",
+      "desc": "El Espíritu Santo no es una fuerza, una energía, una influencia o un \"poder\" impersonal. Es una Persona divina: tiene voluntad, emociones, conocimiento, y toma decisiones independientes.…",
+      "tags": [
+        "fundamento",
+        "doctrina/neumatologia"
+      ],
+      "fold": "la persona del espiritu santo fundamentos hechos 13:2 el espiritu santo no es una fuerza, una energia, una influencia o un \"poder\" impersonal. es una persona divina: tiene voluntad, emociones, conocimiento, y toma decisiones independientes.… fundamento doctrina/neumatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--42-espiritu-en-at-y-nt",
+      "href": "/estudio/01-fundamentos--42-espiritu-en-at-y-nt",
+      "title": "El Espíritu Santo en el AT y el NT",
+      "sub": "Fundamentos · Joel 2:28-29 / Hechos 2:16-18",
+      "desc": "El Espíritu Santo obró en el Antiguo Testamento y obra de manera diferente en el Nuevo Testamento. No es un Espíritu distinto; es la misma Persona divina que obra de manera diferente según…",
+      "tags": [
+        "fundamento",
+        "doctrina/neumatologia"
+      ],
+      "fold": "el espiritu santo en el at y el nt fundamentos joel 2:28-29 / hechos 2:16-18 el espiritu santo obro en el antiguo testamento y obra de manera diferente en el nuevo testamento. no es un espiritu distinto; es la misma persona divina que obra de manera diferente segun… fundamento doctrina/neumatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--43-dones-del-espiritu-santo",
+      "href": "/estudio/01-fundamentos--43-dones-del-espiritu-santo",
+      "title": "Los dones del Espíritu Santo",
+      "sub": "Fundamentos · 1 Corintios 12:7-11",
+      "desc": "Los dones del Espíritu Santo son habilidades sobrenaturales que el Espíritu distribuye a cada creyente para edificar la iglesia y servir a otros. No son para la autosatisfacción ni para…",
+      "tags": [
+        "fundamento",
+        "doctrina/neumatologia"
+      ],
+      "fold": "los dones del espiritu santo fundamentos 1 corintios 12:7-11 los dones del espiritu santo son habilidades sobrenaturales que el espiritu distribuye a cada creyente para edificar la iglesia y servir a otros. no son para la autosatisfaccion ni para… fundamento doctrina/neumatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--44-fruto-del-espiritu-santo",
+      "href": "/estudio/01-fundamentos--44-fruto-del-espiritu-santo",
+      "title": "El fruto del Espíritu Santo",
+      "sub": "Fundamentos · Gálatas 5:22-23",
+      "desc": "El fruto del Espíritu Santo es la evidencia externa de una vida transformada por Cristo. Mientras que los dones son habilidades sobrenaturales para servir, el fruto es el carácter que el…",
+      "tags": [
+        "fundamento",
+        "doctrina/neumatologia"
+      ],
+      "fold": "el fruto del espiritu santo fundamentos galatas 5:22-23 el fruto del espiritu santo es la evidencia externa de una vida transformada por cristo. mientras que los dones son habilidades sobrenaturales para servir, el fruto es el caracter que el… fundamento doctrina/neumatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--45-llenura-del-espiritu-santo",
+      "href": "/estudio/01-fundamentos--45-llenura-del-espiritu-santo",
+      "title": "Llenura del Espíritu Santo",
+      "sub": "Fundamentos · Efesios 5:18",
+      "desc": "La llenura del Espíritu Santo es la sumisión continua de la vida del creyente al control del Espíritu. No es una experiencia emocional única ni una \"segunda obra de gracia\". Es un estilo de…",
+      "tags": [
+        "fundamento",
+        "doctrina/neumatologia"
+      ],
+      "fold": "llenura del espiritu santo fundamentos efesios 5:18 la llenura del espiritu santo es la sumision continua de la vida del creyente al control del espiritu. no es una experiencia emocional unica ni una \"segunda obra de gracia\". es un estilo de… fundamento doctrina/neumatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--46-imagen-de-dios",
+      "href": "/estudio/01-fundamentos--46-imagen-de-dios",
+      "title": "Imagen de Dios",
+      "sub": "Fundamentos · Génesis 1:26-27",
+      "desc": "La imagen de Dios (Imago Dei) es lo que distingue al ser humano de todos los demás seres creados: cada persona fue creada a imagen y semejanza de Dios, lo que le otorga dignidad inherent,…",
+      "tags": [
+        "fundamento",
+        "doctrina/antropologia"
+      ],
+      "fold": "imagen de dios fundamentos genesis 1:26-27 la imagen de dios (imago dei) es lo que distingue al ser humano de todos los demas seres creados: cada persona fue creada a imagen y semejanza de dios, lo que le otorga dignidad inherent,… fundamento doctrina/antropologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--47-la-caida-y-el-pecado-original",
+      "href": "/estudio/01-fundamentos--47-la-caida-y-el-pecado-original",
+      "title": "La caída y el pecado original",
+      "sub": "Fundamentos · Romanos 5:12",
+      "desc": "La caída es el evento en que Adán y Eva desobedecieron a Dios en el Jardín del Edén, resultando en la entrada del pecado, la muerte y la separación de Dios en el mundo. El \"pecado original\"…",
+      "tags": [
+        "fundamento",
+        "doctrina/antropologia"
+      ],
+      "fold": "la caida y el pecado original fundamentos romanos 5:12 la caida es el evento en que adan y eva desobedecieron a dios en el jardin del eden, resultando en la entrada del pecado, la muerte y la separacion de dios en el mundo. el \"pecado original\"… fundamento doctrina/antropologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--48-alma-espiritu-y-cuerpo",
+      "href": "/estudio/01-fundamentos--48-alma-espiritu-y-cuerpo",
+      "title": "Alma, espíritu y cuerpo",
+      "sub": "Fundamentos · 1 Tesalonicenses 5:23",
+      "desc": "El ser humano está compuesto por cuerpo, alma y espíritu. Esta visión tricotómica (tres partes) se basa en 1 Tesalonicenses 5:23. El cuerpo es la parte física; el alma (נֶפֶשׁ — nephesh) es…",
+      "tags": [
+        "fundamento",
+        "doctrina/antropologia"
+      ],
+      "fold": "alma, espiritu y cuerpo fundamentos 1 tesalonicenses 5:23 el ser humano esta compuesto por cuerpo, alma y espiritu. esta vision tricotomica (tres partes) se basa en 1 tesalonicenses 5:23. el cuerpo es la parte fisica; el alma (נֶפֶשׁ — nephesh) es… fundamento doctrina/antropologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--49-la-conciencia",
+      "href": "/estudio/01-fundamentos--49-la-conciencia",
+      "title": "La conciencia",
+      "sub": "Fundamentos · Romanos 2:14-15",
+      "desc": "La conciencia es la capacidad interna de distinguir el bien del mal que Dios ha puesto en todo ser humano. No es la ley escrita (la Torá), sino una ley \"escrita en el corazón\" que da…",
+      "tags": [
+        "fundamento",
+        "doctrina/antropologia"
+      ],
+      "fold": "la conciencia fundamentos romanos 2:14-15 la conciencia es la capacidad interna de distinguir el bien del mal que dios ha puesto en todo ser humano. no es la ley escrita (la tora), sino una ley \"escrita en el corazon\" que da… fundamento doctrina/antropologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--50-libre-albedrio",
+      "href": "/estudio/01-fundamentos--50-libre-albedrio",
+      "title": "Libre albedrío",
+      "sub": "Fundamentos · Deuteronomio 30:19",
+      "desc": "El libre albedrío es la capacidad del ser humano para hacer elecciones genuinas entre alternativas morales. Dios creó al ser humano con la capacidad de elegir, y las elecciones tienen…",
+      "tags": [
+        "fundamento",
+        "doctrina/antropologia"
+      ],
+      "fold": "libre albedrio fundamentos deuteronomio 30:19 el libre albedrio es la capacidad del ser humano para hacer elecciones genuinas entre alternativas morales. dios creo al ser humano con la capacidad de elegir, y las elecciones tienen… fundamento doctrina/antropologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--51-naturaleza-de-la-iglesia",
+      "href": "/estudio/01-fundamentos--51-naturaleza-de-la-iglesia",
+      "title": "Naturaleza de la Iglesia",
+      "sub": "Fundamentos · Efesios 1:22-23",
+      "desc": "La Iglesia no es un edificio, una organización humana o una denominación. La Iglesia es el cuerpo vivo de Cristo, compuesto por todos los creyentes genuinos de todos los tiempos y lugares,…",
+      "tags": [
+        "fundamento",
+        "eclesiologia"
+      ],
+      "fold": "naturaleza de la iglesia fundamentos efesios 1:22-23 la iglesia no es un edificio, una organizacion humana o una denominacion. la iglesia es el cuerpo vivo de cristo, compuesto por todos los creyentes genuinos de todos los tiempos y lugares,… fundamento eclesiologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--52-bautismo",
+      "href": "/estudio/01-fundamentos--52-bautismo",
+      "title": "Bautismo",
+      "sub": "Fundamentos · Mateo 28:19",
+      "desc": "El bautismo es el acto de obediencia público mediante el cual un creyente profesante se identifica con la muerte, sepultura y resurrección de Cristo. No es el medio de salvación, sino la…",
+      "tags": [
+        "fundamento",
+        "eclesiologia"
+      ],
+      "fold": "bautismo fundamentos mateo 28:19 el bautismo es el acto de obediencia publico mediante el cual un creyente profesante se identifica con la muerte, sepultura y resurreccion de cristo. no es el medio de salvacion, sino la… fundamento eclesiologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--53-cena-del-senor",
+      "href": "/estudio/01-fundamentos--53-cena-del-senor",
+      "title": "Cena del Señor",
+      "sub": "Fundamentos · 1 Corintios 11:23-26",
+      "desc": "La Cena del Señor (también llamada Comunión, Fracción del Pan o Eucaristía) es el acto de obediencia memorial mediante el cual los creyentes comen el pan y beben el vino/jugo en…",
+      "tags": [
+        "fundamento",
+        "eclesiologia"
+      ],
+      "fold": "cena del senor fundamentos 1 corintios 11:23-26 la cena del senor (tambien llamada comunion, fraccion del pan o eucaristia) es el acto de obediencia memorial mediante el cual los creyentes comen el pan y beben el vino/jugo en… fundamento eclesiologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--54-gobierno-de-la-iglesia",
+      "href": "/estudio/01-fundamentos--54-gobierno-de-la-iglesia",
+      "title": "Gobierno de la Iglesia",
+      "sub": "Fundamentos · 1 Timoteo 3:1-7",
+      "desc": "El gobierno de la Iglesia no es democrático, ni papal, ni episcopal. Es cristocéntrico: Cristo es la cabeza, y bajo Él gobiernan ancianos/pastores (presbíteros) que sirven con humildad,…",
+      "tags": [
+        "fundamento",
+        "eclesiologia"
+      ],
+      "fold": "gobierno de la iglesia fundamentos 1 timoteo 3:1-7 el gobierno de la iglesia no es democratico, ni papal, ni episcopal. es cristocentrico: cristo es la cabeza, y bajo el gobiernan ancianos/pastores (presbiteros) que sirven con humildad,… fundamento eclesiologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--55-disciplina-eclesiastica",
+      "href": "/estudio/01-fundamentos--55-disciplina-eclesiastica",
+      "title": "Disciplina Eclesiástica",
+      "sub": "Fundamentos · Mateo 18:15-17",
+      "desc": "La disciplina eclesiástica es el proceso de restauración mediante el cual la Iglesia corrige a un creyente que vive en pecado, para llevarlo de vuelta a la comunión con Dios y con el…",
+      "tags": [
+        "fundamento",
+        "eclesiologia"
+      ],
+      "fold": "disciplina eclesiastica fundamentos mateo 18:15-17 la disciplina eclesiastica es el proceso de restauracion mediante el cual la iglesia corrige a un creyente que vive en pecado, para llevarlo de vuelta a la comunion con dios y con el… fundamento eclesiologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--56-adoracion",
+      "href": "/estudio/01-fundamentos--56-adoracion",
+      "title": "Adoración",
+      "sub": "Fundamentos · Juan 4:23-24",
+      "desc": "La adoración es la respuesta total del ser humano a la naturaleza y obras de Dios. No es un estilo musical, un lugar sagrado o una hora del domingo. La adoración es dar a Dios el valor que…",
+      "tags": [
+        "fundamento",
+        "eclesiologia"
+      ],
+      "fold": "adoracion fundamentos juan 4:23-24 la adoracion es la respuesta total del ser humano a la naturaleza y obras de dios. no es un estilo musical, un lugar sagrado o una hora del domingo. la adoracion es dar a dios el valor que… fundamento eclesiologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--57-unidad-de-la-iglesia",
+      "href": "/estudio/01-fundamentos--57-unidad-de-la-iglesia",
+      "title": "Unidad de la Iglesia",
+      "sub": "Fundamentos · Juan 17:20-23",
+      "desc": "La unidad de la Iglesia no es una organización humana que se crea por negociación, sino una realidad espiritual que se basa en la unidad del Dios trino. Los creyentes ya son uno en Cristo;…",
+      "tags": [
+        "fundamento",
+        "eclesiologia"
+      ],
+      "fold": "unidad de la iglesia fundamentos juan 17:20-23 la unidad de la iglesia no es una organizacion humana que se crea por negociacion, sino una realidad espiritual que se basa en la unidad del dios trino. los creyentes ya son uno en cristo;… fundamento eclesiologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--58-segunda-venida-de-cristo",
+      "href": "/estudio/01-fundamentos--58-segunda-venida-de-cristo",
+      "title": "Segunda Venida de Cristo",
+      "sub": "Fundamentos · Hechos 1:11",
+      "desc": "La segunda venida de Cristo es el regreso personal, visible y bodily de Jesús a la tierra para juzgar al mundo, resucitar a los muertos, establecer Su reino milenario y consumar todas las…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "segunda venida de cristo fundamentos hechos 1:11 la segunda venida de cristo es el regreso personal, visible y bodily de jesus a la tierra para juzgar al mundo, resucitar a los muertos, establecer su reino milenario y consumar todas las… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--59-resurreccion-de-los-muertos",
+      "href": "/estudio/01-fundamentos--59-resurreccion-de-los-muertos",
+      "title": "Resurrección de los Muertos",
+      "sub": "Fundamentos · 1 Corintios 15:42-44",
+      "desc": "La resurrección de los muertos es el acto soberano de Dios mediante el cual los cuerpos de todos los hombres, justos e injustos, serán levantados de la muerte para enfrentar el juicio…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "resurreccion de los muertos fundamentos 1 corintios 15:42-44 la resurreccion de los muertos es el acto soberano de dios mediante el cual los cuerpos de todos los hombres, justos e injustos, seran levantados de la muerte para enfrentar el juicio… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--60-el-cielo",
+      "href": "/estudio/01-fundamentos--60-el-cielo",
+      "title": "El Cielo",
+      "sub": "Fundamentos · Juan 14:2-3",
+      "desc": "El cielo no es una nube vaporosa donde flotan ángeles con arpas. El cielo es el lugar de la presencia directa de Dios, donde los creyentes gozan de Su compañía, Su gloria y Su amor para…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "el cielo fundamentos juan 14:2-3 el cielo no es una nube vaporosa donde flotan angeles con arpas. el cielo es el lugar de la presencia directa de dios, donde los creyentes gozan de su compania, su gloria y su amor para… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--61-el-infierno-juicio-eterno",
+      "href": "/estudio/01-fundamentos--61-el-infierno-juicio-eterno",
+      "title": "El Infierno / Juicio Eterno",
+      "sub": "Fundamentos · Apocalipsis 20:10",
+      "desc": "El infierno no es una invención medieval para asustar gente. Es la consecuencia real y eterna de rechazar a Dios. Es el lugar (o estado) de tormento consciente, separación de Dios y juicio…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "el infierno / juicio eterno fundamentos apocalipsis 20:10 el infierno no es una invencion medieval para asustar gente. es la consecuencia real y eterna de rechazar a dios. es el lugar (o estado) de tormento consciente, separacion de dios y juicio… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--62-nuevos-cielos-y-nueva-tierra",
+      "href": "/estudio/01-fundamentos--62-nuevos-cielos-y-nueva-tierra",
+      "title": "Nuevos Cielos y Nueva Tierra",
+      "sub": "Fundamentos · Apocalipsis 21:1",
+      "desc": "Los nuevos cielos y la nueva tierra no son una creación completamente nueva desde cero, sino una renovación radical de la creación actual, libres del pecado, la maldición y la muerte. Es la…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "nuevos cielos y nueva tierra fundamentos apocalipsis 21:1 los nuevos cielos y la nueva tierra no son una creacion completamente nueva desde cero, sino una renovacion radical de la creacion actual, libres del pecado, la maldicion y la muerte. es la… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--63-el-estado-intermedio",
+      "href": "/estudio/01-fundamentos--63-el-estado-intermedio",
+      "title": "El Estado Intermedio",
+      "sub": "Fundamentos · 2 Corintios 5:6-8",
+      "desc": "El estado intermedio es la condición del creyente entre la muerte física y la resurrección final. Cuando un creyente muere, su alma va inmediatamente a la presencia de Cristo (\"con el…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "el estado intermedio fundamentos 2 corintios 5:6-8 el estado intermedio es la condicion del creyente entre la muerte fisica y la resurreccion final. cuando un creyente muere, su alma va inmediatamente a la presencia de cristo (\"con el… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--64-senales-de-los-tiempos",
+      "href": "/estudio/01-fundamentos--64-senales-de-los-tiempos",
+      "title": "Señales de los Tiempos",
+      "sub": "Fundamentos · Mateo 24:6-8",
+      "desc": "Las señales de los tiempos son eventos y condiciones que Jesús y los apóstoles identificaron como indicadores de la cercanía de la segunda venida de Cristo. No son fechas exactas, sino…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "senales de los tiempos fundamentos mateo 24:6-8 las senales de los tiempos son eventos y condiciones que jesus y los apostoles identificaron como indicadores de la cercania de la segunda venida de cristo. no son fechas exactas, sino… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--65-eventos-futuros-orden-escatologico",
+      "href": "/estudio/01-fundamentos--65-eventos-futuros-orden-escatologico",
+      "title": "Eventos Futuros (Orden Escatológico)",
+      "sub": "Fundamentos · 1 Tesalonicenses 4:13-18",
+      "desc": "El orden escatológico es la secuencia de eventos que la Biblia describe como ocurrirán antes, durante y después de la segunda venida de Cristo. Aunque hay diferentes interpretaciones sobre…",
+      "tags": [
+        "fundamento",
+        "escatologia"
+      ],
+      "fold": "eventos futuros (orden escatologico) fundamentos 1 tesalonicenses 4:13-18 el orden escatologico es la secuencia de eventos que la biblia describe como ocurriran antes, durante y despues de la segunda venida de cristo. aunque hay diferentes interpretaciones sobre… fundamento escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--66-la-oracion",
+      "href": "/estudio/01-fundamentos--66-la-oracion",
+      "title": "La Oración",
+      "sub": "Fundamentos · Filipenses 4:6-7",
+      "desc": "La oración es la comunicación personal con Dios en la que expresamos adoración, confesión, gratitud, súplica y escuchamos Su voz a través de Su Palabra y Su Espíritu. No es un ritual, una…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "la oracion fundamentos filipenses 4:6-7 la oracion es la comunicacion personal con dios en la que expresamos adoracion, confesion, gratitud, suplica y escuchamos su voz a traves de su palabra y su espiritu. no es un ritual, una… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--67-la-fe",
+      "href": "/estudio/01-fundamentos--67-la-fe",
+      "title": "La Fe",
+      "sub": "Fundamentos · Hebreos 11:1",
+      "desc": "La fe no es \"creer sin pruebas\" ni \"desear algo intensamente\". La fe bíblica es confianza plena en lo que Dios ha dicho y ha hecho, basada en evidencia real, que resulta en obediencia…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "la fe fundamentos hebreos 11:1 la fe no es \"creer sin pruebas\" ni \"desear algo intensamente\". la fe biblica es confianza plena en lo que dios ha dicho y ha hecho, basada en evidencia real, que resulta en obediencia… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--68-el-amor-de-dios",
+      "href": "/estudio/01-fundamentos--68-el-amor-de-dios",
+      "title": "El Amor de Dios",
+      "sub": "Fundamentos · 1 Juan 4:8-10",
+      "desc": "El amor de Dios no es un sentimiento tierno ni una emoción pasajera. Es la naturaleza misma de Dios que se manifiesta en Su obra redentora, expresada en la cruz de Cristo, y derramada en…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "el amor de dios fundamentos 1 juan 4:8-10 el amor de dios no es un sentimiento tierno ni una emocion pasajera. es la naturaleza misma de dios que se manifiesta en su obra redentora, expresada en la cruz de cristo, y derramada en… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--69-sufrimiento-proposito-del-dolor",
+      "href": "/estudio/01-fundamentos--69-sufrimiento-proposito-del-dolor",
+      "title": "Sufrimiento / Propósito del Dolor",
+      "sub": "Fundamentos · Romanos 5:3-5",
+      "desc": "El sufrimiento no es un accidente sin propósito ni un castigo de Dios. En las manos de Dios, el dolor se convierte en herramienta de transformación: produce perseverancia, carácter y…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "sufrimiento / proposito del dolor fundamentos romanos 5:3-5 el sufrimiento no es un accidente sin proposito ni un castigo de dios. en las manos de dios, el dolor se convierte en herramienta de transformacion: produce perseverancia, caracter y… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--70-guerra-espiritual",
+      "href": "/estudio/01-fundamentos--70-guerra-espiritual",
+      "title": "Guerra Espiritual",
+      "sub": "Fundamentos · Efesios 6:10-18",
+      "desc": "La guerra espiritual es la realidad de que existen fuerzas demoníacas organizadas que se oponen a Dios y a Su pueblo, y que el creyente debe resistir con la armadura de Dios, la Palabra y…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "guerra espiritual fundamentos efesios 6:10-18 la guerra espiritual es la realidad de que existen fuerzas demoniacas organizadas que se oponen a dios y a su pueblo, y que el creyente debe resistir con la armadura de dios, la palabra y… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--71-mayordomia-cristiana",
+      "href": "/estudio/01-fundamentos--71-mayordomia-cristiana",
+      "title": "Mayordomía Cristiana",
+      "sub": "Fundamentos · 1 Pedro 4:10",
+      "desc": "La mayordomía cristiana es el principio de que todo lo que tenemos pertenece a Dios y nosotros somos administradores responsables: nuestro tiempo, talentos, dinero, cuerpo y relaciones. No…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "mayordomia cristiana fundamentos 1 pedro 4:10 la mayordomia cristiana es el principio de que todo lo que tenemos pertenece a dios y nosotros somos administradores responsables: nuestro tiempo, talentos, dinero, cuerpo y relaciones. no… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--72-ley-vs-gracia",
+      "href": "/estudio/01-fundamentos--72-ley-vs-gracia",
+      "title": "Ley vs Gracia",
+      "sub": "Fundamentos · Romanos 6:14",
+      "desc": "La Ley es el conjunto de mandamientos dados por Dios en el AT que revelan Su justicia y demuestran que el hombre no puede cumplirla por sí mismo. La Gracia es el favor inmerecido de Dios…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "ley vs gracia fundamentos romanos 6:14 la ley es el conjunto de mandamientos dados por dios en el at que revelan su justicia y demuestran que el hombre no puede cumplirla por si mismo. la gracia es el favor inmerecido de dios… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--73-antiguo-pacto-vs-nuevo-pacto",
+      "href": "/estudio/01-fundamentos--73-antiguo-pacto-vs-nuevo-pacto",
+      "title": "Antiguo Pacto vs Nuevo Pacto",
+      "sub": "Fundamentos · Hebreos 8:8-13",
+      "desc": "El Antiguo Pacto (la Ley de Moisés) fue un sistema temporal de sacrificios, ceremonias y mandamientos que revelaba el pecado pero no podía quitarlo. El Nuevo Pacto, sellado en la sangre de…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "antiguo pacto vs nuevo pacto fundamentos hebreos 8:8-13 el antiguo pacto (la ley de moises) fue un sistema temporal de sacrificios, ceremonias y mandamientos que revelaba el pecado pero no podia quitarlo. el nuevo pacto, sellado en la sangre de… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--74-comunion-de-los-santos",
+      "href": "/estudio/01-fundamentos--74-comunion-de-los-santos",
+      "title": "La Comunión de los Santos",
+      "sub": "Fundamentos · Hebreos 10:24-25",
+      "desc": "La comunión de los santos es la unidad real y profunda que existe entre todos los creyentes en Cristo, que se expresa en amor mutuo, servicio, worship compartido,资源共享 y responsabilidad…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "la comunion de los santos fundamentos hebreos 10:24-25 la comunion de los santos es la unidad real y profunda que existe entre todos los creyentes en cristo, que se expresa en amor mutuo, servicio, worship compartido,资源共享 y responsabilidad… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--75-matrimonio-y-familia",
+      "href": "/estudio/01-fundamentos--75-matrimonio-y-familia",
+      "title": "Matrimonio y Familia",
+      "sub": "Fundamentos · Efesios 5:22-33",
+      "desc": "El matrimonio no es una invención cultural ni un contrato humano. Es una institución divina creada por Dios en el Edén, que refleja la relación entre Cristo y Su Iglesia. La familia es la…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "matrimonio y familia fundamentos efesios 5:22-33 el matrimonio no es una invencion cultural ni un contrato humano. es una institucion divina creada por dios en el eden, que refleja la relacion entre cristo y su iglesia. la familia es la… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--76-el-ayuno",
+      "href": "/estudio/01-fundamentos--76-el-ayuno",
+      "title": "El Ayuno",
+      "sub": "Fundamentos · Mateo 6:16-18",
+      "desc": "El ayuno es la abstinencia voluntaria de comida (u otras cosas) con un propósito espiritual: buscar a Dios con mayor intensidad, quebrantar el cuerpo para fortalecer el espíritu, y…",
+      "tags": [
+        "fundamento",
+        "vida-cristiana"
+      ],
+      "fold": "el ayuno fundamentos mateo 6:16-18 el ayuno es la abstinencia voluntaria de comida (u otras cosas) con un proposito espiritual: buscar a dios con mayor intensidad, quebrantar el cuerpo para fortalecer el espiritu, y… fundamento vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--77-angeles",
+      "href": "/estudio/01-fundamentos--77-angeles",
+      "title": "Ángeles",
+      "sub": "Fundamentos · Hebreos 1:14",
+      "desc": "Los ángeles son seres espirituales creados por Dios que sirven como mensajeros, guerreros y servidores de Su voluntad. No son humanos muertos, no son deidades menores, y no son imágenes de…",
+      "tags": [
+        "fundamento",
+        "angelologia"
+      ],
+      "fold": "angeles fundamentos hebreos 1:14 los angeles son seres espirituales creados por dios que sirven como mensajeros, guerreros y servidores de su voluntad. no son humanos muertos, no son deidades menores, y no son imagenes de… fundamento angelologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--78-satanas-y-demonios",
+      "href": "/estudio/01-fundamentos--78-satanas-y-demonios",
+      "title": "Satanás y Demonios",
+      "sub": "Fundamentos · 1 Pedro 5:8",
+      "desc": "Satanás es un ángel caído, la cabeza de una rebelión contra Dios, que junto con un tercio de los ángeles que cayeron con él, busca engañar, destruir y robar la gloria de Dios. No es igual a…",
+      "tags": [
+        "fundamento",
+        "angelologia"
+      ],
+      "fold": "satanas y demonios fundamentos 1 pedro 5:8 satanas es un angel caido, la cabeza de una rebelion contra dios, que junto con un tercio de los angeles que cayeron con el, busca enganar, destruir y robar la gloria de dios. no es igual a… fundamento angelologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--79-caida-de-satanas",
+      "href": "/estudio/01-fundamentos--79-caida-de-satanas",
+      "title": "Caída de Satanás",
+      "sub": "Fundamentos · Isaías 14:12-15",
+      "desc": "La caída de Satanás fue el momento en que el ángel más hermoso y poderoso de Dios se rebeló por orgullo, queriendo ser como Dios. Fue arrojado del cielo junto con un tercio de los ángeles…",
+      "tags": [
+        "fundamento",
+        "angelologia"
+      ],
+      "fold": "caida de satanas fundamentos isaias 14:12-15 la caida de satanas fue el momento en que el angel mas hermoso y poderoso de dios se rebelo por orgullo, queriendo ser como dios. fue arrojado del cielo junto con un tercio de los angeles… fundamento angelologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--80-la-creacion",
+      "href": "/estudio/01-fundamentos--80-la-creacion",
+      "title": "La Creación",
+      "sub": "Fundamentos · Génesis 1:1",
+      "desc": "La creación es el acto soberano de Dios mediante el cual hizo todo lo que existe de la nada, por Su palabra, en seis días, y descansó el séptimo. No es un mito, no es una alegoría, y no…",
+      "tags": [
+        "fundamento",
+        "otros"
+      ],
+      "fold": "la creacion fundamentos genesis 1:1 la creacion es el acto soberano de dios mediante el cual hizo todo lo que existe de la nada, por su palabra, en seis dias, y descanso el septimo. no es un mito, no es una alegoria, y no… fundamento otros"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--81-la-providencia-de-dios",
+      "href": "/estudio/01-fundamentos--81-la-providencia-de-dios",
+      "title": "La Providencia de Dios",
+      "sub": "Fundamentos · Romanos 8:28",
+      "desc": "La providencia de Dios es el gobierno soberano de Dios sobre todas las cosas para que cumplan Su propósito. No es una fuerza impersonal ni \"suerte\". Es Dios dirigiendo activamente la…",
+      "tags": [
+        "fundamento",
+        "otros"
+      ],
+      "fold": "la providencia de dios fundamentos romanos 8:28 la providencia de dios es el gobierno soberano de dios sobre todas las cosas para que cumplan su proposito. no es una fuerza impersonal ni \"suerte\". es dios dirigiendo activamente la… fundamento otros"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--82-la-eleccion-y-predestinacion",
+      "href": "/estudio/01-fundamentos--82-la-eleccion-y-predestinacion",
+      "title": "La Elección / Predestinación",
+      "sub": "Fundamentos · Romanos 8:29-30",
+      "desc": "La elección o predestinación es la doctrina de que Dios, antes de la fundación del mundo, eligió soberanamente a quienes serían salvos, no por mérito alguno de ellos, sino por Su gracia…",
+      "tags": [
+        "fundamento",
+        "otros"
+      ],
+      "fold": "la eleccion / predestinacion fundamentos romanos 8:29-30 la eleccion o predestinacion es la doctrina de que dios, antes de la fundacion del mundo, eligio soberanamente a quienes serian salvos, no por merito alguno de ellos, sino por su gracia… fundamento otros"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--83-llamado-eficaz-vs-llamado-general",
+      "href": "/estudio/01-fundamentos--83-llamado-eficaz-vs-llamado-general",
+      "title": "Llamado Eficaz vs Llamado General",
+      "sub": "Fundamentos · Mateo 22:14",
+      "desc": "El llamado general es la invitación de Dios a todos los hombres a arrepentirse y creer en el evangelio. El llamado eficaz (o invocación interna) es la obra del Espíritu Santo que transforma…",
+      "tags": [
+        "fundamento",
+        "otros"
+      ],
+      "fold": "llamado eficaz vs llamado general fundamentos mateo 22:14 el llamado general es la invitacion de dios a todos los hombres a arrepentirse y creer en el evangelio. el llamado eficaz (o invocacion interna) es la obra del espiritu santo que transforma… fundamento otros"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--84-el-sabado",
+      "href": "/estudio/01-fundamentos--84-el-sabado",
+      "title": "El Sabado",
+      "sub": "Fundamentos · Colosenses 2:16-17",
+      "desc": "Estudio del segundo cerebro bíblico.",
+      "tags": [
+        "fundamento",
+        "otros"
+      ],
+      "fold": "el sabado fundamentos colosenses 2:16-17 estudio del segundo cerebro biblico. fundamento otros"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--85-evangelismo-y-misiones",
+      "href": "/estudio/01-fundamentos--85-evangelismo-y-misiones",
+      "title": "Evangelismo y Misiones",
+      "sub": "Fundamentos · Mateo 28:18-20",
+      "desc": "El evangelismo es la proclamación verbal del evangelio de Jesucristo a individuos para que crean y se salven. Las misiones son la obra de llevar el evangelio a todos los pueblos, culturas y…",
+      "tags": [
+        "fundamento",
+        "otros"
+      ],
+      "fold": "evangelismo y misiones fundamentos mateo 28:18-20 el evangelismo es la proclamacion verbal del evangelio de jesucristo a individuos para que crean y se salven. las misiones son la obra de llevar el evangelio a todos los pueblos, culturas y… fundamento otros"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--86-apologetica",
+      "href": "/estudio/01-fundamentos--86-apologetica",
+      "title": "Apologética",
+      "sub": "Fundamentos · 1 Pedro 3:15",
+      "desc": "La apologética es la defensa razonada de la fe cristiana ante las objeciones, preguntas y ataques de incrédulos y herejes. No es un debate académico vacío, sino un ministerio de amor que…",
+      "tags": [
+        "fundamento",
+        "otros"
+      ],
+      "fold": "apologetica fundamentos 1 pedro 3:15 la apologetica es la defensa razonada de la fe cristiana ante las objeciones, preguntas y ataques de incredulos y herejes. no es un debate academico vacio, sino un ministerio de amor que… fundamento otros"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--87-el-pecado-imperdonable",
+      "href": "/estudio/01-fundamentos--87-el-pecado-imperdonable",
+      "title": "El Pecado Imperdonable / Blasfemia contra el Espíritu Santo",
+      "sub": "Fundamentos · Mateo 12:31-32",
+      "desc": "La blasfemia contra el Espíritu Santo es el rechazo deliberado y final de la obra del Espíritu Santo, atribuyendo el poder de Dios al diablo. Es el único pecado que la Biblia declara…",
+      "tags": [
+        "fundamento",
+        "neumatologia"
+      ],
+      "fold": "el pecado imperdonable / blasfemia contra el espiritu santo fundamentos mateo 12:31-32 la blasfemia contra el espiritu santo es el rechazo deliberado y final de la obra del espiritu santo, atribuyendo el poder de dios al diablo. es el unico pecado que la biblia declara… fundamento neumatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--88-el-espiritu-en-la-vida-del-creyente",
+      "href": "/estudio/01-fundamentos--88-el-espiritu-en-la-vida-del-creyente",
+      "title": "El Espíritu en la vida del creyente",
+      "sub": "Fundamentos · Gálatas 5:16",
+      "desc": "El Espíritu Santo habita permanentemente en todo creyente desde el momento de la conversión, y su ministerio es guiar, convencer, consolar, interceder y transformar. No es una fuerza…",
+      "tags": [
+        "fundamento",
+        "neumatologia"
+      ],
+      "fold": "el espiritu en la vida del creyente fundamentos galatas 5:16 el espiritu santo habita permanentemente en todo creyente desde el momento de la conversion, y su ministerio es guiar, convencer, consolar, interceder y transformar. no es una fuerza… fundamento neumatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--89-evangelizar-en-el-dia-a-dia",
+      "href": "/estudio/01-fundamentos--89-evangelizar-en-el-dia-a-dia",
+      "title": "Evangelizar / Hablar de Cristo en el día a día",
+      "sub": "Fundamentos · Colosenses 4:5-6",
+      "desc": "Evangelizar es compartir el evangelio de Jesucristo con la vida y con las palabras en la vida cotidiana. No es un acto exclusivo de pastores o misioneros, sino el estilo de vida de todo…",
+      "tags": [
+        "fundamento",
+        "evangelismo",
+        "vida-cristiana"
+      ],
+      "fold": "evangelizar / hablar de cristo en el dia a dia fundamentos colosenses 4:5-6 evangelizar es compartir el evangelio de jesucristo con la vida y con las palabras en la vida cotidiana. no es un acto exclusivo de pastores o misioneros, sino el estilo de vida de todo… fundamento evangelismo vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--fundamentos-teologia-ntv",
+      "href": "/estudio/01-fundamentos--fundamentos-teologia-ntv",
+      "title": "Fundamentos de doctrina — NTV",
+      "sub": "Fundamentos",
+      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "tags": [
+        "fundamento",
+        "doctrina/general"
+      ],
+      "fold": "fundamentos de doctrina — ntv fundamentos basado exclusivamente en la ntv (nueva traduccion viviente) fuente: d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md fundamento doctrina/general"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--legalismofranciscoisrael",
+      "href": "/estudio/01-fundamentos--legalismofranciscoisrael",
+      "title": "LegalismoFranciscoIsrael",
+      "sub": "Fundamentos",
+      "desc": "Estudio del segundo cerebro bíblico.",
+      "tags": [
+        "estudio",
+        "doctrina/soteriologia"
+      ],
+      "fold": "legalismofranciscoisrael fundamentos estudio del segundo cerebro biblico. estudio doctrina/soteriologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "01-fundamentos--pablo-no-contradice-la-escritura",
+      "href": "/estudio/01-fundamentos--pablo-no-contradice-la-escritura",
+      "title": "Pablo no contradice la Escritura",
+      "sub": "Fundamentos",
+      "desc": "- [Sección A — Contexto necesario](#sección-a--contexto-necesario) - [Sección B — Acusación 1: Pablo contradice la Ley de Moisés](#sección-b--acusación-1-pablo-contradice-la-ley-de-moisés)…",
+      "tags": [
+        "apologetica",
+        "hermeneutica"
+      ],
+      "fold": "pablo no contradice la escritura fundamentos - [seccion a — contexto necesario](#seccion-a--contexto-necesario) - [seccion b — acusacion 1: pablo contradice la ley de moises](#seccion-b--acusacion-1-pablo-contradice-la-ley-de-moises)… apologetica hermeneutica"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--juan-el-bautista",
+      "href": "/estudio/03-personajes--juan-el-bautista",
+      "title": "Juan el Bautista",
+      "sub": "Personajes · Mateo 11:2-11",
+      "desc": "Juan el Bautista es el profeta que preparó el camino para el Mesías, bautizó a Jesús y fue ejecutado por Herodes Antipas. Jesús lo llamó el hombre más grande nacido de mujer (Mateo 11:11).…",
+      "tags": [
+        "personaje/profeta",
+        "personaje/nuevo-testamento",
+        "apologetica/sectas",
+        "patristica/ireneo"
+      ],
+      "fold": "juan el bautista personajes mateo 11:2-11 juan el bautista es el profeta que preparo el camino para el mesias, bautizo a jesus y fue ejecutado por herodes antipas. jesus lo llamo el hombre mas grande nacido de mujer (mateo 11:11).… personaje/profeta personaje/nuevo-testamento apologetica/sectas patristica/ireneo juan el bautista juan el bautizador juan precursor"
+    },
+    {
+      "tipo": "estudio",
+      "id": "04-doctrinas--soteriologia",
+      "href": "/estudio/04-doctrinas--soteriologia",
+      "title": "Análisis Soteriológico — NTV (Nueva Traducción Viviente)",
+      "sub": "Doctrinas",
+      "desc": "- D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md - Traducción por equivalencia funcional (NTV)",
+      "tags": [
+        "doctrina/soteriologia",
+        "estudio"
+      ],
+      "fold": "analisis soteriologico — ntv (nueva traduccion viviente) doctrinas - d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md - traduccion por equivalencia funcional (ntv) doctrina/soteriologia estudio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "05-estudios--galardones-reino-y-mision",
+      "href": "/estudio/05-estudios--galardones-reino-y-mision",
+      "title": "Galardones, Reino Venidero y tu misión personal",
+      "sub": "Estudios temáticos",
+      "desc": "Pablo habla de dos tipos de materiales para edificar sobre el fundamento (Cristo):",
+      "tags": [
+        "estudio",
+        "escatologia"
+      ],
+      "fold": "galardones, reino venidero y tu mision personal estudios tematicos pablo habla de dos tipos de materiales para edificar sobre el fundamento (cristo): estudio escatologia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "05-estudios--legalismo-mandamientos-modernos",
+      "href": "/estudio/05-estudios--legalismo-mandamientos-modernos",
+      "title": "Legalismo y Mandamientos Modernos",
+      "sub": "Estudios temáticos · Colosenses 2:16-17",
+      "desc": "Una de las greatest amenazas para la iglesia contemporánea no es el pecado obvio, sino el legalismo disfrazado de piedad. Grupos religiosos imponen mandamientos humanos sobre conversos…",
+      "tags": [
+        "estudio",
+        "legalismo",
+        "gracia",
+        "libertad-cristiana",
+        "adiaphora"
+      ],
+      "fold": "legalismo y mandamientos modernos estudios tematicos colosenses 2:16-17 una de las greatest amenazas para la iglesia contemporanea no es el pecado obvio, sino el legalismo disfrazado de piedad. grupos religiosos imponen mandamientos humanos sobre conversos… estudio legalismo gracia libertad-cristiana adiaphora"
+    },
+    {
+      "tipo": "estudio",
+      "id": "05-estudios--soledad-y-solteria",
+      "href": "/estudio/05-estudios--soledad-y-solteria",
+      "title": "Estudio: El dolor de la soltería y cómo ir a Cristo en medio de él",
+      "sub": "Estudios temáticos",
+      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "tags": [
+        "estudio",
+        "vida-cristiana"
+      ],
+      "fold": "estudio: el dolor de la solteria y como ir a cristo en medio de el estudios tematicos basado exclusivamente en la ntv (nueva traduccion viviente) fuente: d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md estudio vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--comparativa-ley-calvinismo-luteranismo",
+      "href": "/estudio/06-apologetica--comparativa-ley-calvinismo-luteranismo",
+      "title": "Complemento: Judaizantes vs. Calvinismo vs. Luteranismo",
+      "sub": "Apologética · Gálatas 1:6-9",
+      "desc": "Archivo complementario de Refutación a Judaizantes. Compara la posición del estudio con las dos principales tradiciones de la Reforma Protestante.",
+      "tags": [
+        "apologetica",
+        "judaizantes",
+        "calvinismo",
+        "luteranismo",
+        "ley",
+        "sabado"
+      ],
+      "fold": "complemento: judaizantes vs. calvinismo vs. luteranismo apologetica galatas 1:6-9 archivo complementario de refutacion a judaizantes. compara la posicion del estudio con las dos principales tradiciones de la reforma protestante. apologetica judaizantes calvinismo luteranismo ley sabado"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--judaizantes",
+      "href": "/estudio/06-apologetica--judaizantes",
+      "title": "Refutación a Judaizantes — Estudio Exegético-Histórico",
+      "sub": "Apologética · Gálatas 1:6-9",
+      "desc": "Los judaizantes (del latín iudaizare, \"vivir como judío\") son aquellos que enseñan que los creyentes en Cristo deben observar la Ley de Moisés —circuncisión, sábado, leyes alimentarias,…",
+      "tags": [
+        "apologetica",
+        "judaizantes",
+        "ley-mosaica",
+        "sabado",
+        "alimentacion",
+        "circuncision"
+      ],
+      "fold": "refutacion a judaizantes — estudio exegetico-historico apologetica galatas 1:6-9 los judaizantes (del latin iudaizare, \"vivir como judio\") son aquellos que ensenan que los creyentes en cristo deben observar la ley de moises —circuncision, sabado, leyes alimentarias,… apologetica judaizantes ley-mosaica sabado alimentacion circuncision"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--01-testigos-de-jehova",
+      "href": "/estudio/06-apologetica--origenes-usa--01-testigos-de-jehova",
+      "title": "Testigos de Jehová — Charles Taze Russell",
+      "sub": "Apologética · Juan 1:1-3",
+      "desc": "El mercado libre religioso de EE. UU., garantizado por la Primera Enmienda, permitió que cualquier grupo fundara su propia iglesia sin patrocinio estatal. El Segundo Gran Avivamiento generó…",
+      "tags": [
+        "apologetica/secta",
+        "origen/usa",
+        "testigos-de-jehova"
+      ],
+      "fold": "testigos de jehova — charles taze russell apologetica origenes usa juan 1:1-3 el mercado libre religioso de ee. uu., garantizado por la primera enmienda, permitio que cualquier grupo fundara su propia iglesia sin patrocinio estatal. el segundo gran avivamiento genero… apologetica/secta origen/usa testigos-de-jehova testigos de jehova watchtower atalaya charles taze russell"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--02-mormones",
+      "href": "/estudio/06-apologetica--origenes-usa--02-mormones",
+      "title": "Mormonismo — Joseph Smith y el Libro de Mormón",
+      "sub": "Apologética · Deuteronomio 13:1-4",
+      "desc": "El extremo oeste de Nueva York, donde creció Smith, era el corazón del Burned-Over District, región \"quemada\" repetidamente por el fervor religioso del Segundo Gran Avivamiento. Las…",
+      "tags": [
+        "apologetica/secta",
+        "origen/usa",
+        "mormones"
+      ],
+      "fold": "mormonismo — joseph smith y el libro de mormon apologetica origenes usa deuteronomio 13:1-4 el extremo oeste de nueva york, donde crecio smith, era el corazon del burned-over district, region \"quemada\" repetidamente por el fervor religioso del segundo gran avivamiento. las… apologetica/secta origen/usa mormones mormonismo santos de los ultimos dias sud joseph smith"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--03-adventismo",
+      "href": "/estudio/06-apologetica--origenes-usa--03-adventismo",
+      "title": "Adventismo — Miller, 1844 y Ellen G. White",
+      "sub": "Apologética · Colosenses 2:16-17",
+      "desc": "William Miller aplicó un método de interpretación literal-racional a Daniel en el que calculó el regreso de Cristo para el 22 de octubre de 1844 (según Daniel 8:14, los \"2300 días-años\").…",
+      "tags": [
+        "apologetica/secta",
+        "origen/usa",
+        "adventismo"
+      ],
+      "fold": "adventismo — miller, 1844 y ellen g. white apologetica origenes usa colosenses 2:16-17 william miller aplico un metodo de interpretacion literal-racional a daniel en el que calculo el regreso de cristo para el 22 de octubre de 1844 (segun daniel 8:14, los \"2300 dias-anos\").… apologetica/secta origen/usa adventismo adventistas adventistas del septimo dia asd william miller"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--04-unicitarios",
+      "href": "/estudio/06-apologetica--origenes-usa--04-unicitarios",
+      "title": "Pentecostalismo Unicitario — «Solo Jesús» (Modalismo)",
+      "sub": "Apologética · Mateo 28:19",
+      "desc": "El pentecostalismo nació del avivamiento de la calle Azusa (Azusa Street, Los Ángeles, 1906), bajo el liderazgo de William Seymour. Las reuniones multirraciales y la práctica del habla en…",
+      "tags": [
+        "apologetica/secta",
+        "origen/usa",
+        "unicitarios"
+      ],
+      "fold": "pentecostalismo unicitario — «solo jesus» (modalismo) apologetica origenes usa mateo 28:19 el pentecostalismo nacio del avivamiento de la calle azusa (azusa street, los angeles, 1906), bajo el liderazgo de william seymour. las reuniones multirraciales y la practica del habla en… apologetica/secta origen/usa unicitarios modalismo pentecostalismo unicitario upci sabelianismo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--05-raices-hebreas",
+      "href": "/estudio/06-apologetica--origenes-usa--05-raices-hebreas",
+      "title": "Raíces Hebreas — El regreso a la Ley de Moisés",
+      "sub": "Apologética · Colosenses 2:16-17",
+      "desc": "El restauracionismo estadounidense del siglo XIX buscaba \"restaurar\" una iglesia que supuestamente lo había perdido todo: la forma, el gobierno, la doctrina y hasta el calendario. De ahí…",
+      "tags": [
+        "apologetica/movimiento",
+        "origen/usa",
+        "raices-hebreas"
+      ],
+      "fold": "raices hebreas — el regreso a la ley de moises apologetica origenes usa colosenses 2:16-17 el restauracionismo estadounidense del siglo xix buscaba \"restaurar\" una iglesia que supuestamente lo habia perdido todo: la forma, el gobierno, la doctrina y hasta el calendario. de ahi… apologetica/movimiento origen/usa raices-hebreas raices hebreas hebrew roots movimiento del nombre sagrado mesianismo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--06-teologia-prosperidad",
+      "href": "/estudio/06-apologetica--origenes-usa--06-teologia-prosperidad",
+      "title": "Teología de la Prosperidad — La \"Palabra de Fe\"",
+      "sub": "Apologética · Filipenses 4:11-12",
+      "desc": "La teología de la prosperidad es una fusión estadounidense entre mentalismo y cristianismo. Su raíz no cristiana es la \"New Thought\", fundada por Phineas Parkhurst Quimby (1802-1866),…",
+      "tags": [
+        "apologetica/movimiento",
+        "origen/usa",
+        "prosperidad"
+      ],
+      "fold": "teologia de la prosperidad — la \"palabra de fe\" apologetica origenes usa filipenses 4:11-12 la teologia de la prosperidad es una fusion estadounidense entre mentalismo y cristianismo. su raiz no cristiana es la \"new thought\", fundada por phineas parkhurst quimby (1802-1866),… apologetica/movimiento origen/usa prosperidad teologia de la prosperidad palabra de fe word of faith prosperidad"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--07-evangelicalismo-usa",
+      "href": "/estudio/06-apologetica--origenes-usa--07-evangelicalismo-usa",
+      "title": "Evangelicalismo Estadounidense — El Evangelio y su empaque cultural-político",
+      "sub": "Apologética · Juan 18:36",
+      "desc": "Los Grandes Avivamientos crearon el molde religioso del país: predicación masiva, conversión emotiva y un cristianismo orientado a la experiencia individual. Ese molde resultó fértil: del…",
+      "tags": [
+        "apologetica/movimiento",
+        "origen/usa",
+        "evangelicalismo"
+      ],
+      "fold": "evangelicalismo estadounidense — el evangelio y su empaque cultural-politico apologetica origenes usa juan 18:36 los grandes avivamientos crearon el molde religioso del pais: predicacion masiva, conversion emotiva y un cristianismo orientado a la experiencia individual. ese molde resulto fertil: del… apologetica/movimiento origen/usa evangelicalismo evangelicalismo neoevangelicalismo fundamentalismo nacionalismo cristiano"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--origenes-usa--08-sintesis",
+      "href": "/estudio/06-apologetica--origenes-usa--08-sintesis",
+      "title": "Síntesis — Los 7 patrones comunes",
+      "sub": "Apologética · Hebreos 13:9",
+      "desc": "La Primera Enmienda (1791) eliminó la religión establecida, creando el primer \"libre mercado\" religioso del mundo: cualquier fundador podía crear su movimiento y competir. Se sumó el…",
+      "tags": [
+        "apologetica/sintesis",
+        "origen/usa"
+      ],
+      "fold": "sintesis — los 7 patrones comunes apologetica origenes usa hebreos 13:9 la primera enmienda (1791) elimino la religion establecida, creando el primer \"libre mercado\" religioso del mundo: cualquier fundador podia crear su movimiento y competir. se sumo el… apologetica/sintesis origen/usa sintesis de origenes estadounidenses 7 patrones de sectas"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--secta-moon",
+      "href": "/estudio/06-apologetica--secta-moon",
+      "title": "Secta Moon (Iglesia de la Unificación)",
+      "sub": "Apologética",
+      "desc": "La Iglesia de la Unificación, conocida como la Secta Moon, fue fundada en 1954 por Sun Myung Moon (1920-2012), quien se autoproclamó el \"Tercer Adán\" o el \"Mesías Verdadero\". Su doctrina…",
+      "tags": [
+        "apologetica/secta",
+        "doctrina/herejia"
+      ],
+      "fold": "secta moon (iglesia de la unificacion) apologetica la iglesia de la unificacion, conocida como la secta moon, fue fundada en 1954 por sun myung moon (1920-2012), quien se autoproclamo el \"tercer adan\" o el \"mesias verdadero\". su doctrina… apologetica/secta doctrina/herejia secta moon iglesia de la unificacion sun myung moon federacion de familias por la paz"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--shincheonji",
+      "href": "/estudio/06-apologetica--shincheonji",
+      "title": "Shincheonji",
+      "sub": "Apologética",
+      "desc": "Shincheonji (Iglesia de Jesús el Templo del Tabernáculo del Testimonio) es un movimiento religioso surcoreano fundado por Lee Man-hee en 1984. Se caracteriza por una hermenéutica alegórica…",
+      "tags": [
+        "apologetica/secta",
+        "doctrina/herejia",
+        "shincheonji/indice"
+      ],
+      "fold": "shincheonji apologetica shincheonji (iglesia de jesus el templo del tabernaculo del testimonio) es un movimiento religioso surcoreano fundado por lee man-hee en 1984. se caracteriza por una hermeneutica alegorica… apologetica/secta doctrina/herejia shincheonji/indice shincheonji iglesia de jesus el templo del tabernaculo del testimonio lee man-hee nuevo cielo y nueva tierra"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--shincheonji--analisis-doctrina",
+      "href": "/estudio/06-apologetica--shincheonji--analisis-doctrina",
+      "title": "Análisis Doctrinal — Curso Virtual de Teología (Shincheonji)",
+      "sub": "Apologética · Marcos 4:10-12",
+      "desc": "Análisis forense de un chat real de WhatsApp del \"Curso Virtual de Teología\" (Shincheonji) entre un instructor (Julio Colmenares) y un estudiante (David). Documenta la doctrina central, el…",
+      "tags": [
+        "shincheonji/analisis",
+        "hermeneutica/alegorica",
+        "apologetica/secta"
+      ],
+      "fold": "analisis doctrinal — curso virtual de teologia (shincheonji) apologetica shincheonji marcos 4:10-12 analisis forense de un chat real de whatsapp del \"curso virtual de teologia\" (shincheonji) entre un instructor (julio colmenares) y un estudiante (david). documenta la doctrina central, el… shincheonji/analisis hermeneutica/alegorica apologetica/secta analisis doctrinal shincheonji chat whatsapp shincheonji"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--shincheonji--la-parabola-del-fuego",
+      "href": "/estudio/06-apologetica--shincheonji--la-parabola-del-fuego",
+      "title": "La Parábola del Fuego — Clase Shincheonji",
+      "sub": "Apologética · Lucas 12:49",
+      "desc": "Clase del nivel introductorio (Lección 21) que explica Lucas 12:49 (\"Fuego vine a echar en la tierra\"). Shincheonji enseña que el \"fuego\" es la palabra de juicio de Dios, entregada a través…",
+      "tags": [
+        "shincheonji/clase",
+        "hermeneutica/alegorica",
+        "doctrina/herejia"
+      ],
+      "fold": "la parabola del fuego — clase shincheonji apologetica shincheonji lucas 12:49 clase del nivel introductorio (leccion 21) que explica lucas 12:49 (\"fuego vine a echar en la tierra\"). shincheonji ensena que el \"fuego\" es la palabra de juicio de dios, entregada a traves… shincheonji/clase hermeneutica/alegorica doctrina/herejia parabola del fuego fuego como palabra de juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--shincheonji--los-cuatro-campos",
+      "href": "/estudio/06-apologetica--shincheonji--los-cuatro-campos",
+      "title": "Los Cuatro Campos del Corazón — Clase Shincheonji",
+      "sub": "Apologética · Mateo 13:3-23",
+      "desc": "Clase del nivel introductorio de Shincheonji sobre la Parábola del Sembrador (Mateo 13, Marcos 4, Lucas 8). La instructora guía a los estudiantes a examinar su propio corazón preguntándose…",
+      "tags": [
+        "shincheonji/clase",
+        "hermeneutica/alegorica",
+        "doctrina/herejia"
+      ],
+      "fold": "los cuatro campos del corazon — clase shincheonji apologetica shincheonji mateo 13:3-23 clase del nivel introductorio de shincheonji sobre la parabola del sembrador (mateo 13, marcos 4, lucas 8). la instructora guia a los estudiantes a examinar su propio corazon preguntandose… shincheonji/clase hermeneutica/alegorica doctrina/herejia cuatro campos del corazon parabola del sembrador"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--shincheonji--refutacion-doctrinal",
+      "href": "/estudio/06-apologetica--shincheonji--refutacion-doctrinal",
+      "title": "Refutación Doctrinal — Shincheonji vs. La Biblia",
+      "sub": "Apologética · Efesios 2:8-9",
+      "desc": "Contraste punto por punto entre la doctrina de Shincheonji (extraída del Curso Virtual de Teología) y las Escrituras (basado en la NTV). 12 puntos de refutación con análisis exegético.",
+      "tags": [
+        "shincheonji/refutacion",
+        "apologetica/contraste",
+        "doctrina/biblica"
+      ],
+      "fold": "refutacion doctrinal — shincheonji vs. la biblia apologetica shincheonji efesios 2:8-9 contraste punto por punto entre la doctrina de shincheonji (extraida del curso virtual de teologia) y las escrituras (basado en la ntv). 12 puntos de refutacion con analisis exegetico. shincheonji/refutacion apologetica/contraste doctrina/biblica refutacion doctrinal shincheonji contraste biblico shincheonji"
+    },
+    {
+      "tipo": "estudio",
+      "id": "06-apologetica--trinidad-rescate-correspondiente",
+      "href": "/estudio/06-apologetica--trinidad-rescate-correspondiente",
+      "title": "La Trinidad y el «rescate correspondiente» — refutación con la patrística",
+      "sub": "Apologética · 1 Timoteo 2:5-6",
+      "desc": "Un argumento frecuente de los Testigos de Jehová (y de otros antitrinitarios) sostiene que Jesús no puede ser Dios porque:",
+      "tags": [
+        "apologetica",
+        "trinidad",
+        "deidad-de-cristo",
+        "testigos-de-jehova",
+        "patristica",
+        "codices"
+      ],
+      "fold": "la trinidad y el «rescate correspondiente» — refutacion con la patristica apologetica 1 timoteo 2:5-6 un argumento frecuente de los testigos de jehova (y de otros antitrinitarios) sostiene que jesus no puede ser dios porque: apologetica trinidad deidad-de-cristo testigos-de-jehova patristica codices"
+    },
+    {
+      "tipo": "estudio",
+      "id": "07-herramientas--guia-analisis-historico",
+      "href": "/estudio/07-herramientas--guia-analisis-historico",
+      "title": "Guía de Análisis: Veracidad Histórica y Doctrinal",
+      "sub": "Herramientas",
+      "desc": "Esta guía proporciona un marco metodológico detallado para diseccionar un texto y evaluar tanto su rigor histórico como su solidez doctrinal. Está estructurada para facilitar su integración…",
+      "tags": [
+        "analisis/literario",
+        "historia",
+        "doctrina",
+        "metodologia",
+        "documentacion"
+      ],
+      "fold": "guia de analisis: veracidad historica y doctrinal herramientas esta guia proporciona un marco metodologico detallado para diseccionar un texto y evaluar tanto su rigor historico como su solidez doctrinal. esta estructurada para facilitar su integracion… analisis/literario historia doctrina metodologia documentacion"
+    },
+    {
+      "tipo": "estudio",
+      "id": "07-herramientas--notebook-navigator",
+      "href": "/estudio/07-herramientas--notebook-navigator",
+      "title": "Guía de Notebook Navigator 3 (NN3)",
+      "sub": "Herramientas",
+      "desc": "Reemplaza el explorador de archivos por defecto de Obsidian por un panel de dos paneles (árbol + lista) con vista previa, búsqueda, calendario, etiquetas (tags), propiedades, carpetas de…",
+      "tags": [
+        "wiki/herramientas",
+        "obsidian",
+        "notebook-navigator"
+      ],
+      "fold": "guia de notebook navigator 3 (nn3) herramientas reemplaza el explorador de archivos por defecto de obsidian por un panel de dos paneles (arbol + lista) con vista previa, busqueda, calendario, etiquetas (tags), propiedades, carpetas de… wiki/herramientas obsidian notebook-navigator"
+    },
+    {
+      "tipo": "estudio",
+      "id": "07-herramientas--slides-hermeneutica",
+      "href": "/estudio/07-herramientas--slides-hermeneutica",
+      "title": "Introducción a la Hermenéutica Bíblica",
+      "sub": "Herramientas",
+      "desc": "- Arte y ciencia de interpretar la Biblia - No es solo leer, sino entender lo que Dios comunica - Requiere disciplina y método",
+      "tags": [
+        "slides/enseñanza",
+        "estudio/hermeneutica"
+      ],
+      "fold": "introduccion a la hermeneutica biblica herramientas - arte y ciencia de interpretar la biblia - no es solo leer, sino entender lo que dios comunica - requiere disciplina y metodo slides/ensenanza estudio/hermeneutica"
+    },
+    {
+      "tipo": "estudio",
+      "id": "07-herramientas--taxonomia-tags",
+      "href": "/estudio/07-herramientas--taxonomia-tags",
+      "title": "Taxonomía de Tags — Second Brain Bíblico",
+      "sub": "Herramientas",
+      "desc": "1. Siempre usar tags jerárquicos con / 2. Mínimo 2 tags por nota 3. Incluir categoría + subcategoría 4. No crear tags nuevos sin agregarlos aquí primero 5. Usar Tag Wrangler para…",
+      "tags": [
+        "meta/tags",
+        "meta/taxonomia"
+      ],
+      "fold": "taxonomia de tags — second brain biblico herramientas 1. siempre usar tags jerarquicos con / 2. minimo 2 tags por nota 3. incluir categoria + subcategoria 4. no crear tags nuevos sin agregarlos aqui primero 5. usar tag wrangler para… meta/tags meta/taxonomia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "08-recursos--index-pdf",
+      "href": "/estudio/08-recursos--index-pdf",
+      "title": "Índice de PDFs — Biblioteca Bíblica",
+      "sub": "Recursos",
+      "desc": "- !../../biblia-pdf-ntv-nueva-traduccion-viviente.pdf",
+      "tags": [
+        "recurso/pdf",
+        "indice"
+      ],
+      "fold": "indice de pdfs — biblioteca biblica recursos - !../../biblia-pdf-ntv-nueva-traduccion-viviente.pdf recurso/pdf indice"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--01-el-sembrador",
+      "href": "/estudio/09-parabolas--01-reino--01-el-sembrador",
+      "title": "El Sembrador",
+      "sub": "Parábolas · Mateo 13:3-9",
+      "desc": "Jesús contó esta parábola junto al Mar de Galilea, sentado en una barca mientras la multitud estaba en la ribera (Mt 13:1-2). Era el inicio de su ministerio público en Galilea, después de…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "el sembrador parabolas reino mateo 13:3-9 jesus conto esta parabola junto al mar de galilea, sentado en una barca mientras la multitud estaba en la ribera (mt 13:1-2). era el inicio de su ministerio publico en galilea, despues de… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--02-la-semilla-que-crece",
+      "href": "/estudio/09-parabolas--01-reino--02-la-semilla-que-crece",
+      "title": "La Semilla que Crece",
+      "sub": "Parábolas · Marcos 4:26-29",
+      "desc": "Jesús la contó el mismo día que la parábola del sembrador, junto al Mar de Galilea (Mc 4:1-2). Después de explicar a sus discípulos por qué hablaba en parábolas (Mc 4:10-12), continuó…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "la semilla que crece parabolas reino marcos 4:26-29 jesus la conto el mismo dia que la parabola del sembrador, junto al mar de galilea (mc 4:1-2). despues de explicar a sus discipulos por que hablaba en parabolas (mc 4:10-12), continuo… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--03-la-semilla-de-mostaza",
+      "href": "/estudio/09-parabolas--01-reino--03-la-semilla-de-mostaza",
+      "title": "La Semilla de Mostaza",
+      "sub": "Parábolas · Mateo 13:31-32",
+      "desc": "Jesús la contó después de la parábola de la cizaña (Mt 13:24-30), en el mismo discurso de parábolas junto al Mar de Galilea. La mostaza negra (Sinapis nigra) era común en Palestina: sus…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "la semilla de mostaza parabolas reino mateo 13:31-32 jesus la conto despues de la parabola de la cizana (mt 13:24-30), en el mismo discurso de parabolas junto al mar de galilea. la mostaza negra (sinapis nigra) era comun en palestina: sus… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--04-la-levadura",
+      "href": "/estudio/09-parabolas--01-reino--04-la-levadura",
+      "title": "La Levadura",
+      "sub": "Parábolas · Mateo 13:33",
+      "desc": "Jesús la contó inmediatamente después de la parábola de la semilla de mostaza (Mt 13:31-32), como una segunda ilustración sobre el crecimiento del Reino. Las tres medidas de harina (σάτα…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "la levadura parabolas reino mateo 13:33 jesus la conto inmediatamente despues de la parabola de la semilla de mostaza (mt 13:31-32), como una segunda ilustracion sobre el crecimiento del reino. las tres medidas de harina (σάτα… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--05-el-tesoro-escondido",
+      "href": "/estudio/09-parabolas--01-reino--05-el-tesoro-escondido",
+      "title": "El Tesoro Escondido",
+      "sub": "Parábolas · Mateo 13:44",
+      "desc": "Jesús la contó en el mismo discurso de parábolas, probablemente dentro de la casa (cf. Mt 13:1, 36) con sus discípulos. En la Palestina del siglo I, no existían bancos seguros. Era práctica…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "el tesoro escondido parabolas reino mateo 13:44 jesus la conto en el mismo discurso de parabolas, probablemente dentro de la casa (cf. mt 13:1, 36) con sus discipulos. en la palestina del siglo i, no existian bancos seguros. era practica… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--06-la-perla-de-gran-precio",
+      "href": "/estudio/09-parabolas--01-reino--06-la-perla-de-gran-precio",
+      "title": "La Perla de Gran Precio",
+      "sub": "Parábolas · Mateo 13:45-46",
+      "desc": "Jesús la contó inmediatamente después de la parábola del tesoro escondido (Mt 13:44), como una segunda ilustración sobre el valor supremo del Reino. Los mercaderes de perlas (μαργαρίτης /…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "la perla de gran precio parabolas reino mateo 13:45-46 jesus la conto inmediatamente despues de la parabola del tesoro escondido (mt 13:44), como una segunda ilustracion sobre el valor supremo del reino. los mercaderes de perlas (μαργαρίτης /… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--07-la-cizana",
+      "href": "/estudio/09-parabolas--01-reino--07-la-cizana",
+      "title": "La Cizaña",
+      "sub": "Parábolas · Mateo 13:24-30",
+      "desc": "Jesús la contó el mismo día que la parábola del sembrador, pero esta vez dentro de la casa con sus discípulos (Mt 13:36). La \"maleza\" o \"cizaña\" (ζιζάνιον / zizánion) es probablemente el…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "la cizana parabolas reino mateo 13:24-30 jesus la conto el mismo dia que la parabola del sembrador, pero esta vez dentro de la casa con sus discipulos (mt 13:36). la \"maleza\" o \"cizana\" (ζιζάνιον / zizanion) es probablemente el… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--01-reino--08-la-red-en-el-mar",
+      "href": "/estudio/09-parabolas--01-reino--08-la-red-en-el-mar",
+      "title": "La Red en el Mar",
+      "sub": "Parábolas · Mateo 13:47-50",
+      "desc": "Jesús la contó en el discurso de parábolas, probablemente dentro de la casa con sus discípulos (cf. Mt 13:36). La \"red para pescar\" (σαγήνην / sagḗnēn) era una red de arrastre o barredera,…",
+      "tags": [
+        "parabola",
+        "reino"
+      ],
+      "fold": "la red en el mar parabolas reino mateo 13:47-50 jesus la conto en el discurso de parabolas, probablemente dentro de la casa con sus discipulos (cf. mt 13:36). la \"red para pescar\" (σαγήνην / sagḗnēn) era una red de arrastre o barredera,… parabola reino"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--02-gracia--09-la-oveja-perdida",
+      "href": "/estudio/09-parabolas--02-gracia--09-la-oveja-perdida",
+      "title": "La Oveja Perdida",
+      "sub": "Parábolas · Mateo 18:10-14",
+      "desc": "Jesús relata esta parábola en dos ocasiones distintas. En Mateo, responde a la pregunta de los discípulos sobre quién es el mayor en el Reino. En Lucas, responde a la crítica de los…",
+      "tags": [
+        "parabola",
+        "gracia"
+      ],
+      "fold": "la oveja perdida parabolas gracia mateo 18:10-14 jesus relata esta parabola en dos ocasiones distintas. en mateo, responde a la pregunta de los discipulos sobre quien es el mayor en el reino. en lucas, responde a la critica de los… parabola gracia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--02-gracia--10-la-dracma-perdida",
+      "href": "/estudio/09-parabolas--02-gracia--10-la-dracma-perdida",
+      "title": "La Dracma Perdida",
+      "sub": "Parábolas · Lucas 15:8-10",
+      "desc": "Jesús narra esta parábola inmediatamente después de la de la oveja perdida (Lucas 15:1-10). Los fariseos y escribas criticaban su fellowship con publicanos y pecadores. La dracma (δραχμή,…",
+      "tags": [
+        "parabola",
+        "gracia"
+      ],
+      "fold": "la dracma perdida parabolas gracia lucas 15:8-10 jesus narra esta parabola inmediatamente despues de la de la oveja perdida (lucas 15:1-10). los fariseos y escribas criticaban su fellowship con publicanos y pecadores. la dracma (δραχμή,… parabola gracia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--02-gracia--11-el-hijo-prodigo",
+      "href": "/estudio/09-parabolas--02-gracia--11-el-hijo-prodigo",
+      "title": "El Hijo Pródigo",
+      "sub": "Parábolas · Lucas 15:11-32",
+      "desc": "Jesús narra esta parábola — la más conocida del NT — a los fariseos y escribas que criticaban su fellowship con pecadores (Lc 15:1-2). El derecho del primogénito (Deut 21:17) daba doble…",
+      "tags": [
+        "parabola",
+        "gracia"
+      ],
+      "fold": "el hijo prodigo parabolas gracia lucas 15:11-32 jesus narra esta parabola — la mas conocida del nt — a los fariseos y escribas que criticaban su fellowship con pecadores (lc 15:1-2). el derecho del primogenito (deut 21:17) daba doble… parabola gracia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--02-gracia--12-el-siervo-impacordial",
+      "href": "/estudio/09-parabolas--02-gracia--12-el-siervo-impacordial",
+      "title": "El Siervo Imparcordial",
+      "sub": "Parábolas · Mateo 18:23-35",
+      "desc": "Pedro pregunta a Jesús: «¿Hasta cuántas veces perdonaré a mi hermano que peque contra mí? ¿Hasta siete veces?» (Mt 18:21). Jesús responde con la parábola del siervo imparcordial. La cifra…",
+      "tags": [
+        "parabola",
+        "gracia"
+      ],
+      "fold": "el siervo imparcordial parabolas gracia mateo 18:23-35 pedro pregunta a jesus: «¿hasta cuantas veces perdonare a mi hermano que peque contra mi? ¿hasta siete veces?» (mt 18:21). jesus responde con la parabola del siervo imparcordial. la cifra… parabola gracia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--02-gracia--13-los-dos-deudores",
+      "href": "/estudio/09-parabolas--02-gracia--13-los-dos-deudores",
+      "title": "Los Dos Deudores",
+      "sub": "Parábolas · Lucas 7:41-43",
+      "desc": "Jesús está en la casa de Simón, un fariseo, cuando una mujer «pecadora» (ἡ ἁμαρτωλός, hē hamartolos) entra, llora, lava los pies de Jesús con sus lágrimas, los seca con su cabello, los unta…",
+      "tags": [
+        "parabola",
+        "gracia"
+      ],
+      "fold": "los dos deudores parabolas gracia lucas 7:41-43 jesus esta en la casa de simon, un fariseo, cuando una mujer «pecadora» (ἡ ἁμαρτωλός, hē hamartolos) entra, llora, lava los pies de jesus con sus lagrimas, los seca con su cabello, los unta… parabola gracia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--02-gracia--14-el-buen-samaritano",
+      "href": "/estudio/09-parabolas--02-gracia--14-el-buen-samaritano",
+      "title": "El Buen Samaritano",
+      "sub": "Parábolas · Lucas 10:25-37",
+      "desc": "Un «experto en la ley» (νομοδιδάσκαλος, nomodidaskalos) pregunta a Jesús cómo heredar la vida eterna. Jesús le responde con la Ley (Lev 19:18, Deut 6:5). El experto, «queriendo…",
+      "tags": [
+        "parabola",
+        "gracia"
+      ],
+      "fold": "el buen samaritano parabolas gracia lucas 10:25-37 un «experto en la ley» (νομοδιδάσκαλος, nomodidaskalos) pregunta a jesus como heredar la vida eterna. jesus le responde con la ley (lev 19:18, deut 6:5). el experto, «queriendo… parabola gracia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--02-gracia--15-el-fariseo-y-el-recaudador",
+      "href": "/estudio/09-parabolas--02-gracia--15-el-fariseo-y-el-recaudador",
+      "title": "El Fariseo y el Publicano",
+      "sub": "Parábolas · Lucas 18:9-14",
+      "desc": "Jesús narra esta parábola dirigida específicamente a quienes «confiaban en su propia justicia» (πεποιθότας ἐφ' ἑαυτοῖς ὅτι εἰσὶν δίκαιοι, pepoithotas ep' heautois hoti eisin dikaioi). El…",
+      "tags": [
+        "parabola",
+        "gracia"
+      ],
+      "fold": "el fariseo y el publicano parabolas gracia lucas 18:9-14 jesus narra esta parabola dirigida especificamente a quienes «confiaban en su propia justicia» (πεποιθότας ἐφ' ἑαυτοῖς ὅτι εἰσὶν δίκαιοι, pepoithotas ep' heautois hoti eisin dikaioi). el… parabola gracia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--03-juicio--16-el-hombre-rico-y-lazaro",
+      "href": "/estudio/09-parabolas--03-juicio--16-el-hombre-rico-y-lazaro",
+      "title": "El Hombre Rico y Lázaro",
+      "sub": "Parábolas · Lucas 16:19-31",
+      "desc": "Esta es la única parábola de Jesús en la que el personaje recibe un nombre propio: Lázaro (Lazaros, griego derivado del hebreo Eliezer, \"Dios es mi ayuda\"). En el judaísmo del Segundo…",
+      "tags": [
+        "parabola",
+        "juicio"
+      ],
+      "fold": "el hombre rico y lazaro parabolas juicio lucas 16:19-31 esta es la unica parabola de jesus en la que el personaje recibe un nombre propio: lazaro (lazaros, griego derivado del hebreo eliezer, \"dios es mi ayuda\"). en el judaismo del segundo… parabola juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--03-juicio--17-el-necio-rico",
+      "href": "/estudio/09-parabolas--03-juicio--17-el-necio-rico",
+      "title": "El Necio Rico",
+      "sub": "Parábolas · Lucas 12:16-21",
+      "desc": "Jesús pronuncia esta parábola en el contexto de un hombre que le pide que intervenga en una disputa familiar sobre la herencia (Lc 12:13-14). Jesús rechaza ser juez o árbitro y aprovecha…",
+      "tags": [
+        "parabola",
+        "juicio"
+      ],
+      "fold": "el necio rico parabolas juicio lucas 12:16-21 jesus pronuncia esta parabola en el contexto de un hombre que le pide que intervenga en una disputa familiar sobre la herencia (lc 12:13-14). jesus rechaza ser juez o arbitro y aprovecha… parabola juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--03-juicio--18-la-higuera-esteril",
+      "href": "/estudio/09-parabolas--03-juicio--18-la-higuera-esteril",
+      "title": "La Higuera Estéril",
+      "sub": "Parábolas · Lucas 13:6-9",
+      "desc": "Jesús pronuncia esta parábola en respuesta a una pregunta sobre la masacre de galileos por Poncio Pilato (Lc 13:1-5). La gente asesinada no era más pecadora que los demás, y Jesús advierte:…",
+      "tags": [
+        "parabola",
+        "juicio"
+      ],
+      "fold": "la higuera esteril parabolas juicio lucas 13:6-9 jesus pronuncia esta parabola en respuesta a una pregunta sobre la masacre de galileos por poncio pilato (lc 13:1-5). la gente asesinada no era mas pecadora que los demas, y jesus advierte:… parabola juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--03-juicio--19-las-ovejas-y-los-cabritos",
+      "href": "/estudio/09-parabolas--03-juicio--19-las-ovejas-y-los-cabritos",
+      "title": "Las Ovejas y los Cabritos",
+      "sub": "Parábolas · Mateo 25:31-46",
+      "desc": "Esta es la última parábola del Discurso Escatológico (Mt 24-25), el sermón más extenso sobre el fin de los tiempos. El \"Hijo del Hombre sentado en su trono de gloria\" (ho Huios tou…",
+      "tags": [
+        "parabola",
+        "juicio"
+      ],
+      "fold": "las ovejas y los cabritos parabolas juicio mateo 25:31-46 esta es la ultima parabola del discurso escatologico (mt 24-25), el sermon mas extenso sobre el fin de los tiempos. el \"hijo del hombre sentado en su trono de gloria\" (ho huios tou… parabola juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--03-juicio--20-las-diez-virgenes",
+      "href": "/estudio/09-parabolas--03-juicio--20-las-diez-virgenes",
+      "title": "Las Diez Vírgenes",
+      "sub": "Parábolas · Mateo 25:1-13",
+      "desc": "Esta parábola se encuentra en el Discurso Escatológico (Mt 24-25). La ceremonia de la boda judía tenía tres fases: (1) el contrato matrimonial (ketubah), (2) la procesión del novio hacia la…",
+      "tags": [
+        "parabola",
+        "juicio"
+      ],
+      "fold": "las diez virgenes parabolas juicio mateo 25:1-13 esta parabola se encuentra en el discurso escatologico (mt 24-25). la ceremonia de la boda judia tenia tres fases: (1) el contrato matrimonial (ketubah), (2) la procesion del novio hacia la… parabola juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--03-juicio--21-los-villanos-acaparadores",
+      "href": "/estudio/09-parabolas--03-juicio--21-los-villanos-acaparadores",
+      "title": "Los Villanos Acaparadores",
+      "sub": "Parábolas · Mateo 21:33-41",
+      "desc": "Esta parábola se pronuncia en la última semana de Jesús, en el Templo de Jerusalén. Los tres relatos sinópticos presentan variaciones: Mateo añade la parábola de los viñadores (vv. 43-44);…",
+      "tags": [
+        "parabola",
+        "juicio"
+      ],
+      "fold": "los villanos acaparadores parabolas juicio mateo 21:33-41 esta parabola se pronuncia en la ultima semana de jesus, en el templo de jerusalen. los tres relatos sinopticos presentan variaciones: mateo anade la parabola de los vinadores (vv. 43-44);… parabola juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--03-juicio--22-la-higuera-hojareciente",
+      "href": "/estudio/09-parabolas--03-juicio--22-la-higuera-hojareciente",
+      "title": "La Higuera Hojareciente",
+      "sub": "Parábolas · Mateo 24:32-35",
+      "desc": "Jesús pronuncia esta parábola en el Discurso Escatológico (Mt 24; Mc 13; Lc 21), justo después de describir las señales previas a la destrucción del Templo y a la venida del Hijo del…",
+      "tags": [
+        "parabola",
+        "juicio"
+      ],
+      "fold": "la higuera hojareciente parabolas juicio mateo 24:32-35 jesus pronuncia esta parabola en el discurso escatologico (mt 24; mc 13; lc 21), justo despues de describir las senales previas a la destruccion del templo y a la venida del hijo del… parabola juicio"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--04-oracion--23-el-amigo-de-medianoche",
+      "href": "/estudio/09-parabolas--04-oracion--23-el-amigo-de-medianoche",
+      "title": "El Amigo de Medianoche",
+      "sub": "Parábolas · Lucas 11:5-8",
+      "desc": "En la cultura del antiguo Medio Oriente, la hospitalidad era un deber sagrado. Un huésped inesperado a medianoche requería pan, pero el anfitrión no tenía provisiones. Pedir prestado a un…",
+      "tags": [
+        "parabola",
+        "oracion",
+        "perseverancia",
+        "luke"
+      ],
+      "fold": "el amigo de medianoche parabolas oracion lucas 11:5-8 en la cultura del antiguo medio oriente, la hospitalidad era un deber sagrado. un huesped inesperado a medianoche requeria pan, pero el anfitrion no tenia provisiones. pedir prestado a un… parabola oracion perseverancia luke"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--04-oracion--24-el-juez-inicuo",
+      "href": "/estudio/09-parabolas--04-oracion--24-el-juez-inicuo",
+      "title": "El Juez Inicuo",
+      "sub": "Parábolas · Lucas 18:1-8",
+      "desc": "En el sistema judicial del primer siglo, los jueces (gr. κριτής, krites) eran autoridades civiles, no sacerdotales. La viuda (gr. χήρα, chera) carecía de poder legal sin varón que la…",
+      "tags": [
+        "parabola",
+        "oracion",
+        "perseverancia",
+        "justicia",
+        "luke"
+      ],
+      "fold": "el juez inicuo parabolas oracion lucas 18:1-8 en el sistema judicial del primer siglo, los jueces (gr. κριτής, krites) eran autoridades civiles, no sacerdotales. la viuda (gr. χήρα, chera) carecia de poder legal sin varon que la… parabola oracion perseverancia justicia luke"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--04-oracion--25-el-fariseo-y-el-recaudador-oracion",
+      "href": "/estudio/09-parabolas--04-oracion--25-el-fariseo-y-el-recaudador-oracion",
+      "title": "El Fariseo y el Recaudador de Impuestos",
+      "sub": "Parábolas · Lucas 18:9-14",
+      "desc": "Los fariseos (gr. Φαρισαῖος, Pharisaios) eran un grupo religioso judío dedicado a la observancia estricta de la Ley, incluyendo la oración tres veces al día. Los recaudadores de impuestos…",
+      "tags": [
+        "parabola",
+        "oracion",
+        "humildad",
+        "fariseos",
+        "publicanos",
+        "luke"
+      ],
+      "fold": "el fariseo y el recaudador de impuestos parabolas oracion lucas 18:9-14 los fariseos (gr. φαρισαῖος, pharisaios) eran un grupo religioso judio dedicado a la observancia estricta de la ley, incluyendo la oracion tres veces al dia. los recaudadores de impuestos… parabola oracion humildad fariseos publicanos luke"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--05-mayordomia--26-el-administrador-mañoso",
+      "href": "/estudio/09-parabolas--05-mayordomia--26-el-administrador-mañoso",
+      "title": "El Administrador Mañoso",
+      "sub": "Parábolas · Lucas 16:1-13",
+      "desc": "En el mundo greco-romano, los administradores (οἰκονόμος / oikonomos) manejaban los asuntos económicos de un señor ausente. Tenían autoridad sobre deudas y contratos. Era común que cobraran…",
+      "tags": [
+        "parabola",
+        "mayordomia"
+      ],
+      "fold": "el administrador manoso parabolas mayordomia lucas 16:1-13 en el mundo greco-romano, los administradores (οἰκονόμος / oikonomos) manejaban los asuntos economicos de un senor ausente. tenian autoridad sobre deudas y contratos. era comun que cobraran… parabola mayordomia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--05-mayordomia--27-los-talentos",
+      "href": "/estudio/09-parabolas--05-mayordomia--27-los-talentos",
+      "title": "Los Talentos",
+      "sub": "Parábolas · Mateo 25:14-30",
+      "desc": "Un \"talento\" (τάλαντον / talanton) era la unidad monetaria más grande del mundo antiguo: equivalía a unos 6.000 denarios, aproximadamente 20 años de salario de un jornalero. Esta parábola…",
+      "tags": [
+        "parabola",
+        "mayordomia"
+      ],
+      "fold": "los talentos parabolas mayordomia mateo 25:14-30 un \"talento\" (τάλαντον / talanton) era la unidad monetaria mas grande del mundo antiguo: equivalia a unos 6.000 denarios, aproximadamente 20 anos de salario de un jornalero. esta parabola… parabola mayordomia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--05-mayordomia--28-las-monas",
+      "href": "/estudio/09-parabolas--05-mayordomia--28-las-monas",
+      "title": "Las Minas",
+      "sub": "Parábolas · Lucas 19:12-27",
+      "desc": "Una \"mina\" (μνᾶ / mna) equivalía a 100 denarios, aproximadamente 4 meses de salario (cf. Mt 20:2). A diferencia de los talentos, aquí todos reciben la misma cantidad (una mina cada uno).…",
+      "tags": [
+        "parabola",
+        "mayordomia"
+      ],
+      "fold": "las minas parabolas mayordomia lucas 19:12-27 una \"mina\" (μνᾶ / mna) equivalia a 100 denarios, aproximadamente 4 meses de salario (cf. mt 20:2). a diferencia de los talentos, aqui todos reciben la misma cantidad (una mina cada uno).… parabola mayordomia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--05-mayordomia--29-los-obreros-de-la-viña",
+      "href": "/estudio/09-parabolas--05-mayordomia--29-los-obreros-de-la-viña",
+      "title": "Los Obreros de la Viña",
+      "sub": "Parábolas · Mateo 20:1-16",
+      "desc": "En Palestina, el trabajo agrícola se organizaba por turnos. Los jornaleros se reunían en la plaza del mercado al amanecer (about 6:00 a.m.) para ser contratados. La jornada laboral tenía…",
+      "tags": [
+        "parabola",
+        "mayordomia"
+      ],
+      "fold": "los obreros de la vina parabolas mayordomia mateo 20:1-16 en palestina, el trabajo agricola se organizaba por turnos. los jornaleros se reunian en la plaza del mercado al amanecer (about 6:00 a.m.) para ser contratados. la jornada laboral tenia… parabola mayordomia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--05-mayordomia--30-el-hombre-rico-necio-mayordomia",
+      "href": "/estudio/09-parabolas--05-mayordomia--30-el-hombre-rico-necio-mayordomia",
+      "title": "El Hombre Rico Necio",
+      "sub": "Parábolas · Lucas 12:16-21",
+      "desc": "En el judaísmo del Segundo Templo, la riqueza era vista frecuentemente como señal de bendición divina (cf. Dt 28:1-14). Jesús desafía esta ecuación teológica. El contexto inmediato es un…",
+      "tags": [
+        "parabola",
+        "mayordomia"
+      ],
+      "fold": "el hombre rico necio parabolas mayordomia lucas 12:16-21 en el judaismo del segundo templo, la riqueza era vista frecuentemente como senal de bendicion divina (cf. dt 28:1-14). jesus desafia esta ecuacion teologica. el contexto inmediato es un… parabola mayordomia"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--31-los-dos-edificadores",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--31-los-dos-edificadores",
+      "title": "Los dos edificadores",
+      "sub": "Parábolas · Mateo 7:24-27",
+      "desc": "Esta parábola cierra el Sermón del Monte (Mateo) y el Sermón de la Llanura (Lucas). En Palestina, las casas de campesinos se construían con barro y piedra; las de rico, con bloques de…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "los dos edificadores parabolas vida cristiana mateo 7:24-27 esta parabola cierra el sermon del monte (mateo) y el sermon de la llanura (lucas). en palestina, las casas de campesinos se construian con barro y piedra; las de rico, con bloques de… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--32-el-siervo-fiel",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--32-el-siervo-fiel",
+      "title": "El siervo fiel",
+      "sub": "Parábolas · Mateo 24:42-51",
+      "desc": "Mateo sitúa esta parábola en el Monte de los Olivos, durante el discurso escatológico (Mt 24-25). En una casa palestina, el siervo encargado (μαθητευθείς, Lucas 12:44) tenía autoridad sobre…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "el siervo fiel parabolas vida cristiana mateo 24:42-51 mateo situa esta parabola en el monte de los olivos, durante el discurso escatologico (mt 24-25). en una casa palestina, el siervo encargado (μαθητευθείς, lucas 12:44) tenia autoridad sobre… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--33-la-lampara-debajo-del-modidor",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--33-la-lampara-debajo-del-modidor",
+      "title": "La lámpara debajo del modidor",
+      "sub": "Parábolas · Mateo 5:14-15",
+      "desc": "Mateo sitúa la parábola en el Sermón del Monte, como continuación de la imagen de la sal y la luz. En casas palestinas, la lámpara era un disco de arcilla con aceite y mecha. El modidor…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "la lampara debajo del modidor parabolas vida cristiana mateo 5:14-15 mateo situa la parabola en el sermon del monte, como continuacion de la imagen de la sal y la luz. en casas palestinas, la lampara era un disco de arcilla con aceite y mecha. el modidor… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--34-vino-nuevo-en-odres-nuevos",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--34-vino-nuevo-en-odres-nuevos",
+      "title": "Vino nuevo en odres nuevos",
+      "sub": "Parábolas · Mateo 9:16-17",
+      "desc": "Los tres sinópticos sitúan esta parábola en el contexto de la llamada de Leví (Mateo) y el debate sobre el ayuno. Los odres (ἀσκοί / askoi) eran de cuero de cabra o carnero, usados para…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "vino nuevo en odres nuevos parabolas vida cristiana mateo 9:16-17 los tres sinopticos situan esta parabola en el contexto de la llamada de levi (mateo) y el debate sobre el ayuno. los odres (ἀσκοί / askoi) eran de cuero de cabra o carnero, usados para… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--35-el-siervo-inutil",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--35-el-siervo-inutil",
+      "title": "El siervo inútil",
+      "sub": "Parábolas · Lucas 17:7-10",
+      "desc": "Esta parábola es exclusiva de Lucas. El contexto inmediato (Lc 17:1-6) trata el escándalo, el perdón ilimitado y la fe como grano de mostaza. Jesús la usa para enseñar humildad y servicio…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "el siervo inutil parabolas vida cristiana lucas 17:7-10 esta parabola es exclusiva de lucas. el contexto inmediato (lc 17:1-6) trata el escandalo, el perdon ilimitado y la fe como grano de mostaza. jesus la usa para ensenar humildad y servicio… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--36-contar-el-costo",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--36-contar-el-costo",
+      "title": "Contar el costo",
+      "sub": "Parábolas · Lucas 14:28-33",
+      "desc": "Jesús habla en casa de un fariseo (Lc 14:1) durante un banquete. La imagen del constructor que cuenta el costo antes de iniciar una torre era familiar: en el antiguo Israel, la torre…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "contar el costo parabolas vida cristiana lucas 14:28-33 jesus habla en casa de un fariseo (lc 14:1) durante un banquete. la imagen del constructor que cuenta el costo antes de iniciar una torre era familiar: en el antiguo israel, la torre… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--37-el-escriba-instruido",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--37-el-escriba-instruido",
+      "title": "El escriba instruido",
+      "sub": "Parábolas · Mateo 13:51-52",
+      "desc": "Mateo sitúa esta parábola al final del discurso en parábolas (cap. 13). Los escribas (γραμματεῖς / grammateis) eran los expertos en la Ley de Moisés, formados en las escuelas sinagogales.…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "el escriba instruido parabolas vida cristiana mateo 13:51-52 mateo situa esta parabola al final del discurso en parabolas (cap. 13). los escribas (γραμματεῖς / grammateis) eran los expertos en la ley de moises, formados en las escuelas sinagogales.… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--06-vida-cristiana--38-los-dos-hijos",
+      "href": "/estudio/09-parabolas--06-vida-cristiana--38-los-dos-hijos",
+      "title": "Los dos hijos",
+      "sub": "Parábolas · Mateo 21:28-32",
+      "desc": "Jesús pronuncia esta parábola en el templo, después de su entrada triunfal en Jerusalén (Mt 21:1-11) y después de que los sumos sacerdotes le cuestionen su autoridad (Mt 21:23-27). La…",
+      "tags": [
+        "parabola",
+        "vida-cristiana"
+      ],
+      "fold": "los dos hijos parabolas vida cristiana mateo 21:28-32 jesus pronuncia esta parabola en el templo, despues de su entrada triunfal en jerusalen (mt 21:1-11) y despues de que los sumos sacerdotes le cuestionen su autoridad (mt 21:23-27). la… parabola vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--07-alegorias-juan--39-el-buen-pastor",
+      "href": "/estudio/09-parabolas--07-alegorias-juan--39-el-buen-pastor",
+      "title": "El Buen Pastor",
+      "sub": "Parábolas · Juan 10:11",
+      "desc": "Jesús pronuncia esta alegoría durante la fiesta de la Dedicación del templo en Jerusalén (invierno, Juan 10:22-23). Acaba de sanar al ciego de nacimiento (Juan 9) y los fariseos lo han…",
+      "tags": [
+        "alegoria",
+        "juan",
+        "pastor"
+      ],
+      "fold": "el buen pastor parabolas alegorias juan juan 10:11 jesus pronuncia esta alegoria durante la fiesta de la dedicacion del templo en jerusalen (invierno, juan 10:22-23). acaba de sanar al ciego de nacimiento (juan 9) y los fariseos lo han… alegoria juan pastor"
+    },
+    {
+      "tipo": "estudio",
+      "id": "09-parabolas--07-alegorias-juan--40-la-vid-y-los-sarmientos",
+      "href": "/estudio/09-parabolas--07-alegorias-juan--40-la-vid-y-los-sarmientos",
+      "title": "La Vid y los Sarmientos",
+      "sub": "Parábolas · Juan 15:5",
+      "desc": "Jesús pronuncia esta alegoría durante la Última Cena, después de la institución de la cena y antes de ir al huerto de Getsemaní (Juan 14-16 es el «Discurso de despedida»). El contexto…",
+      "tags": [
+        "alegoria",
+        "juan",
+        "vid",
+        "fruto"
+      ],
+      "fold": "la vid y los sarmientos parabolas alegorias juan juan 15:5 jesus pronuncia esta alegoria durante la ultima cena, despues de la institucion de la cena y antes de ir al huerto de getsemani (juan 14-16 es el «discurso de despedida»). el contexto… alegoria juan vid fruto"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--01-introduccion",
+      "href": "/estudio/10-apocalipsis--01-introduccion",
+      "title": "Introducción al Apocalipsis",
+      "sub": "Apocalipsis · Apocalipsis 1:1-8",
+      "desc": "Autor: El apóstol Juan, identificado como \"Juan, hermano de ustedes y compañero en el sufrimiento\" (Ap 1:9 NTV). Tradición unánime de la iglesia primitiva: Ireneo (~180 d.C.), Clemente de…",
+      "tags": [
+        "apocalipsis",
+        "introduccion",
+        "juan",
+        "patmos"
+      ],
+      "fold": "introduccion al apocalipsis apocalipsis apocalipsis 1:1-8 autor: el apostol juan, identificado como \"juan, hermano de ustedes y companero en el sufrimiento\" (ap 1:9 ntv). tradicion unanime de la iglesia primitiva: ireneo (~180 d.c.), clemente de… apocalipsis introduccion juan patmos"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--02-interpretacion",
+      "href": "/estudio/10-apocalipsis--02-interpretacion",
+      "title": "Los 4 Metodos de Interpretacion del Apocalipsis",
+      "sub": "Apocalipsis · Apocalipsis 4:1-2",
+      "desc": "El problema hermeneutico del Apocalipsis es antiguo. Desde los primeros siglos, la iglesia ha debatido como leer el libro mas simbolico del Nuevo Testamento. Los cuatro metodos principales…",
+      "tags": [
+        "apocalipsis",
+        "interpretacion",
+        "hermeneutica"
+      ],
+      "fold": "los 4 metodos de interpretacion del apocalipsis apocalipsis apocalipsis 4:1-2 el problema hermeneutico del apocalipsis es antiguo. desde los primeros siglos, la iglesia ha debatido como leer el libro mas simbolico del nuevo testamento. los cuatro metodos principales… apocalipsis interpretacion hermeneutica"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--03-las-7-iglesias",
+      "href": "/estudio/10-apocalipsis--03-las-7-iglesias",
+      "title": "Las 7 Iglesias del Apocalipsis",
+      "sub": "Apocalipsis · Apocalipsis 2:1-3:22",
+      "desc": "Juan escribio a siete comunidades reales en la provincia romana de Asia (actual Turquia occidental). Cada ciudad tenia un templo dedicado al culto imperial romano. La proximity geografica…",
+      "tags": [
+        "apocalipsis",
+        "iglesias",
+        "efeso",
+        "esmirna",
+        "pergamo",
+        "tiatira"
+      ],
+      "fold": "las 7 iglesias del apocalipsis apocalipsis apocalipsis 2:1-3:22 juan escribio a siete comunidades reales en la provincia romana de asia (actual turquia occidental). cada ciudad tenia un templo dedicado al culto imperial romano. la proximity geografica… apocalipsis iglesias efeso esmirna pergamo tiatira"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--04-el-cielo-y-el-trono",
+      "href": "/estudio/10-apocalipsis--04-el-cielo-y-el-trono",
+      "title": "El Cielo y el Trono: La Visión de la Adoración Suprema",
+      "sub": "Apocalipsis · Apocalipsis 4-5",
+      "desc": "Apocalipsis 4:1 — 5:14 (lectura completa recomendada)",
+      "tags": [
+        "apocalipsis",
+        "cielo",
+        "trono",
+        "adoracion",
+        "rollos"
+      ],
+      "fold": "el cielo y el trono: la vision de la adoracion suprema apocalipsis apocalipsis 4-5 apocalipsis 4:1 — 5:14 (lectura completa recomendada) apocalipsis cielo trono adoracion rollos"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--05-sellos-trompetas-copas",
+      "href": "/estudio/10-apocalipsis--05-sellos-trompetas-copas",
+      "title": "Sellos, Trompetas y Copas: Los Tres Ciclos de Juicio",
+      "sub": "Apocalipsis · Apocalipsis 6-16",
+      "desc": "Apocalipsis 6:1 — 16:21 (lectura panorámica recomendada)",
+      "tags": [
+        "apocalipsis",
+        "sellos",
+        "trompetas",
+        "copas",
+        "juicio",
+        "ciclos"
+      ],
+      "fold": "sellos, trompetas y copas: los tres ciclos de juicio apocalipsis apocalipsis 6-16 apocalipsis 6:1 — 16:21 (lectura panoramica recomendada) apocalipsis sellos trompetas copas juicio ciclos"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--06-las-bestias",
+      "href": "/estudio/10-apocalipsis--06-las-bestias",
+      "title": "Las Bestias: El Dragón, la Bestia del Mar y la Bestia de la Tierra",
+      "sub": "Apocalipsis · Apocalipsis 12-13",
+      "desc": "Apocalipsis 12:1 — 13:18 (lectura completa recomendada)",
+      "tags": [
+        "apocalipsis",
+        "bestias",
+        "dragon",
+        "falso-profeta",
+        "daniel",
+        "persecucion"
+      ],
+      "fold": "las bestias: el dragon, la bestia del mar y la bestia de la tierra apocalipsis apocalipsis 12-13 apocalipsis 12:1 — 13:18 (lectura completa recomendada) apocalipsis bestias dragon falso-profeta daniel persecucion"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--07-la-marca-y-el-666",
+      "href": "/estudio/10-apocalipsis--07-la-marca-y-el-666",
+      "title": "La Marca y el 666",
+      "sub": "Apocalipsis · Apocalipsis 13:16-18",
+      "desc": "Apocalipsis 13:16-18; 14:9-12; 7:3-4",
+      "tags": [
+        "apocalipsis",
+        "marca-del-666",
+        "lealtad",
+        "identificacion"
+      ],
+      "fold": "la marca y el 666 apocalipsis apocalipsis 13:16-18 apocalipsis 13:16-18; 14:9-12; 7:3-4 apocalipsis marca-del-666 lealtad identificacion"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--08-babilonia-la-grande",
+      "href": "/estudio/10-apocalipsis--08-babilonia-la-grande",
+      "title": "Babilonia la Grande",
+      "sub": "Apocalipsis · Apocalipsis 17-18",
+      "desc": "Apocalipsis 17:1-18; 18:1-24",
+      "tags": [
+        "apocalipsis",
+        "babilonia",
+        "sistema-mundial",
+        "idolatria"
+      ],
+      "fold": "babilonia la grande apocalipsis apocalipsis 17-18 apocalipsis 17:1-18; 18:1-24 apocalipsis babilonia sistema-mundial idolatria"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--09-el-milenio",
+      "href": "/estudio/10-apocalipsis--09-el-milenio",
+      "title": "El Milenio",
+      "sub": "Apocalipsis · Apocalipsis 20:1-6",
+      "desc": "Apocalipsis 20:1-6; 1 Corintios 15:25; 2 Timothy 2:12",
+      "tags": [
+        "apocalipsis",
+        "milenio",
+        "escatologia",
+        "reinado-de-cristo"
+      ],
+      "fold": "el milenio apocalipsis apocalipsis 20:1-6 apocalipsis 20:1-6; 1 corintios 15:25; 2 timothy 2:12 apocalipsis milenio escatologia reinado-de-cristo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--10-el-juicio-final",
+      "href": "/estudio/10-apocalipsis--10-el-juicio-final",
+      "title": "El Juicio Final",
+      "sub": "Apocalipsis · Apocalipsis 20:11-15",
+      "desc": "Apocalipsis 20:11-15; 2 Corintios 5:10; Romanos 14:10-12; Mateo 25:31-46",
+      "tags": [
+        "apocalipsis",
+        "juicio-final",
+        "escatologia",
+        "tribunal-de-dios",
+        "juicio-de-obras"
+      ],
+      "fold": "el juicio final apocalipsis apocalipsis 20:11-15 apocalipsis 20:11-15; 2 corintios 5:10; romanos 14:10-12; mateo 25:31-46 apocalipsis juicio-final escatologia tribunal-de-dios juicio-de-obras"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--11-nuevos-cielos-nueva-tierra",
+      "href": "/estudio/10-apocalipsis--11-nuevos-cielos-nueva-tierra",
+      "title": "Nuevos Cielos y Nueva Tierra",
+      "sub": "Apocalipsis · Apocalipsis 21-22",
+      "desc": "Apocalipsis 21-22; Isaías 65:17; 2 Pedro 3:10-13; Romanos 8:19-22",
+      "tags": [
+        "apocalipsis",
+        "nuevos-cielos",
+        "nueva-tierra",
+        "escatologia",
+        "nueva-jerusalen",
+        "consumacion"
+      ],
+      "fold": "nuevos cielos y nueva tierra apocalipsis apocalipsis 21-22 apocalipsis 21-22; isaias 65:17; 2 pedro 3:10-13; romanos 8:19-22 apocalipsis nuevos-cielos nueva-tierra escatologia nueva-jerusalen consumacion"
+    },
+    {
+      "tipo": "estudio",
+      "id": "10-apocalipsis--12-errores-comunes",
+      "href": "/estudio/10-apocalipsis--12-errores-comunes",
+      "title": "Errores Comunes en la Interpretación del Apocalipsis",
+      "sub": "Apocalipsis · Apocalipsis 1:3",
+      "desc": "Apocalipsis 1:3; 22:18-19; 2 Timoteo 2:15; 2 Pedro 1:20-21",
+      "tags": [
+        "apocalipsis",
+        "errores-interpretativos",
+        "apologetica",
+        "dispensacionalismo",
+        "escatologia",
+        "refutacion"
+      ],
+      "fold": "errores comunes en la interpretacion del apocalipsis apocalipsis apocalipsis 1:3 apocalipsis 1:3; 22:18-19; 2 timoteo 2:15; 2 pedro 1:20-21 apocalipsis errores-interpretativos apologetica dispensacionalismo escatologia refutacion"
+    },
+    {
+      "tipo": "personaje",
+      "id": "apostol-pablo",
+      "href": "/estudio/personajes/apostol-pablo",
+      "title": "Apóstol Pablo",
+      "sub": "Apóstol de los gentiles · siglo I d. C.",
+      "desc": "De perseguidor a heraldo: el evangelio sin fronteras hasta Roma.",
+      "tags": [
+        "Apóstoles",
+        "Epístolas",
+        "Misiones",
+        "Roma"
+      ],
+      "fold": "apostol pablo apostol de los gentiles siglo i d. c. de perseguidor a heraldo: el evangelio sin fronteras hasta roma. apostoles epistolas misiones roma saulo de tarso, fariseo formado a los pies de gamaliel, perseguia a la iglesia con celo legal cuando el resucitado lo detuvo en el camino a damasco. el mayor adversario del cristianismo temprano se convirtio en su heraldo incansable. recorrio el mundo mediterraneo fundando iglesias y escribio catorce cartas —desde la argumentacion de romanos hasta la ternura de filemon—. acepto cadenas con alegria: «cuando estoy debil, entonces soy fuerte» (2 co 12, 10). tras dos anos preso en roma, fue decapitado bajo neron."
+    },
+    {
+      "tipo": "personaje",
+      "id": "apostol-pedro",
+      "href": "/estudio/personajes/apostol-pedro",
+      "title": "Apóstol Pedro",
+      "sub": "Apóstol y columna de la Iglesia · siglo I d. C.",
+      "desc": "El pescador convertido en roca: de la traición en el patio a la voz de Pentecostés.",
+      "tags": [
+        "Apóstoles",
+        "Hechos",
+        "Epístolas",
+        "Roma"
+      ],
+      "fold": "apostol pedro apostol y columna de la iglesia siglo i d. c. el pescador convertido en roca: de la traicion en el patio a la voz de pentecostes. apostoles hechos epistolas roma simon, pescador de betsaida, fue llamado por jesus junto a su hermano andres con una promesa que definio su vida: «de ti hare pescador de hombres». jesus lo rebautizo con el nombre de cephas —pedro—, la roca sobre la que prometio edificar su iglesia (mt 16, 18). fue testigo de la transfiguracion, camino sobre las aguas y fallo la noche de la traicion. restaurado junto al fuego de la playa del tiberiades, llego a ser la voz de pentecostes y el puente entre judios y gentiles. murio en roma, crucificado boca abajo bajo el emperador neron."
+    },
+    {
+      "tipo": "personaje",
+      "id": "juan-bautista",
+      "href": "/estudio/03-personajes--juan-el-bautista",
+      "title": "Juan el Bautista",
+      "sub": "Precursor del Mesías · siglo I d. C.",
+      "desc": "La voz que gritó en el desierto y preparó el camino del Señor.",
+      "tags": [
+        "Evangelios",
+        "Predicación",
+        "Bautismo"
+      ],
+      "fold": "juan el bautista precursor del mesias siglo i d. c. la voz que grito en el desierto y preparo el camino del senor. evangelios predicacion bautismo juan fue hijo de zacarias y elisabet, sacerdote y profeta que vivio en las cuevas del desierto de judea. su nacimiento, anunciado por el angel, marco el punto de inflexion entre el antiguo y el nuevo testamento: el ultimo de los profetas de israel se adelanto a preparar el camino al mesias. su predicacion era severa y esperanzada a la vez: «arrependios, porque el reino de los cielos se ha acercado». bautizo a jesus en el jordan reconociendo no ser digno ni de desatar sus sandalias, y mas tarde perdio la cabeza por haber reprendido la ley de herodes."
+    },
+    {
+      "tipo": "personaje",
+      "id": "juan-crisostomo",
+      "href": "/estudio/personajes/juan-crisostomo",
+      "title": "Juan Crisóstomo",
+      "sub": "Patriarca de Constantinopla · siglo IV",
+      "desc": "La boca de oro: la Escritura predicada sin miedo al poder.",
+      "tags": [
+        "Padres de la Iglesia",
+        "Homilías",
+        "Constantinopla"
+      ],
+      "fold": "juan crisostomo patriarca de constantinopla siglo iv la boca de oro: la escritura predicada sin miedo al poder. padres de la iglesia homilias constantinopla nacido en antioquia hacia el 347, juan quedo huerfano muy joven y fue criado por su madre antonina, quien le dio una formacion rigurosa en la fe y en las letras. sus homilias —mas de ochocientas se conservan— le dieron el apodo de crisostomo, «la boca de oro». como patriarca de constantinopla predico sin miedo contra la corrupcion, las fiestas teatrales y la riqueza ostentosa; por eso fue desterrado dos veces y murio camino del exilio en comana el 407, con la oracion de los salmos en los labios."
+    },
+    {
+      "tipo": "personaje",
+      "id": "san-jeronimo",
+      "href": "/estudio/personajes/san-jeronimo",
+      "title": "San Jerónimo",
+      "sub": "Doctor de la Iglesia y traductor · siglos IV–V",
+      "desc": "El erudito del desierto que dio a Occidente su Biblia: la Vulgata.",
+      "tags": [
+        "Padres de la Iglesia",
+        "Vulgata",
+        "Escritura"
+      ],
+      "fold": "san jeronimo doctor de la iglesia y traductor siglos iv–v el erudito del desierto que dio a occidente su biblia: la vulgata. padres de la iglesia vulgata escritura eusebio sofronio jeronimo, nacido en dalmacia hacia el 347, estudio en roma y aprendio hebreo en palestina tras una conversion que lo llevo desde la biblioteca al desierto. amigo de los grandes y combativo con los herejes, traducia la biblia con la paciencia de un copista y la pasion de un profeta. su traduccion de la escritura al latin —la vulgata— se convirtio en la biblia de occidente durante mas de mil anos. murio en belen el 420, en la cueva donde la tradicion situa el nacimiento del mesias."
+    },
+    {
+      "tipo": "concilio",
+      "id": "jerusalen",
+      "href": "/concilios#jerusalen",
+      "title": "Concilio de Jerusalén",
+      "sub": "49 d. C.",
+      "desc": "Los apóstoles y ancianos se reúnen para decidir si los creyentes gentiles deben circuncidarse (Hechos 15). Resuelven que la salvación no exige la Ley de Moisés y redactan una carta con cuatro abstenciones.",
+      "tags": [
+        "Los gentiles no deben circuncidarse para salvarse (Hechos 15, 19-20)",
+        "Carta a los gentiles: abstenerse de lo sacrificado a ídolos, de sangre, de lo ahogado y de la fornicación (Hechos 15, 28-29)"
+      ],
+      "fold": "concilio de jerusalen 49 d. c. apostoles y ancianos los apostoles y ancianos se reunen para decidir si los creyentes gentiles deben circuncidarse (hechos 15). resuelven que la salvacion no exige la ley de moises y redactan una carta con cuatro abstenciones. los gentiles no deben circuncidarse para salvarse (hechos 15, 19-20) carta a los gentiles: abstenerse de lo sacrificado a idolos, de sangre, de lo ahogado y de la fornicacion (hechos 15, 28-29)"
+    },
+    {
+      "tipo": "concilio",
+      "id": "nicea",
+      "href": "/concilios#nicea",
+      "title": "Concilio de Nicea",
+      "sub": "325 d. C.",
+      "desc": "Primer concilio ecuménico. Constantino lo convoca tras reunificar el imperio para zanjar la disputa arriana y unificar la fecha de la Pascua.",
+      "tags": [
+        "El Hijo es consustancial (homooúsios) al Padre",
+        "Condena del arrianismo",
+        "Cómputo común de la fecha de la Pascua"
+      ],
+      "fold": "concilio de nicea 325 d. c. constantino i primer concilio ecumenico. constantino lo convoca tras reunificar el imperio para zanjar la disputa arriana y unificar la fecha de la pascua. el hijo es consustancial (homoousios) al padre condena del arrianismo computo comun de la fecha de la pascua"
+    },
+    {
+      "tipo": "concilio",
+      "id": "constantinopla-i",
+      "href": "/concilios#constantinopla-i",
+      "title": "Concilio de Constantinopla I",
+      "sub": "381 d. C.",
+      "desc": "Reafirma la fe de Nicea y responde a las dudas sobre el Espíritu Santo, completando la confesión trinitaria.",
+      "tags": [
+        "Credo niceno-constantinopolitano",
+        "Afirmación de la divinidad del Espíritu Santo",
+        "Reafirmación de la condena del arrianismo"
+      ],
+      "fold": "concilio de constantinopla i 381 d. c. teodosio i reafirma la fe de nicea y responde a las dudas sobre el espiritu santo, completando la confesion trinitaria. credo niceno-constantinopolitano afirmacion de la divinidad del espiritu santo reafirmacion de la condena del arrianismo"
+    },
+    {
+      "tipo": "concilio",
+      "id": "efeso",
+      "href": "/concilios#efeso",
+      "title": "Concilio de Éfeso",
+      "sub": "431 d. C.",
+      "desc": "Defiende la unidad de Cristo al proclamar a María Theotókos (Madre de Dios) y condena el nestorianismo.",
+      "tags": [
+        "María es Theotókos: Madre de Dios",
+        "Condena del nestorianismo",
+        "Confirmación de la condena del pelagianismo"
+      ],
+      "fold": "concilio de efeso 431 d. c. teodosio ii defiende la unidad de cristo al proclamar a maria theotokos (madre de dios) y condena el nestorianismo. maria es theotokos: madre de dios condena del nestorianismo confirmacion de la condena del pelagianismo"
+    },
+    {
+      "tipo": "concilio",
+      "id": "calcedonia",
+      "href": "/concilios#calcedonia",
+      "title": "Concilio de Calcedonia",
+      "sub": "451 d. C.",
+      "desc": "Define que Cristo es una sola persona en dos naturalezas, sin confusión ni separación, y condena el monofisismo.",
+      "tags": [
+        "Definición de Calcedonia: dos naturalezas, una persona",
+        "Condena del monofisismo"
+      ],
+      "fold": "concilio de calcedonia 451 d. c. marciano define que cristo es una sola persona en dos naturalezas, sin confusion ni separacion, y condena el monofisismo. definicion de calcedonia: dos naturalezas, una persona condena del monofisismo"
+    },
+    {
+      "tipo": "concilio",
+      "id": "constantinopla-ii",
+      "href": "/concilios#constantinopla-ii",
+      "title": "Concilio de Constantinopla II",
+      "sub": "553 d. C.",
+      "desc": "Confirma los concilios anteriores y condena los «Tres Capítulos», escritos teológicos que se acercaban al nestorianismo.",
+      "tags": [
+        "Condena de los «Tres Capítulos»",
+        "Reafirmación de Éfeso y Calcedonia"
+      ],
+      "fold": "concilio de constantinopla ii 553 d. c. justiniano i confirma los concilios anteriores y condena los «tres capitulos», escritos teologicos que se acercaban al nestorianismo. condena de los «tres capitulos» reafirmacion de efeso y calcedonia"
+    },
+    {
+      "tipo": "concilio",
+      "id": "constantinopla-iii",
+      "href": "/concilios#constantinopla-iii",
+      "title": "Concilio de Constantinopla III",
+      "sub": "680-681 d. C.",
+      "desc": "Cierra la crisis cristológica al condenar el monotelismo: Cristo tiene también voluntad humana.",
+      "tags": [
+        "Condena del monotelismo",
+        "Cristo tiene dos voluntades: divina y humana"
+      ],
+      "fold": "concilio de constantinopla iii 680-681 d. c. constantino iv cierra la crisis cristologica al condenar el monotelismo: cristo tiene tambien voluntad humana. condena del monotelismo cristo tiene dos voluntades: divina y humana"
+    },
+    {
+      "tipo": "concilio",
+      "id": "nicea-ii",
+      "href": "/concilios#nicea-ii",
+      "title": "Concilio de Nicea II",
+      "sub": "787 d. C.",
+      "desc": "Último concilio ecuménico reconocido por las grandes tradiciones. Distingue la veneración de las imágenes de la adoración y condena la iconoclasia.",
+      "tags": [
+        "La veneración de imágenes es legítima; la adoración solo a Dios",
+        "Condena de la iconoclasia"
+      ],
+      "fold": "concilio de nicea ii 787 d. c. irene (emperatriz bizantina) ultimo concilio ecumenico reconocido por las grandes tradiciones. distingue la veneracion de las imagenes de la adoracion y condena la iconoclasia. la veneracion de imagenes es legitima; la adoracion solo a dios condena de la iconoclasia"
+    },
+    {
+      "tipo": "herejia",
+      "id": "gnosticismo",
+      "href": "/concilios#gnosticismo",
+      "title": "Gnosticismo",
+      "sub": "siglos I-II",
+      "desc": "Corriente que distinguía un Dios bueno de un demiurgo inferior, negaba la encarnación real de Cristo y reservaba la salvación a un conocimiento secreto. Combatida por los primeros apologistas e Ireneo.",
+      "tags": [],
+      "fold": "gnosticismo siglos i-ii corriente que distinguia un dios bueno de un demiurgo inferior, negaba la encarnacion real de cristo y reservaba la salvacion a un conocimiento secreto. combatida por los primeros apologistas e ireneo."
+    },
+    {
+      "tipo": "herejia",
+      "id": "judaizantes",
+      "href": "/concilios#judaizantes",
+      "title": "Judaizantes",
+      "sub": "siglo I",
+      "desc": "Grupo que enseñaba que los creyentes gentiles debían guardar la Ley de Moisés —circuncisión, sábado y alimentos— para ser salvos.",
+      "tags": [],
+      "fold": "judaizantes siglo i grupo que ensenaba que los creyentes gentiles debian guardar la ley de moises —circuncision, sabado y alimentos— para ser salvos."
+    },
+    {
+      "tipo": "herejia",
+      "id": "arrianismo",
+      "href": "/concilios#arrianismo",
+      "title": "Arrianismo",
+      "sub": "siglo IV",
+      "desc": "Negaba la divinidad plena del Hijo y lo presentaba como la primera criatura de Dios, subordinada al Padre.",
+      "tags": [],
+      "fold": "arrianismo siglo iv negaba la divinidad plena del hijo y lo presentaba como la primera criatura de dios, subordinada al padre."
+    },
+    {
+      "tipo": "herejia",
+      "id": "donatismo",
+      "href": "/concilios#donatismo",
+      "title": "Donatismo",
+      "sub": "siglos IV-V",
+      "desc": "Sostenía que eran inválidos los sacramentos administrados por sacerdotes que habían apostatado durante las persecuciones; se separó de la Iglesia en el norte de África y fue condenado en concilios locales.",
+      "tags": [],
+      "fold": "donatismo siglos iv-v sostenia que eran invalidos los sacramentos administrados por sacerdotes que habian apostatado durante las persecuciones; se separo de la iglesia en el norte de africa y fue condenado en concilios locales."
+    },
+    {
+      "tipo": "herejia",
+      "id": "pelagianismo",
+      "href": "/concilios#pelagianismo",
+      "title": "Pelagianismo",
+      "sub": "siglo V",
+      "desc": "Exaltaba la libertad humana hasta negar que la gracia sea necesaria para salvarse. Agustín lo combatió; fue condenado en concilios africanos y en Éfeso.",
+      "tags": [],
+      "fold": "pelagianismo siglo v exaltaba la libertad humana hasta negar que la gracia sea necesaria para salvarse. agustin lo combatio; fue condenado en concilios africanos y en efeso."
+    },
+    {
+      "tipo": "herejia",
+      "id": "nestorianismo",
+      "href": "/concilios#nestorianismo",
+      "title": "Nestorianismo",
+      "sub": "siglo V",
+      "desc": "Separaba en Cristo a dos personas —el Verbo y el hombre Jesús— y por eso rechazaba llamar a María Madre de Dios. Provocó la convocatoria de Éfeso.",
+      "tags": [],
+      "fold": "nestorianismo siglo v separaba en cristo a dos personas —el verbo y el hombre jesus— y por eso rechazaba llamar a maria madre de dios. provoco la convocatoria de efeso."
+    },
+    {
+      "tipo": "herejia",
+      "id": "monofisismo",
+      "href": "/concilios#monofisismo",
+      "title": "Monofisismo",
+      "sub": "siglo V",
+      "desc": "Afirmaba una sola naturaleza en Cristo, fundiendo lo divino y lo humano; su error quedó definido y condenado en Calcedonia.",
+      "tags": [],
+      "fold": "monofisismo siglo v afirmaba una sola naturaleza en cristo, fundiendo lo divino y lo humano; su error quedo definido y condenado en calcedonia."
+    },
+    {
+      "tipo": "herejia",
+      "id": "monotelismo",
+      "href": "/concilios#monotelismo",
+      "title": "Monotelismo",
+      "sub": "siglo VII",
+      "desc": "Aceptaba dos naturalezas en Cristo pero una sola voluntad; condenado en Constantinopla III, que afirmó también su voluntad humana.",
+      "tags": [],
+      "fold": "monotelismo siglo vii aceptaba dos naturalezas en cristo pero una sola voluntad; condenado en constantinopla iii, que afirmo tambien su voluntad humana."
+    },
+    {
+      "tipo": "herejia",
+      "id": "iconoclasia",
+      "href": "/concilios#iconoclasia",
+      "title": "Iconoclasia",
+      "sub": "siglo VIII",
+      "desc": "Movimiento que prohibía y destruía las imágenes sagradas. Nicea II lo rechazó distinguiendo la veneración (permisible) de la adoración (solo a Dios).",
+      "tags": [],
+      "fold": "iconoclasia siglo viii movimiento que prohibia y destruia las imagenes sagradas. nicea ii lo rechazo distinguiendo la veneracion (permisible) de la adoracion (solo a dios)."
+    }
+  ]
+}

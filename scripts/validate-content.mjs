@@ -189,7 +189,7 @@ function resolveHref(href, ctx) {
   const path = String(href).split(/[?#]/)[0];
   if (!path.startsWith('/')) return false;
   if (path === '/') return true;
-  if (['/estudio', '/biblia', '/videos', '/concilios'].includes(path)) return true; // /biblia?pag=… se recorta arriba
+  if (['/estudio', '/biblia', '/videos', '/concilios', '/temas', '/buscar'].includes(path)) return true; // /biblia?pag=… se recorta arriba
   if (path.startsWith('/estudio/personajes/')) {
     const slug = path.replace('/estudio/personajes/', '').replace(/\/+$/, '');
     return Boolean(ctx.personajes && ctx.personajes.includes(slug));

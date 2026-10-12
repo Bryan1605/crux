@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { parseFrontmatter } from '../src/lib/frontmatter.js';
+import { fold } from '../src/lib/fold.js';
 
 function loadCategorias(contentDir) {
   const file = path.join(contentDir, 'categorias.json');
@@ -78,5 +79,122 @@ export function writeIndex(contentDir) {
   const index = buildIndex(contentDir);
   const out = path.join(contentDir, 'estudios.json');
   fs.writeFileSync(out, `${JSON.stringify(index, null, 2)}\n`, 'utf8');
+  return index;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Índice de búsqueda (content/busquedas.json)                                */
+/* -------------------------------------------------------------------------- */
+
+// Cada entrada guarda un haystack ya plegado (`fold`) para que la búsqueda del
+// navegador sea un `includes` sin recalcular acentos. Lo comparten el índice de
+// estudios, las fichas de personajes, los concilios/herejías y los videos.
+
+/** Pliega varios textos en un único haystack sin acentos ni mayúsculas. */
+const haystack = parts => fold(parts.filter(Boolean).join(' '));
+
+/** Lee un JSON de content/ si existe; si no (o está mal), devuelve el valor por defecto. */
+function readJson(contentDir, name, def) {
+  const file = path.join(contentDir, `${name}.json`);
+  if (!fs.existsSync(file)) return def;
+  try {
+    const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return Array.isArray(data) ? data : def;
+  } catch {
+    return def;
+  }
+}
+
+export function buildSearchIndex(contentDir, index = buildIndex(contentDir)) {
+  const items = [];
+
+  // 1 · Estudios (el grueso del sitio).
+  for (const s of index.studies) {
+    items.push({
+      tipo: 'estudio',
+      id: s.slug,
+      href: `/estudio/${s.slug}`,
+      title: s.title,
+      sub: [s.categoryLabel, s.passage].filter(Boolean).join(' · '),
+      desc: s.description,
+      tags: s.tags,
+      fold: haystack([s.title, s.categoryLabel, s.subcategory, s.passage, s.description, ...s.tags, ...s.aliases])
+    });
+  }
+
+  // 2 · Personajes (ficha propia o el estudio que los cubre).
+  const personajesDir = path.join(contentDir, 'personajes');
+  if (fs.existsSync(personajesDir)) {
+    for (const name of fs.readdirSync(personajesDir).sort()) {
+      if (!name.endsWith('.json')) continue;
+      let p;
+      try {
+        p = JSON.parse(fs.readFileSync(path.join(personajesDir, name), 'utf8'));
+      } catch {
+        continue;
+      }
+      if (!p || !p.slug) continue;
+      items.push({
+        tipo: 'personaje',
+        id: p.slug,
+        href: p.estudio ? `/estudio/${p.estudio}` : `/estudio/personajes/${p.slug}`,
+        title: p.nombre || p.slug,
+        sub: [p.rol, p.epoca].filter(Boolean).join(' · '),
+        desc: p.resumen || '',
+        tags: Array.isArray(p.tags) ? p.tags : [],
+        fold: haystack([p.nombre, p.rol, p.epoca, p.resumen, ...(p.tags || []), ...(p.bio || [])])
+      });
+    }
+  }
+
+  // 3 · Concilios y herejías (enlazan a su ancla en /concilios).
+  for (const c of readJson(contentDir, 'concilios', [])) {
+    if (!c || !c.id) continue;
+    const esConcilio = c.tipo === 'concilio';
+    items.push({
+      tipo: esConcilio ? 'concilio' : 'herejia',
+      id: c.id,
+      href: `/concilios#${c.id}`,
+      title: c.nombre || c.id,
+      sub: esConcilio ? c.anio_label || '' : c.contexto || '',
+      desc: c.resumen || '',
+      tags: esConcilio && Array.isArray(c.decisiones) ? c.decisiones : [],
+      fold: haystack([c.nombre, c.anio_label, c.convocante, c.contexto, c.resumen, ...(c.decisiones || [])])
+    });
+  }
+
+  // 4 · Videos (vacío hasta que se llene content/videos.json).
+  for (const v of readJson(contentDir, 'videos', [])) {
+    if (!v || !v.id) continue;
+    items.push({
+      tipo: 'video',
+      id: v.id,
+      href: `/videos#${v.id}`,
+      title: v.title || v.id,
+      sub: v.date || '',
+      desc: v.description || '',
+      tags: [],
+      fold: haystack([v.title, v.description, v.date])
+    });
+  }
+
+  const tipos = items.reduce((acc, it) => {
+    acc[it.tipo] = (acc[it.tipo] || 0) + 1;
+    return acc;
+  }, {});
+
+  return { v: 1, tipos, items };
+}
+
+export function writeSearchIndex(contentDir, index) {
+  const search = buildSearchIndex(contentDir, index);
+  fs.writeFileSync(path.join(contentDir, 'busquedas.json'), `${JSON.stringify(search, null, 2)}\n`, 'utf8');
+  return search;
+}
+
+/** Regenera `estudios.json` y `busquedas.json` en una sola pasada. */
+export function writeIndexes(contentDir) {
+  const index = writeIndex(contentDir);
+  writeSearchIndex(contentDir, index);
   return index;
 }

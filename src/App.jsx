@@ -16,13 +16,23 @@ import Personaje from './pages/Personaje';
 import Biblia from './pages/Biblia';
 import Videos from './pages/Videos';
 import Concilios from './pages/Concilios';
+import Buscar from './pages/Buscar';
+import Temas from './pages/Temas';
 import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    // Con ancla (#nicea) no se vuelve arriba: se lleva el foco al destino.
+    if (hash) {
+      const target = document.getElementById(hash.slice(1));
+      if (target) {
+        target.scrollIntoView({ block: 'start' });
+        return;
+      }
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 }
 
@@ -88,6 +98,8 @@ export default function App() {
           <Route path="/biblia" element={<Biblia />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/concilios" element={<Concilios />} />
+          <Route path="/buscar" element={<Buscar />} />
+          <Route path="/temas" element={<Temas />} />
           {import.meta.env.DEV && (
             <Route
               path="/admin"

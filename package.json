@@ -8,12 +8,14 @@
     "build": "vite build",
     "preview": "vite preview",
     "index:wiki": "node scripts/migrate-content.mjs",
+    "check:search": "node scripts/check-search.mjs",
     "qa:vistas": "node scripts/qa-vistas.mjs",
     "qa:biblia": "node scripts/qa-biblia.mjs",
     "qa:timeline": "node scripts/check-timeline.mjs",
     "qa:concilios": "node scripts/qa-concilios.mjs",
+    "qa:buscar": "node scripts/qa-buscar.mjs",
     "qa:prod": "node scripts/check-prod.mjs",
-    "qa": "npm run qa:timeline && npm run qa:concilios && npm run qa:vistas && npm run qa:biblia"
+    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia"
   },
   "dependencies": {
     "@hugeicons/core-free-icons": "^4.3.5",

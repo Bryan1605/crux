@@ -24,33 +24,16 @@
  * La numeración de folios (1..N) sí depende del reflow: se calcula al paginar.
  */
 
+import { fold, slugify } from '../lib/fold.js';
+
 /* -------------------------------------------------------------------------- */
 /* Normalización de texto                                                     */
 /* -------------------------------------------------------------------------- */
 
-// Mapa 1:1 (un carácter → un carácter) para que los índices de la búsqueda
-// coincidan con el texto original. Se aplica *después* de toLowerCase().
-const FOLD_MAP = {
-  á: 'a', à: 'a', ä: 'a', â: 'a', ã: 'a', å: 'a',
-  é: 'e', è: 'e', ë: 'e', ê: 'e',
-  í: 'i', ì: 'i', ï: 'i', î: 'i',
-  ó: 'o', ò: 'o', ö: 'o', ô: 'o', õ: 'o',
-  ú: 'u', ù: 'u', ü: 'u', û: 'u',
-  ñ: 'n', ç: 'c', ý: 'y', ÿ: 'y',
-  æ: 'a', œ: 'o', ø: 'o', ß: 's'
-};
-
-const FOLD_RE = /[áàäâãåéèëêíìïîóòöôõúùüûñçýÿæœøß]/g;
-
-/** Quita acentos y mayúsculas conservando la longitud (para buscar). */
-export const fold = s => String(s).toLowerCase().replace(FOLD_RE, c => FOLD_MAP[c]);
-
-/** Identificador legible para URLs: sin acentos, minúsculas, guiones. */
-export const slugify = s =>
-  fold(s)
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 52) || 'x';
+// `fold` y `slugify` viven en src/lib/fold.js para que el índice de búsqueda
+// pre-generado (content/busquedas.json) pliegue el texto igual que el navegador.
+// Se reexportan desde aquí porque el resto del sitio los importa de `data/biblia`.
+export { fold, slugify };
 
 /* -------------------------------------------------------------------------- */
 /* Troceado del markdown en bloques                                           */

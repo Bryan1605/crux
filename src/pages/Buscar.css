@@ -1,0 +1,198 @@
+/* --- encabezado de página ------------------------------------------------- */
+
+.buscar-page .page-head {
+  padding: clamp(6.5rem, 14vh, 9rem) 0 var(--sp-6);
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.buscar-page .page-head h1 {
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+
+/* --- cuadro de búsqueda --------------------------------------------------- */
+
+.buscar__form {
+  position: relative;
+  width: min(640px, 100%);
+  margin-top: var(--sp-6);
+}
+
+.buscar__input {
+  width: 100%;
+  padding: 0.9rem 3rem 0.9rem 1.2rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.buscar__input::placeholder {
+  color: var(--faint);
+}
+
+.buscar__input:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.buscar__clear {
+  position: absolute;
+  top: 50%;
+  right: 0.55rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.buscar__clear:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+/* --- estado / recuento ---------------------------------------------------- */
+
+.buscar__status {
+  margin-bottom: var(--sp-6);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+/* --- grupos de resultados ------------------------------------------------- */
+
+.buscar__group {
+  margin-bottom: var(--sp-7);
+}
+
+.buscar__group-title {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+}
+
+.buscar__group-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--faint);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.buscar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.buscar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.buscar__item:hover {
+  background: var(--panel-hover);
+  border-color: var(--border-strong);
+}
+
+.buscar__item:hover .arrow {
+  transform: translateX(4px);
+}
+
+.buscar__item:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.buscar__item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.buscar__item-meta {
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.buscar__item-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.buscar__item-desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* --- sugerencias ---------------------------------------------------------- */
+
+.buscar__suggest {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.buscar__hint {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.buscar__hint a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- responsivo ----------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .buscar__item {
+    padding: var(--sp-4);
+    gap: var(--sp-3);
+  }
+
+  .buscar__item-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
