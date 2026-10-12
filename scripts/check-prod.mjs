@@ -31,6 +31,8 @@ const cases = [
   { url: `${BASE}/biblia?pag=p2-4-resumen`, label: 'deep-link p2-4-resumen', selector: '.reader__status, .book-page, .book' },
   { url: `${BASE}/biblia?pag=p9`, label: 'alias legacy p9 → p2-1', selector: '.reader__status, .book-page, .book' },
   { url: `${BASE}/biblia?pag=p133`, label: 'alias legacy p133 → p2-4-resumen', selector: '.reader__status, .book-page, .book' },
+  { url: `${BASE}/concilios`, label: '/concilios (concilios y herejías)', selector: '.concilios__list, .herejias__list, main' },
+  { url: `${BASE}/concilios#nicea`, label: 'ancla #nicea en /concilios', selector: '.concilios__card, main' },
   { url: `${BASE}/ruta-no-existe`, label: 'ruta inventada → portada (SPA)', selector: 'main, #root *' },
 ];
 
