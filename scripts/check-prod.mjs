@@ -52,9 +52,11 @@ for (const { url, label, selector } of cases) {
     await new Promise(r => setTimeout(r, 800));
     // En GitHub Pages una ruta profunda SPA se sirve a traves de 404.html con codigo
     // 404: el unico 404 esperado es el propio documento pedido, que luego se restaura.
+    // El hash de un ancla (#nicea) aparece en la URL de la respuesta: se ignora al comparar.
     const u = new URL(url);
     const expectedDoc = u.pathname + u.search;
-    const onlyDoc404 = http404.every(p => p === expectedDoc);
+    const stripHash = p => String(p).split('#')[0];
+    const onlyDoc404 = http404.every(p => stripHash(p) === expectedDoc);
     realErrors = errors.filter(e => !(onlyDoc404 && e.includes('404')));
     const info = await page.evaluate(() => ({
       url: location.href,
