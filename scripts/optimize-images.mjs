@@ -42,8 +42,11 @@ const bannerSources = [
 ];
 for (const [src, dest] of bannerSources) jobs.push([src, dest, 1600, 72]);
 
-// Portada Biblia Patrística
-jobs.push(['D:/Biblia/PortadaBibliaPatristica.png', join(OUT, 'biblia', 'portada.webp'), 1400, 80]);
+// Portada Biblia Patrística (fuente local; se puede indicar con PORTADA_BIBLIA)
+const portadaBiblia = process.env.PORTADA_BIBLIA || 'D:/Biblia/PortadaBibliaPatristica.png';
+if (existsSync(portadaBiblia)) {
+  jobs.push([portadaBiblia, join(OUT, 'biblia', 'portada.webp'), 1400, 80]);
+}
 
 let converted = 0;
 let bytes = 0;

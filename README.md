@@ -35,14 +35,34 @@ npm run build       # build de producción (valida el contenido y regenera el í
 npm run preview     # sirve localmente el build de producción
 npm run index:wiki  # regenera content/ desde el wiki de origen (destructivo, ver abajo)
 npm run qa          # QA completa (datos + navegador; requiere `npm run dev` en otra terminal)
+npm run qa:imagenes # comprueba las imágenes referenciadas y las de las páginas
 npm run qa:a11y     # audita la accesibilidad con axe-core (0 critical/serious)
 ```
 
 `npm run qa` agrupa: `check:search`, `qa:timeline`, `qa:concilios`, `qa:buscar`,
-`qa:vistas`, `qa:biblia` y `qa:a11y`. Todas las suites de navegador necesitan el
-servidor de desarrollo en `http://localhost:5173` (y Chrome instalado). Para auditar
-el sitio publicado, ejecuta `qa:a11y` con `CRUX_BASE=https://bryan1605.github.io/crux`.
-El informe queda en `%TEMP%\opencode\crux\a11y\a11y-report.json`.
+`qa:vistas`, `qa:biblia`, `qa:imagenes` y `qa:a11y`. Todas las suites de navegador
+necesitan el servidor de desarrollo en `http://localhost:5173` (y Chrome instalado).
+Para auditar el sitio publicado, ejecuta cualquiera de ellas con
+`CRUX_BASE=https://bryan1605.github.io/crux`.
+Los informes quedan en `%TEMP%\opencode\crux\`.
+
+---
+
+## Secciones del sitio
+
+| Ruta | Qué es |
+|------|--------|
+| `/` | Portada: héroe 3D, manifiesto, banner y anuncios |
+| `/estudio` | Índice de estudios con tres vistas (tarjetas / lista / carrusel) y línea de tiempo |
+| `/estudio?cat=…` | Índice filtrado por categoría (enlazado desde `/temas`) |
+| `/estudio/:slug` | Ficha de estudio (Markdown) |
+| `/estudio/personajes/:slug` | Ficha de personaje: portada, escenas, biografía y línea de tiempo |
+| `/biblia` | Biblia Patrística: índice de la obra y lector paginado |
+| `/videos` | Parrilla de videos de YouTube |
+| `/concilios` | Concilios y herejías, con ancla por id (`/concilios#nicea`) |
+| `/temas` | Índice de categorías y etiquetas (cada etiqueta enlaza a `/buscar`) |
+| `/buscar` | Búsqueda global de estudios, personajes, concilios, herejías y videos |
+| `/admin` | Panel de edición — **solo en desarrollo** |
 
 ---
 
@@ -62,6 +82,8 @@ Desde ahí se puede editar casi todo el sitio sin tocar código:
 - **Banner** — imágenes, texto y enlace de la portada.
 - **Versículos** — frases del marquee.
 - **Anuncios** — barra de anuncios (activar, cerrar, items).
+- **Línea de tiempo** — hitos propios de `/estudio` (los de personajes y concilios se derivan solos).
+- **Concilios** — concilios, herejías, doctrinas, decisiones y enlaces a estudios.
 - **Categorías** — nombre, descripción corta y orden.
 - **Ajustes del sitio** — marca, menú de navegación, pie de página, copy de la portada y SEO.
 - **Medios** — biblioteca de imágenes en `public/img/` (subir, previsualizar, borrar).
@@ -132,10 +154,13 @@ y publica en GitHub Pages. La URL de producción es
 | `content/slides.json` | Imágenes del banner de portada. |
 | `content/versiculos.json` | Frases del marquee. |
 | `content/anuncios.json` | Barra de anuncios. |
-| `content/textos/biblia-patristica.md` | Texto de la Biblia Patrística (se carga bajo demanda). |
+| `content/concilios.json` | Concilios y herejías (decisiones, año, herejías condenadas). |
+| `content/timeline.json` | Hitos propios de la línea de tiempo (los demás se derivan de personajes y concilios). |
+| `content/busquedas.json` | Índice de búsqueda (se regenera en cada `build`; no lo edites a mano). |
+| `public/textos/biblia-patristica.md` | Texto de la Biblia Patrística (se carga bajo demanda desde `/textos/`). |
 
-`content/estudios.json` se regenera automáticamente en cada `build` (y al editar desde el
-panel). No lo edites a mano.
+`content/estudios.json` y `content/busquedas.json` se regeneran automáticamente en cada
+`build` (y al editar desde el panel). No los edites a mano.
 
 ### Regenerar desde el wiki (destructivo)
 
@@ -152,8 +177,8 @@ npm run index:wiki -- --force   # regenera y guarda un backup en content/.histor
 
 - **SPA en GitHub Pages** (`/crux/`): `base` se define con `BASE_PATH`; se emite un `404.html`
   que restaura enlaces profundos vía `sessionStorage` antes de que monte el router.
-- **API de contenido** (`plugins/content-api.mjs`): en desarrollo sirve `/api/content/*`
-  para leer y escribir. Solo se registra en `npm run dev`.
+- **API de contenido** (`plugins/content-api.mjs`): sirve `/api/content/*` para leer en
+  desarrollo y en el build; los endpoints de escritura solo existen con `npm run dev`.
 - **Rutas de assets**: usa siempre `assetUrl('/img/...')` de `src/lib/assets.js`; las rutas
   `/img/` crudas se rompen en el subpath de Pages.
 - **Config del sitio**: `src/lib/site.js` (defaults + `content/site.json`) expone `useSite()`

@@ -1,7 +1,7 @@
 {
   "name": "web-crux",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,9 +14,10 @@
     "qa:timeline": "node scripts/check-timeline.mjs",
     "qa:concilios": "node scripts/qa-concilios.mjs",
     "qa:buscar": "node scripts/qa-buscar.mjs",
+    "qa:imagenes": "node scripts/qa-imagenes.mjs",
     "qa:a11y": "node scripts/qa-a11y.mjs",
     "qa:prod": "node scripts/check-prod.mjs",
-    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:a11y"
+    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:imagenes && npm run qa:a11y"
   },
   "dependencies": {
     "@hugeicons/core-free-icons": "^4.3.5",
