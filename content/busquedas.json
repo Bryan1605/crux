@@ -2,7 +2,7 @@
   "v": 1,
   "tipos": {
     "estudio": 171,
-    "personaje": 5,
+    "personaje": 17,
     "concilio": 8,
     "herejia": 9
   },
@@ -2300,6 +2300,21 @@
     },
     {
       "tipo": "personaje",
+      "id": "andres",
+      "href": "/estudio/personajes/andres",
+      "title": "Andrés",
+      "sub": "Apóstol, el que lleva a otros a Jesús · siglo I d. C.",
+      "desc": "El primero en seguir y el primero en traer: su huella son las personas que acercó a Jesús.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Betsaida"
+      ],
+      "fold": "andres apostol, el que lleva a otros a jesus siglo i d. c. el primero en seguir y el primero en traer: su huella son las personas que acerco a jesus. apostoles evangelios hechos betsaida andres, hermano de simon pedro, era discipulo de juan el bautista cuando oyo: «¡miren! ¡ahi esta el cordero de dios!» (jn 1, 36). siguio a jesus y lo primero que hizo fue buscar a su hermano: «hemos encontrado al mesias», y lo llevo hasta el (jn 1, 41-42). su mision en el evangelio son tres gestos de intermediacion: lleva a pedro a jesus, presenta los cinco panes y los dos peces del muchacho (jn 6, 8-9) y, junto a felipe, canaliza la peticion de los griegos que querian ver al senor (jn 12, 21-22). despues de hechos 1, 13 el nuevo testamento no vuelve a nombrarlo."
+    },
+    {
+      "tipo": "personaje",
       "id": "apostol-pablo",
       "href": "/estudio/personajes/apostol-pablo",
       "title": "Apóstol Pablo",
@@ -2327,6 +2342,36 @@
         "Roma"
       ],
       "fold": "apostol pedro apostol y columna de la iglesia siglo i d. c. el pescador convertido en roca: de la traicion en el patio a la voz de pentecostes. apostoles hechos epistolas roma simon, pescador de betsaida, fue llamado por jesus junto a su hermano andres con una promesa que definio su vida: «de ti hare pescador de hombres». jesus lo rebautizo con el nombre de cephas —pedro—, la roca sobre la que prometio edificar su iglesia (mt 16, 18). fue testigo de la transfiguracion, camino sobre las aguas y fallo la noche de la traicion. restaurado junto al fuego de la playa del tiberiades, llego a ser la voz de pentecostes y el puente entre judios y gentiles. murio en roma, crucificado boca abajo bajo el emperador neron."
+    },
+    {
+      "tipo": "personaje",
+      "id": "bartolome",
+      "href": "/estudio/personajes/bartolome",
+      "title": "Bartolomé",
+      "sub": "Apóstol, también llamado Natanael · siglo I d. C.",
+      "desc": "El israelita sin engaño: del prejuicio a la confesión más alta en una sola conversación.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Natanael"
+      ],
+      "fold": "bartolome apostol, tambien llamado natanael siglo i d. c. el israelita sin engano: del prejuicio a la confesion mas alta en una sola conversacion. apostoles evangelios hechos natanael bartolome —a quien la tradicion identifica con el natanael de juan— llego a jesus por invitacion de felipe: «¿acaso puede salir algo bueno de nazaret?», respondio con prejuicio, y felipe le contesto: «ven y compruebalo tu mismo» (jn 1, 45-46). al verlo, jesus lo saludo como «un verdadero hijo de israel, un hombre totalmente integro» (jn 1, 47). su confesion fue inmediata y altisima: «rabi, ¡tu eres el hijo de dios, el rey de israel!» (jn 1, 49), y jesus la amplio con la imagen de la escalera entre el cielo y la tierra (jn 1, 51). aparece en las cuatro listas de los doce y entre los siete discipulos del mar de tiberias (jn 21, 2); la identificacion bartolome = natanael es tradicional, no textual."
+    },
+    {
+      "tipo": "personaje",
+      "id": "felipe",
+      "href": "/estudio/personajes/felipe",
+      "title": "Felipe",
+      "sub": "Apóstol de Betsaida · siglo I d. C.",
+      "desc": "El de Betsaida: trajo a Natanael y pidió ver al Padre.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Betsaida"
+      ],
+      "fold": "felipe apostol de betsaida siglo i d. c. el de betsaida: trajo a natanael y pidio ver al padre. apostoles evangelios hechos betsaida felipe era de betsaida, el pueblo de andres y pedro, y jesus lo encontro y le dijo: «ven, sigueme» (jn 1, 43-44). lo primero que hizo fue buscar a natanael y anunciarle que habian encontrado a aquel de quien escribieron moises y los profetas; ante el prejuicio de su amigo no discutio, sino que lo invito: «ven y compruebalo tu mismo» (jn 1, 45-46). en la ultima cena pronuncio su unica intervencion teologica: «senor, muestranos al padre y quedaremos conformes», y jesus le respondio: «los que me han visto a mi han visto al padre» (jn 14, 8-9). el nuevo testamento distingue con cuidado a este felipe, uno de los doce, del felipe evangelista, uno de los siete diaconos (hch 6, 5; 21, 8)."
     },
     {
       "tipo": "personaje",
@@ -2358,6 +2403,81 @@
     },
     {
       "tipo": "personaje",
+      "id": "juan-el-apostol",
+      "href": "/estudio/personajes/juan-el-apostol",
+      "title": "Juan el Apóstol",
+      "sub": "Apóstol, evangelista y testigo · siglo I d. C.",
+      "desc": "El discípulo a quien Jesús amaba: testigo de la gloria, de la cruz y del sepulcro vacío.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Éfeso"
+      ],
+      "fold": "juan el apostol apostol, evangelista y testigo siglo i d. c. el discipulo a quien jesus amaba: testigo de la gloria, de la cruz y del sepulcro vacio. apostoles evangelios hechos efeso juan, hijo de zebedeo y hermano de santiago, dejo la barca y a su padre para seguir a jesus (mt 4, 21-22). con pedro y santiago formo el circulo intimo que vio la transfiguracion y getsemani; en la cruz recibio a la madre del senor: «ahi tienes a tu madre», y desde entonces la llevo a vivir a su casa (jn 19, 26-27). es, segun la tradicion, «el discipulo a quien jesus amaba», el que se reclino hacia el durante la cena, corrio al sepulcro y «vio y creyo» (jn 20, 8). con pedro sostuvo a la iglesia naciente en jerusalen y samaria (hch 3-4; 8, 14-17). la tradicion lo hace morir anciano en efeso: el unico apostol no martir."
+    },
+    {
+      "tipo": "personaje",
+      "id": "judas-iscariote",
+      "href": "/estudio/personajes/judas-iscariote",
+      "title": "Judas Iscariote",
+      "sub": "Apóstol, el traidor · siglo I d. C.",
+      "desc": "El apóstol que traicionó: contado entre los Doce, tesorero del grupo.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Traición"
+      ],
+      "fold": "judas iscariote apostol, el traidor siglo i d. c. el apostol que traiciono: contado entre los doce, tesorero del grupo. apostoles evangelios hechos traicion judas, hijo de simon iscariote, fue contado entre los doce, participo del envio misionero y administro el dinero del grupo; juan lo describe como ladron que robaba de la bolsa comun (jn 12, 6). es el unico apostol al que el nuevo testamento identifica ante todo por su traicion (mt 10, 4). entrego a jesus por treinta piezas de plata (mt 26, 14-16) y lo senalo con un beso en getsemani (lc 22, 47-48). mateo narra su final: lleno de remordimiento devolvio el dinero y se ahorco (mt 27, 3-5); hechos da un segundo relato de su muerte y el nombre del campo, aceldama, «campo de sangre» (hch 1, 18-19). el nuevo testamento presenta la traicion a la vez como cumplimiento profetico y como acto suyo."
+    },
+    {
+      "tipo": "personaje",
+      "id": "judas-tadeo",
+      "href": "/estudio/personajes/judas-tadeo",
+      "title": "Judas Tadeo",
+      "sub": "Apóstol de los tres nombres · siglo I d. C.",
+      "desc": "El apóstol que plantea más preguntas que datos: Tadeo, Lebeo o Judas.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Tadeo"
+      ],
+      "fold": "judas tadeo apostol de los tres nombres siglo i d. c. el apostol que plantea mas preguntas que datos: tadeo, lebeo o judas. apostoles evangelios hechos tadeo judas tadeo es el apostol de los tres nombres: «tadeo» en mateo y marcos, «judas, hijo de santiago» en lucas y hechos, y el «judas, no iscariote» de juan 14, 22 (mt 10, 3; mc 3, 18; lc 6, 16; hch 1, 13). la union de los tres nombres es tradicional, no textual: el nuevo testamento nunca dice que sean la misma persona. su unica escena es la pregunta que hizo en la ultima cena: «senor, ¿por que te daras a conocer solo a nosotros y no al mundo en general?» (jn 14, 22). la respuesta de jesus es una de las declaraciones mas altas del evangelio sobre la inhabitacion: «todos los que me aman haran lo que yo diga. mi padre los amara, y vendremos para vivir con cada uno de ellos» (jn 14, 23)."
+    },
+    {
+      "tipo": "personaje",
+      "id": "mateo",
+      "href": "/estudio/personajes/mateo",
+      "title": "Mateo",
+      "sub": "Apóstol, cobrador de impuestos · siglo I d. C.",
+      "desc": "El cobrador de impuestos que lo dejó todo y abrió su casa a los pecadores.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Leví"
+      ],
+      "fold": "mateo apostol, cobrador de impuestos siglo i d. c. el cobrador de impuestos que lo dejo todo y abrio su casa a los pecadores. apostoles evangelios hechos levi mateo, el cobrador de impuestos —a quien marcos y lucas llaman levi— estaba sentado en su cabina cuando jesus le dijo: «sigueme y se mi discipulo»; y el se levanto, lo dejo todo y lo siguio (mt 9, 9; lc 5, 27-28). despreciado como colaborador de roma, fue llamado con dos palabras a ser uno de los doce. su primera accion no fue predicar sino invitar: abrio su casa a un banquete con otros publicanos y pecadores (mt 9, 10). cuando los fariseos se escandalizaron, jesus declaro: «no he venido a llamar a los que se creen justos, sino a los que saben que son pecadores» (mt 9, 13). la tradicion patristica (papias, ireneo) le atribuye el primer evangelio."
+    },
+    {
+      "tipo": "personaje",
+      "id": "matias",
+      "href": "/estudio/personajes/matias",
+      "title": "Matías",
+      "sub": "Apóstol elegido por sorteo · siglo I d. C.",
+      "desc": "El apóstol que existe solo en un párrafo: elegido por sorteo para completar los Doce.",
+      "tags": [
+        "Apóstoles",
+        "Hechos",
+        "Pentecostés",
+        "Sorteo"
+      ],
+      "fold": "matias apostol elegido por sorteo siglo i d. c. el apostol que existe solo en un parrafo: elegido por sorteo para completar los doce. apostoles hechos pentecostes sorteo matias no aparece ni una sola vez en los evangelios: todas sus menciones estan concentradas en un unico pasaje, hechos 1, 15-26. los apostoles no votaron: oraron y echaron suertes, y el criterio era uno solo —haber acompanado a jesus desde el bautismo de juan hasta la ascension y ser testigo de la resurreccion (hch 1, 21-22). «oh senor, tu conoces cada corazon. muestranos a cual de estos hombres has elegido», oraron; entonces echaron suertes y matias fue elegido para ser apostol con los otros once (hch 1, 24-26). despues de ese versiculo el nuevo testamento no vuelve a nombrarlo: su predicacion, su muerte y su fecha quedan fuera del texto sagrado."
+    },
+    {
+      "tipo": "personaje",
       "id": "san-jeronimo",
       "href": "/estudio/personajes/san-jeronimo",
       "title": "San Jerónimo",
@@ -2369,6 +2489,66 @@
         "Escritura"
       ],
       "fold": "san jeronimo doctor de la iglesia y traductor siglos iv–v el erudito del desierto que dio a occidente su biblia: la vulgata. padres de la iglesia vulgata escritura eusebio sofronio jeronimo, nacido en dalmacia hacia el 347, estudio en roma y aprendio hebreo en palestina tras una conversion que lo llevo desde la biblioteca al desierto. amigo de los grandes y combativo con los herejes, traducia la biblia con la paciencia de un copista y la pasion de un profeta. su traduccion de la escritura al latin —la vulgata— se convirtio en la biblia de occidente durante mas de mil anos. murio en belen el 420, en la cueva donde la tradicion situa el nacimiento del mesias."
+    },
+    {
+      "tipo": "personaje",
+      "id": "santiago-el-mayor",
+      "href": "/estudio/personajes/santiago-el-mayor",
+      "title": "Santiago el Mayor",
+      "sub": "Apóstol y primer mártir · siglo I d. C.",
+      "desc": "El apóstol del silencio testigo: vio la gloria, vio la agonía y bebió la copa.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Martirio"
+      ],
+      "fold": "santiago el mayor apostol y primer martir siglo i d. c. el apostol del silencio testigo: vio la gloria, vio la agonia y bebio la copa. apostoles evangelios hechos martirio santiago, hijo de zebedeo y hermano de juan, fue llamado junto a su padre mientras reparaba las redes en la barca, y lo dejo todo de inmediato (mt 4, 21-22). formo con pedro y juan el trio intimo que jesus llevo a la transfiguracion, a la casa de jairo y a getsemani: no habla en ninguno de esos momentos, pero es testigo presencial de la gloria y de la agonia. cuando su madre pidio para el y para juan los lugares de honor, jesus les anuncio: «es cierto, beberan de mi copa amarga» (mt 20, 23). santiago la bebio primero: herodes agripa i lo mando matar a espada, y es el unico apostol cuyo martirio esta explicito en el nuevo testamento (hch 12, 1-2)."
+    },
+    {
+      "tipo": "personaje",
+      "id": "santiago-el-menor",
+      "href": "/estudio/personajes/santiago-el-menor",
+      "title": "Santiago el Menor",
+      "sub": "Apóstol, hijo de Alfeo · siglo I d. C.",
+      "desc": "El apóstol del anonimato: en las listas y en la oración, sin una sola palabra registrada.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Alfeo"
+      ],
+      "fold": "santiago el menor apostol, hijo de alfeo siglo i d. c. el apostol del anonimato: en las listas y en la oracion, sin una sola palabra registrada. apostoles evangelios hechos alfeo santiago, hijo de alfeo, aparece en las cuatro listas de los doce y se distingue del otro santiago, el hijo de zebedeo, por su patronimico (mt 10, 3; mc 3, 18; lc 6, 15; hch 1, 13). la expresion «santiago el menor» aparece una sola vez en toda la biblia: en marcos 15, 40, junto a la cruz, entre las mujeres que miraban de lejos. el nuevo testamento no conserva ni una palabra suya ni ninguna accion registrada. solo esta en las listas y en el grupo de oracion anterior a pentecostes (hch 1, 13-14), y de forma indirecta por su madre maria, una de las mujeres que siguieron a jesus hasta la cruz y hasta el sepulcro (mc 16, 1; lc 24, 10)."
+    },
+    {
+      "tipo": "personaje",
+      "id": "simon-zelote",
+      "href": "/estudio/personajes/simon-zelote",
+      "title": "Simón el Zelote",
+      "sub": "Apóstol, el nacionalista entre los Doce · siglo I d. C.",
+      "desc": "El nacionalista entre los Doce: su apelativo político lo distingue del otro Simón.",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Zelote"
+      ],
+      "fold": "simon el zelote apostol, el nacionalista entre los doce siglo i d. c. el nacionalista entre los doce: su apelativo politico lo distingue del otro simon. apostoles evangelios hechos zelote simon aparece en las cuatro listas de los doce y en todas lleva el mismo apelativo —«el zelote»— necesario para distinguirlo de simon pedro (mt 10, 4; mc 3, 18; lc 6, 15; hch 1, 13). el texto griego dice kananaios, «cananeo», termino arameo para designar a los judios nacionalistas, como aclara la nota de la ntv. el nuevo testamento no registra ninguna palabra ni accion suya: solo su presencia en las listas y en el grupo de oracion anterior a pentecostes (hch 1, 13-14). su valor documental esta en la composicion de los doce: en el mismo grupo coincidieron un nacionalista radical y un cobrador de impuestos al servicio de roma, sin que el texto registre conflicto entre ellos."
+    },
+    {
+      "tipo": "personaje",
+      "id": "tomas",
+      "href": "/estudio/personajes/tomas",
+      "title": "Tomás",
+      "sub": "Apóstol, llamado el Gemelo · siglo I d. C.",
+      "desc": "De la duda a la confesión: «¡Mi Señor y mi Dios!».",
+      "tags": [
+        "Apóstoles",
+        "Evangelios",
+        "Hechos",
+        "Dídimo"
+      ],
+      "fold": "tomas apostol, llamado el gemelo siglo i d. c. de la duda a la confesion: «¡mi senor y mi dios!». apostoles evangelios hechos didimo tomas, apodado el gemelo —didimo en griego—, es el apostol de la fe que pasa por la duda. cuando jesus decidio ir a judea, donde lo querian matar, fue el quien dijo: «vamos nosotros tambien y moriremos con jesus» (jn 11, 16); y en la cena su pregunta provoco una de las declaraciones mas altas del evangelio: «yo soy el camino, la verdad y la vida» (jn 14, 5-6). ausente la noche de la resurreccion, exigio ver y tocar las heridas para creer (jn 20, 25). ocho dias despues jesus se le presento y le mostro su cuerpo; entonces tomas pronuncio la confesion mas directa de los evangelios: «¡mi senor y mi dios!» (jn 20, 28), y recibio la bienaventuranza de los que creen sin ver."
     },
     {
       "tipo": "concilio",

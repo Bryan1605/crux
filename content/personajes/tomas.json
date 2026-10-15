@@ -1,0 +1,37 @@
+{
+  "slug": "tomas",
+  "nombre": "Tomás",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, llamado el Gemelo",
+  "resumen": "De la duda a la confesión: «¡Mi Señor y mi Dios!».",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Dídimo"],
+  "portada": "/img/personajes/Tomas/TomasPortada.webp",
+  "escenas": [],
+  "bio": [
+    "Tomás, apodado el Gemelo —Dídimo en griego—, es el apóstol de la fe que pasa por la duda. Cuando Jesús decidió ir a Judea, donde lo querían matar, fue él quien dijo: «Vamos nosotros también y moriremos con Jesús» (Jn 11, 16); y en la cena su pregunta provocó una de las declaraciones más altas del Evangelio: «Yo soy el camino, la verdad y la vida» (Jn 14, 5-6).",
+    "Ausente la noche de la resurrección, exigió ver y tocar las heridas para creer (Jn 20, 25). Ocho días después Jesús se le presentó y le mostró su cuerpo; entonces Tomás pronunció la confesión más directa de los evangelios: «¡Mi Señor y mi Dios!» (Jn 20, 28), y recibió la bienaventuranza de los que creen sin ver."
+  ],
+  "timeline": [
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Antes de ir a Betania dice a los discípulos: «Vamos y moriremos con él» (Jn 11, 16)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "En la última cena su pregunta provoca: «Yo soy el camino, la verdad y la vida» (Jn 14, 5-6)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Ocho días después de la resurrección confiesa: «¡Mi Señor y mi Dios!» (Jn 20, 24-29)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Entre los siete discípulos de la tercera aparición en el mar de Tiberias (Jn 21, 2)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once reunidos en el aposento alto (Hch 1, 13)."
+    }
+  ],
+  "estudio": null
+}

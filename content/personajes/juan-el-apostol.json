@@ -1,0 +1,41 @@
+{
+  "slug": "juan-el-apostol",
+  "nombre": "Juan el Apóstol",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, evangelista y testigo",
+  "resumen": "El discípulo a quien Jesús amaba: testigo de la gloria, de la cruz y del sepulcro vacío.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Éfeso"],
+  "portada": "/img/personajes/JuanElApostol/JuanElApostolPortada.webp",
+  "escenas": [],
+  "bio": [
+    "Juan, hijo de Zebedeo y hermano de Santiago, dejó la barca y a su padre para seguir a Jesús (Mt 4, 21-22). Con Pedro y Santiago formó el círculo íntimo que vio la transfiguración y Getsemaní; en la cruz recibió a la madre del Señor: «Ahí tienes a tu madre», y desde entonces la llevó a vivir a su casa (Jn 19, 26-27).",
+    "Es, según la tradición, «el discípulo a quien Jesús amaba», el que se reclinó hacia él durante la cena, corrió al sepulcro y «vio y creyó» (Jn 20, 8). Con Pedro sostuvo a la Iglesia naciente en Jerusalén y Samaria (Hch 3-4; 8, 14-17). La tradición lo hace morir anciano en Éfeso: el único apóstol no mártir."
+  ],
+  "timeline": [
+    {
+      "anio": "≈27 d. C.",
+      "evento": "Llamado junto a su hermano Santiago: dejan la barca y a su padre y lo siguen de inmediato (Mt 4, 21-22)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Testigo de la transfiguración y de la agonía de Getsemaní (Mt 17, 1; 26, 37)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "En la cruz recibe a María como madre y la lleva a su casa (Jn 19, 26-27)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Corre al sepulcro vacío, entra y «vio y creyó» (Jn 20, 3-9)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Con Pedro sana y predica en Jerusalén; ante el Concilio se asombran de su valentía (Hch 3-4)."
+    },
+    {
+      "anio": "≈100 d. C.",
+      "evento": "Muere anciano en Éfeso, según la tradición (Ireneo, Adv. Haer. III.3.4); es el único apóstol no mártir."
+    }
+  ],
+  "estudio": null
+}

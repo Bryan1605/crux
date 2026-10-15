@@ -1,0 +1,29 @@
+{
+  "slug": "mateo",
+  "nombre": "Mateo",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, cobrador de impuestos",
+  "resumen": "El cobrador de impuestos que lo dejó todo y abrió su casa a los pecadores.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Leví"],
+  "portada": "/img/personajes/Mateo/MateoPortada.webp",
+  "escenas": [],
+  "bio": [
+    "Mateo, el cobrador de impuestos —a quien Marcos y Lucas llaman Leví— estaba sentado en su cabina cuando Jesús le dijo: «Sígueme y sé mi discípulo»; y él se levantó, lo dejó todo y lo siguió (Mt 9, 9; Lc 5, 27-28). Despreciado como colaborador de Roma, fue llamado con dos palabras a ser uno de los Doce.",
+    "Su primera acción no fue predicar sino invitar: abrió su casa a un banquete con otros publicanos y pecadores (Mt 9, 10). Cuando los fariseos se escandalizaron, Jesús declaró: «No he venido a llamar a los que se creen justos, sino a los que saben que son pecadores» (Mt 9, 13). La tradición patrística (Papías, Ireneo) le atribuye el primer Evangelio."
+  ],
+  "timeline": [
+    {
+      "anio": "≈28 d. C.",
+      "evento": "Jesús lo llama en su cabina de cobrador: se levanta, lo deja todo y lo sigue (Mt 9, 9; Lc 5, 27-28)."
+    },
+    {
+      "anio": "≈28 d. C.",
+      "evento": "Ofrece en su casa un banquete con publicanos y pecadores (Mt 9, 10; Lc 5, 29)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once reunidos en el aposento alto (Hch 1, 13)."
+    }
+  ],
+  "estudio": null
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "judas-tadeo",
+  "nombre": "Judas Tadeo",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol de los tres nombres",
+  "resumen": "El apóstol que plantea más preguntas que datos: Tadeo, Lebeo o Judas.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Tadeo"],
+  "portada": "/img/personajes/JudasTadeo/JudasTadeo.webp",
+  "escenas": [],
+  "bio": [
+    "Judas Tadeo es el apóstol de los tres nombres: «Tadeo» en Mateo y Marcos, «Judas, hijo de Santiago» en Lucas y Hechos, y el «Judas, no Iscariote» de Juan 14, 22 (Mt 10, 3; Mc 3, 18; Lc 6, 16; Hch 1, 13). La unión de los tres nombres es tradicional, no textual: el Nuevo Testamento nunca dice que sean la misma persona.",
+    "Su única escena es la pregunta que hizo en la última cena: «Señor, ¿por qué te darás a conocer sólo a nosotros y no al mundo en general?» (Jn 14, 22). La respuesta de Jesús es una de las declaraciones más altas del Evangelio sobre la inhabitación: «Todos los que me aman harán lo que yo diga. Mi Padre los amará, y vendremos para vivir con cada uno de ellos» (Jn 14, 23)."
+  ],
+  "timeline": [
+    {
+      "anio": "≈30 d. C.",
+      "evento": "En la última cena pregunta por qué Jesús se dará a conocer a ellos y no al mundo (Jn 14, 22-24)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once reunidos en el aposento alto antes de Pentecostés (Hch 1, 13)."
+    }
+  ],
+  "estudio": null
+}

@@ -54,12 +54,12 @@ const isHeading = block => block.type === 'heading' || block.type === 'part';
 export function packBook(book, extents, pageHeight) {
   const { blocks } = book;
   const packs = [];
-  let current = { blocks: [], height: 0 };
+  let current = { blocks: [], height: 0, hasContent: false };
 
   const close = () => {
     if (current.blocks.length) {
       packs.push(current);
-      current = { blocks: [], height: 0 };
+      current = { blocks: [], height: 0, hasContent: false };
     }
   };
 
@@ -68,15 +68,16 @@ export function packBook(book, extents, pageHeight) {
     const h = extents[i] || 0;
     const next = i + 1 < blocks.length ? blocks[i + 1] : null;
     const nextHeight = next ? extents[i + 1] || 0 : 0;
-    const filled = current.blocks.length > 0;
+    const hasContent = current.hasContent;
 
     // Una Parte siempre abre página; un título nunca queda solo al final ni
-    // delante de otro título (Parte o sección).
-    const opensPart = block.type === 'part' && filled;
-    const overflow = filled && current.height + h > pageHeight;
+    // delante de otro título (Parte o sección). Nunca se cierra una página que
+    // solo tenga títulos: si un párrafo gigante no cabe, viaja con su título.
+    const opensPart = block.type === 'part' && hasContent;
+    const overflow = hasContent && current.height + h > pageHeight;
     const widow =
       isHeading(block) &&
-      filled &&
+      hasContent &&
       Boolean(next) &&
       (next.type === 'part' || next.type === 'heading' || current.height + h + nextHeight > pageHeight);
 
@@ -84,6 +85,7 @@ export function packBook(book, extents, pageHeight) {
 
     current.blocks.push(i);
     current.height += h;
+    if (!isHeading(block)) current.hasContent = true;
   }
   close();
 

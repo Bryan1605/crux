@@ -1,0 +1,33 @@
+{
+  "slug": "santiago-el-mayor",
+  "nombre": "Santiago el Mayor",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol y primer mártir",
+  "resumen": "El apóstol del silencio testigo: vio la gloria, vio la agonía y bebió la copa.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Martirio"],
+  "portada": "/img/personajes/SantiagoElMayor/SantiagoElMayorPortada.webp",
+  "escenas": [],
+  "bio": [
+    "Santiago, hijo de Zebedeo y hermano de Juan, fue llamado junto a su padre mientras reparaba las redes en la barca, y lo dejó todo de inmediato (Mt 4, 21-22). Formó con Pedro y Juan el trío íntimo que Jesús llevó a la transfiguración, a la casa de Jairo y a Getsemaní: no habla en ninguno de esos momentos, pero es testigo presencial de la gloria y de la agonía.",
+    "Cuando su madre pidió para él y para Juan los lugares de honor, Jesús les anunció: «Es cierto, beberán de mi copa amarga» (Mt 20, 23). Santiago la bebió primero: Herodes Agripa I lo mandó matar a espada, y es el único apóstol cuyo martirio está explícito en el Nuevo Testamento (Hch 12, 1-2)."
+  ],
+  "timeline": [
+    {
+      "anio": "≈27 d. C.",
+      "evento": "Jesús lo llama junto a su hermano Juan mientras reparaban las redes (Mt 4, 21-22)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Testigo de la transfiguración, de la hija de Jairo y de la agonía de Getsemaní (Mt 17, 1; Mc 5, 37; Mt 26, 37)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Jesús le anuncia que beberá de su copa amarga (Mt 20, 22-23)."
+    },
+    {
+      "anio": "44 d. C.",
+      "evento": "Herodes Agripa I lo manda matar a espada: primer apóstol mártir (Hch 12, 1-2); la tradición (Eusebio) lo sitúa bajo Agripa I (41-44)."
+    }
+  ],
+  "estudio": null
+}

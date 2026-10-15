@@ -1,0 +1,25 @@
+{
+  "slug": "matias",
+  "nombre": "Matías",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol elegido por sorteo",
+  "resumen": "El apóstol que existe solo en un párrafo: elegido por sorteo para completar los Doce.",
+  "tags": ["Apóstoles", "Hechos", "Pentecostés", "Sorteo"],
+  "portada": "/img/personajes/Matias/MatiasPortada.webp",
+  "escenas": [],
+  "bio": [
+    "Matías no aparece ni una sola vez en los evangelios: todas sus menciones están concentradas en un único pasaje, Hechos 1, 15-26. Los apóstoles no votaron: oraron y echaron suertes, y el criterio era uno solo —haber acompañado a Jesús desde el bautismo de Juan hasta la ascensión y ser testigo de la resurrección (Hch 1, 21-22).",
+    "«Oh Señor, tú conoces cada corazón. Muéstranos a cuál de estos hombres has elegido», oraron; entonces echaron suertes y Matías fue elegido para ser apóstol con los otros once (Hch 1, 24-26). Después de ese versículo el Nuevo Testamento no vuelve a nombrarlo: su predicación, su muerte y su fecha quedan fuera del texto sagrado."
+  ],
+  "timeline": [
+    {
+      "anio": "33 d. C.",
+      "evento": "Propuesto junto a José Barsabás como candidato a ocupar el lugar de Judas (Hch 1, 23)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Elegido por sorteo tras la oración de los apóstoles y contado con los once (Hch 1, 24-26)."
+    }
+  ],
+  "estudio": null
+}

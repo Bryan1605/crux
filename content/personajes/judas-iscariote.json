@@ -1,0 +1,33 @@
+{
+  "slug": "judas-iscariote",
+  "nombre": "Judas Iscariote",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, el traidor",
+  "resumen": "El apóstol que traicionó: contado entre los Doce, tesorero del grupo.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Traición"],
+  "portada": "/img/personajes/JudasIscariote/JudasIscariotePortada.webp",
+  "escenas": [],
+  "bio": [
+    "Judas, hijo de Simón Iscariote, fue contado entre los Doce, participó del envío misionero y administró el dinero del grupo; Juan lo describe como ladrón que robaba de la bolsa común (Jn 12, 6). Es el único apóstol al que el Nuevo Testamento identifica ante todo por su traición (Mt 10, 4).",
+    "Entregó a Jesús por treinta piezas de plata (Mt 26, 14-16) y lo señaló con un beso en Getsemaní (Lc 22, 47-48). Mateo narra su final: lleno de remordimiento devolvió el dinero y se ahorcó (Mt 27, 3-5); Hechos da un segundo relato de su muerte y el nombre del campo, Acéldama, «Campo de Sangre» (Hch 1, 18-19). El Nuevo Testamento presenta la traición a la vez como cumplimiento profético y como acto suyo."
+  ],
+  "timeline": [
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Acuerda con los principales sacerdotes entregar a Jesús por treinta piezas de plata (Mt 26, 14-16)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Traiciona a Jesús con un beso en Getsemaní (Lc 22, 47-48)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Lleno de remordimiento devuelve el dinero y se ahorca (Mt 27, 3-5); Hechos narra su muerte en el campo llamado Acéldama (Hch 1, 18-19)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Su lugar entre los Doce es ocupado por Matías, elegido por sorteo (Hch 1, 23-26)."
+    }
+  ],
+  "estudio": null
+}

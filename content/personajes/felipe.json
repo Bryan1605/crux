@@ -1,0 +1,33 @@
+{
+  "slug": "felipe",
+  "nombre": "Felipe",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol de Betsaida",
+  "resumen": "El de Betsaida: trajo a Natanael y pidió ver al Padre.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Betsaida"],
+  "portada": "/img/personajes/Felipe/FelipePortada.webp",
+  "escenas": [],
+  "bio": [
+    "Felipe era de Betsaida, el pueblo de Andrés y Pedro, y Jesús lo encontró y le dijo: «Ven, sígueme» (Jn 1, 43-44). Lo primero que hizo fue buscar a Natanael y anunciarle que habían encontrado a aquel de quien escribieron Moisés y los profetas; ante el prejuicio de su amigo no discutió, sino que lo invitó: «Ven y compruébalo tú mismo» (Jn 1, 45-46).",
+    "En la última cena pronunció su única intervención teológica: «Señor, muéstranos al Padre y quedaremos conformes», y Jesús le respondió: «Los que me han visto a mí han visto al Padre» (Jn 14, 8-9). El Nuevo Testamento distingue con cuidado a este Felipe, uno de los Doce, del Felipe evangelista, uno de los siete diáconos (Hch 6, 5; 21, 8)."
+  ],
+  "timeline": [
+    {
+      "anio": "≈27 d. C.",
+      "evento": "Jesús lo encuentra en Galilea y lo llama: «Ven, sígueme» (Jn 1, 43)."
+    },
+    {
+      "anio": "≈27 d. C.",
+      "evento": "Busca a Natanael y lo lleva a Jesús: «Ven y compruébalo tú mismo» (Jn 1, 45-46)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "En la última cena pide ver al Padre; Jesús responde que quien lo ve a él ve al Padre (Jn 14, 8-9)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once reunidos en el aposento alto (Hch 1, 13)."
+    }
+  ],
+  "estudio": null
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "simon-zelote",
+  "nombre": "Simón el Zelote",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, el nacionalista entre los Doce",
+  "resumen": "El nacionalista entre los Doce: su apelativo político lo distingue del otro Simón.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Zelote"],
+  "portada": "/img/personajes/SimonZelote/SimonZelotePortada.webp",
+  "escenas": [],
+  "bio": [
+    "Simón aparece en las cuatro listas de los Doce y en todas lleva el mismo apelativo —«el zelote»— necesario para distinguirlo de Simón Pedro (Mt 10, 4; Mc 3, 18; Lc 6, 15; Hch 1, 13). El texto griego dice kananaios, «cananeo», término arameo para designar a los judíos nacionalistas, como aclara la nota de la NTV.",
+    "El Nuevo Testamento no registra ninguna palabra ni acción suya: solo su presencia en las listas y en el grupo de oración anterior a Pentecostés (Hch 1, 13-14). Su valor documental está en la composición de los Doce: en el mismo grupo coincidieron un nacionalista radical y un cobrador de impuestos al servicio de Roma, sin que el texto registre conflicto entre ellos."
+  ],
+  "timeline": [
+    {
+      "anio": "≈28 d. C.",
+      "evento": "Es elegido entre los Doce con el apelativo «el zelote» (Lc 6, 13-15)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once que perseveraban en oración en el aposento alto (Hch 1, 13-14)."
+    }
+  ],
+  "estudio": null
+}

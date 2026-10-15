@@ -126,9 +126,13 @@ const trailingHeading = pagination.pages.filter((p, i) => {
 });
 check('Ningún título queda viudo al final de página', trailingHeading.length === 0, `${trailingHeading.length}`);
 
+const isHeadingBlock = b => b.type === 'heading' || b.type === 'part';
 const overflowing = pagination.pages
   .map(p => ({ p, h: p.blocks.reduce((acc, i) => acc + extents[i], 0) }))
-  .filter(({ p, h }) => h > geometry.bodyH && p.blocks.length > 1);
+  .filter(
+    ({ p, h }) =>
+      h > geometry.bodyH && p.blocks.filter(i => !isHeadingBlock(book.blocks[i])).length > 1
+  );
 check('Ninguna página desborda (salvo un bloque gigante)', overflowing.length === 0, `${overflowing.length}`);
 
 check(
@@ -303,7 +307,7 @@ if (WITH_BROWSER) {
 
   // Tamaño de letra (repagina sin perder el sitio).
   const folio3 = await folioNow();
-  await page.click('button[aria-label="Aumentar el tamaño de letra"]');
+  await page.click('button[aria-label^="Aumentar el tamaño de letra"]');
   await new Promise(r => setTimeout(r, 1500));
   check('A+ repagina sin perder el sitio', /^\d+$/.test(await folioNow()), `${folio3} → ${await folioNow()}`);
 

@@ -1,0 +1,29 @@
+{
+  "slug": "santiago-el-menor",
+  "nombre": "Santiago el Menor",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, hijo de Alfeo",
+  "resumen": "El apóstol del anonimato: en las listas y en la oración, sin una sola palabra registrada.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Alfeo"],
+  "portada": "/img/personajes/SantiagoElMenor/SantiagoElMenorPortada.webp",
+  "escenas": [],
+  "bio": [
+    "Santiago, hijo de Alfeo, aparece en las cuatro listas de los Doce y se distingue del otro Santiago, el hijo de Zebedeo, por su patronímico (Mt 10, 3; Mc 3, 18; Lc 6, 15; Hch 1, 13). La expresión «Santiago el menor» aparece una sola vez en toda la Biblia: en Marcos 15, 40, junto a la cruz, entre las mujeres que miraban de lejos.",
+    "El Nuevo Testamento no conserva ni una palabra suya ni ninguna acción registrada. Solo está en las listas y en el grupo de oración anterior a Pentecostés (Hch 1, 13-14), y de forma indirecta por su madre María, una de las mujeres que siguieron a Jesús hasta la cruz y hasta el sepulcro (Mc 16, 1; Lc 24, 10)."
+  ],
+  "timeline": [
+    {
+      "anio": "≈28 d. C.",
+      "evento": "Es elegido entre los Doce; las listas lo distinguen como «Santiago, hijo de Alfeo» (Lc 6, 13-15)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Su madre María está junto a la cruz y luego en el sepulcro (Mc 15, 40; 16, 1)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once que perseveraban en oración en el aposento alto (Hch 1, 13-14)."
+    }
+  ],
+  "estudio": null
+}

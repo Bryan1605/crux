@@ -1,0 +1,33 @@
+{
+  "slug": "andres",
+  "nombre": "Andrés",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, el que lleva a otros a Jesús",
+  "resumen": "El primero en seguir y el primero en traer: su huella son las personas que acercó a Jesús.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Betsaida"],
+  "portada": "/img/personajes/Andres/AndresPortada.webp",
+  "escenas": [],
+  "bio": [
+    "Andrés, hermano de Simón Pedro, era discípulo de Juan el Bautista cuando oyó: «¡Miren! ¡Ahí está el cordero de Dios!» (Jn 1, 36). Siguió a Jesús y lo primero que hizo fue buscar a su hermano: «Hemos encontrado al Mesías», y lo llevó hasta él (Jn 1, 41-42).",
+    "Su misión en el Evangelio son tres gestos de intermediación: lleva a Pedro a Jesús, presenta los cinco panes y los dos peces del muchacho (Jn 6, 8-9) y, junto a Felipe, canaliza la petición de los griegos que querían ver al Señor (Jn 12, 21-22). Después de Hechos 1, 13 el Nuevo Testamento no vuelve a nombrarlo."
+  ],
+  "timeline": [
+    {
+      "anio": "≈27 d. C.",
+      "evento": "Sigue a Jesús tras el testimonio del Bautista y lleva a su hermano Pedro (Jn 1, 35-42)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Presenta a Jesús los cinco panes y los dos peces del muchacho (Jn 6, 8-9)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Con Felipe lleva ante Jesús a los griegos que querían conocerlo (Jn 12, 20-22)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once reunidos en el aposento alto antes de Pentecostés (Hch 1, 13)."
+    }
+  ],
+  "estudio": null
+}

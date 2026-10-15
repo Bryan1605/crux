@@ -3,6 +3,33 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.4.0] — 2026-10-14
+
+Doce apóstoles nuevos en las fichas de personaje y la Biblia Patrística completa.
+
+### Añadido
+
+- **Doce fichas de apóstol** en `/estudio/personajes` (17 personajes en total):
+  Santiago el Mayor, Juan el Apóstol, Andrés, Felipe, Bartolomé, Mateo, Tomás,
+  Santiago el Menor, Simón el Zelote, Judas Tadeo, Matías y Judas Iscariote. Cada
+  una con identificación, biografía y sus hitos en la línea de tiempo.
+- Portada provisional (imagen «pendiente») para los once apóstoles que todavía no
+  tienen ilustración; se sustituyen al recibir las imágenes definitivas.
+
+### Cambiado
+
+- **Biblia Patrística**: se publica la edición completa (1,2 → 3,6 MB) y se repara
+  la codificación dañada (43 caracteres U+FFFD) de la sección de Atenágoras.
+
+### Corregido
+
+- **Paginación del lector** (`src/lib/bookPages.js`): ninguna página queda
+  compuesta solo de encabezados; si un párrafo gigante no cabe en una página,
+  viaja junto a su título. Las ~4.300 páginas vuelven a pasar `qa:biblia` sin
+  avisos.
+- **`qa:biblia --browser`**: el selector del control de tamaño de letra vuelve a
+  coincidir con la etiqueta actual del lector.
+
 ## [0.3.0] — 2026-10-12
 
 Roadmap de cinco fases sobre la base de la 0.2.0: línea de tiempo, concilios,

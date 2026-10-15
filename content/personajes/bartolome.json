@@ -1,0 +1,29 @@
+{
+  "slug": "bartolome",
+  "nombre": "Bartolomé",
+  "epoca": "siglo I d. C.",
+  "rol": "Apóstol, también llamado Natanael",
+  "resumen": "El israelita sin engaño: del prejuicio a la confesión más alta en una sola conversación.",
+  "tags": ["Apóstoles", "Evangelios", "Hechos", "Natanael"],
+  "portada": "/img/personajes/Bartolome/BartolomePortada.webp",
+  "escenas": [],
+  "bio": [
+    "Bartolomé —a quien la tradición identifica con el Natanael de Juan— llegó a Jesús por invitación de Felipe: «¿Acaso puede salir algo bueno de Nazaret?», respondió con prejuicio, y Felipe le contestó: «Ven y compruébalo tú mismo» (Jn 1, 45-46). Al verlo, Jesús lo saludó como «un verdadero hijo de Israel, un hombre totalmente íntegro» (Jn 1, 47).",
+    "Su confesión fue inmediata y altísima: «Rabí, ¡tú eres el Hijo de Dios, el Rey de Israel!» (Jn 1, 49), y Jesús la amplió con la imagen de la escalera entre el cielo y la tierra (Jn 1, 51). Aparece en las cuatro listas de los Doce y entre los siete discípulos del mar de Tiberias (Jn 21, 2); la identificación Bartolomé = Natanael es tradicional, no textual."
+  ],
+  "timeline": [
+    {
+      "anio": "≈27 d. C.",
+      "evento": "Llega a Jesús por invitación de Felipe y confiesa: «Hijo de Dios, Rey de Israel» (Jn 1, 45-51)."
+    },
+    {
+      "anio": "≈30 d. C.",
+      "evento": "Entre los siete discípulos de la tercera aparición, junto al mar de Tiberias (Jn 21, 2)."
+    },
+    {
+      "anio": "33 d. C.",
+      "evento": "Entre los once reunidos en el aposento alto (Hch 1, 13)."
+    }
+  ],
+  "estudio": null
+}
