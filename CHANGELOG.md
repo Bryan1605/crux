@@ -3,6 +3,20 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.4.1] — 2026-10-14
+
+Portadas definitivas de los apóstoles.
+
+### Cambiado
+
+- **Once portadas de apóstol** sustituyen a las imágenes «pendiente» provisionales:
+  Santiago el Mayor, Juan el Apóstol, Andrés, Felipe, Bartolomé, Mateo, Tomás,
+  Santiago el Menor, Simón el Zelote, Matías y Judas Iscariote. Junto a Judas Tadeo
+  (ya con ilustración), los doce apóstoles muestran su retrato definitivo.
+  Las fuentes viven en `src/assets/imgs/Personajes/<Nombre>/<Nombre>Portada.jpg` y se
+  optimizan a `public/img/personajes/<Nombre>/<Nombre>Portada.webp` (1100 px, ~300 KB
+  cada una) con `node scripts/optimize-images.mjs`.
+
 ## [0.4.0] — 2026-10-14
 
 Doce apóstoles nuevos en las fichas de personaje y la Biblia Patrística completa.
