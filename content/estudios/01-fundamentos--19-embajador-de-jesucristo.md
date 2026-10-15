@@ -5,7 +5,7 @@ description: "Un embajador de Jesucristo es un representante oficial del reino d
 passage: "2 Corintios 5:18-20"
 tags: ["fundamento", "discipulado", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

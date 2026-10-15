@@ -5,7 +5,7 @@ description: "Consagración es el acto de dedicar toda la vida a Dios como respu
 passage: "Romanos 12:1"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

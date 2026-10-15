@@ -8,25 +8,32 @@
       "count": 92
     },
     {
+      "id": "02-libros-biblicos",
+      "label": "Libros bíblicos",
+      "short": "Un estudio por cada libro",
+      "orden": 2,
+      "count": 1
+    },
+    {
       "id": "03-personajes",
       "label": "Personajes",
       "short": "Vidas de la Biblia con contexto",
       "orden": 3,
-      "count": 1
+      "count": 15
     },
     {
       "id": "04-doctrinas",
       "label": "Doctrinas",
       "short": "Sistematización bíblica",
       "orden": 4,
-      "count": 1
+      "count": 2
     },
     {
       "id": "05-estudios",
       "label": "Estudios temáticos",
       "short": "Planes de estudio prácticos",
       "orden": 5,
-      "count": 3
+      "count": 4
     },
     {
       "id": "06-apologetica",
@@ -79,7 +86,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--02-justificacion",
@@ -95,7 +102,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--03-reconciliacion",
@@ -111,7 +118,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--04-llegar-a-ser-hijo-de-dios",
@@ -120,7 +127,7 @@
       "categoryLabel": "Fundamentos",
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "",
-      "description": "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios que recibe al que cree.",
+      "description": "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios mediante el cual él…",
       "portada": "",
       "passage": "Juan 1:12-13",
       "tags": [
@@ -128,7 +135,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--05-de-que-son-salvos",
@@ -145,7 +152,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--06-puede-un-hijo-dejar-de-serlo",
@@ -162,7 +169,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--07-informacion-vs-revelacion",
@@ -178,7 +185,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--08-mejorar-la-salvacion-con-conducta",
@@ -195,7 +202,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--09-mejorar-la-filiacion-con-conducta",
@@ -212,7 +219,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--10-mejorar-la-vida-eterna-con-conducta",
@@ -229,7 +236,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--11-santificacion",
@@ -245,7 +252,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--12-purificacion",
@@ -261,7 +268,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--13-consagracion",
@@ -277,7 +284,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--14-madurez-espiritual",
@@ -294,7 +301,7 @@
         "doctrina/santificacion"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--15-testigo-de-jesus",
@@ -311,11 +318,11 @@
         "discipulado"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--16-obrero-en-la-mies",
-      "title": "Obrero en su mies",
+      "title": "Obrero en la mies",
       "category": "01-fundamentos",
       "categoryLabel": "Fundamentos",
       "categoryShort": "Doctrina fundamental desde la NTV",
@@ -328,11 +335,11 @@
         "discipulado"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--17-soldado-en-la-milicia",
-      "title": "Soldado en su milicia",
+      "title": "Soldado en la milicia",
       "category": "01-fundamentos",
       "categoryLabel": "Fundamentos",
       "categoryShort": "Doctrina fundamental desde la NTV",
@@ -345,7 +352,7 @@
         "discipulado"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--18-la-salvacion-no-se-pierde",
@@ -361,7 +368,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--19-embajador-de-jesucristo",
@@ -379,7 +386,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--20-discipulo",
@@ -395,7 +402,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--21-sello-del-espiritu-santo",
@@ -412,7 +419,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--22-arrepentimiento",
@@ -445,7 +452,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--24-propiciacion",
@@ -461,7 +468,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--25-expiacion",
@@ -477,7 +484,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--26-regeneracion",
@@ -493,7 +500,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--27-suficiencia-de-las-escrituras",
@@ -510,7 +517,7 @@
         "doctrina/bibliologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--28-preexistencia-de-cristo",
@@ -527,7 +534,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--29-encarnacion",
@@ -543,7 +550,7 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--30-virginidad-de-jesus",
@@ -560,7 +567,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--31-humanidad-de-cristo",
@@ -577,7 +584,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--32-kenosis",
@@ -594,7 +601,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--33-resurreccion-de-cristo",
@@ -611,7 +618,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--34-ascension-y-exaltacion",
@@ -628,7 +635,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--35-cristo-mediador-y-sumo-sacerdote",
@@ -645,7 +652,7 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--36-la-trinidad",
@@ -1465,12 +1472,12 @@
     },
     {
       "slug": "01-fundamentos--84-el-sabado",
-      "title": "El Sabado",
+      "title": "El Sábado / Día de Reposo",
       "category": "01-fundamentos",
       "categoryLabel": "Fundamentos",
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "",
-      "description": "Estudio del segundo cerebro bíblico.",
+      "description": "El sábado fue el séptimo día de la semana (sábado), instituido por Dios en el Génesis como día de descanso. Bajo el Nuevo Pacto, el mandamiento del sábado fue cumplido en Cristo, y la…",
       "portada": "",
       "passage": "Colosenses 2:16-17",
       "tags": [
@@ -1478,7 +1485,7 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--85-evangelismo-y-misiones",
@@ -1581,16 +1588,16 @@
         "doctrina/general"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--legalismofranciscoisrael",
-      "title": "LegalismoFranciscoIsrael",
+      "title": "Legalismo de Francisco Israel",
       "category": "01-fundamentos",
       "categoryLabel": "Fundamentos",
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "",
-      "description": "Estudio del segundo cerebro bíblico.",
+      "description": "A continuación se presenta el resumen, los puntos principales fundamentados en los versículos compartidos y la postura del autor Francisco Israel en su video titulado 54 Evidencias Bíblicas…",
       "portada": "",
       "passage": "",
       "tags": [
@@ -1598,7 +1605,7 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "01-fundamentos--pablo-no-contradice-la-escritura",
@@ -1615,7 +1622,316 @@
         "hermeneutica"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "02-libros-biblicos--carta-de-judas",
+      "title": "La carta de Judas — Estudio completo",
+      "category": "02-libros-biblicos",
+      "categoryLabel": "Libros bíblicos",
+      "categoryShort": "Un estudio por cada libro",
+      "subcategory": "",
+      "description": "La carta de Judas es un escrito breve de 25 versículos, ubicado en el NT entre las cartas de Juan y el Apocalipsis. No es la más corta del NT (2 Juan tiene 13 versículos y 3 Juan, 15), pero…",
+      "portada": "",
+      "passage": "",
+      "tags": [
+        "estudio",
+        "carta",
+        "judas"
+      ],
+      "aliases": [
+        "Carta de Judas",
+        "Epístola de Judas",
+        "Judas 1"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--01-pedro",
+      "title": "Pedro — El apóstol de la roca",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Pedro tenía dos nombres: Simón, su nombre de nacimiento, y Pedro, que significa \"roca\" y que Jesús le puso (Mateo 16:18). [NTV]",
+      "portada": "",
+      "passage": "Mateo 16:16-19",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Simón Pedro",
+        "Apóstol Pedro"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--02-pablo",
+      "title": "Pablo — El apóstol de las naciones",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Pablo es el único apóstol cuyo nombre aparece en las listas de los Doce y que no fue uno de los doce originales. [NTV] Su nombre de nacimiento es Saulo (Hechos 7:58; 22:3), y desde Hechos…",
+      "portada": "",
+      "passage": "Filipenses 2:6-11",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Saulo",
+        "Apóstol Pablo"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--03-santiago-el-mayor",
+      "title": "Santiago el Mayor — El primer apóstol mártir",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Santiago es uno de los doce, hijo de Zebedeo y hermano de Juan (Mateo 4:21). [NTV] La NTV no da su nombre de nacimiento ni su edad; lo identifica siempre como \"Santiago, hijo de Zebedeo\" o…",
+      "portada": "",
+      "passage": "Hechos 12:1-2",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Santiago el Mayor",
+        "Santiago hijo de Zebedeo"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--04-juan-el-apostol",
+      "title": "Juan el apóstol — El discípulo a quien Jesús amaba",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Juan es uno de los doce, hijo de Zebedeo y hermano de Santiago (Mateo 4:21; Marcos 1:19). [NTV] La NTV lo identifica siempre como parte del par \"Santiago y Juan, hijos de Zebedeo\" o \"los…",
+      "portada": "",
+      "passage": "Juan 21:20-24",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Juan",
+        "Juan el apóstol",
+        "Juan hijo de Zebedeo",
+        "El discípulo a quien Jesús amaba"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--05-andres",
+      "title": "Andrés — El primero en seguir, el que lleva a otros",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Andrés es uno de los doce, hermano de Simón Pedro (Juan 1:40). [NTV] La NTV lo presenta como uno de los dos discípulos de Juan el Bautista que siguieron a Jesús después de oír: \"¡Miren!…",
+      "portada": "",
+      "passage": "Juan 1:40-42",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Andrés",
+        "Andrés hermano de Pedro"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--06-felipe",
+      "title": "Felipe — El de Betsaida, el que trae a Natanael",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Felipe es uno de los doce, de Betsaida, \"el pueblo natal de Andrés y Pedro\" (Juan 1:44). [NTV] La NTV lo presenta cuando Jesús lo encuentra y le dice: \"Ven, sígueme\" (Juan 1:43). [NTV]",
+      "portada": "",
+      "passage": "Juan 1:43-46",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Felipe",
+        "Felipe de Betsaida"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--07-bartolome",
+      "title": "Bartolomé (Natanael) — El israelita sin engaño",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Bartolomé aparece en las cuatro listas de los Doce: Mateo 10:3, Marcos 3:18, Lucas 6:14-15 y Hechos 1:13. [NTV] En las tres listas sinópticas aparece inmediatamente después de Felipe:…",
+      "portada": "",
+      "passage": "Juan 1:45-51",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Bartolomé",
+        "Natanael",
+        "Bartolomé (Natanael)"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--08-mateo",
+      "title": "Mateo — El cobrador de impuestos que dejó todo",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Mateo aparece en las cuatro listas de los Doce (Mateo 10:3; Marcos 3:18; Lucas 6:15; Hechos 1:13). [NTV] En la primera de esas listas aparece con su antiguo oficio: \"Mateo (el cobrador de…",
+      "portada": "",
+      "passage": "Mateo 9:9-13",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Mateo",
+        "Mateo el cobrador de impuestos",
+        "Leví"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--09-tomas",
+      "title": "Tomás — De la incredulidad a \"Mi Señor y mi Dios\"",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Tomás aparece en las cuatro listas de los Doce (Mateo 10:3; Marcos 3:18; Lucas 6:15; Hechos 1:13). [NTV]",
+      "portada": "",
+      "passage": "Juan 20:24-29",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Tomás",
+        "Tomás el Gemelo",
+        "Dídimo"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--10-santiago-el-menor",
+      "title": "Santiago el Menor — El hijo de Alfeo",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Santiago aparece en las cuatro listas de los Doce con el mismo calificativo: \"Santiago (hijo de Alfeo)\" — Mateo 10:3, Marcos 3:18, Lucas 6:15 y Hechos 1:13. [NTV]",
+      "portada": "",
+      "passage": "Marcos 15:40",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Santiago el Menor",
+        "Santiago hijo de Alfeo"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--11-simon-zelote",
+      "title": "Simón el Zelote — El nacionalista entre los Doce",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Simón aparece en las cuatro listas de los Doce, y en las cuatro lleva el mismo apelativo: \"el zelote\" — Mateo 10:4, Marcos 3:18, Lucas 6:15 y Hechos 1:13. [NTV]",
+      "portada": "",
+      "passage": "Lucas 6:15",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Simón el Zelote",
+        "Simón el Cananeo"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--12-judas-tadeo",
+      "title": "Judas Tadeo — El apóstol de los tres nombres",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Pocos apóstoles plantean un problema de identidad tan enredado. En el NT este hombre recibe tres designaciones distintas, y la relación entre ellas no está dicha en el texto: [Estudio]",
+      "portada": "",
+      "passage": "Juan 14:22-24",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Judas Tadeo",
+        "Tadeo",
+        "Judas hijo de Santiago",
+        "Lebeo"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--13-matias",
+      "title": "Matías — El apóstol elegido por sorteo",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Matías no aparece ni una sola vez en los evangelios. Tampoco en las cartas ni en el Apocalipsis. Todas sus menciones en el NT están concentradas en un solo pasaje: Hechos 1:15-26. [NTV]",
+      "portada": "",
+      "passage": "Hechos 1:23-26",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Matías",
+        "El apóstol elegido por sorteo"
+      ],
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "03-personajes--apostoles--14-judas-iscariote",
+      "title": "Judas Iscariote — El apóstol que traicionó",
+      "category": "03-personajes",
+      "categoryLabel": "Personajes",
+      "categoryShort": "Vidas de la Biblia con contexto",
+      "subcategory": "Apostoles",
+      "description": "Es el único apóstol al que el NT identifica por su traición más que por cualquier otra cosa. Aparece en las cuatro listas de los Doce, siempre al final: [NTV]",
+      "portada": "",
+      "passage": "Mateo 26:14-16",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "aliases": [
+        "Judas Iscariote",
+        "El traidor"
+      ],
+      "updated": "2026-09-26"
     },
     {
       "slug": "03-personajes--juan-el-bautista",
@@ -1642,6 +1958,24 @@
       "updated": "2026-09-26"
     },
     {
+      "slug": "04-doctrinas--la-muerte-que-produce-el-pecado",
+      "title": "La muerte que produce el pecado (Santiago 1:14-16)",
+      "category": "04-doctrinas",
+      "categoryLabel": "Doctrinas",
+      "categoryShort": "Sistematización bíblica",
+      "subcategory": "",
+      "description": "Esta pregunta une dos cosas que la Biblia mantiene juntas: la realidad del pecado (la concupiscencia existe en todo ser humano, y ceder a ella es posible para todos) y la enseñanza de…",
+      "portada": "",
+      "passage": "Santiago 1:14-16",
+      "tags": [
+        "doctrina/hamartiologia",
+        "doctrina/soteriologia",
+        "estudio"
+      ],
+      "aliases": [],
+      "updated": "2026-09-26"
+    },
+    {
       "slug": "04-doctrinas--soteriologia",
       "title": "Análisis Soteriológico — NTV (Nueva Traducción Viviente)",
       "category": "04-doctrinas",
@@ -1656,7 +1990,7 @@
         "estudio"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "05-estudios--galardones-reino-y-mision",
@@ -1673,7 +2007,7 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
     },
     {
       "slug": "05-estudios--legalismo-mandamientos-modernos",
@@ -1710,7 +2044,24 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-07-25"
+      "updated": "2026-09-26"
+    },
+    {
+      "slug": "05-estudios--vencer-lujuria",
+      "title": "Plan práctico: Vencer la lujuria",
+      "category": "05-estudios",
+      "categoryLabel": "Estudios temáticos",
+      "categoryShort": "Planes de estudio prácticos",
+      "subcategory": "",
+      "description": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "portada": "",
+      "passage": "",
+      "tags": [
+        "estudio",
+        "santificacion"
+      ],
+      "aliases": [],
+      "updated": "2026-09-26"
     },
     {
       "slug": "06-apologetica--comparativa-ley-calvinismo-luteranismo",
@@ -1999,7 +2350,7 @@
         "Análisis Doctrinal Shincheonji",
         "Chat WhatsApp Shincheonji"
       ],
-      "updated": "2026-07-26"
+      "updated": "2026-09-26"
     },
     {
       "slug": "06-apologetica--shincheonji--la-parabola-del-fuego",
@@ -2020,7 +2371,7 @@
         "Parábola del Fuego",
         "Fuego como palabra de juicio"
       ],
-      "updated": "2026-07-26"
+      "updated": "2026-09-26"
     },
     {
       "slug": "06-apologetica--shincheonji--los-cuatro-campos",
@@ -2041,7 +2392,7 @@
         "Cuatro Campos del Corazón",
         "Parábola del Sembrador"
       ],
-      "updated": "2026-07-26"
+      "updated": "2026-09-26"
     },
     {
       "slug": "06-apologetica--shincheonji--refutacion-doctrinal",
@@ -2062,7 +2413,7 @@
         "Refutación doctrinal Shincheonji",
         "Contraste bíblico Shincheonji"
       ],
-      "updated": "2026-07-26"
+      "updated": "2026-09-26"
     },
     {
       "slug": "06-apologetica--trinidad-rescate-correspondiente",

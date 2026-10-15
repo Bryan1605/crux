@@ -5,7 +5,7 @@ description: "La salvación es eterna, irrevocable y segura para todo el que ha 
 passage: "Juan 10:27-29"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -57,7 +57,7 @@ El autor sostiene tres pilares:
 
 **Respuesta bíblica**:
 - **Juan 6:37-39** — *"No perderé ni a uno solo de los que el Padre me ha dado."* Jesús no dice "perderé a los que perseveran". Dice **no perderé ni uno solo**.
-- **Juan 5:24** — *"El que oye mi palabra y cree al que meenvió, tiene vida eterna y no será condenado, sino que ha pasado de muerte a vida."* — "Tiene" (presente), "ha pasado" (perfecto). No dice "tendrá si persevera".
+- **Juan 5:24** — *"El que oye mi palabra y cree al que me envió, tiene vida eterna y no será condenado, sino que ha pasado de muerte a vida."* — "Tiene" (presente), "ha pasado" (perfecto). No dice "tendrá si persevera".
 - **1 Pedro 1:3-5** — *"Mediante la fe los protege con su poder para que alcancen la salvación."* — Dios los protege con **Su poder**, no con el esfuerzo humano.
 
 ### 3.2 "La causa exacta de la pérdida: pecar sin arrepentirse y apartarse de Jesús"
@@ -103,8 +103,8 @@ Hay una confusión entre **evidencia** y **causa**.
 
 **Lo que esta doctrina NO es:**
 - No es una excusa para pecar — la verdadera seguridad produce santidad, no libertinaje (Ro 6:1-2)
-- No significa que no hay disciplina — el Padre corrige a sus hijos (He 12:5-11)
-- No significa que no hay consecuencias — pérdida de galardón, testimonio dañado, disciplina severa
+- No significa que no haya disciplina — el Padre corrige a sus hijos (He 12:5-11)
+- No significa que no haya consecuencias — pérdida de galardón, testimonio dañado, disciplina severa
 - No es "una vez salvo, siempre salvo como excusa para vivir en pecado"
 
 **Lo que SÍ significa:**
@@ -126,7 +126,7 @@ Hay una confusión entre **evidencia** y **causa**.
 **Objeción 1**: "Hebreos 6:4-6 dice que los que una vez fueron iluminados pueden caer."
 **Respuesta**: La descripción ("iluminados, gustaron del don celestial, fueron partícipes del Espíritu Santo") describe a alguien que experimentó las bendiciones externas del evangelio sin necesariamente haber creído. El mismo autor dice en 6:9 que está convencido de **mejores cosas** para los creyentes genuinos — "cosas que pertenecen a la salvación".
 
-**Objeción 2**: "Mateo 24:13 dice 'el que persever hasta el fin será salvo'."
+**Objeción 2**: "Mateo 24:13 dice 'el que persevera hasta el fin será salvo'."
 **Respuesta**: La perseverancia es la **evidencia** de la salvación, no su **causa**. El que es genuinamente salvo persevera porque Dios lo preserva (Fil 1:6). La perseverancia distingue al verdadero creyente del profesante falso.
 
 **Objeción 3**: "Apocalipsis 3:5 dice que puede borrar el nombre del libro de la vida."
@@ -218,7 +218,7 @@ El sello es **marca de propiedad permanente**. La garantía (**ἀρραβών**
 #### 12. Romanos 8:9-11 — El Espíritu habita en ti
 **Evidencia**: *"Pero ustedes no están dominados por la naturaleza pecaminosa, sino por el Espíritu, si es que el Espíritu de Dios habita en ustedes."*
 
-Si el Espíritu habita en ti, estás vivo. La presencia del Espíritu es evidencia de vida eterna. El Espíritu no abita en alguien que pueda perder la salvación.
+Si el Espíritu habita en ti, estás vivo. La presencia del Espíritu es evidencia de vida eterna. El Espíritu no habita en alguien que pueda perder la salvación.
 
 #### 13. 2 Corintios 1:21-22 — Nos ha ungierto y marcado
 **Evidencia**: *"Pero Dios, quien nos confirmó junto con ustedes en Cristo y nos ungió, es Dios mismo. Él también nos marcó con un sello y puso en nuestros corazones el don del Espíritu como garantía."*
@@ -228,7 +228,7 @@ Triple acción divina: ungiendo, marcando, garantizando. Todo es obra de Dios, n
 ### Grupo 4: La Naturaleza de la Salvación y la Fe
 
 #### 14. Juan 5:24 — Ha pasado de muerte a vida
-**Evidencia**: *"El que oye mi palabra y cree al que meenvió, tiene vida eterna y no será condenado, sino que ha pasado de muerte a vida."*
+**Evidencia**: *"El que oye mi palabra y cree al que me envió, tiene vida eterna y no será condenado, sino que ha pasado de muerte a vida."*
 
 Tres tiempos verbales importantes:
 - **"Tiene"** (presente) — ya posee vida eterna ahora
@@ -299,7 +299,7 @@ La cadena no tiene eslabones débiles: conocidos → predestinados → llamados 
 "**No puede tocar**" (ἅπτομαι — *haptomai*) = no puede aferrarse, no puede agarrar firmemente. El maligno puede tentar, pero no puede arrebatar al que Dios protege.
 
 #### 26. Romanos 5:9-10 — Seguros por su sangre y vida
-**Evidencia**: *"Así que ahora, porque hemos sido declarados justos mediante su sangre, surely seremos salvos de la ira de Dios por él. Pues si cuando éramos enemigos de Dios fuimos reconciliados con él mediante la muerte de su Hijo, ahora que ya somos sus amigos, seguro que seremos salvos por la vida de su Hijo."*
+**Evidencia**: *"Así que ahora, porque hemos sido declarados justos mediante su sangre, seguramente seremos salvos de la ira de Dios por él. Pues si cuando éramos enemigos de Dios fuimos reconciliados con él mediante la muerte de su Hijo, ahora que ya somos sus amigos, seguro que seremos salvos por la vida de su Hijo."*
 
 Argumento **a fortiori** (de lo menor a lo mayor): si Dios nos salvó siendo enemigos, cuánto más nos guardará siendo amigos.
 
@@ -330,13 +330,13 @@ Jesús **confiesa** (presente continuo) a los suyos ante el Padre. Su intercesi�
 ### Grupo 1: Pasajes de Advertencia
 
 #### 1. Hebreos 6:4-6 — "Los que fueron iluminados pueden caer"
-**La objeción**: "Dice que los que una vez fueron iluminados, gustaron del don celestial, y fueron partícipes del Espíritu Santo pueden caer y ser imposible renovarlos."
+**La objeción**: "Dice que los que una vez fueron iluminados, gustaron del don celestial, y fueron partícipes del Espíritu Santo pueden caer, y es imposible renovarlos."
 
 **Refutación**:
 - **Contexto**: El autor está hablando a judíos cristianos en peligro de volver al judaísmo. Las advertencias son **preventivas**, no predictivas.
 - **Descripción**: "Iluminados" (φωτισθέντες — *phōtisthentes*) no es lo mismo que "creyentes". Describe **experiencia**, no **transformación**.
 - **El propio autor aclara en 6:9**: *"Queridos amigos, aunque hablamos así, estamos convencidos de que ustedes van mejor, encaminados hacia la salvación."* Pablo mismo dice que no cree que sus lectores estén en peligro real.
-- **"Imposible renovarlos"** (ἀδύνατον — *adynaton*) = inability, no prohibition. Es **imposible** porque han llegado a un estado de endurecimiento, no porque Dios no quiera perdonarlos.
+- **"Imposible renovarlos"** (ἀδύνατον — *adynaton*) = imposibilidad, no prohibición. Es **imposible** porque han llegado a un estado de endurecimiento, no porque Dios no quiera perdonarlos.
 
 #### 2. Hebreos 10:26-29 — "Queda el sacrificio"
 **La objeción**: "Dice que si pecamos deliberadamente después de recibir el conocimiento de la verdad, ya no queda sacrificio."
@@ -346,7 +346,7 @@ Jesús **confiesa** (presente continuo) a los suyos ante el Padre. Su intercesi�
 - **"Pecar deliberadamente"** (ἑκουσίως — *hekousiōs*) = conscientemente, voluntariamente. No describe al creyente que cae en pecado y se arrepiente, sino al que **rechaza deliberadamente** a Cristo.
 - **El contexto de 10:35-39**: *"No pierdan la confianza... el justo vivirá por fe. Pero si se retiran, yo no me complazco en ellos."* La advertencia es para **mantener la perseverancia**, no para amenazar con la pérdida de salvación.
 
-#### 3. 2 Pedro 2:20-22 — "Empeor que al principio"
+#### 3. 2 Pedro 2:20-22 — "Peor que al principio"
 **La objeción**: "Dice que si escaparon de las contaminaciones del mundo y luego vuelven, su estado final es peor."
 
 **Refutación**:
@@ -450,7 +450,7 @@ Jesús **confiesa** (presente continuo) a los suyos ante el Padre. Su intercesi�
 
 **Refutación**:
 - **Contexto**: Pablo está hablando de **falsos maestros** que enseñan doctrinas de demonios. No está hablando de creyentes genuinos que pierden la salvación.
-- **"Hypothetizando"** (ψευδολόγων — *pseudologōn*) = "hablando mentiras", "enseñando falsedades". Los que se apartaron **nunca tuvieron la fe verdadera**.
+- **"Diciendo mentiras"** (ψευδολόγων — *pseudologōn*) = "hablando mentiras", "enseñando falsedades". Los que se apartaron **nunca tuvieron la fe verdadera**.
 - **"La fe"** aquí se refiere a la **enseñanza ortodoxa**, no a la experiencia personal de fe.
 
 ### Grupo 4: Pasajes de Apostasía
@@ -527,7 +527,7 @@ Jesús **confiesa** (presente continuo) a los suyos ante el Padre. Su intercesi�
 **Refutación**:
 - **Contexto**: El autor está hablando de **rechazo deliberado** de Cristo, no de pecado cotidiano del creyente.
 - **"Pecar deliberadamente"** (ἑκουσίως ἁμαρτάνειν — *hekousiōs hamartanein*) = **decididamente**, **intencionalmente**, **con pleno conocimiento**. No describe al creyente que cae en pecado y se arrepiente.
-- **El sacrificio que queda**: El sacrificio de Cristo **nunca** queda invalidado. Lo que el autor dice es que **no hay otro sacrificio** besides el de Cristo. Si rechazas ese, no hay otro disponible.
+- **El sacrificio que queda**: El sacrificio de Cristo **nunca** queda invalidado. Lo que el autor dice es que **no hay otro sacrificio** salvo el de Cristo. Si rechazas ese, no hay otro disponible.
 
 #### 25. Santiago 2:14 — "La fe sin obras es muerta"
 **La objeción**: "La fe sin obras no salva."
@@ -567,7 +567,7 @@ Las 30 evidencias bíblicas analizadas se agrupan en seis categorías:
 
 3. **La Obra del Espíritu Santo** (4 evidencias): El sello es permanente, la garantía es el Espíritu mismo, Él habita en nosotros para siempre.
 
-4. **La Naturaleza de la Salvación y la Fe** (5 evidencias): La vida eterna es presente y completa, la fe produce transforms irreversible.
+4. **La Naturaleza de la Salvación y la Fe** (5 evidencias): La vida eterna es presente y completa, la fe produce transformaciones irreversibles.
 
 5. **La Perseverancia como Evidencia** (4 evidencias): Dios completa la obra que empezó, nos protege por Su poder, y da firmeza hasta el fin.
 

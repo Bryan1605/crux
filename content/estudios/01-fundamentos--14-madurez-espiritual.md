@@ -5,7 +5,7 @@ description: "Madurez espiritual es el crecimiento en el conocimiento y la obedi
 passage: "Hebreos 5:12-14"
 tags: ["fundamento", "doctrina/santificacion"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

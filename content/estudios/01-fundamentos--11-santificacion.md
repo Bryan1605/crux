@@ -5,7 +5,7 @@ description: "Santificación es el proceso por el cual Dios nos hace más pareci
 passage: "1 Tesalonicenses 4:3"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -63,7 +63,7 @@ Santificación es el **proceso por el cual Dios nos hace más parecidos a Cristo
 3. **Separación del pecado**: *"Aléjense de todo pecado sexual"* (1 Ts 4:3)
 4. **Comunión con Dios**: la santidad crece en la presencia de Dios, no en el aislamiento
 
-**Error común**: Pensar que santificación es solo "dejar de pecar". Es **mucho más**: es volverse como Cristo en carácter, amor, paciencia, humildad. No es solo negativo (dejar el pecado) sino positivo (crecer en virtud).
+**Error común**: Pensar que la santificación es solo "dejar de pecar". Es **mucho más**: es volverse como Cristo en carácter, amor, paciencia, humildad. No es solo negativo (dejar el pecado) sino positivo (crecer en virtud).
 
 **Preguntas para reflexionar:**
 1. ¿Estás cooperando con el Espíritu en el proceso de santificación?

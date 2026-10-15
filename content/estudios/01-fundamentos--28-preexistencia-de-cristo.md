@@ -5,7 +5,7 @@ description: "La preexistencia de Cristo significa que Jesús existía antes de 
 passage: "Juan 1:1-3"
 tags: ["fundamento", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

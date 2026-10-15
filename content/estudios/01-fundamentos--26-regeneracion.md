@@ -5,7 +5,7 @@ description: "Regeneración es el acto soberano de Dios por el cual imparte vida
 passage: "Juan 3:3"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

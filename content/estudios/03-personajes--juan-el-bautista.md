@@ -161,12 +161,12 @@ Josefo, *Antigüedades judías* **18.5.2** (18.116-118), confirma independientem
 
 ## Fuentes
 
-- [Análisis: ¿Perdió Juan el Bautista su fe?](../../¿Perdió Juan el Bautista su fe en Jesús como Mesías (Mateo 113; Lucas 719).md)
-- [Guion largo del video (Video Juan)](../../Video Juan/Guion_Largo_Juan_Bautista.md)
-- [Guion short del video (Video Juan)](../../Video Juan/Guion_Short_Juan_Bautista.md)
-- [Guion video Logos & Espada](../../LogosyEspada/Juan Bautista/🎬 Video Largo - Juan Bautista (Logos y Espada).md)
-- [Guion short Logos & Espada](../../LogosyEspada/Juan Bautista/📱 Short - Juan Bautista (Logos y Espada).md)
-- [Biblia Patrística Completa — Ireneo, Contra las herejías I.9-11](../../Biblia_Patristica_Completa.md)
-- [Refutación doctrinal de Shincheonji — patrón de demonización](../../Shincheonji/Refutacion_Doctrinal_Shincheonji.md)
-- [Biblia NTV completa (texto de pasajes citados)](../../biblia-pdf-ntv-nueva-traduccion-viviente.md)
+- [Análisis: ¿Perdió Juan el Bautista su fe?](../../../¿Perdió Juan el Bautista su fe en Jesús como Mesías (Mateo 113; Lucas 719).md)
+- [Guion largo del video (Video Juan)](../../../Video Juan/Guion_Largo_Juan_Bautista.md)
+- [Guion short del video (Video Juan)](../../../Video Juan/Guion_Short_Juan_Bautista.md)
+- [Guion video Logos & Espada](../../../LogosyEspada/Juan Bautista/🎬 Video Largo - Juan Bautista (Logos y Espada).md)
+- [Guion short Logos & Espada](../../../LogosyEspada/Juan Bautista/📱 Short - Juan Bautista (Logos y Espada).md)
+- [Biblia Patrística Completa — Ireneo, Contra las herejías III.9-11](../../../Biblia_Patristica_Completa.md)
+- [Refutación doctrinal de Shincheonji — patrón de demonización](../../../Shincheonji/Refutacion_Doctrinal_Shincheonji.md)
+- [Biblia NTV completa (texto de pasajes citados)](../../../biblia-pdf-ntv-nueva-traduccion-viviente.md)
 - Josefo, *Antigüedades judías* 18.5.2 — [texto Whiston (Lexundria)](https://lexundria.com/j_aj/18.116-18.118/wst)

@@ -1,16 +1,16 @@
 ---
 title: "Llegar a ser hijo de Dios"
 category: "01-fundamentos"
-description: "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios que recibe al que cree."
+description: "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios mediante el cual él…"
 passage: "Juan 1:12-13"
 tags: ["fundamento", "doctrina/soteriologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
 
-Se llega a ser hijo de Dios por **fe en Jesucristo** y **nuevo nacimiento espiritual**. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios que recibe al que cree.
+Se llega a ser hijo de Dios por **fe en Jesucristo** y **nuevo nacimiento espiritual**. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios mediante el cual él recibe al que cree.
 
 > **Juan 1:12-13** — *"A todos los que creyeron en él y lo recibieron, les dio el derecho de llegar a ser hijos de Dios. Ellos nacen de nuevo, no mediante un nacimiento físico como resultado de la pasión o de la iniciativa humana, sino por medio de un nacimiento que proviene de Dios."*
 

@@ -5,7 +5,7 @@ description: "La humanidad de Cristo significa que Jesús fue completamente huma
 passage: "Hebreos 4:15"
 tags: ["fundamento", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

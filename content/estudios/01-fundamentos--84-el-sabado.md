@@ -1,14 +1,12 @@
 ---
-title: "El Sabado"
+title: "El Sábado / Día de Reposo"
 category: "01-fundamentos"
-description: "Estudio del segundo cerebro bíblico."
+description: "El sábado fue el séptimo día de la semana (sábado), instituido por Dios en el Génesis como día de descanso. Bajo el Nuevo Pacto, el mandamiento del sábado fue cumplido en Cristo, y la…"
 passage: "Colosenses 2:16-17"
 tags: ["fundamento", "otros"]
 aliases: []
-updated: "2026-08-23"
+updated: "2026-09-26"
 ---
-
-w# 84. El Sábado / Día de Reposo
 
 ## 1. Definición bíblica
 

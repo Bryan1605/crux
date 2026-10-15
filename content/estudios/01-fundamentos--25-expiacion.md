@@ -5,7 +5,7 @@ description: "Expiación significa cubrir o eliminar el pecado mediante un sacri
 passage: "Romanos 3:25"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

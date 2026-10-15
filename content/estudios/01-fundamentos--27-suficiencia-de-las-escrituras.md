@@ -5,7 +5,7 @@ description: "La suficiencia de las Escrituras significa que la Biblia contiene 
 passage: "2 Timoteo 3:16-17"
 tags: ["fundamento", "doctrina/bibliologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

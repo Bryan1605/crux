@@ -6,7 +6,7 @@ description: "Contraste punto por punto entre la doctrina de Shincheonji (extra�
 passage: "Efesios 2:8-9"
 tags: ["shincheonji/refutacion", "apologetica/contraste", "doctrina/biblica"]
 aliases: ["Refutación doctrinal Shincheonji", "Contraste bíblico Shincheonji"]
-updated: "2026-07-26"
+updated: "2026-09-26"
 ---
 
 # Refutación Doctrinal — Shincheonji vs. La Biblia
@@ -135,5 +135,5 @@ Shincheonji cita este versículo para proteger su doctrina, pero son ellos quien
 
 ## Fuentes
 
-- [Refutación completa](../../../Shincheonji/Refutacion_Doctrinal_Shincheonji.md)
-- [Análisis del chat](../../../Shincheonji/Analisis_Doctrina_Shincheonji_Chat.md)
+- [Refutación completa](../../../../Shincheonji/Refutacion_Doctrinal_Shincheonji.md)
+- [Análisis del chat](../../../../Shincheonji/Analisis_Doctrina_Shincheonji_Chat.md)

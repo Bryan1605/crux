@@ -5,7 +5,7 @@ description: "Purificación es el proceso por el cual Dios limpia al creyente de
 passage: "1 Juan 1:7-9"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

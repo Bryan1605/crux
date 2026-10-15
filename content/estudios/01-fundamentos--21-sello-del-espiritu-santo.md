@@ -5,7 +5,7 @@ description: "El sello del Espíritu Santo es la marca de propiedad y seguridad 
 passage: "Efesios 1:13-14"
 tags: ["fundamento", "doctrina/soteriologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

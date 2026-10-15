@@ -5,7 +5,7 @@ description: "No. La salvación no es un premio ni un salario — es un regalo. 
 passage: "Efesios 2:8-9"
 tags: ["fundamento", "doctrina/soteriologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -43,7 +43,7 @@ updated: "2026-07-25"
 **Lo que NO significa:**
 - No es una excusa para vivir en pecado (Ro 6:1-2)
 - No significa que las buenas obras sean innecesarias — son el **resultado** de la salvación, no la causa
-- No significa que la conducta no importa — importa para la comunión, testimonio, galardón
+- No significa que la conducta no importe — importa para la comunión, testimonio, galardón
 
 **¿Qué lugar tienen las buenas obras entonces?**
 > **Efesios 2:10** — *"Pues somos la obra maestra de Dios. Él nos creó de nuevo en Cristo Jesús, a fin de que hagamos las cosas buenas que preparó para nosotros tiempo atrás."*

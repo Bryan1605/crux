@@ -5,7 +5,7 @@ description: "Cristo es nuestro Mediador porque es el único puente entre Dios y
 passage: "1 Timoteo 2:5-6"
 tags: ["fundamento", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -79,7 +79,7 @@ Jesús no es solo un Mediador y Sumo Sacerdote en el pasado. **Ahora mismo** est
 
 ### 3.1 Intercede por nosotros (Romanos 8:34; Hebreos 7:25)
 
-Jesús presentá continuamente Su sacrificio perfecto ante el Padre como base para nuestra aceptación. Esto no significa que el Padre sea reacio a perdonar y Jesús tenga que convencerlo. El Padre y el Hijo están de acuerdo. La intercesión de Cristo es la **garantía** de que nuestra salvación es segura.
+Jesús presenta continuamente Su sacrificio perfecto ante el Padre como base para nuestra aceptación. Esto no significa que el Padre sea reacio a perdonar y Jesús tenga que convencerlo. El Padre y el Hijo están de acuerdo. La intercesión de Cristo es la **garantía** de que nuestra salvación es segura.
 
 **Imagina una corte celestial:**
 - El acusador (Satanás) presenta tus pecados (Ap 12:10)

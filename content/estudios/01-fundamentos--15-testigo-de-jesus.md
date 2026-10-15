@@ -5,7 +5,7 @@ description: "Un testigo de Jesús es alguien que habla de Cristo por experienci
 passage: "Hechos 1:8"
 tags: ["fundamento", "discipulado"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

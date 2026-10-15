@@ -5,7 +5,7 @@ description: "No. La vida eterna es eterna por definición. No es \"vida larga\"
 passage: "Juan 10:28"
 tags: ["fundamento", "doctrina/soteriologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

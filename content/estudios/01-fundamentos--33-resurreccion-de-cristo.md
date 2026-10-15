@@ -5,7 +5,7 @@ description: "La resurrección de Cristo significa que Jesús realmente volvió 
 passage: "1 Corintios 15:17"
 tags: ["fundamento", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

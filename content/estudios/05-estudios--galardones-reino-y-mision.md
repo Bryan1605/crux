@@ -4,7 +4,7 @@ category: "05-estudios"
 description: "Pablo habla de dos tipos de materiales para edificar sobre el fundamento (Cristo):"
 tags: ["estudio", "escatologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 # Galardones, Reino Venidero y tu misión personal

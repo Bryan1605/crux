@@ -1,11 +1,11 @@
 ---
-title: "Soldado en su milicia"
+title: "Soldado en la milicia"
 category: "01-fundamentos"
 description: "Un soldado en la milicia de Dios es un creyente que soporta dificultades con disciplina para cumplir la misión que Cristo le encomendó. La vida cristiana no es un paseo; es una batalla…"
 passage: "2 Timoteo 2:3-4"
 tags: ["fundamento", "discipulado"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

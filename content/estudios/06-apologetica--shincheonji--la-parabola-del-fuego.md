@@ -6,7 +6,7 @@ description: "Clase del nivel introductorio (Lección 21) que explica Lucas 12:4
 passage: "Lucas 12:49"
 tags: ["shincheonji/clase", "hermeneutica/alegorica", "doctrina/herejia"]
 aliases: ["Parábola del Fuego", "Fuego como palabra de juicio"]
-updated: "2026-07-26"
+updated: "2026-09-26"
 ---
 
 # La Parábola del Fuego — Clase Shincheonji
@@ -76,4 +76,4 @@ Clase del nivel introductorio (Lección 21) que explica Lucas 12:49 ("Fuego vine
 
 ## Fuentes
 
-- [Transcripción completa de la clase](../../../Shincheonji/LaParaboladelFuego20251205.md)
+- [Transcripción completa de la clase](../../../../Shincheonji/LaParaboladelFuego20251205.md)

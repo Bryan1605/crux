@@ -5,7 +5,7 @@ description: "Propiciación significa apartar la ira de Dios mediante un sacrifi
 passage: "Romanos 3:25"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

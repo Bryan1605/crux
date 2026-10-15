@@ -5,7 +5,7 @@ description: "No. La filiación (ser hijo de Dios) no se adquiere por conducta n
 passage: "1 Juan 3:1"
 tags: ["fundamento", "doctrina/soteriologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -40,8 +40,8 @@ updated: "2026-07-25"
 
 **Lo que NO significa:**
 - No es excusa para la irreverencia — el respeto al Padre es parte de la relación
-- No significa que la disciplina no existe — el Padre disciplina a sus hijos (He 12:5-11)
-- No significa que la conducta no importa — la conducta afecta tu **comunión**, testimonio y galardón
+- No significa que la disciplina no exista — el Padre disciplina a sus hijos (He 12:5-11)
+- No significa que la conducta no importe — la conducta afecta tu **comunión**, testimonio y galardón
 
 **La diferencia entre posición y comunión:**
 

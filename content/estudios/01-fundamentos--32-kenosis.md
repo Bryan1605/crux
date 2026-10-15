@@ -5,7 +5,7 @@ description: "Kenosis viene del griego κένωσις (kenōsis), que significa 
 passage: "Filipenses 2:5-8"
 tags: ["fundamento", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

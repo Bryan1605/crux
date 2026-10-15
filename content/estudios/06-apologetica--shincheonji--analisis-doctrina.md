@@ -6,7 +6,7 @@ description: "Análisis forense de un chat real de WhatsApp del \"Curso Virtual 
 passage: "Marcos 4:10-12"
 tags: ["shincheonji/analisis", "hermeneutica/alegorica", "apologetica/secta"]
 aliases: ["Análisis Doctrinal Shincheonji", "Chat WhatsApp Shincheonji"]
-updated: "2026-07-26"
+updated: "2026-09-26"
 ---
 
 # Análisis Doctrinal — Curso Virtual de Teología (Shincheonji)
@@ -95,5 +95,5 @@ Preguntas clave del examen para pasar de nivel introductorio:
 
 ## Fuentes
 
-- [Análisis completo del chat](../../../Shincheonji/Analisis_Doctrina_Shincheonji_Chat.md)
-- [Chat original de WhatsApp](../../../Shincheonji/Chat de WhatsApp con Curso Virtual Teología/)
+- [Análisis completo del chat](../../../../Shincheonji/Analisis_Doctrina_Shincheonji_Chat.md)
+- [Chat original de WhatsApp](../../../../Shincheonji/Chat de WhatsApp con Curso Virtual Teología/)

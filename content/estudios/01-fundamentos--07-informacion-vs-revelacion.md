@@ -5,7 +5,7 @@ description: "La información por la razón es el conocimiento que el ser humano
 passage: "1 Corintios 2:9-14"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

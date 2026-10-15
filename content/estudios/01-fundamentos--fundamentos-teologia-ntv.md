@@ -4,7 +4,7 @@ category: "01-fundamentos"
 description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md"
 tags: ["fundamento", "doctrina/general"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 # Fundamentos de doctrina — NTV

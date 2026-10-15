@@ -1,7 +1,7 @@
 {
   "v": 1,
   "tipos": {
-    "estudio": 171,
+    "estudio": 188,
     "personaje": 17,
     "concilio": 8,
     "herejia": 9
@@ -49,12 +49,12 @@
       "href": "/estudio/01-fundamentos--04-llegar-a-ser-hijo-de-dios",
       "title": "Llegar a ser hijo de Dios",
       "sub": "Fundamentos · Juan 1:12-13",
-      "desc": "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios que recibe al que cree.",
+      "desc": "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios mediante el cual él…",
       "tags": [
         "fundamento",
         "doctrina/soteriologia"
       ],
-      "fold": "llegar a ser hijo de dios fundamentos juan 1:12-13 se llega a ser hijo de dios por fe en jesucristo y nuevo nacimiento espiritual. no es por nacimiento fisico, religion, herencia o esfuerzo moral. es un acto de dios que recibe al que cree. fundamento doctrina/soteriologia"
+      "fold": "llegar a ser hijo de dios fundamentos juan 1:12-13 se llega a ser hijo de dios por fe en jesucristo y nuevo nacimiento espiritual. no es por nacimiento fisico, religion, herencia o esfuerzo moral. es un acto de dios mediante el cual el… fundamento doctrina/soteriologia"
     },
     {
       "tipo": "estudio",
@@ -199,27 +199,27 @@
       "tipo": "estudio",
       "id": "01-fundamentos--16-obrero-en-la-mies",
       "href": "/estudio/01-fundamentos--16-obrero-en-la-mies",
-      "title": "Obrero en su mies",
+      "title": "Obrero en la mies",
       "sub": "Fundamentos · Mateo 9:37-38",
       "desc": "Un obrero en la mies es todo creyente que participa activamente en la cosecha espiritual que Dios está recogiendo. No es solo el pastor o el misionero; es cualquier discípulo que ora, va y…",
       "tags": [
         "fundamento",
         "discipulado"
       ],
-      "fold": "obrero en su mies fundamentos mateo 9:37-38 un obrero en la mies es todo creyente que participa activamente en la cosecha espiritual que dios esta recogiendo. no es solo el pastor o el misionero; es cualquier discipulo que ora, va y… fundamento discipulado"
+      "fold": "obrero en la mies fundamentos mateo 9:37-38 un obrero en la mies es todo creyente que participa activamente en la cosecha espiritual que dios esta recogiendo. no es solo el pastor o el misionero; es cualquier discipulo que ora, va y… fundamento discipulado"
     },
     {
       "tipo": "estudio",
       "id": "01-fundamentos--17-soldado-en-la-milicia",
       "href": "/estudio/01-fundamentos--17-soldado-en-la-milicia",
-      "title": "Soldado en su milicia",
+      "title": "Soldado en la milicia",
       "sub": "Fundamentos · 2 Timoteo 2:3-4",
       "desc": "Un soldado en la milicia de Dios es un creyente que soporta dificultades con disciplina para cumplir la misión que Cristo le encomendó. La vida cristiana no es un paseo; es una batalla…",
       "tags": [
         "fundamento",
         "discipulado"
       ],
-      "fold": "soldado en su milicia fundamentos 2 timoteo 2:3-4 un soldado en la milicia de dios es un creyente que soporta dificultades con disciplina para cumplir la mision que cristo le encomendo. la vida cristiana no es un paseo; es una batalla… fundamento discipulado"
+      "fold": "soldado en la milicia fundamentos 2 timoteo 2:3-4 un soldado en la milicia de dios es un creyente que soporta dificultades con disciplina para cumplir la mision que cristo le encomendo. la vida cristiana no es un paseo; es una batalla… fundamento discipulado"
     },
     {
       "tipo": "estudio",
@@ -1077,14 +1077,14 @@
       "tipo": "estudio",
       "id": "01-fundamentos--84-el-sabado",
       "href": "/estudio/01-fundamentos--84-el-sabado",
-      "title": "El Sabado",
+      "title": "El Sábado / Día de Reposo",
       "sub": "Fundamentos · Colosenses 2:16-17",
-      "desc": "Estudio del segundo cerebro bíblico.",
+      "desc": "El sábado fue el séptimo día de la semana (sábado), instituido por Dios en el Génesis como día de descanso. Bajo el Nuevo Pacto, el mandamiento del sábado fue cumplido en Cristo, y la…",
       "tags": [
         "fundamento",
         "otros"
       ],
-      "fold": "el sabado fundamentos colosenses 2:16-17 estudio del segundo cerebro biblico. fundamento otros"
+      "fold": "el sabado / dia de reposo fundamentos colosenses 2:16-17 el sabado fue el septimo dia de la semana (sabado), instituido por dios en el genesis como dia de descanso. bajo el nuevo pacto, el mandamiento del sabado fue cumplido en cristo, y la… fundamento otros"
     },
     {
       "tipo": "estudio",
@@ -1169,14 +1169,14 @@
       "tipo": "estudio",
       "id": "01-fundamentos--legalismofranciscoisrael",
       "href": "/estudio/01-fundamentos--legalismofranciscoisrael",
-      "title": "LegalismoFranciscoIsrael",
+      "title": "Legalismo de Francisco Israel",
       "sub": "Fundamentos",
-      "desc": "Estudio del segundo cerebro bíblico.",
+      "desc": "A continuación se presenta el resumen, los puntos principales fundamentados en los versículos compartidos y la postura del autor Francisco Israel en su video titulado 54 Evidencias Bíblicas…",
       "tags": [
         "estudio",
         "doctrina/soteriologia"
       ],
-      "fold": "legalismofranciscoisrael fundamentos estudio del segundo cerebro biblico. estudio doctrina/soteriologia"
+      "fold": "legalismo de francisco israel fundamentos a continuacion se presenta el resumen, los puntos principales fundamentados en los versiculos compartidos y la postura del autor francisco israel en su video titulado 54 evidencias biblicas… estudio doctrina/soteriologia"
     },
     {
       "tipo": "estudio",
@@ -1193,6 +1193,202 @@
     },
     {
       "tipo": "estudio",
+      "id": "02-libros-biblicos--carta-de-judas",
+      "href": "/estudio/02-libros-biblicos--carta-de-judas",
+      "title": "La carta de Judas — Estudio completo",
+      "sub": "Libros bíblicos",
+      "desc": "La carta de Judas es un escrito breve de 25 versículos, ubicado en el NT entre las cartas de Juan y el Apocalipsis. No es la más corta del NT (2 Juan tiene 13 versículos y 3 Juan, 15), pero…",
+      "tags": [
+        "estudio",
+        "carta",
+        "judas"
+      ],
+      "fold": "la carta de judas — estudio completo libros biblicos la carta de judas es un escrito breve de 25 versiculos, ubicado en el nt entre las cartas de juan y el apocalipsis. no es la mas corta del nt (2 juan tiene 13 versiculos y 3 juan, 15), pero… estudio carta judas carta de judas epistola de judas judas 1"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--01-pedro",
+      "href": "/estudio/03-personajes--apostoles--01-pedro",
+      "title": "Pedro — El apóstol de la roca",
+      "sub": "Personajes · Mateo 16:16-19",
+      "desc": "Pedro tenía dos nombres: Simón, su nombre de nacimiento, y Pedro, que significa \"roca\" y que Jesús le puso (Mateo 16:18). [NTV]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "pedro — el apostol de la roca personajes apostoles mateo 16:16-19 pedro tenia dos nombres: simon, su nombre de nacimiento, y pedro, que significa \"roca\" y que jesus le puso (mateo 16:18). [ntv] personaje/apostol estudio simon pedro apostol pedro"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--02-pablo",
+      "href": "/estudio/03-personajes--apostoles--02-pablo",
+      "title": "Pablo — El apóstol de las naciones",
+      "sub": "Personajes · Filipenses 2:6-11",
+      "desc": "Pablo es el único apóstol cuyo nombre aparece en las listas de los Doce y que no fue uno de los doce originales. [NTV] Su nombre de nacimiento es Saulo (Hechos 7:58; 22:3), y desde Hechos…",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "pablo — el apostol de las naciones personajes apostoles filipenses 2:6-11 pablo es el unico apostol cuyo nombre aparece en las listas de los doce y que no fue uno de los doce originales. [ntv] su nombre de nacimiento es saulo (hechos 7:58; 22:3), y desde hechos… personaje/apostol estudio saulo apostol pablo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--03-santiago-el-mayor",
+      "href": "/estudio/03-personajes--apostoles--03-santiago-el-mayor",
+      "title": "Santiago el Mayor — El primer apóstol mártir",
+      "sub": "Personajes · Hechos 12:1-2",
+      "desc": "Santiago es uno de los doce, hijo de Zebedeo y hermano de Juan (Mateo 4:21). [NTV] La NTV no da su nombre de nacimiento ni su edad; lo identifica siempre como \"Santiago, hijo de Zebedeo\" o…",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "santiago el mayor — el primer apostol martir personajes apostoles hechos 12:1-2 santiago es uno de los doce, hijo de zebedeo y hermano de juan (mateo 4:21). [ntv] la ntv no da su nombre de nacimiento ni su edad; lo identifica siempre como \"santiago, hijo de zebedeo\" o… personaje/apostol estudio santiago el mayor santiago hijo de zebedeo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--04-juan-el-apostol",
+      "href": "/estudio/03-personajes--apostoles--04-juan-el-apostol",
+      "title": "Juan el apóstol — El discípulo a quien Jesús amaba",
+      "sub": "Personajes · Juan 21:20-24",
+      "desc": "Juan es uno de los doce, hijo de Zebedeo y hermano de Santiago (Mateo 4:21; Marcos 1:19). [NTV] La NTV lo identifica siempre como parte del par \"Santiago y Juan, hijos de Zebedeo\" o \"los…",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "juan el apostol — el discipulo a quien jesus amaba personajes apostoles juan 21:20-24 juan es uno de los doce, hijo de zebedeo y hermano de santiago (mateo 4:21; marcos 1:19). [ntv] la ntv lo identifica siempre como parte del par \"santiago y juan, hijos de zebedeo\" o \"los… personaje/apostol estudio juan juan el apostol juan hijo de zebedeo el discipulo a quien jesus amaba"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--05-andres",
+      "href": "/estudio/03-personajes--apostoles--05-andres",
+      "title": "Andrés — El primero en seguir, el que lleva a otros",
+      "sub": "Personajes · Juan 1:40-42",
+      "desc": "Andrés es uno de los doce, hermano de Simón Pedro (Juan 1:40). [NTV] La NTV lo presenta como uno de los dos discípulos de Juan el Bautista que siguieron a Jesús después de oír: \"¡Miren!…",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "andres — el primero en seguir, el que lleva a otros personajes apostoles juan 1:40-42 andres es uno de los doce, hermano de simon pedro (juan 1:40). [ntv] la ntv lo presenta como uno de los dos discipulos de juan el bautista que siguieron a jesus despues de oir: \"¡miren!… personaje/apostol estudio andres andres hermano de pedro"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--06-felipe",
+      "href": "/estudio/03-personajes--apostoles--06-felipe",
+      "title": "Felipe — El de Betsaida, el que trae a Natanael",
+      "sub": "Personajes · Juan 1:43-46",
+      "desc": "Felipe es uno de los doce, de Betsaida, \"el pueblo natal de Andrés y Pedro\" (Juan 1:44). [NTV] La NTV lo presenta cuando Jesús lo encuentra y le dice: \"Ven, sígueme\" (Juan 1:43). [NTV]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "felipe — el de betsaida, el que trae a natanael personajes apostoles juan 1:43-46 felipe es uno de los doce, de betsaida, \"el pueblo natal de andres y pedro\" (juan 1:44). [ntv] la ntv lo presenta cuando jesus lo encuentra y le dice: \"ven, sigueme\" (juan 1:43). [ntv] personaje/apostol estudio felipe felipe de betsaida"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--07-bartolome",
+      "href": "/estudio/03-personajes--apostoles--07-bartolome",
+      "title": "Bartolomé (Natanael) — El israelita sin engaño",
+      "sub": "Personajes · Juan 1:45-51",
+      "desc": "Bartolomé aparece en las cuatro listas de los Doce: Mateo 10:3, Marcos 3:18, Lucas 6:14-15 y Hechos 1:13. [NTV] En las tres listas sinópticas aparece inmediatamente después de Felipe:…",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "bartolome (natanael) — el israelita sin engano personajes apostoles juan 1:45-51 bartolome aparece en las cuatro listas de los doce: mateo 10:3, marcos 3:18, lucas 6:14-15 y hechos 1:13. [ntv] en las tres listas sinopticas aparece inmediatamente despues de felipe:… personaje/apostol estudio bartolome natanael bartolome (natanael)"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--08-mateo",
+      "href": "/estudio/03-personajes--apostoles--08-mateo",
+      "title": "Mateo — El cobrador de impuestos que dejó todo",
+      "sub": "Personajes · Mateo 9:9-13",
+      "desc": "Mateo aparece en las cuatro listas de los Doce (Mateo 10:3; Marcos 3:18; Lucas 6:15; Hechos 1:13). [NTV] En la primera de esas listas aparece con su antiguo oficio: \"Mateo (el cobrador de…",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "mateo — el cobrador de impuestos que dejo todo personajes apostoles mateo 9:9-13 mateo aparece en las cuatro listas de los doce (mateo 10:3; marcos 3:18; lucas 6:15; hechos 1:13). [ntv] en la primera de esas listas aparece con su antiguo oficio: \"mateo (el cobrador de… personaje/apostol estudio mateo mateo el cobrador de impuestos levi"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--09-tomas",
+      "href": "/estudio/03-personajes--apostoles--09-tomas",
+      "title": "Tomás — De la incredulidad a \"Mi Señor y mi Dios\"",
+      "sub": "Personajes · Juan 20:24-29",
+      "desc": "Tomás aparece en las cuatro listas de los Doce (Mateo 10:3; Marcos 3:18; Lucas 6:15; Hechos 1:13). [NTV]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "tomas — de la incredulidad a \"mi senor y mi dios\" personajes apostoles juan 20:24-29 tomas aparece en las cuatro listas de los doce (mateo 10:3; marcos 3:18; lucas 6:15; hechos 1:13). [ntv] personaje/apostol estudio tomas tomas el gemelo didimo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--10-santiago-el-menor",
+      "href": "/estudio/03-personajes--apostoles--10-santiago-el-menor",
+      "title": "Santiago el Menor — El hijo de Alfeo",
+      "sub": "Personajes · Marcos 15:40",
+      "desc": "Santiago aparece en las cuatro listas de los Doce con el mismo calificativo: \"Santiago (hijo de Alfeo)\" — Mateo 10:3, Marcos 3:18, Lucas 6:15 y Hechos 1:13. [NTV]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "santiago el menor — el hijo de alfeo personajes apostoles marcos 15:40 santiago aparece en las cuatro listas de los doce con el mismo calificativo: \"santiago (hijo de alfeo)\" — mateo 10:3, marcos 3:18, lucas 6:15 y hechos 1:13. [ntv] personaje/apostol estudio santiago el menor santiago hijo de alfeo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--11-simon-zelote",
+      "href": "/estudio/03-personajes--apostoles--11-simon-zelote",
+      "title": "Simón el Zelote — El nacionalista entre los Doce",
+      "sub": "Personajes · Lucas 6:15",
+      "desc": "Simón aparece en las cuatro listas de los Doce, y en las cuatro lleva el mismo apelativo: \"el zelote\" — Mateo 10:4, Marcos 3:18, Lucas 6:15 y Hechos 1:13. [NTV]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "simon el zelote — el nacionalista entre los doce personajes apostoles lucas 6:15 simon aparece en las cuatro listas de los doce, y en las cuatro lleva el mismo apelativo: \"el zelote\" — mateo 10:4, marcos 3:18, lucas 6:15 y hechos 1:13. [ntv] personaje/apostol estudio simon el zelote simon el cananeo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--12-judas-tadeo",
+      "href": "/estudio/03-personajes--apostoles--12-judas-tadeo",
+      "title": "Judas Tadeo — El apóstol de los tres nombres",
+      "sub": "Personajes · Juan 14:22-24",
+      "desc": "Pocos apóstoles plantean un problema de identidad tan enredado. En el NT este hombre recibe tres designaciones distintas, y la relación entre ellas no está dicha en el texto: [Estudio]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "judas tadeo — el apostol de los tres nombres personajes apostoles juan 14:22-24 pocos apostoles plantean un problema de identidad tan enredado. en el nt este hombre recibe tres designaciones distintas, y la relacion entre ellas no esta dicha en el texto: [estudio] personaje/apostol estudio judas tadeo tadeo judas hijo de santiago lebeo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--13-matias",
+      "href": "/estudio/03-personajes--apostoles--13-matias",
+      "title": "Matías — El apóstol elegido por sorteo",
+      "sub": "Personajes · Hechos 1:23-26",
+      "desc": "Matías no aparece ni una sola vez en los evangelios. Tampoco en las cartas ni en el Apocalipsis. Todas sus menciones en el NT están concentradas en un solo pasaje: Hechos 1:15-26. [NTV]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "matias — el apostol elegido por sorteo personajes apostoles hechos 1:23-26 matias no aparece ni una sola vez en los evangelios. tampoco en las cartas ni en el apocalipsis. todas sus menciones en el nt estan concentradas en un solo pasaje: hechos 1:15-26. [ntv] personaje/apostol estudio matias el apostol elegido por sorteo"
+    },
+    {
+      "tipo": "estudio",
+      "id": "03-personajes--apostoles--14-judas-iscariote",
+      "href": "/estudio/03-personajes--apostoles--14-judas-iscariote",
+      "title": "Judas Iscariote — El apóstol que traicionó",
+      "sub": "Personajes · Mateo 26:14-16",
+      "desc": "Es el único apóstol al que el NT identifica por su traición más que por cualquier otra cosa. Aparece en las cuatro listas de los Doce, siempre al final: [NTV]",
+      "tags": [
+        "personaje/apostol",
+        "estudio"
+      ],
+      "fold": "judas iscariote — el apostol que traiciono personajes apostoles mateo 26:14-16 es el unico apostol al que el nt identifica por su traicion mas que por cualquier otra cosa. aparece en las cuatro listas de los doce, siempre al final: [ntv] personaje/apostol estudio judas iscariote el traidor"
+    },
+    {
+      "tipo": "estudio",
       "id": "03-personajes--juan-el-bautista",
       "href": "/estudio/03-personajes--juan-el-bautista",
       "title": "Juan el Bautista",
@@ -1205,6 +1401,20 @@
         "patristica/ireneo"
       ],
       "fold": "juan el bautista personajes mateo 11:2-11 juan el bautista es el profeta que preparo el camino para el mesias, bautizo a jesus y fue ejecutado por herodes antipas. jesus lo llamo el hombre mas grande nacido de mujer (mateo 11:11).… personaje/profeta personaje/nuevo-testamento apologetica/sectas patristica/ireneo juan el bautista juan el bautizador juan precursor"
+    },
+    {
+      "tipo": "estudio",
+      "id": "04-doctrinas--la-muerte-que-produce-el-pecado",
+      "href": "/estudio/04-doctrinas--la-muerte-que-produce-el-pecado",
+      "title": "La muerte que produce el pecado (Santiago 1:14-16)",
+      "sub": "Doctrinas · Santiago 1:14-16",
+      "desc": "Esta pregunta une dos cosas que la Biblia mantiene juntas: la realidad del pecado (la concupiscencia existe en todo ser humano, y ceder a ella es posible para todos) y la enseñanza de…",
+      "tags": [
+        "doctrina/hamartiologia",
+        "doctrina/soteriologia",
+        "estudio"
+      ],
+      "fold": "la muerte que produce el pecado (santiago 1:14-16) doctrinas santiago 1:14-16 esta pregunta une dos cosas que la biblia mantiene juntas: la realidad del pecado (la concupiscencia existe en todo ser humano, y ceder a ella es posible para todos) y la ensenanza de… doctrina/hamartiologia doctrina/soteriologia estudio"
     },
     {
       "tipo": "estudio",
@@ -1260,6 +1470,19 @@
         "vida-cristiana"
       ],
       "fold": "estudio: el dolor de la solteria y como ir a cristo en medio de el estudios tematicos basado exclusivamente en la ntv (nueva traduccion viviente) fuente: d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md estudio vida-cristiana"
+    },
+    {
+      "tipo": "estudio",
+      "id": "05-estudios--vencer-lujuria",
+      "href": "/estudio/05-estudios--vencer-lujuria",
+      "title": "Plan práctico: Vencer la lujuria",
+      "sub": "Estudios temáticos",
+      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "tags": [
+        "estudio",
+        "santificacion"
+      ],
+      "fold": "plan practico: vencer la lujuria estudios tematicos basado exclusivamente en la ntv (nueva traduccion viviente) fuente: d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md estudio santificacion"
     },
     {
       "tipo": "estudio",

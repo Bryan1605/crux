@@ -5,7 +5,7 @@ description: "Los hijos de Dios son salvos de la muerte espiritual, el poder del
 passage: "Efesios 2:1-5"
 tags: ["fundamento", "doctrina/soteriologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -18,7 +18,7 @@ Los hijos de Dios son salvos de **la muerte espiritual, el poder del pecado, la 
 
 **"Estaban muertos"** — la muerte más grave no es física sino **espiritual**. Separación de Dios. De eso nos salva: de estar muertos en vida.
 
-**"Obedeciendo al diablo"** — antes de ser salvos, no éramos neutrales. Estábamos bajo el dominio del maligno. La salvación nos traslada de reino.
+**"Obedeciendo al diablo"** — antes de ser salvos, no éramos neutrales. Estábamos bajo el dominio del maligno. La salvación nos traslada de un reino a otro.
 
 **"Nos dio vida"** — la salvación es una **resurrección espiritual**. No es reforma, es resurrección.
 

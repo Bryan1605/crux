@@ -5,7 +5,7 @@ description: "No. La salvación es eterna, irrevocable y segura. Un hijo de Dios
 passage: "Juan 10:27-29"
 tags: ["fundamento", "doctrina/soteriologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -46,8 +46,8 @@ updated: "2026-07-25"
 
 **Lo que NO significa:**
 - No es una excusa para pecar — *"¿Seguiremos pecando para que la gracia abunde? ¡Claro que no!"* (Ro 6:1-2)
-- No significa que no hay disciplina — el Padre corrige a sus hijos (He 12:5-11)
-- No significa que no hay consecuencias por el pecado — hay pérdida de galardón, testimonio dañado, disciplina
+- No significa que no haya disciplina — el Padre corrige a sus hijos (He 12:5-11)
+- No significa que no haya consecuencias por el pecado — hay pérdida de galardón, testimonio dañado, disciplina
 
 **Confusión común: 1 Juan 2:19**
 > *"Salieron de nosotros, pero en realidad no eran de nosotros, pues si hubieran sido de nosotros, se habrían quedado con nosotros."*

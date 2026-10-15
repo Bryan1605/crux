@@ -6,7 +6,7 @@ description: "Clase del nivel introductorio de Shincheonji sobre la Parábola de
 passage: "Mateo 13:3-23"
 tags: ["shincheonji/clase", "hermeneutica/alegorica", "doctrina/herejia"]
 aliases: ["Cuatro Campos del Corazón", "Parábola del Sembrador"]
-updated: "2026-07-26"
+updated: "2026-09-26"
 ---
 
 # Los Cuatro Campos del Corazón — Clase Shincheonji
@@ -78,4 +78,4 @@ Shincheonji reinterpreta la parábola como un **sistema de auto-esfuerzo**:
 
 ## Fuentes
 
-- [Transcripción completa de la clase](../../../Shincheonji/Resumen_Los_Cuatro_Campos-20251116.md)
+- [Transcripción completa de la clase](../../../../Shincheonji/Resumen_Los_Cuatro_Campos-20251116.md)

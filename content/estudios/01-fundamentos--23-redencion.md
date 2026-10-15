@@ -5,7 +5,7 @@ description: "Redención significa ser comprado de vuelta o ser liberado mediant
 passage: "Efesios 1:7"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

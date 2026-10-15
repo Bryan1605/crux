@@ -5,7 +5,7 @@ description: "Justificación es el acto legal por el cual Dios declara justo al 
 passage: "Romanos 3:22-24"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

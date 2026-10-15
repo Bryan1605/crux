@@ -5,7 +5,7 @@ description: "Un discípulo es un seguidor de Jesús que aprende de Él para viv
 passage: "Mateo 28:19-20"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

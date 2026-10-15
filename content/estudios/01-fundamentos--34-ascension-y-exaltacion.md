@@ -5,7 +5,7 @@ description: "La ascensión es el evento en el que Jesús fue elevado corporalme
 passage: "Hechos 1:9-11"
 tags: ["fundamento", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -24,7 +24,7 @@ La ascensión es el evento en el que **Jesús fue elevado corporalmente al cielo
 
 **"Fue levantado"** (ἐπήρθη — *epērthē*) — Jesús no simplemente "desapareció". Fue **levantado** físicamente, visiblemente, corporalmente. Los discípulos lo vieron ascender. No fue una visión ni un evento puramente espiritual; fue histórico y observable.
 
-**"Una nube lo ocultó"** — en el Antiguo Testamento, la nube representa la **presencia de Dios** (Shekinah). La nube que cubrió a Jesús en la transfiguración (Mt 17:5), la nube que guiaba a Israel en el desierto (Ex 13:21). Jesús fue recibido en la gloria de Dios.
+**"Una nube lo ocultó"** — en el Antiguo Testamento, la nube representa la **presencia de Dios** (Shekinah). La nube que cubrió a Jesús en la transfiguración (Mt 17:5), es la misma nube que guiaba a Israel en el desierto (Ex 13:21). Jesús fue recibido en la gloria de Dios.
 
 **"Volverá del mismo modo"** — los ángeles prometen que Jesús regresará **visible, corporal y gloriosamente**. Así como ascendió a la vista de todos, así descenderá (Ap 1:7). La ascensión es la garantía del regreso.
 
@@ -73,9 +73,9 @@ Jesús no está "esperando" reinar. **Ya reina.** Su reino es espiritual y unive
 
 > **Romanos 8:34** — *"Cristo Jesús, quien murió —y más que eso, quien resucitó y está sentado en el lugar de honor a la derecha de Dios—, intercede por nosotros."*
 
-> **Hebreos 7:25** — *"Por eso Cristo puede salvar para siempre a los que se acercan a Dios por medio de él, porque él vive para interceder por ellos."**
+> **Hebreos 7:25** — *"Por eso Cristo puede salvar para siempre a los que se acercan a Dios por medio de él, porque él vive para interceder por ellos."*
 
-Jesús ahora mismo está **presentando Su sacrificio perfecto** como base para nuestra aceptación delante del Padre. Cuando pecas, cuando fallas, cuando el acusador te acusa (Ap 12:10), Jesús intercede por ti. No es que le ruega al Padre que te perdone; es que **Su presencia misma** a la derecha del Padre es la prueba de que tu salvación está asegurada.
+Jesús ahora mismo está **presentando Su sacrificio perfecto** como base para nuestra aceptación delante del Padre. Cuando pecas, cuando fallas, cuando el acusador te acusa (Ap 12:10), Jesús intercede por ti. No es que le ruegue al Padre que te perdone; es que **Su presencia misma** a la derecha del Padre es la prueba de que tu salvación está asegurada.
 
 ### 3.3 Prepara un lugar para nosotros
 

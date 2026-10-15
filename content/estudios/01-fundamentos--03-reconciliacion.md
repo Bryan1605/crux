@@ -5,7 +5,7 @@ description: "Reconciliación es la restauración de la relación rota entre Dio
 passage: "2 Corintios 5:18-19"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica

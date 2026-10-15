@@ -4,7 +4,7 @@ category: "01-fundamentos"
 description: "- [Sección A — Contexto necesario](#sección-a--contexto-necesario) - [Sección B — Acusación 1: Pablo contradice la Ley de Moisés](#sección-b--acusación-1-pablo-contradice-la-ley-de-moisés)…"
 tags: ["apologetica", "hermeneutica"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 # Pablo no contradice la Escritura

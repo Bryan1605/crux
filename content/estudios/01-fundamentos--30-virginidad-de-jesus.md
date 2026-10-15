@@ -5,7 +5,7 @@ description: "La virginidad de Jesús significa que Jesús fue concebido en el v
 passage: "Mateo 1:18-25"
 tags: ["fundamento", "doctrina/cristologia"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
@@ -70,7 +70,7 @@ Jesús es Hijo de Dios eternamente en la Trinidad. Pero Su nacimiento virginal m
 
 ### Razón 4: Para que Jesús fuera completamente humano sin perder Su deidad
 
-Si Jesús hubiera tenido un padre humano, no habría sido plenamente Dios (habría heredado solo naturaleza humana). Si no hubiera tenido madre humana, no habría sido plenamente hombre (habría sido solo un ser divino). En el nacimiento virginal, Jesús recibe Su humanidad de María (verdadera humanidad) y Su deidad del Espíritu Santo (verdadera deidad), en una sola Persona.
+Si Jesús hubiera tenido un padre humano, no habría sido plenamente Dios (habría heredado solo la naturaleza humana). Si no hubiera tenido madre humana, no habría sido plenamente hombre (habría sido solo un ser divino). En el nacimiento virginal, Jesús recibe Su humanidad de María (verdadera humanidad) y Su deidad del Espíritu Santo (verdadera deidad), en una sola Persona.
 
 ---
 

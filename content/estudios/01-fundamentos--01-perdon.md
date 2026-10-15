@@ -5,7 +5,7 @@ description: "Perdón es Dios quitando la culpa y la deuda del pecado completame
 passage: "1 Juan 1:9"
 tags: ["fundamento"]
 aliases: []
-updated: "2026-07-25"
+updated: "2026-09-26"
 ---
 
 ## 1. Definición bíblica
