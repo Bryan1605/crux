@@ -2524,7 +2524,7 @@
     {
       "tipo": "personaje",
       "id": "andres",
-      "href": "/estudio/personajes/andres",
+      "href": "/estudio/03-personajes--apostoles--05-andres",
       "title": "Andrés",
       "sub": "Apóstol, el que lleva a otros a Jesús · siglo I d. C.",
       "desc": "El primero en seguir y el primero en traer: su huella son las personas que acercó a Jesús.",
@@ -2539,7 +2539,7 @@
     {
       "tipo": "personaje",
       "id": "apostol-pablo",
-      "href": "/estudio/personajes/apostol-pablo",
+      "href": "/estudio/03-personajes--apostoles--02-pablo",
       "title": "Apóstol Pablo",
       "sub": "Apóstol de los gentiles · siglo I d. C.",
       "desc": "De perseguidor a heraldo: el evangelio sin fronteras hasta Roma.",
@@ -2554,7 +2554,7 @@
     {
       "tipo": "personaje",
       "id": "apostol-pedro",
-      "href": "/estudio/personajes/apostol-pedro",
+      "href": "/estudio/03-personajes--apostoles--01-pedro",
       "title": "Apóstol Pedro",
       "sub": "Apóstol y columna de la Iglesia · siglo I d. C.",
       "desc": "El pescador convertido en roca: de la traición en el patio a la voz de Pentecostés.",
@@ -2569,7 +2569,7 @@
     {
       "tipo": "personaje",
       "id": "bartolome",
-      "href": "/estudio/personajes/bartolome",
+      "href": "/estudio/03-personajes--apostoles--07-bartolome",
       "title": "Bartolomé",
       "sub": "Apóstol, también llamado Natanael · siglo I d. C.",
       "desc": "El israelita sin engaño: del prejuicio a la confesión más alta en una sola conversación.",
@@ -2584,7 +2584,7 @@
     {
       "tipo": "personaje",
       "id": "felipe",
-      "href": "/estudio/personajes/felipe",
+      "href": "/estudio/03-personajes--apostoles--06-felipe",
       "title": "Felipe",
       "sub": "Apóstol de Betsaida · siglo I d. C.",
       "desc": "El de Betsaida: trajo a Natanael y pidió ver al Padre.",
@@ -2627,7 +2627,7 @@
     {
       "tipo": "personaje",
       "id": "juan-el-apostol",
-      "href": "/estudio/personajes/juan-el-apostol",
+      "href": "/estudio/03-personajes--apostoles--04-juan-el-apostol",
       "title": "Juan el Apóstol",
       "sub": "Apóstol, evangelista y testigo · siglo I d. C.",
       "desc": "El discípulo a quien Jesús amaba: testigo de la gloria, de la cruz y del sepulcro vacío.",
@@ -2642,7 +2642,7 @@
     {
       "tipo": "personaje",
       "id": "judas-iscariote",
-      "href": "/estudio/personajes/judas-iscariote",
+      "href": "/estudio/03-personajes--apostoles--14-judas-iscariote",
       "title": "Judas Iscariote",
       "sub": "Apóstol, el traidor · siglo I d. C.",
       "desc": "El apóstol que traicionó: contado entre los Doce, tesorero del grupo.",
@@ -2657,7 +2657,7 @@
     {
       "tipo": "personaje",
       "id": "judas-tadeo",
-      "href": "/estudio/personajes/judas-tadeo",
+      "href": "/estudio/03-personajes--apostoles--12-judas-tadeo",
       "title": "Judas Tadeo",
       "sub": "Apóstol de los tres nombres · siglo I d. C.",
       "desc": "El apóstol que plantea más preguntas que datos: Tadeo, Lebeo o Judas.",
@@ -2672,7 +2672,7 @@
     {
       "tipo": "personaje",
       "id": "mateo",
-      "href": "/estudio/personajes/mateo",
+      "href": "/estudio/03-personajes--apostoles--08-mateo",
       "title": "Mateo",
       "sub": "Apóstol, cobrador de impuestos · siglo I d. C.",
       "desc": "El cobrador de impuestos que lo dejó todo y abrió su casa a los pecadores.",
@@ -2687,7 +2687,7 @@
     {
       "tipo": "personaje",
       "id": "matias",
-      "href": "/estudio/personajes/matias",
+      "href": "/estudio/03-personajes--apostoles--13-matias",
       "title": "Matías",
       "sub": "Apóstol elegido por sorteo · siglo I d. C.",
       "desc": "El apóstol que existe solo en un párrafo: elegido por sorteo para completar los Doce.",
@@ -2716,7 +2716,7 @@
     {
       "tipo": "personaje",
       "id": "santiago-el-mayor",
-      "href": "/estudio/personajes/santiago-el-mayor",
+      "href": "/estudio/03-personajes--apostoles--03-santiago-el-mayor",
       "title": "Santiago el Mayor",
       "sub": "Apóstol y primer mártir · siglo I d. C.",
       "desc": "El apóstol del silencio testigo: vio la gloria, vio la agonía y bebió la copa.",
@@ -2731,7 +2731,7 @@
     {
       "tipo": "personaje",
       "id": "santiago-el-menor",
-      "href": "/estudio/personajes/santiago-el-menor",
+      "href": "/estudio/03-personajes--apostoles--10-santiago-el-menor",
       "title": "Santiago el Menor",
       "sub": "Apóstol, hijo de Alfeo · siglo I d. C.",
       "desc": "El apóstol del anonimato: en las listas y en la oración, sin una sola palabra registrada.",
@@ -2746,7 +2746,7 @@
     {
       "tipo": "personaje",
       "id": "simon-zelote",
-      "href": "/estudio/personajes/simon-zelote",
+      "href": "/estudio/03-personajes--apostoles--11-simon-zelote",
       "title": "Simón el Zelote",
       "sub": "Apóstol, el nacionalista entre los Doce · siglo I d. C.",
       "desc": "El nacionalista entre los Doce: su apelativo político lo distingue del otro Simón.",
@@ -2761,7 +2761,7 @@
     {
       "tipo": "personaje",
       "id": "tomas",
-      "href": "/estudio/personajes/tomas",
+      "href": "/estudio/03-personajes--apostoles--09-tomas",
       "title": "Tomás",
       "sub": "Apóstol, llamado el Gemelo · siglo I d. C.",
       "desc": "De la duda a la confesión: «¡Mi Señor y mi Dios!».",

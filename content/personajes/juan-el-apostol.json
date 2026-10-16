@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol, evangelista y testigo",
   "resumen": "El discípulo a quien Jesús amaba: testigo de la gloria, de la cruz y del sepulcro vacío.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Éfeso"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Éfeso"
+  ],
   "portada": "/img/personajes/JuanElApostol/JuanElApostolPortada.webp",
   "escenas": [],
   "bio": [
@@ -37,5 +42,5 @@
       "evento": "Muere anciano en Éfeso, según la tradición (Ireneo, Adv. Haer. III.3.4); es el único apóstol no mártir."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--04-juan-el-apostol"
 }

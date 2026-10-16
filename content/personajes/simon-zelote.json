@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol, el nacionalista entre los Doce",
   "resumen": "El nacionalista entre los Doce: su apelativo político lo distingue del otro Simón.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Zelote"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Zelote"
+  ],
   "portada": "/img/personajes/SimonZelote/SimonZelotePortada.webp",
   "escenas": [],
   "bio": [
@@ -21,5 +26,5 @@
       "evento": "Entre los once que perseveraban en oración en el aposento alto (Hch 1, 13-14)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--11-simon-zelote"
 }

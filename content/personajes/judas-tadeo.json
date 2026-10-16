@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol de los tres nombres",
   "resumen": "El apóstol que plantea más preguntas que datos: Tadeo, Lebeo o Judas.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Tadeo"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Tadeo"
+  ],
   "portada": "/img/personajes/JudasTadeo/JudasTadeo.webp",
   "escenas": [],
   "bio": [
@@ -21,5 +26,5 @@
       "evento": "Entre los once reunidos en el aposento alto antes de Pentecostés (Hch 1, 13)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--12-judas-tadeo"
 }

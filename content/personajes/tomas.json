@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol, llamado el Gemelo",
   "resumen": "De la duda a la confesión: «¡Mi Señor y mi Dios!».",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Dídimo"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Dídimo"
+  ],
   "portada": "/img/personajes/Tomas/TomasPortada.webp",
   "escenas": [],
   "bio": [
@@ -33,5 +38,5 @@
       "evento": "Entre los once reunidos en el aposento alto (Hch 1, 13)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--09-tomas"
 }

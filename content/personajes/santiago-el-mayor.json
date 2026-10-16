@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol y primer mártir",
   "resumen": "El apóstol del silencio testigo: vio la gloria, vio la agonía y bebió la copa.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Martirio"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Martirio"
+  ],
   "portada": "/img/personajes/SantiagoElMayor/SantiagoElMayorPortada.webp",
   "escenas": [],
   "bio": [
@@ -29,5 +34,5 @@
       "evento": "Herodes Agripa I lo manda matar a espada: primer apóstol mártir (Hch 12, 1-2); la tradición (Eusebio) lo sitúa bajo Agripa I (41-44)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--03-santiago-el-mayor"
 }

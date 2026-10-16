@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol, el que lleva a otros a Jesús",
   "resumen": "El primero en seguir y el primero en traer: su huella son las personas que acercó a Jesús.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Betsaida"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Betsaida"
+  ],
   "portada": "/img/personajes/Andres/AndresPortada.webp",
   "escenas": [],
   "bio": [
@@ -29,5 +34,5 @@
       "evento": "Entre los once reunidos en el aposento alto antes de Pentecostés (Hch 1, 13)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--05-andres"
 }

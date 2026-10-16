@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol, hijo de Alfeo",
   "resumen": "El apóstol del anonimato: en las listas y en la oración, sin una sola palabra registrada.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Alfeo"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Alfeo"
+  ],
   "portada": "/img/personajes/SantiagoElMenor/SantiagoElMenorPortada.webp",
   "escenas": [],
   "bio": [
@@ -25,5 +30,5 @@
       "evento": "Entre los once que perseveraban en oración en el aposento alto (Hch 1, 13-14)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--10-santiago-el-menor"
 }

@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol de Betsaida",
   "resumen": "El de Betsaida: trajo a Natanael y pidió ver al Padre.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Betsaida"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Betsaida"
+  ],
   "portada": "/img/personajes/Felipe/FelipePortada.webp",
   "escenas": [],
   "bio": [
@@ -29,5 +34,5 @@
       "evento": "Entre los once reunidos en el aposento alto (Hch 1, 13)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--06-felipe"
 }

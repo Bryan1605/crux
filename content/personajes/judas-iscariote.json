@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol, el traidor",
   "resumen": "El apóstol que traicionó: contado entre los Doce, tesorero del grupo.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Traición"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Traición"
+  ],
   "portada": "/img/personajes/JudasIscariote/JudasIscariotePortada.webp",
   "escenas": [],
   "bio": [
@@ -29,5 +34,5 @@
       "evento": "Su lugar entre los Doce es ocupado por Matías, elegido por sorteo (Hch 1, 23-26)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--14-judas-iscariote"
 }

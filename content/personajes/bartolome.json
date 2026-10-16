@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol, también llamado Natanael",
   "resumen": "El israelita sin engaño: del prejuicio a la confesión más alta en una sola conversación.",
-  "tags": ["Apóstoles", "Evangelios", "Hechos", "Natanael"],
+  "tags": [
+    "Apóstoles",
+    "Evangelios",
+    "Hechos",
+    "Natanael"
+  ],
   "portada": "/img/personajes/Bartolome/BartolomePortada.webp",
   "escenas": [],
   "bio": [
@@ -25,5 +30,5 @@
       "evento": "Entre los once reunidos en el aposento alto (Hch 1, 13)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--07-bartolome"
 }

@@ -4,7 +4,12 @@
   "epoca": "siglo I d. C.",
   "rol": "Apóstol elegido por sorteo",
   "resumen": "El apóstol que existe solo en un párrafo: elegido por sorteo para completar los Doce.",
-  "tags": ["Apóstoles", "Hechos", "Pentecostés", "Sorteo"],
+  "tags": [
+    "Apóstoles",
+    "Hechos",
+    "Pentecostés",
+    "Sorteo"
+  ],
   "portada": "/img/personajes/Matias/MatiasPortada.webp",
   "escenas": [],
   "bio": [
@@ -21,5 +26,5 @@
       "evento": "Elegido por sorteo tras la oración de los apóstoles y contado con los once (Hch 1, 24-26)."
     }
   ],
-  "estudio": null
+  "estudio": "03-personajes--apostoles--13-matias"
 }
