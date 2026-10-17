@@ -132,10 +132,19 @@ try {
   await setQuery(page, 'pablo');
   await wait(500);
   const pablo = await readResults(page);
+  // La entrada de un personaje apunta a su ficha o, si tiene estudio enlazado, al
+  // estudio que lo cubre (ver `buildSearchIndex` en scripts/content-lib.mjs).
+  const fichaPablo = JSON.parse(
+    fs.readFileSync(new URL('../content/personajes/apostol-pablo.json', import.meta.url), 'utf8')
+  );
+  const pabloHrefs = [
+    `/estudio/personajes/${fichaPablo.slug}`,
+    fichaPablo.estudio ? `/estudio/${fichaPablo.estudio}` : null
+  ].filter(Boolean);
   check(
-    '«pablo» encuentra la ficha del personaje',
-    pablo.items.some(i => i.href.includes('/estudio/personajes/apostol-pablo')),
-    pablo.items.map(i => i.href).slice(0, 5).join(', ')
+    '«pablo» encuentra su ficha (o el estudio que la cubre)',
+    pablo.items.some(i => pabloHrefs.includes(i.href)),
+    `${pabloHrefs.join(' | ')} → ${pablo.items.map(i => i.href).slice(0, 5).join(', ')}`
   );
 
   // --- sin resultados.

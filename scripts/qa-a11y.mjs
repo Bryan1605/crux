@@ -36,6 +36,8 @@ const ROUTES = [
   { label: 'personaje', path: '/estudio/personajes/apostol-pablo' },
   { label: 'biblia (índice)', path: '/biblia' },
   { label: 'biblia (lector)', path: '/biblia?pag=p2-1' },
+  { label: 'biblia NTV (lector)', path: '/biblia/ntv?libro=juan&cap=3' },
+  { label: 'exégesis (comparada)', path: '/exegesis?libro=juan&cap=3&vv=16-21' },
   { label: 'videos', path: '/videos' },
   { label: 'concilios', path: '/concilios' },
   { label: 'concilios (ancla)', path: '/concilios#nicea' },

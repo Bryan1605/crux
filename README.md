@@ -1,6 +1,7 @@
 # Crux
 
-Sitio de estudios bíblicos: fichas de estudio, Biblia Patrística, videos y personajes.
+Sitio de estudios bíblicos: fichas de estudio, Biblia Patrística, Biblia NTV,
+exégesis comparada (Codex Sinaiticus × NTV), videos y personajes.
 Este repositorio contiene **dos proyectos**:
 
 | Ruta | Qué es | Build | Deploy |
@@ -34,13 +35,14 @@ npm run dev         # servidor de desarrollo (incluye el panel /admin)
 npm run build       # build de producción (valida el contenido y regenera el índice)
 npm run preview     # sirve localmente el build de producción
 npm run index:wiki  # regenera content/ desde el wiki de origen (destructivo, ver abajo)
+npm run exegesis    # regenera public/textos/exegesis/ (NTV + Codex; el Codex descarga una vez)
 npm run qa          # QA completa (datos + navegador; requiere `npm run dev` en otra terminal)
 npm run qa:imagenes # comprueba las imágenes referenciadas y las de las páginas
 npm run qa:a11y     # audita la accesibilidad con axe-core (0 critical/serious)
 ```
 
 `npm run qa` agrupa: `check:search`, `qa:timeline`, `qa:concilios`, `qa:buscar`,
-`qa:vistas`, `qa:biblia`, `qa:imagenes` y `qa:a11y`. Todas las suites de navegador
+`qa:vistas`, `qa:biblia`, `qa:exegesis`, `qa:imagenes` y `qa:a11y`. Todas las suites de navegador
 necesitan el servidor de desarrollo en `http://localhost:5173` (y Chrome instalado).
 Para auditar el sitio publicado, ejecuta cualquiera de ellas con
 `CRUX_BASE=https://bryan1605.github.io/crux`.
@@ -58,6 +60,8 @@ Los informes quedan en `%TEMP%\opencode\crux\`.
 | `/estudio/:slug` | Ficha de estudio (Markdown) |
 | `/estudio/personajes/:slug` | Ficha de personaje: portada, escenas, biografía y línea de tiempo |
 | `/biblia` | Biblia Patrística: índice de la obra y lector paginado |
+| `/biblia/ntv` | Lector de la Nueva Traducción Viviente (capítulo a capítulo, con notas del traductor) |
+| `/exegesis` | Exégesis comparada: Codex Sinaiticus ↔ NTV, versículo a versículo, con aparato crítico |
 | `/videos` | Parrilla de videos de YouTube |
 | `/concilios` | Concilios y herejías, con ancla por id (`/concilios#nicea`) |
 | `/temas` | Índice de categorías y etiquetas (cada etiqueta enlaza a `/buscar`) |
@@ -158,9 +162,29 @@ y publica en GitHub Pages. La URL de producción es
 | `content/timeline.json` | Hitos propios de la línea de tiempo (los demás se derivan de personajes y concilios). |
 | `content/busquedas.json` | Índice de búsqueda (se regenera en cada `build`; no lo edites a mano). |
 | `public/textos/biblia-patristica.md` | Texto de la Biblia Patrística (se carga bajo demanda desde `/textos/`). |
+| `public/textos/exegesis/{ntv,codex}/*.json` | Datos de exégesis por libro (generados; versionados para que el build funcione sin red). |
+| `public/textos/exegesis/index.json` | Cobertura de cada testigo (generado). |
+| `src/assets/texts/*.md` | Fuentes de la NTV y del Codex Sinaiticus 1911 (las usan los scripts, no el build). |
 
 `content/estudios.json` y `content/busquedas.json` se regeneran automáticamente en cada
 `build` (y al editar desde el panel). No los edites a mano.
+
+### Exégesis comparada
+
+`npm run exegesis` regenera `public/textos/exegesis/` a partir de las fuentes de
+`src/assets/texts/`:
+
+```bash
+npm run exegesis:ntv    # parsea la NTV y escribe ntv/<libro>.json
+npm run exegesis:codex  # descarga el Codex (con caché en src/assets/texts/.cache-codex/) y escribe codex/<libro>.json
+npm run exegesis:index  # cruza ambos testigos y escribe index.json
+npm run qa:exegesis     # QA de datos + navegador de /exegesis y /biblia/ntv
+```
+
+El rastreo del Codex es único: la respuesta cruda queda cacheada (ignorada por git) y los
+JSON resultantes **sí se versionan**, de modo que el build y el despliegue no necesitan red.
+Transcripción de [codexsinaiticus.org](https://codexsinaiticus.org) — uso personal,
+educativo y no comercial, con atribución.
 
 ### Regenerar desde el wiki (destructivo)
 

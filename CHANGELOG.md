@@ -3,6 +3,47 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.5.0] — 2026-10-16
+
+Exégesis comparada: el Nuevo Testamento leído en paralelo entre el Codex
+Sinaiticus y la Nueva Traducción Viviente.
+
+### Añadido
+
+- **`/exegesis` — lectura paralela** del Codex Sinaiticus (transcripción
+  diplomática en griego, con *nomina sacra* sobrelineados y aparato crítico) y de
+  la NTV, versículo a versículo. Columnas sincronizadas, sigilos del aparato que
+  resaltan su variante, notas del traductor en superíndice y enlace al facsímil
+  del manuscrito.
+- **`/biblia/ntv` — lector de la NTV** al estilo del lector de la Biblia
+  Patrística: pliego de dos páginas, temas de papel (claro, sepia, nocturna),
+  tamaño de letra, navegación por libro, capítulo y sección, y notas del
+  traductor.
+- **Datos de exégesis versionados** en `public/textos/exegesis/`: `ntv/<libro>.json`
+  (7.943 versículos con sus notas), `codex/<libro>.json` (7.918 versículos y 13.894
+  variantes del aparato) e `index.json`. Se generan con
+  `npm run exegesis` (`scripts/build-ntv.mjs`, `scripts/fetch-codex.mjs` y
+  `scripts/build-exegesis-index.mjs`).
+- **`npm run qa:exegesis`**: comprueba el índice, la limpieza de los dos textos
+  (sin ruido del PDF, sin HTML residual, numeración creciente) y, con `--browser`,
+  el render de las dos vistas.
+
+### Cambiado
+
+- El menú estrena un grupo **Biblia** (Biblia Patrística, Biblia NTV y Exégesis
+  comparada); el pie incorpora las dos vistas nuevas.
+- La auditoría de accesibilidad (`qa:a11y`) y la de búsqueda (`qa:buscar`) cubren
+  ya `/biblia/ntv` y `/exegesis` (0 violaciones critical/serious).
+- Fuentes `.md` del Segundo Cerebro Bíblico versionadas en `src/assets/texts/`;
+  la caché del rastreo del Codex queda fuera de git
+  (`src/assets/texts/.cache-codex/`).
+
+### Notas
+
+- El texto del Codex se usa con permiso personal, educativo y no comercial, y se
+  acredita a la British Library, la Universidad de Leipzig, el Monasterio de Santa
+  Catalina (Sinaí) y la Biblioteca Nacional de Rusia.
+
 ## [0.4.1] — 2026-10-14
 
 Portadas definitivas de los apóstoles.

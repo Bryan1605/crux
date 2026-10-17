@@ -1,0 +1,760 @@
+/* ==========================================================================
+   Exégesis comparada (Codex × NTV) y lector de la Biblia NTV
+   Reutiliza .reader__bar / .rb-btn de Biblia.css y los tintes .papel--*.
+   ========================================================================== */
+
+.exg {
+  padding-bottom: clamp(3rem, 8vh, 6rem);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(214, 178, 94, 0.07), transparent 60%),
+    radial-gradient(900px 500px at 0% 0%, rgba(94, 129, 214, 0.06), transparent 55%);
+}
+
+.exg__shell {
+  width: min(1240px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-top: clamp(5rem, 9vh, 7rem);
+}
+
+.exg__crumbs {
+  margin-bottom: var(--sp-4, 1rem);
+}
+
+.exg__head {
+  max-width: 68ch;
+  margin-bottom: clamp(1.2rem, 3vh, 1.8rem);
+}
+
+.exg__head h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  margin: 0.3rem 0 0.7rem;
+}
+
+.exg__lead {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --- barra de herramientas -------------------------------------------------- */
+
+.exg__bar {
+  position: sticky;
+  top: 76px;
+  margin-bottom: var(--sp-4, 1rem);
+}
+
+.exg__select {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding-inline: 0.3rem;
+}
+
+.exg__select + .exg__select {
+  border-left: 1px solid var(--border);
+}
+
+.exg__select label {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.exg__select select {
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.32rem 0.5rem;
+  max-width: 12rem;
+}
+
+.exg__select select:focus-visible {
+  outline: 2px solid #ca8700;
+  outline-offset: 1px;
+}
+
+/* --- testigos --------------------------------------------------------------- */
+
+.exg__witness {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.exg-chip {
+  font-size: 0.74rem;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.exg-chip b {
+  color: var(--text);
+}
+
+/* --- papel (temas de los testigos) ------------------------------------------ */
+
+.exg[data-theme='claro'] {
+  --paper: #fbf8f1;
+  --ink: #2b2723;
+  --ink-soft: #6f6659;
+  --rule: rgba(43, 39, 35, 0.16);
+}
+
+.exg[data-theme='sepia'] {
+  --paper: #f4e9d6;
+  --ink: #3a2f22;
+  --ink-soft: #7d6c53;
+  --rule: rgba(58, 47, 34, 0.2);
+}
+
+.exg[data-theme='noche'] {
+  --paper: #16161a;
+  --ink: #e9e6df;
+  --ink-soft: #a39c90;
+  --rule: rgba(233, 230, 223, 0.18);
+}
+
+/* --- columnas de exégesis --------------------------------------------------- */
+
+.exg__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4, 1rem);
+  padding: clamp(3rem, 10vh, 6rem) 0;
+}
+
+.exg__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.exg__cols.is-single {
+  grid-template-columns: 1fr;
+}
+
+.exg-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px -30px rgba(0, 0, 0, 0.8);
+}
+
+.exg-card__head {
+  padding: 0.85rem 1.05rem;
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--paper) 80%, #000 4%);
+}
+
+.exg-card__head h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.exg-card__head p {
+  margin: 0.15rem 0 0;
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+.exg-card__body {
+  max-height: 62vh;
+  overflow-y: auto;
+  padding: 0.9rem 1.1rem 1.2rem;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+.exg-card--codex .exg-card__body {
+  font-family: var(--font-greek, 'Palatino Linotype', 'Times New Roman', 'Noto Serif', Georgia, serif);
+  font-size: var(--exg-fs, 19px);
+  line-height: 1.85;
+}
+
+.exg-card--ntv .exg-card__body {
+  font-size: calc(var(--exg-fs, 19px) * 0.92);
+}
+
+/* --- versículos ------------------------------------------------------------- */
+
+.exg-verse {
+  display: grid;
+  grid-template-columns: 1.7rem 1fr;
+  gap: 0.55rem;
+  padding: 0.45rem 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+
+.exg-verse + .exg-verse {
+  border-top: 1px solid var(--rule);
+}
+
+.exg-verse:hover {
+  background: color-mix(in srgb, #d6b25e 10%, transparent);
+}
+
+.exg-verse.is-active {
+  background: color-mix(in srgb, #d6b25e 22%, transparent);
+}
+
+.exg-verse__n {
+  padding-top: 0.35rem;
+  text-align: right;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.exg-card--codex .exg-verse__n {
+  padding-top: 0.7rem;
+}
+
+/* *nomina sacra* y abreviaturas sobrelineadas */
+.exg-ns {
+  font-style: normal;
+  text-decoration: overline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1px;
+}
+
+.exg-sigil {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.62em;
+  vertical-align: super;
+  color: #a9803f;
+  background: none;
+  border: 0;
+  padding: 0 0.12rem;
+  cursor: pointer;
+}
+
+.exg-sigil:hover,
+.exg-sigil:focus-visible {
+  color: #d6b25e;
+  text-decoration: underline;
+}
+
+.exg-fn {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.62em;
+  vertical-align: super;
+  color: #2f6fb0;
+  background: none;
+  border: 0;
+  padding: 0 0.1rem;
+  cursor: pointer;
+}
+
+.exg-fn:hover,
+.exg-fn:focus-visible {
+  color: #2b8fd6;
+  text-decoration: underline;
+}
+
+.exg-empty {
+  margin: 0.4rem 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+}
+
+/* --- paneles (aparato y notas) ---------------------------------------------- */
+
+.exg__panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.exg-panel {
+  padding: 1rem 1.1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.exg-panel h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.exg-panel__hint {
+  font-size: 0.7rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.exg-notes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.exg-note {
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  gap: 0.6rem;
+  padding: 0.5rem 0.3rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-radius: 8px;
+}
+
+.exg-note:first-child {
+  border-top: 0;
+}
+
+.exg-note.is-active {
+  background: color-mix(in srgb, #d6b25e 14%, transparent);
+}
+
+.exg-note__ref {
+  align-self: start;
+  font: inherit;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: #d6b25e;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.exg-note__ref--fn {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.72rem;
+  vertical-align: super;
+  color: #7fb0e6;
+}
+
+.exg-note b {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.exg-witness {
+  display: inline-block;
+  min-width: 2.2rem;
+  padding: 0.05rem 0.4rem;
+  margin-right: 0.2rem;
+  font-size: 0.74rem;
+  color: #d6b25e;
+  background: color-mix(in srgb, #d6b25e 14%, transparent);
+  border-radius: 999px;
+}
+
+.exg-variant {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  color: var(--text);
+}
+
+.exg-sigla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.74rem;
+  color: var(--faint);
+}
+
+.exg-sigla b {
+  color: var(--muted);
+}
+
+.exg__credits {
+  margin-top: clamp(1.6rem, 4vh, 2.4rem);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  color: var(--faint);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.exg__credits a {
+  color: var(--muted);
+}
+
+.exg__hint {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--faint);
+  font-size: 0.76rem;
+}
+
+/* ==========================================================================
+   Lector de la Biblia NTV
+   ========================================================================== */
+
+.ntv__cover {
+  margin: 1rem 0 1.2rem;
+  padding: 2rem 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #171412, #0d0d10);
+}
+
+.ntv__cover .eyebrow {
+  color: #d6b25e;
+}
+
+.ntv__cover h1 {
+  margin: 0.3rem 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+}
+
+.ntv__cover p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.ntv__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.ntv__spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.ntv__spread.is-single {
+  grid-template-columns: 1fr;
+}
+
+.ntv-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 52vh;
+  padding: 1.4rem 1.5rem 1rem;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px -34px rgba(0, 0, 0, 0.85);
+  font-size: var(--ntv-fs, 18px);
+  line-height: 1.72;
+}
+
+.ntv-page__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.ntv-page__body {
+  flex: 1 1 auto;
+  font-family: var(--font-display);
+}
+
+.ntv-page__body p {
+  margin: 0 0 0.7rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.ntv-v {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.62em;
+  vertical-align: super;
+  color: #8a6d2f;
+  margin-right: 0.15rem;
+}
+
+.ntv-h {
+  display: block;
+  margin: 0.9rem 0 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92em;
+  color: #8a6d2f;
+}
+
+.ntv-fn {
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.62em;
+  vertical-align: super;
+  color: #2f6fb0;
+  background: none;
+  border: 0;
+  padding: 0 0.1rem;
+  cursor: pointer;
+}
+
+.ntv-fn.is-active {
+  color: #d6b25e;
+  text-decoration: underline;
+}
+
+.ntv-page__foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+
+/* --- raíl lateral ----------------------------------------------------------- */
+
+.ntv__rail {
+  position: sticky;
+  top: 128px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 0.9rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  font-size: 0.85rem;
+}
+
+.ntv__rail h3 {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.ntv__rail h3 + * {
+  margin-bottom: 0.9rem;
+}
+
+.ntv__rail-books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.ntv__rail-book {
+  font: inherit;
+  font-size: 0.74rem;
+  color: var(--muted);
+  background: var(--bg-alt, #101014);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.28rem 0.45rem;
+  cursor: pointer;
+}
+
+.ntv__rail-book:hover:not(:disabled) {
+  color: var(--text);
+  border-color: var(--border-strong, rgba(255, 255, 255, 0.3));
+}
+
+.ntv__rail-book.is-on {
+  color: #d6b25e;
+  border-color: #d6b25e;
+}
+
+.ntv__rail-book:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.ntv__rail-chapters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(2.1rem, 1fr));
+  gap: 0.3rem;
+}
+
+.ntv__rail-chapter {
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: var(--bg-alt, #101014);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.3rem 0;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+
+.ntv__rail-chapter:hover {
+  color: var(--text);
+  border-color: var(--border-strong, rgba(255, 255, 255, 0.3));
+}
+
+.ntv__rail-chapter.is-on {
+  color: #0a0a0b;
+  background: #d6b25e;
+  border-color: #d6b25e;
+}
+
+.ntv__rail-sections {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ntv__rail-sections a {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.34rem 0.45rem;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.ntv__rail-sections a:hover {
+  background: var(--panel-hover, rgba(255, 255, 255, 0.05));
+  color: var(--text);
+}
+
+.ntv__rail-sections a span:last-child {
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- nota flotante ---------------------------------------------------------- */
+
+.ntv__note {
+  position: relative;
+  margin-top: 1rem;
+  padding: 1rem 2.6rem 1rem 1.1rem;
+  background: var(--panel);
+  border: 1px solid #d6b25e;
+  border-radius: 14px;
+}
+
+.ntv__note p {
+  margin: 0 0 0.4rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.ntv__note p:last-child {
+  margin-bottom: 0;
+}
+
+.ntv__note b {
+  color: var(--text);
+}
+
+.ntv__note-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  font: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+}
+
+.ntv__note-close:hover {
+  color: var(--text);
+}
+
+/* --- responsive ------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .exg__panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ntv__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ntv__rail {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .exg__cols,
+  .ntv__spread {
+    grid-template-columns: 1fr;
+  }
+
+  .exg-card__head {
+    top: 104px;
+  }
+}
+
+@media (max-width: 700px) {
+  .exg__bar {
+    top: 62px;
+    border-radius: 20px;
+  }
+
+  /* En pantallas estrechas los selectores ocupan su propia fila completa. */
+  .exg__bar > .reader__bar-group:first-child {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+  }
+
+  .exg__select {
+    flex: 1 1 6rem;
+    padding-inline: 0;
+  }
+
+  .exg__select + .exg__select {
+    border-left: 0;
+  }
+
+  .exg__select select {
+    max-width: none;
+    width: 100%;
+  }
+
+  .exg-card__body {
+    max-height: none;
+  }
+}

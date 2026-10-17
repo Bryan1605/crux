@@ -6,6 +6,9 @@ dist-ssr/
 # QA / capturas de verificacion
 qa/
 
+# Cache del rastreo del Codex Sinaiticus (se regenera con scripts/fetch-codex.mjs)
+src/assets/texts/.cache-codex/
+
 # Entorno
 .env
 .env.*
