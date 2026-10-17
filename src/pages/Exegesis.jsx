@@ -495,6 +495,7 @@ export default function Exegesis() {
               className="rb-btn rb-btn--icon"
               aria-pressed={columns === 'uno'}
               title={columns === 'dos' ? 'Ver una columna' : 'Ver dos columnas'}
+              aria-label={columns === 'dos' ? 'Ver una sola columna' : 'Ver dos columnas'}
               onClick={() => setColumns(c => (c === 'dos' ? 'uno' : 'dos'))}
             >
               <LayoutGlyph two={columns === 'dos'} />
@@ -531,7 +532,13 @@ export default function Exegesis() {
             >
               {themeDef.glyph}
             </button>
-            <a className="rb-btn" href={facsimile} target="_blank" rel="noopener noreferrer">
+            <a
+              className="rb-btn"
+              href={facsimile}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Facsímil del Codex Sinaiticus en codexsinaiticus.org"
+            >
               <span className="rb-btn__text">Facsímil</span>
               <span aria-hidden="true">↗</span>
             </a>

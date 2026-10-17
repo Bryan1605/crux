@@ -558,7 +558,7 @@
   font-size: 0.85rem;
 }
 
-.ntv__rail h3 {
+.ntv__rail h2 {
   margin: 0.2rem 0 0.6rem;
   font-size: 0.7rem;
   letter-spacing: 0.08em;
@@ -566,7 +566,7 @@
   color: var(--faint);
 }
 
-.ntv__rail h3 + * {
+.ntv__rail h2 + * {
   margin-bottom: 0.9rem;
 }
 
@@ -734,15 +734,23 @@
     border-radius: 20px;
   }
 
-  /* En pantallas estrechas los selectores ocupan su propia fila completa. */
+  /* En pantallas estrechas los selectores pasan a una rejilla de dos columnas
+     (el libro ocupa la fila completa) para que nada desborde a lo ancho. */
   .exg__bar > .reader__bar-group:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem 0.5rem;
     flex: 1 1 100%;
-    flex-wrap: wrap;
+    align-items: center;
   }
 
   .exg__select {
-    flex: 1 1 6rem;
+    min-width: 0;
     padding-inline: 0;
+  }
+
+  .exg__select:first-child {
+    grid-column: 1 / -1;
   }
 
   .exg__select + .exg__select {
@@ -750,8 +758,18 @@
   }
 
   .exg__select select {
+    min-width: 0;
     max-width: none;
     width: 100%;
+  }
+
+  /* El resto de controles también puede repartirse en varias líneas. */
+  .exg__bar .reader__bar-group {
+    flex-wrap: wrap;
+  }
+
+  .exg__bar .rb-btn {
+    padding-inline: 0.55rem;
   }
 
   .exg-card__body {

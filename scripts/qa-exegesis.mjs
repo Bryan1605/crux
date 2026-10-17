@@ -184,6 +184,33 @@ if (WITH_BROWSER) {
   check('NTV: páginas del pliego', pages === 2, `${pages}`);
   check('NTV: versículos visibles', ntvVersesDom >= 15, `${ntvVersesDom}`);
 
+  // En móvil el pliego pasa a una columna y la barra no debe desbordar a lo ancho.
+  const noOverflow = async (url, name) => {
+    await page.setViewport({ width: 400, height: 880 });
+    await visit(url, name);
+    return page.evaluate(() => ({
+      scroll: document.documentElement.scrollWidth,
+      client: document.documentElement.clientWidth
+    }));
+  };
+
+  const exgMobile = await noOverflow(
+    `${BASE}/exegesis?libro=juan&cap=3&vv=16-21`,
+    'exegesis-juan3-movil'
+  );
+  check(
+    'Exégesis (móvil): sin desbordamiento horizontal',
+    exgMobile.scroll <= exgMobile.client + 1,
+    `${exgMobile.scroll}px vs ${exgMobile.client}px`
+  );
+
+  const ntvMobile = await noOverflow(`${BASE}/biblia/ntv?libro=juan&cap=3`, 'ntv-juan3-movil');
+  check(
+    'NTV (móvil): sin desbordamiento horizontal',
+    ntvMobile.scroll <= ntvMobile.client + 1,
+    `${ntvMobile.scroll}px vs ${ntvMobile.client}px`
+  );
+
   await browser.close();
 }
 

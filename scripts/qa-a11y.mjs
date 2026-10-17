@@ -50,7 +50,9 @@ const ROUTES = [
 // Rutas + estados que solo existen al interactuar.
 const STATES = [
   { label: 'portada (menú abierto)', path: '/', action: 'nav-desktop' },
-  { label: 'temas (menú móvil abierto)', path: '/temas', mobile: true, action: 'nav-mobile' }
+  { label: 'temas (menú móvil abierto)', path: '/temas', mobile: true, action: 'nav-mobile' },
+  { label: 'exégesis (móvil)', path: '/exegesis?libro=juan&cap=3&vv=16-21', mobile: true },
+  { label: 'biblia NTV (móvil)', path: '/biblia/ntv?libro=juan&cap=3', mobile: true }
 ];
 
 await mkdir(OUT, { recursive: true });

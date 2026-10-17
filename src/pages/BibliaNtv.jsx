@@ -286,6 +286,7 @@ export default function BibliaNtv() {
               className="rb-btn rb-btn--icon"
               aria-pressed={pages === 'una'}
               title={pages === 'dos' ? 'Ver una página' : 'Ver dos páginas'}
+              aria-label={pages === 'dos' ? 'Ver una sola página' : 'Ver dos páginas'}
               onClick={() => setPages(p => (p === 'dos' ? 'una' : 'dos'))}
             >
               <LayoutGlyph two={pages === 'dos'} />
@@ -365,7 +366,7 @@ export default function BibliaNtv() {
             </div>
 
             <aside className="ntv__rail" ref={railRef}>
-              <h3>Libros del NT</h3>
+              <h2>Libros del NT</h2>
               <div className="ntv__rail-books">
                 {(index?.books || []).map(b => (
                   <button
@@ -379,7 +380,7 @@ export default function BibliaNtv() {
                   </button>
                 ))}
               </div>
-              <h3>Capítulos · {book.name}</h3>
+              <h2>Capítulos · {book.name}</h2>
               <div className="ntv__rail-chapters">
                 {chaptersOfBook.map(c => (
                   <button
@@ -394,7 +395,7 @@ export default function BibliaNtv() {
               </div>
               {chapter.sections?.length > 0 && (
                 <>
-                  <h3>Secciones</h3>
+                  <h2>Secciones</h2>
                   <ul className="ntv__rail-sections">
                     {chapter.sections.map(s => (
                       <li key={`${s.verse}-${s.title}`}>
