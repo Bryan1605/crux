@@ -19,7 +19,10 @@ const FS_MAX = 26;
 const KEYS = {
   size: 'crux.ntv.letra',
   theme: 'crux.ntv.papel',
-  pages: 'crux.ntv.paginas'
+  // Clave nueva: en la versión anterior `crux.ntv.paginas` guardaba «una»/«dos» y
+  // se escribía sola con el valor por defecto, así que no distinguía una elección
+  // del visitante. Con clave nueva, la rejilla estrena la vista por defecto.
+  view: 'crux.ntv.vista'
 };
 
 const THEMES = [
@@ -261,7 +264,7 @@ export default function BibliaNtv() {
     return THEMES.some(t => t.id === stored) ? stored : 'claro';
   });
   const [size, setSize] = useState(() => Number(read(KEYS.size, 18)));
-  const [mode, setMode] = useState(() => (read(KEYS.pages, 'rejilla') === 'rejilla' ? 'rejilla' : 'dos'));
+  const [mode, setMode] = useState(() => (read(KEYS.view, 'rejilla') === 'dos' ? 'dos' : 'rejilla'));
   const [pop, setPop] = useState(null);
 
   const railRef = useRef(null);
@@ -297,7 +300,7 @@ export default function BibliaNtv() {
 
   useEffect(() => write(KEYS.theme, theme), [theme]);
   useEffect(() => write(KEYS.size, size), [size]);
-  useEffect(() => write(KEYS.pages, mode), [mode]);
+  useEffect(() => write(KEYS.view, mode), [mode]);
 
   const chapter = useMemo(
     () => (book ? book.chapters.find(c => c.num === chapterNum) || book.chapters[0] : null),

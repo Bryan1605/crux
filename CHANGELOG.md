@@ -29,7 +29,10 @@ se puede **escuchar** desde el raíl del capítulo.
 - **`/biblia/ntv` se lee en rejilla por versículo**, con las mismas clases que
   `/exegesis` (`exg-grid`): número en cintillo, títulos de sección dentro de la
   rejilla y notas del traductor en superíndice. El pliego de dos páginas sigue a
-  un clic con el conmutador; `crux.ntv.paginas` migra a `rejilla | dos`.
+  un clic con el conmutador, y la preferencia estrena clave (`crux.ntv.vista`,
+  `rejilla | dos`) para que quien tuviera guardada la vista antigua
+  (`crux.ntv.paginas`, que se escribía sola con su valor por defecto) vea la
+  rejilla nueva; si elige el pliego, se recuerda.
 - **El libro de la Patrística es más grande**: `--biblia-w` sube a 1560 px en el
   lector (1240 px en la portada), la página se clampa a 620 px de ancho y a
   `min(alto · 0.76, ancho · 1.5)` de alto. El raíl de la NTV pasa de 240 a 280 px
