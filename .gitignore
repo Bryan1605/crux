@@ -30,7 +30,7 @@ yarn-error.log*
 # Backups del panel de edición
 content/.history/
 
-# Fuentes locales de imágenes: los .webp servidos viven en public/img/
-src/assets/imgs/Personajes/JuanBautista/JuanBautistaNace.jpg
-src/assets/imgs/Personajes/JuanBautista/JuanBautistaPortada.jpg
-src/assets/imgs/Personajes/JuanBautista/JuanPredicaenelDesierto.jpg
+# Fuentes locales de imágenes: lo servido son los .webp de public/img/
+# (las fuentes se regeneran con `node scripts/optimize-images.mjs`)
+src/assets/imgs/**/*.jpg
+src/assets/imgs/**/*.jpeg
