@@ -3,6 +3,21 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.7.1] — 2026-10-18
+
+La Carta a los Romanos 1 se suma a las narraciones del raíl.
+
+### Añadido
+
+- **Narración de Romanos 1** (9:24) en el raíl de `/biblia/ntv`: segunda entrada
+  de `content/narraciones.json` con su audio en `public/audio/ntv/romanos-1.ogg`
+  y su onda medida con `node scripts/build-audio-peaks.mjs`. El reproductor y el
+  libro no cambian: cada capítulo con narración la muestra en su raíl.
+- **`qa:audio` recorre todas las narraciones** declaradas y comprueba que cada
+  una se ofrece en su capítulo con la duración real del audio (±1 s), no solo la
+  primera; la comprobación del contenedor Ogg lee la cabecera en vez del archivo
+  entero.
+
 ## [0.7.0] — 2026-10-18
 
 La lectura se afina: la Patrística se lee en un libro más grande y con gestos

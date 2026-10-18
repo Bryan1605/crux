@@ -12,6 +12,18 @@
       "peaks": "/audio/ntv/judas.peaks.json",
       "duration": 438.27,
       "note": "Lectura dramatizada del capítulo completo."
+    },
+    {
+      "id": "romanos-1-ntv",
+      "title": "Romanos 1",
+      "subtitle": "NTV dramatizada",
+      "kind": "ntv",
+      "book": "romanos",
+      "chapter": 1,
+      "src": "/audio/ntv/romanos-1.ogg",
+      "peaks": "/audio/ntv/romanos-1.peaks.json",
+      "duration": 563.71,
+      "note": "Lectura dramatizada del capítulo completo."
     }
   ]
 }

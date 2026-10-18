@@ -7,7 +7,7 @@
  * Requiere el servidor de desarrollo (http://localhost:5173) solo con --browser.
  * Deja capturas en C:\Users\PC\AppData\Local\Temp\opencode\crux.
  */
-import { readFile, stat } from 'node:fs/promises';
+import { open, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
 import { validate } from './validate-content.mjs';
@@ -20,6 +20,20 @@ const BASE = process.env.CRUX_BASE || 'http://localhost:5173';
 const WITH_BROWSER = process.argv.includes('--browser');
 
 const results = [];
+/** Segundos → «m:ss» para los mensajes (el componente tiene su propio reloj). */
+const clock = seconds =>
+  Number.isFinite(seconds) ? `${Math.floor(seconds / 60)}:${String(Math.round(seconds) % 60).padStart(2, '0')}` : '—';
+/** Primeros `bytes` de un archivo, sin cargarlo entero (los audios son grandes). */
+const readHead = async (file, bytes) => {
+  const handle = await open(file, 'r');
+  try {
+    const buffer = Buffer.alloc(bytes);
+    const { bytesRead } = await handle.read(buffer, 0, bytes, 0);
+    return buffer.subarray(0, bytesRead).toString('latin1');
+  } finally {
+    await handle.close();
+  }
+};
 const check = (name, ok, detail = '') => {
   results.push({ name, ok: Boolean(ok), detail });
   const mark = ok ? '\u001b[32mOK  \u001b[0m' : '\u001b[31mFALLA\u001b[0m';
@@ -53,7 +67,7 @@ for (const item of narraciones.items || []) {
   const info = await stat(audio).catch(() => null);
   check(`[${label}] el audio está publicado`, Boolean(info && info.isFile()), info ? `${(info.size / 1024 / 1024).toFixed(1)} MB` : `falta public${item.src}`);
 
-  const head = info ? (await readFile(audio)).subarray(0, 4).toString('latin1') : '';
+  const head = info ? await readHead(audio, 4) : '';
   check(`[${label}] el audio es un contenedor Ogg`, head === 'OggS', head);
 
   const peaksFile = item.peaks ? path.join(PUBLIC, item.peaks) : '';
@@ -119,6 +133,45 @@ if (WITH_BROWSER) {
       docs404.push(response.url());
     }
   });
+
+  /* Cada narración declarada se ofrece en su capítulo, con su duración real. */
+  for (const narration of narraciones.items || []) {
+    await page.goto(`${BASE}/biblia/ntv?libro=${narration.book}&cap=${narration.chapter}`, {
+      waitUntil: 'networkidle2',
+      timeout: 60000
+    });
+    await page.waitForSelector('.ntv-audio', { timeout: 30000 });
+    await page
+      .waitForFunction(
+        () => {
+          const audio = document.querySelector('.ntv-audio__el');
+          return Boolean(audio) && Number.isFinite(audio.duration) && audio.duration > 0;
+        },
+        { timeout: 20000 }
+      )
+      .catch(() => {});
+    await wait(1500);
+    const data = await page.evaluate(() => {
+      const audio = document.querySelector('.ntv-audio__el');
+      return {
+        title: document.querySelector('.ntv-audio__head b')?.textContent || '',
+        subtitle: document.querySelector('.ntv-audio__meta')?.textContent || '',
+        waves: document.querySelectorAll('.ntv-audio__path').length,
+        duration: audio?.duration,
+        src: audio?.getAttribute('src') || '',
+        time: document.querySelector('.ntv-audio__time')?.textContent.replace(/\s+/g, ' ').trim() || ''
+      };
+    });
+    check(
+      `[${narration.id}] el raíl ofrece su narración con la duración real`,
+      data.title === narration.title &&
+        data.waves === 2 &&
+        Number.isFinite(data.duration) &&
+        Math.abs(data.duration - narration.duration) <= 1 &&
+        data.src.endsWith(narration.src),
+      `${data.title} · ${clock(data.duration)} real vs ${clock(narration.duration)} declarado · ${data.time}`
+    );
+  }
 
   const item = (narraciones.items || [])[0];
   await page.goto(`${BASE}/biblia/ntv?libro=${item.book}&cap=${item.chapter}`, { waitUntil: 'networkidle2', timeout: 60000 });

@@ -23,7 +23,10 @@ const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const REPORT = process.argv.includes('--report');
 
 /** Narraciones a medir: id, ruta pública y número de tramos de la onda. */
-const ITEMS = [{ id: 'judas', src: '/audio/ntv/judas.ogg', out: '/audio/ntv/judas.peaks.json', buckets: 960 }];
+const ITEMS = [
+  { id: 'judas', src: '/audio/ntv/judas.ogg', out: '/audio/ntv/judas.peaks.json', buckets: 960 },
+  { id: 'romanos-1', src: '/audio/ntv/romanos-1.ogg', out: '/audio/ntv/romanos-1.peaks.json', buckets: 960 }
+];
 
 const MIME = {
   '.ogg': 'audio/ogg',
