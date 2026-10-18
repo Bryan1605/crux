@@ -107,9 +107,17 @@ if (WITH_BROWSER) {
   await page.setViewport({ width: 1440, height: 950 });
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
   const errors = [];
+  const docs404 = [];
   page.on('pageerror', error => errors.push(String(error)));
   page.on('console', message => {
     if (message.type() === 'error') errors.push(message.text());
+  });
+  page.on('response', response => {
+    // En GitHub Pages una ruta SPA profunda llega por 404.html con código 404 y
+    // el propio SPA la recompone: ese 404 del documento no es un fallo.
+    if (response.status() === 404 && response.request().isNavigationRequest()) {
+      docs404.push(response.url());
+    }
   });
 
   const item = (narraciones.items || [])[0];
@@ -231,7 +239,12 @@ if (WITH_BROWSER) {
   await wait(600);
   check('Reproductor: los capítulos sin narración no lo muestran', (await page.$('.ntv-audio')) === null);
 
-  check('Sin errores de consola', errors.length === 0, errors.slice(0, 3).join(' | '));
+  const realErrors = errors.filter(error => !(docs404.length && error.includes('404')));
+  check(
+    'Sin errores de consola',
+    realErrors.length === 0,
+    realErrors.slice(0, 3).join(' | ') || (docs404.length ? `${docs404.length} ruta(s) por 404.html (SPA)` : 'ninguno')
+  );
   await browser.close();
 }
 

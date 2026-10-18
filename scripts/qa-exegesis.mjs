@@ -18,6 +18,9 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIR = path.join(ROOT, 'public/textos/exegesis');
 const OUT = path.join(process.env.TEMP || '/tmp', 'opencode', 'crux');
 const BASE = process.env.CRUX_BASE || 'http://localhost:5173';
+// En GitHub Pages el sitio vive en un subpath (/crux): los enlaces internos lo
+// llevan delante, así que la QA lo tiene en cuenta al auditar lo publicado.
+const PREFIX = process.env.CRUX_BASE ? new URL(BASE).pathname.replace(/\/$/, '') : '';
 const WITH_BROWSER = process.argv.includes('--browser');
 
 const results = [];
@@ -440,7 +443,7 @@ if (WITH_BROWSER) {
   const ctaExegesis = await page.$$eval('.bcta__card', els => els.map(el => ({ href: el.getAttribute('href'), text: el.textContent })));
   check(
     'CTAs: la exégesis ofrece la NTV en el mismo versículo',
-    ctaExegesis.length === 2 && ctaExegesis.some(c => c.href === '/biblia/ntv?libro=juan&cap=3&v=16'),
+    ctaExegesis.length === 2 && ctaExegesis.some(c => c.href === `${PREFIX}/biblia/ntv?libro=juan&cap=3&v=16`),
     JSON.stringify(ctaExegesis.map(c => c.href))
   );
 
@@ -448,7 +451,7 @@ if (WITH_BROWSER) {
   const ctaNtv = await page.$$eval('.bcta__card', els => els.map(el => el.getAttribute('href')));
   check(
     'CTAs: la NTV ofrece la exégesis del capítulo abierto',
-    ctaNtv.length === 2 && ctaNtv.some(href => href === '/exegesis?libro=juan&cap=3'),
+    ctaNtv.length === 2 && ctaNtv.some(href => href === `${PREFIX}/exegesis?libro=juan&cap=3`),
     JSON.stringify(ctaNtv)
   );
 
@@ -456,7 +459,7 @@ if (WITH_BROWSER) {
   const ctaEstudio = await page.$$eval('.bcta__card', els => els.map(el => el.getAttribute('href')));
   check(
     'CTAs: un estudio enlaza su pasaje (1 Corintios 15:17) en los tres lectores',
-    ctaEstudio.length === 3 && ctaEstudio.some(href => href === '/exegesis?libro=1-corintios&cap=15&v=17'),
+    ctaEstudio.length === 3 && ctaEstudio.some(href => href === `${PREFIX}/exegesis?libro=1-corintios&cap=15&v=17`),
     JSON.stringify(ctaEstudio)
   );
   check('CTAs: el estudio dice qué pasaje abre', /1 Corintios 15:17/.test(await text('.bcta__lead')), (await text('.bcta__lead')).slice(0, 60));

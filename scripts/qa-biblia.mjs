@@ -229,9 +229,17 @@ if (WITH_BROWSER) {
   await page.setViewport({ width: 1360, height: 900 });
 
   const errors = [];
+  const docs404 = [];
   page.on('pageerror', error => errors.push(String(error)));
   page.on('console', message => {
     if (message.type() === 'error') errors.push(message.text());
+  });
+  page.on('response', response => {
+    // En GitHub Pages una ruta SPA profunda llega por 404.html con código 404 y
+    // el propio SPA la recompone: ese 404 del documento no es un fallo.
+    if (response.status() === 404 && response.request().isNavigationRequest()) {
+      docs404.push(response.url());
+    }
   });
 
   const folioNow = async () => {
@@ -515,7 +523,12 @@ if (WITH_BROWSER) {
   check('En móvil la página no recorta texto', mobile.overflow <= 1, `${mobile.overflow}px`);
   await page.screenshot({ path: join(OUT, 'biblia-movil.png') });
 
-  check('Sin errores de consola', errors.length === 0, errors.slice(0, 3).join(' | '));
+  const realErrors = errors.filter(error => !(docs404.length && error.includes('404')));
+  check(
+    'Sin errores de consola',
+    realErrors.length === 0,
+    realErrors.slice(0, 3).join(' | ') || (docs404.length ? `${docs404.length} ruta(s) por 404.html (SPA)` : 'ninguno')
+  );
 
   await browser.close();
 }
