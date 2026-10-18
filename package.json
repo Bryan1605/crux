@@ -1,7 +1,7 @@
 {
   "name": "web-crux",
   "private": true,
-  "version": "0.6.0",
+  "version": "0.7.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "index:wiki": "node scripts/migrate-content.mjs",
     "check:search": "node scripts/check-search.mjs",
     "qa:vistas": "node scripts/qa-vistas.mjs",
-    "qa:biblia": "node scripts/qa-biblia.mjs",
+    "qa:biblia": "node scripts/qa-biblia.mjs --browser",
     "qa:timeline": "node scripts/check-timeline.mjs",
     "qa:concilios": "node scripts/qa-concilios.mjs",
     "qa:buscar": "node scripts/qa-buscar.mjs",
@@ -23,7 +23,8 @@
     "exegesis:search": "node scripts/build-exegesis-search.mjs",
     "exegesis": "npm run exegesis:ntv && npm run exegesis:codex && npm run exegesis:index && npm run exegesis:search",
     "qa:exegesis": "node scripts/qa-exegesis.mjs --browser",
-    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:exegesis && npm run qa:imagenes && npm run qa:a11y"
+    "qa:audio": "node scripts/qa-audio.mjs --browser",
+    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:exegesis && npm run qa:audio && npm run qa:imagenes && npm run qa:a11y"
   },
   "dependencies": {
     "@hugeicons/core-free-icons": "^4.3.5",

@@ -3,9 +3,12 @@ import { Link, useSearchParams } from 'react-router-dom';
 
 import BibleSearch from '../components/BibleSearch';
 import BibleCta from '../components/BibleCta';
+import ChapterAudio from '../components/ChapterAudio';
 import VersePopover, { NoteBody } from '../components/VersePopover';
+import { narracionDe } from '../data/narraciones';
 import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadWitnessBook } from '../lib/exegesisTexts';
+import { hasSelection } from '../lib/selection';
 import { useSeo } from '../lib/site';
 
 import './Biblia.css';
@@ -65,8 +68,127 @@ function tokenize(text) {
   return out;
 }
 
-/** Agrupa los versículos en párrafos: cada versículo empieza uno nuevo. */
-function PageText({ verses, sections, notes, activeVerse, onSelect, onNote }) {
+/** Agrupa los versículos en filas: cada versículo estrena fila y los títulos de
+ *  sección ocupan una propia. Si la NTV omite el versículo de una sección, el
+ *  título cuelga del siguiente que sí existe. */
+function verseRows(chapter) {
+  const sections = [...(chapter.sections || [])].sort((a, b) => a.verse - b.verse);
+  const rows = [];
+  let at = 0;
+  const flushUntil = n => {
+    while (at < sections.length && sections[at].verse <= n) {
+      rows.push({ kind: 'section', key: `s${sections[at].verse}-${at}`, title: sections[at].title });
+      at += 1;
+    }
+  };
+  for (const verse of chapter.verses) {
+    flushUntil(verse.n);
+    rows.push({ kind: 'verse', key: `v${verse.n}`, verse });
+  }
+  flushUntil(Number.POSITIVE_INFINITY);
+  return rows;
+}
+
+/**
+ * Rejilla por versículo de la NTV: la misma estructura que `/exegesis` —de ahí
+ * que comparta sus clases— con el texto de cada versículo en su fila, los
+ * títulos de sección dentro y las notas del traductor en superíndice.
+ */
+function NtvGrid({ book, chapter, selected, onSelect, onNote, size, gridRef }) {
+  const rows = useMemo(() => verseRows(chapter), [chapter]);
+
+  return (
+    <section
+      className="exg-grid exg-grid--1 ntv-grid"
+      style={{ '--exg-fs': `${size}px` }}
+      aria-label={`Lectura por versículo de ${book.name} ${chapter.num}`}
+    >
+      <div className="exg-grid__body" ref={gridRef}>
+        <header className="exg-grid__head">
+          <div className="exg-grid__gutter" aria-hidden="true" />
+          <div className="exg-grid__witness exg-grid__witness--ntv">
+            <b>Nueva Traducción Viviente</b>
+            <span>
+              {book.name} {chapter.num} · {chapter.verses.length} versículos · notas del traductor en
+              superíndice
+            </span>
+          </div>
+        </header>
+
+        {rows.map(row =>
+          row.kind === 'section' ? (
+            <p className="exg-grid__section" key={row.key}>
+              {row.title}
+            </p>
+          ) : (
+            <div
+              key={row.key}
+              data-v={row.verse.n}
+              className={`exg-row${selected === row.verse.n ? ' is-active' : ''}`}
+              onClick={() => {
+                // Marcar texto termina en un clic sobre la fila: con selección
+                // viva no fijamos el versículo ni movemos la vista.
+                if (!hasSelection()) onSelect(row.verse.n);
+              }}
+            >
+              <div className="exg-row__gutter">
+                <button
+                  type="button"
+                  className="exg-row__n"
+                  aria-label={`Versículo ${row.verse.n}`}
+                  onClick={event => {
+                    event.stopPropagation();
+                    onSelect(row.verse.n);
+                  }}
+                >
+                  {row.verse.n}
+                </button>
+                {/\[[a-z]{1,2}\]/.test(row.verse.text) ? (
+                  <span className="exg-row__marks">
+                    <span className="exg-mark-chip exg-mark-chip--ntv" title="Nota del traductor">
+                      †
+                    </span>
+                  </span>
+                ) : null}
+              </div>
+
+              <div className="exg-row__cell exg-row__cell--ntv">
+                <span className="exg-cell__tag" aria-hidden="true">
+                  NTV
+                </span>
+                {tokenize(row.verse.text).map((t, i) =>
+                  t.k === 'fn' ? (
+                    <button
+                      key={i}
+                      type="button"
+                      className="ntv-fn"
+                      title="Ver la nota del traductor"
+                      aria-label={`Nota ${t.v} del versículo ${row.verse.n}`}
+                      onClick={event => {
+                        event.stopPropagation();
+                        onNote(event.currentTarget, row.verse.n, t.v);
+                      }}
+                    >
+                      {t.v}
+                    </button>
+                  ) : (
+                    <span key={i}>{t.v}</span>
+                  )
+                )}
+              </div>
+            </div>
+          )
+        )}
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Modo libro: los versículos repartidos en dos pliegos, con el número delante.
+ * Es la vista clásica del lector; la rejilla (`NtvGrid`) es la vista por defecto.
+ */
+function PageText({ verses, sections, activeVerse, onSelect, onNote }) {
   const bySection = useMemo(() => {
     const map = new Map();
     for (const s of sections || []) {
@@ -85,7 +207,11 @@ function PageText({ verses, sections, notes, activeVerse, onSelect, onNote }) {
               {title}
             </span>
           ))}
-          <p onClick={() => onSelect(v.n)}>
+          <p
+            onClick={() => {
+              if (!hasSelection()) onSelect(v.n);
+            }}
+          >
             <button
               type="button"
               className="ntv-v"
@@ -135,11 +261,13 @@ export default function BibliaNtv() {
     return THEMES.some(t => t.id === stored) ? stored : 'claro';
   });
   const [size, setSize] = useState(() => Number(read(KEYS.size, 18)));
-  const [pages, setPages] = useState(() => (read(KEYS.pages, 'dos') === 'una' ? 'una' : 'dos'));
+  const [mode, setMode] = useState(() => (read(KEYS.pages, 'rejilla') === 'rejilla' ? 'rejilla' : 'dos'));
   const [pop, setPop] = useState(null);
 
   const railRef = useRef(null);
+  const gridRef = useRef(null);
   const scrolled = useRef(null);
+  const topKey = useRef('');
 
   const bookId = params.get('libro') || 'mateo';
   const chapterNum = Number(params.get('cap') || 1);
@@ -169,7 +297,7 @@ export default function BibliaNtv() {
 
   useEffect(() => write(KEYS.theme, theme), [theme]);
   useEffect(() => write(KEYS.size, size), [size]);
-  useEffect(() => write(KEYS.pages, pages), [pages]);
+  useEffect(() => write(KEYS.pages, mode), [mode]);
 
   const chapter = useMemo(
     () => (book ? book.chapters.find(c => c.num === chapterNum) || book.chapters[0] : null),
@@ -180,6 +308,9 @@ export default function BibliaNtv() {
     () => (book ? book.chapters.map(c => c.num) : index?.books.find(b => b.id === bookId)?.ntv.chapters || []),
     [book, index, bookId]
   );
+
+  /* Narración del capítulo abierto (hoy solo la Carta de Judas). */
+  const narracion = useMemo(() => narracionDe(bookId, chapterNum), [bookId, chapterNum]);
 
   const spread = useMemo(() => {
     if (!chapter) return [[], []];
@@ -224,17 +355,43 @@ export default function BibliaNtv() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [book, chapterNum]);
 
-  /* El versículo elegido se lleva a la vista (una vez por cambio). */
+  /* En la rejilla, cambiar de capítulo devuelve la lectura arriba. */
+  useEffect(() => {
+    if (mode !== 'rejilla') return;
+    const body = gridRef.current;
+    if (!body) return;
+    const key = `${bookId}.${chapterNum}`;
+    if (topKey.current === key) return;
+    topKey.current = key;
+    body.scrollTop = 0;
+  }, [mode, bookId, chapterNum, chapter]);
+
+  /* El versículo elegido se lleva a la vista (una vez por cambio y modo). */
   useEffect(() => {
     if (!chapter || !selected) return;
-    const key = `${bookId}.${chapterNum}.${selected}`;
+    const key = `${mode}:${bookId}.${chapterNum}.${selected}`;
     if (scrolled.current === key) return;
     scrolled.current = key;
+
+    if (mode === 'rejilla') {
+      const body = gridRef.current;
+      if (!body) return;
+      const row = body.querySelector(`[data-v="${selected}"]`);
+      if (!row) return;
+      // La cabecera va pegada dentro del contenedor: hay que descontarla.
+      const head = body.querySelector('.exg-grid__head');
+      const top = row.offsetTop - (head ? head.offsetHeight : 0) - 8;
+      const bottom = top + row.offsetHeight;
+      if (top >= body.scrollTop - 2 && bottom <= body.scrollTop + body.clientHeight) return;
+      body.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+      return;
+    }
+
     const el = document.getElementById(`v${selected}`);
     if (!el) return;
     const top = el.getBoundingClientRect().top + window.scrollY - 132;
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-  }, [chapter, selected, bookId, chapterNum]);
+  }, [chapter, selected, bookId, chapterNum, mode]);
 
   /* Teclado: ← → cambian de capítulo. */
   useEffect(() => {
@@ -260,7 +417,7 @@ export default function BibliaNtv() {
   useSeo({
     title: book ? `${book.name} ${chapterNum} — Biblia NTV` : 'Biblia NTV',
     description:
-      'La Nueva Traducción Viviente leída como un libro: capítulo a capítulo, con sus notas del traductor y un buscador por palabras.'
+      'La Nueva Traducción Viviente versículo a versículo, en rejilla o en pliego de dos páginas, con sus notas del traductor y un buscador por palabras.'
   });
 
   if (error) {
@@ -296,8 +453,9 @@ export default function BibliaNtv() {
           <p className="eyebrow">Texto bíblico · español</p>
           <h1>Biblia NTV</h1>
           <p>
-            La Nueva Traducción Viviente, leída como un libro: se pasa hoja, con tema de papel y
-            tamaño de letra. Pulsa un versículo para fijarlo y busca por las palabras que recuerdes.
+            La Nueva Traducción Viviente, versículo a versículo en una rejilla —o en pliego de dos
+            páginas, si lo prefieres—, con las notas del traductor y un buscador por las palabras que
+            recuerdes.
           </p>
         </header>
 
@@ -369,12 +527,15 @@ export default function BibliaNtv() {
             <button
               type="button"
               className="rb-btn rb-btn--icon"
-              aria-pressed={pages === 'una'}
-              title={pages === 'dos' ? 'Ver una página' : 'Ver dos páginas'}
-              aria-label={pages === 'dos' ? 'Ver una sola página' : 'Ver dos páginas'}
-              onClick={() => setPages(p => (p === 'dos' ? 'una' : 'dos'))}
+              aria-pressed={mode === 'dos'}
+              title={mode === 'dos' ? 'Ver en rejilla, versículo a versículo' : 'Ver como libro, en dos páginas'}
+              aria-label={mode === 'dos' ? 'Ver en rejilla, versículo a versículo' : 'Ver como libro, en dos páginas'}
+              onClick={() => {
+                setPop(null);
+                setMode(current => (current === 'dos' ? 'rejilla' : 'dos'));
+              }}
             >
-              <LayoutGlyph two={pages === 'dos'} />
+              <LayoutGlyph two={mode === 'dos'} />
             </button>
           </div>
 
@@ -422,39 +583,54 @@ export default function BibliaNtv() {
           </div>
         ) : (
           <div className="ntv__layout">
-            <div className={`ntv__spread${pages === 'una' ? ' is-single' : ''}`}>
-              {spread.map((verses, pi) =>
-                verses.length === 0 && pi === 1 ? null : (
-                  <article className="ntv-page" key={pi} style={{ '--ntv-fs': `${size}px` }}>
-                    <header className="ntv-page__head">
-                      <span>{book.name}</span>
-                      <span>Capítulo {chapter.num}</span>
-                    </header>
-                    <div className="ntv-page__body">
-                      <PageText
-                        verses={verses}
-                        sections={chapter.sections}
-                        notes={book.notes || {}}
-                        activeVerse={selected}
-                        onSelect={select}
-                        onNote={(anchor, verse, id) => {
-                          setPop({ anchor, verse, id });
-                          select(verse, { keepPop: true });
-                        }}
-                      />
-                    </div>
-                    <footer className="ntv-page__foot">
-                      <span>Biblia NTV</span>
-                      <span>
-                        {book.name} {chapter.num} · {pi + 1}/{spread.filter(s => s.length).length}
-                      </span>
-                    </footer>
-                  </article>
-                )
-              )}
-            </div>
+            {mode === 'rejilla' ? (
+              <NtvGrid
+                book={book}
+                chapter={chapter}
+                selected={selected}
+                onSelect={select}
+                onNote={(anchor, verse, id) => {
+                  setPop({ anchor, verse, id });
+                  select(verse, { keepPop: true });
+                }}
+                size={size}
+                gridRef={gridRef}
+              />
+            ) : (
+              <div className="ntv__spread">
+                {spread.map((verses, pi) =>
+                  verses.length === 0 && pi === 1 ? null : (
+                    <article className="ntv-page" key={pi} style={{ '--ntv-fs': `${size}px` }}>
+                      <header className="ntv-page__head">
+                        <span>{book.name}</span>
+                        <span>Capítulo {chapter.num}</span>
+                      </header>
+                      <div className="ntv-page__body">
+                        <PageText
+                          verses={verses}
+                          sections={chapter.sections}
+                          activeVerse={selected}
+                          onSelect={select}
+                          onNote={(anchor, verse, id) => {
+                            setPop({ anchor, verse, id });
+                            select(verse, { keepPop: true });
+                          }}
+                        />
+                      </div>
+                      <footer className="ntv-page__foot">
+                        <span>Biblia NTV</span>
+                        <span>
+                          {book.name} {chapter.num} · {pi + 1}/{spread.filter(s => s.length).length}
+                        </span>
+                      </footer>
+                    </article>
+                  )
+                )}
+              </div>
+            )}
 
             <aside className="ntv__rail" ref={railRef}>
+              {narracion ? <ChapterAudio key={narracion.id} narracion={narracion} /> : null}
               <h2>Libros del NT</h2>
               <div className="ntv__rail-books">
                 {(index?.books || []).map(b => (

@@ -234,11 +234,17 @@ if (WITH_BROWSER) {
     if (message.type() === 'error') errors.push(message.text());
   });
 
-  const folioNow = () => page.$eval('.reader__status strong', n => n.textContent);
+  const folioNow = async () => {
+    await page.waitForSelector('.reader__status strong', { timeout: 20000 });
+    return page.$eval('.reader__status strong', n => n.textContent);
+  };
   const waitFolioChange = async previous => {
     try {
       await page.waitForFunction(
-        prev => document.querySelector('.reader__status strong')?.textContent !== prev,
+        prev => {
+          const el = document.querySelector('.reader__status strong');
+          return Boolean(el) && el.textContent !== prev;
+        },
         { timeout: 8000 },
         previous
       );
@@ -282,6 +288,94 @@ if (WITH_BROWSER) {
   await page.keyboard.press('ArrowRight');
   check('La flecha del teclado pasa la hoja', await waitFolioChange(folio2), `${folio2} → ${await folioNow()}`);
 
+  /* --- pasar hoja con el ratón, sin secuestrar la selección de texto ------- */
+
+  const spreadNow = await page.$eval('.book', el => el.classList.contains('book--spread'));
+  const step = spreadNow ? 2 : 1;
+
+  const size = await page.evaluate(() => {
+    const frame = document.querySelector('.book-page__frame');
+    const page = document.querySelector('.book__page');
+    const book = document.querySelector('.book').getBoundingClientRect();
+    return {
+      page: frame ? Math.round(frame.getBoundingClientRect().width) : 0,
+      h: page ? Math.round(page.getBoundingClientRect().height) : 0,
+      book: Math.round(book.width),
+      over: document.documentElement.scrollWidth - document.documentElement.clientWidth
+    };
+  });
+  check(
+    'El pliego es ancho (lectura cómoda)',
+    size.page >= 580 && size.book >= 1180,
+    `${size.page}×${size.h} px de página, ${size.book}px de libro`
+  );
+  check('El pliego no desborda a lo ancho', size.over <= 1, `${size.over}px`);
+
+  const folioMark = await folioNow();
+  const para = await page.$eval('.book-page__body .book-block', el => {
+    const b = el.getBoundingClientRect();
+    return { x: b.left + 24, y: b.top + 12, x2: b.left + Math.min(320, b.width - 24) };
+  });
+  await page.mouse.move(para.x, para.y);
+  await page.mouse.down();
+  await page.mouse.move(para.x2, para.y, { steps: 14 });
+  await page.mouse.up();
+  await new Promise(r => setTimeout(r, 900));
+  const marked = await page.evaluate(() => String(window.getSelection()));
+  check('Se puede marcar texto en la página', marked.trim().length > 20, `${marked.trim().length} caracteres`);
+  check('Marcar texto no pasa la hoja', (await folioNow()) === folioMark, `${folioMark} → ${await folioNow()}`);
+  await page.evaluate(() => {
+    window.getSelection()?.removeAllRanges();
+  });
+
+  const band = await page.evaluate(() => {
+    const book = document.querySelector('.book').getBoundingClientRect();
+    const frame = document.querySelector('.book-page__frame');
+    const pad = Number.parseFloat(getComputedStyle(frame).paddingLeft) || 28;
+    return {
+      x: Math.round(book.right - pad / 2),
+      centerX: Math.round(book.left + book.width / 2),
+      y: Math.round(book.top + book.height / 2)
+    };
+  });
+
+  const folioClick = await folioNow();
+  await page.mouse.move(band.x, band.y);
+  await new Promise(r => setTimeout(r, 160));
+  const zone = await page.$eval('.book-stage', el => el.dataset.zone || '');
+  await page.mouse.down();
+  await page.mouse.up();
+  await new Promise(r => setTimeout(r, 1200));
+  check(
+    'El margen derecho pasa la hoja con un clic',
+    zone === 'next' && Number(await folioNow()) === Number(folioClick) + step,
+    `zona=${zone} ${folioClick} → ${await folioNow()}`
+  );
+
+  const folioDrag = await folioNow();
+  await page.mouse.move(band.x, band.y);
+  await page.mouse.down();
+  await page.mouse.move(band.x - Math.round(size.page / 2), band.y, { steps: 16 });
+  await page.mouse.up();
+  await new Promise(r => setTimeout(r, 1200));
+  check(
+    'Arrastrar desde el margen pasa la hoja',
+    Number(await folioNow()) === Number(folioDrag) + step,
+    `${folioDrag} → ${await folioNow()}`
+  );
+
+  const folioWheel = await folioNow();
+  await page.mouse.move(band.centerX, band.y);
+  await page.keyboard.down('Shift');
+  await page.mouse.wheel({ deltaY: 300 });
+  await page.keyboard.up('Shift');
+  await new Promise(r => setTimeout(r, 1300));
+  check(
+    'Mayús + rueda pasa una sola hoja',
+    Number(await folioNow()) === Number(folioWheel) + step,
+    `${folioWheel} → ${await folioNow()}`
+  );
+
   // Índice flotante.
   await page.click('button[aria-label="Abrir el índice rápido"]');
   await page.waitForSelector('.reader__panel .toc__list', { timeout: 10000 });
@@ -308,7 +402,8 @@ if (WITH_BROWSER) {
   // Tamaño de letra (repagina sin perder el sitio).
   const folio3 = await folioNow();
   await page.click('button[aria-label^="Aumentar el tamaño de letra"]');
-  await new Promise(r => setTimeout(r, 1500));
+  await page.waitForSelector('.reader__status strong', { timeout: 20000 });
+  await new Promise(r => setTimeout(r, 600));
   check('A+ repagina sin perder el sitio', /^\d+$/.test(await folioNow()), `${folio3} → ${await folioNow()}`);
 
   // Papel.

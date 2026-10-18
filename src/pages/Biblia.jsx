@@ -288,7 +288,7 @@ export default function Biblia() {
       : `Biblia Patrística — ${site.marca.nombre}`,
     description: page
       ? `Biblia Patrística, página ${page.folio} de ${totalPages}: ${seoSection || ''}`.trim()
-      : 'Los Padres de la Iglesia: la Biblia comentada por los primeros siglos, capítulo a capítulo.'
+      : 'Los Padres de la Iglesia: sus cartas, homilías y tratados, del siglo I al VIII.'
   });
 
   /* ------------------------------ sub-render ------------------------------ */
@@ -621,7 +621,8 @@ export default function Biblia() {
                 theme={theme}
               />
               <p className="reader__hint">
-                Arrastra o usa ← → para pasar la hoja · el texto se puede seleccionar y buscar
+                El texto se marca y se copia con libertad · para pasar hoja: clic en el margen,
+                arrastra desde él, la rueda o ← →
               </p>
             </div>
           ) : (
@@ -677,8 +678,8 @@ export default function Biblia() {
           <p className="eyebrow">Padres de la Iglesia</p>
           <h1>Biblia Patrística</h1>
           <p className="biblia__dome-lead">
-            Del periodo apostólico al siglo VIII, una sola obra para recorrer la fe de los primeros
-            siglos.
+            Del periodo apostólico al siglo VIII: las cartas, homilías y tratados de los Padres de la
+            Iglesia en una sola obra.
           </p>
           {lastPage && (
             <p className="biblia__resume">
@@ -710,7 +711,7 @@ export default function Biblia() {
             <TextType
               as="p"
               className="biblia__about-lead"
-              text="Esta Biblia Patrística reúne los escritos que dieron forma a la fe cristiana: resúmenes claros, citas clave explicadas y obras completas traducidas, del periodo apostólico al siglo VIII."
+              text="Esta Biblia Patrística reúne las cartas, homilías y tratados que dieron forma a la fe cristiana —con su resumen, sus citas clave y la obra completa traducida— del periodo apostólico al siglo VIII."
               typingSpeed={13}
               initialDelay={250}
               loop={false}

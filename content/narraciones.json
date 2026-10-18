@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "judas-ntv",
+      "title": "Carta de Judas",
+      "subtitle": "NTV dramatizada",
+      "kind": "ntv",
+      "book": "judas",
+      "chapter": 1,
+      "src": "/audio/ntv/judas.ogg",
+      "peaks": "/audio/ntv/judas.peaks.json",
+      "duration": 438.27,
+      "note": "Lectura dramatizada del capítulo completo."
+    }
+  ]
+}

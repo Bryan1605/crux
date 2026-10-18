@@ -323,6 +323,51 @@ if (WITH_BROWSER) {
   const afterClick = await alignment();
   check('Pulsar un versículo lo fija en las dos columnas', afterClick?.n === '30' && afterClick.visible, JSON.stringify(afterClick));
 
+  /* --- la divisoria del Codex: cabecera y filas al mismo ancho -------------- */
+  const rule = await page.evaluate(() => {
+    const head = document.querySelector('.exg-grid__witness--codex');
+    const cell = document.querySelector('.exg-row__cell--codex');
+    const body = document.querySelector('.exg-grid__body');
+    const header = document.querySelector('.exg-grid__head');
+    if (!head || !cell || !body || !header) return null;
+    const right = el => Math.round(el.getBoundingClientRect().right * 100) / 100;
+    return {
+      head: right(head),
+      cell: right(cell),
+      delta: Math.round(Math.abs(right(head) - right(cell)) * 100) / 100,
+      position: getComputedStyle(header).position,
+      gutter: getComputedStyle(body).scrollbarGutter || '',
+      scrolls: body.scrollHeight > body.clientHeight + 2
+    };
+  });
+  check(
+    'Divisoria del Codex: la cabecera cae justo sobre la columna de las filas',
+    Boolean(rule) && rule.delta <= 1 && rule.position === 'sticky' && rule.scrolls,
+    JSON.stringify(rule)
+  );
+
+  /* --- marcar texto no fija versículo ------------------------------------- */
+  await page.select('#exg-verse', '16');
+  await wait(600);
+  await page.evaluate(() => {
+    const cell = document.querySelector('.exg-row[data-v="16"] .exg-row__cell--ntv');
+    const range = document.createRange();
+    range.selectNodeContents(cell);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  });
+  await page.evaluate(() => document.querySelector('.exg-row[data-v="10"]').click());
+  await wait(500);
+  const kept = await page.evaluate(() => window.location.search);
+  check('Marcar texto no cambia el versículo fijado', /(^|[?&])v=16(&|$)/.test(kept), kept);
+
+  await page.evaluate(() => window.getSelection().removeAllRanges());
+  await page.evaluate(() => document.querySelector('.exg-row[data-v="10"]').click());
+  await wait(700);
+  const movedTo = await alignment();
+  check('Sin selección, pulsar la fila sí fija el versículo', movedTo?.n === '10', JSON.stringify(movedTo));
+
   await page.select('#exg-verse', '16');
   await wait(700);
   await page.evaluate(() => document.querySelector('.exg-row[data-v="16"] .exg-sigil').click());
@@ -418,12 +463,21 @@ if (WITH_BROWSER) {
   const ctaShot = await page.$('.bcta');
   await ctaShot.screenshot({ path: path.join(OUT, 'estudio-cta.png') });
 
-  /* --- /biblia/ntv --- */
+  /* --- /biblia/ntv: rejilla por defecto, igual que /exegesis ---------------- */
   await visit(`${BASE}/biblia/ntv?libro=juan&cap=3`, 'ntv-juan3');
-  const pages = await page.$$eval('.ntv-page', els => els.length);
-  const ntvVersesDom = await page.$$eval('.ntv-page .ntv-v', els => els.length);
-  check('NTV: páginas del pliego', pages === 2, `${pages}`);
-  check('NTV: versículos visibles', ntvVersesDom >= 15, `${ntvVersesDom}`);
+  const gridRows = await page.$$eval('.ntv-grid .exg-row', els => els.length);
+  const gridCells = await page.$$eval('.ntv-grid .exg-row__cell--ntv', els => els.length);
+  const gridSections = await page.$$eval('.ntv-grid .exg-grid__section', els => els.length);
+  check(
+    'NTV: rejilla por versículo por defecto',
+    gridRows >= 36 && gridCells === gridRows,
+    `${gridRows} filas, ${gridSections} secciones`
+  );
+  check(
+    'NTV: la cabecera de la rejilla es el testigo',
+    /Nueva Traducción Viviente/.test(await text('.ntv-grid .exg-grid__witness')),
+    (await text('.ntv-grid .exg-grid__witness')).slice(0, 60)
+  );
 
   await page.evaluate(() => document.querySelector('.ntv-fn').click());
   await page.waitForSelector('.vpop', { timeout: 4000 });
@@ -433,8 +487,34 @@ if (WITH_BROWSER) {
 
   await page.select('#ntv-verse', '16');
   await wait(800);
-  const ntvActive = await page.$eval('.ntv-vs.is-active', el => el.dataset.v).catch(() => null);
+  const ntvActive = await page.$eval('.exg-row.is-active', el => el.dataset.v).catch(() => null);
   check('NTV: el selector de versículo lo fija', ntvActive === '16', `${ntvActive}`);
+
+  await page.evaluate(() => {
+    const cell = document.querySelector('.exg-row[data-v="16"] .exg-row__cell--ntv');
+    const range = document.createRange();
+    range.selectNodeContents(cell);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  });
+  await page.evaluate(() => document.querySelector('.exg-row[data-v="10"]').click());
+  await wait(500);
+  const ntvKept = await page.evaluate(() => window.location.search);
+  check('NTV: marcar texto no cambia el versículo fijado', /(^|[?&])v=16(&|$)/.test(ntvKept), ntvKept);
+  await page.evaluate(() => window.getSelection().removeAllRanges());
+
+  // Conmutador: el pliego de dos páginas sigue disponible.
+  await page.click('button[aria-label^="Ver como libro"]');
+  await page.waitForSelector('.ntv-page', { timeout: 6000 });
+  const pages = await page.$$eval('.ntv-page', els => els.length);
+  const ntvVersesDom = await page.$$eval('.ntv-page .ntv-v', els => els.length);
+  check('NTV: el conmutador abre el pliego de dos páginas', pages === 2 && ntvVersesDom >= 15, `${pages} pliegos, ${ntvVersesDom} versículos`);
+  await page.screenshot({ path: path.join(OUT, 'ntv-pliego.png') });
+
+  await page.click('button[aria-label^="Ver en rejilla"]');
+  await page.waitForSelector('.ntv-grid', { timeout: 6000 });
+  check('NTV: y vuelve a la rejilla', (await page.$$eval('.ntv-grid .exg-row', els => els.length)) >= 36);
 
   await page.click('#ntv-search');
   await page.type('#ntv-search', 'vida eterna');

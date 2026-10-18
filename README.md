@@ -37,13 +37,15 @@ npm run preview     # sirve localmente el build de producción
 npm run index:wiki  # regenera content/ desde el wiki de origen (destructivo, ver abajo)
 npm run exegesis    # regenera public/textos/exegesis/ (NTV + Codex + índice + buscador)
 npm run qa          # QA completa (datos + navegador; requiere `npm run dev` en otra terminal)
+npm run qa:audio    # comprueba las narraciones (audio, onda y reproductor de la NTV)
 npm run qa:imagenes # comprueba las imágenes referenciadas y las de las páginas
 npm run qa:a11y     # audita la accesibilidad con axe-core (0 critical/serious)
+node scripts/build-audio-peaks.mjs   # recalcula la onda de las narraciones (necesita Chrome)
 node scripts/fix-biblia-doc.mjs --file <ruta> --write   # repara la Biblia Patrística (simula sin --write)
 ```
 
 `npm run qa` agrupa: `check:search`, `qa:timeline`, `qa:concilios`, `qa:buscar`,
-`qa:vistas`, `qa:biblia`, `qa:exegesis`, `qa:imagenes` y `qa:a11y`. Todas las suites de navegador
+`qa:vistas`, `qa:biblia`, `qa:exegesis`, `qa:audio`, `qa:imagenes` y `qa:a11y`. Todas las suites de navegador
 necesitan el servidor de desarrollo en `http://localhost:5173` (y Chrome instalado).
 Para auditar el sitio publicado, ejecuta cualquiera de ellas con
 `CRUX_BASE=https://bryan1605.github.io/crux`.
@@ -60,8 +62,8 @@ Los informes quedan en `%TEMP%\opencode\crux\`.
 | `/estudio?cat=…` | Índice filtrado por categoría (enlazado desde `/temas`) |
 | `/estudio/:slug` | Ficha de estudio (Markdown) |
 | `/estudio/personajes/:slug` | Ficha de personaje: portada, escenas, biografía y línea de tiempo |
-| `/biblia` | Biblia Patrística: índice de la obra y lector paginado |
-| `/biblia/ntv` | Lector de la Nueva Traducción Viviente (capítulo a capítulo, notas del traductor, selector de versículo y buscador) |
+| `/biblia` | Biblia Patrística: índice de la obra y lector paginado (libro o desplazamiento) |
+| `/biblia/ntv` | Lector de la Nueva Traducción Viviente (rejilla por versículo o pliego, notas del traductor, selector de versículo, buscador y narración en el raíl) |
 | `/exegesis` | Exégesis comparada: Codex Sinaiticus ↔ NTV en rejilla por versículo, con aparato crítico, notas y buscador |
 | `/videos` | Parrilla de videos de YouTube |
 | `/concilios` | Concilios y herejías, con ancla por id (`/concilios#nicea`) |

@@ -3,6 +3,73 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.7.0] — 2026-10-18
+
+La lectura se afina: la Patrística se lee en un libro más grande y con gestos
+claros, la NTV pasa a la rejilla por versículo de la exégesis y la Carta de Judas
+se puede **escuchar** desde el raíl del capítulo.
+
+### Añadido
+
+- **Narración en el raíl de la NTV** (`ChapterAudio`): al abrir un capítulo con
+  audio aparece un reproductor con la onda real de la grabación —picos mínimos y
+  máximos por tramo, medidos con la Web Audio API
+  (`scripts/build-audio-peaks.mjs`), no una silueta inventada—, posición con clic
+  o arrastre, teclado (flechas ±5 s, AvPág/RePág ±30 s, Inicio/Fin, Espacio),
+  descarga en Ogg/Opus y aviso con enlace si el navegador no reproduce el
+  formato. El contenido vive en `content/narraciones.json` (validado en el build:
+  el audio y su onda tienen que existir en `public/`) y los datos en
+  `src/data/narraciones.js`. Primera narración: **Carta de Judas** (7:18).
+- **`qa:audio`** (22 comprobaciones): esquema, contenedor Ogg, onda coherente con
+  la duración declarada, libro y capítulo en el índice, `audio/ogg` servido con
+  rangos, reproductor, progreso, salto, teclado y capítulos sin narración.
+
+### Cambiado
+
+- **`/biblia/ntv` se lee en rejilla por versículo**, con las mismas clases que
+  `/exegesis` (`exg-grid`): número en cintillo, títulos de sección dentro de la
+  rejilla y notas del traductor en superíndice. El pliego de dos páginas sigue a
+  un clic con el conmutador; `crux.ntv.paginas` migra a `rejilla | dos`.
+- **El libro de la Patrística es más grande**: `--biblia-w` sube a 1560 px en el
+  lector (1240 px en la portada), la página se clampa a 620 px de ancho y a
+  `min(alto · 0.76, ancho · 1.5)` de alto. El raíl de la NTV pasa de 240 a 280 px
+  para que quepa el reproductor.
+- **Pasar hoja con el ratón, sin pisar la selección**: el arrastre solo empieza en
+  los márgenes de la página, el clic limpio en la banda de margen pasa una hoja
+  —también la rueda horizontal o `Mayús` + rueda— y sobre el texto el ratón
+  selecciona. En táctil el arrastre sigue valiendo en toda la hoja, y una captura
+  de puntero mantiene el gesto aunque el dedo o el cursor salgan del pliego.
+- **La Biblia Patrística es la recopilación de los Padres**, no una Biblia
+  comentada: el texto de presentación, el SEO y el pie de la portada lo dicen así
+  («La compilación de las cartas, homilías y tratados…»).
+- **La divisoria del Codex queda alineada** con la columna de las filas: la
+  cabecera de testigos viaja dentro del cuerpo con `position: sticky` y
+  `scrollbar-gutter: stable`, así que el ancho útil es el mismo en la cabecera y
+  en cada fila (0 px de diferencia).
+
+### Corregido
+
+- **Marcar texto ya no cambia el versículo fijado** en la rejilla: con una
+  selección viva, el clic de fila se ignora (`src/lib/selection.js`). Vale para
+  `/exegesis` y para el pliego de la NTV, donde además ya no se desplaza el
+  capítulo.
+- **`?pag=sección.k` ya no se pierde al repaginar** (otro tamaño de letra, otra
+  ventana): si una sección no abre página propia —su título cae a mitad de la
+  anterior—, el enlace resuelve a la página donde está su título en vez de
+  mostrar «página no encontrada».
+- **Los emojis perdidos de la Parte 2.4** (`## ??`) vuelven a su sitio
+  (`📖`, `📜`, `📄`) conservando el nivel `##`, y el paso `encoding` de
+  `fix-biblia-doc.mjs` es idempotente. La copia del sitio y la bóveda siguen
+  idénticas: 8516 líneas, 0 `??`, 0 U+FFFD.
+
+### Notas
+
+- La narración todavía no tiene editor en `/admin`: se edita a mano en
+  `content/narraciones.json` (el audio, en `public/audio/ntv/`). Las ondas se
+  regeneran con `node scripts/build-audio-peaks.mjs`.
+- El audio se sirve como `.ogg` (no `.opus`) porque GitHub Pages solo reconoce
+  `audio/ogg` por extensión, y se declara `type="audio/ogg; codecs=opus"`.
+
 ## [0.6.0] — 2026-10-17
 
 La exégesis pasa a leerse **versículo a versículo** y los tres lectores se

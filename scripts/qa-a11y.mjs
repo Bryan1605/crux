@@ -37,6 +37,7 @@ const ROUTES = [
   { label: 'biblia (índice)', path: '/biblia' },
   { label: 'biblia (lector)', path: '/biblia?pag=p2-1' },
   { label: 'biblia NTV (lector)', path: '/biblia/ntv?libro=juan&cap=3' },
+  { label: 'biblia NTV (narración)', path: '/biblia/ntv?libro=judas&cap=1' },
   { label: 'exégesis (comparada)', path: '/exegesis?libro=juan&cap=3&vv=16-21' },
   { label: 'videos', path: '/videos' },
   { label: 'concilios', path: '/concilios' },

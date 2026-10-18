@@ -1,7 +1,16 @@
 /* Biblia Patrística — portada, índice y lector tipo libro */
 
+.biblia {
+  /* El lector usa un pliego más ancho que el resto de la página. */
+  --biblia-w: min(1240px, calc(100% - 2rem));
+}
+
+.biblia--reader {
+  --biblia-w: min(1560px, calc(100% - 2rem));
+}
+
 .biblia__shell {
-  width: min(1240px, calc(100% - 2rem));
+  width: var(--biblia-w, min(1240px, calc(100% - 2rem)));
   margin-inline: auto;
 }
 

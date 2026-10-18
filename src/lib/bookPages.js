@@ -22,10 +22,10 @@ const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 export function bookGeometry({ width, height, fontSize = 17 }) {
   const wide = width >= 900;
   const columns = wide ? 2 : 1;
-  const spine = wide ? 84 : 0; // lomo + aire entre páginas
+  const spine = wide ? 92 : 0; // lomo + aire entre páginas
   const raw = (width - spine) / columns;
-  const pageW = Math.round(clamp(raw, 296, wide ? 540 : 640));
-  const pageH = Math.round(clamp(Math.min(height * 0.74, pageW * 1.55), 360, 800));
+  const pageW = Math.round(clamp(raw, 296, wide ? 620 : 700));
+  const pageH = Math.round(clamp(Math.min(height * 0.76, pageW * 1.5), 360, 860));
   const pad = Math.round(clamp(pageW * 0.078, 16, 34));
   const head = 36; // encabezado + separación (fijo en CSS)
   const foot = 32; // folio (fijo en CSS)
@@ -176,6 +176,11 @@ export function resolvePage(pagination, rawId) {
     if (list && list.length && Number.isFinite(k) && k >= 1) {
       return list[Math.min(k, list.length) - 1];
     }
+    // Repaginar (otro tamaño de letra, otra ventana) puede dejar una sección sin
+    // página propia —su título cae a mitad de la anterior—: el enlace sigue
+    // apuntando a la página donde está su título en vez de perderse.
+    const fallback = pagination.pageById.get(pieces[0]);
+    if (fallback !== undefined) return fallback;
   }
 
   return -1;

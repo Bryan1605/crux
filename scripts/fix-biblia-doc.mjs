@@ -111,7 +111,12 @@ const ENCODING_FIXES = [
   [`${R}Qui${R}n`, '¿Quién', 1],
   [`convertir${R}a`, 'convertiría', 1],
   [`resucitar${R}n`, 'resucitarán', 1],
-  [`ser${R}a`, 'sería', 1]
+  [`ser${R}a`, 'sería', 1],
+  // Emojis perdidos de la Parte 2.4: el nivel del encabezado (`##`) se conserva
+  // a propósito, para que la bóveda y la copia del sitio sigan siendo idénticas.
+  ['## ?? Resumen', '## 📖 Resumen', 1],
+  ['## ?? Citas clave explicadas', '## 📜 Citas clave explicadas', 1],
+  ['## ?? Obra completa traducida', '## 📄 Obra completa traducida', 1]
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -128,15 +133,13 @@ const HEADING_FIXES = [
     '## Parte 4.1 — Tertuliano de Cartago (c. 155–c. 240 d.C.)',
     1
   ],
-  // Secciones de las partes 2.2 / 2.3 (h2 → h3)
-  [/^## 📖 Resumen$/, '### 📖 Resumen', 2],
-  // Secciones dañadas de la Parte 2.4 (emoji perdido → h3)
-  [/^## \?\? Resumen$/, '### 📖 Resumen', 1],
-  [/^## \?\? Citas clave explicadas$/, '### 📜 Citas clave explicadas', 1],
-  [/^## \?\? Obra completa traducida$/, '### 📄 Obra completa traducida', 1],
+  // Secciones de las partes 2.2 / 2.3 / 2.4 (h2 → h3); los emojis de la 2.4 los
+  // repara el paso 1, así que aquí ya llegan los tres «## 📖 Resumen».
+  [/^## 📖 Resumen$/, '### 📖 Resumen', 3],
   [/^## 📜 Citas clave explicadas$/, '### 📜 Citas clave explicadas', 3],
   [/^## 📄 Obra completa traducida — Discurso contra los Griegos$/, '### 📄 Obra completa traducida — Discurso contra los Griegos', 1],
   [/^## 📄 Obra completa traducida — A Autólico$/, '### 📄 Obra completa traducida — A Autólico', 1],
+  [/^## 📄 Obra completa traducida$/, '### 📄 Obra completa traducida', 1],
   // Secciones de la Parte 4.1 (h2 → h3)
   [/^## 📖 Resumen biográfico$/, '### 📖 Resumen biográfico', 1],
   [/^## 📋 Estructura de la Parte 4$/, '### 📋 Estructura de la Parte 4', 1],
@@ -189,7 +192,9 @@ if (STEPS.has('encoding')) {
   for (const [from, to, expected] of ENCODING_FIXES) {
     const count = text.split(from).length - 1;
     if (count === 0) {
-      errors.push(`codificación: no se encontró «${from.replace(/\uFFFD/g, '?')}» (esperaba ${expected})`);
+      // Idempotencia: si el texto correcto ya está, no es un error.
+      if (text.includes(to)) log.push(`  · ya reparado: «${to}»`);
+      else errors.push(`codificación: no se encontró «${from.replace(/\uFFFD/g, '?')}» (esperaba ${expected})`);
       continue;
     }
     if (count !== expected) {

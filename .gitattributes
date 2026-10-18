@@ -10,6 +10,8 @@
 *.ico binary
 *.woff binary
 *.woff2 binary
+*.ogg binary
+*.opus binary
 *.stl binary
 *.glb binary
 *.gltf binary

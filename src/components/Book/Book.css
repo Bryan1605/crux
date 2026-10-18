@@ -59,6 +59,8 @@
   display: grid;
   background: var(--paper);
   border-radius: 4px;
+  /* El arrastre horizontal es «pasar hoja»; el vertical sigue siendo scroll. */
+  touch-action: pan-y;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.08) inset,
     0 26px 60px -26px rgba(0, 0, 0, 0.75),
@@ -84,6 +86,29 @@
   overflow: hidden;
   background: var(--paper);
   color: var(--ink);
+}
+
+/* El texto se marca; los márgenes pasan hoja (ver Book.jsx: `data-zone`). */
+.book-page__body {
+  cursor: text;
+}
+
+.book-stage[data-zone] .book {
+  cursor: pointer;
+}
+
+.book-stage[data-grab] .book {
+  cursor: grab;
+}
+
+.book-stage[data-zone='next'] .book__page--right,
+.book-stage[data-zone='next'] .book__page--single {
+  box-shadow: inset -18px 0 26px -22px rgba(0, 0, 0, 0.9);
+}
+
+.book-stage[data-zone='prev'] .book__page--left,
+.book-stage[data-zone='prev'] .book__page--single {
+  box-shadow: inset 18px 0 26px -22px rgba(0, 0, 0, 0.9);
 }
 
 .book__page--left {

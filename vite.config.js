@@ -74,9 +74,29 @@ function contentGuard() {
       };
       const readJson = name => JSON.parse(fs.readFileSync(path.join(CONTENT, `${name}.json`), 'utf8'));
 
-      for (const name of ['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias', 'concilios']) {
+      for (const name of ['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias', 'concilios', 'narraciones']) {
         const file = path.join(CONTENT, `${name}.json`);
         if (fs.existsSync(file)) check(name, () => readJson(name));
+      }
+
+      // Narraciones: el audio y su onda tienen que estar publicados de verdad.
+      const nFile = path.join(CONTENT, 'narraciones.json');
+      const PUBLIC = path.join(ROOT, 'public');
+      if (fs.existsSync(nFile)) {
+        try {
+          const { items } = JSON.parse(fs.readFileSync(nFile, 'utf8'));
+          for (const item of items || []) {
+            for (const key of ['src', 'peaks']) {
+              const rel = item[key];
+              if (!rel) continue;
+              if (!fs.existsSync(path.join(PUBLIC, rel))) {
+                errors.push(`narraciones: no existe public${rel} (${item.id})`);
+              }
+            }
+          }
+        } catch (e) {
+          errors.push(`narraciones: ${e.message}`);
+        }
       }
 
       // personajes

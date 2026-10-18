@@ -183,6 +183,40 @@ export function validateAnuncios(obj) {
 
 const TIMELINE_TIPOS = new Set(['personaje', 'concilio', 'herejia', 'doctrina', 'evento']);
 const CONCILIO_TIPOS = new Set(['concilio', 'herejia']);
+const NARRACION_TIPOS = new Set(['ntv']);
+
+/**
+ * Narraciones (audio) que el lector muestra en el raíl, capítulo a capítulo.
+ * `src` y `peaks` se sirven desde `public/`; `duration` en segundos.
+ */
+export function validateNarraciones(obj) {
+  required(obj, 'version', 'number', 'narraciones');
+  required(obj, 'items', 'array', 'narraciones');
+  const ids = new Set();
+  for (const [i, n] of obj.items.entries()) {
+    required(n, 'id', 'string', `narraciones.items[${i}]`);
+    required(n, 'title', 'string', `narraciones.items[${i}]`);
+    required(n, 'kind', 'string', `narraciones.items[${i}]`);
+    if (!NARRACION_TIPOS.has(n.kind)) {
+      throw new Error(`narraciones.items[${i}]: kind desconocido "${n.kind}"`);
+    }
+    required(n, 'book', 'string', `narraciones.items[${i}]`);
+    required(n, 'chapter', 'number', `narraciones.items[${i}]`);
+    required(n, 'src', 'string', `narraciones.items[${i}]`);
+    if (!n.src.startsWith('/')) throw new Error(`narraciones.items[${i}]: src debe empezar por /`);
+    required(n, 'duration', 'number', `narraciones.items[${i}]`);
+    if (!(n.duration > 0)) throw new Error(`narraciones.items[${i}]: duration en segundos (> 0)`);
+    optional(n, 'subtitle', 'string', `narraciones.items[${i}]`, '');
+    optional(n, 'note', 'string', `narraciones.items[${i}]`, '');
+    optional(n, 'peaks', 'string', `narraciones.items[${i}]`, '');
+    if (n.peaks && !n.peaks.startsWith('/')) {
+      throw new Error(`narraciones.items[${i}]: peaks debe empezar por /`);
+    }
+    if (ids.has(n.id)) throw new Error(`narraciones.items[${i}]: id repetido "${n.id}"`);
+    ids.add(n.id);
+  }
+  return true;
+}
 
 /** ¿Resuelve el href a una ruta real del sitio? (ctx: { studies, personajes }) */
 function resolveHref(href, ctx) {
@@ -330,7 +364,8 @@ export const VALIDATORS = {
   anuncios: validateAnuncios,
   personaje: validatePersonaje,
   timeline: validateTimeline,
-  concilios: validateConcilios
+  concilios: validateConcilios,
+  narraciones: validateNarraciones
 };
 
 export function validate(name, data, slug, ctx) {

@@ -166,7 +166,13 @@
   box-shadow: 0 24px 60px -34px rgba(0, 0, 0, 0.85);
 }
 
+/* La cabecera vive dentro del contenedor con scroll (`.exg-grid__body`), pegada
+   arriba: así comparte su ancho exacto —barra de desplazamiento incluida— y el
+   filete vertical del Codex cae justo sobre el de las filas. */
 .exg-grid__head {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   display: grid;
   border-bottom: 1px solid var(--rule);
   background: color-mix(in srgb, var(--paper) 82%, #000 4%);
@@ -208,8 +214,11 @@
 
 .exg-grid__body {
   position: relative;
-  max-height: min(70vh, 46rem);
+  max-height: var(--exg-grid-h, min(70vh, 46rem));
   overflow-y: auto;
+  /* Reserva el carril de la barra de desplazamiento siempre: sin él, el ancho de
+     las columnas cambiaría al aparecer o desaparecer y la cabecera se movería. */
+  scrollbar-gutter: stable;
 }
 
 .exg-grid__section {
@@ -224,7 +233,9 @@
   box-shadow: inset 3px 0 0 #d6b25e;
 }
 
-.exg-grid__body > .exg-grid__section:first-child {
+/* La cabecera pegada ya pone el filete inferior: la primera fila no lo repite. */
+.exg-grid__head + .exg-row,
+.exg-grid__head + .exg-grid__section {
   border-top: 0;
 }
 
@@ -574,19 +585,34 @@
 
 .ntv__layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
+  grid-template-columns: minmax(0, 1fr) 280px;
   gap: 1.2rem;
   align-items: start;
 }
+
+/* --- rejilla de la NTV -------------------------------------------------------
+   La NTV va sola en la rejilla: comparte la estructura (y las clases) de
+   `/exegesis`, pero el texto usa el tamaño de letra elegido y la lectura
+   respira algo más de alto. */
+
+.ntv-grid {
+  --exg-grid-h: min(76vh, 52rem);
+}
+
+.ntv-grid .exg-row__cell--ntv {
+  font-size: var(--exg-fs, 18px);
+  line-height: 1.7;
+}
+
+.ntv-grid .exg-row__n {
+  font-size: 0.78rem;
+}
+
 
 .ntv__spread {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.4rem;
-}
-
-.ntv__spread.is-single {
-  grid-template-columns: 1fr;
 }
 
 .ntv-page {

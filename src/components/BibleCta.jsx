@@ -17,8 +17,8 @@ const CARDS = [
     id: 'patristica',
     glyph: '✝',
     eyebrow: 'Biblia Patrística',
-    title: 'Los Padres, verso a verso',
-    text: 'La Biblia comentada por los Padres de la Iglesia, con buscador y navegación hoja a hoja.',
+    title: 'La voz de los Padres',
+    text: 'La compilación de las cartas, homilías y tratados de los Padres de la Iglesia, con buscador y lectura hoja a hoja.',
     to: '/biblia'
   },
   {

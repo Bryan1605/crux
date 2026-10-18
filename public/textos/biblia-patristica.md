@@ -2395,7 +2395,7 @@ Los griegos no hacen mención de estas historias porque ellos mismos solo recien
 ---
 # Parte 2.4 — Atenágoras de Atenas
 
-## ?? Resumen
+## 📖 Resumen
 
 Atenágoras de Atenas (siglo II) fue un filósofo y apologista cristiano ateniense. Se le conocen dos obras: *Embajada en favor de los cristianos* (*Legatio pro Christianis*, ~177 d.C.) y *Sobre la resurrección de los muertos* (*De Resurrectione Mortuorum*).
 
@@ -2403,7 +2403,7 @@ Atenágoras de Atenas (siglo II) fue un filósofo y apologista cristiano atenien
 
 **Resurrección**: Tratado filosófico que demuestra la resurrección corporal como necesaria por: (1) el propósito de la creación humana, (2) la naturaleza compuesta del hombre (alma + cuerpo), y (3) la justicia divina que requiere que ambos reciban su merecido.
 
-## ?? Citas clave explicadas
+## 📜 Citas clave explicadas
 
 **1. La Trinidad temprana (Embajada, cap. 10):**
 > Reconoces a un Dios... y a un Hijo de Dios... El Hijo de Dios es el Logos del Padre... El Espíritu Santo mismo... lo afirmamos como una emanación de Dios.
@@ -2424,7 +2424,7 @@ Argumento lógico contra el politeísmo basado en la unicidad divina.
 
 ---
 
-## ?? Obra completa traducida
+## 📄 Obra completa traducida
 
 ### EMBARJADA EN FAVOR DE LOS CRISTIANOS (*Legatio pro Christianis*)
 

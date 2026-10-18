@@ -7,6 +7,7 @@ import VersePopover, { ApparatusBody, NoteBody } from '../components/VersePopove
 import { WITNESS_ATTRIBUTION, WITNESS_SOURCE, witnessLabel, witnessLegend } from '../data/exegesis';
 import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadWitnessBook } from '../lib/exegesisTexts';
+import { hasSelection } from '../lib/selection';
 import { useSeo } from '../lib/site';
 
 import './Biblia.css';
@@ -461,7 +462,10 @@ export default function Exegesis() {
     if (!selected) return;
     const row = body.querySelector(`[data-v="${selected}"]`);
     if (!row) return;
-    const top = row.offsetTop - 8;
+    // La cabecera va pegada arriba dentro del contenedor: hay que descontarla o
+    // la fila elegida quedaría escondida detrás.
+    const head = body.querySelector('.exg-grid__head');
+    const top = row.offsetTop - (head ? head.offsetHeight : 0) - 8;
     const bottom = top + row.offsetHeight;
     if (top >= body.scrollTop - 2 && bottom <= body.scrollTop + body.clientHeight) return;
     body.scrollTo({ top: Math.max(0, top), behavior: prefersReduced() ? 'auto' : 'smooth' });
@@ -747,30 +751,30 @@ export default function Exegesis() {
           <p className="exg-empty">Este pasaje no está en ninguno de los dos testigos.</p>
         ) : (
           <section className={`exg-grid exg-grid--${columns}`} style={{ '--exg-fs': `${size}px` }} aria-label="Lectura paralela por versículo">
-            <header className="exg-grid__head">
-              <div className="exg-grid__gutter" aria-hidden="true" />
-              {showCodex && (
-                <div className="exg-grid__witness exg-grid__witness--codex">
-                  <b>Codex Sinaiticus</b>
-                  <span>
-                    Transcripción diplomática
-                    {codexChapter?.folio ? ` · f. ${codexChapter.folio}${codexChapter.side}` : ''} · la
-                    sobrelínea marca los <i>nomina sacra</i>
-                  </span>
-                </div>
-              )}
-              {showNtv && (
-                <div className="exg-grid__witness exg-grid__witness--ntv">
-                  <b>Nueva Traducción Viviente</b>
-                  <span>
-                    {bookMeta?.name} {chapterNum}:{range.from}–{range.to} · notas del traductor en
-                    superíndice
-                  </span>
-                </div>
-              )}
-            </header>
-
             <div className="exg-grid__body" ref={gridRef}>
+              <header className="exg-grid__head">
+                <div className="exg-grid__gutter" aria-hidden="true" />
+                {showCodex && (
+                  <div className="exg-grid__witness exg-grid__witness--codex">
+                    <b>Codex Sinaiticus</b>
+                    <span>
+                      Transcripción diplomática
+                      {codexChapter?.folio ? ` · f. ${codexChapter.folio}${codexChapter.side}` : ''} · la
+                      sobrelínea marca los <i>nomina sacra</i>
+                    </span>
+                  </div>
+                )}
+                {showNtv && (
+                  <div className="exg-grid__witness exg-grid__witness--ntv">
+                    <b>Nueva Traducción Viviente</b>
+                    <span>
+                      {bookMeta?.name} {chapterNum}:{range.from}–{range.to} · notas del traductor en
+                      superíndice
+                    </span>
+                  </div>
+                )}
+              </header>
+
               {rows.map(row =>
                 row.kind === 'section' ? (
                   <p className="exg-grid__section" key={row.key}>
@@ -781,7 +785,11 @@ export default function Exegesis() {
                     key={row.n}
                     data-v={row.n}
                     className={`exg-row${selected === row.n ? ' is-active' : ''}`}
-                    onClick={() => select(row.n)}
+                    onClick={() => {
+                      // Marcar texto con el ratón termina en un clic sobre la
+                      // fila: si hay selección viva, no fijamos ni movemos nada.
+                      if (!hasSelection()) select(row.n);
+                    }}
                   >
                     <div className="exg-row__gutter">
                       <button
