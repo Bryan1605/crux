@@ -1,6 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
+import BibleSearch from '../components/BibleSearch';
+import BibleCta from '../components/BibleCta';
+import VersePopover, { NoteBody } from '../components/VersePopover';
+import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadWitnessBook } from '../lib/exegesisTexts';
 import { useSeo } from '../lib/site';
 
@@ -62,7 +66,7 @@ function tokenize(text) {
 }
 
 /** Agrupa los versículos en párrafos: cada versículo empieza uno nuevo. */
-function PageText({ verses, sections, notes, onNote, activeNote }) {
+function PageText({ verses, sections, notes, activeVerse, onSelect, onNote }) {
   const bySection = useMemo(() => {
     const map = new Map();
     for (const s of sections || []) {
@@ -75,22 +79,36 @@ function PageText({ verses, sections, notes, onNote, activeNote }) {
   return (
     <>
       {verses.map(v => (
-        <div key={v.n} id={`v${v.n}`}>
+        <div key={v.n} id={`v${v.n}`} data-v={v.n} className={`ntv-vs${activeVerse === v.n ? ' is-active' : ''}`}>
           {(bySection.get(v.n) || []).map(title => (
             <span key={title} className="ntv-h">
               {title}
             </span>
           ))}
-          <p>
-            <span className="ntv-v">{v.n}</span>
+          <p onClick={() => onSelect(v.n)}>
+            <button
+              type="button"
+              className="ntv-v"
+              aria-label={`Versículo ${v.n}`}
+              onClick={event => {
+                event.stopPropagation();
+                onSelect(v.n);
+              }}
+            >
+              {v.n}
+            </button>
             {tokenize(v.text).map((t, i) =>
               t.k === 'fn' ? (
                 <button
                   key={i}
                   type="button"
-                  className={`ntv-fn${activeNote === t.v ? ' is-active' : ''}`}
-                  onClick={() => onNote({ id: t.v, verse: v.n, text: notes[t.v] || '' })}
+                  className="ntv-fn"
                   title="Ver la nota del traductor"
+                  aria-label={`Nota ${t.v} del versículo ${v.n}`}
+                  onClick={event => {
+                    event.stopPropagation();
+                    onNote(event.currentTarget, v.n, t.v);
+                  }}
                 >
                   {t.v}
                 </button>
@@ -118,12 +136,14 @@ export default function BibliaNtv() {
   });
   const [size, setSize] = useState(() => Number(read(KEYS.size, 18)));
   const [pages, setPages] = useState(() => (read(KEYS.pages, 'dos') === 'una' ? 'una' : 'dos'));
-  const [note, setNote] = useState(null);
+  const [pop, setPop] = useState(null);
 
   const railRef = useRef(null);
+  const scrolled = useRef(null);
 
   const bookId = params.get('libro') || 'mateo';
   const chapterNum = Number(params.get('cap') || 1);
+  const selected = Number(params.get('v')) || null;
 
   useEffect(() => {
     let alive = true;
@@ -138,6 +158,7 @@ export default function BibliaNtv() {
   useEffect(() => {
     let alive = true;
     setBook(null);
+    scrolled.current = null;
     loadWitnessBook('ntv', bookId)
       .then(data => alive && setBook(data))
       .catch(() => alive && setError(true));
@@ -166,11 +187,31 @@ export default function BibliaNtv() {
     return [chapter.verses.slice(0, mid), chapter.verses.slice(mid)];
   }, [chapter]);
 
+  const searchRecords = useMemo(
+    () =>
+      book
+        ? buildRecords({ witness: 'ntv', bookId, bookName: book.name, chapters: book.chapters })
+        : [],
+    [book, bookId]
+  );
+
+  const select = useCallback(
+    (n, { keepPop = false } = {}) => {
+      const q = new URLSearchParams(params);
+      if (n) q.set('v', String(n));
+      else q.delete('v');
+      if (!keepPop) setPop(null);
+      setParams(q, { replace: true });
+    },
+    [params, setParams]
+  );
+
   const goto = (next, push = true) => {
     const q = new URLSearchParams(params);
     if (next.bookId) q.set('libro', next.bookId);
     if (next.chapter) q.set('cap', String(next.chapter));
-    setNote(null);
+    q.delete('v');
+    setPop(null);
     setParams(q, { replace: !push });
   };
 
@@ -182,6 +223,18 @@ export default function BibliaNtv() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [book, chapterNum]);
+
+  /* El versículo elegido se lleva a la vista (una vez por cambio). */
+  useEffect(() => {
+    if (!chapter || !selected) return;
+    const key = `${bookId}.${chapterNum}.${selected}`;
+    if (scrolled.current === key) return;
+    scrolled.current = key;
+    const el = document.getElementById(`v${selected}`);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 132;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }, [chapter, selected, bookId, chapterNum]);
 
   /* Teclado: ← → cambian de capítulo. */
   useEffect(() => {
@@ -207,7 +260,7 @@ export default function BibliaNtv() {
   useSeo({
     title: book ? `${book.name} ${chapterNum} — Biblia NTV` : 'Biblia NTV',
     description:
-      'La Nueva Traducción Viviente leída como un libro: capítulo a capítulo, con sus notas del traductor.'
+      'La Nueva Traducción Viviente leída como un libro: capítulo a capítulo, con sus notas del traductor y un buscador por palabras.'
   });
 
   if (error) {
@@ -244,7 +297,7 @@ export default function BibliaNtv() {
           <h1>Biblia NTV</h1>
           <p>
             La Nueva Traducción Viviente, leída como un libro: se pasa hoja, con tema de papel y
-            tamaño de letra.
+            tamaño de letra. Pulsa un versículo para fijarlo y busca por las palabras que recuerdes.
           </p>
         </header>
 
@@ -278,7 +331,39 @@ export default function BibliaNtv() {
                 ))}
               </select>
             </div>
+            <div className="exg__select">
+              <label htmlFor="ntv-verse">Versículo</label>
+              <select
+                id="ntv-verse"
+                value={selected ?? ''}
+                onChange={event => select(Number(event.target.value))}
+                disabled={!chapter}
+              >
+                <option value="" disabled>
+                  Ir a…
+                </option>
+                {(chapter?.verses || []).map(v => (
+                  <option key={v.n} value={v.n}>
+                    {v.n}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
+
+          <BibleSearch
+            id="ntv-search"
+            localRecords={searchRecords}
+            scopeLabel={book ? `${book.name} (libro abierto)` : 'este libro'}
+            onPick={record => {
+              const q = new URLSearchParams(params);
+              q.set('libro', record.bookId);
+              q.set('cap', String(record.chapter));
+              q.set('v', String(record.verse));
+              setPop(null);
+              setParams(q);
+            }}
+          />
 
           <div className="reader__bar-group">
             <button
@@ -350,8 +435,12 @@ export default function BibliaNtv() {
                         verses={verses}
                         sections={chapter.sections}
                         notes={book.notes || {}}
-                        activeNote={note?.id}
-                        onNote={setNote}
+                        activeVerse={selected}
+                        onSelect={select}
+                        onNote={(anchor, verse, id) => {
+                          setPop({ anchor, verse, id });
+                          select(verse, { keepPop: true });
+                        }}
                       />
                     </div>
                     <footer className="ntv-page__foot">
@@ -399,7 +488,13 @@ export default function BibliaNtv() {
                   <ul className="ntv__rail-sections">
                     {chapter.sections.map(s => (
                       <li key={`${s.verse}-${s.title}`}>
-                        <a href={`#v${s.verse}`}>
+                        <a
+                          href={`#v${s.verse}`}
+                          onClick={event => {
+                            event.preventDefault();
+                            select(s.verse);
+                          }}
+                        >
                           <span>{s.title}</span>
                           <span>{s.verse}</span>
                         </a>
@@ -412,22 +507,29 @@ export default function BibliaNtv() {
           </div>
         )}
 
-        {note && (
-          <div className="ntv__note" role="note">
-            <button type="button" className="ntv__note-close" onClick={() => setNote(null)} aria-label="Cerrar la nota">
-              ×
-            </button>
-            <p>
-              <b>
-                {book?.name} {chapterNum}:{note.verse} · nota {note.id}
-              </b>
-            </p>
-            <p>{note.text}</p>
-          </div>
-        )}
+        <BibleCta
+          exclude="ntv"
+          passage={book ? `${book.name} ${chapterNum}` : ''}
+          title="El mismo pasaje, en los otros dos lectores"
+        />
 
-        <p className="exg__hint">Usa ← → para cambiar de capítulo · el texto se puede seleccionar y buscar</p>
+        <p className="exg__hint">
+          Usa ← → para cambiar de capítulo · el texto se puede seleccionar y buscar
+        </p>
       </div>
+
+      {pop && (
+        <VersePopover
+          anchor={pop.anchor}
+          label={`Nota ${pop.id} · ${book?.name} ${chapterNum}:${pop.verse}`}
+          onClose={() => setPop(null)}
+        >
+          <NoteBody
+            note={book?.notes?.[pop.id]}
+            reference={`${book?.name} ${chapterNum}:${pop.verse} · nota ${pop.id}`}
+          />
+        </VersePopover>
+      )}
     </main>
   );
 }

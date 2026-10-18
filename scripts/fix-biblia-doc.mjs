@@ -15,13 +15,23 @@
  *      (los capítulos reiniciaban en 1 sin avisar). Se insertan los títulos que
  *      el propio documento declara en su tabla «Estructura de la Parte 4».
  *
- *   Uso:  node scripts/fix-biblia-doc.mjs           (simulación, no escribe)
- *         node scripts/fix-biblia-doc.mjs --write   (aplica los cambios)
+ *   Uso:  node scripts/fix-biblia-doc.mjs                     (simulación del archivo del sitio)
+ *         node scripts/fix-biblia-doc.mjs --write             (aplica y guarda una copia de seguridad)
+ *         node scripts/fix-biblia-doc.mjs --file <ruta>       (otra copia: p. ej. la bóveda de Obsidian)
+ *         node scripts/fix-biblia-doc.mjs --only encoding     (solo la codificación)
+ *
+ *   Pasos: `encoding` (caracteres perdidos), `headings` (jerarquía) y `titles` (títulos de
+ *   obra ausentes). `--only` acepta una lista separada por comas; por defecto se ejecutan
+ *   los tres. Al escribir se deja `<archivo>.bak` junto al original.
  *
  * Si se vuelve a ejecutar tras aplicarse, informa de que no hay nada que hacer.
+ *
+ * Nota: la bóveda `D:\Biblia\Biblia_Patristica_Completa.md` es la que citan los estudios
+ * (con números de línea), así que se repara con `--only encoding`, que sustituye caracteres
+ * sin tocar el número de líneas ni los finales de línea.
  */
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, relative, resolve } from 'node:path';
 
@@ -29,16 +39,50 @@ const R = '\uFFFD';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, '..');
-const DOC = resolve(ROOT, 'public/textos/biblia-patristica.md');
-const WRITE = process.argv.includes('--write');
+
+const argv = process.argv.slice(2);
+const flag = name => argv.includes(name);
+const option = (name, fallback = '') => {
+  const i = argv.indexOf(name);
+  return i >= 0 && argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : fallback;
+};
+
+const WRITE = flag('--write');
+const FILE = option('--file', '');
+const ALL_STEPS = ['encoding', 'headings', 'titles'];
+const STEPS = new Set(
+  option('--only', 'all') === 'all'
+    ? ALL_STEPS
+    : option('--only')
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean)
+);
+const unknown = [...STEPS].filter(s => !ALL_STEPS.includes(s));
+if (unknown.length) {
+  console.error(`\n✗ paso(s) desconocido(s): ${unknown.join(', ')} (válidos: ${ALL_STEPS.join(', ')})`);
+  process.exit(2);
+}
+
+const DOC = FILE ? resolve(FILE) : resolve(ROOT, 'public/textos/biblia-patristica.md');
+if (!existsSync(DOC)) {
+  console.error(`\n✗ no existe el archivo: ${DOC}`);
+  process.exit(2);
+}
 
 /* -------------------------------------------------------------------------- */
 /* 1. Codificación: reconstrucción de los caracteres perdidos                  */
 /* -------------------------------------------------------------------------- */
 
-/** [texto dañado, texto correcto, apariciones esperadas] */
+/**
+ * [texto dañado, texto correcto, apariciones esperadas].
+ *
+ * Solo sustituye caracteres: no toca la jerarquía (el nivel del encabezado de la
+ * Parte 2.4 se conserva para que el arreglo sea byte-mínimo y la copia quede
+ * idéntica a la del sitio). La jerarquía la normaliza el paso 2.
+ */
 const ENCODING_FIXES = [
-  [`# Parte 2.4 ${R} Aten${R}goras de Atenas`, '## Parte 2.4 — Atenágoras de Atenas', 1],
+  [`# Parte 2.4 ${R} Aten${R}goras de Atenas`, '# Parte 2.4 — Atenágoras de Atenas', 1],
   [`${R}goras`, 'ágoras', 2],
   [`fil${R}sofo`, 'filósofo', 1],
   [`resurrecci${R}n`, 'resurrección', 3],
@@ -76,8 +120,8 @@ const ENCODING_FIXES = [
 
 /** [regex de línea completa, reemplazo, apariciones esperadas] */
 const HEADING_FIXES = [
-  // Parte 2.2 y 2.3 (la 2.4 ya queda corregida arriba)
-  [/^# (Parte 2\.[23] — .+)$/, '## $1', 2],
+  // Parte 2.2, 2.3 y 2.4 (los caracteres de la 2.4 los repara el paso 1)
+  [/^# (Parte 2\.[234] — .+)$/, '## $1', 3],
   // Tertuliano: `# PARTE 4.1 — TERTULIANO...` → `## Parte 4.1 — Tertuliano...`
   [
     /^# PARTE 4\.1 — TERTULIANO DE CARTAGO \(c\. 155–c\. 240 d\.C\.\)$/,
@@ -130,9 +174,10 @@ let lines = text.split(/\r?\n/);
 {
   const rawLines = text.split(/\r?\n/);
   const anyPending =
-    ENCODING_FIXES.some(([from]) => text.includes(from)) ||
-    HEADING_FIXES.some(([re]) => rawLines.some(line => re.test(line)));
-  const titlesPresent = Object.values(WORK_TITLES).every(t => rawLines.includes(t));
+    (STEPS.has('encoding') && ENCODING_FIXES.some(([from]) => text.includes(from))) ||
+    (STEPS.has('headings') && HEADING_FIXES.some(([re]) => rawLines.some(line => re.test(line))));
+  const titlesPresent =
+    !STEPS.has('titles') || Object.values(WORK_TITLES).every(t => rawLines.includes(t));
   if (!anyPending && titlesPresent) {
     console.log('\n✓ El documento ya está reparado; no hay nada que hacer.');
     process.exit(0);
@@ -140,70 +185,82 @@ let lines = text.split(/\r?\n/);
 }
 
 /* --- 1. codificación ------------------------------------------------------ */
-for (const [from, to, expected] of ENCODING_FIXES) {
-  const count = text.split(from).length - 1;
-  if (count === 0) {
-    errors.push(`codificación: no se encontró «${from.replace(/\uFFFD/g, '?')}» (esperaba ${expected})`);
-    continue;
+if (STEPS.has('encoding')) {
+  for (const [from, to, expected] of ENCODING_FIXES) {
+    const count = text.split(from).length - 1;
+    if (count === 0) {
+      errors.push(`codificación: no se encontró «${from.replace(/\uFFFD/g, '?')}» (esperaba ${expected})`);
+      continue;
+    }
+    if (count !== expected) {
+      errors.push(`codificación: «${from.replace(/\uFFFD/g, '?')}» aparece ${count} veces (esperaba ${expected})`);
+    }
+    text = text.split(from).join(to);
+    changed += count;
+    log.push(`  · ${count}× «${from.replace(/\uFFFD/g, '?')}» → «${to}»`);
+    lines = text.split(/\r?\n/);
   }
-  if (count !== expected) {
-    errors.push(`codificación: «${from.replace(/\uFFFD/g, '?')}» aparece ${count} veces (esperaba ${expected})`);
-  }
-  text = text.split(from).join(to);
-  changed += count;
-  log.push(`  · ${count}× «${from.replace(/\uFFFD/g, '?')}» → «${to}»`);
-  lines = text.split(/\r?\n/);
 }
 
 /* --- 2. jerarquía -------------------------------------------------------- */
-for (const [re, to, expected] of HEADING_FIXES) {
-  let count = 0;
-  lines = lines.map(line => {
-    if (!re.test(line)) return line;
-    count += 1;
-    return line.replace(re, to);
-  });
-  if (count !== expected) {
-    errors.push(`jerarquía: ${re} coincidió ${count} veces (esperaba ${expected})`);
-  }
-  if (count) {
-    changed += count;
-    log.push(`  · ${count}× ${String(re).slice(0, 58)}… → ${to.slice(0, 46)}`);
+if (STEPS.has('headings')) {
+  for (const [re, to, expected] of HEADING_FIXES) {
+    let count = 0;
+    lines = lines.map(line => {
+      if (!re.test(line)) return line;
+      count += 1;
+      return line.replace(re, to);
+    });
+    if (count !== expected) {
+      errors.push(`jerarquía: ${re} coincidió ${count} veces (esperaba ${expected})`);
+    }
+    if (count) {
+      changed += count;
+      log.push(`  · ${count}× ${String(re).slice(0, 58)}… → ${to.slice(0, 46)}`);
+    }
   }
 }
 
 /* --- 3. títulos de obra ausentes ----------------------------------------- */
-const chapterOneIdx = [];
-lines.forEach((line, i) => {
-  if (line === '**Capítulo 1**') chapterOneIdx.push(i);
-});
-if (chapterOneIdx.length !== Object.keys(WORK_TITLES).length) {
-  errors.push(`títulos de obra: encontrados ${chapterOneIdx.length} inicios de obra (esperaba 3)`);
-} else {
-  // de atrás hacia delante para no desplazar los índices
-  for (let n = chapterOneIdx.length; n >= 1; n -= 1) {
-    lines.splice(chapterOneIdx[n - 1], 0, '', WORK_TITLES[n], '');
-    log.push(`  · insertado «${WORK_TITLES[n]}» antes del capítulo 1 de la obra ${n}`);
-    changed += 1;
+if (STEPS.has('titles')) {
+  const chapterOneIdx = [];
+  lines.forEach((line, i) => {
+    if (line === '**Capítulo 1**') chapterOneIdx.push(i);
+  });
+  if (chapterOneIdx.length !== Object.keys(WORK_TITLES).length) {
+    errors.push(`títulos de obra: encontrados ${chapterOneIdx.length} inicios de obra (esperaba 3)`);
+  } else {
+    // de atrás hacia delante para no desplazar los índices
+    for (let n = chapterOneIdx.length; n >= 1; n -= 1) {
+      lines.splice(chapterOneIdx[n - 1], 0, '', WORK_TITLES[n], '');
+      log.push(`  · insertado «${WORK_TITLES[n]}» antes del capítulo 1 de la obra ${n}`);
+      changed += 1;
+    }
   }
 }
 
 /* --- validación final ---------------------------------------------------- */
-const result = lines.join(eol);
-if (result.includes(R)) {
+// Sin pasos estructurales se escribe el texto tal cual: así los finales de línea
+// del original (que pueden ser mixtos) quedan intactos y el arreglo es mínimo.
+const structural = STEPS.has('headings') || STEPS.has('titles');
+const result = structural ? lines.join(eol) : text;
+if (STEPS.has('encoding') && result.includes(R)) {
   const rest = (result.match(/\uFFFD/g) || []).length;
   errors.push(`quedan ${rest} caracteres U+FFFD sin reparar`);
 }
-for (const [i, line] of lines.entries()) {
-  if (/^#{2}\s/.test(line) && !/^##\s+Parte\b/.test(line)) {
-    errors.push(`línea ${i + 1}: encabezado h2 inesperado → ${line}`);
+if (STEPS.has('headings')) {
+  for (const [i, line] of lines.entries()) {
+    if (/^#{2}\s/.test(line) && !/^##\s+Parte\b/.test(line)) {
+      errors.push(`línea ${i + 1}: encabezado h2 inesperado → ${line}`);
+    }
   }
+  if (/^##\s+\?\?\s/m.test(result)) errors.push('quedan encabezados «## ??» sin reparar');
 }
-if (/^##\s+\?\?\s/m.test(result)) errors.push('quedan encabezados «## ??» sin reparar');
 
 /* --- salida -------------------------------------------------------------- */
 console.log(`\nBiblia Patrística — reparación del documento fuente`);
-console.log(`archivo: ${relative(ROOT, DOC)}`);
+console.log(`archivo: ${DOC === resolve(ROOT, 'public/textos/biblia-patristica.md') ? relative(ROOT, DOC) : DOC}`);
+console.log(`pasos: ${[...STEPS].join(', ')}`);
 console.log(`cambios: ${changed}\n`);
 for (const line of log) console.log(line);
 
@@ -223,5 +280,11 @@ if (changed === 0) {
   process.exit(0);
 }
 
+/* Copia de seguridad junto al original (nunca se sobrescribe una anterior). */
+const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+let backup = `${DOC}.bak`;
+if (existsSync(backup)) backup = `${DOC}.${stamp}.bak`;
+writeFileSync(backup, source, 'utf8');
 writeFileSync(DOC, bom + result, 'utf8');
 console.log(`\n✓ Documento reparado y guardado.`);
+console.log(`  copia de seguridad: ${backup}`);

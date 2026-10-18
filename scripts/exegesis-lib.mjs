@@ -61,20 +61,37 @@ function findVerseStarts(line, last) {
 /**
  * ¿La línea `t` es un encabezado de sección de la NTV?
  *
- * Un encabezado es una línea corta y con mayúscula inicial que sigue al final de
- * un párrafo (el verso anterior se cerró) y precede a un versículo. Los empalmes
- * de línea (continuaciones) quedan descartados por longitud y por puntuación.
+ * Devuelve `false` cuando no lo es, `'next-verse'` cuando encabeza el versículo
+ * siguiente y `'mid-verse'` cuando la NTV lo coloca **dentro** de un versículo,
+ * entre su primera frase y la continuación (p. ej. Hechos 9:19, «Saulo en Damasco
+ * y Jerusalén»). El caso ambiguo es el último renglón de un versículo partido en
+ * dos líneas: también es una línea corta con mayúscula inicial precedida del
+ * final de una frase. Se distingue porque un cierre de versículo termina en
+ * puntuación de cierre de frase o lleva una marca de nota, y un título nunca hace
+ * ni una cosa ni la otra. Sin esta guarda se perdía el final de 96 versículos
+ * (Juan 5:45, la genealogía de Lucas 3:26-37, Hechos 9:19, Apocalipsis 22:21…)
+ * que además aparecían como secciones falsas en el índice.
  */
-function isHeading(t, prev, next) {
+function headingKind(t, prev, next) {
   if (!prev || !next) return false;
   const endsSentence = /[.!?…»"'\u2019)\]]$/.test(prev);
-  const nextIsVerse = /^\d{1,3}\s+\S/.test(next);
-  if (!endsSentence || !nextIsVerse) return false;
+  if (!endsSentence) return false;
   if (t.length > 64) return false;
   if (!/^[A-ZÁÉÍÓÚÜÑ¿¡«"']/.test(t)) return false;
   if (/[,;:·—-]$/.test(t)) return false;
-  return true;
+  if (/[.!?…»]$/.test(t)) return false; // cierra frase: es texto de versículo
+  if (/\[[a-z]{1,2}\]/.test(t)) return false; // lleva marca de nota
+  if (/^\d{1,3}\s+\S/.test(next)) return 'next-verse';
+  // Título dentro del propio versículo: el renglón siguiente abre y cierra frase.
+  if (/^[A-ZÁÉÍÓÚÜÑ¿¡«"']/.test(next) && /[.!?…»"']$/.test(next)) return 'mid-verse';
+  return false;
 }
+
+/**
+ * Los volcados de la NTV cierran cada nota al pie con un resto del maquetado
+ * (`<<`, `<>`, `<`). No aporta nada y se veía tal cual en la interfaz.
+ */
+const cleanNoteText = t => String(t).replace(/[\s\u00a0]*[<>\u2039\u203A]{1,3}\s*$/, '').trim();
 
 /**
  * Convierte el volcado en texto de la NTV en libros navegables del NT.
@@ -120,7 +137,7 @@ export function parseNtv(raw) {
       }
       const ref = /^([1-3]?\s?[A-ZÁÉÍÓÚÑ][\wáéíóúñÁÉÍÓÚÑ\s]*?)\s(\d+):(\d+)\b/.exec(text);
       const target = ref ? resolveBookName(ref[1].trim()) : null;
-      const body = ref ? text.slice(ref.index + ref[0].length).trim() : text;
+      const body = cleanNoteText(ref ? text.slice(ref.index + ref[0].length) : text);
       if (target) {
         if (!notesByBook.has(target.id)) notesByBook.set(target.id, new Map());
         notesByBook.get(target.id).set(note[1], body);
@@ -185,8 +202,9 @@ export function parseNtv(raw) {
       if (t.length <= 64) chap.sections.push({ title: t, verse: 1 });
       continue;
     }
-    if (isHeading(t, prev, next)) {
-      chap.sections.push({ title: t, verse: verse.n + 1 });
+    const kind = headingKind(t, prev, next);
+    if (kind) {
+      chap.sections.push({ title: t, verse: kind === 'mid-verse' ? verse.n : verse.n + 1 });
       continue;
     }
     verse.text += ' ' + t;

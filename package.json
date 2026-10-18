@@ -1,7 +1,7 @@
 {
   "name": "web-crux",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,8 @@
     "exegesis:ntv": "node scripts/build-ntv.mjs",
     "exegesis:codex": "node scripts/fetch-codex.mjs",
     "exegesis:index": "node scripts/build-exegesis-index.mjs",
-    "exegesis": "npm run exegesis:ntv && npm run exegesis:codex && npm run exegesis:index",
+    "exegesis:search": "node scripts/build-exegesis-search.mjs",
+    "exegesis": "npm run exegesis:ntv && npm run exegesis:codex && npm run exegesis:index && npm run exegesis:search",
     "qa:exegesis": "node scripts/qa-exegesis.mjs --browser",
     "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:exegesis && npm run qa:imagenes && npm run qa:a11y"
   },

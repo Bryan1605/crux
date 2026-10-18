@@ -14,6 +14,7 @@ import Book from '../components/Book/Book';
 import BlockView from '../components/Book/BlockView';
 import BookMeasurer from '../components/Book/BookMeasurer';
 import BookIndex from '../components/BookIndex/BookIndex';
+import BibleCta from '../components/BibleCta';
 
 import './Estudio.css';
 import './Biblia.css';
@@ -757,6 +758,12 @@ export default function Biblia() {
             </p>
           </header>
           {indexPanel}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="biblia__shell">
+          <BibleCta exclude="patristica" title="La misma Escritura, en otros dos lectores" />
         </div>
       </section>
     </main>

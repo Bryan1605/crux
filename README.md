@@ -35,10 +35,11 @@ npm run dev         # servidor de desarrollo (incluye el panel /admin)
 npm run build       # build de producción (valida el contenido y regenera el índice)
 npm run preview     # sirve localmente el build de producción
 npm run index:wiki  # regenera content/ desde el wiki de origen (destructivo, ver abajo)
-npm run exegesis    # regenera public/textos/exegesis/ (NTV + Codex; el Codex descarga una vez)
+npm run exegesis    # regenera public/textos/exegesis/ (NTV + Codex + índice + buscador)
 npm run qa          # QA completa (datos + navegador; requiere `npm run dev` en otra terminal)
 npm run qa:imagenes # comprueba las imágenes referenciadas y las de las páginas
 npm run qa:a11y     # audita la accesibilidad con axe-core (0 critical/serious)
+node scripts/fix-biblia-doc.mjs --file <ruta> --write   # repara la Biblia Patrística (simula sin --write)
 ```
 
 `npm run qa` agrupa: `check:search`, `qa:timeline`, `qa:concilios`, `qa:buscar`,
@@ -60,8 +61,8 @@ Los informes quedan en `%TEMP%\opencode\crux\`.
 | `/estudio/:slug` | Ficha de estudio (Markdown) |
 | `/estudio/personajes/:slug` | Ficha de personaje: portada, escenas, biografía y línea de tiempo |
 | `/biblia` | Biblia Patrística: índice de la obra y lector paginado |
-| `/biblia/ntv` | Lector de la Nueva Traducción Viviente (capítulo a capítulo, con notas del traductor) |
-| `/exegesis` | Exégesis comparada: Codex Sinaiticus ↔ NTV, versículo a versículo, con aparato crítico |
+| `/biblia/ntv` | Lector de la Nueva Traducción Viviente (capítulo a capítulo, notas del traductor, selector de versículo y buscador) |
+| `/exegesis` | Exégesis comparada: Codex Sinaiticus ↔ NTV en rejilla por versículo, con aparato crítico, notas y buscador |
 | `/videos` | Parrilla de videos de YouTube |
 | `/concilios` | Concilios y herejías, con ancla por id (`/concilios#nicea`) |
 | `/temas` | Índice de categorías y etiquetas (cada etiqueta enlaza a `/buscar`) |
@@ -164,6 +165,7 @@ y publica en GitHub Pages. La URL de producción es
 | `public/textos/biblia-patristica.md` | Texto de la Biblia Patrística (se carga bajo demanda desde `/textos/`). |
 | `public/textos/exegesis/{ntv,codex}/*.json` | Datos de exégesis por libro (generados; versionados para que el build funcione sin red). |
 | `public/textos/exegesis/index.json` | Cobertura de cada testigo (generado). |
+| `public/textos/exegesis/buscar.json` | Índice de búsqueda por palabras de la NTV y del Codex (generado). |
 | `src/assets/texts/*.md` | Fuentes de la NTV y del Codex Sinaiticus 1911 (las usan los scripts, no el build). |
 
 `content/estudios.json` y `content/busquedas.json` se regeneran automáticamente en cada
@@ -178,6 +180,7 @@ y publica en GitHub Pages. La URL de producción es
 npm run exegesis:ntv    # parsea la NTV y escribe ntv/<libro>.json
 npm run exegesis:codex  # descarga el Codex (con caché en src/assets/texts/.cache-codex/) y escribe codex/<libro>.json
 npm run exegesis:index  # cruza ambos testigos y escribe index.json
+npm run exegesis:search # indexa el texto de los versículos en buscar.json
 npm run qa:exegesis     # QA de datos + navegador de /exegesis y /biblia/ntv
 ```
 

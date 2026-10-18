@@ -4,6 +4,7 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { parseFrontmatter } from '../lib/frontmatter';
 import { renderProse } from '../lib/markdown';
 import ScrapbookGallery from '../components/ScrapbookGallery/ScrapbookGallery';
+import BibleCta from '../components/BibleCta';
 import { studyBySlug, STUDIES, STUDY_CATEGORIES } from '../data/estudios';
 import { PERSONAJES } from '../data/personajes';
 import { useSite, useSeo } from '../lib/site';
@@ -172,6 +173,11 @@ export default function EstudioDetalle() {
             {doc.status === 'ok' && <div className="study-prose" dangerouslySetInnerHTML={{ __html: doc.html }} />}
           </div>
         </div>
+
+        <BibleCta
+          passage={study.passage}
+          title={study.passage ? `Leer ${study.passage} en su contexto` : 'Leer la Escritura en su contexto'}
+        />
 
         <ScrapbookGallery
           items={related.map(s => ({

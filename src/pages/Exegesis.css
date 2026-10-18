@@ -44,6 +44,26 @@
   position: sticky;
   top: 76px;
   margin-bottom: var(--sp-4, 1rem);
+  border-radius: 18px;
+}
+
+/* Conmutador de columnas (ambas · Codex · NTV) */
+.exg__modes {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+/* Las tres columnas se leen con su nombre, no con siglas. */
+.exg__modes .rb-btn {
+  min-width: 0;
+  padding: 0.42rem 0.6rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .exg__select {
@@ -125,7 +145,7 @@
   --rule: rgba(233, 230, 223, 0.18);
 }
 
-/* --- columnas de exégesis --------------------------------------------------- */
+/* --- rejilla por versículo -------------------------------------------------- */
 
 .exg__loading {
   display: flex;
@@ -135,103 +155,181 @@
   padding: clamp(3rem, 10vh, 6rem) 0;
 }
 
-.exg__cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  align-items: start;
-}
-
-.exg__cols.is-single {
-  grid-template-columns: 1fr;
-}
-
-.exg-card {
+.exg-grid {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: var(--paper);
   color: var(--ink);
+  background: var(--paper);
   border: 1px solid var(--rule);
   border-radius: 16px;
-  box-shadow: 0 20px 50px -30px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 24px 60px -34px rgba(0, 0, 0, 0.85);
 }
 
-.exg-card__head {
-  padding: 0.85rem 1.05rem;
+.exg-grid__head {
+  display: grid;
   border-bottom: 1px solid var(--rule);
-  background: color-mix(in srgb, var(--paper) 80%, #000 4%);
+  background: color-mix(in srgb, var(--paper) 82%, #000 4%);
 }
 
-.exg-card__head h2 {
-  margin: 0;
+.exg-grid--2 .exg-grid__head,
+.exg-grid--2 .exg-row {
+  grid-template-columns: 3.4rem minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.exg-grid--1 .exg-grid__head,
+.exg-grid--1 .exg-row {
+  grid-template-columns: 3.4rem minmax(0, 1fr);
+}
+
+.exg-grid__witness {
+  padding: 0.7rem 1rem 0.6rem;
+  min-width: 0;
+}
+
+.exg-grid__witness b {
+  display: block;
   font-family: var(--font-display);
   font-size: 1.02rem;
   font-weight: 600;
 }
 
-.exg-card__head p {
-  margin: 0.15rem 0 0;
+.exg-grid__witness span {
+  display: block;
+  margin-top: 0.15rem;
   font-size: 0.72rem;
+  line-height: 1.5;
   color: var(--ink-soft);
 }
 
-.exg-card__body {
-  max-height: 62vh;
-  overflow-y: auto;
-  padding: 0.9rem 1.1rem 1.2rem;
-  line-height: 1.7;
-  scroll-behavior: smooth;
+.exg-grid--2 .exg-grid__witness--codex {
+  border-right: 1px solid var(--rule);
 }
 
-.exg-card--codex .exg-card__body {
+.exg-grid__body {
+  position: relative;
+  max-height: min(70vh, 46rem);
+  overflow-y: auto;
+}
+
+.exg-grid__section {
+  margin: 0;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--paper) 88%, #000 3%);
+  border-top: 1px solid var(--rule);
+  box-shadow: inset 3px 0 0 #d6b25e;
+}
+
+.exg-grid__body > .exg-grid__section:first-child {
+  border-top: 0;
+}
+
+.exg-row {
+  display: grid;
+  align-items: stretch;
+  border-top: 1px solid var(--rule);
+  cursor: pointer;
+  transition: background 0.16s ease;
+}
+
+.exg-row:hover {
+  background: color-mix(in srgb, #d6b25e 7%, transparent);
+}
+
+.exg-row.is-active {
+  background: color-mix(in srgb, #d6b25e 15%, transparent);
+}
+
+.exg-row__gutter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  padding: 0.5rem 0.45rem 0.5rem 0;
+  border-right: 1px solid var(--rule);
+}
+
+.exg-row__n {
+  font: inherit;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.1rem 0.3rem;
+  cursor: pointer;
+}
+
+.exg-row__n:hover,
+.exg-row__n:focus-visible {
+  color: var(--ink);
+  background: color-mix(in srgb, #d6b25e 24%, transparent);
+}
+
+.exg-row.is-active .exg-row__n {
+  color: var(--ink);
+}
+
+.exg-row__marks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.exg-mark-chip--codex {
+  color: #a9803f;
+}
+
+.exg-mark-chip--ntv {
+  color: #2f6fb0;
+}
+
+.exg-row__cell {
+  min-width: 0;
+  padding: 0.55rem 0.95rem 0.75rem;
+}
+
+.exg-grid--2 .exg-row__cell--codex {
+  border-right: 1px solid var(--rule);
+}
+
+.exg-row__cell--codex {
   font-family: var(--font-greek, 'Palatino Linotype', 'Times New Roman', 'Noto Serif', Georgia, serif);
   font-size: var(--exg-fs, 19px);
   line-height: 1.85;
 }
 
-.exg-card--ntv .exg-card__body {
+.exg-row__cell--ntv {
+  font-family: var(--font-display);
   font-size: calc(var(--exg-fs, 19px) * 0.92);
+  line-height: 1.75;
 }
 
-/* --- versículos ------------------------------------------------------------- */
-
-.exg-verse {
-  display: grid;
-  grid-template-columns: 1.7rem 1fr;
-  gap: 0.55rem;
-  padding: 0.45rem 0.4rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.18s ease;
+.exg-cell__tag {
+  display: none;
 }
 
-.exg-verse + .exg-verse {
-  border-top: 1px solid var(--rule);
-}
-
-.exg-verse:hover {
-  background: color-mix(in srgb, #d6b25e 10%, transparent);
-}
-
-.exg-verse.is-active {
-  background: color-mix(in srgb, #d6b25e 22%, transparent);
-}
-
-.exg-verse__n {
-  padding-top: 0.35rem;
-  text-align: right;
+.exg-gap {
   font-family: var(--font-body, system-ui, sans-serif);
-  font-size: 0.7rem;
+  font-size: 0.82rem;
+  font-style: italic;
   color: var(--ink-soft);
-  font-variant-numeric: tabular-nums;
 }
 
-.exg-card--codex .exg-verse__n {
-  padding-top: 0.7rem;
+/* Marca del proyecto dentro de la transcripción: no es una letra griega. */
+.exg-transmark {
+  padding: 0 0.12em;
+  color: var(--ink-soft);
+  opacity: 0.5;
 }
-
-/* *nomina sacra* y abreviaturas sobrelineadas */
 .exg-ns {
   font-style: normal;
   text-decoration: overline;
@@ -295,7 +393,8 @@
   border-radius: 16px;
 }
 
-.exg-panel h3 {
+/* El título del panel es h2 para no saltar un nivel desde el h1 de la página. */
+.exg-panel h2 {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -337,6 +436,12 @@
 
 .exg-note.is-active {
   background: color-mix(in srgb, #d6b25e 14%, transparent);
+}
+
+/* Entradas del aparato o de las notas que corresponden al sigilo pulsado. */
+.exg-note.is-marked {
+  background: color-mix(in srgb, #d6b25e 22%, transparent);
+  box-shadow: inset 2px 0 0 #d6b25e;
 }
 
 .exg-note__ref {
@@ -396,6 +501,22 @@
   color: var(--muted);
 }
 
+.exg-sigla span {
+  line-height: 1.5;
+}
+
+.exg-sigla__src {
+  flex: 1 0 100%;
+  color: var(--faint);
+}
+
+/* Subrayado: el enlace no puede distinguirse solo por color del texto vecino. */
+.exg-sigla__src a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .exg__credits {
   margin-top: clamp(1.6rem, 4vh, 2.4rem);
   padding-top: 1.2rem;
@@ -407,6 +528,12 @@
 
 .exg__credits a {
   color: var(--muted);
+}
+
+.exg__license {
+  font-size: 0.74rem;
+  color: var(--faint);
+  font-style: italic;
 }
 
 .exg__hint {
@@ -500,12 +627,43 @@
   hyphens: auto;
 }
 
+.ntv-vs {
+  border-radius: 10px;
+  transition: background 0.16s ease;
+}
+
+.ntv-vs.is-active {
+  background: color-mix(in srgb, #d6b25e 16%, transparent);
+  box-shadow: inset 3px 0 0 #d6b25e;
+}
+
+.ntv-vs p {
+  padding: 0 0.35rem;
+  border-radius: 8px;
+  cursor: text;
+}
+
+.ntv-vs p:hover {
+  background: color-mix(in srgb, #d6b25e 7%, transparent);
+}
+
 .ntv-v {
   font-family: var(--font-body, system-ui, sans-serif);
   font-size: 0.62em;
   vertical-align: super;
   color: #8a6d2f;
   margin-right: 0.15rem;
+  background: none;
+  border: 0;
+  padding: 0 0.15rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ntv-v:hover,
+.ntv-v:focus-visible {
+  color: #6f5722;
+  background: color-mix(in srgb, #d6b25e 25%, transparent);
 }
 
 .ntv-h {
@@ -657,48 +815,8 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* --- nota flotante ---------------------------------------------------------- */
-
-.ntv__note {
-  position: relative;
-  margin-top: 1rem;
-  padding: 1rem 2.6rem 1rem 1.1rem;
-  background: var(--panel);
-  border: 1px solid #d6b25e;
-  border-radius: 14px;
-}
-
-.ntv__note p {
-  margin: 0 0 0.4rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.ntv__note p:last-child {
-  margin-bottom: 0;
-}
-
-.ntv__note b {
-  color: var(--text);
-}
-
-.ntv__note-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.6rem;
-  font: inherit;
-  font-size: 1.2rem;
-  line-height: 1;
-  color: var(--muted);
-  background: none;
-  border: 0;
-  cursor: pointer;
-  padding: 0.2rem 0.4rem;
-}
-
-.ntv__note-close:hover {
-  color: var(--text);
-}
+/* --- nota del traductor ------------------------------------------------------
+   La ficha vive en <VersePopover> (components/VersePopover.css). */
 
 /* --- responsive ------------------------------------------------------------- */
 
@@ -718,13 +836,59 @@
 }
 
 @media (max-width: 860px) {
-  .exg__cols,
-  .ntv__spread {
-    grid-template-columns: 1fr;
+  /* En pantallas estrechas las dos columnas se apilan dentro de cada fila: el
+     versículo sigue casando, con la etiqueta del testigo delante de cada celda. */
+  /* La cabecera deja de ser dos columnas: los testigos se apilan como leyenda. */
+  .exg-grid--2 .exg-grid__head {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .exg-card__head {
-    top: 104px;
+  .exg-grid--2 .exg-grid__head .exg-grid__gutter {
+    display: none;
+  }
+
+  .exg-grid--2 .exg-grid__witness--codex {
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .exg-grid__witness span {
+    display: none;
+  }
+
+  .exg-grid--2 .exg-row {
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+  }
+
+  .exg-grid--2 .exg-row__cell {
+    grid-column: 2;
+  }
+
+  .exg-grid--2 .exg-row__cell--codex {
+    border-right: 0;
+    border-bottom: 1px dashed var(--rule);
+  }
+
+  .exg-cell__tag {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 0.62rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .exg-grid__section {
+    padding-left: 0.9rem;
+  }
+
+  .exg-grid__body {
+    max-height: none;
+  }
+
+  .ntv__spread {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -770,9 +934,5 @@
 
   .exg__bar .rb-btn {
     padding-inline: 0.55rem;
-  }
-
-  .exg-card__body {
-    max-height: none;
   }
 }

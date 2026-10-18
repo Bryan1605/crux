@@ -3,6 +3,65 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.6.0] — 2026-10-17
+
+La exégesis pasa a leerse **versículo a versículo** y los tres lectores se
+enlazan entre sí.
+
+### Añadido
+
+- **`/exegesis` — rejilla por versículo**: cada versículo del Codex y de la NTV
+  ocupa una fila alineada, con el número en un cintillo lateral y las marcas del
+  aparato (◆ variante, † nota) en la misma columna. La cabecera de los testigos
+  queda fija y el cuerpo se desplaza por dentro.
+- **Modalidades de columna** —paralelo, solo el Codex o solo la NTV— con memoria
+  en `localStorage`, y **selector de versículo** con salto directo (`?v=`) o a un
+  rango (`?vv=`).
+- **Fichas flotantes** para el aparato crítico y las notas del traductor: al pulsar
+  un sigilo o una marca se abre una ficha anclada al punto tocado, con sus entradas
+  etiquetadas («Griego», «Otra lectura», «Variante textual», «Referencia»), cierre
+  con `Escape` o clic fuera, y paneles inferiores sincronizados.
+- **Buscador por palabras** en la NTV y en el Codex (`src/lib/bibleSearch.js`,
+  `BibleSearch.jsx`), pensado para recordar el texto sin saber la referencia:
+  pliega mayúsculas, diacríticos y sigma final, ignora las marcas de la
+  transcripción y busca primero en el libro abierto, con un botón para ampliar a
+  todo el Nuevo Testamento. Los resultados llevan el testigo, el versículo y el
+  fragmento resaltado. Índice versionado en
+  `public/textos/exegesis/buscar.json` (`npm run exegesis:search`).
+- **Leyenda de siglas** del aparato con la fuente oficial del proyecto y su
+  atribución.
+- **Puente entre lectores** (`BibleCta`): al pie de la Biblia Patrística, la NTV y
+  la exégesis, y en cada ficha de estudio a partir de su pasaje clave. Una cita
+  como «1 Corintios 15:17» se traduce a `?libro=…&cap=…&v=…`, así que el lector
+  aterriza en el mismo versículo (`parsePassage`, `ntvPath`, `exegesisPath`).
+
+### Cambiado
+
+- **`/biblia/ntv`** incorpora el selector de versículo, el buscador por palabras y
+  las notas del traductor en ficha, como el lector de la Biblia Patrística.
+- **Datos regenerados**: la NTV vuelve a numerar las secciones de cada capítulo
+  (`headingKind` distingue las que caen dentro de un versículo) y limpia las notas
+  del traductor (`cleanNoteText`): 27 libros, 260 capítulos, 7.943 versículos,
+  744 secciones y 1.642 notas sin residuos.
+- **`qa:exegesis`** crece hasta las 59 comprobaciones: datos (secciones, notas,
+  cobertura del índice de búsqueda, referencias de los estudios) y navegador
+  (rejilla, fichas, buscador local y global, conmutador, móvil, NTV y CTAs).
+
+### Corregido
+
+- El carácter `>` de la transcripción —una celda real del manuscrito, no ruido— se
+  dibuja atenuado en lugar de eliminarse.
+
+### Notas
+
+- La bóveda `D:\Biblia\Biblia_Patristica_Completa.md` se repara con
+  `node scripts/fix-biblia-doc.mjs --only encoding --file … --write` (41 sustituciones
+  sobre 43 U+FFFD), sin tocar el número ni los finales de línea, para no invalidar
+  las citas por línea de los estudios. El script acepta `--file` y `--only`.
+- Las **fuentes JPG/JPEG** de `src/assets/imgs/` dejan de versionarse (187 MB): lo
+  servido son los `.webp` de `public/img/`, que sí se publican y se regeneran con
+  `node scripts/optimize-images.mjs`.
+
 ## [0.5.0] — 2026-10-16
 
 Exégesis comparada: el Nuevo Testamento leído en paralelo entre el Codex

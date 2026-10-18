@@ -11,7 +11,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { NT_BOOKS } from '../src/data/exegesis.js';
+import { NT_BOOKS, exegesisPath, ntvPath, parsePassage } from '../src/data/exegesis.js';
+import { recordsFromIndex, runSearch } from '../src/lib/bibleSearch.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIR = path.join(ROOT, 'public/textos/exegesis');
@@ -145,7 +146,122 @@ check(
 );
 
 /* -------------------------------------------------------------------------- */
-/* 3) Navegador (opcional)                                                    */
+/* 3) Integridad del parser de la NTV y del buscador                          */
+/* -------------------------------------------------------------------------- */
+
+const ntvBooks = new Map();
+for (const meta of NT_BOOKS) {
+  ntvBooks.set(meta.id, await readJson(path.join(DIR, 'ntv', `${meta.id}.json`)));
+}
+
+const badSections = [];
+const dirtyNotes = [];
+let sectionCount = 0;
+let noteCount = 0;
+for (const book of ntvBooks.values()) {
+  for (const c of book.chapters) {
+    for (const s of c.sections || []) {
+      sectionCount += 1;
+      if (/[.!?\u2026\u00bb]$/.test(s.title.trim())) badSections.push(`${book.id} ${c.num}: ${s.title}`);
+    }
+  }
+  for (const [id, body] of Object.entries(book.notes || {})) {
+    noteCount += 1;
+    if (/[<>\u2039\u203A]\s*$/.test(body)) dirtyNotes.push(`${book.id} ${id}`);
+  }
+}
+
+check(
+  'NTV: 744 secciones y ninguna cierra frase',
+  sectionCount === 744 && badSections.length === 0,
+  `${sectionCount} secciones · ${badSections.slice(0, 2).join(' · ')}`
+);
+check('NTV: notas sin restos de maquetado', noteCount === 1642 && dirtyNotes.length === 0, `${noteCount} notas`);
+
+const juan5 = ntvBooks.get('juan').chapters.find(c => c.num === 5);
+check(
+  'NTV: el versículo partido en dos líneas se recompone (Jn 5:45)',
+  /Mois\u00e9s los acusar\u00e1! S\u00ed, Mois\u00e9s/.test(juan5.verses.find(v => v.n === 45)?.text || ''),
+  (juan5.verses.find(v => v.n === 45)?.text || '').slice(-60)
+);
+
+const hechos9 = ntvBooks.get('hechos').chapters.find(c => c.num === 9);
+const hechos919 = hechos9.verses.find(v => v.n === 19)?.text || '';
+check(
+  'NTV: el título dentro del versículo se separa (Hch 9:19)',
+  (hechos9.sections || []).some(s => s.verse === 19 && /Damasco/.test(s.title)) && !/Damasco y Jerusal\u00e9n/.test(hechos919),
+  hechos919.slice(0, 70)
+);
+
+const lucas3 = ntvBooks.get('lucas').chapters.find(c => c.num === 3);
+check(
+  'NTV: la genealogía no se pierde (Lc 3:26-27)',
+  /Nagai era hijo de Maat/.test(lucas3.verses.find(v => v.n === 26)?.text || '') &&
+    /Jud\u00e1 era hijo de Joana/.test(lucas3.verses.find(v => v.n === 27)?.text || ''),
+  (lucas3.verses.find(v => v.n === 27)?.text || '').slice(0, 60)
+);
+
+/* Buscador: el índice tiene que cubrir el NT y encontrar por palabras. */
+let searchIndex = null;
+try {
+  searchIndex = await readJson(path.join(DIR, 'buscar.json'));
+} catch {
+  searchIndex = null;
+}
+const searchBooks = searchIndex ? Object.keys(searchIndex.ntv).length : 0;
+const countIndexed = witness => {
+  let n = 0;
+  for (const chapters of Object.values(searchIndex?.[witness] || {})) {
+    for (const verses of Object.values(chapters)) {
+      for (const text of verses) if (text) n += 1;
+    }
+  }
+  return n;
+};
+check('Buscador: índice de los 27 libros', searchBooks === 27 && Object.keys(searchIndex?.codex || {}).length === 27, `${searchBooks} libros`);
+check(
+  'Buscador: indexa todos los versículos',
+  countIndexed('ntv') === ntvVerses && countIndexed('codex') === codexVerses,
+  `NTV ${countIndexed('ntv')} · Codex ${countIndexed('codex')}`
+);
+
+const globalRecords = recordsFromIndex(searchIndex || { ntv: {}, codex: {} }, NT_BOOKS);
+const spanish = runSearch(globalRecords, 'nacer de nuevo');
+check(
+  'Buscador: «nacer de nuevo» encuentra Juan 3',
+  spanish.hits.some(h => h.bookId === 'juan' && h.chapter === 3),
+  `${spanish.total} coincidencias · ${spanish.hits.slice(0, 3).map(h => `${h.bookId} ${h.chapter}:${h.verse}`).join(', ')}`
+);
+const greek = runSearch(globalRecords, '\u03b7\u03b3\u03b1\u03c0\u03b7\u03c3\u03b5\u03bd');
+check(
+  'Buscador: el griego se busca sin diacríticos ni sigma final',
+  greek.hits.some(h => h.witness === 'codex' && h.bookId === 'juan' && h.chapter === 3 && h.verse === 16),
+  `${greek.total} coincidencias`
+);
+
+/* Citas de los estudios → lectores. */
+const passages = [
+  ['1 Juan 1:9', '1-juan', 1, 9],
+  ['Mateo 26:26-29', 'mateo', 26, 26],
+  ['Apocalipsis 12-13', 'apocalipsis', 12, null],
+  ['Ro 8', 'romanos', 8, null],
+  ['Jn 3:16', 'juan', 3, 16],
+  ['Joel 2:28-29 / Hechos 2:16-18', 'hechos', 2, 16]
+];
+const badPassages = passages.filter(([text, bookId, chapter, verse]) => {
+  const parsed = parsePassage(text);
+  return !parsed || parsed.bookId !== bookId || parsed.chapter !== chapter || parsed.verse !== verse;
+});
+check('CTAs: las citas de los estudios se traducen a libro, capítulo y versículo', badPassages.length === 0, `${badPassages.length} fallos`);
+check('CTAs: la cita del Antiguo Testamento no se fuerza al NT', parsePassage('Génesis 1:1') === null);
+check(
+  'CTAs: la ruta del lector lleva al pasaje exacto',
+  ntvPath('Jn 3:16') === '/biblia/ntv?libro=juan&cap=3&v=16' && exegesisPath('Mateo 26:26-29') === '/exegesis?libro=mateo&cap=26&v=26',
+  `${ntvPath('Jn 3:16')} · ${exegesisPath('Mateo 26:26-29')}`
+);
+
+/* -------------------------------------------------------------------------- */
+/* 4) Navegador (opcional)                                                    */
 /* -------------------------------------------------------------------------- */
 
 if (WITH_BROWSER) {
@@ -158,51 +274,193 @@ if (WITH_BROWSER) {
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 950 });
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
   const visit = async (url, name) => {
     await page.goto(url, { waitUntil: 'networkidle2' });
     await page.screenshot({ path: path.join(OUT, `${name}.png`) });
     return page;
   };
+  const text = sel => page.$eval(sel, el => el.textContent.replace(/\s+/g, ' ').trim());
+  const alignment = () =>
+    page.evaluate(() => {
+      const body = document.querySelector('.exg-grid__body');
+      const row = document.querySelector('.exg-row.is-active');
+      if (!body || !row) return null;
+      const box = body.getBoundingClientRect();
+      const top = row.getBoundingClientRect().top;
+      return {
+        n: row.dataset.v,
+        visible: top >= box.top - 4 && top < box.bottom - 4,
+        bounded: box.height > 0
+      };
+    });
 
-  await visit(`${BASE}/exegesis?libro=juan&cap=3&vv=16-21`, 'exegesis-juan3');
-  const cols = await page.$$eval('.exg__cols .exg-card', els => els.length);
-  const verseRows = await page.$$eval('.exg-card--codex .exg-verse', els => els.length);
-  const sigils = await page.$$eval('.exg-sigil', els => els.length);
-  const ntvRows = await page.$$eval('.exg-card--ntv .exg-verse', els => els.length);
-  check('Exégesis: dos columnas', cols === 2, `${cols}`);
-  check('Exégesis: versículos del Codex', verseRows >= 5, `${verseRows}`);
-  check('Exégesis: versículos de la NTV', ntvRows >= 5, `${ntvRows}`);
-  check('Exégesis: sigilos del aparato', sigils >= 0, `${sigils}`);
+  /* --- /exegesis: rejilla por versículo --- */
+  await visit(`${BASE}/exegesis?libro=juan&cap=3`, 'exegesis-juan3');
+  check('Rejilla: las dos columnas de testigos', (await page.$$eval('.exg-grid__witness', els => els.length)) === 2);
+  check('Rejilla: una fila por versículo', (await page.$$eval('.exg-row', els => els.length)) >= 33, `${await page.$$eval('.exg-row', els => els.length)} filas`);
+  check('Rejilla: los títulos de sección van dentro', (await page.$$eval('.exg-grid__section', els => els.length)) >= 1, `${await page.$$eval('.exg-grid__section', els => els.length)} secciones`);
+  check('Rejilla: sigilos del aparato en línea', (await page.$$eval('.exg-sigil', els => els.length)) >= 20);
 
-  const header = await page.$eval('.exg__witness', el => el.textContent.replace(/\s+/g, ' ').trim());
-  check('Exégesis: cabecera del testigo con folio', /folio/i.test(header), header.slice(0, 80));
+  const row16 = await page.$eval('.exg-row[data-v="16"]', el => ({
+    codex: el.querySelector('.exg-row__cell--codex')?.textContent || '',
+    ntv: el.querySelector('.exg-row__cell--ntv')?.textContent || ''
+  }));
+  check(
+    'Alineación: Jn 3:16 casa griego y español en la misma fila',
+    /\u03b7\u03b3\u03b1\u03c0\u03b7/.test(row16.codex) && /am\u00f3 tanto al mundo/.test(row16.ntv),
+    row16.ntv.slice(0, 48)
+  );
 
+  await page.select('#exg-verse', '20');
+  await wait(700);
+  const afterSelect = await alignment();
+  check('Selector de versículo: fija el 20 y lo deja a la vista', afterSelect?.n === '20' && afterSelect.visible, JSON.stringify(afterSelect));
+
+  await page.evaluate(() => document.querySelector('.exg-row[data-v="30"] .exg-row__n').click());
+  await wait(700);
+  const afterClick = await alignment();
+  check('Pulsar un versículo lo fija en las dos columnas', afterClick?.n === '30' && afterClick.visible, JSON.stringify(afterClick));
+
+  await page.select('#exg-verse', '16');
+  await wait(700);
+  await page.evaluate(() => document.querySelector('.exg-row[data-v="16"] .exg-sigil').click());
+  await page.waitForSelector('.vpop', { timeout: 4000 });
+  const apparatus = await text('.vpop');
+  check('Aparato: el sigilo abre la ficha con la variante', apparatus.length > 12, apparatus.slice(0, 60));
+  await page.screenshot({ path: path.join(OUT, 'exegesis-popover.png') });
+  await page.keyboard.press('Escape');
+  await wait(250);
+  check('Fichas: Escape cierra el aparato', (await page.$('.vpop')) === null);
+
+  const fnVerse = await page.$eval('.exg-fn', el => el.closest('.exg-row').dataset.v);
+  await page.select('#exg-verse', fnVerse);
+  await wait(600);
+  await page.evaluate(verse => document.querySelector(`.exg-row[data-v="${verse}"] .exg-fn`).click(), fnVerse);
+  await page.waitForSelector('.vpop', { timeout: 4000 });
+  const noteText = await text('.vpop');
+  check(
+    'Notas: la marca abre la nota con su etiqueta',
+    /(Griego|Otra lectura|Variante textual|Referencia)/.test(noteText),
+    `v.${fnVerse} · ${noteText.slice(0, 60)}`
+  );
+  await page.screenshot({ path: path.join(OUT, 'exegesis-nota.png') });
+  await page.keyboard.press('Escape');
+  await wait(250);
+
+  await page.click('#exg-search');
+  await page.type('#exg-search', 'nacer de nuevo');
+  await page.waitForSelector('.bsearch__hit', { timeout: 4000 });
+  const localHits = await page.$$eval('.bsearch__hit', els => els.length);
+  check('Buscador: encuentra en el libro abierto', localHits >= 2 && /Jn 3:/.test(await text('.bsearch__hit')), `${localHits} resultados`);
+  await page.screenshot({ path: path.join(OUT, 'exegesis-buscar.png') });
+  await page.click('.bsearch__hit');
+  await wait(600);
+  check('Buscador: el resultado lleva al versículo', /cap=3/.test(decodeURIComponent(page.url())) && /v=/.test(page.url()), page.url().slice(-36));
+
+  await page.click('#exg-search');
+  await page.type('#exg-search', 'melquisedec');
+  await wait(400);
+  check('Buscador: ofrece ampliar a todo el Nuevo Testamento', Boolean(await page.$('.bsearch__more')));
+  await page.click('.bsearch__more');
+  await page.waitForSelector('.bsearch__hit', { timeout: 40000 });
+  check('Buscador global: encuentra Hebreos 5 en todo el NT', /He 5/.test(await text('.bsearch__hit')), (await text('.bsearch__hit')).slice(0, 40));
+  await page.click('.bsearch__hit');
+  await wait(900);
+  check(
+    'Buscador global: al elegir, abre Hebreos 5 en la rejilla',
+    (await page.url()).includes('libro=hebreos') && (await page.$$eval('.exg-row', els => els.length)) > 5,
+    page.url().slice(-40)
+  );
+
+  /* Conmutador de columnas */
+  await visit(`${BASE}/exegesis?libro=juan&cap=3`, 'exegesis-juan3');
+  await page.click('[aria-label="Solo el Codex Sinaiticus"]');
+  await wait(300);
+  const onlyCodex = await page.evaluate(() => ({
+    ntv: document.querySelectorAll('.exg-row__cell--ntv').length,
+    codex: document.querySelectorAll('.exg-row__cell--codex').length,
+    witnesses: document.querySelectorAll('.exg-grid__witness').length
+  }));
+  check('Conmutador: «solo el Codex» deja una columna', onlyCodex.ntv === 0 && onlyCodex.codex > 30 && onlyCodex.witnesses === 1, JSON.stringify(onlyCodex));
+  await page.click('[aria-label="Las dos columnas, versículo a versículo"]');
+  await wait(300);
+
+  const chips = await text('.exg__witness');
+  check('Exégesis: cabecera del testigo con folio', /folio/i.test(chips), chips.slice(0, 70));
+
+  /* CTAs entre lectores */
+  await visit(`${BASE}/exegesis?libro=juan&cap=3&v=16`, 'exegesis-cta');
+  const ctaExegesis = await page.$$eval('.bcta__card', els => els.map(el => ({ href: el.getAttribute('href'), text: el.textContent })));
+  check(
+    'CTAs: la exégesis ofrece la NTV en el mismo versículo',
+    ctaExegesis.length === 2 && ctaExegesis.some(c => c.href === '/biblia/ntv?libro=juan&cap=3&v=16'),
+    JSON.stringify(ctaExegesis.map(c => c.href))
+  );
+
+  await visit(`${BASE}/biblia/ntv?libro=juan&cap=3`, 'ntv-cta');
+  const ctaNtv = await page.$$eval('.bcta__card', els => els.map(el => el.getAttribute('href')));
+  check(
+    'CTAs: la NTV ofrece la exégesis del capítulo abierto',
+    ctaNtv.length === 2 && ctaNtv.some(href => href === '/exegesis?libro=juan&cap=3'),
+    JSON.stringify(ctaNtv)
+  );
+
+  await visit(`${BASE}/estudio/01-fundamentos--33-resurreccion-de-cristo`, 'estudio-cta');
+  const ctaEstudio = await page.$$eval('.bcta__card', els => els.map(el => el.getAttribute('href')));
+  check(
+    'CTAs: un estudio enlaza su pasaje (1 Corintios 15:17) en los tres lectores',
+    ctaEstudio.length === 3 && ctaEstudio.some(href => href === '/exegesis?libro=1-corintios&cap=15&v=17'),
+    JSON.stringify(ctaEstudio)
+  );
+  check('CTAs: el estudio dice qué pasaje abre', /1 Corintios 15:17/.test(await text('.bcta__lead')), (await text('.bcta__lead')).slice(0, 60));
+  const ctaShot = await page.$('.bcta');
+  await ctaShot.screenshot({ path: path.join(OUT, 'estudio-cta.png') });
+
+  /* --- /biblia/ntv --- */
   await visit(`${BASE}/biblia/ntv?libro=juan&cap=3`, 'ntv-juan3');
   const pages = await page.$$eval('.ntv-page', els => els.length);
   const ntvVersesDom = await page.$$eval('.ntv-page .ntv-v', els => els.length);
   check('NTV: páginas del pliego', pages === 2, `${pages}`);
   check('NTV: versículos visibles', ntvVersesDom >= 15, `${ntvVersesDom}`);
 
-  // En móvil el pliego pasa a una columna y la barra no debe desbordar a lo ancho.
+  await page.evaluate(() => document.querySelector('.ntv-fn').click());
+  await page.waitForSelector('.vpop', { timeout: 4000 });
+  check('NTV: la marca de nota abre su ficha', Boolean(await page.$('.vpop')), (await text('.vpop')).slice(0, 50));
+  await page.keyboard.press('Escape');
+  await wait(200);
+
+  await page.select('#ntv-verse', '16');
+  await wait(800);
+  const ntvActive = await page.$eval('.ntv-vs.is-active', el => el.dataset.v).catch(() => null);
+  check('NTV: el selector de versículo lo fija', ntvActive === '16', `${ntvActive}`);
+
+  await page.click('#ntv-search');
+  await page.type('#ntv-search', 'vida eterna');
+  await page.waitForSelector('.bsearch__hit', { timeout: 4000 });
+  check('NTV: buscador por palabras en el libro', (await page.$$eval('.bsearch__hit', els => els.length)) >= 2);
+  await page.keyboard.press('Escape');
+
+  /* --- móvil --- */
   const noOverflow = async (url, name) => {
     await page.setViewport({ width: 400, height: 880 });
     await visit(url, name);
     return page.evaluate(() => ({
       scroll: document.documentElement.scrollWidth,
-      client: document.documentElement.clientWidth
+      client: document.documentElement.clientWidth,
+      cells: document.querySelectorAll('.exg-row__cell').length,
+      tags: document.querySelectorAll('.exg-cell__tag').length
     }));
   };
 
-  const exgMobile = await noOverflow(
-    `${BASE}/exegesis?libro=juan&cap=3&vv=16-21`,
-    'exegesis-juan3-movil'
-  );
+  const exgMobile = await noOverflow(`${BASE}/exegesis?libro=juan&cap=3&v=16`, 'exegesis-juan3-movil');
   check(
     'Exégesis (móvil): sin desbordamiento horizontal',
     exgMobile.scroll <= exgMobile.client + 1,
     `${exgMobile.scroll}px vs ${exgMobile.client}px`
   );
+  check('Exégesis (móvil): las dos celdas se apilan con su etiqueta', exgMobile.cells > 30 && exgMobile.tags > 30, `${exgMobile.cells} celdas`);
 
   const ntvMobile = await noOverflow(`${BASE}/biblia/ntv?libro=juan&cap=3`, 'ntv-juan3-movil');
   check(

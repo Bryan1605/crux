@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Puente entre los lectores (Biblia Patrística · NTV · Exégesis)
+   ========================================================================== */
+
+.bcta {
+  margin-top: clamp(2rem, 5vh, 3.4rem);
+  padding-top: clamp(1.4rem, 3vh, 2rem);
+  border-top: 1px solid var(--border);
+}
+
+.bcta__head {
+  max-width: 62ch;
+  margin-bottom: 1rem;
+}
+
+.bcta__title {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+}
+
+.bcta__lead {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.bcta__lead b {
+  color: var(--text);
+}
+
+.bcta__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.9rem;
+}
+
+.bcta__card {
+  position: relative;
+  display: grid;
+  gap: 0.3rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  overflow: hidden;
+  color: var(--text);
+  text-decoration: none;
+  background: var(--panel, #16161b);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.bcta__card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--bcta-tone, #d6b25e);
+  opacity: 0.75;
+}
+
+.bcta__card:hover,
+.bcta__card:focus-visible {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--bcta-tone, #d6b25e) 55%, transparent);
+  box-shadow: 0 24px 50px -32px rgba(0, 0, 0, 0.9);
+}
+
+.bcta__card--patristica {
+  --bcta-tone: #c9a227;
+}
+
+.bcta__card--ntv {
+  --bcta-tone: #5e81d6;
+}
+
+.bcta__card--exegesis {
+  --bcta-tone: #4fa89a;
+}
+
+.bcta__glyph {
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--bcta-tone, #d6b25e);
+}
+
+.bcta__eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.bcta__card-title {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.bcta__text {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.bcta__go {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--bcta-tone, #d6b25e);
+}
+
+.bcta__card:hover .bcta__go,
+.bcta__card:focus-visible .bcta__go {
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bcta__card {
+    transition: none;
+  }
+
+  .bcta__card:hover,
+  .bcta__card:focus-visible {
+    transform: none;
+  }
+}

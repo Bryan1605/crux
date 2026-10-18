@@ -1,8 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
+import BibleSearch from '../components/BibleSearch';
+import BibleCta from '../components/BibleCta';
+import VersePopover, { ApparatusBody, NoteBody } from '../components/VersePopover';
+import { WITNESS_ATTRIBUTION, WITNESS_SOURCE, witnessLabel, witnessLegend } from '../data/exegesis';
+import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadWitnessBook } from '../lib/exegesisTexts';
-import { witnessLabel } from '../data/exegesis';
 import { useSeo } from '../lib/site';
 
 import './Biblia.css';
@@ -17,13 +21,24 @@ const FS_MAX = 26;
 const KEYS = {
   size: 'crux.exegesis.letra',
   theme: 'crux.exegesis.papel',
-  cols: 'crux.exegesis.columnas'
+  mode: 'crux.exegesis.columnas'
 };
 
 const THEMES = [
   { id: 'claro', label: 'Papel claro', glyph: '☀' },
   { id: 'sepia', label: 'Papel sepia', glyph: '◐' },
   { id: 'noche', label: 'Papel nocturno', glyph: '☾' }
+];
+
+/**
+ * Columnas que se pueden ver. `short` es lo que se lee en el botón y tiene que
+ * aparecer en `label`: el nombre accesible debe contener el texto visible
+ * (axioma de `label-content-name-mismatch`).
+ */
+const MODES = [
+  { id: 'paralelo', label: 'Las dos columnas, versículo a versículo', short: null },
+  { id: 'codex', label: 'Solo el Codex Sinaiticus', short: 'Codex' },
+  { id: 'ntv', label: 'Solo la NTV · Nueva Traducción Viviente', short: 'NTV' }
 ];
 
 const prefersReduced = () =>
@@ -45,6 +60,14 @@ const write = (key, value) => {
   }
 };
 
+/** Migra el antiguo `dos`/`uno` a los modos actuales. */
+const readMode = () => {
+  const stored = read(KEYS.mode, 'paralelo');
+  if (stored === 'dos') return 'paralelo';
+  if (stored === 'uno') return 'codex';
+  return MODES.some(m => m.id === stored) ? stored : 'paralelo';
+};
+
 /* -------------------------------------------------------------------------- */
 /* Iconos                                                                     */
 /* -------------------------------------------------------------------------- */
@@ -60,7 +83,7 @@ function LayoutGlyph({ two }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/* Troceado del griego y de las notas                                         */
+/* Troceado del griego y de la NTV                                            */
 /* -------------------------------------------------------------------------- */
 
 const NS_OPEN = '\u2039';
@@ -68,8 +91,9 @@ const NS_CLOSE = '\u203A';
 const SIGIL = '\u00a7';
 
 /**
- * Convierte el griego del Codex en nodos de React-friendly:
- *   { k:'t' } texto · { k:'ns' } nomina sacra (sobrelínea) · { k:'sigil' } ancla del aparato
+ * Convierte el griego del Codex en nodos:
+ *   { k:'t' } texto · { k:'ns' } nomina sacra · { k:'sigil' } ancla del aparato
+ *   { k:'mark' } marca de la transcripción (no es una letra)
  */
 function tokenizeGreek(text) {
   const out = [];
@@ -93,6 +117,11 @@ function tokenizeGreek(text) {
       flush();
       out.push({ k: 'sigil', v: text.slice(i + 1, j) });
       i = j;
+    } else if (ch === '>') {
+      // El proyecto marca así un punto de la transcripción: no es una letra.
+      flush();
+      out.push({ k: 'mark', v: ch });
+      i += 1;
     } else {
       buf += ch;
       i += 1;
@@ -117,71 +146,81 @@ function tokenizeNtv(text) {
   return out;
 }
 
-/** Índices de arranque de las anclas del aparato dentro de un versículo. */
-function anchorStarts(tokens) {
-  return tokens.filter(t => t.k === 'sigil').map(t => Number(t.v));
-}
+/** Índices (en el aparato) de las anclas que lleva un versículo griego. */
+const anchorIndexes = grc =>
+  tokenizeGreek(grc)
+    .filter(t => t.k === 'sigil')
+    .map(t => Number(t.v));
 
 /* -------------------------------------------------------------------------- */
-/* Subcomponentes                                                             */
+/* Celdas de la rejilla                                                       */
 /* -------------------------------------------------------------------------- */
 
-function GreekVerse({ verse, active, onSelect, onAnchor }) {
+function GreekText({ verse, onAnchor }) {
   const tokens = useMemo(() => tokenizeGreek(verse.grc), [verse.grc]);
   return (
-    <div className={`exg-verse${active ? ' is-active' : ''}`} onClick={() => onSelect(verse.n)}>
-      <div className="exg-verse__n">{verse.n}</div>
-      <div className="exg-verse__text">
-        {tokens.map((t, i) => {
-          if (t.k === 'ns') return <i key={i} className="exg-ns">{t.v}</i>;
-          if (t.k === 'sigil')
-            return (
-              <button
-                key={i}
-                type="button"
-                className="exg-sigil"
-                title="Ver la variante en el aparato"
-                onClick={event => {
-                  event.stopPropagation();
-                  onAnchor(verse.n, Number(t.v));
-                }}
-              >
-                ∗
-              </button>
-            );
-          return <span key={i}>{t.v}</span>;
-        })}
-      </div>
-    </div>
+    <>
+      {tokens.map((t, i) => {
+        if (t.k === 'ns') {
+          return (
+            <i key={i} className="exg-ns">
+              {t.v}
+            </i>
+          );
+        }
+        if (t.k === 'sigil') {
+          return (
+            <button
+              key={i}
+              type="button"
+              className="exg-sigil"
+              title="Ver la variante en el aparato crítico"
+              aria-label={`Variante del aparato en el versículo ${verse.n}`}
+              onClick={event => {
+                event.stopPropagation();
+                onAnchor(event.currentTarget, verse.n, Number(t.v));
+              }}
+            >
+              ∗
+            </button>
+          );
+        }
+        if (t.k === 'mark') {
+          return (
+            <span key={i} className="exg-transmark" title="Marca de la transcripción del proyecto, no es una letra">
+              {t.v}
+            </span>
+          );
+        }
+        return <span key={i}>{t.v}</span>;
+      })}
+    </>
   );
 }
 
-function NtvVerse({ verse, notes, active, onSelect, onNote }) {
+function NtvText({ verse, onNote }) {
   const tokens = useMemo(() => tokenizeNtv(verse.text), [verse.text]);
   return (
-    <div className={`exg-verse${active ? ' is-active' : ''}`} onClick={() => onSelect(verse.n)}>
-      <div className="exg-verse__n">{verse.n}</div>
-      <div className="exg-verse__text">
-        {tokens.map((t, i) => {
-          if (t.k === 'fn')
-            return (
-              <button
-                key={i}
-                type="button"
-                className="exg-fn"
-                title={notes[t.v] ? `Nota ${t.v}` : 'Nota del traductor'}
-                onClick={event => {
-                  event.stopPropagation();
-                  onNote(verse.n, t.v);
-                }}
-              >
-                {t.v}
-              </button>
-            );
-          return <span key={i}>{t.v}</span>;
-        })}
-      </div>
-    </div>
+    <>
+      {tokens.map((t, i) => {
+        if (t.k !== 'fn') return <span key={i}>{t.v}</span>;
+        return (
+          <button
+            key={i}
+            type="button"
+            className="exg-fn"
+            title="Ver la nota del traductor"
+            aria-label={`Nota ${t.v} del versículo ${verse.n}`}
+            onClick={event => {
+              event.stopPropagation();
+              onNote(event.currentTarget, verse.n, t.v);
+            }}
+          >
+            {t.v}
+          </button>
+        );
+      })}
+    </>
   );
 }
 
@@ -201,18 +240,16 @@ export default function Exegesis() {
     return THEMES.some(t => t.id === stored) ? stored : 'claro';
   });
   const [size, setSize] = useState(() => Number(read(KEYS.size, 19)));
-  const [columns, setColumns] = useState(() => (read(KEYS.cols, 'dos') === 'uno' ? 'uno' : 'dos'));
+  const [mode, setMode] = useState(readMode);
+  const [pop, setPop] = useState(null);
 
-  const [selected, setSelected] = useState(null); // { n, i } del aparato
-  const [note, setNote] = useState(null); // { n, id } de la NTV
-  const [activeVerse, setActiveVerse] = useState(null);
-
-  const bodyRefs = { codex: useRef(null), ntv: useRef(null) };
-  const syncing = useRef(false);
+  const gridRef = useRef(null);
+  const chapterKey = useRef('');
 
   const bookId = params.get('libro') || 'juan';
   const chapterNum = Number(params.get('cap') || 3);
   const rangeParam = params.get('vv') || '';
+  const selected = Number(params.get('v')) || null;
 
   /* ------------------------------- índice --------------------------------- */
 
@@ -256,7 +293,7 @@ export default function Exegesis() {
   }, [bookId]);
 
   const ntvChapter = useMemo(
-    () => (ntv && !ntv.error ? ntv.chapters.find(c => c.num === chapterNum) || ntv.chapters[0] : null),
+    () => (ntv && !ntv.error ? ntv.chapters.find(c => c.num === chapterNum) || null : null),
     [ntv, chapterNum]
   );
 
@@ -264,6 +301,8 @@ export default function Exegesis() {
     () => (codex ? codex.chapters.find(c => c.num === chapterNum) || null : null),
     [codex, chapterNum]
   );
+
+  const loading = !ntv || (codex === undefined && Boolean(bookMeta?.codex.verses));
 
   /* ------------------------------- rangos --------------------------------- */
 
@@ -297,11 +336,74 @@ export default function Exegesis() {
     [codexChapter, range]
   );
 
+  /**
+   * Filas de la rejilla: una por versículo (el que falte en un testigo queda con
+   * el hueco marcado) y una por título de sección, en su sitio.
+   */
+  const rows = useMemo(() => {
+    const codexByN = new Map(visibleCodex.map(v => [v.n, v]));
+    const ntvByN = new Map(visibleNtv.map(v => [v.n, v]));
+    const numbers = [...new Set([...codexByN.keys(), ...ntvByN.keys()])].sort((a, b) => a - b);
+    const sections = new Map();
+    for (const section of ntvChapter?.sections || []) {
+      if (!sections.has(section.verse)) sections.set(section.verse, []);
+      sections.get(section.verse).push(section.title);
+    }
+    const list = [];
+    for (const n of numbers) {
+      for (const title of sections.get(n) || []) list.push({ kind: 'section', key: `s-${n}-${title}`, title, verse: n });
+      list.push({ kind: 'verse', n, codex: codexByN.get(n) || null, ntv: ntvByN.get(n) || null });
+    }
+    return list;
+  }, [visibleCodex, visibleNtv, ntvChapter]);
+
+  const verseNumbers = useMemo(() => rows.filter(r => r.kind === 'verse').map(r => r.n), [rows]);
+
+  const apparatusRows = useMemo(
+    () => visibleCodex.flatMap(v => v.apparatus.map((a, i) => ({ verse: v.n, index: i, ...a }))),
+    [visibleCodex]
+  );
+
+  const noteRows = useMemo(
+    () =>
+      visibleNtv.flatMap(v =>
+        (v.notes || []).map(id => ({ verse: v.n, id, text: ntv?.notes?.[id] || '' }))
+      ),
+    [visibleNtv, ntv]
+  );
+
+  const siglas = useMemo(() => witnessLegend(apparatusRows.map(r => r.w)), [apparatusRows]);
+
+  const searchRecords = useMemo(() => {
+    const records = [];
+    if (ntvChapter) {
+      records.push(
+        ...buildRecords({
+          witness: 'ntv',
+          bookId,
+          bookName: bookMeta?.name || bookId,
+          chapters: [ntvChapter]
+        })
+      );
+    }
+    if (codexChapter) {
+      records.push(
+        ...buildRecords({
+          witness: 'codex',
+          bookId,
+          bookName: bookMeta?.name || bookId,
+          chapters: [codexChapter]
+        })
+      );
+    }
+    return records;
+  }, [ntvChapter, codexChapter, bookId, bookMeta]);
+
   /* ----------------------------- preferencias ----------------------------- */
 
   useEffect(() => write(KEYS.theme, theme), [theme]);
   useEffect(() => write(KEYS.size, size), [size]);
-  useEffect(() => write(KEYS.cols, columns), [columns]);
+  useEffect(() => write(KEYS.mode, mode), [mode]);
 
   const themeDef = THEMES.find(t => t.id === theme) || THEMES[0];
   const cycleTheme = () =>
@@ -316,48 +418,54 @@ export default function Exegesis() {
       if (next.chapter) q.set('cap', String(next.chapter));
       if (next.range !== undefined) q.set('vv', next.range);
       else q.delete('vv');
-      setSelected(null);
-      setNote(null);
+      q.delete('v');
+      setPop(null);
       setParams(q, { replace: !push });
     },
     [params, setParams]
   );
 
-  // Si el capítulo pedido no existe en el libro (p. ej. `?libro=judas` sin `cap`),
-  // se corrige la URL al primer capítulo disponible.
+  const select = useCallback(
+    (n, { keepPop = false } = {}) => {
+      const q = new URLSearchParams(params);
+      if (n) q.set('v', String(n));
+      else q.delete('v');
+      if (!keepPop) setPop(null);
+      setParams(q, { replace: true });
+    },
+    [params, setParams]
+  );
+
+  // Si el capítulo pedido no existe en el libro, se corrige al primero que haya.
   useEffect(() => {
     if (!ntv || ntv.error || !ntv.chapters.length) return;
-    if (!ntv.chapters.some(c => c.num === chapterNum)) {
-      goto({ chapter: ntv.chapters[0].num, range: '' }, false);
-    }
+    if (!ntv.chapters.some(c => c.num === chapterNum)) goto({ chapter: ntv.chapters[0].num, range: '' }, false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ntv, chapterNum]);
 
-  /* --------------------- scroll sincronizado entre columnas ---------------- */
+  /* --------------------------- scroll de la rejilla ----------------------- */
 
-  const onScroll = useCallback(source => {
-    const a = bodyRefs.codex.current;
-    const b = bodyRefs.ntv.current;
-    if (!a || !b || syncing.current) return;
-    syncing.current = true;
-    const from = source === 'codex' ? a : b;
-    const to = source === 'codex' ? b : a;
-    const ratio = from.scrollTop / Math.max(1, from.scrollHeight - from.clientHeight);
-    to.scrollTop = ratio * Math.max(0, to.scrollHeight - to.clientHeight);
-    window.requestAnimationFrame(() => {
-      syncing.current = false;
-    });
-  }, []);
+  useEffect(() => {
+    chapterKey.current = '';
+  }, [bookId, chapterNum, range.id]);
 
-  const alignVerse = useCallback(n => {
-    setActiveVerse(n);
-    for (const key of ['codex', 'ntv']) {
-      const body = bodyRefs[key].current;
-      if (!body) continue;
-      const row = body.querySelector(`[data-v="${n}"]`);
-      if (row) body.scrollTo({ top: row.offsetTop - 12, behavior: prefersReduced() ? 'auto' : 'smooth' });
+  useEffect(() => {
+    if (loading) return;
+    const body = gridRef.current;
+    if (!body) return;
+    const key = `${bookId}|${chapterNum}|${range.id}`;
+    if (chapterKey.current !== key) {
+      chapterKey.current = key;
+      body.scrollTop = 0;
     }
-  }, []);
+    if (!selected) return;
+    const row = body.querySelector(`[data-v="${selected}"]`);
+    if (!row) return;
+    const top = row.offsetTop - 8;
+    const bottom = top + row.offsetHeight;
+    if (top >= body.scrollTop - 2 && bottom <= body.scrollTop + body.clientHeight) return;
+    body.scrollTo({ top: Math.max(0, top), behavior: prefersReduced() ? 'auto' : 'smooth' });
+  }, [loading, selected, bookId, chapterNum, range.id, rows]);
 
   /* --------------------------------- SEO ---------------------------------- */
 
@@ -368,14 +476,39 @@ export default function Exegesis() {
   useSeo({
     title: seoTitle,
     description:
-      'Lectura paralela del Nuevo Testamento: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.'
+      'Lectura paralela del Nuevo Testamento, versículo a versículo: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.'
   });
 
   /* ------------------------------ facsímil -------------------------------- */
 
   const facsimile = bookMeta
-    ? `https://www.codexsinaiticus.org/en/manuscript.aspx?book=${bookMeta.codexNo}&chapter=${chapterNum}&verse=${range.from || 1}`
+    ? `https://www.codexsinaiticus.org/en/manuscript.aspx?book=${bookMeta.codexNo}&chapter=${chapterNum}&verse=${selected || range.from || 1}`
     : 'https://www.codexsinaiticus.org/';
+
+  /* ------------------------------ popovers -------------------------------- */
+
+  const openApparatus = useCallback((anchor, verse, index) => {
+    const verseData = visibleCodex.find(v => v.n === verse);
+    const anchors = verseData ? anchorIndexes(verseData.grc) : [];
+    const next = anchors.filter(a => a > index).sort((a, b) => a - b)[0];
+    setPop({
+      kind: 'apparatus',
+      anchor,
+      verse,
+      index,
+      end: next ?? verseData?.apparatus.length ?? index + 1
+    });
+    select(verse, { keepPop: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visibleCodex, select]);
+
+  const openNote = useCallback(
+    (anchor, verse, id) => {
+      setPop({ kind: 'note', anchor, verse, id });
+      select(verse, { keepPop: true });
+    },
+    [select]
+  );
 
   /* ------------------------------ estados --------------------------------- */
 
@@ -397,7 +530,6 @@ export default function Exegesis() {
     );
   }
 
-  // El índice es lo primero que hace falta: sin él no hay barra de navegación.
   if (index.status !== 'ok' || !index.data) {
     return (
       <main id="main" className={`exg papel--${theme}`} data-theme={theme}>
@@ -415,11 +547,10 @@ export default function Exegesis() {
     );
   }
 
-  const loading = !ntv || (codex === undefined && bookMeta?.codex.verses);
-
-  const apparatusRows = visibleCodex.flatMap(v =>
-    v.apparatus.map((a, i) => ({ verse: v.n, index: i, ...a }))
-  );
+  const modeDef = MODES.find(m => m.id === mode) || MODES[0];
+  const showCodex = mode !== 'ntv';
+  const showNtv = mode !== 'codex';
+  const columns = [showCodex, showNtv].filter(Boolean).length;
 
   return (
     <main id="main" className={`exg papel--${theme}`} data-theme={theme}>
@@ -436,8 +567,10 @@ export default function Exegesis() {
           <p className="eyebrow">Exégesis comparada</p>
           <h1>Codex Sinaiticus × Nueva Traducción Viviente</h1>
           <p className="exg__lead">
-            La misma página leída en dos testigos: el uncial griego del siglo&nbsp;IV, con su aparato
-            crítico, y la traducción al español. Pulsa un versículo para alinear las dos columnas.
+            El mismo pasaje leído en dos testigos, versículo a versículo: el uncial griego del siglo
+            &nbsp;IV, con su aparato crítico, y la traducción al español. Pulsa un versículo para
+            seguirlo en las dos columnas, y los sigilos <b>∗</b> o las marcas de nota para leer la
+            variante o la nota en su sitio.
           </p>
         </header>
 
@@ -487,19 +620,57 @@ export default function Exegesis() {
                 ))}
               </select>
             </div>
+            <div className="exg__select">
+              <label htmlFor="exg-verse">Versículo</label>
+              <select
+                id="exg-verse"
+                value={selected ?? ''}
+                onChange={event => select(Number(event.target.value))}
+                disabled={!verseNumbers.length}
+              >
+                <option value="" disabled>
+                  Ir a…
+                </option>
+                {verseNumbers.map(n => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
+          <BibleSearch
+            id="exg-search"
+            localRecords={searchRecords}
+            scopeLabel={`${bookMeta?.name || ''} (libro abierto)`}
+            onPick={record => {
+              const q = new URLSearchParams(params);
+              q.set('libro', record.bookId);
+              q.set('cap', String(record.chapter));
+              q.delete('vv');
+              q.set('v', String(record.verse));
+              setPop(null);
+              setParams(q);
+            }}
+          />
+
           <div className="reader__bar-group">
-            <button
-              type="button"
-              className="rb-btn rb-btn--icon"
-              aria-pressed={columns === 'uno'}
-              title={columns === 'dos' ? 'Ver una columna' : 'Ver dos columnas'}
-              aria-label={columns === 'dos' ? 'Ver una sola columna' : 'Ver dos columnas'}
-              onClick={() => setColumns(c => (c === 'dos' ? 'uno' : 'dos'))}
-            >
-              <LayoutGlyph two={columns === 'dos'} />
-            </button>
+            <div className="exg__modes" role="group" aria-label="Columnas que se ven">
+              {MODES.map(m => (
+                <button
+                  key={m.id}
+                  type="button"
+                  className={`rb-btn rb-btn--icon${mode === m.id ? ' is-active' : ''}`}
+                  aria-pressed={mode === m.id}
+                  title={m.label}
+                  aria-label={m.label}
+                  onClick={() => setMode(m.id)}
+                >
+                  {m.id === 'paralelo' ? <LayoutGlyph two /> : m.short}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="reader__bar-group">
@@ -562,7 +733,7 @@ export default function Exegesis() {
           </span>
         </div>
 
-        {/* ------------------------------ columnas ----------------------------- */}
+        {/* ------------------------------- rejilla ----------------------------- */}
         {loading ? (
           <div className="exg__loading">
             <div className="loader-pulse" role="status" aria-label="Cargando">
@@ -572,152 +743,208 @@ export default function Exegesis() {
             </div>
             <p className="muted">Abriendo los testigos…</p>
           </div>
+        ) : rows.length === 0 ? (
+          <p className="exg-empty">Este pasaje no está en ninguno de los dos testigos.</p>
         ) : (
-          <div className={`exg__cols${columns === 'uno' ? ' is-single' : ''}`}>
-            <article className="exg-card exg-card--codex">
-              <header className="exg-card__head">
-                <h2>Codex Sinaiticus</h2>
-                <p>
-                  Transcripción diplomática
-                  {codexChapter?.folio ? ` · f. ${codexChapter.folio}${codexChapter.side}` : ''} · la
-                  sobrelínea marca los <i>nomina sacra</i>
-                </p>
-              </header>
-              <div
-                className="exg-card__body"
-                ref={bodyRefs.codex}
-                onScroll={() => onScroll('codex')}
-                style={{ '--exg-fs': `${size}px` }}
-              >
-                {visibleCodex.length === 0 ? (
-                  <p className="exg-empty">
-                    El Codex Sinaiticus no conserva este pasaje en su transcripción digital.
+          <section className={`exg-grid exg-grid--${columns}`} style={{ '--exg-fs': `${size}px` }} aria-label="Lectura paralela por versículo">
+            <header className="exg-grid__head">
+              <div className="exg-grid__gutter" aria-hidden="true" />
+              {showCodex && (
+                <div className="exg-grid__witness exg-grid__witness--codex">
+                  <b>Codex Sinaiticus</b>
+                  <span>
+                    Transcripción diplomática
+                    {codexChapter?.folio ? ` · f. ${codexChapter.folio}${codexChapter.side}` : ''} · la
+                    sobrelínea marca los <i>nomina sacra</i>
+                  </span>
+                </div>
+              )}
+              {showNtv && (
+                <div className="exg-grid__witness exg-grid__witness--ntv">
+                  <b>Nueva Traducción Viviente</b>
+                  <span>
+                    {bookMeta?.name} {chapterNum}:{range.from}–{range.to} · notas del traductor en
+                    superíndice
+                  </span>
+                </div>
+              )}
+            </header>
+
+            <div className="exg-grid__body" ref={gridRef}>
+              {rows.map(row =>
+                row.kind === 'section' ? (
+                  <p className="exg-grid__section" key={row.key}>
+                    {row.title}
                   </p>
                 ) : (
-                  visibleCodex.map(v => (
-                    <div key={v.n} data-v={v.n}>
-                      <GreekVerse
-                        verse={v}
-                        active={activeVerse === v.n || selected?.n === v.n}
-                        onSelect={alignVerse}
-                        onAnchor={(n, i) => {
-                          setSelected({ n, i });
-                          setNote(null);
-                          setActiveVerse(n);
+                  <div
+                    key={row.n}
+                    data-v={row.n}
+                    className={`exg-row${selected === row.n ? ' is-active' : ''}`}
+                    onClick={() => select(row.n)}
+                  >
+                    <div className="exg-row__gutter">
+                      <button
+                        type="button"
+                        className="exg-row__n"
+                        aria-label={`Versículo ${row.n}`}
+                        onClick={event => {
+                          event.stopPropagation();
+                          select(row.n);
                         }}
-                      />
+                      >
+                        {row.n}
+                      </button>
+                      <span className="exg-row__marks">
+                        {row.codex?.apparatus?.length ? (
+                          <span
+                            className="exg-mark-chip exg-mark-chip--codex"
+                            title={`${row.codex.apparatus.length} variantes en el aparato crítico`}
+                          >
+                            ◆
+                          </span>
+                        ) : null}
+                        {row.ntv?.notes?.length ? (
+                          <span
+                            className="exg-mark-chip exg-mark-chip--ntv"
+                            title={`${row.ntv.notes.length} notas del traductor`}
+                          >
+                            †
+                          </span>
+                        ) : null}
+                      </span>
                     </div>
-                  ))
-                )}
-              </div>
-            </article>
 
-            <article className="exg-card exg-card--ntv">
-              <header className="exg-card__head">
-                <h2>Nueva Traducción Viviente</h2>
-                <p>
-                  {bookMeta?.name} {chapterNum}:{range.from}–{range.to} · notas del traductor en
-                  superíndice
-                </p>
-              </header>
-              <div
-                className="exg-card__body"
-                ref={bodyRefs.ntv}
-                onScroll={() => onScroll('ntv')}
-                style={{ '--exg-fs': `${size}px` }}
-              >
-                {visibleNtv.length === 0 ? (
-                  <p className="exg-empty">Sin texto de la NTV para este rango.</p>
-                ) : (
-                  visibleNtv.map(v => (
-                    <div key={v.n} data-v={v.n}>
-                      <NtvVerse
-                        verse={v}
-                        notes={ntv.notes || {}}
-                        active={activeVerse === v.n || note?.n === v.n}
-                        onSelect={alignVerse}
-                        onNote={(n, id) => {
-                          setNote({ n, id });
-                          setSelected(null);
-                          setActiveVerse(n);
-                        }}
-                      />
-                    </div>
-                  ))
-                )}
-              </div>
-            </article>
-          </div>
+                    {showCodex && (
+                      <div className="exg-row__cell exg-row__cell--codex">
+                        <span className="exg-cell__tag" aria-hidden="true">
+                          Codex
+                        </span>
+                        {row.codex ? (
+                          <GreekText verse={row.codex} onAnchor={openApparatus} />
+                        ) : (
+                          <span className="exg-gap">El Codex no conserva este versículo.</span>
+                        )}
+                      </div>
+                    )}
+
+                    {showNtv && (
+                      <div className="exg-row__cell exg-row__cell--ntv">
+                        <span className="exg-cell__tag" aria-hidden="true">
+                          NTV
+                        </span>
+                        {row.ntv ? (
+                          <NtvText verse={row.ntv} onNote={openNote} />
+                        ) : (
+                          <span className="exg-gap">La NTV no trae este versículo.</span>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )
+              )}
+            </div>
+          </section>
         )}
 
         {/* ------------------------------ paneles ------------------------------ */}
-        {!loading && (
+        {!loading && rows.length > 0 && (
           <div className="exg__panels">
             <section className="exg-panel" aria-label="Aparato crítico">
-              <h3>
+              <h2>
                 <span>Aparato crítico · Codex</span>
-                <span className="exg-panel__hint">lecturas de los testigos</span>
-              </h3>
+                <span className="exg-panel__hint">
+                  {apparatusRows.length} {apparatusRows.length === 1 ? 'variante' : 'variantes'} en este pasaje
+                </span>
+              </h2>
               {apparatusRows.length === 0 ? (
-                <p className="exg-empty">Sin variantes registradas en este rango.</p>
+                <p className="exg-empty">Sin variantes registradas en este pasaje.</p>
               ) : (
                 <ol className="exg-notes">
-                  {apparatusRows.map((row, i) => (
-                    <li
-                      key={`${row.verse}.${row.index}`}
-                      className={`exg-note${selected && selected.n === row.verse && selected.i <= row.index ? ' is-active' : ''}`}
-                    >
-                      <button type="button" className="exg-note__ref" onClick={() => alignVerse(row.verse)}>
-                        {row.verse}
-                      </button>
-                      <div>
-                        <span className="exg-witness">{witnessLabel(row.w)}</span>{' '}
-                        {row.t === 'omitted' ? <em>omite</em> : <span className="exg-variant">{row.t}</span>}
-                      </div>
-                      {i === 0 ? null : null}
-                    </li>
-                  ))}
+                  {apparatusRows.map(row => {
+                    const marked =
+                      pop?.kind === 'apparatus' && pop.verse === row.verse && row.index >= pop.index && row.index < pop.end;
+                    const active = selected === row.verse;
+                    return (
+                      <li
+                        key={`${row.verse}.${row.index}`}
+                        className={`exg-note${active ? ' is-active' : ''}${marked ? ' is-marked' : ''}`}
+                      >
+                        <button type="button" className="exg-note__ref" onClick={() => select(row.verse)}>
+                          {row.verse}
+                        </button>
+                        <div>
+                          <span className="exg-witness">{witnessLabel(row.w)}</span>{' '}
+                          {row.t === 'omitted' ? <em>omite</em> : <span className="exg-variant">{row.t}</span>}
+                        </div>
+                      </li>
+                    );
+                  })}
                 </ol>
               )}
               <div className="exg-sigla">
-                <span><b>∗</b> {witnessLabel('*')}</span>
-                <span><b>ca</b> {witnessLabel('ca')}</span>
-                <span><b>omite</b> no está en ese testigo</span>
+                {siglas.map(s => (
+                  <span key={s.sigla} title={s.note || ''}>
+                    <b>{s.sigla}</b> {s.label}
+                  </span>
+                ))}
+                <span>
+                  <b>omite</b> no está en ese testigo
+                </span>
+                <span className="exg-sigla__src">
+                  Siglas y manos según la{' '}
+                  <a href={WITNESS_SOURCE} target="_blank" rel="noopener noreferrer">
+                    tabla del proyecto
+                  </a>
+                  .
+                </span>
               </div>
             </section>
 
             <section className="exg-panel" aria-label="Notas de la NTV">
-              <h3>
+              <h2>
                 <span>Notas de la NTV</span>
-                <span className="exg-panel__hint">notas al pie del traductor</span>
-              </h3>
-              {visibleNtv.every(v => !(v.notes || []).length) ? (
+                <span className="exg-panel__hint">
+                  {noteRows.length} {noteRows.length === 1 ? 'nota' : 'notas'} en este pasaje
+                </span>
+              </h2>
+              {noteRows.length === 0 ? (
                 <p className="exg-empty">Este pasaje no tiene notas del traductor.</p>
               ) : (
                 <ol className="exg-notes">
-                  {visibleNtv.flatMap(v =>
-                    (v.notes || []).map(id => (
-                      <li
-                        key={`${v.n}.${id}`}
-                        className={`exg-note${note && note.n === v.n && note.id === id ? ' is-active' : ''}`}
+                  {noteRows.map(row => (
+                    <li
+                      key={`${row.verse}.${row.id}`}
+                      className={`exg-note${selected === row.verse ? ' is-active' : ''}${
+                        pop?.kind === 'note' && pop.verse === row.verse && pop.id === row.id ? ' is-marked' : ''
+                      }`}
+                    >
+                      <button
+                        type="button"
+                        className="exg-note__ref exg-note__ref--fn"
+                        onClick={() => select(row.verse)}
                       >
-                        <button type="button" className="exg-note__ref exg-note__ref--fn" onClick={() => alignVerse(v.n)}>
-                          {id}
-                        </button>
-                        <div>
-                          <b>
-                            {bookMeta?.abbr} {chapterNum}:{v.n}
-                          </b>{' '}
-                          {ntv.notes?.[id] || ''}
-                        </div>
-                      </li>
-                    ))
-                  )}
+                        {row.id}
+                      </button>
+                      <div>
+                        <b>
+                          {bookMeta?.abbr} {chapterNum}:{row.verse}
+                        </b>{' '}
+                        {row.text}
+                      </div>
+                    </li>
+                  ))}
                 </ol>
               )}
             </section>
           </div>
         )}
+
+        <BibleCta
+          exclude="exegesis"
+          passage={`${bookMeta?.name} ${chapterNum}${selected ? `:${selected}` : ''}`}
+          title="El mismo pasaje, en los otros dos lectores"
+        />
 
         <footer className="exg__credits">
           <p>
@@ -726,14 +953,47 @@ export default function Exegesis() {
               Codex Sinaiticus Project
             </a>
             , propiedad de la British Library, la Universidad de Leipzig, el Monasterio de Santa
-            Catalina (Sinaí) y la Biblioteca Nacional de Rusia. Uso personal, educativo y no comercial,
-            con atribución.
+            Catalina (Sinaí) y la Biblioteca Nacional de Rusia. Uso personal, educativo y no
+            comercial, con atribución.
           </p>
+          <p className="exg__license">{WITNESS_ATTRIBUTION}</p>
           <p>
             <strong>NTV:</strong> Nueva Traducción Viviente, con sus notas del traductor.
           </p>
         </footer>
+
+        <p className="exg__hint">
+          Pulsa un versículo para fijarlo · <b>∗</b> abre la variante · un número en azul abre la nota
+          del traductor
+        </p>
       </div>
+
+      {pop?.kind === 'apparatus' && (
+        <VersePopover
+          anchor={pop.anchor}
+          label={`Aparato crítico · ${bookMeta?.abbr} ${chapterNum}:${pop.verse}`}
+          onClose={() => setPop(null)}
+        >
+          <ApparatusBody
+            entries={visibleCodex.find(v => v.n === pop.verse)?.apparatus || []}
+            start={pop.index}
+            end={pop.end}
+          />
+        </VersePopover>
+      )}
+
+      {pop?.kind === 'note' && (
+        <VersePopover
+          anchor={pop.anchor}
+          label={`Nota ${pop.id} · ${bookMeta?.abbr} ${chapterNum}:${pop.verse}`}
+          onClose={() => setPop(null)}
+        >
+          <NoteBody
+            note={ntv?.notes?.[pop.id]}
+            reference={`${bookMeta?.name} ${chapterNum}:${pop.verse} · nota ${pop.id}`}
+          />
+        </VersePopover>
+      )}
     </main>
   );
 }

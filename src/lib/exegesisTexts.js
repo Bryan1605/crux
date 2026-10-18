@@ -34,3 +34,9 @@ export const loadExegesisIndex = () => loadJson('/textos/exegesis/index.json');
  */
 export const loadWitnessBook = (witness, bookId) =>
   loadJson(`/textos/exegesis/${witness}/${bookId}.json`);
+
+/**
+ * Índice de búsqueda de todo el Nuevo Testamento (NTV + Codex). Pesa ~1,5 MB,
+ * así que solo se descarga cuando alguien busca más allá del libro abierto.
+ */
+export const loadSearchIndex = () => loadJson('/textos/exegesis/buscar.json');
