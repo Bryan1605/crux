@@ -138,6 +138,12 @@
   padding: 0 0.2rem;
   font-size: 0.95rem;
   border-bottom: 0;
+  /* El botón de descarga se queda en icono: mínimo táctil cómodo. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.1rem;
+  min-height: 2.1rem;
 }
 
 .ntv-audio__download:hover {

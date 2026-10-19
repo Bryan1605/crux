@@ -13,7 +13,10 @@
 .view-toggle__btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
   padding: 0.35rem 0.75rem;
   border: 0;
   border-radius: 999px;

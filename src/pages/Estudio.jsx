@@ -162,7 +162,7 @@ export default function Estudio() {
 
   useSeo({
     title: `${site.marca.nombre} — Estudio`,
-    description: site.seo.description
+    description: `${STUDIES.length} fichas en ${STUDY_CATEGORIES.length} categorías: ${STUDY_CATEGORIES.map(c => c.label).join(', ')}.`
   });
 
   useEffect(() => {

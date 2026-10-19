@@ -265,6 +265,20 @@ export default function Biblia() {
     return () => window.removeEventListener('keydown', onKey);
   }, [page, mode]);
 
+  /* --------------- modo libro: la lectura empieza por arriba --------------- */
+
+  /*
+   * Al abrir una parte desde el índice el navegador conserva aquel
+   * desplazamiento (y lo recorta al final de la página): el libro aparecía a
+   * medio scroll, con las flechas de pasar hoja justo debajo de la barra fija,
+   * que se comía el clic y cambiaba de modo. En libro, cada hoja se lee desde
+   * arriba.
+   */
+  useEffect(() => {
+    if (!page || mode !== 'libro') return;
+    window.scrollTo(0, 0);
+  }, [page, mode]);
+
   /* --------------------- modo scroll: llevar al ancla --------------------- */
 
   useEffect(() => {

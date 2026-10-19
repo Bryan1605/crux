@@ -95,7 +95,7 @@ La historia de la iglesia confirma que esto no es un asunto nuevo: el modalismo 
 - Wikipedia (EN): "Oneness Pentecostalism" — https://en.wikipedia.org/wiki/Oneness_Pentecostalism
 - Wikipedia (EN): "Frank Ewart" — https://en.wikipedia.org/wiki/Frank_Ewart
 - Wikipedia (EN): "United Pentecostal Church International" — https://en.wikipedia.org/wiki/United_Pentecostal_Church_International
-- Wikipedia (EN): "Finished-work movement" — https://en.wikipedia.org/wiki/Finished-work_movement
+- Wikipedia (EN): "Finished Work Pentecostalism" — https://en.wikipedia.org/wiki/Finished_Work_Pentecostalism
 - Wikipedia (EN): "Azusa Street Revival" — https://en.wikipedia.org/wiki/Azusa_Street_Revival
 - Tertuliano, *Adversus Praxean* (refutación patrística del modalismo; ver Parte 4.1 de `Biblia_Patristica_Completa.md`)
 - Didaché, cap. 7 (fórmula bautismal trinitaria en la iglesia primitiva)

@@ -39,13 +39,14 @@ npm run exegesis    # regenera public/textos/exegesis/ (NTV + Codex + índice + 
 npm run qa          # QA completa (datos + navegador; requiere `npm run dev` en otra terminal)
 npm run qa:audio    # comprueba las narraciones (audio, onda y reproductor de la NTV)
 npm run qa:imagenes # comprueba las imágenes referenciadas y las de las páginas
-npm run qa:a11y     # audita la accesibilidad con axe-core (0 critical/serious)
+npm run qa:enlaces  # comprueba enlaces internos, anclas y citas externas (dentro y fuera)
+npm run qa:a11y     # audita la accesibilidad con axe-core (0 critical/serious) en escritorio y móvil
 node scripts/build-audio-peaks.mjs   # recalcula la onda de las narraciones (necesita Chrome)
 node scripts/fix-biblia-doc.mjs --file <ruta> --write   # repara la Biblia Patrística (simula sin --write)
 ```
 
 `npm run qa` agrupa: `check:search`, `qa:timeline`, `qa:concilios`, `qa:buscar`,
-`qa:vistas`, `qa:biblia`, `qa:exegesis`, `qa:audio`, `qa:imagenes` y `qa:a11y`. Todas las suites de navegador
+`qa:vistas`, `qa:biblia`, `qa:exegesis`, `qa:audio`, `qa:imagenes`, `qa:enlaces` y `qa:a11y`. Todas las suites de navegador
 necesitan el servidor de desarrollo en `http://localhost:5173` (y Chrome instalado).
 Para auditar el sitio publicado, ejecuta cualquiera de ellas con
 `CRUX_BASE=https://bryan1605.github.io/crux`.
@@ -57,7 +58,7 @@ Los informes quedan en `%TEMP%\opencode\crux\`.
 
 | Ruta | Qué es |
 |------|--------|
-| `/` | Portada: héroe 3D, manifiesto, banner y anuncios |
+| `/` | Portada: héroe 3D con buscador, cifras reales, categorías, banner, las tres puertas de la Biblia, personajes y concilios |
 | `/estudio` | Índice de estudios con tres vistas (tarjetas / lista / carrusel) y línea de tiempo |
 | `/estudio?cat=…` | Índice filtrado por categoría (enlazado desde `/temas`) |
 | `/estudio/:slug` | Ficha de estudio (Markdown) |
@@ -128,7 +129,7 @@ Hay dos formas de publicar lo que edites:
 
    ```ini
    GH_TOKEN=github_pat_xxx   # PAT con permiso Contents: Read and write
-   GH_REPO=bryan1605/Portafolio
+   GH_REPO=bryan1605/crux
    SITE_URL=https://bryan1605.github.io/crux
    ```
 
@@ -206,6 +207,12 @@ npm run index:wiki -- --force   # regenera y guarda un backup en content/.histor
 
 - **SPA en GitHub Pages** (`/crux/`): `base` se define con `BASE_PATH`; se emite un `404.html`
   que restaura enlaces profundos vía `sessionStorage` antes de que monte el router.
+- **Prerender por ruta** (`plugins/prerender.mjs` + `scripts/routes-lib.mjs`): el build
+  escribe `dist/<ruta>/index.html` para las 214 rutas públicas (9 de sección + 188 estudios
+  + 17 fichas de personaje) con el `<title>`, la `description`, el `canonical`, las etiquetas
+  `og:*`/`twitter:*` y el JSON-LD de esa ruta ya en el HTML, sin depender de JavaScript.
+  `routes-lib.mjs` es la fuente única de rutas y SEO (la comparten el prerender, el sitemap
+  y la QA) y el mismo plugin genera `sitemap.xml` y `robots.txt`.
 - **API de contenido** (`plugins/content-api.mjs`): sirve `/api/content/*` para leer en
   desarrollo y en el build; los endpoints de escritura solo existen con `npm run dev`.
 - **Rutas de assets**: usa siempre `assetUrl('/img/...')` de `src/lib/assets.js`; las rutas

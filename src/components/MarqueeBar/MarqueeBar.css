@@ -13,8 +13,8 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.34);
   background: rgba(10, 10, 11, 0.85);
@@ -38,8 +38,8 @@
 
 @media (max-width: 768px) {
   .marquee-bar__close {
-    width: 30px;
-    height: 30px;
-    right: 8px;
+    width: 44px;
+    height: 44px;
+    right: 6px;
   }
 }

@@ -84,9 +84,20 @@ export default function MarqueeBar() {
   const enabled = anuncios?.enabled !== false && marquee.enabled;
   const dismissable = anuncios?.dismissable !== false && marquee.dismissable;
 
+  const items = useMemo(() => {
+    if (!loaded) return [];
+    const announce = Array.isArray(anuncios?.items) ? anuncios.items.filter(Boolean) : [];
+    return [...announce, verse].filter(Boolean);
+  }, [verse, loaded, anuncios]);
+
+  // La altura de la barra se publica como `--marquee-h` (y como padding del
+  // body) para que ninguna página quede tapada por ella. Las dependencias
+  // incluyen `loaded` e `items.length`: en la primera pasada la barra aún no
+  // está montada (h = 0) y sin reevaluar se quedaba clavada en 0px para siempre.
   useEffect(() => {
-    if (!enabled || closed) {
+    if (!enabled || closed || !loaded || items.length === 0) {
       document.body.style.paddingBottom = '';
+      document.documentElement.style.removeProperty('--marquee-h');
       return undefined;
     }
     const apply = () => {
@@ -102,13 +113,7 @@ export default function MarqueeBar() {
       document.body.style.paddingBottom = '';
       document.documentElement.style.removeProperty('--marquee-h');
     };
-  }, [enabled, closed]);
-
-  const items = useMemo(() => {
-    if (!loaded) return [];
-    const announce = Array.isArray(anuncios?.items) ? anuncios.items.filter(Boolean) : [];
-    return [...announce, verse].filter(Boolean);
-  }, [verse, loaded, anuncios]);
+  }, [enabled, closed, loaded, items.length]);
 
   // `closed` debe cortar el render: si no, el ✕ guarda la preferencia pero la
   // barra sigue pintada (era el bug de "no se puede cerrar la marquesina").

@@ -281,7 +281,7 @@ export default function SiteEditor() {
           </Field>
         </div>
 
-        <p className="muted admin__hint">Puertas de entrada</p>
+        <p className="muted admin__hint">La biblioteca (tres puertas a la Biblia)</p>
         <div className="admin__row">
           <Field label="Eyebrow">
             <input value={site.home.bridges.eyebrow} onChange={e => setHome('bridges.eyebrow', e.target.value)} />
@@ -294,7 +294,7 @@ export default function SiteEditor() {
           <div className="admin__card" key={i}>
             <div className="admin__card-head"><strong>Tarjeta {i + 1}</strong></div>
             <div className="admin__row">
-              <Field label="Meta 1" hint='Puedes usar {total} y {categories}'>
+              <Field label="Meta 1">
                 <input value={card.meta1} onChange={e => setHome(`bridges.cards.${i}.meta1`, e.target.value)} />
               </Field>
               <Field label="Meta 2">

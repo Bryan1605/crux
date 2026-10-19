@@ -118,9 +118,9 @@ Los misioneros mormones llegaron a la región desde **1945-1950** (Brasil y Méx
 
 ## 9. Fuentes
 
-- Bill of Rights Institute, "The Mormon Trail and the Handcart Brigade" (contexto del Burned-Over District): https://billofrightsinstitute.org/essays/the-mormon-trail-and-the-handcart-brigade
+- Bill of Rights Institute, "The Mormon Trail" (contexto del Burned-Over District): https://billofrightsinstitute.org/essays/the-mormon-trail
 - Wikipedia, "Joseph Smith": https://es.wikipedia.org/wiki/Joseph_Smith
 - Wikipedia, "Libro de Mormón": https://es.wikipedia.org/wiki/Libro_de_Morm%C3%B3n
 - Wikipedia, "Burned-Over District": https://en.wikipedia.org/wiki/Burned-over_district
-- Wikipedia, "Orden de exterminio de Misuri": https://es.wikipedia.org/wiki/Orden_de_exterminio_de_Misuri
+- Wikipedia, "Orden de exterminio mormón": https://es.wikipedia.org/wiki/Orden_de_exterminio_morm%C3%B3n
 - Sitio oficial de la Iglesia de Jesucristo de los Santos de los Últimos Días: https://www.churchofjesuschrist.org

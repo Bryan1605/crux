@@ -335,6 +335,81 @@ try {
   );
   await reduced.close();
 
+  // ---------------------------------------------------------------- portada
+  const home = await makePage('no-preference', 1280, 900);
+  await home.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });
+  await wait(3200);
+
+  const portada = await home.evaluate(() => {
+    const clases = [...document.querySelectorAll('main > section')].map(s => s.className);
+    const principales = [...document.querySelectorAll('main .btn--primary')].map(a => a.getAttribute('href'));
+    return {
+      clases,
+      buscador: Boolean(document.querySelector('.hero__search input')),
+      principales,
+      stats: document.querySelectorAll('.stats__item').length,
+      categorias: document.querySelectorAll('.cat-card').length,
+      puertas: document.querySelectorAll('.section--alt .grid .card').length,
+      personajes: document.querySelectorAll('.char-card').length,
+      imgsRotas: [...document.images].filter(i => i.complete && i.naturalWidth === 0).length
+    };
+  });
+  check('la portada pinta sus secciones', portada.clases.length >= 8, portada.clases.map(c => c.split(' ')[0]).join(' · '));
+  check('cifras reales en la portada', portada.stats === 6, `${portada.stats} cifras`);
+  check('rejilla de categorías completa', portada.categorias === 10, `${portada.categorias} tarjetas`);
+  check('personajes destacados con portada', portada.personajes === 4, `${portada.personajes} tarjetas`);
+  check('buscador en el héroe', portada.buscador);
+  check('una sola acción primaria (héroe y cierre)', portada.principales.length === 2 && portada.principales.every(h => h === '/estudio'), portada.principales.join(' | '));
+  check('portada sin imágenes rotas', portada.imgsRotas === 0, `${portada.imgsRotas} rotas`);
+  await checkNoOverflow(home, 'portada');
+  await home.screenshot({ path: `${OUT}/v-home.png` });
+
+  // El buscador del héroe lleva a la búsqueda global con la consulta.
+  await home.type('.hero__search input', 'nicea');
+  await home.click('.hero__search button[type="submit"]');
+  await wait(1600);
+  const trasBuscar = await home.evaluate(() => ({
+    url: location.href,
+    resultados: document.querySelectorAll('.buscar__item').length,
+    valor: document.querySelector('.buscar__input, input[type="search"]')?.value
+  }));
+  check('el buscador del héroe busca de verdad', /\/buscar\?q=nicea/.test(trasBuscar.url) && trasBuscar.resultados > 0, `${trasBuscar.url.split('/buscar')[1] || ''} · ${trasBuscar.resultados} resultados`);
+  await home.close();
+
+  // La barra fija no puede tapar ni el botón del héroe ni el pie.
+  const barra = await makePage('no-preference', 1280, 900);
+  await barra.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });
+  await wait(3200);
+  const arriba = await barra.evaluate(() => {
+    const cta = document.querySelector('.hero__actions .btn');
+    const b = document.querySelector('.marquee-bar');
+    return {
+      hayBarra: Boolean(b),
+      ctaAbajo: cta?.getBoundingClientRect().bottom ?? null,
+      barraArriba: b?.getBoundingClientRect().top ?? null
+    };
+  });
+  check('la barra fija no tapa el botón del héroe', !arriba.hayBarra || arriba.ctaAbajo <= arriba.barraArriba + 1, `botón ${Math.round(arriba.ctaAbajo)} ≤ barra ${Math.round(arriba.barraArriba)}`);
+
+  await barra.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  await wait(900);
+  const abajo = await barra.evaluate(() => {
+    const pie = document.querySelector('footer');
+    const b = document.querySelector('.marquee-bar');
+    return {
+      pieAbajo: pie?.getBoundingClientRect().bottom ?? null,
+      barraArriba: b?.getBoundingClientRect().top ?? null,
+      varAltura: getComputedStyle(document.documentElement).getPropertyValue('--marquee-h').trim(),
+      paddingBody: getComputedStyle(document.body).paddingBottom
+    };
+  });
+  check(
+    'la barra fija no tapa el pie (altura publicada)',
+    abajo.varAltura !== '0px' && abajo.pieAbajo <= abajo.barraArriba + 1,
+    `--marquee-h=${abajo.varAltura} · pie ${Math.round(abajo.pieAbajo)} ≤ barra ${Math.round(abajo.barraArriba)} · padding ${abajo.paddingBody}`
+  );
+  await barra.close();
+
   // ---------------------------------------------------------------- marquesina
   const marquee = await makePage();
   await marquee.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });

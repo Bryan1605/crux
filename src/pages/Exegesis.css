@@ -275,6 +275,12 @@
   border-radius: 6px;
   padding: 0.1rem 0.3rem;
   cursor: pointer;
+  /* Número del versículo: objetivo táctil de 24 px como mínimo (WCAG 2.2). */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
 }
 
 .exg-row__n:hover,
@@ -769,6 +775,12 @@
   border-radius: 8px;
   padding: 0.28rem 0.45rem;
   cursor: pointer;
+  /* Libro del raíl: mínimo táctil cómodo. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.1rem;
+  min-height: 2.1rem;
 }
 
 .ntv__rail-book:hover:not(:disabled) {
@@ -788,7 +800,7 @@
 
 .ntv__rail-chapters {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(2.1rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(2.4rem, 1fr));
   gap: 0.3rem;
 }
 
@@ -802,6 +814,11 @@
   padding: 0.3rem 0;
   cursor: pointer;
   font-variant-numeric: tabular-nums;
+  /* Capítulo del raíl: mínimo táctil cómodo. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.1rem;
 }
 
 .ntv__rail-chapter:hover {

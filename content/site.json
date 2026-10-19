@@ -20,8 +20,7 @@
       "bgColor": "#16161b",
       "textColor": "#f4f4f5",
       "links": [
-        { "label": "Todos los videos", "href": "/videos", "ariaLabel": "Ver todos los videos" },
-        { "label": "Canal de YouTube", "href": "/videos", "ariaLabel": "Ir al canal de YouTube" }
+        { "label": "Todos los videos", "href": "/videos", "ariaLabel": "Ver todos los videos" }
       ]
     },
     {
@@ -76,25 +75,32 @@
     ],
     "banner": {
       "kicker": "Del banner al estudio",
-      "cta": { "label": "Abrir el estudio", "href": "/estudio" }
+      "cta": { "label": "Empezar por los fundamentos", "href": "/estudio?cat=01-fundamentos" }
     },
     "bridges": {
-      "eyebrow": "Por dónde seguir",
-      "title": "Dos puertas: el estudio y los videos",
+      "eyebrow": "La biblioteca",
+      "title": "Tres puertas a la Biblia",
       "cards": [
         {
-          "meta1": "{total} estudios",
-          "meta2": "{categories} categorías",
-          "title": "El estudio",
-          "desc": "Fundamentos doctrinales, parábolas, personajes, apologética y Apocalipsis: fichas ordenadas con pasaje clave y resumen.",
-          "cta": "Entrar al índice"
+          "meta1": "Padres de la Iglesia",
+          "meta2": "siglos I–VIII",
+          "title": "Biblia Patrística",
+          "desc": "Las cartas, homilías y tratados de los Padres de la Iglesia, parte por parte, con su fólio y su contexto.",
+          "cta": "Abrir la Patrística"
         },
         {
-          "meta1": "Video",
-          "meta2": "Clases y explicaciones",
-          "title": "Los videos",
-          "desc": "Las clases grabadas, ordenadas en una sola parrilla: el mismo contenido del estudio, dicho en voz alta.",
-          "cta": "Ver los videos"
+          "meta1": "27 libros",
+          "meta2": "Nuevo Testamento",
+          "title": "Biblia NTV",
+          "desc": "La Nueva Traducción Viviente versículo a versículo, con las notas del traductor y el audio dramatizado donde existe.",
+          "cta": "Leer la NTV"
+        },
+        {
+          "meta1": "Codex Sinaiticus",
+          "meta2": "frente a la NTV",
+          "title": "Exégesis comparada",
+          "desc": "El texto griego del Codex Sinaiticus con su aparato crítico, puesto al lado de la traducción, versículo a versículo.",
+          "cta": "Comparar los textos"
         }
       ]
     }

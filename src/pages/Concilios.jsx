@@ -9,7 +9,10 @@ const ORDINALES = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', '
 
 export default function Concilios() {
   const site = useSite();
-  useSeo({ title: `${site.marca.nombre} — Concilios y herejías`, description: site.seo.description });
+  useSeo({
+    title: `${site.marca.nombre} — Concilios y herejías`,
+    description: `${CONCILIOS_LIST.length} concilios y ${HEREJIAS_LIST.length} herejías de la historia de la Iglesia: año, decisiones y a quién condenaron.`
+  });
 
   return (
     <main id="main" className="concilios-page">

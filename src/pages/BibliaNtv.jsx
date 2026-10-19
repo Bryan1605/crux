@@ -126,6 +126,7 @@ function NtvGrid({ book, chapter, selected, onSelect, onNote, size, gridRef }) {
           ) : (
             <div
               key={row.key}
+              id={`v${row.verse.n}`}
               data-v={row.verse.n}
               className={`exg-row${selected === row.verse.n ? ' is-active' : ''}`}
               onClick={() => {

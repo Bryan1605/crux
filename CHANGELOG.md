@@ -3,6 +3,74 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.9.0] — 2026-10-19
+
+La portada deja de ser una tarjeta de presentación y pasa a ser el mapa del sitio:
+todo enlace lleva a contenido real y todo número sale del contenido. Con ella llegan
+las comprobaciones que faltaban: enlaces (internos, anclas y citas externas) y
+accesibilidad móvil en todas las rutas.
+
+### Añadido
+
+- **Portada nueva** (`src/pages/Home.jsx`): héroe con **una sola acción primaria**
+  («Explorar el estudio») y buscador que lleva a `/buscar?q=`; manifiesto; cifras
+  reales del contenido (188 fichas, 10 categorías, 17 personajes, 27 libros del NT,
+  17 concilios y herejías, 2 capítulos con audio); rejilla de las 10 categorías con
+  su recuento; banner; las **tres puertas de la Biblia** (Patrística, NTV y exégesis
+  comparada, reutilizando `home.bridges`); cuatro personajes destacados —los que
+  tienen la ficha ilustrada completa—; tres concilios con su año y su ancla; y un
+  cierre con el mismo CTA único.
+- **`qa:enlaces`** (`scripts/qa-enlaces.mjs`): las páginas cargan su contenido
+  (no la de 404), los 396 destinos internos existen (categorías y libros del NT
+  incluidos), las 32 anclas encuentran su `id`, ningún enlace se queda sin texto,
+  los enlaces externos abren en pestaña nueva con `rel="noopener noreferrer"` y las
+  **39 citas externas de las 188 fichas** responden (403/429 se anotan como
+  «bloquea el rastreo», no como rotas).
+- **`qa:vistas`** cubre la portada (secciones, cifras, categorías, personajes,
+  buscador, CTA única, imágenes) y comprueba que la barra fija inferior no tapa ni
+  el botón del héroe ni el pie.
+- **`qa:a11y`** pasa **todas las rutas en escritorio y móvil** y añade el tamaño de
+  los objetivos táctiles: por debajo de 24 px (mínimo WCAG 2.2 AA) falla y entre 24
+  y 44 px avisa, con la excepción de los enlaces dentro de un párrafo. El domo 3D de
+  la Patrística queda fuera del barrido por la excepción de «control equivalente»
+  (el índice `#biblia-indice` cumple la misma función), documentado en el script.
+
+### Cambiado
+
+- Los **enlaces externos del markdown** de los estudios se abren en pestaña nueva con
+  `rel="noopener noreferrer"`: el lector no pierde el punto de lectura.
+- **`/videos`** sin videos muestra un estado vacío de verdad (con salida al estudio y
+  a la Biblia) en lugar de instrucciones para desarrolladores.
+- **Copy del home** (`content/site.json` + `src/lib/site.js`): `home.bridges` pasa a
+  describir las tres puertas de la Biblia y el enlace del banner deja de competir con
+  el CTA principal («Empezar por los fundamentos»).
+- El menú deja de ofrecer «Canal de YouTube»: apuntaba a `/videos`, no a un canal.
+- `.env.example` y el README apuntan a `bryan1605/crux` como repositorio de destino.
+- Fuera las imágenes externas por defecto del domo (`DEFAULT_IMAGES`): eran 6 URLs
+  ajenas, muertas, que solo aparecían si faltaba el contenido.
+
+### Corregido
+
+- **La barra fija inferior tapaba el final de cada página.** Nunca publicaba su
+  altura (`--marquee-h` se quedaba en `0px` porque el efecto no se reevaluaba al
+  montarse la barra) y el `body` no reservaba espacio. Ahora la publica y ninguna
+  página queda debajo; en la portada, además, el buscador deja de quedar oculto.
+- **Cinco enlaces externos caídos** en tres estudios de apologética: Wikipedia
+  «Atalaya (editorial)» → «Watch Tower Bible and Tract Society of Pennsylvania»,
+  «Orden de exterminio de Misuri» → «Orden de exterminio mormón», el ensayo del Bill
+  of Rights Institute (reescrito como «The Mormon Trail»), «Finished-work movement»
+  → «Finished Work Pentecostalism», y el dominio muerto `opinion.com.ve`, que ahora
+  se cita sin enlace y con la razón.
+- La vista de **rejilla de la NTV** no anclaba sus versículos (`#v22`): las secciones
+  del raíl llevaban a un ancla sin destino. Cada fila lleva ya su `id`.
+- **Las flechas de pasar hoja del lector podían cambiar de modo**: al abrir una parte
+  desde el índice el navegador conservaba el desplazamiento de la lista (recortado al
+  final de la página) y el libro aparecía a medio scroll, con las flechas justo debajo
+  de la barra fija, que se comía el clic y activaba el botón «Scroll». El lector en
+  modo libro abre ya por arriba.
+- En el lector, los botones de la barra se quedaban en el icono (22 × 13 px) cuando
+  se ocultaba su texto en pantallas estrechas: ahora conservan un mínimo de 34 px.
+
 ## [0.8.0] — 2026-10-19
 
 Cada página del sitio se publica con su propio HTML: Google y las redes sociales

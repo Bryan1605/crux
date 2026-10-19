@@ -24,7 +24,8 @@
   pointer-events: none;
 }
 
-.hero__copy .btn {
+.hero__copy .btn,
+.hero__search {
   pointer-events: auto;
 }
 
@@ -119,8 +120,22 @@
   padding-bottom: var(--sp-5);
 }
 
-.banner__row .btn {
+.banner__link {
   pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(10, 10, 11, 0.72);
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease;
+}
+
+.banner__link:hover {
+  border-color: var(--border-strong);
 }
 
 .banner__kicker {
@@ -143,15 +158,188 @@
   padding: 0.45rem 0.95rem;
 }
 
-/* --- puentes -------------------------------------------------------------- */
+/* --- buscador del héroe ---------------------------------------------------- */
 
-.bridges__head {
+.hero__search {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+  max-width: 470px;
+}
+
+.hero__search input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(10, 10, 11, 0.72);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+}
+
+.hero__search input::placeholder {
+  color: var(--faint);
+}
+
+.hero__search input:focus-visible {
+  outline: 2px solid var(--border-strong);
+  outline-offset: 2px;
+}
+
+.hero__search .btn {
+  flex: none;
+  background: rgba(10, 10, 11, 0.72);
+}
+
+/* --- cabecera de sección del home ----------------------------------------- */
+
+.home-head {
   display: flex;
   flex-direction: column;
   gap: var(--sp-3);
-  margin-bottom: var(--sp-6);
+  margin-bottom: var(--sp-7);
+  max-width: 58ch;
 }
 
-.bridge-card {
-  min-height: 240px;
+/* --- cifras --------------------------------------------------------------- */
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--sp-5) var(--sp-4);
+  margin: 0;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.4rem;
+}
+
+.stats__value {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 4.4vw, 3rem);
+  line-height: 1;
+  color: var(--text);
+}
+
+.stats__label {
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+/* --- categorías ----------------------------------------------------------- */
+
+.cats__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: var(--sp-4);
+}
+
+.cat-card {
+  min-height: 168px;
+}
+
+/* --- personajes ----------------------------------------------------------- */
+
+.chars__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: var(--sp-4);
+}
+
+.char-card__img {
+  margin: calc(-1 * var(--sp-5)) calc(-1 * var(--sp-5)) 0;
+  overflow: hidden;
+  border-radius: var(--r-md) var(--r-md) 0 0;
+  aspect-ratio: 4 / 5;
+}
+
+.char-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.char-card:hover .char-card__img img {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .char-card__img img {
+    transition: none;
+  }
+
+  .char-card:hover .char-card__img img {
+    transform: none;
+  }
+}
+
+/* --- cierre --------------------------------------------------------------- */
+
+.closing__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  text-align: center;
+}
+
+.closing__inner h2 {
+  max-width: 26ch;
+}
+
+.closing__inner .lead {
+  max-width: 46ch;
+}
+
+.closing__inner .eyebrow {
+  justify-content: center;
+}
+
+.closing__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-3);
+  font-size: 0.9rem;
+  color: var(--faint);
+}
+
+.closing__links a {
+  /* Área táctil de 44 px con la línea pegada al texto: el subrayado vive en el
+     `span` interior, así el enlace puede crecer sin separarlo de la palabra. */
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.closing__links a > span {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+}
+
+.closing__links a:hover {
+  color: var(--text);
+}
+
+.closing__links a:hover > span {
+  border-bottom-color: var(--border-strong);
+}
+
+@media (max-width: 620px) {
+  .hero__search input {
+    padding: 0.62rem 0.9rem;
+  }
+
+  .hero__search .btn {
+    padding: 0.62rem 1rem;
+  }
 }

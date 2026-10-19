@@ -92,7 +92,7 @@ El Espíritu Santo, lejos de ser una fuerza impersonal, es Persona que enseña y
 ## 9. Fuentes
 
 - Wikipedia, "Charles Taze Russell" — https://es.wikipedia.org/wiki/Charles_Taze_Russell
-- Wikipedia, "Watch Tower Bible and Tract Society" — https://es.wikipedia.org/wiki/Atalaya_(editorial)
+- Wikipedia, "Watch Tower Bible and Tract Society" — https://es.wikipedia.org/wiki/Watch_Tower_Bible_and_Tract_Society_of_Pennsylvania
 - Sitio oficial jw.org — https://www.jw.org (para citar su propia doctrina)
 - Wikipedia, "Testigos de Jehová" (sección profecías no cumplidas) — https://es.wikipedia.org/wiki/Testigos_de_Jehová
-- Sitio "Opinión" (críticas a la Watchtower) — https://www.opinion.com.ve
+- Sitio "Opinión" (críticas a la Watchtower) — sitio ya no disponible: opinion.com.ve dejó de resolver en 2026

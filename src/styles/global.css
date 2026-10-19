@@ -450,6 +450,13 @@ p {
   color: var(--muted);
 }
 
+.site-footer__links a {
+  display: inline-flex;
+  align-items: center;
+  /* Área táctil cómoda en móvil sin separar visualmente los enlaces. */
+  min-height: 2.5rem;
+}
+
 .site-footer__links a:hover {
   color: var(--text);
 }

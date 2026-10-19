@@ -161,7 +161,7 @@ export function siteRoutes() {
     {
       path: '/buscar',
       title: `${brand} — Buscar`,
-      description: 'Busca a la vez en los estudios, los personajes, los concilios y los videos del sitio.',
+      description: 'Busca a la vez en los estudios, los personajes, los concilios y los vídeos del sitio.',
       type: 'website',
       indexable: false
     }

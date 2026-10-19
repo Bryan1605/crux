@@ -367,6 +367,17 @@
   margin-bottom: var(--sp-5);
 }
 
+.breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  /* Área táctil de 38 px de alto sin cambiar el ritmo visual; el margen la
+     compensa y el relleno horizontal es corto para que dos migas contiguas no
+     se solapen (el `gap` del contenedor las separa igual). */
+  padding: 0.5rem 0.25rem;
+  margin: -0.5rem -0.25rem;
+  border-radius: var(--r-sm);
+}
+
 .breadcrumb a:hover {
   color: var(--text);
 }

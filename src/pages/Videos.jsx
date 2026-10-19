@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { VIDEOS } from '../data/videos';
+import { STUDIES } from '../data/estudios';
+import { NT_BOOKS } from '../data/exegesis';
 import { useSite, useSeo } from '../lib/site';
 
 import './Videos.css';
@@ -48,10 +51,24 @@ export default function Videos() {
             <div className="empty-state">
               <h2>Todavía no hay videos publicados</h2>
               <p>
-                Añade el primero en <code>content/videos.json</code>
-                {import.meta.env.DEV && <> (o desde el panel en desarrollo: <code>/admin</code>)</>} con su
-                id de YouTube y aparecerá aquí.
+                Las clases en video llegarán aquí. Mientras tanto, el estudio y la Biblia están
+                abiertos: {STUDIES.length} fichas y {NT_BOOKS.length} libros del Nuevo Testamento
+                esperando.
               </p>
+              <p className="empty-state__actions">
+                <Link className="btn btn--primary" to="/estudio">
+                  Explorar el estudio
+                </Link>
+                <Link className="btn btn--ghost" to="/biblia">
+                  Abrir la Biblia
+                </Link>
+              </p>
+              {import.meta.env.DEV && (
+                <p className="muted">
+                  En desarrollo: añade el primero en <code>content/videos.json</code> (o desde{' '}
+                  <code>/admin</code>) con su id de YouTube.
+                </p>
+              )}
             </div>
           ) : (
             <div className="grid grid--3">
