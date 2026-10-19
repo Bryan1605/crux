@@ -242,7 +242,7 @@
   justify-content: space-between;
   gap: 1rem;
   height: 24px;
-  font-size: 0.62rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -255,6 +255,11 @@
 .book-page__head > span {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* La parte no se encoge: si falta sitio, cede la etiqueta de la sección. */
+.book-page__head > span:first-child {
+  flex: 0 0 auto;
 }
 
 .book-page__body {
@@ -284,7 +289,7 @@
   align-items: flex-end;
   justify-content: center;
   color: var(--ink-soft);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
   font-variant-numeric: tabular-nums;
 }
@@ -423,6 +428,15 @@
 
 .book-block--h4 + * {
   margin-top: 0.4em;
+}
+
+/* En una columna estrecha la justificación abre calles entre palabras:
+   el texto se compone a bandera. */
+@media (max-width: 640px) {
+  .book-page__body {
+    text-align: start;
+    text-justify: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

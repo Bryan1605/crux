@@ -3,6 +3,47 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.9.1] — 2026-10-19
+
+Repaso de la interfaz en el móvil: nada estaba roto, pero había detalles que
+estorbaban al leer y al tocar. Esta versión los corrige sin cambiar contenido,
+rutas ni despliegue.
+
+### Corregido
+
+- **Enlace con la ruta en crudo** (`src/pages/Concilios.jsx`): la entradilla decía
+  «…desde el carrete de **/estudio**»; ahora enlaza con la etiqueta «índice de
+  estudios».
+- **Texto justificado en el lector** (`src/components/Book/Book.css`): por debajo
+  de 640 px la página se compone a bandera (`text-align: start`) para no abrir
+  calles entre palabras en una columna estrecha.
+- **Cabecera corrida del folio**: al subirla a 12 px la parte se cortaba en
+  «PART…»; ahora la parte no se encoge y es la etiqueta de sección la que cede.
+- **Carruseles que se movían solos** (`SkewedCarousel`): el avance automático se
+  detiene mientras se toca, se pasa el ratón o se enfoca el carrusel y se reanuda
+  seis segundos después; además hay un **botón de pausa** de 44×44 con
+  `aria-pressed` (WCAG 2.2.2) que ya no se solapa con los puntos.
+- **Menú móvil**: las filas pasan de 25 a 40 px de alto, el panel se limita a la
+  altura de la pantalla y gana desplazamiento interno en móviles cortos
+  (comprobado en 360×640).
+
+### Cambiado
+
+- **Metadatos legibles en el móvil**: *eyebrows* de los CTA, pistas del aparato
+  crítico, pies de foto del *scrapbook*, cabecera y folio del libro pasan a 12 px
+  (antes 9,9–11,2 px).
+- **Velo del domo** en `/biblia` (`Biblia.css`): un degradado sobre el muro de
+  portadas da contraste al título y a la entradilla.
+
+### Comprobado
+
+- `npm run qa` completo en verde: vistas, línea de tiempo, concilios, buscador,
+  biblia, exégesis, audio, imágenes, enlaces y accesibilidad (38 vistas, sin
+  violaciones y sin controles por debajo de 24 px).
+- Sondas móviles a 360×740, 390×844, 414×896 y 844×390: cero desbordamiento,
+  cero errores de consola; carrusel (pausa/reanudación), lector (alineación y
+  folio), menú (incluido 360×640) y Concilios verificados con toques reales.
+
 ## [0.9.0] — 2026-10-19
 
 La portada deja de ser una tarjeta de presentación y pasa a ser el mapa del sitio:

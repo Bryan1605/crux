@@ -32,6 +32,11 @@ export default function SkewedCarousel({
   const n = items.length;
   const [active, setActive] = useState(() => clamp(initialIndex, 0, Math.max(0, n - 1)));
   const [dragging, setDragging] = useState(false);
+  const [manualPaused, setManualPaused] = useState(false);
+  const [interacting, setInteracting] = useState(false);
+  const [hovering, setHovering] = useState(false);
+  const idleRef = useRef(null);
+  const running = autoplay && !manualPaused && !interacting && !hovering;
   const dragRef = useRef({ x: 0, start: 0, active: false, moved: 0, suppress: false });
   const rootRef = useRef(null);
 
@@ -53,13 +58,33 @@ export default function SkewedCarousel({
     onIndexChange?.(active);
   }, [active, onIndexChange]);
 
+  // El avance automático se detiene mientras alguien usa el carrusel y se
+  // reanuda seis segundos después del último toque.
+  const marcarInteraccion = () => {
+    if (!autoplay) return;
+    setInteracting(true);
+    clearTimeout(idleRef.current);
+    idleRef.current = setTimeout(() => setInteracting(false), 6000);
+  };
+
+  const alternarPausa = () => {
+    const siguiente = !manualPaused;
+    setManualPaused(siguiente);
+    if (!siguiente) {
+      clearTimeout(idleRef.current);
+      setInteracting(false);
+    }
+  };
+
+  useEffect(() => () => clearTimeout(idleRef.current), []);
+
   useEffect(() => {
-    if (!autoplay || n < 2) return undefined;
+    if (!autoplay || n < 2 || !running) return undefined;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) return undefined;
     const id = setInterval(() => setActive(a => (loop ? (a + 1) % n : Math.min(n - 1, a + 1))), autoplayDelay);
     return () => clearInterval(id);
-  }, [autoplay, autoplayDelay, loop, n]);
+  }, [autoplay, running, autoplayDelay, loop, n]);
 
   useEffect(() => {
     if (!enableKeyboard) return undefined;
@@ -151,10 +176,17 @@ export default function SkewedCarousel({
       tabIndex={enableKeyboard ? 0 : undefined}
       role={enableKeyboard ? 'region' : undefined}
       aria-label="Carrusel de tarjetas"
-      onPointerDown={onPointerDown}
+      onPointerDown={e => {
+        marcarInteraccion();
+        onPointerDown(e);
+      }}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
       onPointerCancel={onPointerUp}
+      onMouseEnter={() => {
+        if (typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches) setHovering(true);
+      }}
+      onMouseLeave={() => setHovering(false)}
     >
       <div className="skewed-carousel__viewport" style={{ height: `${slideH}px` }}>
         {items.map((item, i) => {
@@ -238,6 +270,28 @@ export default function SkewedCarousel({
             />
           ))}
         </div>
+      )}
+
+      {autoplay && n > 1 && (
+        <button
+          type="button"
+          className="skewed-carousel__pause"
+          aria-pressed={manualPaused}
+          aria-label="Pausar el avance automático"
+          title={manualPaused ? 'Reanudar el avance automático' : 'Pausar el avance automático'}
+          onClick={alternarPausa}
+        >
+          {manualPaused ? (
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M4.5 2.8 13 8l-8.5 5.2z" fill="currentColor" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <rect x="3.5" y="2.5" width="3.5" height="11" rx="1" fill="currentColor" />
+              <rect x="9" y="2.5" width="3.5" height="11" rx="1" fill="currentColor" />
+            </svg>
+          )}
+        </button>
       )}
     </div>
   );

@@ -48,6 +48,28 @@
   background: var(--bg, #0a0a0b);
 }
 
+/* Velo sobre el muro de portadas: el título y la entradilla se leen
+   sin pelearse con las imágenes. */
+.biblia__dome::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bg, #0a0a0b) 60%, transparent) 0%,
+      transparent 16%
+    ),
+    linear-gradient(
+      0deg,
+      var(--bg, #0a0a0b) 0%,
+      color-mix(in srgb, var(--bg, #0a0a0b) 84%, transparent) 30%,
+      transparent 64%
+    );
+}
+
 .biblia__dome-head {
   position: absolute;
   left: clamp(1.25rem, 5vw, 4rem);

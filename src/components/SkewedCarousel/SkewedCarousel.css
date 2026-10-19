@@ -130,6 +130,50 @@
   transform: scale(1.35);
 }
 
+.skewed-carousel__pause {
+  position: absolute;
+  right: max(8px, 4%);
+  bottom: 2.75rem;
+  z-index: 300;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.16));
+  background: var(--glass, rgba(17, 17, 19, 0.8));
+  color: var(--text, #fff);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.skewed-carousel__pause:hover {
+  background: var(--text, #fff);
+  color: var(--ink, #0a0a0b);
+}
+
+.skewed-carousel__pause[aria-pressed='true'] {
+  border-color: #ca8700;
+  color: #e8c37a;
+}
+
+.skewed-carousel__pause svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .skewed-carousel__pause {
+    right: 8px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .skewed-carousel__slide,
   .skewed-carousel__tilt,

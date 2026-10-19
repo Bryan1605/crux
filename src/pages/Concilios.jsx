@@ -34,8 +34,8 @@ export default function Concilios() {
             <p className="eyebrow">Los concilios</p>
             <h2 id="concilios-title">Los concilios</h2>
             <p className="concilios__desc">
-              Mismo orden cronológico que la línea de tiempo del índice: cada concilio enlaza
-              desde el carrete de <Link to="/estudio">/estudio</Link>.
+              Mismo orden cronológico que la línea de tiempo del estudio: cada concilio enlaza
+              desde el carrete del <Link to="/estudio">índice de estudios</Link>.
             </p>
           </div>
 

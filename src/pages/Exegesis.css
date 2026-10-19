@@ -424,7 +424,7 @@
 }
 
 .exg-panel__hint {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0;
   text-transform: none;
   color: var(--muted);

@@ -12,6 +12,8 @@
 .card-nav {
   display: block;
   height: 60px;
+  max-height: calc(100vh - 2.8em);
+  max-height: calc(100dvh - 2.8em);
   padding: 0;
   background-color: white;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
@@ -212,6 +214,8 @@
     padding: 0.5rem;
     bottom: 0;
     justify-content: flex-start;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .nav-card {
@@ -227,5 +231,7 @@
 
   .nav-card-link {
     font-size: 15px;
+    min-height: 40px;
+    padding: 0.25rem 0;
   }
 }
