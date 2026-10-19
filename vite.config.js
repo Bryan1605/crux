@@ -5,12 +5,15 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import contentApi from './plugins/content-api.mjs';
+import prerender from './plugins/prerender.mjs';
 import { writeIndexes } from './scripts/content-lib.mjs';
+import { OG_IMAGE, siteRoutes } from './scripts/routes-lib.mjs';
 import { validate } from './scripts/validate-content.mjs';
 import { checkTimelineLabels } from './src/lib/timeline.js';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT = path.join(ROOT, 'content');
+const PUBLIC = path.join(ROOT, 'public');
 const base = process.env.BASE_PATH || '/';
 
 // GitHub Pages no resuelve rutas profundas de una SPA: 404.html debe devolver al
@@ -81,7 +84,6 @@ function contentGuard() {
 
       // Narraciones: el audio y su onda tienen que estar publicados de verdad.
       const nFile = path.join(CONTENT, 'narraciones.json');
-      const PUBLIC = path.join(ROOT, 'public');
       if (fs.existsSync(nFile)) {
         try {
           const { items } = JSON.parse(fs.readFileSync(nFile, 'utf8'));
@@ -97,6 +99,12 @@ function contentGuard() {
         } catch (e) {
           errors.push(`narraciones: ${e.message}`);
         }
+      }
+
+      // Imagen de previsualización: el HTML prerenderizado la declara en cada
+      // ruta, así que tiene que existir de verdad (se genera con `npm run og`).
+      if (!fs.existsSync(path.join(PUBLIC, OG_IMAGE))) {
+        errors.push(`seo: falta public${OG_IMAGE} (genera la imagen social con: npm run og)`);
       }
 
       // personajes
@@ -153,24 +161,23 @@ function contentGuard() {
 }
 
 /**
- * Emite sitemap.xml y robots.txt a partir de los estudios y las rutas fijas.
+ * Emite sitemap.xml y robots.txt a partir de las rutas públicas reales
+ * (`scripts/routes-lib.mjs`): solo entran las que se indexan y responden 200 con
+ * su propio HTML, con `lastmod` cuando la fecha es conocida.
  */
 function seoFiles(env) {
   return {
     name: 'crux-seo-files',
     apply: 'build',
     generateBundle() {
-      const siteUrl = (env.SITE_URL || 'https://bryan1605.github.io/crux').replace(/\/$/, '');
-      const routes = new Set(['/', '/estudio', '/biblia', '/videos', '/concilios', '/temas', '/buscar']);
-      try {
-        const index = JSON.parse(fs.readFileSync(path.join(CONTENT, 'estudios.json'), 'utf8'));
-        for (const s of index.studies || []) routes.add(`/estudio/${s.slug}`);
-      } catch {
-        // sin índice: solo rutas fijas
-      }
-
-      const urls = [...routes]
-        .map(r => `  <url><loc>${siteUrl}${r === '/' ? '/' : r}</loc></url>`)
+      const siteUrl = siteUrlFrom(env);
+      const urls = siteRoutes()
+        .filter(r => r.indexable)
+        .map(r => {
+          const loc = `${siteUrl}${r.path === '/' ? '/' : `${r.path}/`}`;
+          const lastmod = r.lastmod ? `\n    <lastmod>${r.lastmod}</lastmod>` : '';
+          return `  <url>\n    <loc>${loc}</loc>${lastmod}\n  </url>`;
+        })
         .join('\n');
       const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 
@@ -178,10 +185,15 @@ function seoFiles(env) {
       this.emitFile({
         type: 'asset',
         fileName: 'robots.txt',
-        source: `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`
+        source: `User-agent: *\nAllow: /\nDisallow: /admin\n\nSitemap: ${siteUrl}/sitemap.xml\n`
       });
     }
   };
+}
+
+/** URL pública del sitio, sin barra final. */
+function siteUrlFrom(env) {
+  return (env.SITE_URL || 'https://bryan1605.github.io/crux').replace(/\/$/, '');
 }
 
 export default defineConfig(({ mode }) => {
@@ -189,7 +201,14 @@ export default defineConfig(({ mode }) => {
 
   return {
     base,
-    plugins: [react(), contentApi(env), contentGuard(), pagesFallback(), seoFiles(env)],
+    plugins: [
+      react(),
+      contentApi(env),
+      contentGuard(),
+      pagesFallback(),
+      prerender({ origin: siteUrlFrom(env) }),
+      seoFiles(env)
+    ],
     assetsInclude: ['**/*.glb', '**/*.stl'],
     build: {
       chunkSizeWarningLimit: 1200

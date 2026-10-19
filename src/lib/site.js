@@ -232,14 +232,25 @@ export function useSeo({ title, description, ogImage }) {
       }
       el.content = content;
     };
+    // Los rastreadores necesitan URL absolutas: una ruta «/img/...» no les sirve.
+    const absolute = value => {
+      try {
+        return new URL(value, window.location.href).href;
+      } catch {
+        return value;
+      }
+    };
+    const image = absolute(img || site.seo.ogImage);
+
     setOG('og:title', t);
     setOG('og:description', d);
-    setOG('og:image', img || site.seo.ogImage);
+    setOG('og:url', window.location.href);
+    setOG('og:image', image);
     setOG('og:type', 'website');
     setOG('twitter:card', 'summary_large_image');
     setOG('twitter:title', t);
     setOG('twitter:description', d);
-    setOG('twitter:image', img || site.seo.ogImage);
+    setOG('twitter:image', image);
   }, [site, title, description, ogImage]);
 }
 

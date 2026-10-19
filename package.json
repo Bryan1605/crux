@@ -1,7 +1,7 @@
 {
   "name": "web-crux",
   "private": true,
-  "version": "0.7.1",
+  "version": "0.8.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +15,7 @@
     "qa:concilios": "node scripts/qa-concilios.mjs",
     "qa:buscar": "node scripts/qa-buscar.mjs",
     "qa:imagenes": "node scripts/qa-imagenes.mjs",
+    "og": "node scripts/build-og-image.mjs",
     "qa:a11y": "node scripts/qa-a11y.mjs",
     "qa:prod": "node scripts/check-prod.mjs",
     "exegesis:ntv": "node scripts/build-ntv.mjs",

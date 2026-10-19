@@ -3,6 +3,45 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [0.8.0] — 2026-10-19
+
+Cada página del sitio se publica con su propio HTML: Google y las redes sociales
+ya ven lo que ven las personas.
+
+**Antes**: GitHub Pages servía `404.html` para toda ruta profunda de la SPA, con
+código **404** y `noindex`. Google solo podía indexar la portada y, al compartir
+cualquier enlace, WhatsApp/X/Facebook (que no ejecutan JavaScript) no encontraban
+ni título ni imagen: el `og:image` se escribía desde el navegador y era una ruta
+relativa a un WebP.
+
+### Añadido
+
+- **Prerender por ruta** (`plugins/prerender.mjs`): el build escribe
+  `dist/<ruta>/index.html` para las **214 rutas públicas** (9 de sección +
+  188 estudios + 17 fichas de personaje) con `<title>`, `description`,
+  `canonical`, `robots`, `og:*`, `twitter:*` y JSON-LD de esa ruta ya en el HTML.
+  El `404.html` sigue cubriendo las rutas que no existen.
+- **`scripts/routes-lib.mjs`**: fuente única de las rutas y su SEO (títulos y
+  descripciones idénticos a los que usa `useSeo()`), compartida por el prerender,
+  el sitemap y la QA.
+- **Imagen al compartir** `public/img/og/crux.jpg` (1200×630, JPEG) generada con
+  `npm run og` desde el banner y el logotipo. JPEG a propósito: las tarjetas de
+  WhatsApp, Facebook, X y LinkedIn no pintan WebP de forma fiable.
+- **`qa:prod`** comprueba ahora dos cosas nuevas: que las rutas reales se sirven
+  con **200** (no por `404.html`) y que el HTML de las 214 rutas lleva su título,
+  su `canonical` y su `og:image` **sin ejecutar JavaScript**. También valida el
+  sitemap, el `robots.txt` y que la imagen social se publica como `image/jpeg`.
+
+### Cambiado
+
+- **`sitemap.xml`**: solo rutas indexables, con la forma canónica `/ruta/`, con
+  `lastmod` en los estudios y sin las páginas de servicio (`/buscar`, y `/videos`
+  mientras la parrilla esté vacía). Pasa de 197 a **212 URLs** que responden 200.
+- **`robots.txt`**: añade `Disallow: /admin`.
+- **`useSeo()`** escribe `og:image` y `og:url` con URL absoluta, y `og:image`
+  apunta al JPEG social.
+- El build falla con un mensaje claro si falta la imagen social (`npm run og`).
+
 ## [0.7.1] — 2026-10-18
 
 La Carta a los Romanos 1 se suma a las narraciones del raíl.
