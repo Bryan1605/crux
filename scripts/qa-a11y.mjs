@@ -48,6 +48,8 @@ const ROUTES = [
   { label: 'biblia NTV (lector)', path: '/biblia/ntv?libro=juan&cap=3' },
   { label: 'biblia NTV (narración)', path: '/biblia/ntv?libro=judas&cap=1' },
   { label: 'exégesis (comparada)', path: '/exegesis?libro=juan&cap=3&vv=16-21' },
+  { label: 'exégesis (diccionario)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=G3056' },
+  { label: 'exégesis (diccionario, lista)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=' },
   { label: 'videos', path: '/videos' },
   { label: 'concilios', path: '/concilios' },
   { label: 'concilios (ancla)', path: '/concilios#nicea' },
@@ -62,6 +64,7 @@ const STATES = [
   { label: 'portada (menú abierto)', path: '/', action: 'nav-desktop' },
   { label: 'temas (menú móvil abierto)', path: '/temas', mobile: true, action: 'nav-mobile' },
   { label: 'exégesis (móvil)', path: '/exegesis?libro=juan&cap=3&vv=16-21', mobile: true },
+  { label: 'exégesis (ficha de palabra)', path: '/exegesis?libro=juan&cap=3&vv=16-21&v=16', action: 'word' },
   { label: 'biblia NTV (móvil)', path: '/biblia/ntv?libro=juan&cap=3', mobile: true }
 ];
 
@@ -195,6 +198,10 @@ try {
     await wait(2400);
     if (state.action === 'nav-desktop') await page.evaluate(() => document.querySelector('.hamburger-menu')?.click());
     if (state.action === 'nav-mobile') await page.evaluate(() => document.querySelector('.hamburger-menu')?.click());
+    if (state.action === 'word') {
+      await page.evaluate(() => document.querySelector('.exg-row[data-v="16"] .exg-word')?.click());
+      await page.waitForSelector('.vpop', { timeout: 4000 }).catch(() => {});
+    }
     await wait(1000);
     await audit(page, state.label, { mobile: state.mobile });
     await page.close();

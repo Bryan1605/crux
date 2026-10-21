@@ -9,6 +9,9 @@ qa/
 # Cache del rastreo del Codex Sinaiticus (se regenera con scripts/fetch-codex.mjs)
 src/assets/texts/.cache-codex/
 
+# Cache de las fuentes del diccionario (se regenera con scripts/fetch-lexico.mjs)
+src/assets/texts/.cache-lexico/
+
 # Entorno
 .env
 .env.*

@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 import { parseNote, witnessLabel } from '../data/exegesis';
+import { describeMorph, posLabel, splitOverline } from '../lib/greek';
 
 import './VersePopover.css';
 
@@ -137,6 +138,68 @@ export function NoteBody({ note, reference }) {
         <span className={`note-badge note-badge--${parsed.kind}`}>{parsed.label}</span>{' '}
         {parsed.text}
       </p>
+    </div>
+  );
+}
+
+/**
+ * Ficha léxica de una palabra del Codex. `analysis` es la entrada del mapa de
+ * lemas (`[lema, Strong, parse, ns, categoría]`); `entry` es la entrada del
+ * diccionario (o null si el lema aún no está entre los 250 publicados).
+ */
+export function LexiconBody({ analysis, entry, token, reference, onOpenDictionary }) {
+  const [lemma, strong, parse, ns, pos] = analysis || [];
+  const morph = describeMorph(pos, parse);
+  const isNs = Boolean(ns);
+  const kind = morph || entry?.posLabel || posLabel(pos);
+  const surface = splitOverline(token?.v || token?.plain || '');
+
+  return (
+    <div className="vpop__lex">
+      <p className="vpop__ref">{reference}</p>
+      <p className="vpop__lex-word" aria-label={`Palabra: ${token?.plain || lemma || ''}`}>
+        {surface.map((part, i) =>
+          part.overline ? (
+            <i key={i} className="vpop__overline">
+              {part.text}
+            </i>
+          ) : (
+            <span key={i}>{part.text}</span>
+          )
+        )}
+      </p>
+
+      {analysis ? (
+        <>
+          <p className="vpop__lex-head">
+            <span className="vpop__lex-lemma">{lemma}</span>
+            {entry?.translit ? <span className="vpop__lex-translit">{entry.translit}</span> : null}
+          </p>
+          {kind ? <p className="vpop__lex-pos">{kind}</p> : null}
+          {entry ? (
+            <p className="vpop__lex-gloss">{entry.gloss}</p>
+          ) : (
+            <p className="vpop__lex-missing">
+              Este lema todavía no está entre los 250 del diccionario.
+            </p>
+          )}
+          {entry?.note ? <p className="vpop__lex-note">{entry.note}</p> : null}
+        </>
+      ) : (
+        <p className="vpop__lex-missing">
+          No se pudo alinear esta palabra con MorphGNT. El texto del códice se conserva tal cual.
+        </p>
+      )}
+
+      <div className="vpop__lex-foot">
+        {strong ? <span className="vpop__lex-strong">Strong {strong}</span> : null}
+        {isNs ? <span className="vpop__lex-ns">nomen sacrum</span> : null}
+        {entry ? (
+          <button type="button" className="vpop__lex-link" onClick={onOpenDictionary}>
+            Abrir en el diccionario <span aria-hidden="true">→</span>
+          </button>
+        ) : null}
+      </div>
     </div>
   );
 }

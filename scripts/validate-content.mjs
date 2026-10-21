@@ -353,6 +353,27 @@ export function validatePersonaje(obj, slug) {
   return true;
 }
 
+// --- léxico griego (fuente editable) ---
+export function validateLexico(obj) {
+  required(obj, 'version', 'number', 'lexico');
+  if (obj.version !== 1) throw new Error(`lexico: versión desconocida (${obj.version})`);
+
+  const glosas = required(obj, 'glosas', 'object', 'lexico');
+  const keys = Object.keys(glosas);
+  if (keys.length !== 250) throw new Error(`lexico.glosas: se esperaban 250 entradas y hay ${keys.length}`);
+  for (const [strong, gloss] of Object.entries(glosas)) {
+    if (!/^G\d{4}$/.test(strong)) throw new Error(`lexico.glosas: Strong inválido "${strong}"`);
+    if (!isString(gloss) || !gloss.trim()) throw new Error(`lexico.glosas.${strong}: glosa vacía`);
+  }
+
+  const notas = optional(obj, 'notas', 'object', 'lexico', {});
+  for (const [strong, note] of Object.entries(notas)) {
+    if (!(strong in glosas)) throw new Error(`lexico.notas.${strong}: no existe esa glosa`);
+    if (!isString(note) || !note.trim()) throw new Error(`lexico.notas.${strong}: nota vacía`);
+  }
+  return true;
+}
+
 // --- mapa para content-api ---
 export const VALIDATORS = {
   site: validateSite,
@@ -365,7 +386,8 @@ export const VALIDATORS = {
   personaje: validatePersonaje,
   timeline: validateTimeline,
   concilios: validateConcilios,
-  narraciones: validateNarraciones
+  narraciones: validateNarraciones,
+  lexico: validateLexico
 };
 
 export function validate(name, data, slug, ctx) {

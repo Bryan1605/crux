@@ -1,7 +1,7 @@
 {
   "name": "web-crux",
   "private": true,
-  "version": "0.9.1",
+  "version": "0.10.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -23,10 +23,13 @@
     "exegesis:codex": "node scripts/fetch-codex.mjs",
     "exegesis:index": "node scripts/build-exegesis-index.mjs",
     "exegesis:search": "node scripts/build-exegesis-search.mjs",
-    "exegesis": "npm run exegesis:ntv && npm run exegesis:codex && npm run exegesis:index && npm run exegesis:search",
+    "exegesis:lemas": "node scripts/build-lemas.mjs",
+    "exegesis:lexico": "node scripts/build-lexico.mjs",
+    "exegesis": "npm run exegesis:ntv && npm run exegesis:codex && npm run exegesis:index && npm run exegesis:search && npm run exegesis:lemas && npm run exegesis:lexico",
     "qa:exegesis": "node scripts/qa-exegesis.mjs --browser",
+    "qa:lexico": "node scripts/qa-lexico.mjs",
     "qa:audio": "node scripts/qa-audio.mjs --browser",
-    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:exegesis && npm run qa:audio && npm run qa:imagenes && npm run qa:enlaces && npm run qa:a11y"
+    "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:exegesis && npm run qa:lexico && npm run qa:audio && npm run qa:imagenes && npm run qa:enlaces && npm run qa:a11y"
   },
   "dependencies": {
     "@hugeicons/core-free-icons": "^4.3.5",

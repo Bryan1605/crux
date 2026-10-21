@@ -3,11 +3,13 @@ import { Link, useSearchParams } from 'react-router-dom';
 
 import BibleSearch from '../components/BibleSearch';
 import BibleCta from '../components/BibleCta';
-import VersePopover, { ApparatusBody, NoteBody } from '../components/VersePopover';
+import LexiconPanel from '../components/LexiconPanel';
+import VersePopover, { ApparatusBody, LexiconBody, NoteBody } from '../components/VersePopover';
 import { WITNESS_ATTRIBUTION, WITNESS_SOURCE, witnessLabel, witnessLegend } from '../data/exegesis';
 import { buildRecords } from '../lib/bibleSearch';
-import { loadExegesisIndex, loadWitnessBook } from '../lib/exegesisTexts';
+import { loadExegesisIndex, loadLemmas, loadLexicon, loadWitnessBook } from '../lib/exegesisTexts';
 import { hasSelection } from '../lib/selection';
+import { splitOverline, tokenizeGreek } from '../lib/greek';
 import { useSeo } from '../lib/site';
 
 import './Biblia.css';
@@ -87,50 +89,11 @@ function LayoutGlyph({ two }) {
 /* Troceado del griego y de la NTV                                            */
 /* -------------------------------------------------------------------------- */
 
-const NS_OPEN = '\u2039';
-const NS_CLOSE = '\u203A';
-const SIGIL = '\u00a7';
-
-/**
- * Convierte el griego del Codex en nodos:
- *   { k:'t' } texto · { k:'ns' } nomina sacra · { k:'sigil' } ancla del aparato
- *   { k:'mark' } marca de la transcripción (no es una letra)
- */
-function tokenizeGreek(text) {
-  const out = [];
-  let buf = '';
-  let i = 0;
-  const flush = () => {
-    if (buf) out.push({ k: 't', v: buf });
-    buf = '';
-  };
-  while (i < text.length) {
-    const ch = text[i];
-    if (ch === NS_OPEN) {
-      const end = text.indexOf(NS_CLOSE, i + 1);
-      const value = text.slice(i + 1, end < 0 ? text.length : end);
-      flush();
-      out.push({ k: 'ns', v: value });
-      i = end < 0 ? text.length : end + 1;
-    } else if (ch === SIGIL) {
-      let j = i + 1;
-      while (j < text.length && text[j] >= '0' && text[j] <= '9') j += 1;
-      flush();
-      out.push({ k: 'sigil', v: text.slice(i + 1, j) });
-      i = j;
-    } else if (ch === '>') {
-      // El proyecto marca así un punto de la transcripción: no es una letra.
-      flush();
-      out.push({ k: 'mark', v: ch });
-      i += 1;
-    } else {
-      buf += ch;
-      i += 1;
-    }
-  }
-  flush();
-  return out;
-}
+/** Índices (en el aparato) de las anclas que lleva un versículo griego. */
+const anchorIndexes = grc =>
+  tokenizeGreek(grc)
+    .filter(t => t.k === 'sigil')
+    .map(t => Number(t.v));
 
 /** Parte el texto de la NTV en texto y marcas de nota `[x]`. */
 function tokenizeNtv(text) {
@@ -147,26 +110,48 @@ function tokenizeNtv(text) {
   return out;
 }
 
-/** Índices (en el aparato) de las anclas que lleva un versículo griego. */
-const anchorIndexes = grc =>
-  tokenizeGreek(grc)
-    .filter(t => t.k === 'sigil')
-    .map(t => Number(t.v));
-
 /* -------------------------------------------------------------------------- */
 /* Celdas de la rejilla                                                       */
 /* -------------------------------------------------------------------------- */
 
-function GreekText({ verse, onAnchor }) {
-  const tokens = useMemo(() => tokenizeGreek(verse.grc), [verse.grc]);
+function GreekText({ verse, onAnchor, onWord, active }) {
+  const tokens = useMemo(() => {
+    let wordIndex = -1;
+    return tokenizeGreek(verse.grc).map(token => {
+      if (token.k !== 'w') return token;
+      wordIndex += 1;
+      return { ...token, wi: wordIndex };
+    });
+  }, [verse.grc]);
+
   return (
     <>
       {tokens.map((t, i) => {
-        if (t.k === 'ns') {
+        if (t.k === 'w') {
           return (
-            <i key={i} className="exg-ns">
-              {t.v}
-            </i>
+            <button
+              key={i}
+              type="button"
+              className="exg-word"
+              tabIndex={active ? 0 : -1}
+              title="Ver el análisis de esta palabra"
+              aria-haspopup="dialog"
+              onClick={event => {
+                event.stopPropagation();
+                if (hasSelection()) return;
+                onWord(event.currentTarget, verse, t.wi, t);
+              }}
+            >
+              {splitOverline(t.v).map((part, j) =>
+                part.overline ? (
+                  <i key={j} className="exg-ns">
+                    {part.text}
+                  </i>
+                ) : (
+                  <span key={j}>{part.text}</span>
+                )
+              )}
+            </button>
           );
         }
         if (t.k === 'sigil') {
@@ -235,6 +220,9 @@ export default function Exegesis() {
   const [index, setIndex] = useState({ status: 'loading', data: null });
   const [ntv, setNtv] = useState(null);
   const [codex, setCodex] = useState(null);
+  const [lemas, setLemas] = useState(null);
+  const [lexicon, setLexicon] = useState(null);
+  const [lexiconStatus, setLexiconStatus] = useState('loading');
 
   const [theme, setTheme] = useState(() => {
     const stored = read(KEYS.theme, 'claro');
@@ -251,6 +239,8 @@ export default function Exegesis() {
   const chapterNum = Number(params.get('cap') || 3);
   const rangeParam = params.get('vv') || '';
   const selected = Number(params.get('v')) || null;
+  const dicOpen = params.has('dic');
+  const dicValue = params.get('dic') || '';
 
   /* ------------------------------- índice --------------------------------- */
 
@@ -259,6 +249,23 @@ export default function Exegesis() {
     loadExegesisIndex()
       .then(data => alive && setIndex({ status: 'ok', data }))
       .catch(() => alive && setIndex({ status: 'error', data: null }));
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  /* El diccionario se carga una sola vez: son 250 entradas (~60 KB). */
+  useEffect(() => {
+    let alive = true;
+    loadLexicon()
+      .then(data => {
+        if (!alive) return;
+        setLexicon(data);
+        setLexiconStatus('ok');
+      })
+      .catch(() => {
+        if (alive) setLexiconStatus('error');
+      });
     return () => {
       alive = false;
     };
@@ -288,6 +295,18 @@ export default function Exegesis() {
     loadWitnessBook('codex', bookId)
       .then(data => alive && setCodex(data))
       .catch(() => alive && setCodex(null));
+    return () => {
+      alive = false;
+    };
+  }, [bookId]);
+
+  /* Mapas de lemas del libro abierto: una entrada por palabra del Codex. */
+  useEffect(() => {
+    let alive = true;
+    setLemas(null);
+    loadLemmas(bookId)
+      .then(data => alive && setLemas(data))
+      .catch(() => alive && setLemas(null));
     return () => {
       alive = false;
     };
@@ -514,6 +533,33 @@ export default function Exegesis() {
     [select]
   );
 
+  /** Ficha de una palabra del Codex: lema, morfología y glosa si existe. */
+  const openWord = useCallback(
+    (anchor, verse, wordIndex, token) => {
+      const map = lemas?.verses?.[`${chapterNum}:${verse.n}`];
+      const analysis = map?.[wordIndex] || null;
+      setPop({ kind: 'word', anchor, verse: verse.n, wordIndex, token, analysis });
+      select(verse.n, { keepPop: true });
+    },
+    [lemas, chapterNum, select]
+  );
+
+  const openLexicon = useCallback(
+    (strong = '') => {
+      const q = new URLSearchParams(params);
+      q.set('dic', strong);
+      setPop(null);
+      setParams(q, { replace: true });
+    },
+    [params, setParams]
+  );
+
+  const closeLexicon = useCallback(() => {
+    const q = new URLSearchParams(params);
+    q.delete('dic');
+    setParams(q, { replace: true });
+  }, [params, setParams]);
+
   /* ------------------------------ estados --------------------------------- */
 
   if (index.status === 'error') {
@@ -555,6 +601,10 @@ export default function Exegesis() {
   const showCodex = mode !== 'ntv';
   const showNtv = mode !== 'codex';
   const columns = [showCodex, showNtv].filter(Boolean).length;
+  const wordEntry =
+    pop?.kind === 'word' && lexicon
+      ? lexicon.entries.find(item => item.strong === pop.analysis?.[1]) || null
+      : null;
 
   return (
     <main id="main" className={`exg papel--${theme}`} data-theme={theme}>
@@ -707,6 +757,16 @@ export default function Exegesis() {
             >
               {themeDef.glyph}
             </button>
+            <button
+              type="button"
+              className="rb-btn"
+              onClick={() => openLexicon('')}
+              title="Diccionario griego → español"
+              aria-haspopup="dialog"
+            >
+              <span className="rb-btn__text">Diccionario</span>
+              <span aria-hidden="true">α</span>
+            </button>
             <a
               className="rb-btn"
               href={facsimile}
@@ -829,7 +889,12 @@ export default function Exegesis() {
                           Codex
                         </span>
                         {row.codex ? (
-                          <GreekText verse={row.codex} onAnchor={openApparatus} />
+                          <GreekText
+                            verse={row.codex}
+                            onAnchor={openApparatus}
+                            onWord={openWord}
+                            active={selected === row.n}
+                          />
                         ) : (
                           <span className="exg-gap">El Codex no conserva este versículo.</span>
                         )}
@@ -1001,6 +1066,33 @@ export default function Exegesis() {
             reference={`${bookMeta?.name} ${chapterNum}:${pop.verse} · nota ${pop.id}`}
           />
         </VersePopover>
+      )}
+
+      {pop?.kind === 'word' && (
+        <VersePopover
+          anchor={pop.anchor}
+          label={`Palabra · ${bookMeta?.abbr} ${chapterNum}:${pop.verse}`}
+          onClose={() => setPop(null)}
+        >
+          <LexiconBody
+            analysis={pop.analysis}
+            entry={wordEntry}
+            token={pop.token}
+            reference={`${bookMeta?.name} ${chapterNum}:${pop.verse}`}
+            onOpenDictionary={() => openLexicon(pop.analysis?.[1] || '')}
+          />
+        </VersePopover>
+      )}
+
+      {dicOpen && (
+        <LexiconPanel
+          lexicon={lexicon}
+          loading={lexiconStatus === 'loading'}
+          error={lexiconStatus === 'error'}
+          value={dicValue}
+          onSelect={openLexicon}
+          onClose={closeLexicon}
+        />
       )}
     </main>
   );

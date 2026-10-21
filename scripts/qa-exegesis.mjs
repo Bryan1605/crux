@@ -397,6 +397,76 @@ if (WITH_BROWSER) {
   await page.keyboard.press('Escape');
   await wait(250);
 
+  /* --- diccionario y ficha léxica ------------------------------------------ */
+  await visit(`${BASE}/exegesis?libro=juan&cap=3&v=16`, 'exegesis-juan3-lexico');
+  const wordClicked = await page.evaluate(() => {
+    const word = [...document.querySelectorAll('.exg-row[data-v="16"] .exg-word')].find(el =>
+      el.textContent.includes('ηγαπηϲεν')
+    );
+    if (!word) return false;
+    word.click();
+    return true;
+  });
+  check('Diccionario: las palabras del Codex son interactivas', wordClicked);
+  await page.waitForSelector('.vpop', { timeout: 4000 });
+  const wordCard = await text('.vpop');
+  check(
+    'Diccionario: la ficha muestra lema, glosa y Strong',
+    /ἀγαπάω/.test(wordCard) && /amar/.test(wordCard) && /G0025/.test(wordCard),
+    wordCard.slice(0, 100)
+  );
+  await page.screenshot({ path: path.join(OUT, 'exegesis-palabra.png') });
+  await page.click('.vpop__lex-link');
+  await page.waitForSelector('.lex__dialog', { timeout: 4000 });
+  check(
+    'Diccionario: el enlace abre la entrada y la lista completa',
+    (await page.$$eval('.lex__item', els => els.length)) === 250 && /ἀγαπάω/.test(await text('.lex-entry__lemma')),
+    `${await page.$$eval('.lex__item', els => els.length)} entradas`
+  );
+  await page.click('#lex-q');
+  await page.type('#lex-q', 'λογος');
+  await wait(300);
+  check('Diccionario: busca griego sin acentos', (await page.$$eval('.lex__item', els => els.length)) === 1, `${await page.$$eval('.lex__item', els => els.length)} resultados`);
+  await page.click('.lex__item');
+  await wait(300);
+  check('Diccionario: la ficha cambia a λόγος', (await text('.lex-entry__lemma')) === 'λόγος', await text('.lex-entry__lemma'));
+  await page.screenshot({ path: path.join(OUT, 'exegesis-lexico.png') });
+  await page.keyboard.press('Escape');
+  await wait(250);
+  check('Diccionario: Escape cierra el panel', (await page.$('.lex')) === null);
+
+  await visit(`${BASE}/exegesis?libro=juan&cap=3&dic=G3056`, 'exegesis-lexico');
+  check('Diccionario: el enlace directo abre la entrada', (await text('.lex-entry__lemma')) === 'λόγος', await text('.lex-entry__lemma'));
+
+  await page.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true });
+  await visit(`${BASE}/exegesis?libro=juan&cap=3&dic=G3056`, 'exegesis-lexico-movil');
+  const mobileLex = await page.evaluate(() => ({
+    scroll: document.documentElement.scrollWidth,
+    client: document.documentElement.clientWidth,
+    browse: getComputedStyle(document.querySelector('.lex__browse')).display,
+    detail: getComputedStyle(document.querySelector('.lex__detail')).display
+  }));
+  check(
+    'Diccionario (móvil): ficha a pantalla completa',
+    mobileLex.scroll <= mobileLex.client + 1 && mobileLex.browse === 'none' && mobileLex.detail === 'block',
+    JSON.stringify(mobileLex)
+  );
+  await page.click('.lex-entry__back');
+  await wait(300);
+  const mobileList = await page.evaluate(() => ({
+    browse: getComputedStyle(document.querySelector('.lex__browse')).display,
+    detail: getComputedStyle(document.querySelector('.lex__detail')).display
+  }));
+  check(
+    'Diccionario (móvil): «Volver» regresa a la lista',
+    mobileList.browse !== 'none' && mobileList.detail === 'none',
+    JSON.stringify(mobileList)
+  );
+  await page.keyboard.press('Escape');
+  await wait(250);
+  check('Diccionario (móvil): Escape cierra el panel', (await page.$('.lex')) === null);
+
+  await page.setViewport({ width: 1440, height: 950 });
   await page.click('#exg-search');
   await page.type('#exg-search', 'nacer de nuevo');
   await page.waitForSelector('.bsearch__hit', { timeout: 4000 });

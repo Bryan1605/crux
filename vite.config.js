@@ -82,6 +82,16 @@ function contentGuard() {
         if (fs.existsSync(file)) check(name, () => readJson(name));
       }
 
+      // Léxico: la fuente editable vive en content/lexico/griego.json.
+      const lexicoFile = path.join(CONTENT, 'lexico', 'griego.json');
+      if (fs.existsSync(lexicoFile)) {
+        try {
+          validate('lexico', JSON.parse(fs.readFileSync(lexicoFile, 'utf8')));
+        } catch (e) {
+          errors.push(`content/lexico/griego.json → ${e.message}`);
+        }
+      }
+
       // Narraciones: el audio y su onda tienen que estar publicados de verdad.
       const nFile = path.join(CONTENT, 'narraciones.json');
       if (fs.existsSync(nFile)) {

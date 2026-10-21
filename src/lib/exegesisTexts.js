@@ -36,6 +36,15 @@ export const loadWitnessBook = (witness, bookId) =>
   loadJson(`/textos/exegesis/${witness}/${bookId}.json`);
 
 /**
+ * Mapa de lemas del Codex para un libro: por versículo, una entrada por palabra
+ * en el mismo orden que `tokenizeGreek` (`[lema, Strong, parse, ns, categoría]`).
+ */
+export const loadLemmas = bookId => loadJson(`/textos/exegesis/lemas/${bookId}.json`);
+
+/** Diccionario griego → español (250 lemas más frecuentes del Codex). */
+export const loadLexicon = () => loadJson('/textos/exegesis/lexico.json');
+
+/**
  * Índice de búsqueda de todo el Nuevo Testamento (NTV + Codex). Pesa ~1,5 MB,
  * así que solo se descarga cuando alguien busca más allá del libro abierto.
  */
