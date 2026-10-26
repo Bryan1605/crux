@@ -46,8 +46,12 @@ const ROUTES = [
   { label: 'biblia (índice)', path: '/biblia' },
   { label: 'biblia (lector)', path: '/biblia?pag=p2-1' },
   { label: 'biblia NTV (lector)', path: '/biblia/ntv?libro=juan&cap=3' },
+  { label: 'biblia NTV (AT)', path: '/biblia/ntv?libro=genesis&cap=1' },
   { label: 'biblia NTV (narración)', path: '/biblia/ntv?libro=judas&cap=1' },
   { label: 'exégesis (comparada)', path: '/exegesis?libro=juan&cap=3&vv=16-21' },
+  { label: 'exégesis (AT, NTV)', path: '/exegesis?libro=genesis&cap=1' },
+  { label: 'exégesis (solo Codex)', path: '/exegesis?libro=tobit&cap=1' },
+  { label: 'exégesis (Salmo 151)', path: '/exegesis?libro=salmos&cap=151' },
   { label: 'exégesis (diccionario)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=G3056' },
   { label: 'exégesis (diccionario, lista)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=' },
   { label: 'videos', path: '/videos' },
@@ -64,8 +68,10 @@ const STATES = [
   { label: 'portada (menú abierto)', path: '/', action: 'nav-desktop' },
   { label: 'temas (menú móvil abierto)', path: '/temas', mobile: true, action: 'nav-mobile' },
   { label: 'exégesis (móvil)', path: '/exegesis?libro=juan&cap=3&vv=16-21', mobile: true },
+  { label: 'exégesis (móvil, solo Codex)', path: '/exegesis?libro=tobit&cap=1', mobile: true },
   { label: 'exégesis (ficha de palabra)', path: '/exegesis?libro=juan&cap=3&vv=16-21&v=16', action: 'word' },
-  { label: 'biblia NTV (móvil)', path: '/biblia/ntv?libro=juan&cap=3', mobile: true }
+  { label: 'biblia NTV (móvil)', path: '/biblia/ntv?libro=juan&cap=3', mobile: true },
+  { label: 'biblia NTV (móvil, AT)', path: '/biblia/ntv?libro=genesis&cap=1', mobile: true }
 ];
 
 // Objetivos táctiles: la WCAG 2.2 (AA) exige 24 × 24 como mínimo y 44 × 44 es el

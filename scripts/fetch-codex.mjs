@@ -1,8 +1,8 @@
 /**
- * Descarga el Nuevo Testamento del Codex Sinaiticus (transcripción diplomática
- * con aparato crítico) y genera los JSON de la vista de exégesis.
+ * Descarga la Biblia del Codex Sinaiticus (transcripción diplomática con
+ * aparato crítico) y genera los JSON de la vista de exégesis.
  *
- *   node scripts/fetch-codex.mjs [--refresh]
+ *   node scripts/fetch-codex.mjs [--refresh] [--metadata]
  *
  * Fuente: el visor del Codex Sinaiticus Project
  *   https://www.codexsinaiticus.org/
@@ -14,15 +14,19 @@
  * (ignorada por git) para que el build sea determinista y repetible sin red.
  * Salida: `public/textos/exegesis/codex/<libro>.json`.
  *
+ * `--metadata` intenta además descargar la ficha de cada capítulo (cuaderno,
+ * folio, biblioteca y escriba); sin red, los capítulos que ya tienen su ficha
+ * en caché la conservan y los demás se generan sin esos datos.
+ *
  * Licencia: el Codex Sinaiticus Project permite el uso personal, educativo y no
  * comercial con atribución. Se acredita a las instituciones propietarias en
  * `public/textos/exegesis/index.json`.
  */
-import { readFile, writeFile, mkdir, rm, stat } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { NT_BOOKS } from '../src/data/exegesis.js';
+import { CODEX_BOOKS } from '../src/data/exegesis.js';
 import { parseCodexFolio, parseManuscriptPage } from './exegesis-lib.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -31,6 +35,7 @@ const OUT = path.join(ROOT, 'public/textos/exegesis/codex');
 const BASE = 'https://www.codexsinaiticus.org';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36';
 const REFRESH = process.argv.includes('--refresh');
+const ONLINE_METADATA = process.argv.includes('--metadata');
 const MAX_QUIRE = 100;
 const CONCURRENCY = 4;
 
@@ -60,6 +65,15 @@ async function fetchCached(name, url) {
     }
   }
   return '';
+}
+
+/** Lee una respuesta de la caché sin salir a la red. */
+async function readCached(name) {
+  try {
+    return await readFile(path.join(CACHE, name), 'utf8');
+  } catch {
+    return null;
+  }
 }
 
 /** Ejecuta tareas con un tope de concurrencia, en orden de array. */
@@ -101,16 +115,28 @@ for (const { q, folios } of quireNumbers) {
     for (const s of ['r', 'v']) tasks.push({ q, f, s });
   }
 }
+// Orden de lectura explícito: los folios llegan del visor y no se da por hecho
+// que ya vengan ordenados.
+tasks.sort((a, b) => a.q - b.q || a.f - b.f || (a.s === b.s ? 0 : a.s === 'r' ? -1 : 1));
 
 /** (libro, capítulo, versículo) → { text, apparatus, pages[] } */
 const verses = new Map();
+const pageResults = new Array(tasks.length);
 
 await pool(tasks, CONCURRENCY, async ({ q, f, s }, i) => {
   const html = await fetchCached(`t-${q}-${f}${s}.html`, `${BASE}/handler/transcription.ashx?q=${q}&f=${f}&s=${s}&type=1`);
-  const found = parseCodexFolio(html);
-  for (const v of found) {
+  pageResults[i] = parseCodexFolio(html);
+  if ((i + 1) % 50 === 0) console.log(`  ${i + 1}/${tasks.length} páginas (${network} descargas nuevas)`);
+});
+
+// Se fusionan las páginas en orden de lectura (cuaderno, folio, cara), no en el
+// orden en que termina la descarga: si no, un versículo partido entre dos caras
+// podía recomponerse al revés.
+for (let i = 0; i < pageResults.length; i += 1) {
+  const { q, f, s } = tasks[i];
+  const page = `${q}.${f}${s}`;
+  for (const v of pageResults[i] || []) {
     const key = `${v.bookId}.${v.chapter}.${v.verse}`;
-    const page = `${q}.${f}${s}`;
     const prev = verses.get(key);
     if (!prev) {
       verses.set(key, { bookId: v.bookId, chapter: v.chapter, verse: v.verse, texts: [{ page, grc: v.grc }], apparatus: v.apparatus });
@@ -129,8 +155,7 @@ await pool(tasks, CONCURRENCY, async ({ q, f, s }, i) => {
       }
     }
   }
-  if ((i + 1) % 50 === 0) console.log(`  ${i + 1}/${tasks.length} páginas (${network} descargas nuevas)`);
-});
+}
 
 console.log(`Páginas leídas: ${tasks.length} · versículos únicos: ${verses.size}`);
 
@@ -147,7 +172,7 @@ for (const v of verses.values()) {
 }
 
 const chapterTasks = [];
-for (const meta of NT_BOOKS) {
+for (const meta of CODEX_BOOKS) {
   if (!byBook.has(meta.id)) continue;
   for (const ch of [...byBook.get(meta.id).keys()].sort((a, b) => a - b)) {
     chapterTasks.push({ meta, ch });
@@ -156,8 +181,16 @@ for (const meta of NT_BOOKS) {
 
 const chapterMeta = new Map();
 await pool(chapterTasks, CONCURRENCY, async ({ meta, ch }, i) => {
-  const html = await fetchCached(`m-${meta.codexNo}-${ch}.html`, `${BASE}/en/manuscript.aspx?book=${meta.codexNo}&chapter=${ch}&verse=1`);
-  chapterMeta.set(`${meta.id}.${ch}`, parseManuscriptPage(html));
+  const name = `m-${meta.codexNo}-${ch}.html`;
+  let html = await readCached(name);
+  if (!html && ONLINE_METADATA) {
+    try {
+      html = await fetchCached(name, `${BASE}/en/manuscript.aspx?book=${meta.codexNo}&chapter=${ch}&verse=1`);
+    } catch {
+      html = '';
+    }
+  }
+  chapterMeta.set(`${meta.id}.${ch}`, html ? parseManuscriptPage(html) : {});
   if ((i + 1) % 50 === 0) console.log(`  metadatos ${i + 1}/${chapterTasks.length}`);
 });
 
@@ -169,7 +202,7 @@ await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT, { recursive: true });
 
 const summary = [];
-for (const meta of NT_BOOKS) {
+for (const meta of CODEX_BOOKS) {
   const chapters = byBook.get(meta.id);
   if (!chapters) continue;
 
@@ -207,7 +240,7 @@ for (const meta of NT_BOOKS) {
   summary.push({ id: meta.id, name: meta.name, chapters: outChapters.length, verses: nv, apparatus: na });
 }
 
-console.log('\nCodex — libros del NT presentes:');
+console.log('\nCodex — libros presentes:');
 for (const s of summary) console.log(`  ${s.name}: ${s.chapters} cap. · ${s.verses} vers. · ${s.apparatus} variantes`);
 console.log(`Total: ${summary.reduce((a, s) => a + s.verses, 0)} versículos · ${summary.reduce((a, s) => a + s.apparatus, 0)} variantes`);
 console.log(`Descargas nuevas: ${network}`);

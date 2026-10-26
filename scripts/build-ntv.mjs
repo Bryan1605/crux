@@ -4,7 +4,7 @@
  *   node scripts/build-ntv.mjs [--report]
  *
  * Lee el volcado de la NTV (`src/assets/texts/nueva-traduccion-viviente.md`),
- * extrae el Nuevo Testamento y escribe un JSON por libro en
+ * extrae los 66 libros de la Biblia y escribe un JSON por libro en
  * `public/textos/exegesis/ntv/<libro>.json`.
  */
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';

@@ -4,8 +4,10 @@ import { Link, useSearchParams } from 'react-router-dom';
 import BibleSearch from '../components/BibleSearch';
 import BibleCta from '../components/BibleCta';
 import ChapterAudio from '../components/ChapterAudio';
+import NtvInline from '../components/NtvInline';
 import VersePopover, { NoteBody } from '../components/VersePopover';
 import { narracionDe } from '../data/narraciones';
+import { NT_BOOKS, OT_BOOKS } from '../data/exegesis';
 import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadWitnessBook } from '../lib/exegesisTexts';
 import { hasSelection } from '../lib/selection';
@@ -71,6 +73,9 @@ function tokenize(text) {
   return out;
 }
 
+/** Texto de un título sin las marcas de nota, para listas y raíles. */
+const withoutNoteMarks = text => text.replace(/\[[a-z]{1,2}\]/g, '');
+
 /** Agrupa los versículos en filas: cada versículo estrena fila y los títulos de
  *  sección ocupan una propia. Si la NTV omite el versículo de una sección, el
  *  título cuelga del siguiente que sí existe. */
@@ -80,7 +85,12 @@ function verseRows(chapter) {
   let at = 0;
   const flushUntil = n => {
     while (at < sections.length && sections[at].verse <= n) {
-      rows.push({ kind: 'section', key: `s${sections[at].verse}-${at}`, title: sections[at].title });
+      rows.push({
+        kind: 'section',
+        key: `s${sections[at].verse}-${at}`,
+        title: sections[at].title,
+        verse: sections[at].verse
+      });
       at += 1;
     }
   };
@@ -121,7 +131,7 @@ function NtvGrid({ book, chapter, selected, onSelect, onNote, size, gridRef }) {
         {rows.map(row =>
           row.kind === 'section' ? (
             <p className="exg-grid__section" key={row.key}>
-              {row.title}
+              <NtvInline text={row.title} verse={row.verse} onNote={onNote} />
             </p>
           ) : (
             <div
@@ -208,7 +218,7 @@ function PageText({ verses, sections, activeVerse, onSelect, onNote }) {
         <div key={v.n} id={`v${v.n}`} data-v={v.n} className={`ntv-vs${activeVerse === v.n ? ' is-active' : ''}`}>
           {(bySection.get(v.n) || []).map(title => (
             <span key={title} className="ntv-h">
-              {title}
+              <NtvInline text={title} verse={v.n} onNote={onNote} />
             </span>
           ))}
           <p
@@ -290,6 +300,7 @@ export default function BibliaNtv() {
   useEffect(() => {
     let alive = true;
     setBook(null);
+    setError(false);
     scrolled.current = null;
     loadWitnessBook('ntv', bookId)
       .then(data => alive && setBook(data))
@@ -417,12 +428,34 @@ export default function BibliaNtv() {
     setTheme(current => THEMES[(THEMES.findIndex(t => t.id === current) + 1) % THEMES.length].id);
 
   const bookMeta = index?.books.find(b => b.id === bookId);
+  const codexOnly = Boolean(bookMeta && !bookMeta.ntv.verses);
 
   useSeo({
     title: book ? `${book.name} ${chapterNum} — Biblia NTV` : 'Biblia NTV',
     description:
-      'La Nueva Traducción Viviente versículo a versículo, en rejilla o en pliego de dos páginas, con sus notas del traductor y un buscador por palabras.'
+      'La Nueva Traducción Viviente completa, versículo a versículo: 39 libros del Antiguo Testamento y 27 del Nuevo, en rejilla o en pliego de dos páginas, con sus notas del traductor y un buscador por palabras.'
   });
+
+  if (codexOnly) {
+    return (
+      <main id="main" className="exg">
+        <div className="exg__shell">
+          <div className="empty-state">
+            <h1>{bookMeta.name} solo está en el Codex</h1>
+            <p>
+              La Nueva Traducción Viviente no incluye este libro. Se conserva en griego en el Codex
+              Sinaiticus, con su aparato crítico.
+            </p>
+            <p>
+              <Link className="btn btn--primary" to={`/exegesis?libro=${bookId}`}>
+                Leer {bookMeta.name} en el Codex
+              </Link>
+            </p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   if (error) {
     return (
@@ -457,9 +490,9 @@ export default function BibliaNtv() {
           <p className="eyebrow">Texto bíblico · español</p>
           <h1>Biblia NTV</h1>
           <p>
-            La Nueva Traducción Viviente, versículo a versículo en una rejilla —o en pliego de dos
-            páginas, si lo prefieres—, con las notas del traductor y un buscador por las palabras que
-            recuerdes.
+            La Nueva Traducción Viviente completa, versículo a versículo en una rejilla —o en pliego
+            de dos páginas, si lo prefieres—, con las notas del traductor y un buscador por las
+            palabras que recuerdes. 66 libros: 39 del Antiguo Testamento y 27 del Nuevo.
           </p>
         </header>
 
@@ -472,11 +505,30 @@ export default function BibliaNtv() {
                 value={bookId}
                 onChange={event => goto({ bookId: event.target.value, chapter: 1 })}
               >
-                {(index?.books || []).map(b => (
-                  <option key={b.id} value={b.id} disabled={!b.ntv.verses}>
-                    {b.name}
-                  </option>
-                ))}
+                {(index?.books || []).filter(b => b.ntv.verses).length > 0 ? (
+                  <>
+                    <optgroup label={`Antiguo Testamento (${OT_BOOKS.length})`}>
+                      {(index?.books || [])
+                        .filter(b => b.testament === 'AT' && b.ntv.verses)
+                        .map(b => (
+                          <option key={b.id} value={b.id}>
+                            {b.name}
+                          </option>
+                        ))}
+                    </optgroup>
+                    <optgroup label={`Nuevo Testamento (${NT_BOOKS.length})`}>
+                      {(index?.books || [])
+                        .filter(b => b.testament === 'NT' && b.ntv.verses)
+                        .map(b => (
+                          <option key={b.id} value={b.id}>
+                            {b.name}
+                          </option>
+                        ))}
+                    </optgroup>
+                  </>
+                ) : (
+                  <option value={bookId}>{bookId}</option>
+                )}
               </select>
             </div>
             <div className="exg__select">
@@ -517,6 +569,7 @@ export default function BibliaNtv() {
             id="ntv-search"
             localRecords={searchRecords}
             scopeLabel={book ? `${book.name} (libro abierto)` : 'este libro'}
+            testament={bookMeta?.testament || 'NT'}
             onPick={record => {
               const q = new URLSearchParams(params);
               q.set('libro', record.bookId);
@@ -635,19 +688,35 @@ export default function BibliaNtv() {
 
             <aside className="ntv__rail" ref={railRef}>
               {narracion ? <ChapterAudio key={narracion.id} narracion={narracion} /> : null}
-              <h2>Libros del NT</h2>
+              <h2>Antiguo Testamento · {OT_BOOKS.length}</h2>
               <div className="ntv__rail-books">
-                {(index?.books || []).map(b => (
-                  <button
-                    key={b.id}
-                    type="button"
-                    className={`ntv__rail-book${b.id === bookId ? ' is-on' : ''}`}
-                    onClick={() => goto({ bookId: b.id, chapter: 1 })}
-                    disabled={!b.ntv.verses}
-                  >
-                    {b.abbr}
-                  </button>
-                ))}
+                {(index?.books || [])
+                  .filter(b => b.testament === 'AT' && b.ntv.verses)
+                  .map(b => (
+                    <button
+                      key={b.id}
+                      type="button"
+                      className={`ntv__rail-book${b.id === bookId ? ' is-on' : ''}`}
+                      onClick={() => goto({ bookId: b.id, chapter: 1 })}
+                    >
+                      {b.abbr}
+                    </button>
+                  ))}
+              </div>
+              <h2>Nuevo Testamento · {NT_BOOKS.length}</h2>
+              <div className="ntv__rail-books">
+                {(index?.books || [])
+                  .filter(b => b.testament === 'NT' && b.ntv.verses)
+                  .map(b => (
+                    <button
+                      key={b.id}
+                      type="button"
+                      className={`ntv__rail-book${b.id === bookId ? ' is-on' : ''}`}
+                      onClick={() => goto({ bookId: b.id, chapter: 1 })}
+                    >
+                      {b.abbr}
+                    </button>
+                  ))}
               </div>
               <h2>Capítulos · {book.name}</h2>
               <div className="ntv__rail-chapters">
@@ -675,7 +744,7 @@ export default function BibliaNtv() {
                             select(s.verse);
                           }}
                         >
-                          <span>{s.title}</span>
+                          <span>{withoutNoteMarks(s.title)}</span>
                           <span>{s.verse}</span>
                         </a>
                       </li>

@@ -35,7 +35,7 @@ npm run dev         # servidor de desarrollo (incluye el panel /admin)
 npm run build       # build de producción (valida el contenido y regenera el índice)
 npm run preview     # sirve localmente el build de producción
 npm run index:wiki  # regenera content/ desde el wiki de origen (destructivo, ver abajo)
-npm run exegesis    # regenera public/textos/exegesis/ (NTV + Codex + índice + buscador)
+npm run exegesis    # regenera public/textos/exegesis/ (NTV + Codex + índice + buscadores AT/NT)
 npm run qa          # QA completa (datos + navegador; requiere `npm run dev` en otra terminal)
 npm run qa:audio    # comprueba las narraciones (audio, onda y reproductor de la NTV)
 npm run qa:imagenes # comprueba las imágenes referenciadas y las de las páginas
@@ -64,8 +64,8 @@ Los informes quedan en `%TEMP%\opencode\crux\`.
 | `/estudio/:slug` | Ficha de estudio (Markdown) |
 | `/estudio/personajes/:slug` | Ficha de personaje: portada, escenas, biografía y línea de tiempo |
 | `/biblia` | Biblia Patrística: índice de la obra y lector paginado (libro o desplazamiento) |
-| `/biblia/ntv` | Lector de la Nueva Traducción Viviente (rejilla por versículo o pliego, notas del traductor, selector de versículo, buscador y narración en el raíl) |
-| `/exegesis` | Exégesis comparada: Codex Sinaiticus ↔ NTV en rejilla por versículo, con aparato crítico, notas y buscador |
+| `/biblia/ntv` | Lector de la Nueva Traducción Viviente completa: 66 libros (39 AT + 27 NT), en rejilla por versículo o pliego, con notas del traductor, selector de versículo, buscador y narración en el raíl |
+| `/exegesis` | Exégesis comparada: Codex Sinaiticus ↔ NTV en rejilla por versículo, con aparato crítico, notas y buscador; incluye los 7 libros que solo conserva el Codex |
 | `/videos` | Parrilla de videos de YouTube |
 | `/concilios` | Concilios y herejías, con ancla por id (`/concilios#nicea`) |
 | `/temas` | Índice de categorías y etiquetas (cada etiqueta enlaza a `/buscar`) |
@@ -166,9 +166,10 @@ y publica en GitHub Pages. La URL de producción es
 | `content/timeline.json` | Hitos propios de la línea de tiempo (los demás se derivan de personajes y concilios). |
 | `content/busquedas.json` | Índice de búsqueda (se regenera en cada `build`; no lo edites a mano). |
 | `public/textos/biblia-patristica.md` | Texto de la Biblia Patrística (se carga bajo demanda desde `/textos/`). |
-| `public/textos/exegesis/{ntv,codex}/*.json` | Datos de exégesis por libro (generados; versionados para que el build funcione sin red). |
+| `public/textos/exegesis/{ntv,codex}/*.json` | Datos de exégesis por libro (generados; versionados para que el build funcione sin red): NTV 66 libros y Codex 59. |
 | `public/textos/exegesis/index.json` | Cobertura de cada testigo (generado). |
-| `public/textos/exegesis/buscar.json` | Índice de búsqueda por palabras de la NTV y del Codex (generado). |
+| `public/textos/exegesis/buscar-at.json` | Índice de búsqueda por palabras del AT (NTV + Codex; generado). |
+| `public/textos/exegesis/buscar-nt.json` | Índice de búsqueda por palabras del NT (NTV + Codex; generado). |
 | `src/assets/texts/*.md` | Fuentes de la NTV y del Codex Sinaiticus 1911 (las usan los scripts, no el build). |
 
 `content/estudios.json` y `content/busquedas.json` se regeneran automáticamente en cada
@@ -180,10 +181,10 @@ y publica en GitHub Pages. La URL de producción es
 `src/assets/texts/`:
 
 ```bash
-npm run exegesis:ntv    # parsea la NTV y escribe ntv/<libro>.json
+npm run exegesis:ntv    # parsea la NTV completa (66 libros) y escribe ntv/<libro>.json
 npm run exegesis:codex  # descarga el Codex (con caché en src/assets/texts/.cache-codex/) y escribe codex/<libro>.json
 npm run exegesis:index  # cruza ambos testigos y escribe index.json
-npm run exegesis:search # indexa el texto de los versículos en buscar.json
+npm run exegesis:search # indexa los versículos en buscar-at.json y buscar-nt.json
 npm run qa:exegesis     # QA de datos + navegador de /exegesis y /biblia/ntv
 ```
 

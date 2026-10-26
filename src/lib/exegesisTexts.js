@@ -45,7 +45,10 @@ export const loadLemmas = bookId => loadJson(`/textos/exegesis/lemas/${bookId}.j
 export const loadLexicon = () => loadJson('/textos/exegesis/lexico.json');
 
 /**
- * Índice de búsqueda de todo el Nuevo Testamento (NTV + Codex). Pesa ~1,5 MB,
- * así que solo se descarga cuando alguien busca más allá del libro abierto.
+ * Índice de búsqueda de un testamento (NTV + Codex). Se descarga solo cuando
+ * alguien busca más allá del libro abierto; el AT y el NT están partidos para
+ * no cargar los dos a la vez.
+ * @param {'AT'|'NT'} testament
  */
-export const loadSearchIndex = () => loadJson('/textos/exegesis/buscar.json');
+export const loadSearchIndex = (testament = 'NT') =>
+  loadJson(`/textos/exegesis/buscar-${String(testament).toLowerCase()}.json`);

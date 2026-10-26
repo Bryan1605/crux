@@ -38,6 +38,17 @@
   margin: 0;
 }
 
+.exg__notice {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid var(--gold, #c9a227);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--gold, #c9a227) 9%, transparent);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 /* --- barra de herramientas -------------------------------------------------- */
 
 .exg__bar {
@@ -425,6 +436,11 @@
   font-size: 0.86rem;
 }
 
+/* Los paneles oscuros (aparato, notas) no comparten el papel claro. */
+.exg-panel .exg-empty {
+  color: var(--muted);
+}
+
 /* --- paneles (aparato y notas) ---------------------------------------------- */
 
 .exg__panels {
@@ -432,6 +448,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-top: 1.4rem;
+}
+
+.exg__panels--one {
+  grid-template-columns: 1fr;
 }
 
 .exg-panel {

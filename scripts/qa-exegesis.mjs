@@ -11,7 +11,16 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { NT_BOOKS, exegesisPath, ntvPath, parsePassage } from '../src/data/exegesis.js';
+import {
+  ALL_BOOKS,
+  BIBLE_BOOKS,
+  CODEX_BOOKS,
+  NT_BOOKS,
+  OT_BOOKS,
+  exegesisPath,
+  ntvPath,
+  parsePassage
+} from '../src/data/exegesis.js';
 import { recordsFromIndex, runSearch } from '../src/lib/bibleSearch.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -39,11 +48,26 @@ const strip = s => s.replace(/[\u2039\u203a\u00a7\d]/g, '');
 
 const index = await readJson(path.join(DIR, 'index.json'));
 
-check('El índice lista los 27 libros del NT', index.books.length === 27, `${index.books.length}`);
+check(
+  'El índice lista los 73 libros (66 NTV + 7 solo Codex)',
+  index.books.length === ALL_BOOKS.length && index.books.length === 73,
+  `${index.books.length}`
+);
+check(
+  'El índice separa 39 libros del AT y 27 del NT',
+  index.books.filter(b => b.testament === 'AT' && b.ntv.verses).length === OT_BOOKS.length &&
+    index.books.filter(b => b.testament === 'NT' && b.ntv.verses).length === NT_BOOKS.length,
+  `${OT_BOOKS.length} + ${NT_BOOKS.length}`
+);
 check('El índice declara los dos testigos', index.witnesses?.length === 2, index.witnesses?.map(w => w.short).join(', '));
-check('La NTV cubre el NT completo', index.totals.ntvVerses > 7900, `${index.totals.ntvVerses} versículos`);
-check('El Codex cubre los 27 libros', index.books.every(b => b.codex.verses > 0), `${index.totals.codexVerses} versículos`);
-check('Hay 260 capítulos en paralelo', index.totals.parallels === 260, `${index.totals.parallels}`);
+check('La NTV cubre la Biblia completa', index.totals.ntvBooks === 66 && index.totals.ntvVerses === 31021, `${index.totals.ntvVerses} versículos`);
+check(
+  'El Codex cubre 59 libros (32 AT + 27 NT)',
+  index.totals.codexBooks === 59 && index.totals.codexOtBooks === 32 && index.totals.codexNtBooks === 27,
+  `${index.totals.codexBooks} libros · ${index.totals.codexVerses} versículos`
+);
+check('Hay 7 libros solo en el Codex', index.totals.codexOnlyBooks === 7, `${index.totals.codexOnlyBooks}`);
+check('Hay 708 capítulos en paralelo', index.totals.parallels === 708, `${index.totals.parallels}`);
 
 /* -------------------------------------------------------------------------- */
 /* 2) Recorrido de los JSON por libro                                         */
@@ -64,7 +88,7 @@ const issues = {
   range: []
 };
 
-for (const meta of NT_BOOKS) {
+for (const meta of BIBLE_BOOKS) {
   /* NTV */
   let ntv = null;
   try {
@@ -75,15 +99,23 @@ for (const meta of NT_BOOKS) {
   if (ntv) {
     checkNTv(ntv);
   }
+}
 
+for (const meta of CODEX_BOOKS) {
   /* Codex */
   let codex = null;
+  let ntv = null;
   try {
     codex = await readJson(path.join(DIR, 'codex', `${meta.id}.json`));
   } catch {
     issues.emptyVerse.push(`Falta codex/${meta.id}.json`);
   }
-  if (codex && ntv) checkCodex(codex, ntv);
+  if (meta.ntv) {
+    try {
+      ntv = await readJson(path.join(DIR, 'ntv', `${meta.id}.json`));
+    } catch { /* ya se informó arriba */ }
+  }
+  if (codex) checkCodex(codex, ntv, meta);
 }
 
 function checkNTv(book) {
@@ -102,8 +134,11 @@ function checkNTv(book) {
   }
 }
 
-function checkCodex(codex, ntv) {
-  const ntvChapters = new Map(ntv.chapters.map(c => [c.num, Math.max(...c.verses.map(v => v.n))]));
+function checkCodex(codex, ntv, meta) {
+  const ntvChapters =
+    meta.testament === 'NT' && ntv
+      ? new Map(ntv.chapters.map(c => [c.num, Math.max(...c.verses.map(v => v.n))]))
+      : null;
   for (const c of codex.chapters) {
     let last = 0;
     for (const v of c.verses) {
@@ -114,7 +149,7 @@ function checkCodex(codex, ntv) {
       if (!v.grc) issues.emptyVerse.push(`codex ${codex.id} ${c.num}:${v.n}`);
       if (MOJI.test(v.grc)) issues.moji.push(`codex ${codex.id} ${c.num}:${v.n}`);
       if (/<[^>]*>|&[a-z]+;/.test(v.grc)) issues.html.push(`codex ${codex.id} ${c.num}:${v.n}`);
-      const max = ntvChapters.get(c.num);
+      const max = ntvChapters?.get(c.num);
       if (max && v.n > max) issues.range.push(`codex ${codex.id} ${c.num}:${v.n} > ntv ${max}`);
       for (const a of v.apparatus || []) {
         if (!a.w || typeof a.t !== 'string') issues.html.push(`aparato codex ${codex.id} ${c.num}:${v.n}`);
@@ -153,7 +188,7 @@ check(
 /* -------------------------------------------------------------------------- */
 
 const ntvBooks = new Map();
-for (const meta of NT_BOOKS) {
+for (const meta of BIBLE_BOOKS) {
   ntvBooks.set(meta.id, await readJson(path.join(DIR, 'ntv', `${meta.id}.json`)));
 }
 
@@ -165,7 +200,7 @@ for (const book of ntvBooks.values()) {
   for (const c of book.chapters) {
     for (const s of c.sections || []) {
       sectionCount += 1;
-      if (/[.!?\u2026\u00bb]$/.test(s.title.trim())) badSections.push(`${book.id} ${c.num}: ${s.title}`);
+      if (book.order >= 40 && /[.!?\u2026\u00bb]$/.test(s.title.trim())) badSections.push(`${book.id} ${c.num}: ${s.title}`);
     }
   }
   for (const [id, body] of Object.entries(book.notes || {})) {
@@ -175,11 +210,41 @@ for (const book of ntvBooks.values()) {
 }
 
 check(
-  'NTV: 744 secciones y ninguna cierra frase',
-  sectionCount === 744 && badSections.length === 0,
+  'NTV: 2368 secciones y las del NT no cierran frase',
+  sectionCount === 2368 && badSections.length === 0,
   `${sectionCount} secciones · ${badSections.slice(0, 2).join(' · ')}`
 );
-check('NTV: notas sin restos de maquetado', noteCount === 1642 && dirtyNotes.length === 0, `${noteCount} notas`);
+check('NTV: 4744 notas sin restos de maquetado', noteCount === 4744 && dirtyNotes.length === 0, `${noteCount} notas`);
+
+const expectedChapters = [
+  ['genesis', 50],
+  ['exodo', 40],
+  ['esdras', 10],
+  ['nehemias', 13],
+  ['salmos', 150],
+  ['abdias', 1],
+  ['malaquias', 4]
+];
+const wrongChapters = expectedChapters.filter(([id, n]) => ntvBooks.get(id)?.chapters.length !== n);
+check(
+  'NTV: los libros especiales tienen el número de capítulos correcto',
+  wrongChapters.length === 0,
+  wrongChapters.map(([id, n]) => `${id}: ${ntvBooks.get(id)?.chapters.length} (esperado ${n})`).join(' · ')
+);
+
+const esdras2 = ntvBooks.get('esdras').chapters.find(c => c.num === 2);
+const nehemias7 = ntvBooks.get('nehemias').chapters.find(c => c.num === 7);
+const nehemias8 = ntvBooks.get('nehemias').chapters.find(c => c.num === 8);
+check(
+  'NTV: las listas de Esdras 2 y Nehemías 7 no se cortan',
+  esdras2?.verses.length === 70 && nehemias7?.verses.length === 73,
+  `Esd 2: ${esdras2?.verses.length} · Neh 7: ${nehemias7?.verses.length}`
+);
+check(
+  'NTV: Nehemías 8:1 recupera el texto anterior al número de versículo',
+  /^En octubre/.test(nehemias8?.verses.find(v => v.n === 1)?.text || ''),
+  (nehemias8?.verses.find(v => v.n === 1)?.text || '').slice(0, 70)
+);
 
 const juan5 = ntvBooks.get('juan').chapters.find(c => c.num === 5);
 check(
@@ -196,6 +261,34 @@ check(
   hechos919.slice(0, 70)
 );
 
+const psalms = ntvBooks.get('salmos');
+const psalmTitle = n =>
+  psalms.chapters.find(c => c.num === n)?.sections?.find(s => s.verse === 1)?.title || '';
+const expectedPsalmTitles = {
+  3: 'Salmo de David, acerca de cuando huía de su hijo Absalón.',
+  4: 'Para el director del coro: salmo de David; acompáñese con instrumentos de cuerda.',
+  5: 'Para el director del coro: salmo de David; acompáñese con flauta.',
+  7: 'Salmo de David, quien lo cantó al SEÑOR acerca de Cus, de la tribu de Benjamín.',
+  8: 'Para el director del coro: salmo de David; acompáñese con instrumento de cuerda[j].',
+  9: 'Para el director del coro: salmo de David; cántese con la melodía de Muerte del hijo.',
+  22: 'Para el director del coro: salmo de David; cántese con la melodía de Cierva de la aurora.',
+  36: 'Para el director del coro: salmo de David, el siervo del Señor.'
+};
+const wrongPsalmTitles = Object.entries(expectedPsalmTitles).filter(
+  ([n, title]) => psalmTitle(Number(n)) !== title
+);
+const psalm5v1 = psalms.chapters.find(c => c.num === 5)?.verses.find(v => v.n === 1)?.text || '';
+const brokenPsalmTitles = psalms.chapters.flatMap(c =>
+  (c.sections || [])
+    .filter(s => s.verse === 1 && ['cuerda.', 'Benjamín.', 'del hijo.', 'de la aurora.'].includes(s.title))
+    .map(s => `${c.num}: ${s.title}`)
+);
+check(
+  'NTV: las sobrescrituras de los Salmos quedan enteras',
+  wrongPsalmTitles.length === 0 && brokenPsalmTitles.length === 0 && !/^Para el director/.test(psalm5v1),
+  `${wrongPsalmTitles.map(([n]) => n).join(', ') || 'títulos OK'} · ${brokenPsalmTitles.slice(0, 2).join(' · ')}`
+);
+
 const lucas3 = ntvBooks.get('lucas').chapters.find(c => c.num === 3);
 check(
   'NTV: la genealogía no se pierde (Lc 3:26-27)',
@@ -204,38 +297,69 @@ check(
   (lucas3.verses.find(v => v.n === 27)?.text || '').slice(0, 60)
 );
 
-/* Buscador: el índice tiene que cubrir el NT y encontrar por palabras. */
-let searchIndex = null;
+/* Buscador: índices separados por testamento, con NTV y Codex. */
+let atIndex = null;
+let ntIndex = null;
 try {
-  searchIndex = await readJson(path.join(DIR, 'buscar.json'));
+  atIndex = await readJson(path.join(DIR, 'buscar-at.json'));
+  ntIndex = await readJson(path.join(DIR, 'buscar-nt.json'));
 } catch {
-  searchIndex = null;
+  atIndex = null;
+  ntIndex = null;
 }
-const searchBooks = searchIndex ? Object.keys(searchIndex.ntv).length : 0;
-const countIndexed = witness => {
+const countIndexed = (index, witness) => {
   let n = 0;
-  for (const chapters of Object.values(searchIndex?.[witness] || {})) {
+  for (const chapters of Object.values(index?.[witness] || {})) {
     for (const verses of Object.values(chapters)) {
       for (const text of verses) if (text) n += 1;
     }
   }
   return n;
 };
-check('Buscador: índice de los 27 libros', searchBooks === 27 && Object.keys(searchIndex?.codex || {}).length === 27, `${searchBooks} libros`);
 check(
-  'Buscador: indexa todos los versículos',
-  countIndexed('ntv') === ntvVerses && countIndexed('codex') === codexVerses,
-  `NTV ${countIndexed('ntv')} · Codex ${countIndexed('codex')}`
+  'Buscador: el AT tiene 39 libros NTV y 32 del Codex',
+  Object.keys(atIndex?.ntv || {}).length === 39 && Object.keys(atIndex?.codex || {}).length === 32,
+  `${Object.keys(atIndex?.ntv || {}).length} NTV · ${Object.keys(atIndex?.codex || {}).length} Codex`
+);
+check(
+  'Buscador: el NT tiene 27 libros NTV y 27 del Codex',
+  Object.keys(ntIndex?.ntv || {}).length === 27 && Object.keys(ntIndex?.codex || {}).length === 27,
+  `${Object.keys(ntIndex?.ntv || {}).length} NTV · ${Object.keys(ntIndex?.codex || {}).length} Codex`
+);
+check(
+  'Buscador: indexa todos los versículos de los dos testamentos',
+  countIndexed(atIndex, 'ntv') + countIndexed(ntIndex, 'ntv') === ntvVerses &&
+    countIndexed(atIndex, 'codex') + countIndexed(ntIndex, 'codex') === codexVerses,
+  `NTV ${countIndexed(atIndex, 'ntv') + countIndexed(ntIndex, 'ntv')} · Codex ${countIndexed(atIndex, 'codex') + countIndexed(ntIndex, 'codex')}`
 );
 
-const globalRecords = recordsFromIndex(searchIndex || { ntv: {}, codex: {} }, NT_BOOKS);
-const spanish = runSearch(globalRecords, 'nacer de nuevo');
+const atRecords = recordsFromIndex(atIndex || { ntv: {}, codex: {} }, OT_BOOKS);
+const genesis = runSearch(atRecords, 'en el principio');
+check(
+  'Buscador: «en el principio» encuentra Génesis 1:1',
+  genesis.hits.some(h => h.bookId === 'genesis' && h.chapter === 1 && h.verse === 1),
+  `${genesis.total} coincidencias · ${genesis.hits.slice(0, 2).map(h => `${h.bookId} ${h.chapter}:${h.verse}`).join(', ')}`
+);
+
+const atAllRecords = recordsFromIndex(atIndex || { ntv: {}, codex: {} }, [
+  ...OT_BOOKS,
+  ...ALL_BOOKS.filter(b => b.codexOnly)
+]);
+const tobit = runSearch(atAllRecords, 'τωβειθ');
+check(
+  'Buscador: los libros solo-Codex entran en la búsqueda del AT',
+  tobit.hits.some(h => h.witness === 'codex' && h.bookId === 'tobit' && h.chapter === 1),
+  `${tobit.total} coincidencias`
+);
+
+const ntRecords = recordsFromIndex(ntIndex || { ntv: {}, codex: {} }, NT_BOOKS);
+const spanish = runSearch(ntRecords, 'nacer de nuevo');
 check(
   'Buscador: «nacer de nuevo» encuentra Juan 3',
   spanish.hits.some(h => h.bookId === 'juan' && h.chapter === 3),
   `${spanish.total} coincidencias · ${spanish.hits.slice(0, 3).map(h => `${h.bookId} ${h.chapter}:${h.verse}`).join(', ')}`
 );
-const greek = runSearch(globalRecords, '\u03b7\u03b3\u03b1\u03c0\u03b7\u03c3\u03b5\u03bd');
+const greek = runSearch(ntRecords, 'ηγαπησεν');
 check(
   'Buscador: el griego se busca sin diacríticos ni sigma final',
   greek.hits.some(h => h.witness === 'codex' && h.bookId === 'juan' && h.chapter === 3 && h.verse === 16),
@@ -249,6 +373,10 @@ const passages = [
   ['Apocalipsis 12-13', 'apocalipsis', 12, null],
   ['Ro 8', 'romanos', 8, null],
   ['Jn 3:16', 'juan', 3, 16],
+  ['Génesis 1:1', 'genesis', 1, 1],
+  ['Cantar de los Cantares 2:1', 'cantares', 2, 1],
+  ['Hechos de los Apóstoles 2:1', 'hechos', 2, 1],
+  ['Tobit 1:1', 'tobit', 1, 1],
   ['Joel 2:28-29 / Hechos 2:16-18', 'hechos', 2, 16]
 ];
 const badPassages = passages.filter(([text, bookId, chapter, verse]) => {
@@ -256,7 +384,13 @@ const badPassages = passages.filter(([text, bookId, chapter, verse]) => {
   return !parsed || parsed.bookId !== bookId || parsed.chapter !== chapter || parsed.verse !== verse;
 });
 check('CTAs: las citas de los estudios se traducen a libro, capítulo y versículo', badPassages.length === 0, `${badPassages.length} fallos`);
-check('CTAs: la cita del Antiguo Testamento no se fuerza al NT', parsePassage('Génesis 1:1') === null);
+check(
+  'CTAs: una cita del AT se queda en el AT y Tobit va al Codex',
+  parsePassage('Génesis 1:1')?.testament === 'AT' &&
+    ntvPath('Génesis 1:1') === '/biblia/ntv?libro=genesis&cap=1&v=1' &&
+    ntvPath('Tobit 1:1') === '/exegesis?libro=tobit&cap=1&v=1',
+  `${ntvPath('Génesis 1:1')} · ${ntvPath('Tobit 1:1')}`
+);
 check(
   'CTAs: la ruta del lector lleva al pasaje exacto',
   ntvPath('Jn 3:16') === '/biblia/ntv?libro=juan&cap=3&v=16' && exegesisPath('Mateo 26:26-29') === '/exegesis?libro=mateo&cap=26&v=26',
@@ -595,6 +729,186 @@ if (WITH_BROWSER) {
   check('NTV: buscador por palabras en el libro', (await page.$$eval('.bsearch__hit', els => els.length)) >= 2);
   await page.keyboard.press('Escape');
 
+  /* Salmos: la sobrescritura va entera en un título, con sus notas. */
+  await visit(`${BASE}/biblia/ntv?libro=salmos&cap=4`, 'ntv-salmos4');
+  await page.waitForSelector('.ntv-grid', { timeout: 8000 });
+  const psalm4 = await page.evaluate(() => ({
+    sections: [...document.querySelectorAll('.ntv-grid .exg-grid__section')].map(el => el.textContent.trim()),
+    verse1: document.querySelector('.exg-row[data-v="1"] .exg-row__cell--ntv')?.textContent.trim() || ''
+  }));
+  check(
+    'Salmos: la sobrescritura partida se une en un solo título',
+    psalm4.sections[0] === 'Para el director del coro: salmo de David; acompáñese con instrumentos de cuerda.' &&
+      !/^Para el director/.test(psalm4.verse1),
+    psalm4.sections[0]
+  );
+
+  await visit(`${BASE}/biblia/ntv?libro=salmos&cap=8`, 'ntv-salmos8');
+  await page.waitForSelector('.ntv-grid', { timeout: 8000 });
+  await page.click('.exg-grid__section .ntv-fn');
+  await page.waitForSelector('.vpop', { timeout: 4000 });
+  check(
+    'Salmos: la nota de la sobrescritura sigue disponible',
+    /Gitit/.test(await text('.vpop')),
+    (await text('.vpop')).slice(0, 50)
+  );
+  await page.keyboard.press('Escape');
+
+  /* --- Antiguo Testamento: NTV de 66 libros --------------------------------- */
+  await visit(`${BASE}/biblia/ntv?libro=genesis&cap=1`, 'ntv-genesis1');
+  await page.waitForSelector('.ntv-grid', { timeout: 8000 });
+  const atSelect = await page.evaluate(() => {
+    const select = document.querySelector('#ntv-book');
+    return {
+      groups: [...select.querySelectorAll('optgroup')].map(g => g.label),
+      selected: select.value,
+      chapters: document.querySelectorAll('#ntv-chapter option').length,
+      rows: document.querySelectorAll('.ntv-grid .exg-row').length,
+      text: document.querySelector('.ntv-grid')?.textContent || ''
+    };
+  });
+  check(
+    'AT: la NTV ofrece los 39 libros del AT y los 27 del NT',
+    atSelect.groups.includes('Antiguo Testamento (39)') && atSelect.groups.includes('Nuevo Testamento (27)'),
+    atSelect.groups.join(' · ')
+  );
+  check(
+    'AT: Génesis 1 tiene 50 capítulos y 31 versículos',
+    atSelect.selected === 'genesis' && atSelect.chapters === 50 && atSelect.rows === 31,
+    `${atSelect.chapters} capítulos · ${atSelect.rows} filas`
+  );
+  check('AT: el texto de Génesis 1 se lee en la NTV', /En el principio, Dios creó/.test(atSelect.text));
+
+  await visit(`${BASE}/exegesis?libro=genesis&cap=1`, 'exegesis-genesis1');
+  await page.waitForSelector('.exg-grid', { timeout: 8000 });
+  const genesis1 = await page.evaluate(() => ({
+    notice: document.querySelector('.exg__notice')?.textContent || '',
+    witnesses: document.querySelectorAll('.exg-grid__witness').length,
+    ntvCells: document.querySelectorAll('.exg-row__cell--ntv').length,
+    codexCells: document.querySelectorAll('.exg-row__cell--codex').length,
+    parallel: Boolean(document.querySelector('[aria-label="Las dos columnas, versículo a versículo"]')),
+    codexMode: Boolean(document.querySelector('[aria-label="Solo el Codex Sinaiticus"]')),
+    chapters: document.querySelectorAll('#exg-chapter option').length
+  }));
+  check(
+    'AT: Génesis 1 sin fragmento del Codex se lee solo en la NTV',
+    genesis1.witnesses === 1 && genesis1.ntvCells > 25 && genesis1.codexCells === 0 && !genesis1.parallel && !genesis1.codexMode,
+    JSON.stringify(genesis1)
+  );
+  check(
+    'AT: el aviso explica que el Codex no conserva ese capítulo',
+    /no conserva Génesis 1/i.test(genesis1.notice),
+    genesis1.notice
+  );
+
+  await visit(`${BASE}/exegesis?libro=genesis&cap=21`, 'exegesis-genesis21');
+  await page.waitForSelector('.exg-grid', { timeout: 8000 });
+  const genesis21 = await page.evaluate(() => ({
+    notice: document.querySelector('.exg__notice')?.textContent || '',
+    witnesses: document.querySelectorAll('.exg-grid__witness').length,
+    codex: document.querySelector('.exg-row[data-v="26"] .exg-row__cell--codex')?.textContent || '',
+    ntv: document.querySelector('.exg-row[data-v="26"] .exg-row__cell--ntv')?.textContent || ''
+  }));
+  check(
+    'AT: en un capítulo con fragmento, Génesis 21 vuelve a las dos columnas',
+    genesis21.witnesses === 2 && !/no conserva Génesis 21/i.test(genesis21.notice),
+    `${genesis21.witnesses} testigos · ${genesis21.notice}`
+  );
+  check(
+    'AT: el fragmento griego de Génesis 21 se alinea con la NTV',
+    /αβιμελεχ/.test(genesis21.codex) && /Abi/.test(genesis21.ntv),
+    `${genesis21.codex.slice(0, 32)} · ${genesis21.ntv.slice(0, 32)}`
+  );
+
+  await visit(`${BASE}/exegesis?libro=tobit&cap=1`, 'exegesis-tobit1');
+  await page.waitForSelector('.exg-grid', { timeout: 8000 });
+  const tobit = await page.evaluate(() => ({
+    notice: document.querySelector('.exg__notice')?.textContent || '',
+    witnesses: document.querySelectorAll('.exg-grid__witness').length,
+    codexCells: document.querySelectorAll('.exg-row__cell--codex').length,
+    ntvCells: document.querySelectorAll('.exg-row__cell--ntv').length,
+    ntvMode: Boolean(document.querySelector('[aria-label="Solo la NTV · Nueva Traducción Viviente"]')),
+    text: document.querySelector('.exg-row__cell--codex')?.textContent || ''
+  }));
+  check(
+    'Codex: Tobit es un libro solo-Codex y no muestra la NTV',
+    tobit.witnesses === 1 && tobit.codexCells > 10 && tobit.ntvCells === 0 && !tobit.ntvMode,
+    JSON.stringify({ ...tobit, text: tobit.text.slice(0, 30) })
+  );
+  check('Codex: Tobit 1:1 abre el texto griego', /τωβειθ/.test(tobit.text), tobit.text.slice(0, 42));
+
+  await visit(`${BASE}/biblia/ntv?libro=tobit&cap=1`, 'ntv-tobit');
+  const ntvTobit = await page.evaluate(() => ({
+    h1: document.querySelector('h1')?.textContent.trim(),
+    link: document.querySelector('.empty-state a')?.getAttribute('href')
+  }));
+  check(
+    'AT: la NTV remite al Codex cuando el libro no está en español',
+    ntvTobit.h1 === 'Tobit solo está en el Codex' && ntvTobit.link === `${PREFIX}/exegesis?libro=tobit`,
+    JSON.stringify(ntvTobit)
+  );
+
+  await visit(`${BASE}/exegesis?libro=salmos&cap=151`, 'exegesis-salmos151');
+  await page.waitForSelector('.exg-grid', { timeout: 8000 });
+  const psalm151 = await page.evaluate(() => ({
+    notice: [...document.querySelectorAll('.exg__notice')].map(el => el.textContent.trim()),
+    witnesses: document.querySelectorAll('.exg-grid__witness').length,
+    codexCells: document.querySelectorAll('.exg-row__cell--codex').length,
+    ntvCells: document.querySelectorAll('.exg-row__cell--ntv').length,
+    chapter151: Boolean(document.querySelector('#exg-chapter option[value="151"]'))
+  }));
+  check(
+    'AT: el Salmo 151 solo existe en el Codex y se puede abrir',
+    psalm151.chapter151 && psalm151.witnesses === 1 && psalm151.codexCells > 5 && psalm151.ntvCells === 0,
+    JSON.stringify(psalm151)
+  );
+  check(
+    'AT: Salmos avisa de la numeración de la Septuaginta',
+    psalm151.notice.some(n => /Salmo 151/.test(n)),
+    psalm151.notice.join(' · ')
+  );
+
+  await visit(`${BASE}/exegesis?libro=2-esdras&cap=1`, 'exegesis-2esdras1');
+  await page.waitForSelector('.exg-grid', { timeout: 8000 });
+  check(
+    'AT: 2 Esdras avisa de que reúne Esdras y Nehemías',
+    /reúne Esdras y Nehemías/.test(await text('.exg__notice')),
+    (await text('.exg__notice')).slice(0, 80)
+  );
+
+  /* Buscador global del AT desde el lector NTV. */
+  await visit(`${BASE}/biblia/ntv?libro=genesis&cap=1`, 'ntv-genesis-buscar');
+  await page.waitForSelector('.ntv-grid', { timeout: 8000 });
+  await page.click('#ntv-search');
+  await page.type('#ntv-search', 'principio');
+  await page.waitForSelector('.bsearch__hit', { timeout: 4000 });
+  check('Buscador AT: encuentra en el libro abierto', (await page.$$eval('.bsearch__hit', els => els.length)) >= 2);
+  await page.click('.bsearch__more');
+  await page.waitForFunction(
+    () => /Todo el Antiguo Testamento/.test(document.querySelector('.bsearch__scope')?.textContent || ''),
+    { timeout: 60000 }
+  );
+  const atGlobal = await page.$$eval('.bsearch__hit', els => els.slice(0, 3).map(el => el.textContent.replace(/\s+/g, ' ').trim()));
+  check(
+    'Buscador AT: la búsqueda global incluye Génesis 1:1',
+    atGlobal.some(hit => /^Gn 1:1/.test(hit)),
+    atGlobal.join(' · ').slice(0, 100)
+  );
+  const atOther = await text('.bsearch__more');
+  check('Buscador AT: ofrece saltar al Nuevo Testamento', /Nuevo Testamento/.test(atOther), atOther);
+  await page.evaluate(() => document.querySelector('.bsearch__more').click());
+  await page.waitForFunction(
+    () => /Todo el Nuevo Testamento/.test(document.querySelector('.bsearch__scope')?.textContent || ''),
+    { timeout: 60000 }
+  );
+  const ntGlobal = await page.$$eval('.bsearch__hit', els => els.slice(0, 3).map(el => el.textContent.replace(/\s+/g, ' ').trim()));
+  check(
+    'Buscador AT: el salto al NT cambia el índice y devuelve resultados',
+    ntGlobal.length > 0 && ntGlobal.every(hit => !/^Gn /.test(hit)),
+    ntGlobal.join(' · ').slice(0, 100)
+  );
+  await page.keyboard.press('Escape');
+
   /* --- móvil --- */
   const noOverflow = async (url, name) => {
     await page.setViewport({ width: 400, height: 880 });
@@ -620,6 +934,20 @@ if (WITH_BROWSER) {
     'NTV (móvil): sin desbordamiento horizontal',
     ntvMobile.scroll <= ntvMobile.client + 1,
     `${ntvMobile.scroll}px vs ${ntvMobile.client}px`
+  );
+
+  const genesisMobile = await noOverflow(`${BASE}/biblia/ntv?libro=genesis&cap=1`, 'ntv-genesis1-movil');
+  check(
+    'AT (móvil): Génesis 1 sin desbordamiento horizontal',
+    genesisMobile.scroll <= genesisMobile.client + 1,
+    `${genesisMobile.scroll}px vs ${genesisMobile.client}px`
+  );
+
+  const tobitMobile = await noOverflow(`${BASE}/exegesis?libro=tobit&cap=1`, 'exegesis-tobit1-movil');
+  check(
+    'Codex (móvil): Tobit se lee a una columna sin desbordamiento',
+    tobitMobile.scroll <= tobitMobile.client + 1 && tobitMobile.cells > 5,
+    `${tobitMobile.scroll}px vs ${tobitMobile.client}px · ${tobitMobile.cells} celdas`
   );
 
   await browser.close();

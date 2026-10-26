@@ -4,8 +4,16 @@ import { Link, useSearchParams } from 'react-router-dom';
 import BibleSearch from '../components/BibleSearch';
 import BibleCta from '../components/BibleCta';
 import LexiconPanel from '../components/LexiconPanel';
+import NtvInline from '../components/NtvInline';
 import VersePopover, { ApparatusBody, LexiconBody, NoteBody } from '../components/VersePopover';
-import { WITNESS_ATTRIBUTION, WITNESS_SOURCE, witnessLabel, witnessLegend } from '../data/exegesis';
+import {
+  NT_BOOKS,
+  OT_BOOKS,
+  WITNESS_ATTRIBUTION,
+  WITNESS_SOURCE,
+  witnessLabel,
+  witnessLegend
+} from '../data/exegesis';
 import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadLemmas, loadLexicon, loadWitnessBook } from '../lib/exegesisTexts';
 import { hasSelection } from '../lib/selection';
@@ -43,6 +51,16 @@ const MODES = [
   { id: 'codex', label: 'Solo el Codex Sinaiticus', short: 'Codex' },
   { id: 'ntv', label: 'Solo la NTV · Nueva Traducción Viviente', short: 'NTV' }
 ];
+
+/** Avisos de numeración distinta entre la Septuaginta y la NTV. */
+const NUMBERING_NOTICE = {
+  salmos:
+    'El Codex sigue la Septuaginta: incluye el Salmo 151 y la numeración de los Salmos puede no coincidir con la NTV.',
+  jeremias:
+    'La Septuaginta del Codex ordena y numera Jeremías de forma distinta a la NTV; la correspondencia no es verso a verso.',
+  ester:
+    'El Codex transmite Ester con las adiciones deuterocanónicas y una numeración que puede no coincidir con la NTV.'
+};
 
 const prefersReduced = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -219,7 +237,7 @@ export default function Exegesis() {
 
   const [index, setIndex] = useState({ status: 'loading', data: null });
   const [ntv, setNtv] = useState(null);
-  const [codex, setCodex] = useState(null);
+  const [codex, setCodex] = useState(undefined);
   const [lemas, setLemas] = useState(null);
   const [lexicon, setLexicon] = useState(null);
   const [lexiconStatus, setLexiconStatus] = useState('loading');
@@ -276,10 +294,20 @@ export default function Exegesis() {
     [index.data, bookId]
   );
 
+  const hasNtv = Boolean(bookMeta?.ntv.verses);
+  const hasCodex = Boolean(bookMeta?.codex.verses);
+
   /* ------------------------------- testigos ------------------------------- */
 
   useEffect(() => {
+    if (!bookMeta) return undefined;
     let alive = true;
+    if (!hasNtv) {
+      setNtv(null);
+      return () => {
+        alive = false;
+      };
+    }
     setNtv(null);
     loadWitnessBook('ntv', bookId)
       .then(data => alive && setNtv(data))
@@ -287,10 +315,17 @@ export default function Exegesis() {
     return () => {
       alive = false;
     };
-  }, [bookId]);
+  }, [bookId, bookMeta, hasNtv]);
 
   useEffect(() => {
+    if (!bookMeta) return undefined;
     let alive = true;
+    if (!hasCodex) {
+      setCodex(null);
+      return () => {
+        alive = false;
+      };
+    }
     setCodex(undefined);
     loadWitnessBook('codex', bookId)
       .then(data => alive && setCodex(data))
@@ -298,10 +333,14 @@ export default function Exegesis() {
     return () => {
       alive = false;
     };
-  }, [bookId]);
+  }, [bookId, bookMeta, hasCodex]);
 
   /* Mapas de lemas del libro abierto: una entrada por palabra del Codex. */
   useEffect(() => {
+    if (!bookMeta || !hasCodex) {
+      setLemas(null);
+      return undefined;
+    }
     let alive = true;
     setLemas(null);
     loadLemmas(bookId)
@@ -310,7 +349,7 @@ export default function Exegesis() {
     return () => {
       alive = false;
     };
-  }, [bookId]);
+  }, [bookId, bookMeta, hasCodex]);
 
   const ntvChapter = useMemo(
     () => (ntv && !ntv.error ? ntv.chapters.find(c => c.num === chapterNum) || null : null),
@@ -322,7 +361,23 @@ export default function Exegesis() {
     [codex, chapterNum]
   );
 
-  const loading = !ntv || (codex === undefined && Boolean(bookMeta?.codex.verses));
+  const chapterHasNtv = Boolean(ntvChapter);
+  const chapterHasCodex = Boolean(codexChapter);
+
+  const chapterNums = useMemo(() => {
+    const ntvChapters = hasNtv
+      ? ntv?.chapters?.map(c => c.num) || bookMeta?.ntv.chapters || []
+      : [];
+    const codexChapters = hasCodex
+      ? codex?.chapters?.map(c => c.num) || bookMeta?.codex.chapters || []
+      : [];
+    return [...new Set([...ntvChapters, ...codexChapters])].sort((a, b) => a - b);
+  }, [hasNtv, hasCodex, ntv, codex, bookMeta]);
+
+  const loading =
+    !bookMeta ||
+    (hasNtv && !ntv) ||
+    (hasCodex && codex === undefined);
 
   /* ------------------------------- rangos --------------------------------- */
 
@@ -458,10 +513,12 @@ export default function Exegesis() {
 
   // Si el capítulo pedido no existe en el libro, se corrige al primero que haya.
   useEffect(() => {
-    if (!ntv || ntv.error || !ntv.chapters.length) return;
-    if (!ntv.chapters.some(c => c.num === chapterNum)) goto({ chapter: ntv.chapters[0].num, range: '' }, false);
+    if (!bookMeta || !chapterNums.length) return;
+    if (!chapterNums.includes(chapterNum)) {
+      goto({ chapter: chapterNums[0], range: '' }, false);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ntv, chapterNum]);
+  }, [bookMeta, chapterNums, chapterNum]);
 
   /* --------------------------- scroll de la rejilla ----------------------- */
 
@@ -490,23 +547,47 @@ export default function Exegesis() {
     body.scrollTo({ top: Math.max(0, top), behavior: prefersReduced() ? 'auto' : 'smooth' });
   }, [loading, selected, bookId, chapterNum, range.id, rows]);
 
+  /* ------------------------------- columnas ------------------------------- */
+
+  const availableModes = MODES.filter(m => {
+    if (m.id === 'paralelo') return chapterHasCodex && chapterHasNtv;
+    if (m.id === 'codex') return chapterHasCodex;
+    return chapterHasNtv;
+  });
+  const viewMode = availableModes.some(m => m.id === mode)
+    ? mode
+    : availableModes[0]?.id || 'ntv';
+  const showCodex = viewMode !== 'ntv' && chapterHasCodex;
+  const showNtv = viewMode !== 'codex' && chapterHasNtv;
+  const columns = [showCodex, showNtv].filter(Boolean).length;
+
   /* --------------------------------- SEO ---------------------------------- */
 
+  const seoWitness =
+    chapterHasCodex && chapterHasNtv
+      ? 'Codex Sinaiticus y NTV'
+      : chapterHasCodex
+        ? 'Codex Sinaiticus'
+        : 'NTV';
   const seoTitle = bookMeta
-    ? `Exégesis · ${bookMeta.name} ${chapterNum} — Codex Sinaiticus y NTV`
-    : 'Exégesis comparada — Codex Sinaiticus y NTV';
+    ? `Exégesis · ${bookMeta.name} ${chapterNum} — ${seoWitness}`
+    : `Exégesis comparada — ${seoWitness}`;
 
   useSeo({
     title: seoTitle,
     description:
-      'Lectura paralela del Nuevo Testamento, versículo a versículo: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.'
+      chapterHasCodex && chapterHasNtv
+        ? 'Lectura paralela de la Biblia, versículo a versículo: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.'
+        : chapterHasCodex
+          ? 'Transcripción diplomática del Codex Sinaiticus, versículo a versículo, con su aparato crítico.'
+          : 'Lectura de la Nueva Traducción Viviente, versículo a versículo, con sus notas del traductor.'
   });
 
   /* ------------------------------ facsímil -------------------------------- */
 
-  const facsimile = bookMeta
+  const facsimile = bookMeta?.codexNo && chapterHasCodex
     ? `https://www.codexsinaiticus.org/en/manuscript.aspx?book=${bookMeta.codexNo}&chapter=${chapterNum}&verse=${selected || range.from || 1}`
-    : 'https://www.codexsinaiticus.org/';
+    : null;
 
   /* ------------------------------ popovers -------------------------------- */
 
@@ -597,10 +678,6 @@ export default function Exegesis() {
     );
   }
 
-  const modeDef = MODES.find(m => m.id === mode) || MODES[0];
-  const showCodex = mode !== 'ntv';
-  const showNtv = mode !== 'codex';
-  const columns = [showCodex, showNtv].filter(Boolean).length;
   const wordEntry =
     pop?.kind === 'word' && lexicon
       ? lexicon.entries.find(item => item.strong === pop.analysis?.[1]) || null
@@ -618,15 +695,58 @@ export default function Exegesis() {
         </nav>
 
         <header className="exg__head">
-          <p className="eyebrow">Exégesis comparada</p>
-          <h1>Codex Sinaiticus × Nueva Traducción Viviente</h1>
+          <p className="eyebrow">
+            {chapterHasCodex && chapterHasNtv
+              ? 'Exégesis comparada'
+              : chapterHasCodex
+                ? 'Codex Sinaiticus'
+                : 'Biblia NTV'}
+          </p>
+          <h1>
+            {chapterHasCodex && chapterHasNtv
+              ? 'Codex Sinaiticus × Nueva Traducción Viviente'
+              : chapterHasCodex
+                ? 'Codex Sinaiticus'
+                : 'Nueva Traducción Viviente'}
+          </h1>
           <p className="exg__lead">
-            El mismo pasaje leído en dos testigos, versículo a versículo: el uncial griego del siglo
-            &nbsp;IV, con su aparato crítico, y la traducción al español. Pulsa un versículo para
-            seguirlo en las dos columnas, y los sigilos <b>∗</b> o las marcas de nota para leer la
-            variante o la nota en su sitio.
+            {chapterHasCodex && chapterHasNtv ? (
+              <>
+                El mismo pasaje leído en dos testigos, versículo a versículo: el uncial griego del
+                siglo &nbsp;IV, con su aparato crítico, y la traducción al español. Pulsa un versículo
+                para seguirlo en las dos columnas, y los sigilos <b>∗</b> o las marcas de nota para
+                leer la variante o la nota en su sitio.
+              </>
+            ) : chapterHasCodex ? (
+              <>
+                Transcripción diplomática del Codex Sinaiticus, versículo a versículo, con su aparato
+                crítico.{' '}
+                {hasNtv
+                  ? 'Este pasaje solo se conserva en el Codex: la NTV no lo incluye.'
+                  : 'Este libro no forma parte de la NTV: se ofrece solo el testigo griego.'}
+              </>
+            ) : (
+              <>
+                El texto de la Nueva Traducción Viviente, versículo a versículo, con sus notas del
+                traductor. El Codex Sinaiticus no conserva este capítulo, así que aquí no hay columna
+                griega.
+              </>
+            )}
           </p>
         </header>
+
+        {(bookMeta?.notice || (hasNtv && !chapterHasCodex) || (hasCodex && !chapterHasNtv)) && (
+          <p className="exg__notice">
+            {bookMeta?.notice ||
+              (hasNtv && !chapterHasCodex
+                ? `El Codex Sinaiticus no conserva ${bookMeta?.name} ${chapterNum}; se muestra la NTV.`
+                : `La NTV no incluye ${bookMeta?.name} ${chapterNum}; se muestra solo el Codex.`)}
+          </p>
+        )}
+
+        {bookMeta && NUMBERING_NOTICE[bookMeta.id] && chapterHasCodex && (
+          <p className="exg__notice">{NUMBERING_NOTICE[bookMeta.id]}</p>
+        )}
 
         {/* ------------------------------- barra ------------------------------- */}
         <div className="reader__bar exg__bar">
@@ -638,11 +758,35 @@ export default function Exegesis() {
                 value={bookId}
                 onChange={event => goto({ bookId: event.target.value, chapter: 1, range: '' }, true)}
               >
-                {index.data.books.map(b => (
-                  <option key={b.id} value={b.id}>
-                    {b.name}
-                  </option>
-                ))}
+                <optgroup label={`Antiguo Testamento (${OT_BOOKS.length})`}>
+                  {index.data.books
+                    .filter(b => b.testament === 'AT' && b.ntv.verses)
+                    .map(b => (
+                      <option key={b.id} value={b.id}>
+                        {b.name}
+                      </option>
+                    ))}
+                </optgroup>
+                <optgroup label={`Nuevo Testamento (${NT_BOOKS.length})`}>
+                  {index.data.books
+                    .filter(b => b.testament === 'NT' && b.ntv.verses)
+                    .map(b => (
+                      <option key={b.id} value={b.id}>
+                        {b.name}
+                      </option>
+                    ))}
+                </optgroup>
+                <optgroup
+                  label={`Solo en el Codex (${index.data.books.filter(b => b.codexOnly && b.codex.verses).length})`}
+                >
+                  {index.data.books
+                    .filter(b => b.codexOnly && b.codex.verses)
+                    .map(b => (
+                      <option key={b.id} value={b.id}>
+                        {b.name}
+                      </option>
+                    ))}
+                </optgroup>
               </select>
             </div>
             <div className="exg__select">
@@ -652,7 +796,7 @@ export default function Exegesis() {
                 value={chapterNum}
                 onChange={event => goto({ chapter: Number(event.target.value), range: '' }, true)}
               >
-                {(ntv?.chapters?.length ? ntv.chapters.map(c => c.num) : bookMeta?.codex.chapters || []).map(c => (
+                {chapterNums.map(c => (
                   <option key={c} value={c}>
                     {c}
                   </option>
@@ -698,6 +842,8 @@ export default function Exegesis() {
             id="exg-search"
             localRecords={searchRecords}
             scopeLabel={`${bookMeta?.name || ''} (libro abierto)`}
+            testament={bookMeta?.testament || 'NT'}
+            includeCodexOnly
             onPick={record => {
               const q = new URLSearchParams(params);
               q.set('libro', record.bookId);
@@ -711,12 +857,12 @@ export default function Exegesis() {
 
           <div className="reader__bar-group">
             <div className="exg__modes" role="group" aria-label="Columnas que se ven">
-              {MODES.map(m => (
+              {availableModes.map(m => (
                 <button
                   key={m.id}
                   type="button"
-                  className={`rb-btn rb-btn--icon${mode === m.id ? ' is-active' : ''}`}
-                  aria-pressed={mode === m.id}
+                  className={`rb-btn rb-btn--icon${viewMode === m.id ? ' is-active' : ''}`}
+                  aria-pressed={viewMode === m.id}
                   title={m.label}
                   aria-label={m.label}
                   onClick={() => setMode(m.id)}
@@ -767,34 +913,43 @@ export default function Exegesis() {
               <span className="rb-btn__text">Diccionario</span>
               <span aria-hidden="true">α</span>
             </button>
-            <a
-              className="rb-btn"
-              href={facsimile}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Facsímil del Codex Sinaiticus en codexsinaiticus.org"
-            >
-              <span className="rb-btn__text">Facsímil</span>
-              <span aria-hidden="true">↗</span>
-            </a>
+            {facsimile && (
+              <a
+                className="rb-btn"
+                href={facsimile}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Facsímil del Codex Sinaiticus en codexsinaiticus.org"
+              >
+                <span className="rb-btn__text">Facsímil</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            )}
           </div>
         </div>
 
         {/* ------------------------------ testigos ----------------------------- */}
         <div className="exg__witness">
-          <span className="exg-chip">
-            📜 <b>Codex Sinaiticus</b> · s. IV · uncial griego
-          </span>
-          {codexChapter?.folio && (
+          {chapterHasCodex && (
+            <span className="exg-chip">
+              📜 <b>Codex Sinaiticus</b> · s. IV · uncial griego
+            </span>
+          )}
+          {chapterHasCodex && codexChapter?.folio && (
             <span className="exg-chip">
               Cuaderno <b>{codexChapter.quire}</b> · folio <b>{codexChapter.folio}{codexChapter.side}</b>
               {codexChapter.library ? ` · ${codexChapter.library}` : ''}
               {codexChapter.scribe ? ` · escriba ${codexChapter.scribe}` : ''}
             </span>
           )}
-          <span className="exg-chip">
-            NTV · <b>Nueva Traducción Viviente</b> (es)
-          </span>
+          {chapterHasNtv && (
+            <span className="exg-chip">
+              NTV · <b>Nueva Traducción Viviente</b> (es)
+            </span>
+          )}
+          {!chapterHasNtv && chapterHasCodex && (
+            <span className="exg-chip">Solo Codex · pasaje no incluido en la NTV</span>
+          )}
         </div>
 
         {/* ------------------------------- rejilla ----------------------------- */}
@@ -838,7 +993,7 @@ export default function Exegesis() {
               {rows.map(row =>
                 row.kind === 'section' ? (
                   <p className="exg-grid__section" key={row.key}>
-                    {row.title}
+                    <NtvInline text={row.title} verse={row.verse || 1} onNote={openNote} />
                   </p>
                 ) : (
                   <div
@@ -921,8 +1076,9 @@ export default function Exegesis() {
         )}
 
         {/* ------------------------------ paneles ------------------------------ */}
-        {!loading && rows.length > 0 && (
-          <div className="exg__panels">
+        {!loading && rows.length > 0 && (chapterHasCodex || chapterHasNtv) && (
+          <div className={`exg__panels${chapterHasCodex && chapterHasNtv ? '' : ' exg__panels--one'}`}>
+            {chapterHasCodex && (
             <section className="exg-panel" aria-label="Aparato crítico">
               <h2>
                 <span>Aparato crítico · Codex</span>
@@ -973,7 +1129,9 @@ export default function Exegesis() {
                 </span>
               </div>
             </section>
+            )}
 
+            {chapterHasNtv && (
             <section className="exg-panel" aria-label="Notas de la NTV">
               <h2>
                 <span>Notas de la NTV</span>
@@ -1010,13 +1168,18 @@ export default function Exegesis() {
                 </ol>
               )}
             </section>
+            )}
           </div>
         )}
 
         <BibleCta
           exclude="exegesis"
           passage={`${bookMeta?.name} ${chapterNum}${selected ? `:${selected}` : ''}`}
-          title="El mismo pasaje, en los otros dos lectores"
+          title={
+            chapterHasNtv
+              ? 'El mismo pasaje, en los otros dos lectores'
+              : 'El mismo pasaje, en el otro lector'
+          }
         />
 
         <footer className="exg__credits">

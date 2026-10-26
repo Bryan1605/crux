@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { exegesisPath, ntvPath, parsePassage } from '../data/exegesis';
+import { ALL_BOOKS, exegesisPath, ntvPath, parsePassage } from '../data/exegesis';
 
 import './BibleCta.css';
 
@@ -26,7 +26,7 @@ const CARDS = [
     glyph: '✦',
     eyebrow: 'Biblia NTV',
     title: 'El texto en español',
-    text: 'La Nueva Traducción Viviente, capítulo a capítulo, con sus notas del traductor.',
+    text: 'La Nueva Traducción Viviente completa, capítulo a capítulo, con sus notas del traductor.',
     to: '/biblia/ntv'
   },
   {
@@ -41,7 +41,10 @@ const CARDS = [
 
 export default function BibleCta({ passage = '', exclude = '', title = 'Sigue leyendo', className = '' }) {
   const parsed = passedPassage(passage);
-  const cards = CARDS.filter(card => card.id !== exclude).map(card => ({
+  const meta = parsed ? ALL_BOOKS.find(book => book.id === parsed.bookId) : null;
+  const cards = CARDS.filter(
+    card => card.id !== exclude && (card.id !== 'ntv' || !meta?.codexOnly)
+  ).map(card => ({
     ...card,
     to: card.id === 'ntv' ? ntvPath(parsed) : card.id === 'exegesis' ? exegesisPath(parsed) : card.to
   }));
@@ -53,12 +56,17 @@ export default function BibleCta({ passage = '', exclude = '', title = 'Sigue le
         <p className="bcta__lead">
           {parsed ? (
             <>
-              El mismo pasaje, <b>{passage}</b>, en los tres lectores.
+              El mismo pasaje, <b>{passage}</b>,{' '}
+              {cards.length === 3
+                ? 'en los tres lectores.'
+                : cards.length === 2
+                  ? 'en los dos lectores disponibles.'
+                  : 'en el lector disponible.'}
             </>
           ) : passage ? (
             <>
-              La cita <b>{passage}</b> queda fuera del Nuevo Testamento: estos lectores recorren el NT
-              completo.
+              La cita <b>{passage}</b> no se pudo situar en el canon: abre cualquiera de los lectores
+              para buscarla por palabras.
             </>
           ) : (
             'La Escritura en tres lectores: la tradición de los Padres, el texto en español y el griego del Sinaítico.'

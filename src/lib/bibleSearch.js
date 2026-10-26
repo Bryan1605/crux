@@ -100,7 +100,7 @@ export function buildRecords({ witness, bookId, bookName, chapters }) {
 }
 
 /**
- * Registros de todo el Nuevo Testamento a partir de `buscar.json`.
+ * Registros de todo un testamento a partir de `buscar-at.json` o `buscar-nt.json`.
  * @param {{ ntv:any, codex:any }} index
  * @param {Array<{id:string,name:string,order:number}>} books
  */

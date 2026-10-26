@@ -1,7 +1,7 @@
 /**
  * Exégesis — parsers puros (Node, sin red ni disco).
  *
- *   parseNtv(raw)          → libros del NT con capítulos, versículos, secciones y notas
+ *   parseNtv(raw)          → los 66 libros con capítulos, versículos, secciones y notas
  *   parseCodexFolio(html)  → versículos griegos + aparato desde una página del Codex
  *
  * Los usan `scripts/build-ntv.mjs`, `scripts/fetch-codex.mjs` y `scripts/qa-exegesis.mjs`.
@@ -48,7 +48,10 @@ function findVerseStarts(line, last) {
   let m;
   while ((m = re.exec(line))) {
     const n = Number(m[1]);
-    const ok = prev === 0 ? n === 1 : n > prev && n <= prev + 3;
+    const before = line.slice(0, m.index);
+    const opensLine = m.index === 0;
+    const afterStop = /[.!?…»”"')]\s*$/.test(before);
+    const ok = (opensLine || afterStop) && (prev === 0 ? n === 1 : n > prev && n <= prev + 3);
     if (ok) {
       const index = m.index + m[0].length - m[1].length;
       out.push({ num: n, index, end: index + m[1].length });
@@ -93,8 +96,11 @@ function headingKind(t, prev, next) {
  */
 const cleanNoteText = t => String(t).replace(/[\s\u00a0]*[<>\u2039\u203A]{1,3}\s*$/, '').trim();
 
+/** Corrige separaciones de versalita que dejó el volcado del PDF (`S eñor`). */
+const cleanSmallCaps = t => String(t).replace(/\bS eñor\b/g, 'Señor');
+
 /**
- * Convierte el volcado en texto de la NTV en libros navegables del NT.
+ * Convierte el volcado en texto de la NTV en libros navegables de la Biblia.
  *
  * El fichero es un flujo plano (sin líneas en blanco) donde:
  *   - el nombre de un libro ocupa su propia línea y le sigue el capítulo `1`;
@@ -115,6 +121,14 @@ export function parseNtv(raw) {
   let chap = null;
   let verse = null;
   let inNotes = false;
+  // Los cinco «Libro…» de los Salmos se guardan hasta que empieza el salmo
+  // siguiente, para que el título caiga dentro de su capítulo y no al final del
+  // anterior.
+  let pendingPsalmSection = null;
+  // Texto que la extracción del PDF dejó antes del número «1» del versículo
+  // (pasa, por ejemplo, al comienzo de Nehemías 8). Se recupera al abrir el
+  // versículo 1 en vez de perderlo como si fuera un epígrafe.
+  let preVerse = '';
 
   for (let i = 0; i < lines.length; i += 1) {
     const t = lines[i];
@@ -135,7 +149,7 @@ export function parseNtv(raw) {
         i += 1;
         text += ' ' + lines[i];
       }
-      const ref = /^([1-3]?\s?[A-ZÁÉÍÓÚÑ][\wáéíóúñÁÉÍÓÚÑ\s]*?)\s(\d+):(\d+)\b/.exec(text);
+      const ref = /^([1-4]?\s?[A-ZÁÉÍÓÚÑ][\wáéíóúñÁÉÍÓÚÑ\s]*?)\s(\d+):(\d+)\b/.exec(text);
       const target = ref ? resolveBookName(ref[1].trim()) : null;
       const body = cleanNoteText(ref ? text.slice(ref.index + ref[0].length) : text);
       if (target) {
@@ -150,45 +164,111 @@ export function parseNtv(raw) {
     if (/^Notas de /.test(t)) inNotes = true;
     if (inNotes) continue;
 
-    // 2) Libro: nombre exacto seguido de un capítulo (`1`) o, en los libros de un
-    //    solo capítulo (Filemón, 2 Juan, 3 Juan, Judas), directamente del versículo 1.
+    // 2) Libro: nombre exacto seguido de un capítulo (`1`), de un versículo 1
+    //    (libros de un solo capítulo) o, en Salmos, del primer «Salmo N».
+    //    Se exige el orden canónico para que un título de sección que coincida
+    //    con el nombre de otro libro no abra un libro falso.
     const meta2 = resolveBookName(t);
-    if (meta2 && (/^\d{1,3}$/.test(next) || /^1\s+\S/.test(next))) {
+    const nextIsChapter = /^\d{1,3}$/.test(next);
+    const nextIsOneChapterVerse = /^1\s+\S/.test(next);
+    const nextIsPsalmStart = meta2?.id === 'salmos' && /^(?:Libro\b|Salmo\s+\d)/.test(next);
+    const expectedOrder = book ? book.order + 1 : 1;
+    if (
+      meta2 &&
+      meta2.ntv &&
+      meta2.order === expectedOrder &&
+      (nextIsChapter || nextIsOneChapterVerse || nextIsPsalmStart)
+    ) {
       book = { ...meta2, chapters: [] };
       books.push(book);
       verse = null;
-      if (/^\d{1,3}$/.test(next)) {
+      pendingPsalmSection = null;
+      preVerse = '';
+      if (nextIsPsalmStart) {
+        chap = null;
+      } else if (nextIsChapter) {
         chap = null;
       } else {
-        // Libro de un solo capítulo: el capítulo 1 ya está implícito.
+        // Libro de un solo capítulo: el capítulo 1 ya está implícito y la línea
+        // siguiente (que empieza por «1 ») se procesa como su versículo 1.
         chap = { num: 1, sections: [], verses: [] };
         book.chapters.push(chap);
       }
       continue;
     }
 
-    if (!book) continue; // introducción anterior al NT
+    if (!book) continue; // introducción anterior a Génesis
 
-    // 3) Capítulo: línea con solo un número.
-    if (/^\d{1,3}$/.test(t)) {
+    // 3) Salmos: la NTV no numera los capítulos con una línea suelta, sino con
+    //    «Salmo N» (a veces con una marca de nota: «Salmo 25[ah]»).
+    if (book.id === 'salmos') {
+      const psalm = /^Salmo\s+(\d{1,3})(?:\[[a-z]{1,2}\])?$/.exec(t);
+      if (psalm) {
+        chap = { num: Number(psalm[1]), sections: [], verses: [] };
+        if (pendingPsalmSection) {
+          chap.sections.push({ title: pendingPsalmSection, verse: 1 });
+          pendingPsalmSection = null;
+        }
+        book.chapters.push(chap);
+        verse = null;
+        preVerse = '';
+        continue;
+      }
+      if (/^Libro\s+(?:Primero|Segundo|Tercero|Cuarto|Quinto)\b/.test(t)) {
+        pendingPsalmSection = t;
+        continue;
+      }
+    }
+
+    // 4) Capítulo: línea con solo un número. Se exige que sea el siguiente
+    //    capítulo y que no lo siga otro número: así se descartan los números de
+    //    página sueltos que la extracción dejó entre versículos (p. ej. «139»
+    //    en Esdras 2 o los «74» de Nehemías 7).
+    const nextChapter = (chap?.num || 0) + 1;
+    if (
+      /^\d{1,3}$/.test(t) &&
+      Number(t) === nextChapter &&
+      !/^\d{1,3}$/.test(next)
+    ) {
       chap = { num: Number(t), sections: [], verses: [] };
       book.chapters.push(chap);
       verse = null;
+      preVerse = '';
       continue;
     }
 
     if (!chap) continue;
 
-    // 4) Una línea de texto puede contener 0..N arranques de versículo: los
+    // 5) Salmos: todo lo que hay entre «Salmo N» y el versículo 1 es la
+    //    sobrescritura (a veces partida en varias líneas por el volcado del
+    //    PDF). Se acumula y se publica como un único título de sección, no como
+    //    fragmentos sueltos («cuerda.», «Benjamín.», «del hijo.»).
+    if (book.id === 'salmos' && !verse) {
+      const earlyStarts = /^\d{1,3}$/.test(t) ? [] : findVerseStarts(t, 0);
+      if (!earlyStarts.length && !/^\d{1,3}$/.test(t)) {
+        preVerse += (preVerse ? ' ' : '') + t;
+        continue;
+      }
+    }
+
+    // 6) Una línea de texto puede contener 0..N arranques de versículo: los
     //    versículos cortos comparten renglón («20 … 21 …»). Se buscan los números
     //    consecutivos esperados y se corta la línea en cada uno de ellos.
-    const starts = findVerseStarts(t, verse ? verse.n : 0);
+    const starts = /^\d{1,3}$/.test(t) ? [] : findVerseStarts(t, verse ? verse.n : 0);
     if (starts.length) {
       let cursor = 0;
       for (const s of starts) {
         const before = t.slice(cursor, s.index).trim();
-        if (before && verse) verse.text += ' ' + before;
-        verse = { n: s.num, text: '' };
+        if (before) {
+          if (verse) verse.text += ' ' + before;
+          else preVerse += (preVerse ? ' ' : '') + before;
+        }
+        if (!verse && book.id === 'salmos' && preVerse) {
+          chap.sections.push({ title: preVerse.trim(), verse: 1 });
+          preVerse = '';
+        }
+        verse = { n: s.num, text: s.num === 1 ? preVerse : '' };
+        if (s.num === 1) preVerse = '';
         chap.verses.push(verse);
         cursor = s.end;
       }
@@ -197,8 +277,17 @@ export function parseNtv(raw) {
       continue;
     }
 
-    // 5) Encabezado de sección o continuación del versículo.
+    // 7) Encabezado de sección, texto previo al versículo 1 o continuación.
     if (!verse) {
+      const nextStartsVerse = /^\d{1,3}\s+\S/.test(next);
+      const looksLikePreamble =
+        t.length > 64 ||
+        /[,;:]$/.test(t) ||
+        /(?:^|\s)(?:y|o|que|de|en|con|para|por|sobre|como|cuando|mientras|desde|hasta)$/iu.test(t);
+      if (nextStartsVerse && looksLikePreamble) {
+        preVerse += (preVerse ? ' ' : '') + t;
+        continue;
+      }
       if (t.length <= 64) chap.sections.push({ title: t, verse: 1 });
       continue;
     }
@@ -213,11 +302,14 @@ export function parseNtv(raw) {
   // Comillas tipográficas y limpieza final.
   for (const b of books) {
     for (const c of b.chapters) {
+      for (const s of c.sections || []) s.title = cleanSmallCaps(s.title);
       for (const v of c.verses) {
-        v.text = v.text
-          .replace(/\s+([.,;:!?»])/g, '$1')
-          .replace(/\s{2,}/g, ' ')
-          .trim();
+        v.text = cleanSmallCaps(
+          v.text
+            .replace(/\s+([.,;:!?»])/g, '$1')
+            .replace(/\s{2,}/g, ' ')
+            .trim()
+        );
       }
     }
   }

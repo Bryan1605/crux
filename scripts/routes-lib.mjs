@@ -125,7 +125,7 @@ export function siteRoutes() {
       path: '/biblia/ntv',
       title: 'Biblia NTV',
       description:
-        'La Nueva Traducción Viviente versículo a versículo, en rejilla o en pliego de dos páginas, con sus notas del traductor y un buscador por palabras.',
+        'La Nueva Traducción Viviente completa, versículo a versículo: 39 libros del Antiguo Testamento y 27 del Nuevo, en rejilla o en pliego de dos páginas, con sus notas del traductor y un buscador por palabras.',
       type: 'website',
       indexable: true
     },
@@ -133,7 +133,7 @@ export function siteRoutes() {
       path: '/exegesis',
       title: `Exégesis comparada — Codex Sinaiticus y NTV`,
       description:
-        'Lectura paralela del Nuevo Testamento, versículo a versículo: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.',
+        'Lectura paralela de la Biblia, versículo a versículo: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.',
       type: 'website',
       indexable: true
     },

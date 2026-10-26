@@ -1,54 +1,84 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { NT_BOOKS, refLabel } from '../data/exegesis';
+import { CODEX_EXTRA_BOOKS, NT_BOOKS, OT_BOOKS, refLabel } from '../data/exegesis';
 import { recordsFromIndex, runSearch, snippet } from '../lib/bibleSearch';
 import { loadSearchIndex } from '../lib/exegesisTexts';
 
 import './BibleSearch.css';
 
 const MIN_CHARS = 3;
+const TESTAMENT_LABEL = { AT: 'Antiguo Testamento', NT: 'Nuevo Testamento' };
+const AT_SEARCH_BOOKS = [...OT_BOOKS, ...CODEX_EXTRA_BOOKS];
 
 /**
  * Buscador por palabras compartido por los lectores (`/biblia/ntv` y
  * `/exegesis`).
  *
  * Busca primero en los registros que la página ya tiene en memoria (el libro
- * abierto) y, si no hay suerte, ofrece ampliar la búsqueda a todo el Nuevo
- * Testamento; ese índice pesa ~2,5 MB, así que no se descarga hasta que hace
- * falta.
+ * abierto) y, si no hay suerte, ofrece ampliar la búsqueda a todo el testamento
+ * del libro abierto. Los índices del AT y del NT están partidos: solo se
+ * descarga el que hace falta, y desde el pie se puede saltar al otro.
  *
  * @param {{
  *   localRecords: Array<object>,
  *   scopeLabel: string,
+ *   testament?: 'AT'|'NT',
+ *   includeCodexOnly?: boolean,
  *   onPick: (record: object) => void,
  *   id?: string,
  *   compact?: boolean
  * }} props
  */
-export default function BibleSearch({ localRecords, scopeLabel, onPick, id = 'bsearch', compact = false }) {
+export default function BibleSearch({
+  localRecords,
+  scopeLabel,
+  testament = 'NT',
+  includeCodexOnly = false,
+  onPick,
+  id = 'bsearch',
+  compact = false
+}) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
-  const [global, setGlobal] = useState({ status: 'idle', records: [] });
+  const [global, setGlobal] = useState({ status: 'idle', records: [], testament: null });
 
   const wrapRef = useRef(null);
   const listRef = useRef(null);
 
   const useGlobal = global.status === 'ok';
   const scope = useGlobal ? global.records : localRecords;
+  const globalTestament = global.testament || testament;
   const searching = query.trim().length >= MIN_CHARS;
   const { terms, hits, total } = useMemo(
     () => runSearch(scope, searching ? query : ''),
     [scope, query, searching]
   );
 
-  const searchAll = useCallback(() => {
-    if (global.status === 'loading' || global.status === 'ok') return;
-    setGlobal({ status: 'loading', records: [] });
-    loadSearchIndex()
-      .then(index => setGlobal({ status: 'ok', records: recordsFromIndex(index, NT_BOOKS) }))
-      .catch(() => setGlobal({ status: 'error', records: [] }));
-  }, [global.status]);
+  const searchAll = useCallback(
+    scopeId => {
+      if (global.status === 'loading') return;
+      if (global.status === 'ok' && global.testament === scopeId) return;
+      setGlobal({ status: 'loading', records: [], testament: scopeId });
+      loadSearchIndex(scopeId)
+        .then(index =>
+          setGlobal({
+            status: 'ok',
+            records: recordsFromIndex(
+              index,
+              scopeId === 'AT'
+                ? includeCodexOnly
+                  ? AT_SEARCH_BOOKS
+                  : OT_BOOKS
+                : NT_BOOKS
+            ),
+            testament: scopeId
+          })
+        )
+        .catch(() => setGlobal({ status: 'error', records: [], testament: scopeId }));
+    },
+    [global.status, global.testament, includeCodexOnly]
+  );
 
   const pick = useCallback(
     record => {
@@ -62,9 +92,16 @@ export default function BibleSearch({ localRecords, scopeLabel, onPick, id = 'bs
 
   const reset = useCallback(() => {
     setQuery('');
-    setGlobal({ status: 'idle', records: [] });
+    setGlobal({ status: 'idle', records: [], testament: null });
     setActive(0);
   }, []);
+
+  // Al cambiar de testamento (por ejemplo al abrir un libro del AT desde un
+  // resultado) el índice global anterior deja de ser el ámbito correcto.
+  useEffect(() => {
+    setGlobal({ status: 'idle', records: [], testament: null });
+    setActive(0);
+  }, [testament]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -138,7 +175,7 @@ export default function BibleSearch({ localRecords, scopeLabel, onPick, id = 'bs
       {expanded && (
         <div className="bsearch__panel">
           <p className="bsearch__scope" aria-live="polite">
-            <span>{useGlobal ? 'Todo el Nuevo Testamento' : scopeLabel}</span>
+            <span>{useGlobal ? `Todo el ${TESTAMENT_LABEL[globalTestament]}` : scopeLabel}</span>
             <span>
               {total} {total === 1 ? 'versículo' : 'versículos'}
             </span>
@@ -147,11 +184,27 @@ export default function BibleSearch({ localRecords, scopeLabel, onPick, id = 'bs
           {hits.length === 0 ? (
             <div className="bsearch__empty">
               <p>
-                Sin resultados para <b>{terms.join(' · ') || query}</b> en {useGlobal ? 'el Nuevo Testamento' : scopeLabel}.
+                Sin resultados para <b>{terms.join(' · ') || query}</b> en{' '}
+                {useGlobal ? `el ${TESTAMENT_LABEL[globalTestament]}` : scopeLabel}.
               </p>
               {!useGlobal && (
-                <button type="button" className="bsearch__more" onClick={searchAll} disabled={global.status === 'loading'}>
-                  {global.status === 'loading' ? 'Preparando el índice…' : 'Buscar en todo el Nuevo Testamento'}
+                <button
+                  type="button"
+                  className="bsearch__more"
+                  onClick={() => searchAll(testament)}
+                  disabled={global.status === 'loading'}
+                >
+                  {global.status === 'loading' ? 'Preparando el índice…' : `Buscar en todo el ${TESTAMENT_LABEL[testament]}`}
+                </button>
+              )}
+              {useGlobal && (
+                <button
+                  type="button"
+                  className="bsearch__more"
+                  onClick={() => searchAll(globalTestament === 'AT' ? 'NT' : 'AT')}
+                  disabled={global.status === 'loading'}
+                >
+                  {`Buscar en el ${TESTAMENT_LABEL[globalTestament === 'AT' ? 'NT' : 'AT']}`}
                 </button>
               )}
             </div>
@@ -179,9 +232,23 @@ export default function BibleSearch({ localRecords, scopeLabel, onPick, id = 'bs
                   </li>
                 ))}
               </ul>
-              {!useGlobal && (
-                <button type="button" className="bsearch__more" onClick={searchAll} disabled={global.status === 'loading'}>
-                  {global.status === 'loading' ? 'Preparando el índice…' : 'Buscar en todo el Nuevo Testamento'}
+              {!useGlobal ? (
+                <button
+                  type="button"
+                  className="bsearch__more"
+                  onClick={() => searchAll(testament)}
+                  disabled={global.status === 'loading'}
+                >
+                  {global.status === 'loading' ? 'Preparando el índice…' : `Buscar en todo el ${TESTAMENT_LABEL[testament]}`}
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="bsearch__more"
+                  onClick={() => searchAll(globalTestament === 'AT' ? 'NT' : 'AT')}
+                  disabled={global.status === 'loading'}
+                >
+                  {`Buscar también en el ${TESTAMENT_LABEL[globalTestament === 'AT' ? 'NT' : 'AT']}`}
                 </button>
               )}
               {useGlobal && total > hits.length && (

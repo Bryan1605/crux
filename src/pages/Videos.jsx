@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { VIDEOS } from '../data/videos';
 import { STUDIES } from '../data/estudios';
-import { NT_BOOKS } from '../data/exegesis';
+import { BIBLE_BOOKS, NT_BOOKS, OT_BOOKS } from '../data/exegesis';
 import { useSite, useSeo } from '../lib/site';
 
 import './Videos.css';
@@ -52,7 +52,8 @@ export default function Videos() {
               <h2>Todavía no hay videos publicados</h2>
               <p>
                 Las clases en video llegarán aquí. Mientras tanto, el estudio y la Biblia están
-                abiertos: {STUDIES.length} fichas y {NT_BOOKS.length} libros del Nuevo Testamento
+                abiertos: {STUDIES.length} fichas y {BIBLE_BOOKS.length} libros de la Biblia
+                ({OT_BOOKS.length} del Antiguo Testamento y {NT_BOOKS.length} del Nuevo)
                 esperando.
               </p>
               <p className="empty-state__actions">

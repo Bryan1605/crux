@@ -12,7 +12,7 @@ import { STUDIES, STUDY_CATEGORIES } from '../data/estudios';
 import { PERSONAJES } from '../data/personajes';
 import { CONCILIOS, CONCILIOS_LIST } from '../data/concilios';
 import { NARRACIONES } from '../data/narraciones';
-import { NT_BOOKS } from '../data/exegesis';
+import { BIBLE_BOOKS, NT_BOOKS, OT_BOOKS } from '../data/exegesis';
 import { VIDEOS } from '../data/videos';
 
 import './Home.css';
@@ -26,7 +26,7 @@ const CIFRAS = [
   { valor: STUDIES.length, label: 'fichas de estudio' },
   { valor: STUDY_CATEGORIES.length, label: 'categorías' },
   { valor: PERSONAJES.length, label: 'personajes con ficha' },
-  { valor: NT_BOOKS.length, label: 'libros del Nuevo Testamento' },
+  { valor: BIBLE_BOOKS.length, label: `libros de la Biblia (${OT_BOOKS.length} AT + ${NT_BOOKS.length} NT)` },
   { valor: CONCILIOS.length, label: 'concilios y herejías' },
   { valor: NARRACIONES.length, label: 'capítulos con audio' }
 ];

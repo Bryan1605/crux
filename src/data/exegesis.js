@@ -1,57 +1,144 @@
 /**
  * Exégesis — modelo canónico compartido (navegador y Node).
  *
- * Aquí vive la tabla de libros del Nuevo Testamento con sus dos identidades:
+ * Aquí vive la tabla de los libros de la Biblia con sus dos identidades:
  *
  *   id       → slug estable de la web (`1-corintios`, `apocalipsis`)
- *   codexNo  → número de libro en el visor del Codex Sinaiticus (33 = Mateo … 59 = Apocalipsis)
+ *   codexNo  → número de libro en el visor del Codex Sinaiticus (1 = Génesis … 59 = Apocalipsis)
  *
  * El módulo es puro (no importa nada de Vite ni de Node) para que lo usen tanto
  * las páginas de React como los scripts que generan los JSON de `public/`.
  */
 
 /* -------------------------------------------------------------------------- */
-/* Libros del Nuevo Testamento                                                */
+/* Libros de la Biblia                                                        */
 /* -------------------------------------------------------------------------- */
 
 /**
- * @typedef {{ id:string, name:string, abbr:string, order:number, codexNo:number }} Book
+ * @typedef {{ id:string, name:string, abbr:string, order:number,
+ *             testament:'AT'|'NT', codexNo:number|null, codexOnly?:boolean,
+ *             ntv?:boolean, ntvEquivalents?:string[], notice?:string }} Book
  */
 
-/** @type {Book[]} */
-export const NT_BOOKS = [
-  { id: 'mateo',            name: 'Mateo',            abbr: 'Mt', order: 40, codexNo: 33 },
-  { id: 'marcos',           name: 'Marcos',           abbr: 'Mc', order: 41, codexNo: 34 },
-  { id: 'lucas',            name: 'Lucas',            abbr: 'Lc', order: 42, codexNo: 35 },
-  { id: 'juan',             name: 'Juan',             abbr: 'Jn', order: 43, codexNo: 36 },
-  { id: 'hechos',           name: 'Hechos',           abbr: 'Hch', order: 44, codexNo: 51 },
-  { id: 'romanos',          name: 'Romanos',          abbr: 'Ro', order: 45, codexNo: 37 },
-  { id: '1-corintios',      name: '1 Corintios',      abbr: '1 Co', order: 46, codexNo: 38 },
-  { id: '2-corintios',      name: '2 Corintios',      abbr: '2 Co', order: 47, codexNo: 39 },
-  { id: 'galatas',          name: 'Gálatas',          abbr: 'Gá', order: 48, codexNo: 40 },
-  { id: 'efesios',          name: 'Efesios',          abbr: 'Ef', order: 49, codexNo: 41 },
-  { id: 'filipenses',       name: 'Filipenses',       abbr: 'Fil', order: 50, codexNo: 42 },
-  { id: 'colosenses',       name: 'Colosenses',       abbr: 'Col', order: 51, codexNo: 43 },
-  { id: '1-tesalonicenses', name: '1 Tesalonicenses', abbr: '1 Ts', order: 52, codexNo: 44 },
-  { id: '2-tesalonicenses', name: '2 Tesalonicenses', abbr: '2 Ts', order: 53, codexNo: 45 },
-  { id: '1-timoteo',        name: '1 Timoteo',        abbr: '1 Ti', order: 54, codexNo: 47 },
-  { id: '2-timoteo',        name: '2 Timoteo',        abbr: '2 Ti', order: 55, codexNo: 48 },
-  { id: 'tito',             name: 'Tito',             abbr: 'Tit', order: 56, codexNo: 49 },
-  { id: 'filemon',          name: 'Filemón',          abbr: 'Flm', order: 57, codexNo: 50 },
-  { id: 'hebreos',          name: 'Hebreos',          abbr: 'He', order: 58, codexNo: 46 },
-  { id: 'santiago',         name: 'Santiago',         abbr: 'Stg', order: 59, codexNo: 52 },
-  { id: '1-pedro',          name: '1 Pedro',          abbr: '1 P', order: 60, codexNo: 53 },
-  { id: '2-pedro',          name: '2 Pedro',          abbr: '2 P', order: 61, codexNo: 54 },
-  { id: '1-juan',           name: '1 Juan',           abbr: '1 Jn', order: 62, codexNo: 55 },
-  { id: '2-juan',           name: '2 Juan',           abbr: '2 Jn', order: 63, codexNo: 56 },
-  { id: '3-juan',           name: '3 Juan',           abbr: '3 Jn', order: 64, codexNo: 57 },
-  { id: 'judas',            name: 'Judas',            abbr: 'Jud', order: 65, codexNo: 58 },
-  { id: 'apocalipsis',      name: 'Apocalipsis',      abbr: 'Ap', order: 66, codexNo: 59 }
+/**
+ * Los 39 libros del Antiguo Testamento en el orden de la NTV. `codexNo` solo
+ * existe cuando el libro se conserva en el Codex Sinaiticus; los que faltan
+ * quedan en `null` y la vista comparada muestra únicamente la NTV.
+ *
+ * El Codex numera sus libros con una tabla propia (1 = Génesis, 2 = Levítico,
+ * 3 = Números…), no con el orden canónico. Por eso el número no se deduce del
+ * orden: se declara aquí y lo comprueba `qa:exegesis`.
+ *
+ * @type {Book[]}
+ */
+export const OT_BOOKS = [
+  { id: 'genesis',       name: 'Génesis',             abbr: 'Gn',   order: 1,  testament: 'AT', codexNo: 1,  ntv: true },
+  { id: 'exodo',         name: 'Éxodo',               abbr: 'Éx',   order: 2,  testament: 'AT', codexNo: null, ntv: true },
+  { id: 'levitico',      name: 'Levítico',            abbr: 'Lv',   order: 3,  testament: 'AT', codexNo: 2,  ntv: true },
+  { id: 'numeros',       name: 'Números',             abbr: 'Nm',   order: 4,  testament: 'AT', codexNo: 3,  ntv: true },
+  { id: 'deuteronomio',  name: 'Deuteronomio',        abbr: 'Dt',   order: 5,  testament: 'AT', codexNo: 4,  ntv: true },
+  { id: 'josue',         name: 'Josué',               abbr: 'Jos',  order: 6,  testament: 'AT', codexNo: 5,  ntv: true },
+  { id: 'jueces',        name: 'Jueces',              abbr: 'Jue',  order: 7,  testament: 'AT', codexNo: 6,  ntv: true },
+  { id: 'rut',           name: 'Rut',                 abbr: 'Rt',   order: 8,  testament: 'AT', codexNo: null, ntv: true },
+  { id: '1-samuel',      name: '1 Samuel',            abbr: '1 S',  order: 9,  testament: 'AT', codexNo: null, ntv: true },
+  { id: '2-samuel',      name: '2 Samuel',            abbr: '2 S',  order: 10, testament: 'AT', codexNo: null, ntv: true },
+  { id: '1-reyes',       name: '1 Reyes',             abbr: '1 R',  order: 11, testament: 'AT', codexNo: null, ntv: true },
+  { id: '2-reyes',       name: '2 Reyes',             abbr: '2 R',  order: 12, testament: 'AT', codexNo: null, ntv: true },
+  { id: '1-cronicas',    name: '1 Crónicas',          abbr: '1 Cr', order: 13, testament: 'AT', codexNo: 7,  ntv: true },
+  { id: '2-cronicas',    name: '2 Crónicas',          abbr: '2 Cr', order: 14, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'esdras',        name: 'Esdras',              abbr: 'Esd',  order: 15, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'nehemias',      name: 'Nehemías',            abbr: 'Neh',  order: 16, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'ester',         name: 'Ester',               abbr: 'Est',  order: 17, testament: 'AT', codexNo: 9,  ntv: true },
+  { id: 'job',           name: 'Job',                 abbr: 'Job',  order: 18, testament: 'AT', codexNo: 32, ntv: true },
+  { id: 'salmos',        name: 'Salmos',              abbr: 'Sal',  order: 19, testament: 'AT', codexNo: 26, ntv: true },
+  { id: 'proverbios',    name: 'Proverbios',          abbr: 'Pr',   order: 20, testament: 'AT', codexNo: 27, ntv: true },
+  { id: 'eclesiastes',   name: 'Eclesiastés',         abbr: 'Ec',   order: 21, testament: 'AT', codexNo: 28, ntv: true },
+  { id: 'cantares',      name: 'Cantar de los Cantares', abbr: 'Cnt', order: 22, testament: 'AT', codexNo: 29, ntv: true },
+  { id: 'isaias',        name: 'Isaías',              abbr: 'Is',   order: 23, testament: 'AT', codexNo: 14, ntv: true },
+  { id: 'jeremias',      name: 'Jeremías',            abbr: 'Jer',  order: 24, testament: 'AT', codexNo: 15, ntv: true },
+  { id: 'lamentaciones', name: 'Lamentaciones',       abbr: 'Lm',   order: 25, testament: 'AT', codexNo: 16, ntv: true },
+  { id: 'ezequiel',      name: 'Ezequiel',            abbr: 'Ez',   order: 26, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'daniel',        name: 'Daniel',              abbr: 'Dn',   order: 27, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'oseas',         name: 'Oseas',               abbr: 'Os',   order: 28, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'joel',          name: 'Joel',                abbr: 'Jl',   order: 29, testament: 'AT', codexNo: 17, ntv: true },
+  { id: 'amos',          name: 'Amós',                abbr: 'Am',   order: 30, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'abdias',        name: 'Abdías',              abbr: 'Abd',  order: 31, testament: 'AT', codexNo: 18, ntv: true },
+  { id: 'jonas',         name: 'Jonás',               abbr: 'Jon',  order: 32, testament: 'AT', codexNo: 19, ntv: true },
+  { id: 'miqueas',       name: 'Miqueas',             abbr: 'Miq',  order: 33, testament: 'AT', codexNo: null, ntv: true },
+  { id: 'nahum',         name: 'Nahum',               abbr: 'Nah',  order: 34, testament: 'AT', codexNo: 20, ntv: true },
+  { id: 'habacuc',       name: 'Habacuc',             abbr: 'Hab',  order: 35, testament: 'AT', codexNo: 21, ntv: true },
+  { id: 'sofonias',      name: 'Sofonías',            abbr: 'Sof',  order: 36, testament: 'AT', codexNo: 22, ntv: true },
+  { id: 'hageo',         name: 'Hageo',               abbr: 'Hag',  order: 37, testament: 'AT', codexNo: 23, ntv: true },
+  { id: 'zacarias',      name: 'Zacarías',            abbr: 'Zac',  order: 38, testament: 'AT', codexNo: 24, ntv: true },
+  { id: 'malaquias',     name: 'Malaquías',           abbr: 'Mal',  order: 39, testament: 'AT', codexNo: 25, ntv: true }
 ];
 
-export const BOOK_BY_ID = new Map(NT_BOOKS.map(b => [b.id, b]));
-export const BOOK_BY_NAME = new Map(NT_BOOKS.map(b => [b.name, b]));
-export const BOOK_BY_CODEX_NO = new Map(NT_BOOKS.map(b => [b.codexNo, b]));
+/**
+ * Libros que solo existen en la transcripción del Codex: los deuterocanónicos
+ * que la NTV no incluye y el «2 Esdras» del códice, que reúne Esdras y
+ * Nehemías. No entran en el selector de la NTV ni en los contadores 39 + 27.
+ *
+ * @type {Book[]}
+ */
+export const CODEX_EXTRA_BOOKS = [
+  { id: '2-esdras',     name: '2 Esdras',     abbr: '2 Esd', order: 15.5, testament: 'AT', codexNo: 8,  codexOnly: true, ntv: false, ntvEquivalents: ['esdras', 'nehemias'], notice: 'El Codex reúne Esdras y Nehemías en un solo libro (2 Esdras); la NTV los separa y la numeración no coincide.' },
+  { id: 'tobit',        name: 'Tobit',        abbr: 'Tob',   order: 17.1, testament: 'AT', codexNo: 10, codexOnly: true, ntv: false },
+  { id: 'judit',        name: 'Judit',        abbr: 'Jdt',   order: 17.2, testament: 'AT', codexNo: 11, codexOnly: true, ntv: false },
+  { id: '1-macabeos',   name: '1 Macabeos',   abbr: '1 Mac', order: 17.3, testament: 'AT', codexNo: 12, codexOnly: true, ntv: false },
+  { id: '4-macabeos',   name: '4 Macabeos',   abbr: '4 Mac', order: 17.4, testament: 'AT', codexNo: 13, codexOnly: true, ntv: false },
+  { id: 'sabiduria',    name: 'Sabiduría',    abbr: 'Sab',   order: 22.1, testament: 'AT', codexNo: 30, codexOnly: true, ntv: false },
+  { id: 'siracida',     name: 'Sirácida',     abbr: 'Sir',   order: 22.2, testament: 'AT', codexNo: 31, codexOnly: true, ntv: false }
+];
+
+/** Los 27 libros del Nuevo Testamento, en orden canónico. @type {Book[]} */
+export const NT_BOOKS = [
+  { id: 'mateo',            name: 'Mateo',            abbr: 'Mt', order: 40, testament: 'NT', codexNo: 33, ntv: true },
+  { id: 'marcos',           name: 'Marcos',           abbr: 'Mc', order: 41, testament: 'NT', codexNo: 34, ntv: true },
+  { id: 'lucas',            name: 'Lucas',            abbr: 'Lc', order: 42, testament: 'NT', codexNo: 35, ntv: true },
+  { id: 'juan',             name: 'Juan',             abbr: 'Jn', order: 43, testament: 'NT', codexNo: 36, ntv: true },
+  { id: 'hechos',           name: 'Hechos',           abbr: 'Hch', order: 44, testament: 'NT', codexNo: 51, ntv: true },
+  { id: 'romanos',          name: 'Romanos',          abbr: 'Ro', order: 45, testament: 'NT', codexNo: 37, ntv: true },
+  { id: '1-corintios',      name: '1 Corintios',      abbr: '1 Co', order: 46, testament: 'NT', codexNo: 38, ntv: true },
+  { id: '2-corintios',      name: '2 Corintios',      abbr: '2 Co', order: 47, testament: 'NT', codexNo: 39, ntv: true },
+  { id: 'galatas',          name: 'Gálatas',          abbr: 'Gá', order: 48, testament: 'NT', codexNo: 40, ntv: true },
+  { id: 'efesios',          name: 'Efesios',          abbr: 'Ef', order: 49, testament: 'NT', codexNo: 41, ntv: true },
+  { id: 'filipenses',       name: 'Filipenses',       abbr: 'Fil', order: 50, testament: 'NT', codexNo: 42, ntv: true },
+  { id: 'colosenses',       name: 'Colosenses',       abbr: 'Col', order: 51, testament: 'NT', codexNo: 43, ntv: true },
+  { id: '1-tesalonicenses', name: '1 Tesalonicenses', abbr: '1 Ts', order: 52, testament: 'NT', codexNo: 44, ntv: true },
+  { id: '2-tesalonicenses', name: '2 Tesalonicenses', abbr: '2 Ts', order: 53, testament: 'NT', codexNo: 45, ntv: true },
+  { id: '1-timoteo',        name: '1 Timoteo',        abbr: '1 Ti', order: 54, testament: 'NT', codexNo: 47, ntv: true },
+  { id: '2-timoteo',        name: '2 Timoteo',        abbr: '2 Ti', order: 55, testament: 'NT', codexNo: 48, ntv: true },
+  { id: 'tito',             name: 'Tito',             abbr: 'Tit', order: 56, testament: 'NT', codexNo: 49, ntv: true },
+  { id: 'filemon',          name: 'Filemón',          abbr: 'Flm', order: 57, testament: 'NT', codexNo: 50, ntv: true },
+  { id: 'hebreos',          name: 'Hebreos',          abbr: 'He', order: 58, testament: 'NT', codexNo: 46, ntv: true },
+  { id: 'santiago',         name: 'Santiago',         abbr: 'Stg', order: 59, testament: 'NT', codexNo: 52, ntv: true },
+  { id: '1-pedro',          name: '1 Pedro',          abbr: '1 P', order: 60, testament: 'NT', codexNo: 53, ntv: true },
+  { id: '2-pedro',          name: '2 Pedro',          abbr: '2 P', order: 61, testament: 'NT', codexNo: 54, ntv: true },
+  { id: '1-juan',           name: '1 Juan',           abbr: '1 Jn', order: 62, testament: 'NT', codexNo: 55, ntv: true },
+  { id: '2-juan',           name: '2 Juan',           abbr: '2 Jn', order: 63, testament: 'NT', codexNo: 56, ntv: true },
+  { id: '3-juan',           name: '3 Juan',           abbr: '3 Jn', order: 64, testament: 'NT', codexNo: 57, ntv: true },
+  { id: 'judas',            name: 'Judas',            abbr: 'Jud', order: 65, testament: 'NT', codexNo: 58, ntv: true },
+  { id: 'apocalipsis',      name: 'Apocalipsis',      abbr: 'Ap', order: 66, testament: 'NT', codexNo: 59, ntv: true }
+];
+
+/** Los 66 libros que tienen texto en la NTV (39 AT + 27 NT). */
+export const BIBLE_BOOKS = [...OT_BOOKS, ...NT_BOOKS];
+
+/** Los 59 libros transcritos del Codex (32 AT + 27 NT). */
+export const CODEX_BOOKS = [...OT_BOOKS.filter(b => b.codexNo), ...CODEX_EXTRA_BOOKS, ...NT_BOOKS];
+
+/** Todos los libros conocidos por la web, incluidos los solo-Codex. */
+export const ALL_BOOKS = [...BIBLE_BOOKS, ...CODEX_EXTRA_BOOKS];
+
+export const BOOK_BY_ID = new Map(ALL_BOOKS.map(b => [b.id, b]));
+export const BOOK_BY_NAME = new Map(ALL_BOOKS.map(b => [b.name, b]));
+export const BOOK_BY_CODEX_NO = new Map(CODEX_BOOKS.filter(b => b.codexNo).map(b => [b.codexNo, b]));
+
+/** Conteos que la interfaz muestra junto a los selectores. */
+export const TESTAMENTS = {
+  AT: { id: 'AT', label: 'Antiguo Testamento', short: 'AT', books: OT_BOOKS.length },
+  NT: { id: 'NT', label: 'Nuevo Testamento', short: 'NT', books: NT_BOOKS.length }
+};
 
 /* -------------------------------------------------------------------------- */
 /* Testigos (para el aparato crítico)                                         */
@@ -178,37 +265,42 @@ const plain = value =>
 
 /** Nombre o abreviatura normalizados → id del libro (`1corintios` → `1-corintios`). */
 const PASSAGE_ALIASES = new Map();
-for (const book of NT_BOOKS) {
+for (const book of ALL_BOOKS) {
   PASSAGE_ALIASES.set(plain(book.name), book.id);
   PASSAGE_ALIASES.set(plain(book.abbr), book.id);
 }
+// Formas que usa la NTV o el habla corriente y que no coinciden con la tabla.
+PASSAGE_ALIASES.set('salmo', 'salmos');
+PASSAGE_ALIASES.set('cantares', 'cantares');
+PASSAGE_ALIASES.set('cantardeloscantares', 'cantares');
+PASSAGE_ALIASES.set('hechosdelosapostoles', 'hechos');
+PASSAGE_ALIASES.set('2esdras', '2-esdras');
 
 /**
- * Interpreta una referencia del Nuevo Testamento —«1 Juan 1:9», «Mateo
- * 11:28-30», «Romanos 8», «Joel 2:28-29 / Hechos 2:16-18»— y devuelve
- * `{ bookId, chapter, verse, label }`, donde `verse` es `null` si la cita no lo
- * precisa. Devuelve `null` cuando ninguna parte de la cita es del Nuevo
- * Testamento (p. ej. «Génesis 1:1»), para no inventar un destino.
+ * Interpreta una referencia bíblica —«1 Juan 1:9», «Mateo 11:28-30», «Romanos
+ * 8», «Génesis 1:1» o «Joel 2:28-29 / Hechos 2:16-18»— y devuelve
+ * `{ bookId, chapter, verse, label, testament }`, donde `verse` es `null` si la
+ * cita no lo precisa. Devuelve `null` cuando ninguna parte de la cita es un
+ * libro conocido.
+ *
+ * Si la cita encadena un texto del AT y otro del NT, se prefiere el del NT: es
+ * el que tiene lector propio en la casa. Si solo hay AT, se enlaza el AT.
  *
  * De los rangos se toma el punto de entrada (`Mateo 26:26-29` → cap. 26, v. 26).
  */
 export function parsePassage(text) {
   const raw = String(text || '').trim();
   if (!raw) return null;
-  // Una cita puede encadenar referencias; vale la primera que sea del NT.
   const parts = raw.split(/\s*(?:\/|;|·|\by\b|\be\b)\s*/i).filter(Boolean);
-  for (const part of parts) {
-    const parsed = parseOnePassage(part);
-    if (parsed) return parsed;
-  }
-  return null;
+  const parsed = parts.map(parseOnePassage).filter(Boolean);
+  return parsed.find(item => item.testament === 'NT') || parsed[0] || null;
 }
 
 function parseOnePassage(part) {
   const text = String(part).trim();
   // El capítulo es obligatorio; sin él, solo se admite un nombre de libro suelto.
-  let m = /^(?:([1-3])\s*)?([^\d:]+?)\s*(\d+)\s*(?:[:.,]\s*(\d+))?/.exec(text);
-  if (!m) m = /^(?:([1-3])\s*)?([^\d:]+)$/.exec(text);
+  let m = /^(?:([1-4])\s*)?([^\d:]+?)\s*(\d+)\s*(?:[:.,]\s*(\d+))?/.exec(text);
+  if (!m) m = /^(?:([1-4])\s*)?([^\d:]+)$/.exec(text);
   if (!m) return null;
   const [, series = '', words, chapter, verse] = m;
   const bookId = PASSAGE_ALIASES.get(plain(`${series}${words}`));
@@ -220,14 +312,20 @@ function parseOnePassage(part) {
     bookId,
     chapter: cap,
     verse: ver,
-    label: `${book.name} ${cap}${ver ? `:${ver}` : ''}`
+    label: `${book.name} ${cap}${ver ? `:${ver}` : ''}`,
+    testament: book.testament,
+    codexOnly: Boolean(book.codexOnly),
+    ntv: Boolean(book.ntv)
   };
 }
 
-/** Ruta al lector de la NTV para una referencia: `/biblia/ntv?libro=…&cap=…&v=…`. */
+/** Ruta al lector de la NTV para una referencia. */
 export const ntvPath = passage => {
   const parsed = typeof passage === 'string' ? parsePassage(passage) : passage;
   if (!parsed) return '/biblia/ntv';
+  // Tobit y los demás deuterocanónicos no están en la NTV: su único lector es
+  // la vista del Codex.
+  if (parsed.ntv === false || parsed.codexOnly) return exegesisPath(parsed);
   const query = new URLSearchParams({ libro: parsed.bookId, cap: String(parsed.chapter) });
   if (parsed.verse) query.set('v', String(parsed.verse));
   return `/biblia/ntv?${query.toString()}`;
@@ -242,4 +340,4 @@ export const exegesisPath = passage => {
   return `/exegesis?${query.toString()}`;
 };
 
-export default NT_BOOKS;
+export default BIBLE_BOOKS;

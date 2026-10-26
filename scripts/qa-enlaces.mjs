@@ -11,7 +11,7 @@
  *   1. Páginas: las rutas públicas (`scripts/routes-lib.mjs`) cargan su propia
  *      página y no la de «Página no encontrada».
  *   2. Enlaces internos: todo lo que enlazan esas páginas apunta a una ruta que
- *      existe de verdad (estudio, personaje, categoría, libro del NT, ancla…) y
+ *      existe de verdad (estudio, personaje, categoría, libro de la Biblia, ancla…) y
  *      ningún enlace se queda sin texto para lectores de pantalla.
  *   3. Enlaces externos: los que citan los estudios responden, se abren en
  *      pestaña nueva y llevan `rel="noopener noreferrer"`.
@@ -24,7 +24,7 @@ import { join } from 'node:path';
 import puppeteer from 'puppeteer-core';
 
 import { estudiosIndex, siteRoutes } from './routes-lib.mjs';
-import { NT_BOOKS } from '../src/data/exegesis.js';
+import { ALL_BOOKS } from '../src/data/exegesis.js';
 
 const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const BASE = (process.env.CRUX_BASE || 'http://localhost:5173').replace(/\/$/, '');
@@ -39,7 +39,10 @@ const PAGINAS = [
   '/estudio?cat=01-fundamentos',
   '/biblia',
   '/biblia/ntv?libro=juan&cap=3',
+  '/biblia/ntv?libro=genesis&cap=1',
   '/exegesis?libro=juan&cap=3&vv=16-21',
+  '/exegesis?libro=genesis&cap=1',
+  '/exegesis?libro=tobit&cap=1',
   '/videos',
   '/concilios',
   '/temas',
@@ -54,7 +57,7 @@ const PAGINAS = [
 const rutas = siteRoutes();
 const RUTAS = new Set(rutas.map(r => r.path));
 const CATEGORIAS = new Set(estudiosIndex().categories.map(c => c.id));
-const LIBROS = new Set(NT_BOOKS.map(b => b.id));
+const LIBROS = new Set(ALL_BOOKS.map(b => b.id));
 const results = [];
 const check = (name, ok, detail = '') => {
   results.push({ name, ok: Boolean(ok), detail });
