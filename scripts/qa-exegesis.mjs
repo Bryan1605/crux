@@ -411,6 +411,12 @@ if (WITH_BROWSER) {
   });
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 950 });
+  const lemasRequests = [];
+  page.on('request', request => {
+    if (/\/textos\/exegesis\/lemas\/[^/]+\.json$/.test(request.url())) {
+      lemasRequests.push(new URL(request.url()).pathname);
+    }
+  });
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
   const visit = async (url, name) => {
@@ -948,6 +954,17 @@ if (WITH_BROWSER) {
     'Codex (móvil): Tobit se lee a una columna sin desbordamiento',
     tobitMobile.scroll <= tobitMobile.client + 1 && tobitMobile.cells > 5,
     `${tobitMobile.scroll}px vs ${tobitMobile.client}px · ${tobitMobile.cells} celdas`
+  );
+
+  const ntIds = new Set(NT_BOOKS.map(book => book.id));
+  const badLemas = [...new Set(lemasRequests)].filter(pathname => {
+    const id = pathname.match(/\/lemas\/([^/]+)\.json$/)?.[1];
+    return id && !ntIds.has(id);
+  });
+  check(
+    'Diccionario: no se piden mapas de lemas fuera del NT',
+    badLemas.length === 0,
+    badLemas.join(' · ') || `${new Set(lemasRequests).size} mapas del NT`
   );
 
   await browser.close();

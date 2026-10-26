@@ -335,9 +335,10 @@ export default function Exegesis() {
     };
   }, [bookId, bookMeta, hasCodex]);
 
-  /* Mapas de lemas del libro abierto: una entrada por palabra del Codex. */
+  /* Mapas de lemas del libro abierto: una entrada por palabra del Codex.
+     MorphGNT solo cubre el NT; el AT no tiene mapas y no debe pedirlos. */
   useEffect(() => {
-    if (!bookMeta || !hasCodex) {
+    if (!bookMeta || !hasCodex || bookMeta.testament !== 'NT') {
       setLemas(null);
       return undefined;
     }
