@@ -63,7 +63,11 @@ for (const { url, label, selector } of cases) {
   page.on('response', r => { if (r.status() === 404) http404.push(r.url().replace('https://bryan1605.github.io', '')); });
 
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+    await page.goto(url, { waitUntil: 'load', timeout: 60000 });
+    // `networkidle2` puede no resolverse en la portada aunque la página ya esté
+    // cargada (Chrome deja de emitir el ciclo de vida). Se espera la red como
+    // mejor esfuerzo y luego el selector real de la vista.
+    await page.waitForNetworkIdle({ idleTime: 500, concurrency: 2, timeout: 10000 }).catch(() => {});
     await page.waitForSelector(selector, { timeout: 30000 });
     await new Promise(r => setTimeout(r, 800));
     // En GitHub Pages una ruta profunda SPA se sirve a traves de 404.html con codigo
