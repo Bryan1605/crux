@@ -412,10 +412,11 @@ if (WITH_BROWSER) {
   const page = await browser.newPage();
   await page.setViewport({ width: 1440, height: 950 });
   const lemasRequests = [];
+  const ntvBookRequests = [];
   page.on('request', request => {
-    if (/\/textos\/exegesis\/lemas\/[^/]+\.json$/.test(request.url())) {
-      lemasRequests.push(new URL(request.url()).pathname);
-    }
+    const pathname = new URL(request.url()).pathname;
+    if (/\/textos\/exegesis\/lemas\/[^/]+\.json$/.test(pathname)) lemasRequests.push(pathname);
+    if (/\/textos\/exegesis\/ntv\/[^/]+\.json$/.test(pathname)) ntvBookRequests.push(pathname);
   });
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -965,6 +966,13 @@ if (WITH_BROWSER) {
     'Diccionario: no se piden mapas de lemas fuera del NT',
     badLemas.length === 0,
     badLemas.join(' · ') || `${new Set(lemasRequests).size} mapas del NT`
+  );
+
+  const missingNtv = [...new Set(ntvBookRequests)].filter(pathname => /\/ntv\/tobit\.json$/.test(pathname));
+  check(
+    'NTV: un libro solo-Codex no pide su JSON inexistente',
+    missingNtv.length === 0,
+    missingNtv.join(' · ') || 'sin peticiones a ntv/tobit.json'
   );
 
   await browser.close();

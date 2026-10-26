@@ -298,17 +298,21 @@ export default function BibliaNtv() {
   }, []);
 
   useEffect(() => {
+    if (!index) return undefined;
+    const meta = index.books.find(b => b.id === bookId);
     let alive = true;
     setBook(null);
     setError(false);
     scrolled.current = null;
+    // Los libros solo-Codex no tienen archivo NTV: no se pide uno que no existe.
+    if (!meta?.ntv?.verses) return undefined;
     loadWitnessBook('ntv', bookId)
       .then(data => alive && setBook(data))
       .catch(() => alive && setError(true));
     return () => {
       alive = false;
     };
-  }, [bookId]);
+  }, [bookId, index]);
 
   useEffect(() => write(KEYS.theme, theme), [theme]);
   useEffect(() => write(KEYS.size, size), [size]);
