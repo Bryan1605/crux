@@ -11,6 +11,9 @@ Este repositorio contiene **dos proyectos**:
 
 Todo lo de abajo se ejecuta **desde la carpeta `Web Crux/`**.
 
+> El proyecto bíblico (fuentes, traducciones y fichas) tiene su memoria de
+> trabajo en [`docs/proyecto-biblico/`](docs/proyecto-biblico/README.md).
+
 ---
 
 ## Requisitos
@@ -226,7 +229,8 @@ npm run index:wiki -- --force   # regenera y guarda un backup en content/.histor
 ```
 Web Crux/
 ├─ content/              # contenido editable (ver arriba)
-├─ plugins/              # content-api.mjs (API solo-dev) 
+├─ docs/proyecto-biblico/ # fuentes, traducción y fichas (memoria de trabajo)
+├─ plugins/              # content-api.mjs (API solo-dev)
 ├─ scripts/              # validación, índice, migración
 ├─ public/img/           # imágenes (biblioteca de medios)
 ├─ src/
