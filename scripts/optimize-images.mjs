@@ -39,8 +39,12 @@ const bannerSources = [
   [join(IMG, 'HeroBanner1.jpg'), join(OUT, 'banners', 'herobanner1.webp')],
   [join(IMG, 'HeroBanner2Patristica.jpg'), join(OUT, 'banners', 'herobanner2-patristica.webp')],
   [join(IMG, 'HeroBanner3Reforma.jpg'), join(OUT, 'banners', 'herobanner3-reforma.webp')],
+  [join(IMG, 'HeroBanner4JesusconNicodemo.jpg'), join(OUT, 'banners', 'herobanner4-nicodemo.webp')],
 ];
 for (const [src, dest] of bannerSources) jobs.push([src, dest, 1600, 72]);
+
+// Portada Biblia NTV (fuente versionada en src/assets/imgs/)
+jobs.push([join(IMG, 'PortadaNTV.png'), join(OUT, 'biblia', 'portada-ntv.webp'), 1080, 80]);
 
 // Portada Biblia Patrística (fuente local; se puede indicar con PORTADA_BIBLIA)
 const portadaBiblia = process.env.PORTADA_BIBLIA || 'D:/Biblia/PortadaBibliaPatristica.png';

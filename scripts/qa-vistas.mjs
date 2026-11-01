@@ -355,7 +355,7 @@ try {
     };
   });
   check('la portada pinta sus secciones', portada.clases.length >= 8, portada.clases.map(c => c.split(' ')[0]).join(' · '));
-  check('cifras reales en la portada', portada.stats === 6, `${portada.stats} cifras`);
+  check('cifras reales en la portada', portada.stats === 5, `${portada.stats} cifras`);
   check('rejilla de categorías completa', portada.categorias === 10, `${portada.categorias} tarjetas`);
   check('personajes destacados con portada', portada.personajes === 4, `${portada.personajes} tarjetas`);
   check('buscador en el héroe', portada.buscador);

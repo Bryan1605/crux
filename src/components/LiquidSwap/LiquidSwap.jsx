@@ -16,6 +16,7 @@ export default function LiquidSwap({
   autoCycle = false,
   autoCycleDelay = 3000,
   className = '',
+  onChange,
   children
 }) {
   const [idx, setIdx] = useState(0);
@@ -88,6 +89,7 @@ export default function LiquidSwap({
         setIdx(swap.next);
         setSwap(null);
         swappingRef.current = false;
+        onChange?.(swap.next);
       }
     };
     rafRef.current = requestAnimationFrame(frame);

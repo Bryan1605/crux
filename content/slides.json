@@ -1,5 +1,10 @@
 [
   {
+    "image": "/img/banners/herobanner4-nicodemo.webp",
+    "caption": "Nacer de nuevo",
+    "href": "/estudio/01-fundamentos--26-regeneracion"
+  },
+  {
     "image": "/img/banners/herobanner1.webp",
     "caption": "Estudios bíblicos",
     "href": "/estudio"
