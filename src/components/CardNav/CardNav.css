@@ -1,6 +1,7 @@
 .card-nav-container {
   position: fixed;
-  top: 1.4em;
+  /* La barra de versículos va encima: el menú queda justo debajo. */
+  top: calc(var(--marquee-h, 0px) + 1.4em);
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -12,8 +13,8 @@
 .card-nav {
   display: block;
   height: 60px;
-  max-height: calc(100vh - 2.8em);
-  max-height: calc(100dvh - 2.8em);
+  max-height: calc(100vh - 2.8em - var(--marquee-h, 0px));
+  max-height: calc(100dvh - 2.8em - var(--marquee-h, 0px));
   padding: 0;
   background-color: white;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
@@ -185,7 +186,7 @@
 @media (max-width: 768px) {
   .card-nav-container {
     width: 90%;
-    top: 1.2em;
+    top: calc(var(--marquee-h, 0px) + 1.2em);
   }
 
   .card-nav-top {

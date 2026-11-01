@@ -376,37 +376,43 @@ try {
   check('el buscador del héroe busca de verdad', /\/buscar\?q=nicea/.test(trasBuscar.url) && trasBuscar.resultados > 0, `${trasBuscar.url.split('/buscar')[1] || ''} · ${trasBuscar.resultados} resultados`);
   await home.close();
 
-  // La barra fija no puede tapar ni el botón del héroe ni el pie.
+  // La barra de versículos va arriba, encima del menú, y no lo tapa.
   const barra = await makePage('no-preference', 1280, 900);
   await barra.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });
   await wait(3200);
   const arriba = await barra.evaluate(() => {
-    const cta = document.querySelector('.hero__actions .btn');
     const b = document.querySelector('.marquee-bar');
+    const nav = document.querySelector('.card-nav');
+    const rb = b?.getBoundingClientRect();
     return {
       hayBarra: Boolean(b),
-      ctaAbajo: cta?.getBoundingClientRect().bottom ?? null,
-      barraArriba: b?.getBoundingClientRect().top ?? null
+      barraTop: rb?.top ?? null,
+      barraAbajo: rb?.bottom ?? null,
+      barraAlto: rb?.height ?? null,
+      navArriba: nav?.getBoundingClientRect().top ?? null,
+      varAltura: getComputedStyle(document.documentElement).getPropertyValue('--marquee-h').trim()
     };
   });
-  check('la barra fija no tapa el botón del héroe', !arriba.hayBarra || arriba.ctaAbajo <= arriba.barraArriba + 1, `botón ${Math.round(arriba.ctaAbajo)} ≤ barra ${Math.round(arriba.barraArriba)}`);
+  check(
+    'la barra de versículos está arriba y no tapa el menú',
+    arriba.hayBarra && Math.abs(arriba.barraTop) < 1 && arriba.barraAbajo <= arriba.navArriba + 1,
+    `barra top ${Math.round(arriba.barraTop)} · alto ${Math.round(arriba.barraAlto)} · abajo ${Math.round(arriba.barraAbajo)} ≤ menú ${Math.round(arriba.navArriba)} · --marquee-h=${arriba.varAltura}`
+  );
 
   await barra.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
   await wait(900);
   const abajo = await barra.evaluate(() => {
     const pie = document.querySelector('footer');
-    const b = document.querySelector('.marquee-bar');
     return {
       pieAbajo: pie?.getBoundingClientRect().bottom ?? null,
-      barraArriba: b?.getBoundingClientRect().top ?? null,
-      varAltura: getComputedStyle(document.documentElement).getPropertyValue('--marquee-h').trim(),
+      alto: window.innerHeight,
       paddingBody: getComputedStyle(document.body).paddingBottom
     };
   });
   check(
-    'la barra fija no tapa el pie (altura publicada)',
-    abajo.varAltura !== '0px' && abajo.pieAbajo <= abajo.barraArriba + 1,
-    `--marquee-h=${abajo.varAltura} · pie ${Math.round(abajo.pieAbajo)} ≤ barra ${Math.round(abajo.barraArriba)} · padding ${abajo.paddingBody}`
+    'el pie llega al final sin padding inferior para la barra',
+    parseFloat(abajo.paddingBody) === 0 && abajo.pieAbajo <= abajo.alto + 1,
+    `pie ${Math.round(abajo.pieAbajo)} ≤ ventana ${abajo.alto} · padding-bottom ${abajo.paddingBody}`
   );
   await barra.close();
 
@@ -424,6 +430,16 @@ try {
   await wait(600);
   const afterClose = await marquee.$$eval('.marquee-bar', els => els.length);
   check('la marquesina se puede cerrar', beforeClose === 1 && closed === 'clic' && afterClose === 0, `${beforeClose} → ${afterClose} (${closed})`);
+  const trasCerrar = await marquee.evaluate(() => ({
+    varAltura: getComputedStyle(document.documentElement).getPropertyValue('--marquee-h').trim(),
+    paddingTop: getComputedStyle(document.body).paddingTop,
+    navArriba: document.querySelector('.card-nav')?.getBoundingClientRect().top ?? null
+  }));
+  check(
+    'al cerrarla, el menú sube y no queda hueco',
+    trasCerrar.varAltura === '' && parseFloat(trasCerrar.paddingTop) === 0 && trasCerrar.navArriba < 30,
+    `--marquee-h=«${trasCerrar.varAltura}» · padding-top ${trasCerrar.paddingTop} · menú ${Math.round(trasCerrar.navArriba)}`
+  );
   await marquee.close();
 
   await page.close();

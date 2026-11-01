@@ -267,7 +267,7 @@
 
 .reader__bar {
   position: sticky;
-  top: 76px;
+  top: calc(76px + var(--marquee-h, 0px));
   z-index: 6;
   display: flex;
   flex-wrap: wrap;
@@ -476,7 +476,7 @@
 }
 
 .scroll-block {
-  scroll-margin-top: 130px;
+  scroll-margin-top: calc(130px + var(--marquee-h, 0px));
 }
 
 .scroll-block--part {

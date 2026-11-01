@@ -9,7 +9,7 @@ import './MarqueeBar.css';
 const STORAGE_KEY = 'crux-marquee-closed';
 
 /**
- * Barra fija inferior en todas las rutas: anuncios importantes + un versículo
+ * Barra fija superior, encima del menú, en todas las rutas: anuncios importantes + un versículo
  * aleatorio que se renueva en cada carga y en cada cambio de ruta.
  * El cierre (✕) dura la sesión (sessionStorage): en la siguiente visita vuelve.
  * En dev, los datos vienen de /api/content/anuncios y /api/content/versiculos.
@@ -90,19 +90,19 @@ export default function MarqueeBar() {
     return [...announce, verse].filter(Boolean);
   }, [verse, loaded, anuncios]);
 
-  // La altura de la barra se publica como `--marquee-h` (y como padding del
-  // body) para que ninguna página quede tapada por ella. Las dependencias
+  // La altura de la barra se publica como `--marquee-h` (y como padding
+  // superior del body) para que ni el menú ni las páginas queden tapados. Las dependencias
   // incluyen `loaded` e `items.length`: en la primera pasada la barra aún no
   // está montada (h = 0) y sin reevaluar se quedaba clavada en 0px para siempre.
   useEffect(() => {
     if (!enabled || closed || !loaded || items.length === 0) {
-      document.body.style.paddingBottom = '';
+      document.body.style.paddingTop = '';
       document.documentElement.style.removeProperty('--marquee-h');
       return undefined;
     }
     const apply = () => {
       const h = barRef.current?.offsetHeight || 0;
-      document.body.style.paddingBottom = `${h}px`;
+      document.body.style.paddingTop = `${h}px`;
       document.documentElement.style.setProperty('--marquee-h', `${h}px`);
     };
     apply();
@@ -110,7 +110,7 @@ export default function MarqueeBar() {
     if (barRef.current) ro.observe(barRef.current);
     return () => {
       ro.disconnect();
-      document.body.style.paddingBottom = '';
+      document.body.style.paddingTop = '';
       document.documentElement.style.removeProperty('--marquee-h');
     };
   }, [enabled, closed, loaded, items.length]);
@@ -121,7 +121,15 @@ export default function MarqueeBar() {
 
   return (
     <aside className="marquee-bar" ref={barRef} aria-label="Avisos y versículo">
-      <BendingMarquee items={items} speed={marquee.speed} separator={marquee.separator} />
+      <BendingMarquee
+        items={items}
+        speed={marquee.speed}
+        separator={marquee.separator}
+        fontSize={13}
+        height={34}
+        bend={0}
+        bandColor="#0a0a0b"
+      />
       {dismissable && (
         <button
           type="button"

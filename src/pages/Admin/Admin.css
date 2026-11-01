@@ -69,7 +69,7 @@
   border-radius: var(--r-md);
   overflow: hidden;
   position: sticky;
-  top: 6rem;
+  top: calc(6rem + var(--marquee-h, 0px));
 }
 
 .admin__list-head {

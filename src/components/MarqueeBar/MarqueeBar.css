@@ -2,29 +2,38 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
   z-index: 800;
   pointer-events: auto;
+  background: #0a0a0b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .marquee-bar__close {
   position: absolute;
-  right: 12px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  width: 44px;
-  height: 44px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.34);
   background: rgba(10, 10, 11, 0.85);
   color: #f4f4f5;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   line-height: 1;
   cursor: pointer;
   display: grid;
   place-items: center;
   transition: background-color 0.2s ease;
+}
+
+/* Área táctil invisible: el botón se ve de 28 px pero se pulsa en 44. */
+.marquee-bar__close::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
 }
 
 .marquee-bar__close:hover {
@@ -34,12 +43,4 @@
 .marquee-bar__close:focus-visible {
   outline: 2px solid #f4f4f5;
   outline-offset: 2px;
-}
-
-@media (max-width: 768px) {
-  .marquee-bar__close {
-    width: 44px;
-    height: 44px;
-    right: 6px;
-  }
 }

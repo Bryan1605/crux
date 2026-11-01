@@ -43,7 +43,8 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
   gap: var(--sp-5);
-  min-height: 100svh;
+  /* El body ya reserva arriba la barra de versículos. */
+  min-height: calc(100svh - var(--marquee-h, 0px));
 }
 
 .hero__copy {
@@ -52,8 +53,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--sp-4);
-  /* Arriba deja sitio a la navegación fija; abajo, a la barra de versículos. */
-  padding: calc(60px + 1.4em + var(--sp-6)) 0 calc(var(--marquee-h, 0px) + var(--sp-5));
+  /* Arriba deja sitio a la navegación fija (la barra de versículos ya la
+     reserva el padding del body). */
+  padding: calc(60px + 1.4em + var(--sp-6)) 0 var(--sp-5);
 }
 
 .hero__copy h1 {

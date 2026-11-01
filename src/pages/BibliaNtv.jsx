@@ -408,7 +408,9 @@ export default function BibliaNtv() {
 
     const el = document.getElementById(`v${selected}`);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 132;
+    // 132 px de menú y barra de lectura, más la barra de versículos si está.
+    const bar = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--marquee-h')) || 0;
+    const top = el.getBoundingClientRect().top + window.scrollY - 132 - bar;
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   }, [chapter, selected, bookId, chapterNum, mode]);
 
