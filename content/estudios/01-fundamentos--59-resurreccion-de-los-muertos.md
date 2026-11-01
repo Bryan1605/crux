@@ -1,6 +1,7 @@
 ---
 title: "Resurrección de los Muertos"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "La resurrección de los muertos es el acto soberano de Dios mediante el cual los cuerpos de todos los hombres, justos e injustos, serán levantados de la muerte para enfrentar el juicio…"
 passage: "1 Corintios 15:42-44"
 tags: ["fundamento", "escatologia"]

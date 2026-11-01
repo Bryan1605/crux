@@ -1,6 +1,7 @@
 ---
 title: "Apologética"
 category: "01-fundamentos"
+subcategory: "Soberanía y misión"
 description: "La apologética es la defensa razonada de la fe cristiana ante las objeciones, preguntas y ataques de incrédulos y herejes. No es un debate académico vacío, sino un ministerio de amor que…"
 passage: "1 Pedro 3:15"
 tags: ["fundamento", "otros"]

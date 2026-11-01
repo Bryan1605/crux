@@ -1,6 +1,7 @@
 ---
 title: "Cena del Señor"
 category: "01-fundamentos"
+subcategory: "La Iglesia"
 description: "La Cena del Señor (también llamada Comunión, Fracción del Pan o Eucaristía) es el acto de obediencia memorial mediante el cual los creyentes comen el pan y beben el vino/jugo en…"
 passage: "1 Corintios 11:23-26"
 tags: ["fundamento", "eclesiologia"]

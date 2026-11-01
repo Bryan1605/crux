@@ -1,6 +1,7 @@
 ---
 title: "Madurez espiritual"
 category: "01-fundamentos"
+subcategory: "Santificación"
 description: "Madurez espiritual es el crecimiento en el conocimiento y la obediencia a Dios que lleva al creyente a discernir el bien del mal y a vivir de acuerdo a la voluntad de Dios. No es automática…"
 passage: "Hebreos 5:12-14"
 tags: ["fundamento", "doctrina/santificacion"]

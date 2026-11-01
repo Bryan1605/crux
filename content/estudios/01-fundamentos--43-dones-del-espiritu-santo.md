@@ -1,6 +1,7 @@
 ---
 title: "Los dones del Espíritu Santo"
 category: "01-fundamentos"
+subcategory: "Espíritu Santo"
 description: "Los dones del Espíritu Santo son habilidades sobrenaturales que el Espíritu distribuye a cada creyente para edificar la iglesia y servir a otros. No son para la autosatisfacción ni para…"
 passage: "1 Corintios 12:7-11"
 tags: ["fundamento", "doctrina/neumatologia"]

@@ -1,6 +1,7 @@
 ---
 title: "La Comunión de los Santos"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "La comunión de los santos es la unidad real y profunda que existe entre todos los creyentes en Cristo, que se expresa en amor mutuo, servicio, worship compartido,资源共享 y responsabilidad…"
 passage: "Hebreos 10:24-25"
 tags: ["fundamento", "vida-cristiana"]

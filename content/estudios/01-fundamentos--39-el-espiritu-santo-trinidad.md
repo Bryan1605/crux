@@ -1,6 +1,7 @@
 ---
 title: "El Espíritu Santo (Trinidad)"
 category: "01-fundamentos"
+subcategory: "Dios y la Trinidad"
 description: "El Espíritu Santo es la tercera Persona de la Trinidad: Dios presente con nosotros, que habita en los creyentes, nos transforma y nos guía hacia toda la verdad. No es una fuerza impersonal,…"
 passage: "Juan 14:16-17"
 tags: ["fundamento", "doctrina/trinidad"]

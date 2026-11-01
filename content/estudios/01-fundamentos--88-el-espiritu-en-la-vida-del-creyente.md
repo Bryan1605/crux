@@ -1,6 +1,7 @@
 ---
 title: "El Espíritu en la vida del creyente"
 category: "01-fundamentos"
+subcategory: "Espíritu Santo"
 description: "El Espíritu Santo habita permanentemente en todo creyente desde el momento de la conversión, y su ministerio es guiar, convencer, consolar, interceder y transformar. No es una fuerza…"
 passage: "Gálatas 5:16"
 tags: ["fundamento", "neumatologia"]

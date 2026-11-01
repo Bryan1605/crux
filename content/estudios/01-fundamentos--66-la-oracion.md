@@ -1,6 +1,7 @@
 ---
 title: "La Oración"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "La oración es la comunicación personal con Dios en la que expresamos adoración, confesión, gratitud, súplica y escuchamos Su voz a través de Su Palabra y Su Espíritu. No es un ritual, una…"
 passage: "Filipenses 4:6-7"
 tags: ["fundamento", "vida-cristiana"]

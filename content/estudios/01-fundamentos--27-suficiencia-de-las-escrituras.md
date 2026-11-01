@@ -1,6 +1,7 @@
 ---
 title: "Suficiencia de las Escrituras"
 category: "01-fundamentos"
+subcategory: "La Escritura"
 description: "La suficiencia de las Escrituras significa que la Biblia contiene todo lo que el ser humano necesita para ser salvo y vivir una vida que agrada a Dios. No necesita ser aumentada con…"
 passage: "2 Timoteo 3:16-17"
 tags: ["fundamento", "doctrina/bibliologia"]

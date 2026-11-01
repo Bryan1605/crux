@@ -1,6 +1,7 @@
 ---
 title: "La caída y el pecado original"
 category: "01-fundamentos"
+subcategory: "El ser humano"
 description: "La caída es el evento en que Adán y Eva desobedecieron a Dios en el Jardín del Edén, resultando en la entrada del pecado, la muerte y la separación de Dios en el mundo. El \"pecado original\"…"
 passage: "Romanos 5:12"
 tags: ["fundamento", "doctrina/antropologia"]

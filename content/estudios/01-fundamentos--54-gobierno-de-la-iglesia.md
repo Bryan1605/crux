@@ -1,6 +1,7 @@
 ---
 title: "Gobierno de la Iglesia"
 category: "01-fundamentos"
+subcategory: "La Iglesia"
 description: "El gobierno de la Iglesia no es democrático, ni papal, ni episcopal. Es cristocéntrico: Cristo es la cabeza, y bajo Él gobiernan ancianos/pastores (presbíteros) que sirven con humildad,…"
 passage: "1 Timoteo 3:1-7"
 tags: ["fundamento", "eclesiologia"]

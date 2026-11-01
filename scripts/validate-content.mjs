@@ -118,6 +118,35 @@ export function validateCategorias(obj) {
   return true;
 }
 
+/**
+ * Temas por categoría: `{ "<categoría>": [{ key, label?, lema?, image? }] }`.
+ * El orden del array es el de la sidebar de `/estudio`. `ctx.categorias` (ids
+ * existentes) y `ctx.imageExists(ruta)` son opcionales: el build los pasa.
+ */
+export function validateTemas(obj, _slug, ctx = {}) {
+  if (!isObject(obj)) throw new Error('temas: debe ser un objeto { categoría: [temas] }');
+  for (const [cat, temas] of Object.entries(obj)) {
+    if (ctx.categorias && !ctx.categorias.has(cat)) throw new Error(`temas: la categoría "${cat}" no existe`);
+    if (!isArray(temas)) throw new Error(`temas.${cat}: debe ser un array`);
+    const seen = new Set();
+    for (const [i, t] of temas.entries()) {
+      const label = `temas.${cat}[${i}]`;
+      const key = required(t, 'key', 'string', label).trim();
+      if (!key) throw new Error(`${label}: "key" vacío`);
+      if (seen.has(key)) throw new Error(`${label}: key duplicada "${key}"`);
+      seen.add(key);
+      optional(t, 'label', 'string', label);
+      optional(t, 'lema', 'string', label);
+      const image = optional(t, 'image', 'string', label);
+      if (image !== undefined) {
+        if (!image.startsWith('/img/')) throw new Error(`${label}: image debe empezar por /img/`);
+        if (ctx.imageExists && !ctx.imageExists(image)) throw new Error(`${label}: no existe public${image}`);
+      }
+    }
+  }
+  return true;
+}
+
 export function validateEstudio(raw, slug) {
   // raw ya viene parseado (frontmatter + body) por content-api
   const fm = raw.data || {};
@@ -378,6 +407,7 @@ export function validateLexico(obj) {
 export const VALIDATORS = {
   site: validateSite,
   categorias: validateCategorias,
+  temas: validateTemas,
   estudio: validateEstudio,
   videos: validateVideos,
   slides: validateSlides,

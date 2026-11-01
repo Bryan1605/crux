@@ -1,6 +1,7 @@
 ---
 title: "Disciplina Eclesiástica"
 category: "01-fundamentos"
+subcategory: "La Iglesia"
 description: "La disciplina eclesiástica es el proceso de restauración mediante el cual la Iglesia corrige a un creyente que vive en pecado, para llevarlo de vuelta a la comunión con Dios y con el…"
 passage: "Mateo 18:15-17"
 tags: ["fundamento", "eclesiologia"]

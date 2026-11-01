@@ -148,6 +148,34 @@ function contentGuard() {
         errors.push(`No se pudieron regenerar los índices (estudios/búsqueda) → ${e.message}`);
       }
 
+      // Temas por categoría: categorías reales, keys únicas e imágenes publicadas.
+      // Una ficha con una `subcategory` fuera de la lista no rompe el build
+      // (se pinta al final de su categoría), pero se avisa.
+      const temasFile = path.join(CONTENT, 'temas.json');
+      if (fs.existsSync(temasFile)) {
+        try {
+          const temas = JSON.parse(fs.readFileSync(temasFile, 'utf8'));
+          const categorias = new Set(readJson('categorias').map(c => c.id));
+          validate('temas', temas, undefined, {
+            categorias,
+            imageExists: rel => fs.existsSync(path.join(PUBLIC, rel))
+          });
+          const { studies = [] } = JSON.parse(fs.readFileSync(path.join(CONTENT, 'estudios.json'), 'utf8'));
+          const sueltos = new Map();
+          for (const s of studies) {
+            const lista = temas[s.category];
+            if (!lista || !s.subcategory || lista.some(t => t.key === s.subcategory)) continue;
+            const k = `${s.category} · ${s.subcategory}`;
+            sueltos.set(k, (sueltos.get(k) || 0) + 1);
+          }
+          for (const [k, n] of sueltos) {
+            this.warn(`temas: ${n} ficha(s) con subcategory fuera de content/temas.json → ${k}`);
+          }
+        } catch (e) {
+          errors.push(`content/temas.json → ${e.message}`);
+        }
+      }
+
       // Destinos de los eventos curated: deben resolver a rutas reales.
       const tFile = path.join(CONTENT, 'timeline.json');
       if (fs.existsSync(tFile)) {

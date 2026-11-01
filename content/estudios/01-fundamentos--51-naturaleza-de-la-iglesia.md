@@ -1,6 +1,7 @@
 ---
 title: "Naturaleza de la Iglesia"
 category: "01-fundamentos"
+subcategory: "La Iglesia"
 description: "La Iglesia no es un edificio, una organización humana o una denominación. La Iglesia es el cuerpo vivo de Cristo, compuesto por todos los creyentes genuinos de todos los tiempos y lugares,…"
 passage: "Efesios 1:22-23"
 tags: ["fundamento", "eclesiologia"]

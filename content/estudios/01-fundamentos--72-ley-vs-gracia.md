@@ -1,6 +1,7 @@
 ---
 title: "Ley vs Gracia"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "La Ley es el conjunto de mandamientos dados por Dios en el AT que revelan Su justicia y demuestran que el hombre no puede cumplirla por sí mismo. La Gracia es el favor inmerecido de Dios…"
 passage: "Romanos 6:14"
 tags: ["fundamento", "vida-cristiana"]

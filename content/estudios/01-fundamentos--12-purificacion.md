@@ -1,6 +1,7 @@
 ---
 title: "Purificación"
 category: "01-fundamentos"
+subcategory: "Santificación"
 description: "Purificación es el proceso por el cual Dios limpia al creyente del pecado que daña la comunión diaria. Mientras la justificación es una declaración única que nos hace perfectos en posición,…"
 passage: "1 Juan 1:7-9"
 tags: ["fundamento"]

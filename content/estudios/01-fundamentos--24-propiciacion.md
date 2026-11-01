@@ -1,6 +1,7 @@
 ---
 title: "Propiciación"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "Propiciación significa apartar la ira de Dios mediante un sacrificio. La santidad de Dios demanda justicia contra el pecado, pero Cristo tomó sobre Sí la ira que nosotros merecíamos,…"
 passage: "Romanos 3:25"
 tags: ["fundamento"]

@@ -1,6 +1,7 @@
 ---
 title: "Imagen de Dios"
 category: "01-fundamentos"
+subcategory: "El ser humano"
 description: "La imagen de Dios (Imago Dei) es lo que distingue al ser humano de todos los demás seres creados: cada persona fue creada a imagen y semejanza de Dios, lo que le otorga dignidad inherent,…"
 passage: "Génesis 1:26-27"
 tags: ["fundamento", "doctrina/antropologia"]

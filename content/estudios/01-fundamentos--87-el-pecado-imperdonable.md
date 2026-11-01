@@ -1,6 +1,7 @@
 ---
 title: "El Pecado Imperdonable / Blasfemia contra el Espíritu Santo"
 category: "01-fundamentos"
+subcategory: "Espíritu Santo"
 description: "La blasfemia contra el Espíritu Santo es el rechazo deliberado y final de la obra del Espíritu Santo, atribuyendo el poder de Dios al diablo. Es el único pecado que la Biblia declara…"
 passage: "Mateo 12:31-32"
 tags: ["fundamento", "neumatologia"]

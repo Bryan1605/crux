@@ -1,6 +1,7 @@
 ---
 title: "El fruto del Espíritu Santo"
 category: "01-fundamentos"
+subcategory: "Espíritu Santo"
 description: "El fruto del Espíritu Santo es la evidencia externa de una vida transformada por Cristo. Mientras que los dones son habilidades sobrenaturales para servir, el fruto es el carácter que el…"
 passage: "Gálatas 5:22-23"
 tags: ["fundamento", "doctrina/neumatologia"]

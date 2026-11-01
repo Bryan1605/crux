@@ -1,6 +1,7 @@
 ---
 title: "El Espíritu Santo en el AT y el NT"
 category: "01-fundamentos"
+subcategory: "Espíritu Santo"
 description: "El Espíritu Santo obró en el Antiguo Testamento y obra de manera diferente en el Nuevo Testamento. No es un Espíritu distinto; es la misma Persona divina que obra de manera diferente según…"
 passage: "Joel 2:28-29 / Hechos 2:16-18"
 tags: ["fundamento", "doctrina/neumatologia"]

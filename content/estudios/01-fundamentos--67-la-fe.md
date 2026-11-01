@@ -1,6 +1,7 @@
 ---
 title: "La Fe"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "La fe no es \"creer sin pruebas\" ni \"desear algo intensamente\". La fe bíblica es confianza plena en lo que Dios ha dicho y ha hecho, basada en evidencia real, que resulta en obediencia…"
 passage: "Hebreos 11:1"
 tags: ["fundamento", "vida-cristiana"]

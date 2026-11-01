@@ -5,6 +5,8 @@
  * `content/estudios/*.md`, con su frecuencia. Los usan `/temas` (nube de temas)
  * y `/buscar` (sugerencias cuando aún no hay consulta).
  */
+import temasPorCategoria from '../../content/temas.json';
+import { assetUrl } from '../lib/assets';
 import { STUDIES, STUDY_CATEGORIES } from './estudios';
 
 /** [{ tag, count }] ordenado por frecuencia y luego alfabéticamente. */
@@ -36,3 +38,20 @@ export function topTemas(n = 12, temas = TEMAS) {
 }
 
 export const CATEGORIAS = STUDY_CATEGORIES;
+
+/**
+ * Temas de cada categoría (`content/temas.json`), en el orden de la sidebar de
+ * `/estudio`. `key` es el valor exacto de `subcategory` en el frontmatter;
+ * `label` es lo que se muestra (si falta, `key`).
+ *
+ * @type {Record<string, { key:string, label:string, lema?:string, image?:string }[]>}
+ */
+export const TEMAS_POR_CATEGORIA = Object.fromEntries(
+  Object.entries(temasPorCategoria).map(([cat, temas]) => [
+    cat,
+    temas.map(t => ({ ...t, label: t.label || t.key, image: t.image ? assetUrl(t.image) : undefined }))
+  ])
+);
+
+/** Temas de una categoría (vacío si no tiene). */
+export const temasDeCategoria = catId => TEMAS_POR_CATEGORIA[catId] || [];

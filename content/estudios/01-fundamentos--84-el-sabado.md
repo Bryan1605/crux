@@ -1,6 +1,7 @@
 ---
 title: "El Sábado / Día de Reposo"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "El sábado fue el séptimo día de la semana (sábado), instituido por Dios en el Génesis como día de descanso. Bajo el Nuevo Pacto, el mandamiento del sábado fue cumplido en Cristo, y la…"
 passage: "Colosenses 2:16-17"
 tags: ["fundamento", "otros"]

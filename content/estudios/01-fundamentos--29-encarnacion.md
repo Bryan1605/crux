@@ -1,6 +1,7 @@
 ---
 title: "La encarnación — por qué Jesús tuvo que ser 100% Dios y 100% hombre"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "La encarnación significa que Dios el Hijo se hizo hombre. Jesús no dejó de ser Dios para volverse hombre; siendo Dios, añadió la naturaleza humana. Desde el momento de la concepción, Jesús…"
 passage: "Juan 1:14"
 tags: ["fundamento"]

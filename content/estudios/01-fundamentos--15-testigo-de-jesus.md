@@ -1,6 +1,7 @@
 ---
 title: "Testigo de Jesús"
 category: "01-fundamentos"
+subcategory: "Identidad y servicio"
 description: "Un testigo de Jesús es alguien que habla de Cristo por experiencia personal. No es un profesional de la religión; es cualquier creyente que comparte lo que ha visto y oído. El testimonio no…"
 passage: "Hechos 1:8"
 tags: ["fundamento", "discipulado"]

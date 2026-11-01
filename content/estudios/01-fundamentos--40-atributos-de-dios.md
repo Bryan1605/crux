@@ -1,6 +1,7 @@
 ---
 title: "Atributos de Dios"
 category: "01-fundamentos"
+subcategory: "Dios y la Trinidad"
 description: "Los atributos de Dios son las cualidades esenciales que describen quién es Dios. No son partes de Dios; son la totalidad de quién es Él en cada atributo. Dios es santo al 100%, amor al…"
 passage: "Salmo 139:1-6"
 tags: ["fundamento", "doctrina/trinidad"]

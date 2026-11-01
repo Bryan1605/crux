@@ -1,6 +1,7 @@
 ---
 title: "Libre albedrío"
 category: "01-fundamentos"
+subcategory: "El ser humano"
 description: "El libre albedrío es la capacidad del ser humano para hacer elecciones genuinas entre alternativas morales. Dios creó al ser humano con la capacidad de elegir, y las elecciones tienen…"
 passage: "Deuteronomio 30:19"
 tags: ["fundamento", "doctrina/antropologia"]

@@ -1,6 +1,7 @@
 ---
 title: "Santificación"
 category: "01-fundamentos"
+subcategory: "Santificación"
 description: "Santificación es el proceso por el cual Dios nos hace más parecidos a Cristo. No es opcional — es la voluntad de Dios para cada creyente. No es para ser más salvos, sino para reflejar mejor…"
 passage: "1 Tesalonicenses 4:3"
 tags: ["fundamento"]

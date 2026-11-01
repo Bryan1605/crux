@@ -1,6 +1,7 @@
 ---
 title: "El Estado Intermedio"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "El estado intermedio es la condición del creyente entre la muerte física y la resurrección final. Cuando un creyente muere, su alma va inmediatamente a la presencia de Cristo (\"con el…"
 passage: "2 Corintios 5:6-8"
 tags: ["fundamento", "escatologia"]

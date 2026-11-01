@@ -1,6 +1,7 @@
 ---
 title: "La kenosis — Cristo se despojó a sí mismo (Filipenses 2:5-11)"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "Kenosis viene del griego κένωσις (kenōsis), que significa \"vaciamiento, despojamiento\". Describe el acto voluntario de Cristo de dejar a un lado los privilegios de Su deidad para tomar…"
 passage: "Filipenses 2:5-8"
 tags: ["fundamento", "doctrina/cristologia"]

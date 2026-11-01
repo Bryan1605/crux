@@ -1,6 +1,7 @@
 ---
 title: "Discípulo"
 category: "01-fundamentos"
+subcategory: "Identidad y servicio"
 description: "Un discípulo es un seguidor de Jesús que aprende de Él para vivir como Él. No es solo alguien que cree en Jesús mentalmente; es alguien que lo sigue, lo imita y lo obedece. El discipulado…"
 passage: "Mateo 28:19-20"
 tags: ["fundamento"]

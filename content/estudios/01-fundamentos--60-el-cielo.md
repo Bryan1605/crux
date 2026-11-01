@@ -1,6 +1,7 @@
 ---
 title: "El Cielo"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "El cielo no es una nube vaporosa donde flotan ángeles con arpas. El cielo es el lugar de la presencia directa de Dios, donde los creyentes gozan de Su compañía, Su gloria y Su amor para…"
 passage: "Juan 14:2-3"
 tags: ["fundamento", "escatologia"]

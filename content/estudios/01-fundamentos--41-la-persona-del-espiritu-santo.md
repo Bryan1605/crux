@@ -1,6 +1,7 @@
 ---
 title: "La persona del Espíritu Santo"
 category: "01-fundamentos"
+subcategory: "Espíritu Santo"
 description: "El Espíritu Santo no es una fuerza, una energía, una influencia o un \"poder\" impersonal. Es una Persona divina: tiene voluntad, emociones, conocimiento, y toma decisiones independientes.…"
 passage: "Hechos 13:2"
 tags: ["fundamento", "doctrina/neumatologia"]

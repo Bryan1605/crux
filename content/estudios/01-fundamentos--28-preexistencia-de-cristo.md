@@ -1,6 +1,7 @@
 ---
 title: "La preexistencia de Cristo"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "La preexistencia de Cristo significa que Jesús existía antes de nacer en Belén. Él no comenzó a existir cuando fue concebido en el vientre de María. Jesús siempre ha existido porque Él es…"
 passage: "Juan 1:1-3"
 tags: ["fundamento", "doctrina/cristologia"]

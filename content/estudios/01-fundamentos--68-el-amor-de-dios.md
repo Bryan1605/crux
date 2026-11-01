@@ -1,6 +1,7 @@
 ---
 title: "El Amor de Dios"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "El amor de Dios no es un sentimiento tierno ni una emoción pasajera. Es la naturaleza misma de Dios que se manifiesta en Su obra redentora, expresada en la cruz de Cristo, y derramada en…"
 passage: "1 Juan 4:8-10"
 tags: ["fundamento", "vida-cristiana"]

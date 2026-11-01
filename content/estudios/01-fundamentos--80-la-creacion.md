@@ -1,6 +1,7 @@
 ---
 title: "La Creación"
 category: "01-fundamentos"
+subcategory: "Soberanía y misión"
 description: "La creación es el acto soberano de Dios mediante el cual hizo todo lo que existe de la nada, por Su palabra, en seis días, y descansó el séptimo. No es un mito, no es una alegoría, y no…"
 passage: "Génesis 1:1"
 tags: ["fundamento", "otros"]

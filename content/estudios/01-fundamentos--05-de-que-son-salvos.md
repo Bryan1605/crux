@@ -1,6 +1,7 @@
 ---
 title: "¿De qué son salvos los hijos de Dios?"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "Los hijos de Dios son salvos de la muerte espiritual, el poder del pecado, la ira de Dios, la condenación eterna y el dominio del diablo. La salvación no es solo \"ir al cielo\" — es un…"
 passage: "Efesios 2:1-5"
 tags: ["fundamento", "doctrina/soteriologia"]

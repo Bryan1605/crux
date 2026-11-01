@@ -1,6 +1,7 @@
 ---
 title: "Legalismo de Francisco Israel"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "A continuación se presenta el resumen, los puntos principales fundamentados en los versículos compartidos y la postura del autor Francisco Israel en su video titulado 54 Evidencias Bíblicas…"
 tags: ["estudio", "doctrina/soteriologia"]
 aliases: []

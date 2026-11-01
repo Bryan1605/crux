@@ -1,6 +1,7 @@
 ---
 title: "Guerra Espiritual"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "La guerra espiritual es la realidad de que existen fuerzas demoníacas organizadas que se oponen a Dios y a Su pueblo, y que el creyente debe resistir con la armadura de Dios, la Palabra y…"
 passage: "Efesios 6:10-18"
 tags: ["fundamento", "vida-cristiana"]

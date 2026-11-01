@@ -1,6 +1,7 @@
 ---
 title: "La virginidad de Jesús"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "La virginidad de Jesús significa que Jesús fue concebido en el vientre de María sin intervención de un padre humano, por el poder milagroso del Espíritu Santo. María era virgen cuando…"
 passage: "Mateo 1:18-25"
 tags: ["fundamento", "doctrina/cristologia"]

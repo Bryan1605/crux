@@ -1,6 +1,7 @@
 ---
 title: "Embajador de Jesucristo"
 category: "01-fundamentos"
+subcategory: "Identidad y servicio"
 description: "Un embajador de Jesucristo es un representante oficial del reino de Dios ante el mundo. Así como un embajador representa a su nación en tierra extranjera, el creyente representa a Cristo en…"
 passage: "2 Corintios 5:18-20"
 tags: ["fundamento", "discipulado", "doctrina/cristologia"]

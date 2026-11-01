@@ -1,6 +1,7 @@
 ---
 title: "La Providencia de Dios"
 category: "01-fundamentos"
+subcategory: "Soberanía y misión"
 description: "La providencia de Dios es el gobierno soberano de Dios sobre todas las cosas para que cumplan Su propósito. No es una fuerza impersonal ni \"suerte\". Es Dios dirigiendo activamente la…"
 passage: "Romanos 8:28"
 tags: ["fundamento", "otros"]

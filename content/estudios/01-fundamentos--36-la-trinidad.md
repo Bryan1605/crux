@@ -1,6 +1,7 @@
 ---
 title: "La Trinidad"
 category: "01-fundamentos"
+subcategory: "Dios y la Trinidad"
 description: "La doctrina de la Trinidad enseña que Dios es un solo ser eterno que existe en tres personas distintas: el Padre, el Hijo y el Espíritu Santo. Las tres personas son igualmente Dios,…"
 passage: "2 Corintios 13:14"
 tags: ["fundamento", "doctrina/trinidad"]

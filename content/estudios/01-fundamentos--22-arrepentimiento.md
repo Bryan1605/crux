@@ -1,6 +1,7 @@
 ---
 title: "Arrepentimiento"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "Arrepentimiento no es simplemente sentirse mal por haber pecado. Es un cambio radical de mente que resulta en un cambio de dirección. Es volverse de la rebelión contra Dios a la fe en…"
 passage: "Hechos 3:19"
 tags: ["fundamento", "doctrina/soteriologia"]

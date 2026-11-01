@@ -1,6 +1,7 @@
 ---
 title: "Llamado Eficaz vs Llamado General"
 category: "01-fundamentos"
+subcategory: "Soberanía y misión"
 description: "El llamado general es la invitación de Dios a todos los hombres a arrepentirse y creer en el evangelio. El llamado eficaz (o invocación interna) es la obra del Espíritu Santo que transforma…"
 passage: "Mateo 22:14"
 tags: ["fundamento", "otros"]

@@ -1,6 +1,7 @@
 ---
 title: "Consagración"
 category: "01-fundamentos"
+subcategory: "Santificación"
 description: "Consagración es el acto de dedicar toda la vida a Dios como respuesta a Su misericordia. No es un voto religioso ni un acto de mérito; es la entrega total y voluntaria de uno mismo a Dios…"
 passage: "Romanos 12:1"
 tags: ["fundamento"]

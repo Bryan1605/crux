@@ -1,6 +1,7 @@
 ---
 title: "El sello del Espíritu Santo"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "El sello del Espíritu Santo es la marca de propiedad y seguridad que Dios pone en cada creyente en el momento de la salvación. El Espíritu Santo es la garantía de que Dios cumplirá Su…"
 passage: "Efesios 1:13-14"
 tags: ["fundamento", "doctrina/soteriologia"]

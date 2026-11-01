@@ -1,6 +1,7 @@
 ---
 title: "Bautismo"
 category: "01-fundamentos"
+subcategory: "La Iglesia"
 description: "El bautismo es el acto de obediencia público mediante el cual un creyente profesante se identifica con la muerte, sepultura y resurrección de Cristo. No es el medio de salvación, sino la…"
 passage: "Mateo 28:19"
 tags: ["fundamento", "eclesiologia"]

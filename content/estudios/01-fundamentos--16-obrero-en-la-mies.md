@@ -1,6 +1,7 @@
 ---
 title: "Obrero en la mies"
 category: "01-fundamentos"
+subcategory: "Identidad y servicio"
 description: "Un obrero en la mies es todo creyente que participa activamente en la cosecha espiritual que Dios está recogiendo. No es solo el pastor o el misionero; es cualquier discípulo que ora, va y…"
 passage: "Mateo 9:37-38"
 tags: ["fundamento", "discipulado"]

@@ -1,6 +1,7 @@
 ---
 title: "Adoración"
 category: "01-fundamentos"
+subcategory: "La Iglesia"
 description: "La adoración es la respuesta total del ser humano a la naturaleza y obras de Dios. No es un estilo musical, un lugar sagrado o una hora del domingo. La adoración es dar a Dios el valor que…"
 passage: "Juan 4:23-24"
 tags: ["fundamento", "eclesiologia"]

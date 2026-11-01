@@ -1,6 +1,7 @@
 ---
 title: "Pablo no contradice la Escritura"
 category: "01-fundamentos"
+subcategory: "La Escritura"
 description: "- [Sección A — Contexto necesario](#sección-a--contexto-necesario) - [Sección B — Acusación 1: Pablo contradice la Ley de Moisés](#sección-b--acusación-1-pablo-contradice-la-ley-de-moisés)…"
 tags: ["apologetica", "hermeneutica"]
 aliases: []

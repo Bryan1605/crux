@@ -1,6 +1,7 @@
 ---
 title: "Evangelizar / Hablar de Cristo en el día a día"
 category: "01-fundamentos"
+subcategory: "Soberanía y misión"
 description: "Evangelizar es compartir el evangelio de Jesucristo con la vida y con las palabras en la vida cotidiana. No es un acto exclusivo de pastores o misioneros, sino el estilo de vida de todo…"
 passage: "Colosenses 4:5-6"
 tags: ["fundamento", "evangelismo", "vida-cristiana"]

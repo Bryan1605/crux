@@ -1,6 +1,7 @@
 ---
 title: "Eventos Futuros (Orden Escatológico)"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "El orden escatológico es la secuencia de eventos que la Biblia describe como ocurrirán antes, durante y después de la segunda venida de Cristo. Aunque hay diferentes interpretaciones sobre…"
 passage: "1 Tesalonicenses 4:13-18"
 tags: ["fundamento", "escatologia"]

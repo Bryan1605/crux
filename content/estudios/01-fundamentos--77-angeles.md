@@ -1,6 +1,7 @@
 ---
 title: "Ángeles"
 category: "01-fundamentos"
+subcategory: "Mundo espiritual"
 description: "Los ángeles son seres espirituales creados por Dios que sirven como mensajeros, guerreros y servidores de Su voluntad. No son humanos muertos, no son deidades menores, y no son imágenes de…"
 passage: "Hebreos 1:14"
 tags: ["fundamento", "angelologia"]

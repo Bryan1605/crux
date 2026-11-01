@@ -1,6 +1,7 @@
 ---
 title: "¿Puede un hijo de Dios mejorar por su conducta el regalo de la Salvación?"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "No. La salvación no es un premio ni un salario — es un regalo. Un regalo no se mejora con lo que el receptor hace. Si pudieras mejorarlo con tu conducta, ya no sería un regalo sino una…"
 passage: "Efesios 2:8-9"
 tags: ["fundamento", "doctrina/soteriologia"]

@@ -1,6 +1,7 @@
 ---
 title: "La resurrección de Cristo — centralidad, evidencia y significado"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "La resurrección de Cristo significa que Jesús realmente volvió a la vida después de haber estado muerto. No fue una reanimación temporal (como Lázaro, que volvió a morir), sino una…"
 passage: "1 Corintios 15:17"
 tags: ["fundamento", "doctrina/cristologia"]

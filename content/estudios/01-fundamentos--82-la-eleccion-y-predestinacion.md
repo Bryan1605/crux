@@ -1,6 +1,7 @@
 ---
 title: "La Elección / Predestinación"
 category: "01-fundamentos"
+subcategory: "Soberanía y misión"
 description: "La elección o predestinación es la doctrina de que Dios, antes de la fundación del mundo, eligió soberanamente a quienes serían salvos, no por mérito alguno de ellos, sino por Su gracia…"
 passage: "Romanos 8:29-30"
 tags: ["fundamento", "otros"]

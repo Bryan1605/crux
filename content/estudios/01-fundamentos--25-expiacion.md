@@ -1,6 +1,7 @@
 ---
 title: "Expiación"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "Expiación significa cubrir o eliminar el pecado mediante un sacrificio. Mientras la propiciación se enfoca en el Dios cuya ira es apartada, la expiación se enfoca en el pecado que es…"
 passage: "Romanos 3:25"
 tags: ["fundamento"]

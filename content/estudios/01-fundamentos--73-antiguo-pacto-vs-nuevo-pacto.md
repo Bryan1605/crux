@@ -1,6 +1,7 @@
 ---
 title: "Antiguo Pacto vs Nuevo Pacto"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "El Antiguo Pacto (la Ley de Moisés) fue un sistema temporal de sacrificios, ceremonias y mandamientos que revelaba el pecado pero no podía quitarlo. El Nuevo Pacto, sellado en la sangre de…"
 passage: "Hebreos 8:8-13"
 tags: ["fundamento", "vida-cristiana"]

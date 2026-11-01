@@ -1,6 +1,7 @@
 ---
 title: "Regeneración (nacer de nuevo)"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "Regeneración es el acto soberano de Dios por el cual imparte vida espiritual a una persona que estaba muerta espiritualmente. Es el \"nuevo nacimiento\" o \"nacer de nuevo\". No es una reforma…"
 passage: "Juan 3:3"
 tags: ["fundamento"]

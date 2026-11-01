@@ -1,6 +1,7 @@
 ---
 title: "Información por la razón vs. Información por revelación"
 category: "01-fundamentos"
+subcategory: "La Escritura"
 description: "La información por la razón es el conocimiento que el ser humano puede obtener por su capacidad intelectual natural. La información por revelación es el conocimiento que el Espíritu Santo…"
 passage: "1 Corintios 2:9-14"
 tags: ["fundamento"]

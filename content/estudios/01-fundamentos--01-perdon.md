@@ -1,6 +1,7 @@
 ---
 title: "Perdón"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "Perdón es Dios quitando la culpa y la deuda del pecado completamente, basado en el sacrificio de Cristo, restaurando la relación rota."
 passage: "1 Juan 1:9"
 tags: ["fundamento"]

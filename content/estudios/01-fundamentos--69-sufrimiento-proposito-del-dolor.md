@@ -1,6 +1,7 @@
 ---
 title: "Sufrimiento / Propósito del Dolor"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "El sufrimiento no es un accidente sin propósito ni un castigo de Dios. En las manos de Dios, el dolor se convierte en herramienta de transformación: produce perseverancia, carácter y…"
 passage: "Romanos 5:3-5"
 tags: ["fundamento", "vida-cristiana"]

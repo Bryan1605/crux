@@ -1,6 +1,7 @@
 ---
 title: "Matrimonio y Familia"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "El matrimonio no es una invención cultural ni un contrato humano. Es una institución divina creada por Dios en el Edén, que refleja la relación entre Cristo y Su Iglesia. La familia es la…"
 passage: "Efesios 5:22-33"
 tags: ["fundamento", "vida-cristiana"]

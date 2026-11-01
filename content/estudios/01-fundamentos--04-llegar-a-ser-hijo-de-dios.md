@@ -1,6 +1,7 @@
 ---
 title: "Llegar a ser hijo de Dios"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "Se llega a ser hijo de Dios por fe en Jesucristo y nuevo nacimiento espiritual. No es por nacimiento físico, religión, herencia o esfuerzo moral. Es un acto de Dios mediante el cual él…"
 passage: "Juan 1:12-13"
 tags: ["fundamento", "doctrina/soteriologia"]

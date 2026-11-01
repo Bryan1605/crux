@@ -1,6 +1,7 @@
 ---
 title: "La ascensión y exaltación de Cristo"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "La ascensión es el evento en el que Jesús fue elevado corporalmente al cielo cuarenta días después de Su resurrección, ante los ojos de Sus discípulos. La exaltación es la posición de…"
 passage: "Hechos 1:9-11"
 tags: ["fundamento", "doctrina/cristologia"]

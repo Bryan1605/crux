@@ -1,6 +1,7 @@
 ---
 title: "Evangelismo y Misiones"
 category: "01-fundamentos"
+subcategory: "Soberanía y misión"
 description: "El evangelismo es la proclamación verbal del evangelio de Jesucristo a individuos para que crean y se salven. Las misiones son la obra de llevar el evangelio a todos los pueblos, culturas y…"
 passage: "Mateo 28:18-20"
 tags: ["fundamento", "otros"]

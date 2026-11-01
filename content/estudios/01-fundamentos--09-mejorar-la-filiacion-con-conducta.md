@@ -1,6 +1,7 @@
 ---
 title: "¿Puede un hijo de Dios mejorar por su conducta el regalo de ser hijo de Dios?"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "No. La filiación (ser hijo de Dios) no se adquiere por conducta ni se mejora con ella. Es un estatus recibido por adopción y nuevo nacimiento. Un hijo natural no se vuelve \"más hijo\" por…"
 passage: "1 Juan 3:1"
 tags: ["fundamento", "doctrina/soteriologia"]

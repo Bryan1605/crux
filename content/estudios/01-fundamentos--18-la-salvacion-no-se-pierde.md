@@ -1,6 +1,7 @@
 ---
 title: "La salvación no se pierde (refutación bíblica)"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "La salvación es eterna, irrevocable y segura para todo el que ha creído genuinamente en Jesucristo. Un verdadero hijo de Dios no puede perder su salvación, porque esta no depende del…"
 passage: "Juan 10:27-29"
 tags: ["fundamento"]

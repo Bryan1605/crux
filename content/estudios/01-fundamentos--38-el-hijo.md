@@ -1,6 +1,7 @@
 ---
 title: "El Hijo"
 category: "01-fundamentos"
+subcategory: "Dios y la Trinidad"
 description: "El Hijo es la segunda Persona de la Trinidad: el Verbo eterno de Dios que se encarnó en Jesús de Nazaret. Es igualmente Dios que el Padre, eterno y todopoderoso, pero en la obra de la…"
 passage: "Filipenses 2:5-11"
 tags: ["fundamento", "doctrina/trinidad"]

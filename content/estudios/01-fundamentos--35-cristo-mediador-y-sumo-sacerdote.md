@@ -1,6 +1,7 @@
 ---
 title: "Cristo como Mediador y Sumo Sacerdote"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "Cristo es nuestro Mediador porque es el único puente entre Dios y los hombres. Y es nuestro Sumo Sacerdote porque se presenta delante de Dios en nuestro favor, ofreciendo Su propio…"
 passage: "1 Timoteo 2:5-6"
 tags: ["fundamento", "doctrina/cristologia"]

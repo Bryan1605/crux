@@ -1,6 +1,7 @@
 ---
 title: "Nuevos Cielos y Nueva Tierra"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "Los nuevos cielos y la nueva tierra no son una creación completamente nueva desde cero, sino una renovación radical de la creación actual, libres del pecado, la maldición y la muerte. Es la…"
 passage: "Apocalipsis 21:1"
 tags: ["fundamento", "escatologia"]

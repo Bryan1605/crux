@@ -1,6 +1,7 @@
 ---
 title: "Alma, espíritu y cuerpo"
 category: "01-fundamentos"
+subcategory: "El ser humano"
 description: "El ser humano está compuesto por cuerpo, alma y espíritu. Esta visión tricotómica (tres partes) se basa en 1 Tesalonicenses 5:23. El cuerpo es la parte física; el alma (נֶפֶשׁ — nephesh) es…"
 passage: "1 Tesalonicenses 5:23"
 tags: ["fundamento", "doctrina/antropologia"]

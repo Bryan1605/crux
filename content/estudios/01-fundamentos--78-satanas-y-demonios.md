@@ -1,6 +1,7 @@
 ---
 title: "Satanás y Demonios"
 category: "01-fundamentos"
+subcategory: "Mundo espiritual"
 description: "Satanás es un ángel caído, la cabeza de una rebelión contra Dios, que junto con un tercio de los ángeles que cayeron con él, busca engañar, destruir y robar la gloria de Dios. No es igual a…"
 passage: "1 Pedro 5:8"
 tags: ["fundamento", "angelologia"]

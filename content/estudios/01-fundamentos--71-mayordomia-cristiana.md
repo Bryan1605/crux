@@ -1,6 +1,7 @@
 ---
 title: "Mayordomía Cristiana"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "La mayordomía cristiana es el principio de que todo lo que tenemos pertenece a Dios y nosotros somos administradores responsables: nuestro tiempo, talentos, dinero, cuerpo y relaciones. No…"
 passage: "1 Pedro 4:10"
 tags: ["fundamento", "vida-cristiana"]

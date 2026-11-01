@@ -1,6 +1,7 @@
 ---
 title: "Llenura del Espíritu Santo"
 category: "01-fundamentos"
+subcategory: "Espíritu Santo"
 description: "La llenura del Espíritu Santo es la sumisión continua de la vida del creyente al control del Espíritu. No es una experiencia emocional única ni una \"segunda obra de gracia\". Es un estilo de…"
 passage: "Efesios 5:18"
 tags: ["fundamento", "doctrina/neumatologia"]

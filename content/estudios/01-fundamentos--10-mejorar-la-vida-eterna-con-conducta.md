@@ -1,6 +1,7 @@
 ---
 title: "¿Puede mejorar un hijo de Dios por su conducta el regalo de la Vida Eterna?"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "No. La vida eterna es eterna por definición. No es \"vida larga\" ni \"vida condicional\". Si pudiera mejorarse, perderse o aumentarse por la conducta, no sería eterna. El regalo es tan…"
 passage: "Juan 10:28"
 tags: ["fundamento", "doctrina/soteriologia"]

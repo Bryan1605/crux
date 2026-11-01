@@ -1,6 +1,7 @@
 ---
 title: "Caída de Satanás"
 category: "01-fundamentos"
+subcategory: "Mundo espiritual"
 description: "La caída de Satanás fue el momento en que el ángel más hermoso y poderoso de Dios se rebeló por orgullo, queriendo ser como Dios. Fue arrojado del cielo junto con un tercio de los ángeles…"
 passage: "Isaías 14:12-15"
 tags: ["fundamento", "angelologia"]

@@ -1,6 +1,7 @@
 ---
 title: "La conciencia"
 category: "01-fundamentos"
+subcategory: "El ser humano"
 description: "La conciencia es la capacidad interna de distinguir el bien del mal que Dios ha puesto en todo ser humano. No es la ley escrita (la Torá), sino una ley \"escrita en el corazón\" que da…"
 passage: "Romanos 2:14-15"
 tags: ["fundamento", "doctrina/antropologia"]

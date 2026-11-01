@@ -1,6 +1,7 @@
 ---
 title: "¿Puede un hijo de Dios dejar de serlo?"
 category: "01-fundamentos"
+subcategory: "Salvación"
 description: "No. La salvación es eterna, irrevocable y segura. Un hijo de Dios no puede dejar de serlo porque la salvación no depende de su desempeño sino de la fidelidad de Dios. El creyente es…"
 passage: "Juan 10:27-29"
 tags: ["fundamento", "doctrina/soteriologia"]

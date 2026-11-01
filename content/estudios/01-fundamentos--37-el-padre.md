@@ -1,6 +1,7 @@
 ---
 title: "El Padre"
 category: "01-fundamentos"
+subcategory: "Dios y la Trinidad"
 description: "El Padre es la primera Persona de la Trinidad: la fuente y origen de todas las cosas, el soberano que planifica y ejecuta la redención. El Padre no es \"el único Dios\" en detrimento del Hijo…"
 passage: "Efesios 1:3-6"
 tags: ["fundamento", "doctrina/trinidad"]

@@ -1,6 +1,7 @@
 ---
 title: "Segunda Venida de Cristo"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "La segunda venida de Cristo es el regreso personal, visible y bodily de Jesús a la tierra para juzgar al mundo, resucitar a los muertos, establecer Su reino milenario y consumar todas las…"
 passage: "Hechos 1:11"
 tags: ["fundamento", "escatologia"]

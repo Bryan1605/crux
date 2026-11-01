@@ -1,6 +1,7 @@
 ---
 title: "Señales de los Tiempos"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "Las señales de los tiempos son eventos y condiciones que Jesús y los apóstoles identificaron como indicadores de la cercanía de la segunda venida de Cristo. No son fechas exactas, sino…"
 passage: "Mateo 24:6-8"
 tags: ["fundamento", "escatologia"]

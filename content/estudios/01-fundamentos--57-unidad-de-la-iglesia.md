@@ -1,6 +1,7 @@
 ---
 title: "Unidad de la Iglesia"
 category: "01-fundamentos"
+subcategory: "La Iglesia"
 description: "La unidad de la Iglesia no es una organización humana que se crea por negociación, sino una realidad espiritual que se basa en la unidad del Dios trino. Los creyentes ya son uno en Cristo;…"
 passage: "Juan 17:20-23"
 tags: ["fundamento", "eclesiologia"]

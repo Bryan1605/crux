@@ -1,6 +1,7 @@
 ---
 title: "El Ayuno"
 category: "01-fundamentos"
+subcategory: "Vida cristiana"
 description: "El ayuno es la abstinencia voluntaria de comida (u otras cosas) con un propósito espiritual: buscar a Dios con mayor intensidad, quebrantar el cuerpo para fortalecer el espíritu, y…"
 passage: "Mateo 6:16-18"
 tags: ["fundamento", "vida-cristiana"]

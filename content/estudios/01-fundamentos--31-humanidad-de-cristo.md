@@ -1,6 +1,7 @@
 ---
 title: "La humanidad de Cristo (tentaciones, emociones, limitaciones voluntarias)"
 category: "01-fundamentos"
+subcategory: "Cristo"
 description: "La humanidad de Cristo significa que Jesús fue completamente humano, como nosotros en todo menos en el pecado. Tuvo un cuerpo real, emociones reales, necesidades físicas reales, y…"
 passage: "Hebreos 4:15"
 tags: ["fundamento", "doctrina/cristologia"]

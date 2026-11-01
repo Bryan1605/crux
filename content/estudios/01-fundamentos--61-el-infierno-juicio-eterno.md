@@ -1,6 +1,7 @@
 ---
 title: "El Infierno / Juicio Eterno"
 category: "01-fundamentos"
+subcategory: "Últimos tiempos"
 description: "El infierno no es una invención medieval para asustar gente. Es la consecuencia real y eterna de rechazar a Dios. Es el lugar (o estado) de tormento consciente, separación de Dios y juicio…"
 passage: "Apocalipsis 20:10"
 tags: ["fundamento", "escatologia"]
