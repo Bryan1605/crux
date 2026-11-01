@@ -38,7 +38,33 @@
   background: var(--bg);
 }
 
+/* Fondo de todo el héroe: Jesús con Nicodemo, oscurecido bajo el titular. */
+.hero__bg,
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero__bg {
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.5;
+}
+
+.hero__scrim {
+  background: linear-gradient(
+    90deg,
+    #0a0a0b 0%,
+    rgba(10, 10, 11, 0.88) 30%,
+    rgba(10, 10, 11, 0.3) 68%,
+    rgba(10, 10, 11, 0.55) 100%
+  );
+}
+
 .hero__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
@@ -81,17 +107,6 @@
   align-self: stretch;
   min-height: 560px;
   margin-right: calc((100vw - min(1160px, 100vw - 2.5rem)) / -2);
-}
-
-.hero__stage-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: 78% center;
-  opacity: 0.11;
-  /* Funde la imagen hacia el texto para que no compita con el titular. */
-  mask-image: linear-gradient(to right, transparent, #000 35%);
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 35%);
 }
 
 .hero__stage .cross-lanyard-wrapper {
@@ -245,9 +260,15 @@
     margin: 0 calc(-1 * (100vw - min(1160px, 100vw - 2.5rem)) / 2);
   }
 
-  .hero__stage-bg {
-    mask-image: linear-gradient(to bottom, #000 55%, transparent);
-    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  /* La imagen se ve arriba, detrás de la cruz, y se oscurece bajo el texto. */
+  .hero__scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 11, 0.3) 0%,
+      rgba(10, 10, 11, 0.55) 35%,
+      rgba(10, 10, 11, 0.92) 55%,
+      #0a0a0b 100%
+    );
   }
 
   .hero__copy {

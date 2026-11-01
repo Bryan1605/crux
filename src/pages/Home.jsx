@@ -118,6 +118,12 @@ export default function Home() {
     <main id="main" className="home">
       {/* Hero: texto y buscador a la izquierda, la cruz ortodoxa colgando a la derecha */}
       <section className="hero" aria-labelledby="hero-title">
+        <div
+          className="hero__bg"
+          aria-hidden="true"
+          style={{ backgroundImage: `url(${assetUrl('/img/banners/herobanner4-nicodemo.webp')})` }}
+        />
+        <div className="hero__scrim" aria-hidden="true" />
         <div className="container hero__grid">
           <div className="hero__copy">
             <p className="eyebrow home-kicker">{home.hero.eyebrow}</p>
@@ -174,11 +180,6 @@ export default function Home() {
           </div>
 
           <div className="hero__stage">
-            <div
-              className="hero__stage-bg"
-              aria-hidden="true"
-              style={{ backgroundImage: `url(${assetUrl('/img/banners/herobanner1.webp')})` }}
-            />
             <Suspense fallback={<div className="cross-lanyard-wrapper" aria-hidden="true" />}>
               <CrossLanyard position={[0, 0, 16]} gravity={[0, -40, 0]} />
             </Suspense>
