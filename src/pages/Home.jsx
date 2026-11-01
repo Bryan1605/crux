@@ -329,7 +329,11 @@ export default function Home() {
             {/* El pie y el enlace siguen a la imagen que está en pantalla. */}
             {actual?.caption && (
               <span className="banner__caption" aria-live="polite">
-                {actual.caption}
+                {/* La `key` reinicia el fundido en cada diapositiva; la región
+                    viva se queda montada para que el lector la anuncie. */}
+                <span key={slide} className="banner__caption-text">
+                  {actual.caption}
+                </span>
               </span>
             )}
             {SLIDES.length > 1 && (

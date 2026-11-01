@@ -662,6 +662,20 @@
   color: var(--text);
 }
 
+.banner__caption-text {
+  display: inline-block;
+  animation: banner-caption-in 0.25s ease both;
+}
+
+@keyframes banner-caption-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .banner__dots {
   display: flex;
   gap: 6px;
@@ -751,6 +765,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .banner__caption-text {
+    animation: none;
+  }
+
   .char-card__img img {
     transition: none;
   }

@@ -416,6 +416,40 @@ try {
   );
   await barra.close();
 
+  // El pie del banner cambia al empezar la transición, no al terminarla (2,2 s).
+  const banner = await makePage('no-preference', 1280, 900);
+  await banner.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });
+  await wait(2500);
+  await banner.evaluate(() => document.querySelector('.banner')?.scrollIntoView());
+  const pie = await banner.evaluate(
+    () =>
+      new Promise(resolve => {
+        const swap = document.querySelector('.banner .liquid-swap');
+        const caption = document.querySelector('.banner__caption');
+        if (!swap || !caption) return resolve({ error: 'sin banner o sin pie' });
+        const antes = caption.textContent.trim();
+        let t0 = null;
+        const obs = new MutationObserver(() => {
+          if (t0 === null && swap.querySelector('.liquid-swap__layer--next')) t0 = performance.now();
+          const ahora = caption.textContent.trim();
+          if (t0 !== null && ahora !== antes) {
+            obs.disconnect();
+            resolve({ ms: Math.round(performance.now() - t0), antes, ahora });
+          }
+        });
+        obs.observe(document.querySelector('.banner'), { childList: true, subtree: true, characterData: true });
+        const r = swap.getBoundingClientRect();
+        swap.dispatchEvent(new MouseEvent('click', { bubbles: true, clientX: r.left + r.width / 2, clientY: r.top + r.height / 2 }));
+        setTimeout(() => { obs.disconnect(); resolve({ timeout: true, t0, antes }); }, 4000);
+      })
+  );
+  check(
+    'el pie del banner cambia al empezar la transición (< 300 ms)',
+    typeof pie.ms === 'number' && pie.ms < 300,
+    pie.ms != null ? `${pie.ms} ms · «${pie.antes}» → «${pie.ahora}»` : JSON.stringify(pie)
+  );
+  await banner.close();
+
   // ---------------------------------------------------------------- marquesina
   const marquee = await makePage();
   await marquee.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });

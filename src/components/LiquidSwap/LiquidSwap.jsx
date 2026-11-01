@@ -34,6 +34,8 @@ export default function LiquidSwap({
     const next = (idx + 1) % n;
     swappingRef.current = true;
     setSwap({ next, ox: originX, oy: originY });
+    // Se avisa al empezar, no al terminar: el pie cambia con la imagen nueva.
+    onChange?.(next);
   };
 
   useEffect(() => {
@@ -89,7 +91,6 @@ export default function LiquidSwap({
         setIdx(swap.next);
         setSwap(null);
         swappingRef.current = false;
-        onChange?.(swap.next);
       }
     };
     rafRef.current = requestAnimationFrame(frame);
