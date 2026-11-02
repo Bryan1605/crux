@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 
 import './ConcaveCarousel.css';
 
@@ -19,6 +19,9 @@ import './ConcaveCarousel.css';
  * Interacción: rueda (vertical → horizontal cuando aún hay recorrido), arrastre
  * con puntero, botones ← →, flechas del teclado y snap. Con
  * `prefers-reduced-motion` no se aplica ninguna transformación 3D.
+ *
+ * `onIndexChange(i)` avisa cuando cambia la tarjeta centrada; `ref` expone
+ * `scrollToIndex(i)` para llevar el carrusel a una tarjeta concreta.
  */
 
 const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
@@ -36,7 +39,9 @@ export default function ConcaveCarousel({
   renderItem,
   getKey = (item, i) => item?.slug ?? i,
   onItemClick,
-  className = ''
+  onIndexChange,
+  className = '',
+  ref
 }) {
   const scrollerRef = useRef(null);
   const cardsRef = useRef([]);
@@ -45,6 +50,9 @@ export default function ConcaveCarousel({
   const dragRef = useRef(null);
   const movedRef = useRef(0);
   const reducedRef = useRef(false);
+  const indexRef = useRef(-1);
+  const onIndexRef = useRef(onIndexChange);
+  onIndexRef.current = onIndexChange;
 
   const apply = useCallback(() => {
     rafRef.current = 0;
@@ -57,6 +65,15 @@ export default function ConcaveCarousel({
     const center = scroller.scrollLeft + half;
     const cards = cardsRef.current;
     const centers = centersRef.current;
+
+    let nearest = 0;
+    for (let i = 1; i < centers.length; i += 1) {
+      if (Math.abs(centers[i] - center) < Math.abs(centers[nearest] - center)) nearest = i;
+    }
+    if (centers.length && nearest !== indexRef.current) {
+      indexRef.current = nearest;
+      onIndexRef.current?.(nearest);
+    }
 
     for (let i = 0; i < cards.length; i += 1) {
       const card = cards[i];
@@ -100,6 +117,7 @@ export default function ConcaveCarousel({
     const cards = Array.from(scroller.querySelectorAll('[data-cc-item]'));
     cardsRef.current = cards;
     centersRef.current = cards.map(card => card.offsetLeft + card.offsetWidth / 2);
+    indexRef.current = -1;
     apply();
   }, [apply]);
 
@@ -111,6 +129,22 @@ export default function ConcaveCarousel({
       scroller.scrollBy({ left: dir * step, behavior: reducedRef.current ? 'auto' : 'smooth' });
     },
     [gap, itemWidth]
+  );
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      scrollToIndex(index) {
+        const scroller = scrollerRef.current;
+        const target = centersRef.current[index];
+        if (!scroller || target == null) return;
+        scroller.scrollTo({
+          left: target - scroller.clientWidth / 2,
+          behavior: reducedRef.current ? 'auto' : 'smooth'
+        });
+      }
+    }),
+    []
   );
 
   useEffect(() => {

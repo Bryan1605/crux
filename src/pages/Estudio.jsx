@@ -7,6 +7,7 @@ import Timeline from '../components/Timeline/Timeline';
 import ViewToggle from '../components/ViewToggle/ViewToggle';
 import { STUDIES, STUDY_CATEGORIES } from '../data/estudios';
 import { PERSONAJES } from '../data/personajes';
+import { ENTRADAS, temaId, temasDeCategoria } from '../data/temas';
 import { TIMELINE } from '../data/timeline';
 import { useSite, useSeo } from '../lib/site';
 
@@ -71,7 +72,7 @@ function cardBody(s, Tag = 'h2', withCover = true) {
 }
 
 /** Tarjeta de la rejilla (estudio o personaje). */
-function GridCard({ entry, index }) {
+function GridCard({ entry, index, Tag = 'h2' }) {
   const isPersonaje = entry.kind === 'personaje';
   const d = entry.data;
 
@@ -89,7 +90,7 @@ function GridCard({ entry, index }) {
           <div className="card__meta">
             <span>{d.epoca}</span>
           </div>
-          <h2 className="card__title">{d.nombre}</h2>
+          <Tag className="card__title">{d.nombre}</Tag>
           <p className="card__desc">{d.resumen}</p>
           <div className="card__footer">
             <span>{d.rol}</span>
@@ -99,18 +100,16 @@ function GridCard({ entry, index }) {
           </div>
         </>
       ) : (
-        cardBody(d)
+        cardBody(d, Tag)
       )}
     </Link>
   );
 }
 
-/** Fila compacta de la vista de lista. */
+/** Fila de la vista de lista: índice tipo libro (Nº · Ficha · Pasaje). */
 function ListRow({ entry, index }) {
   const isPersonaje = entry.kind === 'personaje';
   const d = entry.data;
-  const meta = isPersonaje ? d.epoca : d.categoryLabel;
-  const sub = isPersonaje ? d.rol : d.subcategory;
   const desc = isPersonaje ? d.resumen : d.description;
   const aside = isPersonaje ? d.rol : d.passage || 'Ficha de estudio';
 
@@ -119,25 +118,7 @@ function ListRow({ entry, index }) {
       <span className="row-card__num" aria-hidden="true">
         {String(index + 1).padStart(2, '0')}
       </span>
-      <span className="row-card__thumb">
-        {d.portada ? (
-          <img src={d.portada} alt="" loading="lazy" />
-        ) : (
-          <span className="row-card__initial" aria-hidden="true">
-            {(isPersonaje ? d.nombre : d.title).trim().charAt(0)}
-          </span>
-        )}
-      </span>
       <span className="row-card__body">
-        <span className="row-card__meta">
-          {meta}
-          {sub && (
-            <>
-              {' · '}
-              {sub}
-            </>
-          )}
-        </span>
         <span className="row-card__title">{isPersonaje ? d.nombre : d.title}</span>
         <span className="row-card__desc">{desc}</span>
       </span>
@@ -146,6 +127,81 @@ function ListRow({ entry, index }) {
         →
       </span>
     </Link>
+  );
+}
+
+function ListHead() {
+  return (
+    <div className="estudio__list-head" aria-hidden="true">
+      <span>Nº</span>
+      <span>Ficha</span>
+      <span>Pasaje</span>
+    </div>
+  );
+}
+
+const fichas = (n, kind = 'estudio') =>
+  `${n} ${kind === 'personaje' ? (n === 1 ? 'personaje' : 'personajes') : n === 1 ? 'ficha' : 'fichas'}`;
+
+/**
+ * Agrupa el índice por tema (`content/temas.json`, en su orden). Arriba la
+ * ficha de entrada («Empieza aquí») y los retratos de personajes; los temas que
+ * no están en `temas.json` van después, y las fichas sin tema al final. Los
+ * grupos vacíos (p. ej. con una búsqueda) no se devuelven. `null` si la
+ * categoría no tiene temas: entonces el índice va sin agrupar.
+ */
+function buildGroups(entries, catId) {
+  if (catId === 'all') return null;
+  const temas = temasDeCategoria(catId);
+  const estudios = entries.filter(e => e.kind === 'estudio');
+  if (!temas.length && !estudios.some(e => e.data.subcategory)) return null;
+
+  const entradas = new Set(ENTRADAS[catId] || []);
+  const entrada = [];
+  const retratos = [];
+  const otras = [];
+  const porTema = new Map(temas.map(t => [t.key, []]));
+  const extra = new Map();
+
+  for (const e of entries) {
+    const sub = e.data.subcategory;
+    if (e.kind === 'personaje') retratos.push(e);
+    else if (entradas.has(e.slug)) entrada.push(e);
+    else if (!sub) otras.push(e);
+    else if (porTema.has(sub)) porTema.get(sub).push(e);
+    else {
+      if (!extra.has(sub)) extra.set(sub, []);
+      extra.get(sub).push(e);
+    }
+  }
+
+  const groups = [
+    { id: 'tema-empieza-aqui', label: 'Empieza aquí', kind: 'entrada', items: entrada },
+    { id: 'tema-personajes', label: 'Personajes con historia', kind: 'personaje', items: retratos },
+    ...temas.map(t => ({ id: temaId(t.key), label: t.label, lema: t.lema, kind: 'tema', items: porTema.get(t.key) })),
+    ...[...extra.entries()]
+      .sort(([a], [b]) => a.localeCompare(b, 'es'))
+      .map(([key, items]) => ({ id: temaId(key), label: key, kind: 'tema', items })),
+    { id: 'tema-otras', label: 'Otras fichas', kind: 'otras', items: otras }
+  ].filter(g => g.items.length);
+
+  let start = 0;
+  for (const g of groups) {
+    g.start = start;
+    start += g.items.length;
+  }
+  return groups;
+}
+
+/** Encabezado de un grupo: «Salvación · 17 fichas» + lema. */
+function GroupHead({ group }) {
+  return (
+    <div className="estudio__group-head">
+      <h2 id={group.id} tabIndex={-1}>
+        {group.label} <span className="estudio__group-count">· {fichas(group.items.length, group.kind)}</span>
+      </h2>
+      {group.lema && <p className="estudio__group-lema">{group.lema}</p>}
+    </div>
   );
 }
 
@@ -228,13 +284,65 @@ export default function Estudio() {
   const activeLabel = activeCat === 'all' ? 'Todos' : activeCatObj?.label || 'Todos';
   const activeShort = activeCat === 'all' ? '' : activeCatObj?.short || '';
 
+  /** Grupos por tema (o `null`) y la secuencia ordenada que comparten las tres vistas. */
+  const groups = useMemo(() => buildGroups(entries, activeCat), [entries, activeCat]);
+  const ordered = useMemo(() => (groups ? groups.flatMap(g => g.items) : entries), [groups, entries]);
+  const showSide = Boolean(groups) && view !== 'carousel';
+
+  const [activeTema, setActiveTema] = useState(null);
+  const clickLockRef = useRef(0);
+  const carouselRef = useRef(null);
+  const [carIndex, setCarIndex] = useState(0);
+  const carGroup = groups?.find(g => carIndex >= g.start && carIndex < g.start + g.items.length);
+
+  // Scrollspy: el tema activo es el primer grupo que cruza la franja superior.
+  useEffect(() => {
+    if (!showSide) return undefined;
+    const sections = groups.map(g => document.querySelector(`[data-group="${g.id}"]`)).filter(Boolean);
+    if (!sections.length) return undefined;
+    setActiveTema(groups[0].id);
+    const visible = new Set();
+    const io = new IntersectionObserver(
+      list => {
+        for (const e of list) {
+          if (e.isIntersecting) visible.add(e.target);
+          else visible.delete(e.target);
+        }
+        if (Date.now() < clickLockRef.current) return;
+        const first = sections.find(s => visible.has(s));
+        if (first) setActiveTema(first.dataset.group);
+      },
+      { rootMargin: '-140px 0px -50% 0px' }
+    );
+    sections.forEach(s => io.observe(s));
+    return () => io.disconnect();
+  }, [groups, showSide]);
+
+  // Entrar con #tema-… en la URL: bajar a ese grupo cuando ya está pintado.
+  useEffect(() => {
+    if (!showSide) return;
+    const id = window.location.hash.slice(1);
+    if (id.startsWith('tema-')) document.getElementById(id)?.scrollIntoView({ block: 'start' });
+  }, [activeCat, showSide]);
+
+  const goToTema = id => event => {
+    const target = document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    clickLockRef.current = Date.now() + 1000;
+    setActiveTema(id);
+    target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    target.focus({ preventScroll: true });
+  };
+
   // Reveal al entrar en pantalla + inclinación 3D siguiendo el puntero.
   // Sólo aplica a la rejilla: lista y carrusel tienen su propia animación.
   useEffect(() => {
     const grid = gridRef.current;
     if (!grid || !showGrid) return undefined;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const cards = Array.from(grid.querySelectorAll('.study-card'));
+    const cards = Array.from(grid.querySelectorAll('.estudio__grid .study-card'));
 
     if (reduced) {
       cards.forEach(c => c.classList.add('is-revealed'));
@@ -260,7 +368,7 @@ export default function Estudio() {
       el.style.setProperty('--tilt-y', '0deg');
     };
     const onMove = e => {
-      const card = e.target.closest?.('.study-card');
+      const card = e.target.closest?.('.estudio__grid .study-card');
       if (!card || !grid.contains(card)) return;
       if (card !== current) {
         if (current) reset(current);
@@ -284,7 +392,7 @@ export default function Estudio() {
       grid.removeEventListener('pointermove', onMove);
       grid.removeEventListener('pointerleave', onLeave);
     };
-  }, [entries, showGrid]);
+  }, [ordered, showGrid]);
 
   return (
     <main id="main" className="estudio">
@@ -408,26 +516,97 @@ export default function Estudio() {
                 {isPersonajesCat ? 'Índice de personajes y estudios' : 'Índice de estudios'}
               </h2>
 
-              {view === 'list' ? (
-                <div className="estudio__list">
-                  {entries.map((entry, i) => (
-                    <ListRow key={`${entry.kind}-${entry.slug}`} entry={entry} index={i} />
-                  ))}
-                </div>
-              ) : view === 'carousel' ? (
-                <ConcaveCarousel
-                  items={entries}
-                  itemWidth={300}
-                  height={372}
-                  label={isPersonajesCat ? 'Carrusel de personajes y estudios' : 'Carrusel de estudios'}
-                  getKey={entry => `${entry.kind}-${entry.slug}`}
-                  renderItem={(entry, i) => <GridCard entry={entry} index={i} />}
-                />
+              {view === 'carousel' ? (
+                <>
+                  <ConcaveCarousel
+                    ref={carouselRef}
+                    items={ordered}
+                    itemWidth={300}
+                    height={372}
+                    label={isPersonajesCat ? 'Carrusel de personajes y estudios' : 'Carrusel de estudios'}
+                    getKey={entry => `${entry.kind}-${entry.slug}`}
+                    renderItem={(entry, i) => <GridCard entry={entry} index={i} />}
+                    onIndexChange={setCarIndex}
+                  />
+                  <div className="estudio__carousel-info">
+                    <p className="estudio__carousel-count">
+                      {Math.min(carIndex + 1, ordered.length)} de {ordered.length}
+                      {carGroup && <> · {carGroup.label}</>}
+                    </p>
+                    <div className="estudio__progress" aria-hidden="true">
+                      <span style={{ width: `${(Math.min(carIndex + 1, ordered.length) / ordered.length) * 100}%` }} />
+                    </div>
+                    {groups && groups.length > 1 && (
+                      <nav className="estudio__jump" aria-label="Saltar a un tema del carrusel">
+                        <span className="estudio__jump-label">Saltar a:</span>
+                        {groups.map(g => (
+                          <button
+                            key={g.id}
+                            type="button"
+                            className="estudio__jump-btn"
+                            aria-current={carGroup?.id === g.id ? 'true' : undefined}
+                            onClick={() => carouselRef.current?.scrollToIndex(g.start)}
+                          >
+                            {g.label}
+                          </button>
+                        ))}
+                      </nav>
+                    )}
+                  </div>
+                </>
               ) : (
-                <div ref={gridRef} className="grid grid--3 estudio__grid">
-                  {entries.map((entry, i) => (
-                    <GridCard key={`${entry.kind}-${entry.slug}`} entry={entry} index={i} />
-                  ))}
+                <div className={showSide ? 'estudio__layout' : undefined}>
+                  {showSide && (
+                    <nav className="estudio__side" aria-label={`Temas de ${activeLabel}`}>
+                      <ul>
+                        {groups.map(g => (
+                          <li key={g.id}>
+                            <a
+                              href={`#${g.id}`}
+                              data-kind={g.kind}
+                              aria-current={activeTema === g.id ? 'true' : undefined}
+                              onClick={goToTema(g.id)}
+                            >
+                              <span className="estudio__side-label">{g.label}</span>
+                              <span className="estudio__side-count">{g.items.length}</span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </nav>
+                  )}
+
+                  <div ref={gridRef} className="estudio__results">
+                    {(groups || [{ id: 'todo', items: entries, start: 0 }]).map(g => (
+                      <section
+                        key={g.id}
+                        className="estudio__group"
+                        data-group={groups ? g.id : undefined}
+                        aria-labelledby={groups ? g.id : undefined}
+                      >
+                        {groups && <GroupHead group={g} />}
+                        {view === 'list' ? (
+                          <div className="estudio__list">
+                            <ListHead />
+                            {g.items.map((entry, i) => (
+                              <ListRow key={`${entry.kind}-${entry.slug}`} entry={entry} index={g.start + i} />
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="grid grid--3 estudio__grid">
+                            {g.items.map((entry, i) => (
+                              <GridCard
+                                key={`${entry.kind}-${entry.slug}`}
+                                entry={entry}
+                                index={i}
+                                Tag={groups ? 'h3' : 'h2'}
+                              />
+                            ))}
+                          </div>
+                        )}
+                      </section>
+                    ))}
+                  </div>
                 </div>
               )}
             </>

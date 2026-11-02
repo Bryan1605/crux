@@ -241,6 +241,100 @@ try {
     revealed: document.querySelectorAll('.estudio__grid .study-card.is-revealed').length
   }));
   check('vuelve a la rejilla', backToGrid.grid && backToGrid.revealed > 0, JSON.stringify(backToGrid));
+  check('«Todos» va sin sidebar de temas', !(await page.$('.estudio__side')));
+
+  // ---------------------------------------------------------------- temas
+  const temasPage = await makePage();
+  await temasPage.goto(`${BASE}/estudio?cat=01-fundamentos`, { waitUntil: 'domcontentloaded' });
+  await wait(2200);
+  const side = await temasPage.evaluate(() => {
+    const nav = document.querySelector('.estudio__side');
+    const links = [...document.querySelectorAll('.estudio__side a')];
+    return {
+      label: nav?.getAttribute('aria-label'),
+      sticky: nav ? getComputedStyle(nav).position : '',
+      temas: links.filter(a => a.dataset.kind === 'tema').length,
+      sum: links.reduce((n, a) => n + Number(a.querySelector('.estudio__side-count')?.textContent || 0), 0),
+      first: links[0]?.textContent.trim(),
+      broken: links.filter(a => !document.getElementById(a.getAttribute('href').slice(1))).length
+    };
+  });
+  check('Fundamentos: sidebar con 13 temas', side.temas === 13, `${side.temas} · ${side.label}`);
+  check('los recuentos de la sidebar suman 92', side.sum === 92, `${side.sum}`);
+  check('«Empieza aquí» va la primera', /^Empieza aquí/.test(side.first || ''), String(side.first));
+  check('cada tema enlaza a su grupo', side.broken === 0, `${side.broken} sin destino`);
+  check('la sidebar es sticky en escritorio', side.sticky === 'sticky', side.sticky);
+
+  await temasPage.evaluate(() => {
+    const link = [...document.querySelectorAll('.estudio__side a')].find(a => a.textContent.includes('Últimos tiempos'));
+    link?.click();
+  });
+  await wait(1600);
+  const jumped = await temasPage.evaluate(() => {
+    const link = [...document.querySelectorAll('.estudio__side a')].find(a => a.textContent.includes('Últimos tiempos'));
+    const head = document.getElementById(link.getAttribute('href').slice(1));
+    return {
+      top: Math.round(head.getBoundingClientRect().top),
+      current: link.getAttribute('aria-current'),
+      others: document.querySelectorAll('.estudio__side a[aria-current="true"]').length
+    };
+  });
+  check(
+    'clic en un tema baja a su grupo y queda aria-current',
+    jumped.current === 'true' && jumped.others === 1 && jumped.top >= 0 && jumped.top < 260,
+    JSON.stringify(jumped)
+  );
+  await temasPage.screenshot({ path: `${OUT}/v-temas.png` });
+
+  const enVista = () =>
+    temasPage.evaluate(() => ({
+      cards: document.querySelectorAll('.estudio__grid .study-card').length,
+      rows: document.querySelectorAll('.row-card').length,
+      car: document.querySelectorAll('.concave-carousel__item').length,
+      groups: document.querySelectorAll('.estudio__group-head h2').length
+    }));
+  const vCards = await enVista();
+  await clickView(temasPage, 'lista');
+  await wait(700);
+  const vList = await enVista();
+  await temasPage.screenshot({ path: `${OUT}/v-temas-lista.png` });
+  await clickView(temasPage, 'carrusel');
+  await wait(1000);
+  const vCar = await enVista();
+  check(
+    'las tres vistas muestran las mismas 92 fichas',
+    vCards.cards === 92 && vList.rows === 92 && vCar.car === 92,
+    `tarjetas ${vCards.cards} · lista ${vList.rows} · carrusel ${vCar.car}`
+  );
+  check('tarjetas y lista se agrupan por tema (14 grupos)', vCards.groups === 14 && vList.groups === 14, `${vCards.groups}/${vList.groups}`);
+
+  const carInfo = () => temasPage.$eval('.estudio__carousel-count', el => el.textContent.trim()).catch(() => '');
+  const car0 = await carInfo();
+  check('el carrusel cuenta «1 de 92 · Empieza aquí»', car0 === '1 de 92 · Empieza aquí', car0);
+  await temasPage.evaluate(() => {
+    [...document.querySelectorAll('.estudio__jump-btn')].find(b => b.textContent.trim() === 'Cristo')?.click();
+  });
+  await wait(1400);
+  const car1 = await carInfo();
+  check('«Saltar a: Cristo» lleva el carrusel a ese tema', / · Cristo$/.test(car1), car1);
+  await temasPage.screenshot({ path: `${OUT}/v-temas-carrusel.png` });
+  await clickView(temasPage, 'tarjetas');
+  await temasPage.close();
+
+  const temasMovil = await makePage('no-preference', 390, 844);
+  await temasMovil.goto(`${BASE}/estudio?cat=01-fundamentos`, { waitUntil: 'domcontentloaded' });
+  await wait(2200);
+  const sideMovil = await temasMovil.evaluate(() => {
+    const nav = document.querySelector('.estudio__side');
+    return {
+      position: nav ? getComputedStyle(nav).position : '',
+      tabs: nav ? nav.scrollWidth > nav.clientWidth : false
+    };
+  });
+  check('móvil: los temas son pestañas con scroll horizontal, sin sticky', sideMovil.position !== 'sticky' && sideMovil.tabs, JSON.stringify(sideMovil));
+  await checkNoOverflow(temasMovil, 'móvil temas');
+  await temasMovil.screenshot({ path: `${OUT}/v-mobile-temas.png` });
+  await temasMovil.close();
 
   // ---------------------------------------------------------------- móvil
   const mobile = await makePage('no-preference', 390, 844);

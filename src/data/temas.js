@@ -55,3 +55,18 @@ export const TEMAS_POR_CATEGORIA = Object.fromEntries(
 
 /** Temas de una categoría (vacío si no tiene). */
 export const temasDeCategoria = catId => TEMAS_POR_CATEGORIA[catId] || [];
+
+/**
+ * Fichas de entrada: sin tema a propósito, se muestran fijas arriba como
+ * «Empieza aquí» (fase D del rediseño; `null` en su asignación).
+ */
+export const ENTRADAS = { '01-fundamentos': ['01-fundamentos--fundamentos-teologia-ntv'] };
+
+/** Id de ancla de un tema: «Últimos tiempos» → `tema-ultimos-tiempos`. */
+export const temaId = key =>
+  `tema-${String(key)
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')}`;
