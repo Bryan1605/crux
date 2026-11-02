@@ -2,7 +2,7 @@
 title: "El Hijo Pródigo"
 category: "09-parabolas"
 subcategory: "Gracia"
-description: "Jesús narra esta parábola — la más conocida del NT — a los fariseos y escribas que criticaban su fellowship con pecadores (Lc 15:1-2). El derecho del primogénito (Deut 21:17) daba doble…"
+description: "Jesús narra esta parábola — la más conocida del NT — a los fariseos y escribas que criticaban su trato con pecadores (Lc 15:1-2). El derecho del primogénito (Deut 21:17) daba doble…"
 passage: "Lucas 15:11-32"
 tags: ["parabola", "gracia"]
 aliases: []
@@ -15,7 +15,7 @@ updated: "2026-09-05"
 | Lucas | 15:11-32 | Parábola más larga de Jesús; dos hijos, Padre que busca a ambos |
 
 ## 2. Contexto histórico
-Jesús narra esta parábola — la más conocida del NT — a los fariseos y escribas que criticaban su fellowship con pecadores (Lc 15:1-2). El derecho del primogénito (Deut 21:17) daba doble porción; pedir la herencia mientras el padre vivía era equivalente a decir "ojalá estuvieras muerto". El país lejano (χώρα μακράν, chōra makran) representa la Tierra de Israel fuera de la Torah. Los cerdos eran animales impuros; alimentar cerdos era el trabajo más degradante para un judío.
+Jesús narra esta parábola — la más conocida del NT — a los fariseos y escribas que criticaban su trato con pecadores (Lc 15:1-2). El derecho del primogénito (Deut 21:17) daba doble porción; pedir la herencia mientras el padre vivía era equivalente a decir "ojalá estuvieras muerto". El país lejano (χώρα μακράν, chōra makran) representa la Tierra de Israel fuera de la Torah. Los cerdos eran animales impuros; alimentar cerdos era el trabajo más degradante para un judío.
 
 ## 3. Texto bíblico (NTV)
 **Lucas 15:11-24 (NTV):**

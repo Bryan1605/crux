@@ -1,8 +1,8 @@
 ---
-title: "El Siervo Imparcordial"
+title: "El siervo implacable"
 category: "09-parabolas"
 subcategory: "Gracia"
-description: "Pedro pregunta a Jesús: «¿Hasta cuántas veces perdonaré a mi hermano que peque contra mí? ¿Hasta siete veces?» (Mt 18:21). Jesús responde con la parábola del siervo imparcordial. La cifra…"
+description: "Pedro pregunta a Jesús: «¿Hasta cuántas veces perdonaré a mi hermano que peque contra mí? ¿Hasta siete veces?» (Mt 18:21). Jesús responde con la parábola del siervo implacable. La cifra…"
 passage: "Mateo 18:23-35"
 tags: ["parabola", "gracia"]
 aliases: []
@@ -15,7 +15,7 @@ updated: "2026-09-05"
 | Mateo | 18:23-35 | Contexto: pregunta de Pedro sobre perdonar "hasta siete veces" |
 
 ## 2. Contexto histórico
-Pedro pregunta a Jesús: «¿Hasta cuántas veces perdonaré a mi hermano que peque contra mí? ¿Hasta siete veces?» (Mt 18:21). Jesús responde con la parábola del siervo imparcordial. La cifra siete era el límite rabínico tradicional de perdón (Amós 1:3). El talento (τάλαντον, talanton) era la unidad monetaria más pesada — diez mil talentos equivalen a aproximadamente 150-200 toneladas de plata, un valor incalculable. Un denario era el salario de un día. La proporción es ridículamente desproporcionada: diez mil talentos vs. cien denarios.
+Pedro pregunta a Jesús: «¿Hasta cuántas veces perdonaré a mi hermano que peque contra mí? ¿Hasta siete veces?» (Mt 18:21). Jesús responde con la parábola del siervo implacable. La cifra siete era el límite rabínico tradicional de perdón (Amós 1:3). El talento (τάλαντον, talanton) era la unidad monetaria más pesada — diez mil talentos equivalen a aproximadamente 150-200 toneladas de plata, un valor incalculable. Un denario era el salario de un día. La proporción es ridículamente desproporcionada: diez mil talentos vs. cien denarios.
 
 ## 3. Texto bíblico (NTV)
 **Mateo 18:23-35 (NTV):**
@@ -38,13 +38,13 @@ También mi Padre celestial los tratará así si no perdonan de corazón a su he
 «ἑκατὸν δηναρίων» (hekaton denariōn) — cien denarios = cien días de salario. En proporción, la deuda del compañero es 1/600,000 de la perdonada. Jesús exaggera intencionalmente para que el contraste sea imposible de ignorar.
 
 ### La_tortura ( searchData:34)
-«βασανισταῖς» (basanistais) — "torturadores". La palabra tiene raíz en la piedra de toque (βάσανος) usada para probar la autenticidad del oro. El siervo imparcordial es "probado" por la justicia que él mismo ejecutó.
+«βασανισταῖς» (basanistais) — "torturadores". La palabra tiene raíz en la piedra de toque (βάσανος) usada para probar la autenticidad del oro. El siervo implacable es "probado" por la justicia que él mismo ejecutó.
 
 ## 5. Personajes
 | Personaje | Símbolo | Significado |
 |-----------|---------|-------------|
 | El rey | Dios | Autoridad que perdona y juzga |
-| El siervo imparcordial | El que recibe gracia pero no la extiende | Representa a todo creyente que olvida su propia deuda |
+| El siervo implacable | El que recibe gracia pero no la extiende | Representa a todo creyente que olvida su propia deuda |
 | El compañero deudor | El que nos ofende / pide perdón | La persona que necesita nuestra misericordia |
 | Los otros siervos | Testigos de la injusticia | La comunidad que observa la falta de perdón |
 

@@ -2,7 +2,7 @@
 title: "Los Obreros de la Viña"
 category: "09-parabolas"
 subcategory: "Mayordomia"
-description: "En Palestina, el trabajo agrícola se organizaba por turnos. Los jornaleros se reunían en la plaza del mercado al amanecer (about 6:00 a.m.) para ser contratados. La jornada laboral tenía…"
+description: "En Palestina, el trabajo agrícola se organizaba por turnos. Los jornaleros se reunían en la plaza del mercado al amanecer (hacia las 6:00 a. m.) para ser contratados. La jornada laboral tenía…"
 passage: "Mateo 20:1-16"
 tags: ["parabola", "mayordomia"]
 aliases: []
@@ -15,7 +15,7 @@ updated: "2026-09-05"
 | Mateo | 20:1-16 | Única en Mt; forma parte del bloque Mt 19-20 sobre el reino |
 
 ## 2. Contexto histórico
-En Palestina, el trabajo agrícola se organizaba por turnos. Los jornaleros se reunían en la plaza del mercado al amanecer (about 6:00 a.m.) para ser contratados. La jornada laboral tenía ~12 horas (Mt 20:12). Un denario (δηνάριον) era el salario justo para un día completo de trabajo. Los propietarios de viñas contrataban obreros en distintas horas: tercera (9:00), sexta (12:00), novena (3:00) y undécima (5:00). La parábola se narra después de la conversación de Jesús con el hombre rico (Mt 19:16-30) y la queja de Pedro sobre la recompensa.
+En Palestina, el trabajo agrícola se organizaba por turnos. Los jornaleros se reunían en la plaza del mercado al amanecer (hacia las 6:00 a. m.) para ser contratados. La jornada laboral tenía ~12 horas (Mt 20:12). Un denario (δηνάριον) era el salario justo para un día completo de trabajo. Los propietarios de viñas contrataban obreros en distintas horas: tercera (9:00), sexta (12:00), novena (3:00) y undécima (5:00). La parábola se narra después de la conversación de Jesús con el hombre rico (Mt 19:16-30) y la queja de Pedro sobre la recompensa.
 
 ## 3. Texto bíblico (NTV)
 "Porque el reino de los cielos se parece a un dueño de casa que salió muy temprano a contratar obreros para trabajar en su viña. Con los obreros acordó pagarles un denario al día y los envió a trabajar a su viña.

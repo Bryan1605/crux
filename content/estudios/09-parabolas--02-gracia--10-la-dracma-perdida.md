@@ -2,7 +2,7 @@
 title: "La Dracma Perdida"
 category: "09-parabolas"
 subcategory: "Gracia"
-description: "Jesús narra esta parábola inmediatamente después de la de la oveja perdida (Lucas 15:1-10). Los fariseos y escribas criticaban su fellowship con publicanos y pecadores. La dracma (δραχμή,…"
+description: "Jesús narra esta parábola inmediatamente después de la de la oveja perdida (Lucas 15:1-10). Los fariseos y escribas criticaban su trato con publicanos y pecadores. La dracma (δραχμή,…"
 passage: "Lucas 15:8-10"
 tags: ["parabola", "gracia"]
 aliases: []
@@ -15,7 +15,7 @@ updated: "2026-09-05"
 | Lucas | 15:8-10 | Única mención en los Evangelios; contexto fariseos/publicanos |
 
 ## 2. Contexto histórico
-Jesús narra esta parábola inmediatamente después de la de la oveja perdida (Lucas 15:1-10). Los fariseos y escribas criticaban su fellowship con publicanos y pecadores. La dracma (δραχμή, drachmē) era una moneda de plata equivalente a un denario — un día de trabajo. En las aldeas judías, las mujeres pobres cosían sus monedas como adorno en un tocado o las guardaban en un collar. Perder una dracma era pérdida económica real y simbólica (posiblemente parte de la dote matrimonial).
+Jesús narra esta parábola inmediatamente después de la de la oveja perdida (Lucas 15:1-10). Los fariseos y escribas criticaban su trato con publicanos y pecadores. La dracma (δραχμή, drachmē) era una moneda de plata equivalente a un denario — un día de trabajo. En las aldeas judías, las mujeres pobres cosían sus monedas como adorno en un tocado o las guardaban en un collar. Perder una dracma era pérdida económica real y simbólica (posiblemente parte de la dote matrimonial).
 
 ## 3. Texto bíblico (NTV)
 **Lucas 15:8-10 (NTV):**

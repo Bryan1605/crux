@@ -1,5 +1,5 @@
 ---
-title: "Los Villanos Acaparadores"
+title: "Los labradores malvados"
 category: "09-parabolas"
 subcategory: "Juicio"
 description: "Esta parábola se pronuncia en la última semana de Jesús, en el Templo de Jerusalén. Los tres relatos sinópticos presentan variaciones: Mateo añade la parábola de los viñadores (vv. 43-44);…"

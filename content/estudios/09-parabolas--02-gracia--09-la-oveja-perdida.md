@@ -16,7 +16,7 @@ updated: "2026-09-05"
 | Lucas | 15:3-7 | Contexto: fariseos y escribas que murmuraban |
 
 ## 2. Contexto histórico
-Jesús relata esta parábola en dos ocasiones distintas. En Mateo, responde a la pregunta de los discípulos sobre quién es el mayor en el Reino. En Lucas, responde a la crítica de los fariseos por fellowship con publicanos y pecadores. El rebaño de ovejas era la unidad económica básica del Israel rural. Perder una oveja significaba pérdida real de sustento, no solo sentimentalismo.
+Jesús relata esta parábola en dos ocasiones distintas. En Mateo, responde a la pregunta de los discípulos sobre quién es el mayor en el Reino. En Lucas, responde a la crítica de los fariseos por su trato con publicanos y pecadores. El rebaño de ovejas era la unidad económica básica del Israel rural. Perder una oveja significaba pérdida real de sustento, no solo sentimentalismo.
 
 ## 3. Texto bíblico (NTV)
 **Mateo 18:12-14 (NTV):**

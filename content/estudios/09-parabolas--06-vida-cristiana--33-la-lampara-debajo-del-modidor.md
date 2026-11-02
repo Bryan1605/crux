@@ -1,8 +1,8 @@
 ---
-title: "La lámpara debajo del modidor"
+title: "La lámpara debajo del almud"
 category: "09-parabolas"
 subcategory: "Vida Cristiana"
-description: "Mateo sitúa la parábola en el Sermón del Monte, como continuación de la imagen de la sal y la luz. En casas palestinas, la lámpara era un disco de arcilla con aceite y mecha. El modidor…"
+description: "Mateo sitúa la parábola en el Sermón del Monte, como continuación de la imagen de la sal y la luz. En casas palestinas, la lámpara era un disco de arcilla con aceite y mecha. El almud…"
 passage: "Mateo 5:14-15"
 tags: ["parabola", "vida-cristiana"]
 aliases: []
@@ -17,21 +17,21 @@ updated: "2026-09-05"
 | Lucas | 8:16-17 |
 
 ## 2. Contexto histórico
-Mateo sitúa la parábola en el Sermón del Monte, como continuación de la imagen de la sal y la luz. En casas palestinas, la lámpara era un disco de arcilla con aceite y mecha. El modidor (μόδιος / modios) era una medida de capacid ad de unos 8 litros, común en la agricultura. Poner la lámpara bajo el modidor era absurdo: la luz se apagaría por falta de oxígeno. Marcos y Lucas la sitúan después de la parábola de la semilla, enfatizando que la verdad se revela para ser compartida.
+Mateo sitúa la parábola en el Sermón del Monte, como continuación de la imagen de la sal y la luz. En casas palestinas, la lámpara era un disco de arcilla con aceite y mecha. El almud (μόδιος / modios; la NTV traduce «canasta») era una medida de capacidad de unos 8 litros, común en la agricultura. Poner la lámpara bajo el almud era absurdo: la luz se apagaría por falta de oxígeno. Marcos y Lucas la sitúan después de la parábola de la semilla, enfatizando que la verdad se revela para ser compartida.
 
 ## 3. Texto bíblico (NTV)
 > «Ustedes son la luz del mundo. Una ciudad construida sobre un monte no puede quedar oculta. Nadie enciende una vela y la pone debajo de un cesto; al contrario, la pone en un perchero donde alumbra a todos los que están en la casa. Que su luz brille así delante de la gente, para que vean sus buenas obras y glorifiquen a su Padre que está en los cielos.» (Mt 5:14-16 NTV).
 
 ## 4. Exégesis
 ### La luz (φῶς / phōs)
-El griego φῶς (Mt 5:14, phōs) es luz en sentido physical y metafórico. Jesús dice «ustedes SON la luz» (no «tienen» o «deben»), indicando una identidad otorgada por gracia. El modidor (μόδιος / modios) cubre la lámpara y la hace inútil. Marcos 4:22 añade: «nada está oculto que no sea revelado». La luz no existe para sí misma; su naturaleza es iluminar. Así, la verdad de Cristo recibida debe ser compartida, no ocultada por cobardía o comodidad.
+El griego φῶς (Mt 5:14, phōs) es luz en sentido físico y metafórico. Jesús dice «ustedes SON la luz» (no «tienen» o «deben»), indicando una identidad otorgada por gracia. El almud (μόδιος / modios) cubre la lámpara y la hace inútil. Marcos 4:22 añade: «nada está oculto que no sea revelado». La luz no existe para sí misma; su naturaleza es iluminar. Así, la verdad de Cristo recibida debe ser compartida, no ocultada por cobardía o comodidad.
 
 ## 5. Personajes
 | Personaje | Símbolo | Significado |
 |-----------|---------|-------------|
 | La luz | El creyente | Reflejador de la luz de Cristo |
 | La ciudad en el monte | La iglesia visible | Comunidad que no puede estar oculta |
-| El modidor | El miedo / Comodidad / Legalismo | Lo que oculta la luz del creyente |
+| El almud | El miedo / Comodidad / Legalismo | Lo que oculta la luz del creyente |
 | La casa | El mundo / La comunidad | Lugar donde la luz debe brillar |
 | El Padre celestial | Dios | La fuente verdadera de toda luz |
 
@@ -50,7 +50,7 @@ El griego φῶς (Mt 5:14, phōs) es luz en sentido physical y metafórico. Jes
 | Si nadie pregunta, no hable de Cristo | La luz brilla proactivamente, no solo reactivamente |
 
 ## 8. Aplicación práctica
-¿Hay algún área de tu vida donde estás escondiendo tu luz bajo el modidor? Tal vez en tu trabajo evitas mencionar tu fe por miedo al rechazo, o en tu familia no vives consistentemente lo que profesas. Elige hoy un espacio concreto —tu oficina, tu barrio, tu mesa— y deja que tu luz brille en una acción tangible de servicio, verdad o amor.
+¿Hay algún área de tu vida donde estás escondiendo tu luz bajo el almud? Tal vez en tu trabajo evitas mencionar tu fe por miedo al rechazo, o en tu familia no vives consistentemente lo que profesas. Elige hoy un espacio concreto —tu oficina, tu barrio, tu mesa— y deja que tu luz brille en una acción tangible de servicio, verdad o amor.
 
 ## 9. Conclusión en una frase
 La verdad de Cristo recibida debe ser compartida, porque la luz que se esconde se apaga.
