@@ -1,3 +1,4 @@
+import { headingGlyph } from '../../lib/bibliaGlyphs';
 import { renderProse } from '../../lib/markdown';
 
 /**
@@ -24,8 +25,16 @@ export default function BlockView({ block }) {
 
   if (block.type === 'heading') {
     const Tag = block.level >= 4 ? 'h4' : 'h3';
+    const { glyph, text } = headingGlyph(block.text);
     return (
-      <Tag className={`book-block book-block--h${Math.min(block.level, 4)}`}>{block.text}</Tag>
+      <Tag className={`book-block book-block--h${Math.min(block.level, 4)}`}>
+        {glyph && (
+          <span className="book-glyph" aria-hidden="true">
+            {glyph}{' '}
+          </span>
+        )}
+        {text}
+      </Tag>
     );
   }
 

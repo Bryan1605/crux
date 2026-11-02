@@ -13,8 +13,9 @@ import CountUp from '../components/CountUp/CountUp';
 import Book from '../components/Book/Book';
 import BlockView from '../components/Book/BlockView';
 import BookMeasurer from '../components/Book/BookMeasurer';
-import BookIndex from '../components/BookIndex/BookIndex';
+import BookIndex, { groupWorks } from '../components/BookIndex/BookIndex';
 import BibleCta from '../components/BibleCta';
+import { partInfo, plainLabel, standardKind } from '../lib/bibliaGlyphs';
 
 import './Estudio.css';
 import './Biblia.css';
@@ -37,11 +38,85 @@ const MODE_KEY = 'crux.biblia.modo';
 const THEME_KEY = 'crux.biblia.papel';
 const LAST_KEY = 'crux.biblia.ultima';
 
+// Los ids son los de siempre (se guardan en localStorage); cambia solo la etiqueta.
 const THEMES = [
-  { id: 'claro', label: 'Papel claro', glyph: '☀' },
-  { id: 'sepia', label: 'Papel sepia', glyph: '◐' },
-  { id: 'noche', label: 'Papel nocturno', glyph: '☾' }
+  { id: 'claro', label: 'Papel crema', swatch: '#fbf8f1' },
+  { id: 'sepia', label: 'Papel sepia', swatch: '#f4e9d6' },
+  { id: 'noche', label: 'Papel noche', swatch: '#16161a' }
 ];
+
+const fmt = n => Number(n).toLocaleString('es-ES');
+
+/** Iconos de trazo de la barra del lector (siguen `currentColor`). */
+const ICONS = {
+  back: 'M15 18l-6-6 6-6',
+  contents: 'M4 6h16M4 12h10M4 18h13',
+  search: 'M11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm5-2 4 4',
+  prev: 'M15 18l-6-6 6-6',
+  next: 'M9 18l6-6-6-6',
+  close: 'M6 6l12 12M18 6 6 18'
+};
+
+function Icon({ name }) {
+  return (
+    <svg className="rb-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+      <path d={ICONS[name]} fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+/** «La obra en el tiempo»: una barra por obra con fecha, sobre una regla de siglos. */
+function WorkTimeline({ parts, onOpen }) {
+  const rows = parts
+    .map(part => ({ part, info: partInfo(part.label) }))
+    .filter(r => r.info.num.includes('.') && r.info.from != null);
+  if (!rows.length) return null;
+  const end = Math.ceil(Math.max(...rows.map(r => r.info.to)) / 100) * 100;
+  const pct = year => `${(year / end) * 100}%`;
+  const roman = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+  const centuries = Array.from({ length: end / 100 }, (_, i) => i);
+
+  return (
+    <section className="section biblia__time" aria-labelledby="biblia-tiempo">
+      <div className="biblia__shell">
+        <p className="eyebrow">Cronología</p>
+        <h2 id="biblia-tiempo">La obra en el tiempo</h2>
+        <div className="time">
+          <div className="time__ruler" aria-hidden="true">
+            {centuries.map(c => (
+              <span key={c} style={{ left: pct(c * 100), width: pct(100) }}>
+                s. {roman[c] || c + 1}
+              </span>
+            ))}
+          </div>
+          <ol className="time__rows">
+            {rows.map(({ part, info }) => (
+              <li key={part.id}>
+                <button type="button" className="time__row" onClick={() => onOpen(part.id)}>
+                  <span className="time__name">
+                    <span className="time__num">{info.num}</span> {info.title}
+                  </span>
+                  <span className="time__track">
+                    {centuries.map(c => (
+                      <span key={c} className="time__grid" style={{ left: pct(c * 100) }} aria-hidden="true" />
+                    ))}
+                    <span
+                      className="time__bar"
+                      style={{ left: pct(info.from), width: `max(8px, ${pct(info.to - info.from)})` }}
+                    />
+                    <span className="time__dates" style={{ left: `calc(${pct(info.to)} + 14px)` }}>
+                      {info.date}
+                    </span>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 const prefersReduced = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -64,16 +139,31 @@ const write = (key, value) => {
 
 const clampSize = value => Math.min(FS_MAX, Math.max(FS_MIN, Number(value) || 17));
 
+/** Alto de la barra del lector + su línea de progreso (fijo en CSS). */
+const READER_BAR_H = 64;
+
+/**
+ * Alto disponible para el libro: la ventana menos la barra de versículos
+ * (`--marquee-h`, arriba) y la barra del lector. Se usa igual en la portada y
+ * en el lector para que los folios coincidan.
+ */
+function availableHeight() {
+  if (typeof window === 'undefined') return 800;
+  const marquee = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--marquee-h')) || 0;
+  return Math.max(480, window.innerHeight - marquee - READER_BAR_H);
+}
+
 /** Una página impresa: encabezado, cuerpo y folio. */
-function PageView({ page, book, fontSize, side = 'single' }) {
+function PageView({ page, book, fontSize, side = 'single', next = null }) {
   const part = book.partById.get(page.partId) || null;
   const section = page.sectionId ? book.sectionById.get(page.sectionId) || null : null;
+  const info = part ? partInfo(part.label) : null;
 
   return (
     <div className="book-page__frame">
       <header className="book-page__head">
-        <span>{part && part.num ? `Parte ${part.num}` : ''}</span>
-        <span>{section ? section.label : part ? part.label : ''}</span>
+        <span>{info ? [info.num, info.title].filter(Boolean).join(' · ') : ''}</span>
+        <span>{section ? plainLabel(section.label) : ''}</span>
       </header>
 
       <div className="book-page__body" style={{ fontSize: `${fontSize}px` }}>
@@ -84,6 +174,11 @@ function PageView({ page, book, fontSize, side = 'single' }) {
 
       <footer className={`book-page__foot book-page__foot--${side}`}>
         <span>{page.folio}</span>
+        {next && (
+          <span className="book-page__next">
+            Siguiente: {next.label} · p. {next.folio}
+          </span>
+        )}
       </footer>
     </div>
   );
@@ -108,9 +203,7 @@ export default function Biblia() {
   const [indexOpen, setIndexOpen] = useState(false);
 
   const [stageW, setStageW] = useState(0);
-  const [viewportH, setViewportH] = useState(() =>
-    typeof window === 'undefined' ? 800 : window.innerHeight
-  );
+  const [viewportH, setViewportH] = useState(availableHeight);
   const [pendingKey, setPendingKey] = useState('');
   const [measure, setMeasure] = useState(null);
   const [pagination, setPagination] = useState(null);
@@ -162,9 +255,16 @@ export default function Biblia() {
   }, [rulerEl]);
 
   useEffect(() => {
-    const onResize = () => setViewportH(window.innerHeight);
+    const onResize = () => setViewportH(availableHeight());
     window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
+    // La barra de versículos publica `--marquee-h` en <html> al montarse o cerrarse.
+    const observer = new MutationObserver(onResize);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['style'] });
+    onResize();
+    return () => {
+      window.removeEventListener('resize', onResize);
+      observer.disconnect();
+    };
   }, []);
 
   const geometry = useMemo(
@@ -265,6 +365,16 @@ export default function Biblia() {
     return () => window.removeEventListener('keydown', onKey);
   }, [page, mode]);
 
+  // El cajón «Contenido» se cierra con Esc.
+  useEffect(() => {
+    if (!indexOpen) return undefined;
+    const onKey = event => {
+      if (event.key === 'Escape') setIndexOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [indexOpen]);
+
   /* --------------- modo libro: la lectura empieza por arriba --------------- */
 
   /*
@@ -292,7 +402,7 @@ export default function Biblia() {
 
   const seoSection = page
     ? page.sectionId
-      ? book.sectionById.get(page.sectionId)?.label
+      ? plainLabel(book.sectionById.get(page.sectionId)?.label)
       : book.partById.get(page.partId)?.label
     : null;
 
@@ -307,12 +417,25 @@ export default function Biblia() {
 
   /* ------------------------------ sub-render ------------------------------ */
 
-  const themeDef = THEMES.find(t => t.id === theme) || THEMES[0];
-
-  const cycleTheme = () => {
-    const at = THEMES.findIndex(t => t.id === theme);
-    setTheme(THEMES[(at + 1) % THEMES.length].id);
-  };
+  /** Última página de una sección estándar → «Siguiente: Obra completa · p. 12». */
+  const nextOf = useCallback(
+    p => {
+      if (!pagination || !p.sectionId) return null;
+      const after = pagination.pages[p.index + 1];
+      if (!after || after.sectionId === p.sectionId) return null;
+      const section = book.sectionById.get(p.sectionId);
+      if (!section || !standardKind(section.label)) return null;
+      const siblings = book.partById.get(p.partId)?.sections || [];
+      const nextId = siblings[siblings.indexOf(p.sectionId) + 1];
+      const next = nextId && book.sectionById.get(nextId);
+      if (!next || !standardKind(next.label)) return null;
+      const folio = pagination.folioOfSection.get(nextId);
+      // Si la siguiente entrada ya empieza en esta misma página, no hace falta avisar.
+      if (!folio || folio <= p.folio) return null;
+      return { label: plainLabel(next.label).split(':')[0].split(' — ')[0], folio };
+    },
+    [book, pagination]
+  );
 
   const renderPage = useCallback(
     p => (
@@ -321,10 +444,20 @@ export default function Biblia() {
         book={book}
         fontSize={fontSize}
         side={spread ? (p.index % 2 === 0 ? 'left' : 'right') : 'single'}
+        next={nextOf(p)}
       />
     ),
-    [book, fontSize, spread]
+    [book, fontSize, spread, nextOf]
   );
+
+  const lastSaved = read(LAST_KEY, '');
+  const lastSavedIndex = pagination && lastSaved ? resolvePage(pagination, lastSaved) : -1;
+  const lastSavedPage = lastSavedIndex >= 0 ? pagination.pages[lastSavedIndex] : null;
+
+  const pickFromDrawer = id => {
+    setIndexOpen(false);
+    gotoId(id);
+  };
 
   const indexPanel = pagination ? (
     <BookIndex
@@ -332,10 +465,11 @@ export default function Biblia() {
       sectionById={book.sectionById}
       folioOfPart={pagination.folioOfPart}
       folioOfSection={pagination.folioOfSection}
-      activePartId={page ? page.partId : null}
+      totalPages={totalPages}
+      activePartId={page ? page.partId : lastSavedPage?.partId ?? null}
       activeSectionId={page ? page.sectionId : null}
-      onSelect={gotoId}
-      compact={!spread}
+      onSelect={page ? pickFromDrawer : gotoId}
+      compact={Boolean(page)}
     />
   ) : (
     <div className="biblia__loading biblia__loading--inline">
@@ -398,7 +532,7 @@ export default function Biblia() {
   if (pagParam && !pagination) {
     return (
       <main id="main" className="biblia">
-        <div className="biblia__shell" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
+        <div className="biblia__shell biblia__ruler" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
         {measurer}
         <div className="biblia__shell biblia__loading">
           <div className="loader-pulse" role="status" aria-label="Componiendo el libro">
@@ -415,7 +549,7 @@ export default function Biblia() {
   if (pagParam && pagination && !page) {
     return (
       <main id="main" className="biblia">
-        <div className="biblia__shell" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
+        <div className="biblia__shell biblia__ruler" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
         {measurer}
         <div className="biblia__shell biblia__notfound">
           <p className="eyebrow">Página no encontrada</p>
@@ -438,12 +572,15 @@ export default function Biblia() {
 
   if (page) {
     const sectionLabel = page.sectionId
-      ? book.sectionById.get(page.sectionId)?.label
+      ? plainLabel(book.sectionById.get(page.sectionId)?.label)
       : book.partById.get(page.partId)?.label;
 
     return (
-      <main id="main" className={`biblia biblia--reader papel--${theme}`}>
-        <div className="biblia__shell" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
+      <main
+        id="main"
+        className={`biblia biblia--reader papel--${theme}${indexOpen ? ' has-drawer' : ''}`}
+      >
+        <div className="biblia__shell biblia__ruler" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
         {measurer}
 
         <div className="biblia__shell biblia__reader" ref={readerRef} data-theme={theme}>
@@ -469,10 +606,24 @@ export default function Biblia() {
 
           <div className="reader__bar">
             <div className="reader__bar-group">
-              <Link className="rb-btn" to="/biblia" title="Volver al índice">
-                <span aria-hidden="true">☰</span>
+              <Link className="rb-btn" to="/biblia" title="Volver a la portada y al índice">
+                <Icon name="back" />
                 <span className="rb-btn__text">Índice</span>
               </Link>
+              <button
+                type="button"
+                className={`rb-btn ${indexOpen ? 'is-active' : ''}`.trim()}
+                onClick={() => {
+                  setIndexOpen(open => !open);
+                  setSearchOpen(false);
+                }}
+                aria-expanded={indexOpen}
+                aria-controls="biblia-contenido"
+                aria-label="Contenido de la obra"
+              >
+                <Icon name="contents" />
+                <span className="rb-btn__text">Contenido</span>
+              </button>
               <button
                 type="button"
                 className={`rb-btn ${searchOpen ? 'is-active' : ''}`.trim()}
@@ -484,21 +635,8 @@ export default function Biblia() {
                 aria-expanded={searchOpen}
                 aria-label="Buscar en la obra"
               >
-                <span aria-hidden="true">🔍</span>
+                <Icon name="search" />
                 <span className="rb-btn__text">Buscar</span>
-              </button>
-              <button
-                type="button"
-                className={`rb-btn ${indexOpen ? 'is-active' : ''}`.trim()}
-                onClick={() => {
-                  setIndexOpen(open => !open);
-                  setSearchOpen(false);
-                }}
-                aria-expanded={indexOpen}
-                aria-label="Abrir el índice rápido"
-              >
-                <span aria-hidden="true">📑</span>
-                <span className="rb-btn__text">Índice rápido</span>
               </button>
             </div>
 
@@ -510,12 +648,17 @@ export default function Biblia() {
                 disabled={page.index <= 0}
                 aria-label="Página anterior"
               >
-                ‹
+                <Icon name="prev" />
               </button>
               <span className="reader__status" aria-live="polite">
+                <span className="reader__p">p.</span>
                 <strong>{page.folio}</strong>
-                <span className="reader__of">de {totalPages}</span>
-                <span className="reader__where">{sectionLabel}</span>
+                <span className="reader__of">de {fmt(totalPages)}</span>
+                <span className="reader__where">
+                  · {[partInfo(book.partById.get(page.partId)?.label).title, page.sectionId && plainLabel(sectionLabel)]
+                    .filter(Boolean)
+                    .join(' — ')}
+                </span>
               </span>
               <button
                 type="button"
@@ -524,7 +667,7 @@ export default function Biblia() {
                 disabled={page.index >= totalPages - 1}
                 aria-label="Página siguiente"
               >
-                ›
+                <Icon name="next" />
               </button>
             </div>
 
@@ -549,25 +692,51 @@ export default function Biblia() {
                   A+
                 </button>
               </div>
-              <button
-                type="button"
-                className="rb-btn rb-btn--icon"
-                onClick={cycleTheme}
-                title={themeDef.label}
-                aria-label={`Tema del papel: ${themeDef.label}. Cambiar`}
-              >
-                {themeDef.glyph}
-              </button>
-              <button
-                type="button"
-                className="rb-btn"
-                onClick={() => setMode(current => (current === 'libro' ? 'scroll' : 'libro'))}
-                aria-pressed={mode === 'scroll'}
-                aria-label="Cambiar entre lectura de libro y scroll continuo"
-                title={mode === 'libro' ? 'Leer en scroll continuo' : 'Leer como un libro'}
-              >
-                <span className="rb-btn__text">{mode === 'libro' ? 'Scroll' : 'Libro'}</span>
-              </button>
+              <div className="reader__papers" role="group" aria-label="Papel">
+                {THEMES.map(t => (
+                  <button
+                    key={t.id}
+                    type="button"
+                    className="reader__paper"
+                    style={{ '--swatch': t.swatch }}
+                    aria-pressed={theme === t.id}
+                    aria-label={t.label}
+                    title={t.label}
+                    onClick={() => setTheme(t.id)}
+                  />
+                ))}
+              </div>
+              <div className="reader__modes" role="group" aria-label="Modo de lectura">
+                {[
+                  ['libro', 'Libro'],
+                  ['scroll', 'Scroll']
+                ].map(([id, label]) => (
+                  <button
+                    key={id}
+                    type="button"
+                    className="reader__mode"
+                    aria-pressed={mode === id}
+                    onClick={() => setMode(id)}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="reader__progress" aria-hidden="true">
+              <span className="reader__progress-fill" style={{ width: `${(page.folio / totalPages) * 100}%` }} />
+              {groupWorks(book.parts).map(block => {
+                const folio = pagination.folioOfPart.get(block.part.id) ?? pagination.folioOfPart.get(block.works[0]?.part.id);
+                return folio ? (
+                  <span
+                    key={block.id}
+                    className="reader__progress-mark"
+                    style={{ left: `${((folio - 1) / totalPages) * 100}%` }}
+                    title={`${block.num} · ${block.title} · p. ${folio}`}
+                  />
+                ) : null;
+              })}
             </div>
           </div>
 
@@ -619,7 +788,31 @@ export default function Biblia() {
             </div>
           )}
 
-          {indexOpen && <div className="reader__panel">{indexPanel}</div>}
+          {indexOpen && (
+            <>
+              <button
+                type="button"
+                className="reader__scrim"
+                aria-label="Cerrar el contenido"
+                tabIndex={-1}
+                onClick={() => setIndexOpen(false)}
+              />
+              <aside id="biblia-contenido" className="reader__drawer" aria-label="Contenido">
+                <div className="reader__drawer-head">
+                  <span>Contenido</span>
+                  <button
+                    type="button"
+                    className="rb-btn rb-btn--icon"
+                    onClick={() => setIndexOpen(false)}
+                    aria-label="Cerrar el contenido"
+                  >
+                    <Icon name="close" />
+                  </button>
+                </div>
+                {indexPanel}
+              </aside>
+            </>
+          )}
 
           {mode === 'libro' ? (
             <div className="reader__stage" style={{ '--book-pad': `${geometry.pad}px` }}>
@@ -634,10 +827,7 @@ export default function Biblia() {
                 apiRef={bookApiRef}
                 theme={theme}
               />
-              <p className="reader__hint">
-                El texto se marca y se copia con libertad · para pasar hoja: clic en el margen,
-                arrastra desde él, la rueda o ← →
-              </p>
+              <p className="reader__hint">Pasa hoja con el margen, la rueda o ← → · el texto se puede marcar y copiar</p>
             </div>
           ) : (
             <div className="reader__scroll">
@@ -665,14 +855,11 @@ export default function Biblia() {
     value: part.id
   }));
 
-  const lastId = read(LAST_KEY, '');
-  const lastIndex = pagination && lastId ? resolvePage(pagination, lastId) : -1;
-  const lastPage = lastIndex >= 0 ? pagination.pages[lastIndex] : null;
   const reduced = prefersReduced();
 
   return (
     <main id="main" className="biblia">
-      <div className="biblia__shell" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
+      <div className="biblia__shell biblia__ruler" ref={setRulerEl} style={{ height: '1px' }} aria-hidden="true" />
       {measurer}
 
       <section className="biblia__dome" aria-label="Índice visual de la obra">
@@ -695,10 +882,10 @@ export default function Biblia() {
             Del periodo apostólico al siglo VIII: las cartas, homilías y tratados de los Padres de la
             Iglesia en una sola obra.
           </p>
-          {lastPage && (
+          {lastSavedPage && (
             <p className="biblia__resume">
-              <button type="button" className="btn btn--primary" onClick={() => gotoPage(lastIndex)}>
-                Continuar leyendo · p. {lastPage.folio}
+              <button type="button" className="btn btn--primary" onClick={() => gotoPage(lastSavedIndex)}>
+                Continuar leyendo · p. {lastSavedPage.folio}
               </button>
             </p>
           )}
@@ -762,14 +949,16 @@ export default function Biblia() {
         </div>
       </section>
 
+      <WorkTimeline parts={book.parts} onOpen={gotoId} />
+
       <section className="section biblia__index-section" id="biblia-indice">
         <div className="biblia__shell">
           <header className="biblia__index-head">
             <p className="eyebrow">Navega por la obra</p>
             <h2>Índice</h2>
             <p className="biblia__index-hint">
-              Elige una parte o una sección y se abrirá en la página exacta del libro. Los números de
-              la derecha son los folios.
+              Elige una obra para ver sus entradas; cada una se abre en la página exacta del libro. Los
+              números de la derecha son los folios.
             </p>
           </header>
           {indexPanel}

@@ -275,7 +275,8 @@ if (WITH_BROWSER) {
     `${folios.filter(f => !/^\d+$/.test(f)).length} sin folio`
   );
 
-  await page.click('.toc__row--part');
+  // El índice es maestro–detalle: «Empezar a leer» abre la obra elegida en su folio.
+  await page.click('.toc-work__open');
   await page.waitForSelector('.book__page--left .book-page__body', { timeout: 30000 });
   await new Promise(r => setTimeout(r, 800));
   await page.screenshot({ path: join(OUT, 'biblia-lector.png') });
@@ -384,17 +385,19 @@ if (WITH_BROWSER) {
     `${folioWheel} → ${await folioNow()}`
   );
 
-  // Índice flotante.
-  await page.click('button[aria-label="Abrir el índice rápido"]');
-  await page.waitForSelector('.reader__panel .toc__list', { timeout: 10000 });
-  const panelFolios = await page.$$eval('.reader__panel .toc__folio', nodes => nodes.map(n => n.textContent.trim()));
+  // Cajón «Contenido».
+  await page.click('button[aria-label="Contenido de la obra"]');
+  await page.waitForSelector('.reader__drawer .toc__list', { timeout: 10000 });
+  const panelFolios = await page.$$eval('.reader__drawer .toc__folio', nodes => nodes.map(n => n.textContent.trim()));
   check(
-    'El índice rápido del lector tiene folios',
+    'El contenido del lector tiene folios',
     panelFolios.length > 0 && panelFolios.every(f => /^\d+$/.test(f)),
     `${panelFolios.length} entradas`
   );
   await page.screenshot({ path: join(OUT, 'biblia-indice.png') });
-  await page.click('button[aria-label="Abrir el índice rápido"]');
+  await page.keyboard.press('Escape');
+  await new Promise(r => setTimeout(r, 300));
+  check('Esc cierra el contenido', !(await page.$('.reader__drawer')));
 
   // Búsqueda dentro de la obra.
   await page.click('button[aria-label="Buscar en la obra"]');
@@ -416,10 +419,31 @@ if (WITH_BROWSER) {
 
   // Papel.
   const paperBefore = await page.$eval('.book-stage', n => n.getAttribute('data-theme'));
-  await page.click('button[aria-label^="Tema del papel"]');
+  await page.click('.reader__paper[aria-pressed="false"]');
   await new Promise(r => setTimeout(r, 400));
   const paperAfter = await page.$eval('.book-stage', n => n.getAttribute('data-theme'));
   check('El tema del papel cambia', paperBefore !== paperAfter, `${paperBefore} → ${paperAfter}`);
+
+  // Papel, tamaño, modo y última página sobreviven a una recarga.
+  const ajustes = () =>
+    page.evaluate(() => ({
+      papel: document.querySelector('.book-stage')?.getAttribute('data-theme'),
+      modo: document.querySelector('.reader__mode[aria-pressed="true"]')?.textContent.trim(),
+      letra: document.querySelector('.book-page__body')?.style.fontSize,
+      folio: document.querySelector('.reader__status strong')?.textContent.trim()
+    }));
+  const antes = await ajustes();
+  await page.reload({ waitUntil: 'networkidle2', timeout: 60000 });
+  await page.waitForSelector('.reader__status strong', { timeout: 30000 });
+  await new Promise(r => setTimeout(r, 800));
+  const despues = await ajustes();
+  check(
+    'El lector conserva papel, modo, tamaño y página al recargar',
+    JSON.stringify(antes) === JSON.stringify(despues),
+    `${JSON.stringify(antes)} → ${JSON.stringify(despues)}`
+  );
+  const ultima = await page.evaluate(() => localStorage.getItem('crux.biblia.ultima'));
+  check('La última página queda guardada', Boolean(ultima), String(ultima));
 
   // Enlaces antiguos y páginas que antes salían vacías.
   for (const legacy of ['p9', 'p133', 'p135', 'p139']) {
@@ -437,7 +461,7 @@ if (WITH_BROWSER) {
   await page.screenshot({ path: join(OUT, 'biblia-antiguas.png') });
 
   // Scroll continuo.
-  await page.click('button[aria-label="Cambiar entre lectura de libro y scroll continuo"]');
+  await page.click('.reader__mode[aria-pressed="false"]');
   await page.waitForSelector('.reader__scroll .book-block', { timeout: 20000 });
   await new Promise(r => setTimeout(r, 700));
   const scrollChars = await page.$eval('.reader__scroll', n => n.textContent.length);
@@ -457,7 +481,7 @@ if (WITH_BROWSER) {
   await page.screenshot({ path: join(OUT, 'biblia-scroll.png') });
 
   // Volvemos al modo libro con el propio mando del lector.
-  await page.click('button[aria-label="Cambiar entre lectura de libro y scroll continuo"]');
+  await page.click('.reader__mode[aria-pressed="false"]');
   await page.waitForSelector('.book-stage', { timeout: 15000 });
   await new Promise(r => setTimeout(r, 600));
 

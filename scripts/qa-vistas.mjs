@@ -422,6 +422,39 @@ try {
   await mobile.screenshot({ path: `${OUT}/v-mobile-list.png` });
   await mobile.close();
 
+  // ---------------------------------------------------------------- Biblia Patrística
+  const bp = await makePage('reduce');
+  await bp.goto(`${BASE}/biblia`, { waitUntil: 'domcontentloaded' });
+  await bp.waitForSelector('.toc__list', { timeout: 30000 }).catch(() => {});
+  await wait(800);
+  const orden = await bp.evaluate(() => {
+    const dome = document.querySelector('.biblia__dome');
+    const next = dome?.nextElementSibling;
+    return {
+      siguiente: next?.className || '',
+      acerca: next?.textContent.includes('Acerca de esta obra') || false,
+      tiempo: document.querySelectorAll('.time__row').length,
+      obras: document.querySelectorAll('.toc__work').length,
+      detalle: Boolean(document.querySelector('.toc__detail .toc-work__title'))
+    };
+  });
+  check('/biblia: «Acerca de esta obra» va justo después del Domo', orden.acerca, orden.siguiente);
+  check('/biblia: «La obra en el tiempo» pinta las obras con fecha', orden.tiempo >= 10, `${orden.tiempo} filas`);
+  check('/biblia: índice maestro–detalle con obras y panel', orden.obras >= 15 && orden.detalle, `${orden.obras} obras`);
+  await bp.close();
+
+  const bpm = await makePage('reduce', 390, 844);
+  const erroresMovil = [];
+  bpm.on('pageerror', e => erroresMovil.push(e.message));
+  await bpm.goto(`${BASE}/biblia`, { waitUntil: 'domcontentloaded' });
+  await bpm.waitForSelector('.toc__work', { timeout: 30000 }).catch(() => {});
+  await bpm.evaluate(() => document.querySelectorAll('.toc__work')[2]?.click());
+  await wait(500);
+  const acordeon = await bpm.evaluate(() => Boolean(document.querySelector('.toc__inline .toc-work__title')));
+  check('/biblia móvil: la obra se despliega en su sitio (acordeón)', acordeon && !erroresMovil.length, erroresMovil.join(' | '));
+  await checkNoOverflow(bpm, 'móvil biblia');
+  await bpm.close();
+
   // ---------------------------------------------------------------- PWA
   const manRes = await fetch(`${BASE}/manifest.webmanifest`);
   const manifest = await manRes.json();
