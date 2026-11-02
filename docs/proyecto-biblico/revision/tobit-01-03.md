@@ -6,7 +6,7 @@
 > que el usuario la apruebe.
 >
 > Fuente editable: `src/assets/texts/trad/tobit.json`. Esta tabla se generó a
-> partir de ese archivo el 2026-11-02; si se corrige un versículo, se corrige
+> partir de ese archivo (última vez: 2026-11-02, con Asaradón y Cadés); si se corrige un versículo, se corrige
 > en el JSON.
 
 ## Cómo revisar
@@ -21,34 +21,38 @@
 - Lagunas: no hay ninguna en 1–3. 53 versículos, la misma numeración que el
   Codex.
 
-## Decisiones que necesito que confirmes
+## Decisiones del glosario
 
-Son propuestas; quedan como **propuesta** en `GLOSARIO.md` hasta tu visto bueno.
+**Aprobadas el 2026-11-02** (en `GLOSARIO.md`):
 
-1. **ἐλεημοσύνη**: «limosna(s)» cuando son actos humanos (1:3, 1:16, 2:14) y
-   «misericordia» cuando se dice de Dios (3:2, «tus caminos son misericordia y
-   verdad»).
-2. **δικαιοσύνη** en plural: «obras de justicia» (1:3, 2:14); en singular,
-   «justicia».
-3. **ἀδελφός**: «hermano(s)» también en el sentido de compatriota, que es el
-   uso del libro (1:3, 1:10, 2:2); el parentesco se aclara cuando el texto lo
-   precisa (1:21 «mi hermano Anael»; 1:22 «sobrino»).
-4. **ψυχή**: «alma» en las expresiones («con toda el alma», «entristecido en
-   el alma»); pronombre reflexivo cuando es la persona («me guardé», 1:11).
-5. **πατήρ** referido a antepasados: literal, «padre», con nota (1:4, 1:5,
-   1:8).
-6. **ναός**: «santuario» (y se reserva «templo» para ἱερόν).
-7. **ἔθνος**: singular «pueblo» («mi pueblo»); plural τὰ ἔθνη «las naciones».
-8. **δαιμόνιον**: «demonio». **ᾅδης**: «Hades» (no «infierno»).
-9. **δέσποτα**: «Soberano» (para distinguirlo de κύριος, «Señor»).
-10. **Trato**: «ustedes» en el discurso directo (2:6), como el resto del sitio.
-11. **Nombres**: Tobit (el padre) / **Tobías** (el hijo), Ana, Sara, Ragüel,
-    Rafael, Asmodeo, **Ajicar**, Enemesar, Senaquerib, **Sajerdón**, Gabael,
-    Gabrí, Débora, Ananiel, Anael, Tobiel, Aduel, Asiel, Neftalí, Tisbé,
-    **Quidiós**, Aser, Fogor, Galilea, Media, Ecbatana, Elimaida, Ararat,
-    Betel, Amós, Jeroboán, Dan, Nínive; el mes **Distro**. En negrita, los que
-    tienen alternativa habitual (Ajicar/Ajikar, Sajerdón/Asaradón,
-    Quidiós/Cadés).
+1. **ἐλεημοσύνη**: «limosna(s)» cuando son actos humanos (1:3, 1:16, 2:14);
+   «misericordia» cuando se dice de Dios (3:2). No en el sentido moderno de
+   «dar las sobras»: es la misericordia puesta en obra.
+2. **δικαιοσύνη**: «justicia»; en plural, «obras de justicia» (1:3, 2:14).
+3. **ἀδελφός**: «hermano(s)», también como compatriota; el parentesco se
+   precisa cuando el texto lo hace (1:21, 1:22).
+4. **πατήρ** referido a antepasados: literal, «padre», con nota (1:4, 1:5, 1:8).
+5. **ναός**: «santuario» (y «templo» para ἱερόν).
+6. **Nombres**: **Ajicar**; **Asaradón** (no «Sajerdón»: 1:21, 1:22, 2:1);
+   **Cadés** de Neftalí (no «Quidiós»: 1:2).
+
+**Siguen como propuesta** (dime si las cambias; si no, las doy por buenas al
+cerrar 1–3):
+
+- **ψυχή**: «alma» en las expresiones; pronombre reflexivo cuando es la
+  persona («me guardé», 1:11).
+- **οἶκος**: «casa».
+- **ἔθνος**: singular «pueblo»; plural τὰ ἔθνη «las naciones».
+- **δαιμόνιον** «demonio»; **ᾅδης** «Hades» (no «infierno»); **δέσποτα**
+  «Soberano»; **ὕψιστος** «el Altísimo».
+- **Trato**: «ustedes» en el discurso directo (2:6).
+- **El resto de nombres**: Tobit (el padre) / Tobías (el hijo), Ana, Sara,
+  Ragüel, Rafael, Asmodeo, Enemesar, Senaquerib, Gabael, Gabrí, Débora,
+  Ananiel, Anael, Tobiel, Aduel, Asiel, Neftalí, Tisbé, Aser, Fogor, Galilea,
+  Media, Ecbatana, Elimaida, Ararat, Betel, Amós, Jeroboán, Dan, Nínive; el mes
+  Distro.
+
+Los **versículos** siguen pendientes de tu revisión (columna «Revisor»).
 
 ## Lo que no está en este borrador
 
@@ -61,7 +65,7 @@ Son propuestas; quedan como **propuesta** en `GLOSARIO.md` hasta tu visto bueno.
 | v | Griego del Codex | Borrador | Decisión / nota | Revisor |
 |---|---|---|---|---|
 | 1:1 | βιβλοϲ λογων τωβειθ του τωβιηλʼ του ανανιηλ του αδουηλ του γαβαηλ του ραφαηλ του ραγουηλ εκ του ϲπερματοϲ αϲιηλ εκ φυληϲ νεφθαλειμʼ | Libro de las palabras de Tobit, hijo de Tobiel, hijo de Ananiel, hijo de Aduel, hijo de Gabael, hijo de Rafael, hijo de Ragüel, de la descendencia de Asiel, de la tribu de Neftalí; |  |  |
-| 1:2 | οϲ ηχμαλωτευθη εν ταιϲ ημεραιϲ ενεμεϲϲαρου του βαϲιλεωϲ των αϲϲυριων εκ θιϲβηϲ η εϲτιν εκ δεξιων κυδιωϲ τηϲ νεφθαλειμ εν τη §0ανω γαλειλαια ϋπερανω αϲϲηρ οπιϲω δυ>ϲμων ηλιου εξ αριϲτερων φογωρ | que fue llevado cautivo en los días de Enemesar, rey de los asirios, desde Tisbé, que está a la derecha de Quidiós de Neftalí, en la Alta Galilea, por encima de Aser, hacia el poniente, a la izquierda de Fogor. | «Quidiós» transcribe κυδιωϲ (la Cadés de Neftalí). «Alta» traduce ανω, que el texto base tiene y un corrector tachó. |  |
+| 1:2 | οϲ ηχμαλωτευθη εν ταιϲ ημεραιϲ ενεμεϲϲαρου του βαϲιλεωϲ των αϲϲυριων εκ θιϲβηϲ η εϲτιν εκ δεξιων κυδιωϲ τηϲ νεφθαλειμ εν τη §0ανω γαλειλαια ϋπερανω αϲϲηρ οπιϲω δυ>ϲμων ηλιου εξ αριϲτερων φογωρ | que fue llevado cautivo en los días de Enemesar, rey de los asirios, desde Tisbé, que está a la derecha de Cadés de Neftalí, en la Alta Galilea, por encima de Aser, hacia el poniente, a la izquierda de Fogor. | El Codex escribe κυδιωϲ; se da la forma española de la ciudad, Cadés de Neftalí. «Alta» traduce ανω, que el texto base tiene y un corrector tachó. |  |
 | 1:3 | εγω τωβειθ οδοιϲ αληθειαϲ επορευομην και εν δικαιοϲυναιϲ παϲαϲ > ταϲ ημεραϲ τηϲ > ζωηϲ μου και ελεημοϲυναϲ πολλαϲ εποιηϲα τοιϲ αδελφοιϲ μου κ(αι) τω εθνει μου τοιϲ πορευθειϲιν μετ εμου εν τη αιχμαλωϲια ειϲ την χωραν των αϲϲυρι‹ω› ειϲ νινευη | Yo, Tobit, anduve por caminos de verdad y en obras de justicia todos los días de mi vida, e hice muchas limosnas a mis hermanos y a mi pueblo, los que fueron conmigo al cautiverio, al país de los asirios, a Nínive. |  |  |
 | 1:4 | και ο>τε ημην εν τη χωρα μου εν γη ϊϲραηλ και οτε ημην νεοϲ παϲα η φυλη > νεφθαλειμ του πατροϲ μου απεϲτηϲαν απο του οικου δαυειδ του πατροϲ μου και απο ϊερουϲαλημ > πολεωϲ τηϲ εκ παϲων φυλων ‹ιϲλ› ειϲ το θυϲιαζειν παϲαιϲ φυλαιϲ ‹ιϲλ› και ηγιαϲθη ο ναοϲ τηϲ καταϲκη>νωϲεωϲ του ‹θυ› : και ωκοδομηθη εν αυτη ειϲ παϲαϲ ταϲ γενεαϲ του αιωνοϲ | Cuando estaba en mi tierra, en la tierra de Israel, siendo yo joven, toda la tribu de Neftalí, mi padre, se apartó de la casa de David, mi padre, y de Jerusalén, la ciudad que, entre todas las tribus de Israel, estaba destinada a que todas las tribus de Israel ofrecieran sacrificios. Allí fue consagrado el santuario de la morada de Dios, y en ella fue edificado para todas las generaciones de los siglos. | «Padre» vale aquí por antepasado; se deja literal porque el texto lo dice igual de Neftalí y de David. El griego es elíptico en «la ciudad … entre todas las tribus»: se suple «estaba destinada». |  |
 | 1:5 | §0παντεϲ §3οι §6αδελφοι §9ου και ο οικοϲ νεφθαλειμ του πατροϲ μου > εθυϲιαζον εκει>νοι τω μοϲχω ον εποιηϲεν ϊεροβεαμ ο βαϲιλευϲ ‹ιϲ›λ εν δαν επι παν>των ορεων τηϲ > γαλειλαιαϲ | Todos mis hermanos y la casa de Neftalí, mi padre, ofrecían sacrificios, ellos, al becerro que había hecho Jeroboán, rey de Israel, en Dan, sobre todos los montes de Galilea. | El texto base escribe «οι αδελφοι ου»; se sigue la corrección S1, «μου» («mis hermanos»). |  |
@@ -80,14 +84,14 @@ Son propuestas; quedan como **propuesta** en `GLOSARIO.md` hasta tu visto bueno.
 | 1:18 | και ει τινα απεκτεινεν ϲενναχηρειμ §0 οτε α>πηλθεν φευγων εκ τηϲ ϊουδαιαϲ ‹ε› ημεραιϲ τηϲ κριϲεωϲ ηϲ εποιηϲεν εξ αυτου ο βαϲιλευϲ > του ουρανου περι > των βλαϲφημι‹ω› ων εβλαϲφημηϲεν εθαψα πολλουϲ γαρ απεκτεινεν εν τω θυμω αυτου εκ των υϊων ‹ιϲλ› και εκλεπτον τα ϲωματα αυτων και εθαπτον και εζητηϲεν αυτα ϲενναχηρειμ και ουχ ευρεν αυτα | Y si Senaquerib mataba a alguno cuando volvió huyendo de Judea, en los días del juicio que el Rey del cielo hizo sobre él por las blasfemias que había proferido, yo lo enterraba; porque en su furor mató a muchos de los hijos de Israel, y yo robaba sus cuerpos y los enterraba. Senaquerib los buscó y no los encontró. |  |  |
 | 1:19 | και επορευθη ειϲ > τιϲ των εκ τηϲ νινευη και ϋπεδειξεν τω βαϲιλει περι εμου οτι εγω θαπτω αυτουϲ και εκρυβην και οτε επεγνων οτι εγνω περι εμου ο βαϲιλευϲ και οτι ζητουμαι του αποθανειν εφοβηθην και απεδραϲα | Pero uno de los de Nínive fue y le hizo saber al rey que era yo quien los enterraba, y me escondí. Cuando supe que el rey estaba enterado y que me buscaban para matarme, tuve miedo y huí. |  |  |
 | 1:20 | και ηρπαγη παντα οϲα ϋπηρχεν μοι και ου κατελιφθη μοι ουδεν ο ουκ ανελημφθη ειϲ το βαϲιλεικον πλην ανναϲ τηϲ γυναικοϲ μου και τωβια του υιου μου | Me arrebataron todo lo que tenía, y no me quedó nada que no pasara al tesoro real, salvo Ana, mi mujer, y Tobías, mi hijo. |  |  |
-| 1:21 | και ου διηλθ‹ο› ημεραι §0τεϲϲερα>κοντα εωϲ ου απεκτειναν αυτον οι δυο ϋιοι αυτου και §2εφυγεν ειϲ τα ορη αραρατ και εβαϲιλευϲεν ϲαχερδονοϲ υϊοϲ αυτου μετ αυτον και εταξεν §4αχειχαρον τ‹ο› αναηλ τον του αδελφου μου υϊ‹ο› επι παϲαν την εκλογιϲτιαν τηϲ βαϲιλειαϲ αυτου και αυτοϲ ειχεν την εξουϲιαν επι παϲ‹α› την διοικηϲιν | No habían pasado cuarenta días cuando lo mataron sus dos hijos, y huyó a los montes de Ararat. Reinó después de él Sajerdón, su hijo, que puso a Ajicar, hijo de mi hermano Anael, al frente de todas las finanzas de su reino, y él tenía autoridad sobre toda la administración. | «Huyó» traduce el singular εφυγεν del texto base (un corrector escribe εφυγον, «huyeron»); se conserva la ambigüedad sobre quién huye. |  |
-| 1:22 | τοτε ηξιωϲεν αχειχαροϲ περι εμου > και κατηλθον ειϲ την νινευη αχειχαροϲ γαρ ην ο αρχιοινοχοοϲ και επι του δακτυλιου και διοικητηϲ και εκλογιϲτηϲ επι ϲενναχηρειμ §0βαϲιλεωϲ > αϲϲυριων και κατεϲτηϲεν αυτον §2 ϲαχερδονοϲ εκ δευτεραϲ §4η δε εξαδελφοϲ μου και εκ τηϲ ϲυγγενιαϲ μου | Entonces Ajicar intercedió por mí y volví a Nínive. Ajicar había sido jefe de los coperos, guardián del sello, administrador y contador en tiempos de Senaquerib, rey de los asirios, y Sajerdón lo volvió a nombrar. Era sobrino mío y de mi parentela. | εκ δευτεραϲ puede entenderse «de nuevo» o «como segundo» (en el cargo); se elige «de nuevo». «Era» sigue la corrección S1 (ην); el texto base escribe η. |  |
+| 1:21 | και ου διηλθ‹ο› ημεραι §0τεϲϲερα>κοντα εωϲ ου απεκτειναν αυτον οι δυο ϋιοι αυτου και §2εφυγεν ειϲ τα ορη αραρατ και εβαϲιλευϲεν ϲαχερδονοϲ υϊοϲ αυτου μετ αυτον και εταξεν §4αχειχαρον τ‹ο› αναηλ τον του αδελφου μου υϊ‹ο› επι παϲαν την εκλογιϲτιαν τηϲ βαϲιλειαϲ αυτου και αυτοϲ ειχεν την εξουϲιαν επι παϲ‹α› την διοικηϲιν | No habían pasado cuarenta días cuando lo mataron sus dos hijos, y huyó a los montes de Ararat. Reinó después de él Asaradón, su hijo, que puso a Ajicar, hijo de mi hermano Anael, al frente de todas las finanzas de su reino, y él tenía autoridad sobre toda la administración. | «Huyó» traduce el singular εφυγεν del texto base (un corrector escribe εφυγον, «huyeron»); se conserva la ambigüedad sobre quién huye. El Codex llama al rey ϲαχερδονοϲ; se da la forma española, Asaradón. |  |
+| 1:22 | τοτε ηξιωϲεν αχειχαροϲ περι εμου > και κατηλθον ειϲ την νινευη αχειχαροϲ γαρ ην ο αρχιοινοχοοϲ και επι του δακτυλιου και διοικητηϲ και εκλογιϲτηϲ επι ϲενναχηρειμ §0βαϲιλεωϲ > αϲϲυριων και κατεϲτηϲεν αυτον §2 ϲαχερδονοϲ εκ δευτεραϲ §4η δε εξαδελφοϲ μου και εκ τηϲ ϲυγγενιαϲ μου | Entonces Ajicar intercedió por mí y volví a Nínive. Ajicar había sido jefe de los coperos, guardián del sello, administrador y contador en tiempos de Senaquerib, rey de los asirios, y Asaradón lo volvió a nombrar. Era sobrino mío y de mi parentela. | εκ δευτεραϲ puede entenderse «de nuevo» o «como segundo» (en el cargo); se elige «de nuevo». «Era» sigue la corrección S1 (ην); el texto base escribe η. |  |
 
 ## Tobit 2
 
 | v | Griego del Codex | Borrador | Decisión / nota | Revisor |
 |---|---|---|---|---|
-| 2:1 | και επι ϲαρχεδονοϲ βαϲιλεωϲ κατηλθ‹ο› ειϲ τον οικον μου και απεδοθη μοι η γυνη μου αννα και τωβιαϲ ο ϋιοϲ μου και εν τη πεντηκοϲτη τηϲ εορτηϲ ημων η εϲτιν αγια εβδομαδων εγενηθη μοι αριϲτ‹ο› καλον και ανεπεϲα του αριϲτηϲαι | Bajo el rey Sajerdón volví a mi casa, y me fueron devueltos Ana, mi mujer, y Tobías, mi hijo. En nuestra fiesta de Pentecostés, que es la fiesta santa de las Semanas, me prepararon una buena comida y me recliné para comer. | Aquí el nombre del rey se escribe ϲαρχεδονοϲ; es el mismo Sajerdón de 1:21. |  |
+| 2:1 | και επι ϲαρχεδονοϲ βαϲιλεωϲ κατηλθ‹ο› ειϲ τον οικον μου και απεδοθη μοι η γυνη μου αννα και τωβιαϲ ο ϋιοϲ μου και εν τη πεντηκοϲτη τηϲ εορτηϲ ημων η εϲτιν αγια εβδομαδων εγενηθη μοι αριϲτ‹ο› καλον και ανεπεϲα του αριϲτηϲαι | Bajo el rey Asaradón volví a mi casa, y me fueron devueltos Ana, mi mujer, y Tobías, mi hijo. En nuestra fiesta de Pentecostés, que es la fiesta santa de las Semanas, me prepararon una buena comida y me recliné para comer. | El Codex escribe aquí ϲαρχεδονοϲ y en 1:21–22 ϲαχερδονοϲ; en los dos casos se da la forma española del rey asirio, Asaradón. |  |
 | 2:2 | κ(αι) παρετεθη μοι η τραπεζα και παρετεθη μοι οψαρια πλειονα και ειπα τω τωβεια τω υϊω μου παιδιον βαδιζε κ(αι) ον αν ευρηϲ πτωχ‹ο› των αδελφων ημ‹ω› εκ νινευητων αιχμαλωτων οϲ μεμνηται εν ολη καρδια αυτου και αγαγε αυτον και φαγεται κοινωϲ μετ εμου και §0ϊδε προϲμενω ϲε παιδιον μεχρι του ϲε ελθειν | Me pusieron la mesa y me sirvieron varios platos, y le dije a Tobías, mi hijo: «Hijo mío, ve, y al pobre de nuestros hermanos que encuentres entre los cautivos de Nínive, que se acuerde con todo su corazón, tráelo, y comerá conmigo. Mira, te espero, hijo mío, hasta que vuelvas». | «Que se acuerde» no tiene complemento en griego (se sobrentiende «de Dios»); no se añade. |  |
 | 2:3 | και επορευθη τωβιαϲ ζητηϲαι τινα πτωχον των α>δελφων ημων και επιϲτρεψαϲ λεγει πατερ και ειπα αυτω ϊδου εγω παιδιον και αποκριθειϲ ειπεν πατερ ϊδου ειϲ εκ του εθνουϲ ημων πεφονευται και ερριπται εν τη αγορα και αυτοθι νυν εϲτραγγαληται | Tobías fue a buscar a algún pobre de nuestros hermanos y, al volver, dijo: «¡Padre!». Yo le dije: «Aquí estoy, hijo mío». Él respondió: «Padre, han asesinado a uno de nuestro pueblo y lo han arrojado en la plaza; allí mismo lo acaban de estrangular». |  |  |
 | 2:4 | και αναπηδηϲαϲ αφηκα το αριϲτ‹ο› πριν η γευϲαϲθαι με αυτου και αναιρουμαι αυτον εκ τηϲ πλατειαϲ και ειϲ εν των οικιδιων εθηκα μεχρι του τον ηλιον δυειν και θαψω αυτον ˙ | Me levanté de un salto y dejé la comida antes de probarla; lo recogí de la plaza y lo puse en uno de los cuartos hasta que se pusiera el sol, para enterrarlo. |  |  |

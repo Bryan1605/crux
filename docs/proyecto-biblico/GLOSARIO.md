@@ -22,15 +22,15 @@ ese término sin decidirlo.
 
 | Griego | Transliteración | Sentido | Decisión | Notas |
 |---|---|---|---|---|
-| ἀδελφός | adelphós | hermano; miembro de la comunidad; compatriota | **propuesta (Tobit 1–3): hermano(s)** | En Tobit puede ser “hermano” de sangre o “hermano” de pueblo. No usar “hermano” para todo sin pensar. |
-| ἐλεημοσύνη | eleēmosýnē | limosna; misericordia; justicia/beneficencia | **propuesta (Tobit 1–3): «limosna(s)» si son actos humanos; «misericordia» si se dice de Dios (3:2)** | Término central de Tobit. “Limosna” puede sonar reducido; “justicia” puede sonar técnico. Decidir con Tobit 1–2 y documentar. |
+| ἀδελφός | adelphós | hermano; miembro de la comunidad; compatriota | **aprobado (2026-11-02)**: «hermano(s)» | Tres usos: de sangre, compatriota (el uso de Tobit) y hermano en la fe (NT). Se traduce «hermano» y el parentesco se precisa cuando el texto lo hace (1:21 «mi hermano Anael»; 1:22 «sobrino»). |
+| ἐλεημοσύνη | eleēmosýnē | limosna; misericordia; justicia/beneficencia | **aprobado (2026-11-02)**: «limosna(s)» si son actos humanos; «misericordia» si se dice de Dios (3:2) | De ἐλεέω («tener misericordia», la raíz de *Kyrie eleison*); el español «limosna» viene de esta palabra y Mt 6:2-4 la usa en ese sentido. En el griego bíblico no es «dar las sobras»: es la misericordia puesta en obra hacia el necesitado, la expresión práctica de la δικαιοσύνη. |
 | ἔλεος | éleos | misericordia, compasión | **pendiente** | Distinguir de `ἐλεημοσύνη`. |
 | νόμος | nómos | ley, instrucción | **provisional: ley** | En contextos judíos puede ser “la Ley”; mantener mayúscula solo si el texto la tiene. |
 | κύριος | kýrios | señor, dueño, Señor (divino) | **provisional: Señor** | En el Codex, la forma sobrelineada puede ser *nomen sacrum*; no cambiarla en el griego. |
 | οἶκος | oîkos | casa, familia, linaje | **propuesta (Tobit 1–3): casa** | “Casa” puede ser edificio o familia; el contexto decide. |
 | προσευχή | proseuchḗ | oración, lugar de oración | **provisional: oración** | En Tobit hay escenas de oración; no confundir con “sinagoga” si el texto no lo dice. |
 | ἁμαρτία | hamartía | pecado, falta | **provisional: pecado** | No moralizar más que el texto. |
-| δικαιοσύνη | dikaiosýnē | justicia, rectitud | **provisional: justicia; propuesta (Tobit 1–3): en plural «obras de justicia»** | En Tobit se cruza con `ἐλεημοσύνη`; no fusionar sin nota. |
+| δικαιοσύνη | dikaiosýnē | justicia, rectitud | **aprobado (2026-11-02)**: «justicia»; en plural, «obras de justicia» | La norma y la rectitud ante Dios; en la Septuaginta traduce *tsedeq*/*tsedaqá*, que incluye fidelidad y ayuda al necesitado. En Tobit va unida a ἐλεημοσύνη (1:3, 2:14): no fusionarlas. |
 | σοφία | sophía | sabiduría | **provisional: sabiduría** | En Sabiduría/Sirácida es un concepto estructurante; revisar mayúsculas. |
 | ἀρετή | aretḗ | virtud, excelencia | **provisional: virtud** | Es clave en 4 Macabeos; no traducir como “fuerza” sin contexto. |
 | λογισμός | logismós | razonamiento, cálculo, argumento | **pendiente** | En 4 Macabeos es un término técnico; “razón” puede ser demasiado estrecho. |
@@ -46,7 +46,7 @@ ese término sin decidirlo.
 | Ἕλλην | Héllēn | griego, no judío | **provisional: griego** | En 2 Macabeos/4 Macabeos puede ser “griego” o “pagano”; el contexto decide. |
 | τύραννος | týrannos | tirano, rey absoluto | **provisional: tirano** | En 4 Macabeos es el antagonista; no convertirlo en “rey” sin más. |
 | βασιλεία | basileía | reino, reinado | **provisional: reino** | Distinguir “reino” de “rey”. |
-| ναός / ἱερόν | naós / hierón | santuario / recinto del templo | **propuesta (Tobit 1–3): ναός «santuario»; ἱερόν «templo»** | No son sinónimos; si el texto usa uno, no cambiar al otro. |
+| ναός / ἱερόν | naós / hierón | santuario / recinto del templo | **aprobado (2026-11-02)**: ναός «santuario»; ἱερόν «templo» | ναός es el santuario, la morada de la presencia de Dios (Mt 27:51; 1 Co 6:19); ἱερόν es el recinto del templo. No son sinónimos. |
 | σωτηρία | sōtēría | salvación, liberación | **provisional: salvación** | En contextos de peligro físico puede ser “liberación”; revisar. |
 | πίστις | pístis | fe, fidelidad, confianza | **pendiente** | “Fe” y “fidelidad” no son intercambiables. |
 | ἐκκλησία | ekklēsía | asamblea, comunidad | **pendiente** | En libros solo-Codex no siempre es “iglesia” en sentido posterior. |
@@ -55,7 +55,7 @@ ese término sin decidirlo.
 | ᾅδης | hádēs | Hades, lugar de los muertos | **propuesta (Tobit 1–3): Hades** | No «infierno»: en el texto no es un lugar de castigo. |
 | δεσπότης | despótēs | dueño, soberano | **propuesta (Tobit 1–3): Soberano** | Para distinguirlo de κύριος («Señor»). |
 | ὕψιστος | hýpsistos | el Altísimo | **propuesta (Tobit 1–3): el Altísimo** | |
-| πατήρ (antepasado) | patḗr | padre; antepasado | **propuesta (Tobit 1–3): «padre», literal, con nota** | Tobit llama «padre» a Neftalí, a David y a Ananiel (1:4–8). |
+| πατήρ (antepasado) | patḗr | padre; antepasado | **aprobado (2026-11-02)**: «padre», literal, con nota | Tobit llama «padre» a Neftalí, a David y a Ananiel (1:4–8). |
 | Trato (2.ª pl.) | — | vosotros / ustedes | **propuesta (Tobit 1–3): ustedes** | Como el resto del sitio (2:6). |
 
 ## Nombres y topónimos
@@ -71,10 +71,12 @@ Se fijan en la primera aparición y se repiten. Ejemplos de Tobit:
 | Ἐκβάτανα | Ecbatana | |
 | Ῥαγουήλ | Ragüel | **Propuesta.** |
 | Σάρρα · Ἄννα · Ῥαφαήλ · Ἀσμοδαῖος | Sara · Ana · Rafael · Asmodeo | **Propuesta.** |
-| Ἀχείχαρος (Ἀχειάχαρος) | Ajicar | **Propuesta** (alternativa: Ajikar). El Codex alterna la grafía (1:21, 2:10). |
-| Ἐνεμεσσάρος · Σενναχηρείμ · Σαχερδονός (Σαρχεδονός) | Enemesar · Senaquerib · Sajerdón | **Propuesta** (alternativa para el último: Asaradón). |
+| Ἀχείχαρος (Ἀχειάχαρος) | Ajicar | **Aprobado (2026-11-02).** Con «c», la ortografía española natural (alternativa descartada: Ajikar). El Codex alterna la grafía (1:21, 2:10). |
+| Ἐνεμεσσάρος · Σενναχηρείμ | Enemesar · Senaquerib | **Propuesta.** |
+| Σαχερδονός (Σαρχεδονός) | Asaradón | **Aprobado (2026-11-02).** El rey asirio Esar-jadón; «Asaradón» es la grafía normalizada en español. «Sajerdón» calcaría la forma helenizada del Codex. La grafía del Codex se anota en 1:21 y 2:1. |
 | Γαβαήλ · Γαβρεί · Δεββώρα · Ἀνανιήλ · Ἀναήλ · Τωβιήλ · Ἀδουήλ · Ἀσιήλ | Gabael · Gabrí · Débora · Ananiel · Anael · Tobiel · Aduel · Asiel | **Propuesta.** |
-| Θισβή · Κυδιώς · Ἀσήρ · Φογώρ · Ἐλυμαΐς | Tisbé · Quidiós · Aser · Fogor · Elimaida | **Propuesta.** Quidiós = Cadés de Neftalí (alternativa: Cadés). |
+| Θισβή · Ἀσήρ · Φογώρ · Ἐλυμαΐς | Tisbé · Aser · Fogor · Elimaida | **Propuesta.** |
+| Κυδιώς | Cadés (de Neftalí) | **Aprobado (2026-11-02).** La ciudad de refugio de la Alta Galilea (Kedes); κυδιωϲ es una deformación de ese nombre, así que se da la forma española. |
 | Δύστρος | Distro | Mes macedonio (2:12). **Propuesta.** |
 
 ## Cómo añadir un término

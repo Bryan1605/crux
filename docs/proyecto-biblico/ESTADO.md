@@ -175,7 +175,10 @@ Avance del piloto (2026-11-02):
       (`status: borrador`). Tabla de revisión:
       `docs/proyecto-biblico/revision/tobit-01-03.md`. Las decisiones del
       glosario quedan como **propuesta** en `GLOSARIO.md`.
-- [ ] **Revisión del usuario** de 1–3 y de las propuestas del glosario.
+- [x] Glosario, 2026-11-02: el usuario aprueba ἐλεημοσύνη, δικαιοσύνη, ἀδελφός,
+      «padre» literal, ναός y los nombres Ajicar, **Asaradón** y **Cadés** (aplicados
+      al borrador). El resto sigue como propuesta.
+- [ ] **Revisión del usuario** de los versículos de 1–3 y de las propuestas restantes.
 - [ ] Paso 3: esquema/UI con esa muestra (`build-trad`, `qa:trad`, columna
       «Trad» en `/exegesis`, enlace desde `/biblia/ntv?libro=tobit`).
 - [ ] Paso 4: capítulos 4–14 y revisión.
