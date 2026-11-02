@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 import ConcaveCarousel from '../components/ConcaveCarousel/ConcaveCarousel';
 import SkewedCarousel from '../components/SkewedCarousel/SkewedCarousel';
+import StudyCard from '../components/StudyCard/StudyCard';
 import Timeline from '../components/Timeline/Timeline';
 import ViewToggle from '../components/ViewToggle/ViewToggle';
 import { STUDIES, STUDY_CATEGORIES } from '../data/estudios';
@@ -42,69 +43,6 @@ function pickFeatured(count) {
   return picks;
 }
 
-function cardBody(s, Tag = 'h2', withCover = true) {
-  return (
-    <>
-      {withCover && s.portada && (
-        <div className="study-card__img">
-          <img src={s.portada} alt="" loading="lazy" draggable={false} />
-        </div>
-      )}
-      <div className="card__meta">
-        <span>{s.categoryLabel}</span>
-        {s.subcategory && (
-          <>
-            <span aria-hidden="true">/</span>
-            <span>{s.subcategory}</span>
-          </>
-        )}
-      </div>
-      <Tag className="card__title">{s.title}</Tag>
-      <p className="card__desc">{s.description}</p>
-      <div className="card__footer">
-        <span>{s.passage || 'Ficha de estudio'}</span>
-        <span className="arrow" aria-hidden="true">
-          →
-        </span>
-      </div>
-    </>
-  );
-}
-
-/** Tarjeta de la rejilla (estudio o personaje). */
-function GridCard({ entry, index, Tag = 'h2' }) {
-  const isPersonaje = entry.kind === 'personaje';
-  const d = entry.data;
-
-  return (
-    <Link
-      className={`card study-card${isPersonaje ? ' personaje-card' : ''}`}
-      to={entry.href}
-      style={{ '--reveal-d': `${(index % 9) * 55}ms` }}
-    >
-      {isPersonaje ? (
-        <>
-          <div className="personaje-card__img">
-            <img src={d.portada} alt="" loading="lazy" />
-          </div>
-          <div className="card__meta">
-            <span>{d.epoca}</span>
-          </div>
-          <Tag className="card__title">{d.nombre}</Tag>
-          <p className="card__desc">{d.resumen}</p>
-          <div className="card__footer">
-            <span>{d.rol}</span>
-            <span className="arrow" aria-hidden="true">
-              →
-            </span>
-          </div>
-        </>
-      ) : (
-        cardBody(d, Tag)
-      )}
-    </Link>
-  );
-}
 
 /** Fila de la vista de lista: índice tipo libro (Nº · Ficha · Pasaje). */
 function ListRow({ entry, index }) {
@@ -474,7 +412,7 @@ export default function Estudio() {
             <SkewedCarousel
               items={featured}
               cardWidth={300}
-              aspectRatio="5 / 4"
+              aspectRatio="300 / 572"
               rotation={0}
               inactiveScale={0.9}
               hoverTilt={9}
@@ -483,7 +421,14 @@ export default function Estudio() {
               loop
               showTitles={false}
               onItemClick={s => navigate(`/estudio/${s.slug}`)}
-              renderItem={s => <article className="card study-card featured-card">{cardBody(s, 'h3', false)}</article>}
+              renderItem={s => (
+                <StudyCard
+                  entry={{ kind: 'estudio', data: s, href: `/estudio/${s.slug}` }}
+                  headingLevel={3}
+                  linked={false}
+                  className="featured-card"
+                />
+              )}
             />
           </div>
         </section>
@@ -522,10 +467,10 @@ export default function Estudio() {
                     ref={carouselRef}
                     items={ordered}
                     itemWidth={300}
-                    height={372}
+                    height={572}
                     label={isPersonajesCat ? 'Carrusel de personajes y estudios' : 'Carrusel de estudios'}
                     getKey={entry => `${entry.kind}-${entry.slug}`}
-                    renderItem={(entry, i) => <GridCard entry={entry} index={i} />}
+                    renderItem={(entry, i) => <StudyCard entry={entry} index={i} headingLevel={3} />}
                     onIndexChange={setCarIndex}
                   />
                   <div className="estudio__carousel-info">
@@ -595,11 +540,11 @@ export default function Estudio() {
                         ) : (
                           <div className="grid grid--3 estudio__grid">
                             {g.items.map((entry, i) => (
-                              <GridCard
+                              <StudyCard
                                 key={`${entry.kind}-${entry.slug}`}
                                 entry={entry}
                                 index={i}
-                                Tag={groups ? 'h3' : 'h2'}
+                                headingLevel={groups ? 3 : 2}
                               />
                             ))}
                           </div>

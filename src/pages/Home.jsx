@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import LiquidSwap from '../components/LiquidSwap/LiquidSwap';
 import ScrollReveal from '../components/ScrollReveal/ScrollReveal';
+import StudyCard from '../components/StudyCard/StudyCard';
 import { assetUrl } from '../lib/assets';
 import { useSite, useSeo } from '../lib/site';
 
@@ -372,19 +373,12 @@ export default function Home() {
 
           <div className="chars__grid">
             {DESTACADOS.map(p => (
-              <Link className="char-card" key={p.slug} to={`/estudio/personajes/${p.slug}`}>
-                {p.portada && (
-                  <div className="char-card__img">
-                    <img src={p.portada} alt="" loading="lazy" />
-                  </div>
-                )}
-                <p className="char-card__meta">
-                  {p.rol}
-                  {p.escenas?.length > 0 && ` · ${p.escenas.length} escenas`}
-                </p>
-                <h3 className="char-card__name">{p.nombre}</h3>
-                <p className="card__desc">{p.resumen}</p>
-              </Link>
+              <StudyCard
+                key={p.slug}
+                className="char-card"
+                headingLevel={3}
+                entry={{ kind: 'personaje', data: p, href: `/estudio/personajes/${p.slug}` }}
+              />
             ))}
           </div>
         </div>

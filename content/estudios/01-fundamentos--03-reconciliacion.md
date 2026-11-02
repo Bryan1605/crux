@@ -3,6 +3,7 @@ title: "Reconciliación"
 category: "01-fundamentos"
 subcategory: "Salvación"
 description: "Reconciliación es la restauración de la relación rota entre Dios y el ser humano. Dios, que estaba ofendido por el pecado, tomó la iniciativa de hacer la paz por medio de la muerte de…"
+portada: "/img/personajes/ApostolPablo/ApostolPabloPoseNormal.webp"
 passage: "2 Corintios 5:18-19"
 tags: ["fundamento"]
 aliases: []

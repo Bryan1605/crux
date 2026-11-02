@@ -6,8 +6,41 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import { ALL_BOOKS } from '../src/data/exegesis.js';
 import { parseFrontmatter } from '../src/lib/frontmatter.js';
 import { fold } from '../src/lib/fold.js';
+
+/* --- cifras de cada ficha (card común) ----------------------------------- */
+
+// Nombres y abreviaturas de libro sin el ordinal («1 Juan» → «Juan»), más las
+// abreviaturas que usan las fichas y no están en la tabla canónica.
+const BOOK_NAMES = new Set(['Salmo', 'Ro', 'He', 'Lc', 'Mt', 'Mc', 'Jn', 'Ef', 'Gá', 'Fil', 'Col', 'Ts', 'Ti', 'Tit',
+  'Stg', 'Sant', 'Ap', 'Hch', 'Co', 'Cor', 'Pe', 'Is', 'Jer', 'Ez', 'Dn', 'Sal', 'Pr', 'Prov', 'Ecl', 'Gén', 'Éx', 'Ex',
+  'Jue', 'Rt', 'Sam', 'Re', 'Cr', 'Esd', 'Neh', 'Os', 'Jl', 'Am', 'Abd', 'Jon', 'Mi', 'Nah', 'Hab', 'Sof', 'Hag', 'Zac',
+  'Mal', 'Flm', 'Jud']);
+for (const b of ALL_BOOKS) {
+  BOOK_NAMES.add(b.name.replace(/^[1-4]\s+/, ''));
+  BOOK_NAMES.add(b.abbr.replace(/^[1-4]\s*/, ''));
+}
+const CITA = new RegExp(
+  `(?<!\\p{L})(?:[1-4]\\s?)?(?:${[...BOOK_NAMES]
+    .sort((a, b) => b.length - a.length)
+    .map(n => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('|')})\\.?\\s+\\d+:\\d+`,
+  'gu'
+);
+
+/** Lectura (min, a 200 palabras/min), citas bíblicas `Libro c:v`, secciones `## ` y Nº del slug. */
+export function studyStats(slug, body) {
+  const words = body.trim() ? body.trim().split(/\s+/).length : 0;
+  const nums = [...slug.matchAll(/--(\d+)-/g)];
+  return {
+    minutes: Math.max(1, Math.round(words / 200)),
+    citations: (body.match(CITA) || []).length,
+    sections: (body.match(/^## /gm) || []).length,
+    number: nums.length ? nums[nums.length - 1][1] : ''
+  };
+}
 
 function loadCategorias(contentDir) {
   const file = path.join(contentDir, 'categorias.json');
@@ -43,7 +76,7 @@ export function buildIndex(contentDir) {
     for (const name of fs.readdirSync(studiesDir).sort()) {
       if (!name.endsWith('.md')) continue;
       const raw = fs.readFileSync(path.join(studiesDir, name), 'utf8');
-      const { data } = parseFrontmatter(raw);
+      const { data, body } = parseFrontmatter(raw);
       const slug = name.replace(/\.md$/, '');
       const cat = CATEGORIES.find(c => c.id === data.category);
       studies.push({
@@ -58,7 +91,8 @@ export function buildIndex(contentDir) {
         passage: data.passage || '',
         tags: Array.isArray(data.tags) ? data.tags : [],
         aliases: Array.isArray(data.aliases) ? data.aliases : [],
-        updated: data.updated || ''
+        updated: data.updated || '',
+        ...studyStats(slug, body)
       });
     }
   }

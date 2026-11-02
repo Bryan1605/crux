@@ -1,0 +1,282 @@
+/* --- card común (fase F) ----------------------------------------------------
+   Modelo: docs/rediseno/referencia/study-card.html. Cifras en su propia fila y
+   botón a todo el ancho debajo: nunca en la misma fila ni con anchos fijos. */
+
+.study-card {
+  --sc-gold: #c9a96a;
+  --sc-bone: #f1ece2;
+  --sc-meta: #8b8b92;
+  --sc-desc: #a8a8ad;
+  position: relative;
+  height: 100%;
+  min-height: 572px;
+}
+
+.study-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 572px;
+  box-sizing: border-box;
+  padding: 10px 10px 16px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #17171c 0%, #121216 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 18px 40px rgba(0, 0, 0, 0.35);
+  color: var(--text);
+  text-decoration: none;
+  transform: perspective(760px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition:
+    transform 0.18s ease-out,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.study-card:hover .study-card__link {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55);
+}
+
+.study-card__link:focus-visible {
+  outline: 2px solid var(--sc-bone);
+  outline-offset: 3px;
+}
+
+.study-card__media {
+  position: relative;
+  flex: none;
+  height: 210px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #0d0d10;
+}
+
+/* Sombra inferior para que los puntos se lean sobre cualquier imagen. */
+.study-card__media::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, rgba(10, 10, 11, 0.55));
+  pointer-events: none;
+}
+
+.study-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.study-card:hover .study-card__img {
+  transform: scale(1.04);
+}
+
+.study-card__mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 112px;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgba(201, 169, 106, 0.22);
+}
+
+.study-card__badge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 1;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(10, 10, 11, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.study-card__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.study-card__dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.study-card__dots span.is-on {
+  background: var(--text);
+}
+
+.study-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 12px 0;
+  min-width: 0;
+}
+
+.study-card__meta {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sc-meta);
+}
+
+.study-card__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.15;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.study-card__sub {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--sc-gold);
+}
+
+.study-card__desc {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--sc-desc);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.study-card__foot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 12px 0;
+}
+
+.study-card__stats {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.study-card__stats div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  min-width: 0;
+}
+
+.study-card__stats div + div {
+  padding-left: 14px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.study-card__stats dd {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.study-card__stats dt {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--sc-meta);
+}
+
+.study-card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(241, 236, 226, 0.28);
+  background: rgba(241, 236, 226, 0.06);
+  color: var(--sc-bone);
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.study-card:hover .study-card__cta {
+  background: var(--sc-bone);
+  color: #0a0a0b;
+  border-color: var(--sc-bone);
+}
+
+.study-card__nav {
+  position: absolute;
+  top: 112px;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(10, 10, 11, 0.55);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Área táctil de 44 px sin agrandar el círculo. */
+.study-card__nav::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+
+.study-card__nav--prev {
+  left: 20px;
+}
+
+.study-card__nav--next {
+  right: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .study-card__link,
+  .study-card__img {
+    transition: none;
+    transform: none;
+  }
+
+  .study-card:hover .study-card__img {
+    transform: none;
+  }
+}

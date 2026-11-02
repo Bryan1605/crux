@@ -80,13 +80,17 @@
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "Salvación",
       "description": "Perdón es Dios quitando la culpa y la deuda del pecado completamente, basado en el sacrificio de Cristo, restaurando la relación rota.",
-      "portada": "",
+      "portada": "/img/banners/herobanner1.webp",
       "passage": "1 Juan 1:9",
       "tags": [
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 15,
+      "sections": 6,
+      "number": "01"
     },
     {
       "slug": "01-fundamentos--02-justificacion",
@@ -96,13 +100,17 @@
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "Salvación",
       "description": "Justificación es el acto legal por el cual Dios declara justo al pecador que cree en Jesucristo. No es un proceso de \"volverse justo\" — es una declaración judicial inmediata. Dios no hace…",
-      "portada": "",
+      "portada": "/img/banners/herobanner3-reforma.webp",
       "passage": "Romanos 3:22-24",
       "tags": [
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 5,
+      "citations": 21,
+      "sections": 6,
+      "number": "02"
     },
     {
       "slug": "01-fundamentos--03-reconciliacion",
@@ -112,13 +120,17 @@
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "Salvación",
       "description": "Reconciliación es la restauración de la relación rota entre Dios y el ser humano. Dios, que estaba ofendido por el pecado, tomó la iniciativa de hacer la paz por medio de la muerte de…",
-      "portada": "",
+      "portada": "/img/personajes/ApostolPablo/ApostolPabloPoseNormal.webp",
       "passage": "2 Corintios 5:18-19",
       "tags": [
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 9,
+      "sections": 6,
+      "number": "03"
     },
     {
       "slug": "01-fundamentos--04-llegar-a-ser-hijo-de-dios",
@@ -135,7 +147,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 17,
+      "sections": 6,
+      "number": "04"
     },
     {
       "slug": "01-fundamentos--05-de-que-son-salvos",
@@ -152,7 +168,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 11,
+      "sections": 6,
+      "number": "05"
     },
     {
       "slug": "01-fundamentos--06-puede-un-hijo-dejar-de-serlo",
@@ -169,7 +189,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 4,
+      "citations": 19,
+      "sections": 6,
+      "number": "06"
     },
     {
       "slug": "01-fundamentos--07-informacion-vs-revelacion",
@@ -185,7 +209,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 4,
+      "citations": 13,
+      "sections": 7,
+      "number": "07"
     },
     {
       "slug": "01-fundamentos--08-mejorar-la-salvacion-con-conducta",
@@ -202,7 +230,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 11,
+      "sections": 6,
+      "number": "08"
     },
     {
       "slug": "01-fundamentos--09-mejorar-la-filiacion-con-conducta",
@@ -219,7 +251,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 10,
+      "sections": 6,
+      "number": "09"
     },
     {
       "slug": "01-fundamentos--10-mejorar-la-vida-eterna-con-conducta",
@@ -236,7 +272,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 12,
+      "sections": 6,
+      "number": "10"
     },
     {
       "slug": "01-fundamentos--11-santificacion",
@@ -252,7 +292,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 18,
+      "sections": 7,
+      "number": "11"
     },
     {
       "slug": "01-fundamentos--12-purificacion",
@@ -268,7 +312,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 9,
+      "sections": 6,
+      "number": "12"
     },
     {
       "slug": "01-fundamentos--13-consagracion",
@@ -284,7 +332,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 7,
+      "sections": 6,
+      "number": "13"
     },
     {
       "slug": "01-fundamentos--14-madurez-espiritual",
@@ -301,7 +353,11 @@
         "doctrina/santificacion"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 12,
+      "sections": 6,
+      "number": "14"
     },
     {
       "slug": "01-fundamentos--15-testigo-de-jesus",
@@ -318,7 +374,11 @@
         "discipulado"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 10,
+      "sections": 6,
+      "number": "15"
     },
     {
       "slug": "01-fundamentos--16-obrero-en-la-mies",
@@ -335,7 +395,11 @@
         "discipulado"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 9,
+      "sections": 6,
+      "number": "16"
     },
     {
       "slug": "01-fundamentos--17-soldado-en-la-milicia",
@@ -352,7 +416,11 @@
         "discipulado"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 15,
+      "sections": 6,
+      "number": "17"
     },
     {
       "slug": "01-fundamentos--18-la-salvacion-no-se-pierde",
@@ -368,7 +436,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 33,
+      "citations": 98,
+      "sections": 11,
+      "number": "18"
     },
     {
       "slug": "01-fundamentos--19-embajador-de-jesucristo",
@@ -386,7 +458,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 11,
+      "sections": 6,
+      "number": "19"
     },
     {
       "slug": "01-fundamentos--20-discipulo",
@@ -402,7 +478,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 14,
+      "sections": 6,
+      "number": "20"
     },
     {
       "slug": "01-fundamentos--21-sello-del-espiritu-santo",
@@ -419,7 +499,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 12,
+      "sections": 6,
+      "number": "21"
     },
     {
       "slug": "01-fundamentos--22-arrepentimiento",
@@ -429,14 +513,18 @@
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "Salvación",
       "description": "Arrepentimiento no es simplemente sentirse mal por haber pecado. Es un cambio radical de mente que resulta en un cambio de dirección. Es volverse de la rebelión contra Dios a la fe en…",
-      "portada": "",
+      "portada": "/img/personajes/ApostolPedro/ApostolPedroPoseNormal.webp",
       "passage": "Hechos 3:19",
       "tags": [
         "fundamento",
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 16,
+      "sections": 6,
+      "number": "22"
     },
     {
       "slug": "01-fundamentos--23-redencion",
@@ -446,13 +534,17 @@
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "Salvación",
       "description": "Redención significa ser comprado de vuelta o ser liberado mediante el pago de un rescate. En el Antiguo Testamento, un pariente redentor (goel) pagaba para rescatar a un familiar esclavo o…",
-      "portada": "",
+      "portada": "/img/biblia/portada-ntv.webp",
       "passage": "Efesios 1:7",
       "tags": [
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 18,
+      "sections": 6,
+      "number": "23"
     },
     {
       "slug": "01-fundamentos--24-propiciacion",
@@ -468,7 +560,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 4,
+      "citations": 15,
+      "sections": 6,
+      "number": "24"
     },
     {
       "slug": "01-fundamentos--25-expiacion",
@@ -484,7 +580,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 4,
+      "citations": 18,
+      "sections": 7,
+      "number": "25"
     },
     {
       "slug": "01-fundamentos--26-regeneracion",
@@ -494,13 +594,17 @@
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "Salvación",
       "description": "Regeneración es el acto soberano de Dios por el cual imparte vida espiritual a una persona que estaba muerta espiritualmente. Es el \"nuevo nacimiento\" o \"nacer de nuevo\". No es una reforma…",
-      "portada": "",
+      "portada": "/img/banners/herobanner4-nicodemo.webp",
       "passage": "Juan 3:3",
       "tags": [
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 24,
+      "sections": 6,
+      "number": "26"
     },
     {
       "slug": "01-fundamentos--27-suficiencia-de-las-escrituras",
@@ -517,7 +621,11 @@
         "doctrina/bibliologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 16,
+      "sections": 6,
+      "number": "27"
     },
     {
       "slug": "01-fundamentos--28-preexistencia-de-cristo",
@@ -534,7 +642,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 7,
+      "citations": 22,
+      "sections": 6,
+      "number": "28"
     },
     {
       "slug": "01-fundamentos--29-encarnacion",
@@ -550,7 +662,11 @@
         "fundamento"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 8,
+      "citations": 41,
+      "sections": 9,
+      "number": "29"
     },
     {
       "slug": "01-fundamentos--30-virginidad-de-jesus",
@@ -567,7 +683,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 9,
+      "citations": 25,
+      "sections": 7,
+      "number": "30"
     },
     {
       "slug": "01-fundamentos--31-humanidad-de-cristo",
@@ -584,7 +704,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 9,
+      "citations": 70,
+      "sections": 7,
+      "number": "31"
     },
     {
       "slug": "01-fundamentos--32-kenosis",
@@ -601,7 +725,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 8,
+      "citations": 24,
+      "sections": 8,
+      "number": "32"
     },
     {
       "slug": "01-fundamentos--33-resurreccion-de-cristo",
@@ -618,7 +746,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 11,
+      "citations": 59,
+      "sections": 8,
+      "number": "33"
     },
     {
       "slug": "01-fundamentos--34-ascension-y-exaltacion",
@@ -635,7 +767,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 8,
+      "citations": 34,
+      "sections": 7,
+      "number": "34"
     },
     {
       "slug": "01-fundamentos--35-cristo-mediador-y-sumo-sacerdote",
@@ -652,7 +788,11 @@
         "doctrina/cristologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 9,
+      "citations": 28,
+      "sections": 7,
+      "number": "35"
     },
     {
       "slug": "01-fundamentos--36-la-trinidad",
@@ -669,7 +809,11 @@
         "doctrina/trinidad"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 7,
+      "citations": 30,
+      "sections": 6,
+      "number": "36"
     },
     {
       "slug": "01-fundamentos--37-el-padre",
@@ -686,7 +830,11 @@
         "doctrina/trinidad"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 5,
+      "citations": 25,
+      "sections": 6,
+      "number": "37"
     },
     {
       "slug": "01-fundamentos--38-el-hijo",
@@ -703,7 +851,11 @@
         "doctrina/trinidad"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 21,
+      "sections": 6,
+      "number": "38"
     },
     {
       "slug": "01-fundamentos--39-el-espiritu-santo-trinidad",
@@ -720,7 +872,11 @@
         "doctrina/trinidad"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 25,
+      "sections": 6,
+      "number": "39"
     },
     {
       "slug": "01-fundamentos--40-atributos-de-dios",
@@ -737,7 +893,11 @@
         "doctrina/trinidad"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 34,
+      "sections": 6,
+      "number": "40"
     },
     {
       "slug": "01-fundamentos--41-la-persona-del-espiritu-santo",
@@ -754,7 +914,11 @@
         "doctrina/neumatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 23,
+      "sections": 6,
+      "number": "41"
     },
     {
       "slug": "01-fundamentos--42-espiritu-en-at-y-nt",
@@ -771,7 +935,11 @@
         "doctrina/neumatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 32,
+      "sections": 6,
+      "number": "42"
     },
     {
       "slug": "01-fundamentos--43-dones-del-espiritu-santo",
@@ -788,7 +956,11 @@
         "doctrina/neumatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 23,
+      "sections": 6,
+      "number": "43"
     },
     {
       "slug": "01-fundamentos--44-fruto-del-espiritu-santo",
@@ -805,7 +977,11 @@
         "doctrina/neumatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 26,
+      "sections": 6,
+      "number": "44"
     },
     {
       "slug": "01-fundamentos--45-llenura-del-espiritu-santo",
@@ -822,7 +998,11 @@
         "doctrina/neumatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 26,
+      "sections": 6,
+      "number": "45"
     },
     {
       "slug": "01-fundamentos--46-imagen-de-dios",
@@ -839,7 +1019,11 @@
         "doctrina/antropologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 5,
+      "citations": 20,
+      "sections": 6,
+      "number": "46"
     },
     {
       "slug": "01-fundamentos--47-la-caida-y-el-pecado-original",
@@ -856,7 +1040,11 @@
         "doctrina/antropologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 32,
+      "sections": 6,
+      "number": "47"
     },
     {
       "slug": "01-fundamentos--48-alma-espiritu-y-cuerpo",
@@ -873,7 +1061,11 @@
         "doctrina/antropologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 28,
+      "sections": 6,
+      "number": "48"
     },
     {
       "slug": "01-fundamentos--49-la-conciencia",
@@ -890,7 +1082,11 @@
         "doctrina/antropologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 5,
+      "citations": 21,
+      "sections": 6,
+      "number": "49"
     },
     {
       "slug": "01-fundamentos--50-libre-albedrio",
@@ -907,7 +1103,11 @@
         "doctrina/antropologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 32,
+      "sections": 6,
+      "number": "50"
     },
     {
       "slug": "01-fundamentos--51-naturaleza-de-la-iglesia",
@@ -924,7 +1124,11 @@
         "eclesiologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 3,
+      "citations": 27,
+      "sections": 6,
+      "number": "51"
     },
     {
       "slug": "01-fundamentos--52-bautismo",
@@ -941,7 +1145,11 @@
         "eclesiologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 3,
+      "citations": 19,
+      "sections": 6,
+      "number": "52"
     },
     {
       "slug": "01-fundamentos--53-cena-del-senor",
@@ -958,7 +1166,11 @@
         "eclesiologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 21,
+      "sections": 6,
+      "number": "53"
     },
     {
       "slug": "01-fundamentos--54-gobierno-de-la-iglesia",
@@ -975,7 +1187,11 @@
         "eclesiologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 3,
+      "citations": 27,
+      "sections": 6,
+      "number": "54"
     },
     {
       "slug": "01-fundamentos--55-disciplina-eclesiastica",
@@ -992,7 +1208,11 @@
         "eclesiologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 17,
+      "sections": 6,
+      "number": "55"
     },
     {
       "slug": "01-fundamentos--56-adoracion",
@@ -1009,7 +1229,11 @@
         "eclesiologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 3,
+      "citations": 26,
+      "sections": 6,
+      "number": "56"
     },
     {
       "slug": "01-fundamentos--57-unidad-de-la-iglesia",
@@ -1026,7 +1250,11 @@
         "eclesiologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 24,
+      "sections": 6,
+      "number": "57"
     },
     {
       "slug": "01-fundamentos--58-segunda-venida-de-cristo",
@@ -1043,7 +1271,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 26,
+      "sections": 6,
+      "number": "58"
     },
     {
       "slug": "01-fundamentos--59-resurreccion-de-los-muertos",
@@ -1060,7 +1292,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 27,
+      "sections": 6,
+      "number": "59"
     },
     {
       "slug": "01-fundamentos--60-el-cielo",
@@ -1077,7 +1313,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 32,
+      "sections": 6,
+      "number": "60"
     },
     {
       "slug": "01-fundamentos--61-el-infierno-juicio-eterno",
@@ -1094,7 +1334,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 29,
+      "sections": 6,
+      "number": "61"
     },
     {
       "slug": "01-fundamentos--62-nuevos-cielos-y-nueva-tierra",
@@ -1111,7 +1355,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 24,
+      "sections": 6,
+      "number": "62"
     },
     {
       "slug": "01-fundamentos--63-el-estado-intermedio",
@@ -1128,7 +1376,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 22,
+      "sections": 6,
+      "number": "63"
     },
     {
       "slug": "01-fundamentos--64-senales-de-los-tiempos",
@@ -1145,7 +1397,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 21,
+      "sections": 6,
+      "number": "64"
     },
     {
       "slug": "01-fundamentos--65-eventos-futuros-orden-escatologico",
@@ -1162,7 +1418,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 33,
+      "sections": 6,
+      "number": "65"
     },
     {
       "slug": "01-fundamentos--66-la-oracion",
@@ -1179,7 +1439,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 3,
+      "citations": 25,
+      "sections": 6,
+      "number": "66"
     },
     {
       "slug": "01-fundamentos--67-la-fe",
@@ -1196,7 +1460,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 28,
+      "sections": 6,
+      "number": "67"
     },
     {
       "slug": "01-fundamentos--68-el-amor-de-dios",
@@ -1213,7 +1481,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 28,
+      "sections": 6,
+      "number": "68"
     },
     {
       "slug": "01-fundamentos--69-sufrimiento-proposito-del-dolor",
@@ -1230,7 +1502,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 3,
+      "citations": 26,
+      "sections": 6,
+      "number": "69"
     },
     {
       "slug": "01-fundamentos--70-guerra-espiritual",
@@ -1247,7 +1523,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 25,
+      "sections": 6,
+      "number": "70"
     },
     {
       "slug": "01-fundamentos--71-mayordomia-cristiana",
@@ -1264,7 +1544,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 28,
+      "sections": 6,
+      "number": "71"
     },
     {
       "slug": "01-fundamentos--72-ley-vs-gracia",
@@ -1281,7 +1565,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 28,
+      "sections": 6,
+      "number": "72"
     },
     {
       "slug": "01-fundamentos--73-antiguo-pacto-vs-nuevo-pacto",
@@ -1298,7 +1586,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 28,
+      "sections": 6,
+      "number": "73"
     },
     {
       "slug": "01-fundamentos--74-comunion-de-los-santos",
@@ -1315,7 +1607,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 24,
+      "sections": 6,
+      "number": "74"
     },
     {
       "slug": "01-fundamentos--75-matrimonio-y-familia",
@@ -1332,7 +1628,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 31,
+      "sections": 6,
+      "number": "75"
     },
     {
       "slug": "01-fundamentos--76-el-ayuno",
@@ -1349,7 +1649,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 25,
+      "sections": 6,
+      "number": "76"
     },
     {
       "slug": "01-fundamentos--77-angeles",
@@ -1366,7 +1670,11 @@
         "angelologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 35,
+      "sections": 6,
+      "number": "77"
     },
     {
       "slug": "01-fundamentos--78-satanas-y-demonios",
@@ -1383,7 +1691,11 @@
         "angelologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 43,
+      "sections": 6,
+      "number": "78"
     },
     {
       "slug": "01-fundamentos--79-caida-de-satanas",
@@ -1400,7 +1712,11 @@
         "angelologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 25,
+      "sections": 6,
+      "number": "79"
     },
     {
       "slug": "01-fundamentos--80-la-creacion",
@@ -1417,7 +1733,11 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 30,
+      "sections": 6,
+      "number": "80"
     },
     {
       "slug": "01-fundamentos--81-la-providencia-de-dios",
@@ -1434,7 +1754,11 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 32,
+      "sections": 6,
+      "number": "81"
     },
     {
       "slug": "01-fundamentos--82-la-eleccion-y-predestinacion",
@@ -1451,7 +1775,11 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 5,
+      "citations": 27,
+      "sections": 6,
+      "number": "82"
     },
     {
       "slug": "01-fundamentos--83-llamado-eficaz-vs-llamado-general",
@@ -1468,7 +1796,11 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 29,
+      "sections": 6,
+      "number": "83"
     },
     {
       "slug": "01-fundamentos--84-el-sabado",
@@ -1485,7 +1817,11 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 4,
+      "citations": 27,
+      "sections": 6,
+      "number": "84"
     },
     {
       "slug": "01-fundamentos--85-evangelismo-y-misiones",
@@ -1502,7 +1838,11 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 35,
+      "sections": 6,
+      "number": "85"
     },
     {
       "slug": "01-fundamentos--86-apologetica",
@@ -1519,7 +1859,11 @@
         "otros"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 4,
+      "citations": 38,
+      "sections": 6,
+      "number": "86"
     },
     {
       "slug": "01-fundamentos--87-el-pecado-imperdonable",
@@ -1536,7 +1880,11 @@
         "neumatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 5,
+      "citations": 20,
+      "sections": 6,
+      "number": "87"
     },
     {
       "slug": "01-fundamentos--88-el-espiritu-en-la-vida-del-creyente",
@@ -1553,7 +1901,11 @@
         "neumatologia"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 6,
+      "citations": 34,
+      "sections": 6,
+      "number": "88"
     },
     {
       "slug": "01-fundamentos--89-evangelizar-en-el-dia-a-dia",
@@ -1571,7 +1923,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-08-23"
+      "updated": "2026-08-23",
+      "minutes": 10,
+      "citations": 38,
+      "sections": 6,
+      "number": "89"
     },
     {
       "slug": "01-fundamentos--fundamentos-teologia-ntv",
@@ -1588,7 +1944,11 @@
         "doctrina/general"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 13,
+      "citations": 66,
+      "sections": 21,
+      "number": ""
     },
     {
       "slug": "01-fundamentos--legalismofranciscoisrael",
@@ -1605,7 +1965,11 @@
         "doctrina/soteriologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 9,
+      "citations": 34,
+      "sections": 3,
+      "number": ""
     },
     {
       "slug": "01-fundamentos--pablo-no-contradice-la-escritura",
@@ -1622,7 +1986,11 @@
         "hermeneutica"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 54,
+      "citations": 205,
+      "sections": 16,
+      "number": ""
     },
     {
       "slug": "02-libros-biblicos--carta-de-judas",
@@ -1644,7 +2012,11 @@
         "Epístola de Judas",
         "Judas 1"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 11,
+      "citations": 7,
+      "sections": 15,
+      "number": ""
     },
     {
       "slug": "03-personajes--apostoles--01-pedro",
@@ -1664,7 +2036,11 @@
         "Simón Pedro",
         "Apóstol Pedro"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 11,
+      "citations": 65,
+      "sections": 8,
+      "number": "01"
     },
     {
       "slug": "03-personajes--apostoles--02-pablo",
@@ -1684,7 +2060,11 @@
         "Saulo",
         "Apóstol Pablo"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 12,
+      "citations": 66,
+      "sections": 8,
+      "number": "02"
     },
     {
       "slug": "03-personajes--apostoles--03-santiago-el-mayor",
@@ -1704,7 +2084,11 @@
         "Santiago el Mayor",
         "Santiago hijo de Zebedeo"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 7,
+      "citations": 52,
+      "sections": 8,
+      "number": "03"
     },
     {
       "slug": "03-personajes--apostoles--04-juan-el-apostol",
@@ -1726,7 +2110,11 @@
         "Juan hijo de Zebedeo",
         "El discípulo a quien Jesús amaba"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 11,
+      "citations": 68,
+      "sections": 8,
+      "number": "04"
     },
     {
       "slug": "03-personajes--apostoles--05-andres",
@@ -1746,7 +2134,11 @@
         "Andrés",
         "Andrés hermano de Pedro"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 5,
+      "citations": 29,
+      "sections": 8,
+      "number": "05"
     },
     {
       "slug": "03-personajes--apostoles--06-felipe",
@@ -1766,7 +2158,11 @@
         "Felipe",
         "Felipe de Betsaida"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 6,
+      "citations": 43,
+      "sections": 8,
+      "number": "06"
     },
     {
       "slug": "03-personajes--apostoles--07-bartolome",
@@ -1787,7 +2183,11 @@
         "Natanael",
         "Bartolomé (Natanael)"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 6,
+      "citations": 42,
+      "sections": 8,
+      "number": "07"
     },
     {
       "slug": "03-personajes--apostoles--08-mateo",
@@ -1808,7 +2208,11 @@
         "Mateo el cobrador de impuestos",
         "Leví"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 8,
+      "citations": 49,
+      "sections": 8,
+      "number": "08"
     },
     {
       "slug": "03-personajes--apostoles--09-tomas",
@@ -1829,7 +2233,11 @@
         "Tomás el Gemelo",
         "Dídimo"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 7,
+      "citations": 51,
+      "sections": 8,
+      "number": "09"
     },
     {
       "slug": "03-personajes--apostoles--10-santiago-el-menor",
@@ -1849,7 +2257,11 @@
         "Santiago el Menor",
         "Santiago hijo de Alfeo"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 7,
+      "citations": 54,
+      "sections": 8,
+      "number": "10"
     },
     {
       "slug": "03-personajes--apostoles--11-simon-zelote",
@@ -1869,7 +2281,11 @@
         "Simón el Zelote",
         "Simón el Cananeo"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 5,
+      "citations": 37,
+      "sections": 8,
+      "number": "11"
     },
     {
       "slug": "03-personajes--apostoles--12-judas-tadeo",
@@ -1891,7 +2307,11 @@
         "Judas hijo de Santiago",
         "Lebeo"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 8,
+      "citations": 64,
+      "sections": 8,
+      "number": "12"
     },
     {
       "slug": "03-personajes--apostoles--13-matias",
@@ -1911,7 +2331,11 @@
         "Matías",
         "El apóstol elegido por sorteo"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 10,
+      "citations": 40,
+      "sections": 8,
+      "number": "13"
     },
     {
       "slug": "03-personajes--apostoles--14-judas-iscariote",
@@ -1931,7 +2355,11 @@
         "Judas Iscariote",
         "El traidor"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 14,
+      "citations": 80,
+      "sections": 8,
+      "number": "14"
     },
     {
       "slug": "03-personajes--juan-el-bautista",
@@ -1955,7 +2383,11 @@
         "Juan",
         "Precursor"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 10,
+      "citations": 45,
+      "sections": 14,
+      "number": ""
     },
     {
       "slug": "04-doctrinas--la-muerte-que-produce-el-pecado",
@@ -1973,7 +2405,11 @@
         "estudio"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 19,
+      "citations": 79,
+      "sections": 11,
+      "number": ""
     },
     {
       "slug": "04-doctrinas--soteriologia",
@@ -1990,7 +2426,11 @@
         "estudio"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 16,
+      "citations": 115,
+      "sections": 8,
+      "number": ""
     },
     {
       "slug": "05-estudios--galardones-reino-y-mision",
@@ -2007,7 +2447,11 @@
         "escatologia"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 7,
+      "citations": 31,
+      "sections": 7,
+      "number": ""
     },
     {
       "slug": "05-estudios--legalismo-mandamientos-modernos",
@@ -2027,7 +2471,11 @@
         "adiaphora"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 12,
+      "citations": 59,
+      "sections": 12,
+      "number": ""
     },
     {
       "slug": "05-estudios--soledad-y-solteria",
@@ -2044,7 +2492,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 5,
+      "citations": 7,
+      "sections": 2,
+      "number": ""
     },
     {
       "slug": "05-estudios--vencer-lujuria",
@@ -2061,7 +2513,11 @@
         "santificacion"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 13,
+      "citations": 42,
+      "sections": 10,
+      "number": ""
     },
     {
       "slug": "06-apologetica--comparativa-ley-calvinismo-luteranismo",
@@ -2082,7 +2538,11 @@
         "sabado"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 12,
+      "citations": 31,
+      "sections": 8,
+      "number": ""
     },
     {
       "slug": "06-apologetica--judaizantes",
@@ -2103,7 +2563,11 @@
         "circuncision"
       ],
       "aliases": [],
-      "updated": "2026-08-30"
+      "updated": "2026-08-30",
+      "minutes": 111,
+      "citations": 634,
+      "sections": 16,
+      "number": ""
     },
     {
       "slug": "06-apologetica--origenes-usa--01-testigos-de-jehova",
@@ -2126,7 +2590,11 @@
         "Atalaya",
         "Charles Taze Russell"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 6,
+      "citations": 27,
+      "sections": 9,
+      "number": "01"
     },
     {
       "slug": "06-apologetica--origenes-usa--02-mormones",
@@ -2149,7 +2617,11 @@
         "SUD",
         "Joseph Smith"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 9,
+      "citations": 26,
+      "sections": 9,
+      "number": "02"
     },
     {
       "slug": "06-apologetica--origenes-usa--03-adventismo",
@@ -2172,7 +2644,11 @@
         "ASD",
         "William Miller"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 15,
+      "citations": 18,
+      "sections": 10,
+      "number": "03"
     },
     {
       "slug": "06-apologetica--origenes-usa--04-unicitarios",
@@ -2195,7 +2671,11 @@
         "UPCI",
         "Sabelianismo"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 8,
+      "citations": 22,
+      "sections": 9,
+      "number": "04"
     },
     {
       "slug": "06-apologetica--origenes-usa--05-raices-hebreas",
@@ -2218,7 +2698,11 @@
         "Movimiento del Nombre Sagrado",
         "Mesianismo"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 13,
+      "citations": 41,
+      "sections": 9,
+      "number": "05"
     },
     {
       "slug": "06-apologetica--origenes-usa--06-teologia-prosperidad",
@@ -2241,7 +2725,11 @@
         "Word of Faith",
         "Prosperidad"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 9,
+      "citations": 38,
+      "sections": 9,
+      "number": "06"
     },
     {
       "slug": "06-apologetica--origenes-usa--07-evangelicalismo-usa",
@@ -2264,7 +2752,11 @@
         "Fundamentalismo",
         "Nacionalismo cristiano"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 7,
+      "citations": 8,
+      "sections": 9,
+      "number": "07"
     },
     {
       "slug": "06-apologetica--origenes-usa--08-sintesis",
@@ -2284,7 +2776,11 @@
         "Síntesis de orígenes estadounidenses",
         "7 patrones de sectas"
       ],
-      "updated": "2026-09-13"
+      "updated": "2026-09-13",
+      "minutes": 4,
+      "citations": 1,
+      "sections": 8,
+      "number": "08"
     },
     {
       "slug": "06-apologetica--secta-moon",
@@ -2306,7 +2802,11 @@
         "Sun Myung Moon",
         "Federación de Familias por la Paz"
       ],
-      "updated": "2026-07-25"
+      "updated": "2026-07-25",
+      "minutes": 1,
+      "citations": 0,
+      "sections": 3,
+      "number": ""
     },
     {
       "slug": "06-apologetica--shincheonji",
@@ -2329,7 +2829,11 @@
         "Lee Man-hee",
         "Nuevo Cielo y Nueva Tierra"
       ],
-      "updated": "2026-07-26"
+      "updated": "2026-07-26",
+      "minutes": 1,
+      "citations": 1,
+      "sections": 4,
+      "number": ""
     },
     {
       "slug": "06-apologetica--shincheonji--analisis-doctrina",
@@ -2350,7 +2854,11 @@
         "Análisis Doctrinal Shincheonji",
         "Chat WhatsApp Shincheonji"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 3,
+      "citations": 8,
+      "sections": 9,
+      "number": ""
     },
     {
       "slug": "06-apologetica--shincheonji--la-parabola-del-fuego",
@@ -2371,7 +2879,11 @@
         "Parábola del Fuego",
         "Fuego como palabra de juicio"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 2,
+      "citations": 10,
+      "sections": 6,
+      "number": ""
     },
     {
       "slug": "06-apologetica--shincheonji--los-cuatro-campos",
@@ -2392,7 +2904,11 @@
         "Cuatro Campos del Corazón",
         "Parábola del Sembrador"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 2,
+      "citations": 4,
+      "sections": 6,
+      "number": ""
     },
     {
       "slug": "06-apologetica--shincheonji--refutacion-doctrinal",
@@ -2413,7 +2929,11 @@
         "Refutación doctrinal Shincheonji",
         "Contraste bíblico Shincheonji"
       ],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 5,
+      "citations": 26,
+      "sections": 5,
+      "number": ""
     },
     {
       "slug": "06-apologetica--trinidad-rescate-correspondiente",
@@ -2434,7 +2954,11 @@
         "codices"
       ],
       "aliases": [],
-      "updated": "2026-09-20"
+      "updated": "2026-09-20",
+      "minutes": 22,
+      "citations": 56,
+      "sections": 13,
+      "number": ""
     },
     {
       "slug": "07-herramientas--guia-analisis-historico",
@@ -2454,7 +2978,11 @@
         "documentacion"
       ],
       "aliases": [],
-      "updated": ""
+      "updated": "",
+      "minutes": 3,
+      "citations": 0,
+      "sections": 4,
+      "number": ""
     },
     {
       "slug": "07-herramientas--notebook-navigator",
@@ -2472,7 +3000,11 @@
         "notebook-navigator"
       ],
       "aliases": [],
-      "updated": "2026-09-26"
+      "updated": "2026-09-26",
+      "minutes": 4,
+      "citations": 0,
+      "sections": 11,
+      "number": ""
     },
     {
       "slug": "07-herramientas--slides-hermeneutica",
@@ -2489,7 +3021,11 @@
         "estudio/hermeneutica"
       ],
       "aliases": [],
-      "updated": "2026-08-22"
+      "updated": "2026-08-22",
+      "minutes": 1,
+      "citations": 2,
+      "sections": 9,
+      "number": ""
     },
     {
       "slug": "07-herramientas--taxonomia-tags",
@@ -2506,7 +3042,11 @@
         "meta/taxonomia"
       ],
       "aliases": [],
-      "updated": "2026-08-22"
+      "updated": "2026-08-22",
+      "minutes": 2,
+      "citations": 0,
+      "sections": 3,
+      "number": ""
     },
     {
       "slug": "08-recursos--index-pdf",
@@ -2523,7 +3063,11 @@
         "indice"
       ],
       "aliases": [],
-      "updated": "2026-08-22"
+      "updated": "2026-08-22",
+      "minutes": 1,
+      "citations": 0,
+      "sections": 4,
+      "number": ""
     },
     {
       "slug": "09-parabolas--01-reino--01-el-sembrador",
@@ -2540,7 +3084,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 17,
+      "sections": 10,
+      "number": "01"
     },
     {
       "slug": "09-parabolas--01-reino--02-la-semilla-que-crece",
@@ -2557,7 +3105,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 10,
+      "sections": 10,
+      "number": "02"
     },
     {
       "slug": "09-parabolas--01-reino--03-la-semilla-de-mostaza",
@@ -2574,7 +3126,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 11,
+      "sections": 10,
+      "number": "03"
     },
     {
       "slug": "09-parabolas--01-reino--04-la-levadura",
@@ -2591,7 +3147,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 12,
+      "sections": 10,
+      "number": "04"
     },
     {
       "slug": "09-parabolas--01-reino--05-el-tesoro-escondido",
@@ -2608,7 +3168,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 12,
+      "sections": 10,
+      "number": "05"
     },
     {
       "slug": "09-parabolas--01-reino--06-la-perla-de-gran-precio",
@@ -2625,7 +3189,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 9,
+      "sections": 10,
+      "number": "06"
     },
     {
       "slug": "09-parabolas--01-reino--07-la-cizana",
@@ -2642,7 +3210,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 25,
+      "sections": 10,
+      "number": "07"
     },
     {
       "slug": "09-parabolas--01-reino--08-la-red-en-el-mar",
@@ -2659,7 +3231,11 @@
         "reino"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 15,
+      "sections": 10,
+      "number": "08"
     },
     {
       "slug": "09-parabolas--02-gracia--09-la-oveja-perdida",
@@ -2676,7 +3252,11 @@
         "gracia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 4,
+      "sections": 10,
+      "number": "09"
     },
     {
       "slug": "09-parabolas--02-gracia--10-la-dracma-perdida",
@@ -2693,7 +3273,11 @@
         "gracia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 3,
+      "sections": 10,
+      "number": "10"
     },
     {
       "slug": "09-parabolas--02-gracia--11-el-hijo-prodigo",
@@ -2710,7 +3294,11 @@
         "gracia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 5,
+      "sections": 10,
+      "number": "11"
     },
     {
       "slug": "09-parabolas--02-gracia--12-el-siervo-impacordial",
@@ -2727,7 +3315,11 @@
         "gracia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 6,
+      "sections": 10,
+      "number": "12"
     },
     {
       "slug": "09-parabolas--02-gracia--13-los-dos-deudores",
@@ -2744,7 +3336,11 @@
         "gracia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 3,
+      "sections": 10,
+      "number": "13"
     },
     {
       "slug": "09-parabolas--02-gracia--14-el-buen-samaritano",
@@ -2761,7 +3357,11 @@
         "gracia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 2,
+      "sections": 10,
+      "number": "14"
     },
     {
       "slug": "09-parabolas--02-gracia--15-el-fariseo-y-el-recaudador",
@@ -2778,7 +3378,11 @@
         "gracia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 5,
+      "sections": 10,
+      "number": "15"
     },
     {
       "slug": "09-parabolas--03-juicio--16-el-hombre-rico-y-lazaro",
@@ -2795,7 +3399,11 @@
         "juicio"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 6,
+      "sections": 10,
+      "number": "16"
     },
     {
       "slug": "09-parabolas--03-juicio--17-el-necio-rico",
@@ -2812,7 +3420,11 @@
         "juicio"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 6,
+      "sections": 10,
+      "number": "17"
     },
     {
       "slug": "09-parabolas--03-juicio--18-la-higuera-esteril",
@@ -2829,7 +3441,11 @@
         "juicio"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 9,
+      "sections": 10,
+      "number": "18"
     },
     {
       "slug": "09-parabolas--03-juicio--19-las-ovejas-y-los-cabritos",
@@ -2846,7 +3462,11 @@
         "juicio"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 8,
+      "sections": 10,
+      "number": "19"
     },
     {
       "slug": "09-parabolas--03-juicio--20-las-diez-virgenes",
@@ -2863,7 +3483,11 @@
         "juicio"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 17,
+      "sections": 10,
+      "number": "20"
     },
     {
       "slug": "09-parabolas--03-juicio--21-los-villanos-acaparadores",
@@ -2880,7 +3504,11 @@
         "juicio"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 11,
+      "sections": 10,
+      "number": "21"
     },
     {
       "slug": "09-parabolas--03-juicio--22-la-higuera-hojareciente",
@@ -2897,7 +3525,11 @@
         "juicio"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 7,
+      "sections": 10,
+      "number": "22"
     },
     {
       "slug": "09-parabolas--04-oracion--23-el-amigo-de-medianoche",
@@ -2916,7 +3548,11 @@
         "luke"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 2,
+      "sections": 10,
+      "number": "23"
     },
     {
       "slug": "09-parabolas--04-oracion--24-el-juez-inicuo",
@@ -2936,7 +3572,11 @@
         "luke"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 2,
+      "sections": 10,
+      "number": "24"
     },
     {
       "slug": "09-parabolas--04-oracion--25-el-fariseo-y-el-recaudador-oracion",
@@ -2957,7 +3597,11 @@
         "luke"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 2,
+      "sections": 10,
+      "number": "25"
     },
     {
       "slug": "09-parabolas--05-mayordomia--26-el-administrador-mañoso",
@@ -2974,7 +3618,11 @@
         "mayordomia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 8,
+      "sections": 10,
+      "number": "26"
     },
     {
       "slug": "09-parabolas--05-mayordomia--27-los-talentos",
@@ -2991,7 +3639,11 @@
         "mayordomia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 4,
+      "sections": 10,
+      "number": "27"
     },
     {
       "slug": "09-parabolas--05-mayordomia--28-las-monas",
@@ -3008,7 +3660,11 @@
         "mayordomia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 3,
+      "sections": 10,
+      "number": "28"
     },
     {
       "slug": "09-parabolas--05-mayordomia--29-los-obreros-de-la-viña",
@@ -3025,7 +3681,11 @@
         "mayordomia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 6,
+      "sections": 10,
+      "number": "29"
     },
     {
       "slug": "09-parabolas--05-mayordomia--30-el-hombre-rico-necio-mayordomia",
@@ -3042,7 +3702,11 @@
         "mayordomia"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 8,
+      "sections": 10,
+      "number": "30"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--31-los-dos-edificadores",
@@ -3059,7 +3723,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 5,
+      "sections": 10,
+      "number": "31"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--32-el-siervo-fiel",
@@ -3076,7 +3744,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 7,
+      "sections": 10,
+      "number": "32"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--33-la-lampara-debajo-del-modidor",
@@ -3093,7 +3765,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 5,
+      "sections": 10,
+      "number": "33"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--34-vino-nuevo-en-odres-nuevos",
@@ -3110,7 +3786,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 6,
+      "sections": 10,
+      "number": "34"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--35-el-siervo-inutil",
@@ -3127,7 +3807,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 5,
+      "sections": 10,
+      "number": "35"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--36-contar-el-costo",
@@ -3144,7 +3828,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 7,
+      "sections": 10,
+      "number": "36"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--37-el-escriba-instruido",
@@ -3161,7 +3849,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 3,
+      "sections": 10,
+      "number": "37"
     },
     {
       "slug": "09-parabolas--06-vida-cristiana--38-los-dos-hijos",
@@ -3178,7 +3870,11 @@
         "vida-cristiana"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 3,
+      "citations": 7,
+      "sections": 10,
+      "number": "38"
     },
     {
       "slug": "09-parabolas--07-alegorias-juan--39-el-buen-pastor",
@@ -3196,7 +3892,11 @@
         "pastor"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 13,
+      "sections": 10,
+      "number": "39"
     },
     {
       "slug": "09-parabolas--07-alegorias-juan--40-la-vid-y-los-sarmientos",
@@ -3215,7 +3915,11 @@
         "fruto"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 6,
+      "citations": 17,
+      "sections": 10,
+      "number": "40"
     },
     {
       "slug": "10-apocalipsis--01-introduccion",
@@ -3234,7 +3938,11 @@
         "patmos"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 22,
+      "sections": 9,
+      "number": "01"
     },
     {
       "slug": "10-apocalipsis--02-interpretacion",
@@ -3252,7 +3960,11 @@
         "hermeneutica"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 21,
+      "sections": 9,
+      "number": "02"
     },
     {
       "slug": "10-apocalipsis--03-las-7-iglesias",
@@ -3273,7 +3985,11 @@
         "tiatira"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 7,
+      "citations": 30,
+      "sections": 9,
+      "number": "03"
     },
     {
       "slug": "10-apocalipsis--04-el-cielo-y-el-trono",
@@ -3293,7 +4009,11 @@
         "rollos"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 8,
+      "citations": 25,
+      "sections": 9,
+      "number": "04"
     },
     {
       "slug": "10-apocalipsis--05-sellos-trompetas-copas",
@@ -3314,7 +4034,11 @@
         "ciclos"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 8,
+      "citations": 22,
+      "sections": 9,
+      "number": "05"
     },
     {
       "slug": "10-apocalipsis--06-las-bestias",
@@ -3335,7 +4059,11 @@
         "persecucion"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 10,
+      "citations": 29,
+      "sections": 9,
+      "number": "06"
     },
     {
       "slug": "10-apocalipsis--07-la-marca-y-el-666",
@@ -3354,7 +4082,11 @@
         "identificacion"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 6,
+      "sections": 9,
+      "number": "07"
     },
     {
       "slug": "10-apocalipsis--08-babilonia-la-grande",
@@ -3373,7 +4105,11 @@
         "idolatria"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 4,
+      "citations": 4,
+      "sections": 9,
+      "number": "08"
     },
     {
       "slug": "10-apocalipsis--09-el-milenio",
@@ -3392,7 +4128,11 @@
         "reinado-de-cristo"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 5,
+      "citations": 18,
+      "sections": 9,
+      "number": "09"
     },
     {
       "slug": "10-apocalipsis--10-el-juicio-final",
@@ -3412,7 +4152,11 @@
         "juicio-de-obras"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 8,
+      "citations": 20,
+      "sections": 9,
+      "number": "10"
     },
     {
       "slug": "10-apocalipsis--11-nuevos-cielos-nueva-tierra",
@@ -3433,7 +4177,11 @@
         "consumacion"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 8,
+      "citations": 21,
+      "sections": 9,
+      "number": "11"
     },
     {
       "slug": "10-apocalipsis--12-errores-comunes",
@@ -3454,7 +4202,11 @@
         "refutacion"
       ],
       "aliases": [],
-      "updated": "2026-09-05"
+      "updated": "2026-09-05",
+      "minutes": 12,
+      "citations": 32,
+      "sections": 9,
+      "number": "12"
     }
   ]
 }

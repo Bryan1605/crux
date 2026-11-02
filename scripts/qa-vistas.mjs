@@ -336,6 +336,57 @@ try {
   await temasMovil.screenshot({ path: `${OUT}/v-mobile-temas.png` });
   await temasMovil.close();
 
+  // ---------------------------------------------------------------- card común
+  for (const [w, h] of [[1280, 900], [900, 1000], [390, 844]]) {
+    for (const ruta of ['/estudio', '/estudio?cat=03-personajes']) {
+      const cp = await makePage('reduce', w, h);
+      await cp.goto(`${BASE}${ruta}`, { waitUntil: 'domcontentloaded' });
+      await wait(1800);
+      const r = await cp.evaluate(() => {
+        const cards = [...document.querySelectorAll('.estudio__grid .study-card')];
+        const fallos = [];
+        for (const card of cards) {
+          const link = card.querySelector('.study-card__link');
+          const stats = card.querySelector('.study-card__stats');
+          const cta = card.querySelector('.study-card__cta');
+          const name = card.querySelector('.study-card__title')?.textContent.trim();
+          if (!link || !stats || !cta) {
+            fallos.push(`${name}: falta pieza`);
+            continue;
+          }
+          const L = link.getBoundingClientRect();
+          const S = stats.getBoundingClientRect();
+          const C = cta.getBoundingClientRect();
+          const dds = [...stats.querySelectorAll('dd')];
+          const visible = el => getComputedStyle(el).display !== 'none' && el.getBoundingClientRect().height > 0;
+          if (!visible(stats) || !visible(cta)) fallos.push(`${name}: oculto`);
+          else if (S.right > L.right + 1 || C.right > L.right + 1 || C.bottom > L.bottom + 1) fallos.push(`${name}: se sale`);
+          else if (C.top < S.bottom - 1) fallos.push(`${name}: cifras y botón en la misma fila`);
+          else if (C.width < L.width - 60) fallos.push(`${name}: botón no ocupa el ancho`);
+          else if (dds.some(dd => dd.scrollWidth > dd.parentElement.clientWidth + 1)) fallos.push(`${name}: cifra cortada`);
+        }
+        return {
+          n: cards.length,
+          fallos,
+          personajes: document.querySelectorAll('.study-card__nav').length,
+          doc: document.documentElement.scrollWidth,
+          win: document.documentElement.clientWidth
+        };
+      });
+      check(
+        `card común ${w}px ${ruta}: cifras y botón visibles y sin desbordar`,
+        r.n > 0 && r.fallos.length === 0 && r.doc <= r.win + 1,
+        r.fallos.slice(0, 3).join(' | ') || `${r.n} cards`
+      );
+      if (ruta.includes('personajes') && w === 1280) {
+        check('personajes con escenas llevan flechas de imagen', r.personajes >= 2, `${r.personajes} flechas`);
+        await cp.screenshot({ path: `${OUT}/v-card-personajes.png` });
+      }
+      if (ruta === '/estudio') await cp.screenshot({ path: `${OUT}/v-card-${w}.png` });
+      await cp.close();
+    }
+  }
+
   // ---------------------------------------------------------------- móvil
   const mobile = await makePage('no-preference', 390, 844);
   await mobile.goto(`${BASE}/estudio`, { waitUntil: 'domcontentloaded' });

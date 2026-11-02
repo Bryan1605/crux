@@ -3,6 +3,7 @@ title: "Redención"
 category: "01-fundamentos"
 subcategory: "Salvación"
 description: "Redención significa ser comprado de vuelta o ser liberado mediante el pago de un rescate. En el Antiguo Testamento, un pariente redentor (goel) pagaba para rescatar a un familiar esclavo o…"
+portada: "/img/biblia/portada-ntv.webp"
 passage: "Efesios 1:7"
 tags: ["fundamento"]
 aliases: []

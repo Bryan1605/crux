@@ -708,73 +708,16 @@
 
 /* --- personajes ----------------------------------------------------------- */
 
+/* Las cards son la card común (StudyCard); aquí solo la rejilla. */
 .chars__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: var(--sp-5);
-}
-
-.char-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-2);
-}
-
-.char-card__img {
-  margin-bottom: var(--sp-2);
-  overflow: hidden;
-  border-radius: var(--r-md);
-  aspect-ratio: 3 / 4;
-  background: #000;
-}
-
-.char-card__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 15%;
-  transition: transform 0.5s ease;
-}
-
-.char-card:hover .char-card__img img {
-  transform: scale(1.04);
-}
-
-.char-card__meta {
-  font-size: 0.82rem;
-  color: var(--muted);
-}
-
-.char-card__name {
-  font-size: clamp(1.4rem, 2vw, 1.75rem);
-}
-
-.char-card .card__desc {
-  color: var(--soft);
-}
-
-@media (max-width: 620px) {
-  .chars__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--sp-4) var(--sp-3);
-  }
-
-  .char-card .card__desc {
-    display: none;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .banner__caption-text {
     animation: none;
-  }
-
-  .char-card__img img {
-    transition: none;
-  }
-
-  .char-card:hover .char-card__img img {
-    transform: none;
   }
 }
 

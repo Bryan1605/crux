@@ -3,6 +3,7 @@ title: "Justificación"
 category: "01-fundamentos"
 subcategory: "Salvación"
 description: "Justificación es el acto legal por el cual Dios declara justo al pecador que cree en Jesucristo. No es un proceso de \"volverse justo\" — es una declaración judicial inmediata. Dios no hace…"
+portada: "/img/banners/herobanner3-reforma.webp"
 passage: "Romanos 3:22-24"
 tags: ["fundamento"]
 aliases: []
