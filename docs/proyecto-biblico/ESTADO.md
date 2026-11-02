@@ -167,6 +167,22 @@ ficha fijan el formato antes de escalar.
 **Tobit** (ver `TRADUCCION.md` §8): glosario mínimo, traducción piloto, ficha,
 panel, índice de fichas y registro de fuentes, para revisión del usuario.
 
+Avance del piloto (2026-11-02):
+
+- [x] Pasos 1–2: glosario mínimo y **borrador de Tobit 1–3** (53 vv, misma
+      numeración que el Codex, 19 notas de traducción) desde el griego del
+      Codex. Fuente editable: `src/assets/texts/trad/tobit.json`
+      (`status: borrador`). Tabla de revisión:
+      `docs/proyecto-biblico/revision/tobit-01-03.md`. Las decisiones del
+      glosario quedan como **propuesta** en `GLOSARIO.md`.
+- [ ] **Revisión del usuario** de 1–3 y de las propuestas del glosario.
+- [ ] Paso 3: esquema/UI con esa muestra (`build-trad`, `qa:trad`, columna
+      «Trad» en `/exegesis`, enlace desde `/biblia/ntv?libro=tobit`).
+- [ ] Paso 4: capítulos 4–14 y revisión.
+- [ ] Paso 5: ficha, panel, índice de fichas y registro de fuentes; publicar.
+
+El borrador **no se publica** todavía: no está en `public/` ni lo usa la web.
+
 Hecho antes (2026-11-02): la línea base y el refactor de columnas de
 `/exegesis` (`COLUMNS` + `modesFor()`; añadir `trad` es una entrada más). Ese
 día, sobre el dev server local: `npm run build` OK (214 rutas),
