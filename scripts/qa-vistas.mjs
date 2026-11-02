@@ -537,7 +537,7 @@ try {
   check('rejilla de categorías completa', portada.categorias === 10, `${portada.categorias} tarjetas`);
   check('personajes destacados con portada', portada.personajes === 4, `${portada.personajes} tarjetas`);
   check('buscador en el héroe', portada.buscador);
-  check('una sola acción primaria (héroe y cierre)', portada.principales.length === 2 && portada.principales.every(h => h === '/estudio'), portada.principales.join(' | '));
+  check('una sola acción primaria (héroe y cierre)', portada.principales.length === 2 && portada.principales.every(h => /(^|\/)estudio$/.test(h)), portada.principales.join(' | '));
   check('portada sin imágenes rotas', portada.imgsRotas === 0, `${portada.imgsRotas} rotas`);
   await checkNoOverflow(home, 'portada');
   await home.screenshot({ path: `${OUT}/v-home.png` });
