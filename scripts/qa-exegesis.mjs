@@ -808,6 +808,26 @@ if (WITH_BROWSER) {
     genesis1.notice
   );
 
+  // El modo guardado se valida contra los testigos del capítulo, sin perderse.
+  await page.evaluate(() => localStorage.setItem('crux.exegesis.columnas', 'codex'));
+  await visit(`${BASE}/exegesis?libro=genesis&cap=1`, 'exegesis-modo-guardado');
+  await page.waitForSelector('.exg-grid', { timeout: 8000 });
+  const guardado = await page.evaluate(() => ({
+    ntv: document.querySelectorAll('.exg-row__cell--ntv').length,
+    stored: localStorage.getItem('crux.exegesis.columnas')
+  }));
+  check(
+    'El modo guardado «codex» cae a la NTV donde no hay Codex y se conserva',
+    guardado.ntv > 25 && guardado.stored === 'codex',
+    JSON.stringify(guardado)
+  );
+  await page.evaluate(() => localStorage.setItem('crux.exegesis.columnas', 'inventado'));
+  await visit(`${BASE}/exegesis?libro=mateo&cap=5`, 'exegesis-modo-invalido');
+  await page.waitForSelector('.exg-grid', { timeout: 8000 });
+  const invalido = await page.evaluate(() => document.querySelectorAll('.exg-grid__witness').length);
+  check('Un modo guardado desconocido vuelve al paralelo', invalido === 2, `${invalido} columnas`);
+  await page.evaluate(() => localStorage.setItem('crux.exegesis.columnas', 'paralelo'));
+
   await visit(`${BASE}/exegesis?libro=genesis&cap=21`, 'exegesis-genesis21');
   await page.waitForSelector('.exg-grid', { timeout: 8000 });
   const genesis21 = await page.evaluate(() => ({

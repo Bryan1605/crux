@@ -131,9 +131,9 @@ No los trates como si estuvieran hechos porque aparezcan en la planificación.
 
 Reordenado el **2026-10-31** (antes: hebreo primero; ver `DECISIONES.md` §6).
 
-0. **Línea base**: commit de la documentación y QA completo.
-1. **Refactor de columnas de `/exegesis`**: modos por testigo, modo guardado
-   validado contra los disponibles del libro.
+0. ~~**Línea base**~~ — hecho (`21e29d4`, 2026-10-31).
+1. ~~**Refactor de columnas de `/exegesis`**~~ — hecho el 2026-11-02
+   (`DECISIONES.md` §9).
 2. **Tobit**: glosario mínimo, traducción piloto, ficha, panel, índice de
    fichas, registro de fuentes, revisión del usuario.
 3. **Los otros cinco**: Judit, Sabiduría, 4 Macabeos, 1 Macabeos, Sirácida, y
@@ -164,12 +164,17 @@ ficha fijan el formato antes de escalar.
 
 ## 7. Próximo paso
 
-**Línea base y refactor de columnas de `/exegesis`**, y después Tobit.
+**Tobit** (ver `TRADUCCION.md` §8): glosario mínimo, traducción piloto, ficha,
+panel, índice de fichas y registro de fuentes, para revisión del usuario.
 
-1. Commitear `docs/`, `AGENTS.md` y `README.md`; QA completo registrado abajo.
-2. Reemplazar `MODES` (`Exegesis.jsx`) por columnas por testigo, sin cambiar
-   lo que ve hoy el usuario; `qa:exegesis` y `qa:a11y` deben seguir en verde.
-3. Tobit (ver `TRADUCCION.md` §8).
+Hecho antes (2026-11-02): la línea base y el refactor de columnas de
+`/exegesis` (`COLUMNS` + `modesFor()`; añadir `trad` es una entrada más). Ese
+día, sobre el dev server local: `npm run build` OK (214 rutas),
+`qa:exegesis` 109/109 (incluye las dos comprobaciones nuevas del modo
+guardado), `qa:a11y` 0 critical/serious, `qa:vistas` OK, y `qa:enlaces` en
+verde salvo los enlaces externos a `codexsinaiticus.org` (sin respuesta desde
+esta máquina, como en la línea base). El rediseño del sitio (`docs/rediseno/`,
+fases A–H) se publicó el mismo día; `qa:prod` 63/63.
 
 Hebreo (más adelante): ya verificado que OSHB publica el texto WLC en dominio
 público y lema/morfología en CC BY 4.0, con 39 XML por libro y `VerseMap.xml`

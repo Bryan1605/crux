@@ -66,7 +66,7 @@ El orden acordado es:
 
 (Reordenado el 2026-10-31; ver `DECISIONES.md` §6.)
 
-1. **Refactor de columnas de `/exegesis`** (modos por testigo, una sola vez).
+1. ~~**Refactor de columnas de `/exegesis`**~~ — hecho el 2026-11-02 (`DECISIONES.md` §9).
 2. **Tobit**: traducción piloto + ficha + panel + índice + registro de fuentes.
 3. Los otros cinco libros solo-Codex: Judit, Sabiduría, 4 Macabeos, 1 Macabeos,
    Sirácida, y la ficha de 2 Esdras.

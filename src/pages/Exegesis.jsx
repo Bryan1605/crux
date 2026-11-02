@@ -42,15 +42,32 @@ const THEMES = [
 ];
 
 /**
- * Columnas que se pueden ver. `short` es lo que se lee en el botón y tiene que
- * aparecer en `label`: el nombre accesible debe contener el texto visible
- * (axioma de `label-content-name-mismatch`).
+ * Testigos que pueden ocupar una columna, en el orden en que se pintan. El id
+ * es la clave del versículo en cada fila (`row.codex`, `row.ntv`) y el modo
+ * «solo este testigo». Una traducción nueva (`trad`) o el hebreo se añaden aquí
+ * y en `renderHead`/`renderCell`; el resto (modos, botones, rejilla) se deriva.
+ *
+ * `short` es lo que se lee en el botón y tiene que aparecer en `label`: el
+ * nombre accesible debe contener el texto visible (`label-content-name-mismatch`).
  */
-const MODES = [
-  { id: 'paralelo', label: 'Las dos columnas, versículo a versículo', short: null },
-  { id: 'codex', label: 'Solo el Codex Sinaiticus', short: 'Codex' },
-  { id: 'ntv', label: 'Solo la NTV · Nueva Traducción Viviente', short: 'NTV' }
+const COLUMNS = [
+  { id: 'codex', short: 'Codex', label: 'Solo el Codex Sinaiticus' },
+  { id: 'ntv', short: 'NTV', label: 'Solo la NTV · Nueva Traducción Viviente' }
 ];
+
+/** Modo con todas las columnas disponibles a la vez (si hay más de una). */
+const PARALLEL = { id: 'paralelo', short: null };
+
+/**
+ * Modos que ofrece un capítulo: el paralelo (si hay dos o más testigos) y uno
+ * por testigo. Cada modo dice qué columnas enseña.
+ */
+function modesFor(available) {
+  const solo = COLUMNS.filter(c => available.includes(c.id)).map(c => ({ ...c, columns: [c.id] }));
+  if (solo.length < 2) return solo;
+  const label = solo.length === 2 ? 'Las dos columnas, versículo a versículo' : 'Todas las columnas, versículo a versículo';
+  return [{ ...PARALLEL, label, columns: solo.map(c => c.id) }, ...solo];
+}
 
 /** Avisos de numeración distinta entre la Septuaginta y la NTV. */
 const NUMBERING_NOTICE = {
@@ -81,12 +98,17 @@ const write = (key, value) => {
   }
 };
 
-/** Migra el antiguo `dos`/`uno` a los modos actuales. */
+/**
+ * Modo guardado. Migra el antiguo `dos`/`uno`; lo que no sea un modo conocido
+ * vuelve a `paralelo`. Que el modo exista en el capítulo abierto se comprueba
+ * al pintar (`modesFor`), no aquí: así la preferencia sobrevive a un libro que
+ * solo tiene un testigo.
+ */
 const readMode = () => {
   const stored = read(KEYS.mode, 'paralelo');
   if (stored === 'dos') return 'paralelo';
   if (stored === 'uno') return 'codex';
-  return MODES.some(m => m.id === stored) ? stored : 'paralelo';
+  return stored === PARALLEL.id || COLUMNS.some(c => c.id === stored) ? stored : 'paralelo';
 };
 
 /* -------------------------------------------------------------------------- */
@@ -550,17 +572,12 @@ export default function Exegesis() {
 
   /* ------------------------------- columnas ------------------------------- */
 
-  const availableModes = MODES.filter(m => {
-    if (m.id === 'paralelo') return chapterHasCodex && chapterHasNtv;
-    if (m.id === 'codex') return chapterHasCodex;
-    return chapterHasNtv;
-  });
-  const viewMode = availableModes.some(m => m.id === mode)
-    ? mode
-    : availableModes[0]?.id || 'ntv';
-  const showCodex = viewMode !== 'ntv' && chapterHasCodex;
-  const showNtv = viewMode !== 'codex' && chapterHasNtv;
-  const columns = [showCodex, showNtv].filter(Boolean).length;
+  const availableColumns = [chapterHasCodex && 'codex', chapterHasNtv && 'ntv'].filter(Boolean);
+  const availableModes = modesFor(availableColumns);
+  const view = availableModes.find(m => m.id === mode) || availableModes[0] || { id: 'ntv', columns: [] };
+  const viewMode = view.id;
+  const shown = view.columns;
+  const columns = shown.length;
 
   /* --------------------------------- SEO ---------------------------------- */
 
@@ -683,6 +700,46 @@ export default function Exegesis() {
     pop?.kind === 'word' && lexicon
       ? lexicon.entries.find(item => item.strong === pop.analysis?.[1]) || null
       : null;
+
+  /** Cabecera de la columna de un testigo. */
+  const renderHead = id => {
+    if (id === 'codex') {
+      return (
+        <>
+          <b>Codex Sinaiticus</b>
+          <span>
+            Transcripción diplomática
+            {codexChapter?.folio ? ` · f. ${codexChapter.folio}${codexChapter.side}` : ''} · la sobrelínea
+            marca los <i>nomina sacra</i>
+          </span>
+        </>
+      );
+    }
+    return (
+      <>
+        <b>Nueva Traducción Viviente</b>
+        <span>
+          {bookMeta?.name} {chapterNum}:{range.from}–{range.to} · notas del traductor en superíndice
+        </span>
+      </>
+    );
+  };
+
+  /** Celda de un testigo en una fila (o el aviso de que no trae el versículo). */
+  const renderCell = (id, row) => {
+    if (id === 'codex') {
+      return row.codex ? (
+        <GreekText verse={row.codex} onAnchor={openApparatus} onWord={openWord} active={selected === row.n} />
+      ) : (
+        <span className="exg-gap">El Codex no conserva este versículo.</span>
+      );
+    }
+    return row.ntv ? (
+      <NtvText verse={row.ntv} onNote={openNote} />
+    ) : (
+      <span className="exg-gap">La NTV no trae este versículo.</span>
+    );
+  };
 
   return (
     <main id="main" className={`exg papel--${theme}`} data-theme={theme}>
@@ -868,7 +925,7 @@ export default function Exegesis() {
                   aria-label={m.label}
                   onClick={() => setMode(m.id)}
                 >
-                  {m.id === 'paralelo' ? <LayoutGlyph two /> : m.short}
+                  {m.columns.length > 1 ? <LayoutGlyph two /> : m.short}
                 </button>
               ))}
             </div>
@@ -970,25 +1027,11 @@ export default function Exegesis() {
             <div className="exg-grid__body" ref={gridRef}>
               <header className="exg-grid__head">
                 <div className="exg-grid__gutter" aria-hidden="true" />
-                {showCodex && (
-                  <div className="exg-grid__witness exg-grid__witness--codex">
-                    <b>Codex Sinaiticus</b>
-                    <span>
-                      Transcripción diplomática
-                      {codexChapter?.folio ? ` · f. ${codexChapter.folio}${codexChapter.side}` : ''} · la
-                      sobrelínea marca los <i>nomina sacra</i>
-                    </span>
+                {shown.map(id => (
+                  <div key={id} className={`exg-grid__witness exg-grid__witness--${id}`}>
+                    {renderHead(id)}
                   </div>
-                )}
-                {showNtv && (
-                  <div className="exg-grid__witness exg-grid__witness--ntv">
-                    <b>Nueva Traducción Viviente</b>
-                    <span>
-                      {bookMeta?.name} {chapterNum}:{range.from}–{range.to} · notas del traductor en
-                      superíndice
-                    </span>
-                  </div>
-                )}
+                ))}
               </header>
 
               {rows.map(row =>
@@ -1039,36 +1082,14 @@ export default function Exegesis() {
                       </span>
                     </div>
 
-                    {showCodex && (
-                      <div className="exg-row__cell exg-row__cell--codex">
+                    {shown.map(id => (
+                      <div key={id} className={`exg-row__cell exg-row__cell--${id}`}>
                         <span className="exg-cell__tag" aria-hidden="true">
-                          Codex
+                          {COLUMNS.find(c => c.id === id).short}
                         </span>
-                        {row.codex ? (
-                          <GreekText
-                            verse={row.codex}
-                            onAnchor={openApparatus}
-                            onWord={openWord}
-                            active={selected === row.n}
-                          />
-                        ) : (
-                          <span className="exg-gap">El Codex no conserva este versículo.</span>
-                        )}
+                        {renderCell(id, row)}
                       </div>
-                    )}
-
-                    {showNtv && (
-                      <div className="exg-row__cell exg-row__cell--ntv">
-                        <span className="exg-cell__tag" aria-hidden="true">
-                          NTV
-                        </span>
-                        {row.ntv ? (
-                          <NtvText verse={row.ntv} onNote={openNote} />
-                        ) : (
-                          <span className="exg-gap">La NTV no trae este versículo.</span>
-                        )}
-                      </div>
-                    )}
+                    ))}
                   </div>
                 )
               )}

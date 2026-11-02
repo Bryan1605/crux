@@ -128,9 +128,7 @@ de rutas (289) no cambia; la versión 0.12.0 sigue reservada al hebreo.
 Estas no cambian el objetivo, pero hay que resolverlas al implementar y anotar
 la elección:
 
-- **Modos de exegesis**: los ids `paralelo`/`codex`/`trad` son una propuesta;
-  el modo `ntv` sigue existiendo para libros con NTV. Validar el modo guardado
-  en `localStorage` contra los disponibles del libro.
+- ~~**Modos de exegesis**~~ — **resuelto el 2026-11-02** (ver §9).
 - **Esquema de ficha**: los campos de `FICHAS.md`/`PLANTILLA-FICHA.md` son una
   propuesta; si se añaden campos (por ejemplo, `related`), validarlos y
   documentarlos.
@@ -153,3 +151,29 @@ la elección:
 4. Si toca código, actualiza rutas, validadores y QA.
 5. Ejecuta el build y los QA.
 6. Dilo en la entrega: qué cambió, por qué y qué falta.
+
+## 9. Columnas de `/exegesis` por testigo
+
+**Decidido e implementado el 2026-11-02.**
+
+- `src/pages/Exegesis.jsx` ya no tiene `MODES` fijos. Hay una lista `COLUMNS`
+  (hoy `codex` y `ntv`, en ese orden) y `modesFor(disponibles)` deriva los modos
+  de cada capítulo: `paralelo` (todas las columnas disponibles, solo si hay dos o
+  más) y uno por testigo (`codex`, `ntv`).
+- El id de la columna es la clave del versículo en la fila (`row.codex`,
+  `row.ntv`) y el sufijo de las clases (`exg-row__cell--<id>`,
+  `exg-grid__witness--<id>`). La cabecera y la celda se pintan con
+  `renderHead(id)` y `renderCell(id, row)`.
+- **Añadir un testigo** (p. ej. `trad` para Tobit, después `hebreo`): una
+  entrada en `COLUMNS`, su `renderHead`/`renderCell`, su clave en las filas y su
+  disponibilidad en `availableColumns`. Botones, modos y rejilla salen solos. Con
+  tres columnas el paralelo se llama «Todas las columnas».
+- **Modo guardado** (`crux.exegesis.columnas`): se migra `dos`/`uno`, un valor
+  desconocido vuelve a `paralelo` y, al pintar, se valida contra los testigos
+  del capítulo (si no está, se usa el primero disponible) **sin sobrescribir**
+  la preferencia. `qa:exegesis` lo comprueba.
+- Lo que ve el usuario no cambia: mismos botones, etiquetas y clases.
+
+Pendiente para cuando exista la tercera columna: el ancho de la rejilla
+(`exg-grid--3`) y la columna hebrea **apagada por defecto** (§1), que
+no debe entrar en el paralelo si no alinea.
