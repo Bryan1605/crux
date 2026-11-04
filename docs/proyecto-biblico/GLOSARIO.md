@@ -30,7 +30,7 @@ traducción: eso solo lo marca el usuario.
 |---|---|---|---|---|
 | ἀδελφός | adelphós | hermano; miembro de la comunidad; compatriota | **aprobado (2026-11-02)**: «hermano(s)» | Tres usos: de sangre, compatriota (el uso de Tobit) y hermano en la fe (NT). Se traduce «hermano» y el parentesco se precisa cuando el texto lo hace (1:21 «mi hermano Anael»; 1:22 «sobrino»). |
 | ἐλεημοσύνη | eleēmosýnē | limosna; misericordia; justicia/beneficencia | **aprobado (2026-11-02)**: «limosna(s)» si son actos humanos; «misericordia» si se dice de Dios (3:2) | De ἐλεέω («tener misericordia», la raíz de *Kyrie eleison*); el español «limosna» viene de esta palabra y Mt 6:2-4 la usa en ese sentido. En el griego bíblico no es «dar las sobras»: es la misericordia puesta en obra hacia el necesitado, la expresión práctica de la δικαιοσύνη. |
-| ἔλεος | éleos | misericordia, compasión | **pendiente** | Distinguir de `ἐλεημοσύνη`. |
+| ἔλεος | éleos | misericordia, compasión | **adoptado (2026-11-04, delegado; revisable): misericordia** | Distinguir de `ἐλεημοσύνη`. |
 | νόμος | nómos | ley, instrucción | **provisional: ley** | En contextos judíos puede ser “la Ley”; mantener mayúscula solo si el texto la tiene. |
 | κύριος | kýrios | señor, dueño, Señor (divino) | **provisional: Señor** | En el Codex, la forma sobrelineada puede ser *nomen sacrum*; no cambiarla en el griego. |
 | οἶκος | oîkos | casa, familia, linaje | **adoptado (2026-11-04, delegado; revisable): casa** | “Casa” puede ser edificio o familia; el contexto decide. |
@@ -63,6 +63,12 @@ traducción: eso solo lo marca el usuario.
 | ὕψιστος | hýpsistos | el Altísimo | **adoptado (2026-11-04, delegado; revisable): el Altísimo** | |
 | πατήρ (antepasado) | patḗr | padre; antepasado | **aprobado (2026-11-02)**: «padre», literal, con nota | Tobit llama «padre» a Neftalí, a David y a Ananiel (1:4–8). |
 | Trato (2.ª pl.) | — | vosotros / ustedes | **adoptado (2026-11-04, delegado; revisable): ustedes** | Como el resto del sitio (2:6). |
+| ἐξομολογέομαι / ἐξομολόγησις | exomologéomai | reconocer, alabar, dar gracias / acción de gracias | **adoptado (2026-11-04, delegado; revisable): «dar gracias»; el sustantivo, «acción de gracias»** | Tobit 11–14. No «confesar», que en español sugiere pecados. |
+| ἄγγελος | ángelos | ángel; mensajero | **adoptado (2026-11-04, delegado; revisable): «ángel»; «mensajero» si es humano (10:9)** | |
+| ἀδελφή | adelphḗ | hermana; pariente; esposa (trato) | **adoptado (2026-11-04, delegado; revisable): «hermana» como trato o en la fórmula del contrato; «pariente» si describe parentesco** | 5:22, 7:12, 8:4… frente a 6:19, 7:9. |
+| ἀνεψιός · ἐξάδελφος | anepsiós · exádelphos | primo · sobrino | **adoptado (2026-11-04, delegado; revisable): «primo» · «sobrino»** | 9:6 · 1:22, 11:19. |
+| πορνεία | porneía | inmoralidad sexual, lujuria | **adoptado (2026-11-04, delegado; revisable): «lujuria»** | Tobit 8:7. |
+| σωτηρία (Tobit) | sōtēría | salvación | **adoptado (2026-11-04, delegado; revisable): «salvación»; «a salvo» si es solo el viaje (5:17)** | Ver la fila general de σωτηρία. |
 
 ## Nombres y topónimos
 
@@ -84,6 +90,11 @@ Se fijan en la primera aparición y se repiten. Ejemplos de Tobit:
 | Θισβή · Ἀσήρ · Φογώρ · Ἐλυμαΐς | Tisbé · Aser · Fogor · Elimaida | **Adoptado (2026-11-04, delegado; revisable).** |
 | Κυδιώς | Cadés (de Neftalí) | **Aprobado (2026-11-02).** La ciudad de refugio de la Alta Galilea (Kedes); κυδιωϲ es una deformación de ese nombre, así que se da la forma española. |
 | Δύστρος | Distro | Mes macedonio (2:12). **Adoptado (2026-11-04, delegado; revisable).** |
+| Ἔδνα · Ἀζαρίας · Ἀνανίας · Σεμέλιος · Ναθάν | Edna · Azarías · Ananías · Semelio · Natán | **adoptado (2026-11-04, delegado; revisable).** Tobit 5 y 7. |
+| Ῥάγαι (Ῥάγοι, «Ἄργοι», «Γάρρας») | Rages | **adoptado (2026-11-04, delegado; revisable).** El Codex deforma el nombre en 4:20, 5:6 y 6:13; se anota en cada caso. |
+| Κασερείν · Ναούμ · Ἀθήρ | Caserín · Nahúm · Asiria (Asur) | **adoptado (2026-11-04, delegado; revisable).** 11:1 · 14:4. |
+| Ναβάδ / Ναδάβ | Nabad / Nadab | **adoptado (2026-11-04, delegado; revisable).** Se respeta la forma de cada pasaje (11:19 / 14:10), con nota. |
+| Ἀχιάχαρος (14:15) | Aquiácaro | **adoptado (2026-11-04, delegado; revisable).** El rey medo que tomó Nínive (Ciáxares); distinto de Ajicar. |
 
 ## Cómo añadir un término
 

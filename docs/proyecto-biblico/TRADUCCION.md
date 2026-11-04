@@ -258,7 +258,8 @@ Orden del piloto:
 1. Preparar el glosario mínimo (los términos de Tobit).
 2. Traducir Tobit 1–3 y revisar con el usuario.
 3. Ajustar el esquema/UI con esa muestra.
-4. Completar 4–14 y revisar.
+4. Completar 4–14 y revisar. *(Traducido el 2026-11-04; la revisión del usuario
+   queda pendiente.)*
 5. Publicar con etiqueta y ficha; actualizar `ESTADO.md`.
 6. Solo entonces empezar Judit.
 

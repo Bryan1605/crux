@@ -56,7 +56,7 @@ Los datos actuales están verificados en `ESTADO.md`.
 | Salida Codex | `public/textos/exegesis/codex/*.json` | generada y versionada |
 | Índice y buscadores | `public/textos/exegesis/index.json`, `buscar-at.json`, `buscar-nt.json` | generados |
 | Léxico y lemas | `public/textos/exegesis/lexico.json`, `lemas/*.json`; fuente `content/lexico/griego.json` | generados/editable |
-| Traducción (propuesta) | `src/assets/texts/trad/<libro>.json` → `public/textos/exegesis/trad/<libro>.json` | **Tobit 1–3, borrador** (columna «Trad» en `/exegesis`) |
+| Traducción (propuesta) | `src/assets/texts/trad/<libro>.json` → `public/textos/exegesis/trad/<libro>.json` | **Tobit completo, borrador** (columna «Trad» en `/exegesis`) |
 | Fichas (propuesta) | `content/libros/<id>.json` → `public/textos/libros/` | **no existe aún** |
 | Hebreo (propuesta) | `public/textos/hebreo/` y `/biblia/hebreo` | **no existe aún** |
 

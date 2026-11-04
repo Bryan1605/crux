@@ -52,7 +52,7 @@ const ROUTES = [
   { label: 'exégesis (AT, NTV)', path: '/exegesis?libro=genesis&cap=1' },
   { label: 'exégesis (Codex × traducción de trabajo)', path: '/exegesis?libro=tobit&cap=1' },
   { label: 'exégesis (solo traducción de trabajo)', path: '/exegesis?libro=tobit&cap=1&modo=trad' },
-  { label: 'exégesis (solo Codex)', path: '/exegesis?libro=tobit&cap=4' },
+  { label: 'exégesis (solo Codex)', path: '/exegesis?libro=judit&cap=1' },
   { label: 'exégesis (Salmo 151)', path: '/exegesis?libro=salmos&cap=151' },
   { label: 'exégesis (diccionario)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=G3056' },
   { label: 'exégesis (diccionario, lista)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=' },

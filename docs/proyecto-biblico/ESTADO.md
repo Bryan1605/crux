@@ -187,11 +187,15 @@ Avance del piloto (2026-11-02):
       panel de notas, créditos, aviso de cobertura parcial), enlace desde
       `/biblia/ntv?libro=tobit` y `qa:trad` (18/18). **Publicable**: el borrador
       va con su etiqueta «Traducción de trabajo · Borrador».
-- [ ] Paso 4: capítulos 4–14 y revisión.
+- [x] Paso 4 (2026-11-04): **capítulos 4–14** traducidos (179 vv, 26 notas) →
+      Tobit completo: **232/232** versículos del Codex, 14 capítulos. Lagunas del
+      Codex anotadas y sin rellenar: 4:8–18, 9:3, 13:8–10, 14:8. Tabla de
+      revisión: `docs/proyecto-biblico/revision/tobit-04-14.md`. `qa:trad` 18/18.
+- [ ] Revisión del usuario de 4–14 (pendiente, junto con 1–3).
 - [ ] Paso 5: ficha, panel, índice de fichas y registro de fuentes; publicar.
 
-El borrador de 1–3 ya está en `public/textos/exegesis/trad/tobit.json` y lo usa
-la web **en local**; se publica con el siguiente push a `main`.
+El borrador completo ya está en `public/textos/exegesis/trad/tobit.json` y lo
+usa la web **en local**; se publica con el siguiente push a `main`.
 
 Hecho antes (2026-11-02): la línea base y el refactor de columnas de
 `/exegesis` (`COLUMNS` + `modesFor()`; añadir `trad` es una entrada más). Ese

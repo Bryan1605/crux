@@ -147,16 +147,34 @@ if (WITH_BROWSER && books.length) {
     const solo = await state();
     check(`${book.id}: ?modo=trad muestra solo la traducción`, solo.witnesses.join() === 'trad' && solo.trad > 0, solo.witnesses.join());
 
-    const beyond = Math.max(...book.chapters) + 1;
-    await page.goto(`${BASE}/exegesis?libro=${book.id}&cap=${beyond}&modo=trad`, { waitUntil: 'networkidle2', timeout: 60000 });
-    await page.waitForSelector('.exg-grid', { timeout: 20000 });
-    await wait(400);
-    const after = await state();
-    check(
-      `${book.id} ${beyond}: sin traducción, se lee el Codex y el aviso lo explica`,
-      after.witnesses.join() === 'codex' && /cubre por ahora/.test(after.notice),
-      after.notice.trim()
-    );
+    // Un capítulo del Codex sin traducir todavía (si queda alguno): se lee el Codex y el
+    // aviso lo explica. Si el libro está completo, el último capítulo tiene una celda
+    // traducida por cada versículo del Codex (las lagunas no se rellenan).
+    const codexChapters = index.books.find(b => b.id === book.id).codex.chapters;
+    const pending = codexChapters.find(n => !book.chapters.includes(n));
+    if (pending) {
+      await page.goto(`${BASE}/exegesis?libro=${book.id}&cap=${pending}&modo=trad`, { waitUntil: 'networkidle2', timeout: 60000 });
+      await page.waitForSelector('.exg-grid', { timeout: 20000 });
+      await wait(400);
+      const after = await state();
+      check(
+        `${book.id} ${pending}: sin traducción, se lee el Codex y el aviso lo explica`,
+        after.witnesses.join() === 'codex' && /cubre por ahora/.test(after.notice),
+        after.notice.trim()
+      );
+    } else {
+      const last = Math.max(...book.chapters);
+      const want = (await readJson(path.join(DIR, 'codex', `${book.id}.json`))).chapters.find(c => c.num === last).verses.length;
+      await page.goto(`${BASE}/exegesis?libro=${book.id}&cap=${last}`, { waitUntil: 'networkidle2', timeout: 60000 });
+      await page.waitForSelector('.exg-grid', { timeout: 20000 });
+      await wait(400);
+      const end = await state();
+      check(
+        `${book.id} ${last}: libro completo, cada versículo del Codex tiene su traducción`,
+        end.witnesses.join() === 'codex,trad' && end.trad === want && !/cubre por ahora/.test(end.notice),
+        `${end.trad}/${want} celdas`
+      );
+    }
 
     await page.goto(`${BASE}/biblia/ntv?libro=${book.id}`, { waitUntil: 'networkidle2', timeout: 60000 });
     await wait(800);
