@@ -178,13 +178,20 @@ Avance del piloto (2026-11-02):
 - [x] Glosario, 2026-11-02: el usuario aprueba ἐλεημοσύνη, δικαιοσύνη, ἀδελφός,
       «padre» literal, ναός y los nombres Ajicar, **Asaradón** y **Cadés** (aplicados
       al borrador). El resto sigue como propuesta.
-- [ ] **Revisión del usuario** de los versículos de 1–3 y de las propuestas restantes.
-- [ ] Paso 3: esquema/UI con esa muestra (`build-trad`, `qa:trad`, columna
-      «Trad» en `/exegesis`, enlace desde `/biblia/ntv?libro=tobit`).
+- [x] 2026-11-04: el usuario deja la tabla para revisarla más adelante y delega
+      las elecciones pendientes (glosario: **adoptado, revisable**). Se pulió la
+      sintaxis de 1:6, 2:2, 2:14, 3:4 y 3:9. Sigue en `borrador`.
+- [ ] **Revisión del usuario** de los versículos de 1–3 (pendiente, sin prisa).
+- [x] Paso 3 (2026-11-04): `build-trad` (`npm run exegesis:trad`), testigo
+      `trad` en el índice, columna «Trad» en `/exegesis` (Codex × Trad, `?modo=trad`,
+      panel de notas, créditos, aviso de cobertura parcial), enlace desde
+      `/biblia/ntv?libro=tobit` y `qa:trad` (18/18). **Publicable**: el borrador
+      va con su etiqueta «Traducción de trabajo · Borrador».
 - [ ] Paso 4: capítulos 4–14 y revisión.
 - [ ] Paso 5: ficha, panel, índice de fichas y registro de fuentes; publicar.
 
-El borrador **no se publica** todavía: no está en `public/` ni lo usa la web.
+El borrador de 1–3 ya está en `public/textos/exegesis/trad/tobit.json` y lo usa
+la web **en local**; se publica con el siguiente push a `main`.
 
 Hecho antes (2026-11-02): la línea base y el refactor de columnas de
 `/exegesis` (`COLUMNS` + `modesFor()`; añadir `trad` es una entrada más). Ese

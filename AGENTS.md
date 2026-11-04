@@ -32,6 +32,8 @@ npm run dev        # http://localhost:5173/  (panel /admin solo en dev)
 | `npm run qa:a11y` | axe-core + objetivos táctiles. Falla con `critical`/`serious`, o táctil < 24 px; avisa entre 24 y 44 px. |
 | `npm run qa:exegesis` / `qa:biblia` / `qa:audio` | Incluyen navegador real; necesitan el dev server. |
 | `npm run exegesis:ntv` / `:codex` / `:index` / `:search` / `:lemas` / `:lexico` | Pasos sueltos, en ese orden si se hacen a mano. |
+| `npm run exegesis:trad` | Valida y publica las traducciones de trabajo (`src/assets/texts/trad/` → `public/textos/exegesis/trad/`). No está dentro de `exegesis`; después, `exegesis:index`. |
+| `npm run qa:trad` | QA de la traducción (datos + navegador); necesita el dev server. Va dentro de `npm run qa`. |
 | `node scripts/optimize-images.mjs` | Pasa las fuentes de `src/assets/imgs/` a `.webp` en `public/img/`. |
 | `node scripts/build-audio-peaks.mjs` | Recalcula las ondas de `content/narraciones.json` (usa Chrome). |
 | `node scripts/fix-biblia-doc.mjs --file <ruta> [--write]` | Simula/limpia el documento de la Biblia Patrística. Sin `--write` solo informa. |

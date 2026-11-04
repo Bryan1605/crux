@@ -113,10 +113,15 @@ La traducción es una **obra derivada** de la transcripción del Codex:
 - Mientras no haya revisión del usuario, el estado es `borrador`. No se quita la
   etiqueta para “que se vea más limpio”.
 
-## 5. Datos: esquema propuesto
+## 5. Datos: esquema
 
-> Estado: **propuesta**. No existe todavía ningún archivo `trad/`. Si la
-> implementación cambia el esquema, actualiza este documento y `ESTADO.md`.
+> Estado: **implementado el 2026-11-04** con el piloto de Tobit (caps. 1–3).
+> Diferencias con la propuesta original: las notas van **por versículo**
+> (`verses[].note`, opcional) en vez de un `notes` general; la fuente admite un
+> `scope` (texto) que explica la cobertura parcial; `name`, `abbr`, `order` y
+> `codexNo` los pone `build-trad` desde `src/data/exegesis.js` (la fuente no
+> necesita repetirlos). Un capítulo traducido debe cubrir **todos** sus
+> versículos del Codex; los capítulos aún no traducidos simplemente no están.
 
 ### Archivos
 
@@ -125,7 +130,7 @@ La traducción es una **obra derivada** de la transcripción del Codex:
 | `src/assets/texts/trad/<id>.json` | Original editable y versionado; lo revisa el usuario. |
 | `scripts/build-trad.mjs` | Valida y publica la traducción; no inventa texto. |
 | `public/textos/exegesis/trad/<id>.json` | Salida que consume la web. |
-| `scripts/qa-trad.mjs` | QA de cobertura, versículos vacíos, etiquetas y metadatos (a crear). |
+| `scripts/qa-trad.mjs` | QA de cobertura, versículos vacíos, etiquetas, metadatos, integridad y UI (`npm run qa:trad`). |
 
 ### Forma del JSON
 
@@ -159,8 +164,9 @@ Reglas del esquema:
 - Cada versículo del Codex en el alcance debe tener su `text` no vacío.
 - No se incluyen versículos que el Codex no tiene.
 - `status`: `borrador` o `revisado`. Solo el usuario puede aprobar `revisado`.
-- `notes` (opcional): notas de traducción, no del aparato. Si se añaden, deben
-  ser pocas y explicar una decisión, no reemplazar el aparato.
+- `verses[].note` (opcional): nota de traducción, no del aparato. Debe explicar
+  una decisión (o por qué se sigue a un corrector), no reemplazar el aparato. En
+  la web sale como `*` en la celda y en el panel «Notas de la traducción».
 
 ### Integración con la exégesis
 
@@ -184,7 +190,7 @@ Reglas del esquema:
 
 ### Pipeline
 
-Cuando exista `scripts/build-trad.mjs`:
+Implementado (`exegesis:trad` y `qa:trad`):
 
 ```bash
 npm run exegesis        # NTV + Codex + índice + buscadores + lemas + léxico
@@ -195,12 +201,14 @@ npm run qa:exegesis
 npm run qa:lexico
 ```
 
-No añadas `exegesis:trad` al script `exegesis` hasta que existan los seis JSON;
-si no, el pipeline fallará en cuanto falte un archivo.
+`exegesis:trad` solo procesa los archivos que existen en `src/assets/texts/trad/`,
+así que no falla por los libros que faltan; aun así sigue **fuera** del script
+`exegesis`. Orden a mano: `exegesis:trad` → `exegesis:index` (el índice lee
+`public/textos/exegesis/trad/` y declara el testigo `trad` y su cobertura).
 
 ## 6. QA de la traducción
 
-`scripts/qa-trad.mjs` (a crear) debe comprobar, como mínimo:
+`scripts/qa-trad.mjs` comprueba (implementado; está en `npm run qa`):
 
 - **Cobertura**: por cada libro en alcance, todos los versículos del Codex
   tienen traducción; no sobran versículos.

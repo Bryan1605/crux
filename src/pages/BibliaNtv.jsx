@@ -452,8 +452,26 @@ export default function BibliaNtv() {
               La Nueva Traducción Viviente no incluye este libro. Se conserva en griego en el Codex
               Sinaiticus, con su aparato crítico.
             </p>
-            <p>
-              <Link className="btn btn--primary" to={`/exegesis?libro=${bookId}`}>
+            {bookMeta.trad && (
+              <p>
+                Hay una <strong>traducción de trabajo</strong> hecha desde ese griego (borrador, sin
+                revisar; no es la NTV) de {bookMeta.trad.chapters.length === 1 ? 'el capítulo' : 'los capítulos'}{' '}
+                {bookMeta.trad.chapters.join(', ')}.
+              </p>
+            )}
+            <p className="empty-state__actions">
+              {bookMeta.trad && (
+                <Link
+                  className="btn btn--primary"
+                  to={`/exegesis?libro=${bookId}&cap=${bookMeta.trad.chapters[0]}&modo=trad`}
+                >
+                  Leer la traducción de trabajo
+                </Link>
+              )}
+              <Link
+                className={`btn ${bookMeta.trad ? 'btn--ghost' : 'btn--primary'}`}
+                to={`/exegesis?libro=${bookId}&cap=1`}
+              >
                 Leer {bookMeta.name} en el Codex
               </Link>
             </p>

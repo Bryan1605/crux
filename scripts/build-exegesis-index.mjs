@@ -3,7 +3,8 @@
  *
  *   node scripts/build-exegesis-index.mjs
  *
- * Lee `public/textos/exegesis/ntv/<libro>.json` y `.../codex/<libro>.json` y
+ * Lee `public/textos/exegesis/ntv/<libro>.json`, `.../codex/<libro>.json` y, si
+ * existe, la traducción de trabajo `.../trad/<libro>.json` (`npm run exegesis:trad`), y
  * escribe `public/textos/exegesis/index.json` con:
  *   - los testigos (Codex + NTV) y su atribución,
  *   - por libro: capítulos de la NTV y capítulos presentes en el Codex,
@@ -23,6 +24,7 @@ const readJson = async file => JSON.parse(await readFile(file, 'utf8'));
 const books = [];
 let codexTotal = 0;
 let ntvTotal = 0;
+let tradTotal = 0;
 
 for (const meta of ALL_BOOKS) {
   let ntv = null;
@@ -33,13 +35,19 @@ for (const meta of ALL_BOOKS) {
   try {
     codex = await readJson(path.join(DIR, 'codex', `${meta.id}.json`));
   } catch { /* el Codex no conserva este libro */ }
+  let trad = null;
+  try {
+    trad = await readJson(path.join(DIR, 'trad', `${meta.id}.json`));
+  } catch { /* sin traducción de trabajo */ }
 
   const ntvChapters = ntv ? ntv.chapters.map(c => c.num) : [];
   const codexChapters = codex ? codex.chapters.map(c => c.num) : [];
   const ntvVerses = ntv ? ntv.chapters.reduce((a, c) => a + c.verses.length, 0) : 0;
   const codexVerses = codex ? codex.chapters.reduce((a, c) => a + c.verses.length, 0) : 0;
 
+  const tradVerses = trad ? trad.chapters.reduce((a, c) => a + c.verses.length, 0) : 0;
   ntvTotal += ntvVerses;
+  tradTotal += tradVerses;
   codexTotal += codexVerses;
 
   books.push({
@@ -54,6 +62,8 @@ for (const meta of ALL_BOOKS) {
     notice: meta.notice || null,
     ntv: { chapters: ntvChapters, verses: ntvVerses },
     codex: { chapters: codexChapters, verses: codexVerses },
+    // Traducción de trabajo desde el Codex (solo libros sin NTV); `status` es borrador o revisado.
+    ...(trad ? { trad: { chapters: trad.chapters.map(c => c.num), verses: tradVerses, status: trad.status, label: trad.label } } : {}),
     // Capítulos que se pueden leer en paralelo (están en los dos testigos).
     // 2 Esdras no se empareja fila a fila con Esdras/Nehemías: la NTV los separa.
     shared: meta.codexOnly ? [] : ntvChapters.filter(n => codexChapters.includes(n))
@@ -86,6 +96,16 @@ const index = {
       date: '2009',
       kind: 'Traducción con notas del traductor',
       source: 'NTV (Tyndale House)'
+    },
+    {
+      id: 'trad',
+      name: 'Traducción de trabajo · Borrador',
+      short: 'Trad',
+      language: 'español',
+      date: '2026',
+      kind: 'Traducción del griego del Codex Sinaiticus hecha para Crux; no es la NTV',
+      source: 'Proyecto Crux, a partir de la transcripción del Codex Sinaiticus Project',
+      license: 'CC BY-NC-SA 3.0 (obra derivada del Codex Sinaiticus Project)'
     }
   ],
   books,
@@ -100,6 +120,8 @@ const index = {
     codexNtBooks: codexBooks.filter(b => b.testament === 'NT').length,
     codexOnlyBooks: codexOnlyBooks.length,
     codexVerses: codexTotal,
+    tradBooks: books.filter(b => b.trad).length,
+    tradVerses: tradTotal,
     parallels: books.reduce((a, b) => a + b.shared.length, 0)
   }
 };

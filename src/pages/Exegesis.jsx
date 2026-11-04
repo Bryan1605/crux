@@ -52,7 +52,8 @@ const THEMES = [
  */
 const COLUMNS = [
   { id: 'codex', short: 'Codex', label: 'Solo el Codex Sinaiticus' },
-  { id: 'ntv', short: 'NTV', label: 'Solo la NTV · Nueva Traducción Viviente' }
+  { id: 'ntv', short: 'NTV', label: 'Solo la NTV · Nueva Traducción Viviente' },
+  { id: 'trad', short: 'Trad', label: 'Solo la Trad · traducción de trabajo del Codex (borrador)' }
 ];
 
 /** Modo con todas las columnas disponibles a la vez (si hay más de una). */
@@ -260,6 +261,7 @@ export default function Exegesis() {
   const [index, setIndex] = useState({ status: 'loading', data: null });
   const [ntv, setNtv] = useState(null);
   const [codex, setCodex] = useState(undefined);
+  const [trad, setTrad] = useState(null);
   const [lemas, setLemas] = useState(null);
   const [lexicon, setLexicon] = useState(null);
   const [lexiconStatus, setLexiconStatus] = useState('loading');
@@ -318,6 +320,7 @@ export default function Exegesis() {
 
   const hasNtv = Boolean(bookMeta?.ntv.verses);
   const hasCodex = Boolean(bookMeta?.codex.verses);
+  const hasTrad = Boolean(bookMeta?.trad?.verses);
 
   /* ------------------------------- testigos ------------------------------- */
 
@@ -357,6 +360,22 @@ export default function Exegesis() {
     };
   }, [bookId, bookMeta, hasCodex]);
 
+  /* Traducción de trabajo (solo libros sin NTV que ya la tienen). */
+  useEffect(() => {
+    if (!bookMeta || !hasTrad) {
+      setTrad(null);
+      return undefined;
+    }
+    let alive = true;
+    setTrad(undefined);
+    loadWitnessBook('trad', bookId)
+      .then(data => alive && setTrad(data))
+      .catch(() => alive && setTrad(null));
+    return () => {
+      alive = false;
+    };
+  }, [bookId, bookMeta, hasTrad]);
+
   /* Mapas de lemas del libro abierto: una entrada por palabra del Codex.
      MorphGNT solo cubre el NT; el AT no tiene mapas y no debe pedirlos. */
   useEffect(() => {
@@ -384,7 +403,13 @@ export default function Exegesis() {
     [codex, chapterNum]
   );
 
+  const tradChapter = useMemo(
+    () => (trad ? trad.chapters.find(c => c.num === chapterNum) || null : null),
+    [trad, chapterNum]
+  );
+
   const chapterHasNtv = Boolean(ntvChapter);
+  const chapterHasTrad = Boolean(tradChapter);
   const chapterHasCodex = Boolean(codexChapter);
 
   const chapterNums = useMemo(() => {
@@ -400,7 +425,8 @@ export default function Exegesis() {
   const loading =
     !bookMeta ||
     (hasNtv && !ntv) ||
-    (hasCodex && codex === undefined);
+    (hasCodex && codex === undefined) ||
+    (hasTrad && trad === undefined);
 
   /* ------------------------------- rangos --------------------------------- */
 
@@ -434,6 +460,11 @@ export default function Exegesis() {
     [codexChapter, range]
   );
 
+  const visibleTrad = useMemo(
+    () => (tradChapter ? tradChapter.verses.filter(v => v.n >= range.from && v.n <= range.to) : []),
+    [tradChapter, range]
+  );
+
   /**
    * Filas de la rejilla: una por versículo (el que falte en un testigo queda con
    * el hueco marcado) y una por título de sección, en su sitio.
@@ -441,6 +472,7 @@ export default function Exegesis() {
   const rows = useMemo(() => {
     const codexByN = new Map(visibleCodex.map(v => [v.n, v]));
     const ntvByN = new Map(visibleNtv.map(v => [v.n, v]));
+    const tradByN = new Map(visibleTrad.map(v => [v.n, v]));
     const numbers = [...new Set([...codexByN.keys(), ...ntvByN.keys()])].sort((a, b) => a - b);
     const sections = new Map();
     for (const section of ntvChapter?.sections || []) {
@@ -450,10 +482,16 @@ export default function Exegesis() {
     const list = [];
     for (const n of numbers) {
       for (const title of sections.get(n) || []) list.push({ kind: 'section', key: `s-${n}-${title}`, title, verse: n });
-      list.push({ kind: 'verse', n, codex: codexByN.get(n) || null, ntv: ntvByN.get(n) || null });
+      list.push({
+        kind: 'verse',
+        n,
+        codex: codexByN.get(n) || null,
+        ntv: ntvByN.get(n) || null,
+        trad: tradByN.get(n) || null
+      });
     }
     return list;
-  }, [visibleCodex, visibleNtv, ntvChapter]);
+  }, [visibleCodex, visibleNtv, visibleTrad, ntvChapter]);
 
   const verseNumbers = useMemo(() => rows.filter(r => r.kind === 'verse').map(r => r.n), [rows]);
 
@@ -468,6 +506,11 @@ export default function Exegesis() {
         (v.notes || []).map(id => ({ verse: v.n, id, text: ntv?.notes?.[id] || '' }))
       ),
     [visibleNtv, ntv]
+  );
+
+  const tradNoteRows = useMemo(
+    () => visibleTrad.filter(v => v.note).map(v => ({ verse: v.n, text: v.note })),
+    [visibleTrad]
   );
 
   const siglas = useMemo(() => witnessLegend(apparatusRows.map(r => r.w)), [apparatusRows]);
@@ -572,9 +615,14 @@ export default function Exegesis() {
 
   /* ------------------------------- columnas ------------------------------- */
 
-  const availableColumns = [chapterHasCodex && 'codex', chapterHasNtv && 'ntv'].filter(Boolean);
+  const availableColumns = [chapterHasCodex && 'codex', chapterHasNtv && 'ntv', chapterHasTrad && 'trad'].filter(Boolean);
   const availableModes = modesFor(availableColumns);
-  const view = availableModes.find(m => m.id === mode) || availableModes[0] || { id: 'ntv', columns: [] };
+  // `?modo=` (p. ej. `?modo=trad`) manda sobre la preferencia guardada, sin cambiarla.
+  const modeParam = params.get('modo');
+  const view =
+    availableModes.find(m => m.id === modeParam) ||
+    availableModes.find(m => m.id === mode) ||
+    availableModes[0] || { id: 'ntv', columns: [] };
   const viewMode = view.id;
   const shown = view.columns;
   const columns = shown.length;
@@ -584,9 +632,11 @@ export default function Exegesis() {
   const seoWitness =
     chapterHasCodex && chapterHasNtv
       ? 'Codex Sinaiticus y NTV'
-      : chapterHasCodex
-        ? 'Codex Sinaiticus'
-        : 'NTV';
+      : chapterHasCodex && chapterHasTrad
+        ? 'Codex Sinaiticus y traducción de trabajo'
+        : chapterHasCodex
+          ? 'Codex Sinaiticus'
+          : 'NTV';
   const seoTitle = bookMeta
     ? `Exégesis · ${bookMeta.name} ${chapterNum} — ${seoWitness}`
     : `Exégesis comparada — ${seoWitness}`;
@@ -703,6 +753,16 @@ export default function Exegesis() {
 
   /** Cabecera de la columna de un testigo. */
   const renderHead = id => {
+    if (id === 'trad') {
+      return (
+        <>
+          <b>Traducción de trabajo · Borrador</b>
+          <span>
+            Del griego del Codex · no es la NTV · CC BY-NC-SA 3.0
+          </span>
+        </>
+      );
+    }
     if (id === 'codex') {
       return (
         <>
@@ -727,6 +787,20 @@ export default function Exegesis() {
 
   /** Celda de un testigo en una fila (o el aviso de que no trae el versículo). */
   const renderCell = (id, row) => {
+    if (id === 'trad') {
+      return row.trad ? (
+        <p className="exg-trad">
+          {row.trad.text}
+          {row.trad.note && (
+            <sup className="exg-trad__mark" title="Nota de traducción (ver el panel)">
+              *
+            </sup>
+          )}
+        </p>
+      ) : (
+        <span className="exg-gap">La traducción de trabajo aún no cubre este versículo.</span>
+      );
+    }
     if (id === 'codex') {
       return row.codex ? (
         <GreekText verse={row.codex} onAnchor={openApparatus} onWord={openWord} active={selected === row.n} />
@@ -763,9 +837,11 @@ export default function Exegesis() {
           <h1>
             {chapterHasCodex && chapterHasNtv
               ? 'Codex Sinaiticus × Nueva Traducción Viviente'
-              : chapterHasCodex
-                ? 'Codex Sinaiticus'
-                : 'Nueva Traducción Viviente'}
+              : chapterHasCodex && chapterHasTrad
+                ? 'Codex Sinaiticus × traducción de trabajo'
+                : chapterHasCodex
+                  ? 'Codex Sinaiticus'
+                  : 'Nueva Traducción Viviente'}
           </h1>
           <p className="exg__lead">
             {chapterHasCodex && chapterHasNtv ? (
@@ -781,7 +857,9 @@ export default function Exegesis() {
                 crítico.{' '}
                 {hasNtv
                   ? 'Este pasaje solo se conserva en el Codex: la NTV no lo incluye.'
-                  : 'Este libro no forma parte de la NTV: se ofrece solo el testigo griego.'}
+                  : chapterHasTrad
+                    ? 'Este libro no forma parte de la NTV: junto al griego se ofrece una traducción de trabajo hecha desde él (borrador, sin revisar).'
+                    : 'Este libro no forma parte de la NTV: se ofrece solo el testigo griego.'}
               </>
             ) : (
               <>
@@ -798,7 +876,11 @@ export default function Exegesis() {
             {bookMeta?.notice ||
               (hasNtv && !chapterHasCodex
                 ? `El Codex Sinaiticus no conserva ${bookMeta?.name} ${chapterNum}; se muestra la NTV.`
-                : `La NTV no incluye ${bookMeta?.name} ${chapterNum}; se muestra solo el Codex.`)}
+                : chapterHasTrad
+                  ? `La NTV no incluye ${bookMeta?.name}; junto al Codex se muestra una traducción de trabajo hecha desde su griego (borrador, sin revisar).`
+                  : hasTrad
+                    ? `La NTV no incluye ${bookMeta?.name}. La traducción de trabajo cubre por ahora ${bookMeta.trad.chapters.length === 1 ? 'el capítulo' : 'los capítulos'} ${bookMeta.trad.chapters.join(', ')}; aquí se muestra solo el Codex.`
+                    : `La NTV no incluye ${bookMeta?.name} ${chapterNum}; se muestra solo el Codex.`)}
           </p>
         )}
 
@@ -923,7 +1005,14 @@ export default function Exegesis() {
                   aria-pressed={viewMode === m.id}
                   title={m.label}
                   aria-label={m.label}
-                  onClick={() => setMode(m.id)}
+                  onClick={() => {
+                    setMode(m.id);
+                    if (modeParam) {
+                      const q = new URLSearchParams(params);
+                      q.delete('modo');
+                      setParams(q, { replace: true });
+                    }
+                  }}
                 >
                   {m.columns.length > 1 ? <LayoutGlyph two /> : m.short}
                 </button>
@@ -1005,7 +1094,12 @@ export default function Exegesis() {
               NTV · <b>Nueva Traducción Viviente</b> (es)
             </span>
           )}
-          {!chapterHasNtv && chapterHasCodex && (
+          {chapterHasTrad && (
+            <span className="exg-chip">
+              Trad · <b>traducción de trabajo</b> (es) · borrador
+            </span>
+          )}
+          {!chapterHasNtv && chapterHasCodex && !chapterHasTrad && (
             <span className="exg-chip">Solo Codex · pasaje no incluido en la NTV</span>
           )}
         </div>
@@ -1098,8 +1192,10 @@ export default function Exegesis() {
         )}
 
         {/* ------------------------------ paneles ------------------------------ */}
-        {!loading && rows.length > 0 && (chapterHasCodex || chapterHasNtv) && (
-          <div className={`exg__panels${chapterHasCodex && chapterHasNtv ? '' : ' exg__panels--one'}`}>
+        {!loading && rows.length > 0 && (chapterHasCodex || chapterHasNtv || chapterHasTrad) && (
+          <div
+            className={`exg__panels${[chapterHasCodex, chapterHasNtv, chapterHasTrad].filter(Boolean).length > 1 ? '' : ' exg__panels--one'}`}
+          >
             {chapterHasCodex && (
             <section className="exg-panel" aria-label="Aparato crítico">
               <h2>
@@ -1150,6 +1246,35 @@ export default function Exegesis() {
                   .
                 </span>
               </div>
+            </section>
+            )}
+
+            {chapterHasTrad && (
+            <section className="exg-panel" aria-label="Notas de la traducción de trabajo">
+              <h2>
+                <span>Notas de la traducción · borrador</span>
+                <span className="exg-panel__hint">
+                  {tradNoteRows.length} {tradNoteRows.length === 1 ? 'nota' : 'notas'} en este pasaje
+                </span>
+              </h2>
+              {tradNoteRows.length === 0 ? (
+                <p className="exg-empty">Este pasaje no tiene notas de traducción.</p>
+              ) : (
+                <ol className="exg-notes">
+                  {tradNoteRows.map(row => (
+                    <li key={row.verse} className={`exg-note${selected === row.verse ? ' is-active' : ''}`}>
+                      <button type="button" className="exg-note__ref" onClick={() => select(row.verse)}>
+                        {row.verse}
+                      </button>
+                      <div>{row.text}</div>
+                    </li>
+                  ))}
+                </ol>
+              )}
+              <p className="exg-trad__about">
+                Traducción de trabajo del proyecto Crux desde la transcripción del Codex Sinaiticus.
+                Explica decisiones; no traduce el aparato crítico. Estado: {trad?.status || 'borrador'}.
+              </p>
             </section>
             )}
 
@@ -1218,6 +1343,14 @@ export default function Exegesis() {
           <p>
             <strong>NTV:</strong> Nueva Traducción Viviente, con sus notas del traductor.
           </p>
+          {hasTrad && (
+            <p>
+              <strong>Traducción de trabajo · Borrador:</strong> traducción española de {bookMeta?.name}{' '}
+              hecha por el proyecto Crux desde el griego del Codex Sinaiticus. Es una obra derivada de su
+              transcripción y se distribuye con la misma licencia (CC BY-NC-SA 3.0), con uso no comercial.
+              No es la NTV ni una traducción oficial; está pendiente de revisión.
+            </p>
+          )}
         </footer>
 
         <p className="exg__hint">

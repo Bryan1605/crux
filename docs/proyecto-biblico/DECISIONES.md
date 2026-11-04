@@ -174,6 +174,11 @@ la elección:
   la preferencia. `qa:exegesis` lo comprueba.
 - Lo que ve el usuario no cambia: mismos botones, etiquetas y clases.
 
-Pendiente para cuando exista la tercera columna: el ancho de la rejilla
+**2026-11-04**: entra la tercera columna, `trad` (Tobit 1–3). Va después de
+`codex` y `ntv`; como ningún libro tiene NTV y Trad a la vez, en la práctica el
+paralelo es Codex × NTV o Codex × Trad. `?modo=<id>` en la URL manda sobre la
+preferencia guardada sin sobrescribirla.
+
+Pendiente para el hebreo: el ancho de la rejilla
 (`exg-grid--3`) y la columna hebrea **apagada por defecto** (§1), que
 no debe entrar en el paralelo si no alinea.

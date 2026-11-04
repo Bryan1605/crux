@@ -59,7 +59,13 @@ check(
     index.books.filter(b => b.testament === 'NT' && b.ntv.verses).length === NT_BOOKS.length,
   `${OT_BOOKS.length} + ${NT_BOOKS.length}`
 );
-check('El índice declara los dos testigos', index.witnesses?.length === 2, index.witnesses?.map(w => w.short).join(', '));
+// Codex y NTV siempre; `trad` (traducción de trabajo) solo si hay alguna publicada (qa:trad).
+check(
+  'El índice declara los testigos Codex y NTV (y, si existe, la traducción de trabajo)',
+  ['codex', 'ntv'].every(id => index.witnesses?.some(w => w.id === id)) &&
+    index.witnesses.every(w => ['codex', 'ntv', 'trad'].includes(w.id)),
+  index.witnesses?.map(w => w.short).join(', ')
+);
 check('La NTV cubre la Biblia completa', index.totals.ntvBooks === 66 && index.totals.ntvVerses === 31021, `${index.totals.ntvVerses} versículos`);
 check(
   'El Codex cubre 59 libros (32 AT + 27 NT)',
@@ -859,7 +865,7 @@ if (WITH_BROWSER) {
   }));
   check(
     'Codex: Tobit es un libro solo-Codex y no muestra la NTV',
-    tobit.witnesses === 1 && tobit.codexCells > 10 && tobit.ntvCells === 0 && !tobit.ntvMode,
+    tobit.codexCells > 10 && tobit.ntvCells === 0 && !tobit.ntvMode,
     JSON.stringify({ ...tobit, text: tobit.text.slice(0, 30) })
   );
   check('Codex: Tobit 1:1 abre el texto griego', /τωβειθ/.test(tobit.text), tobit.text.slice(0, 42));
@@ -867,11 +873,12 @@ if (WITH_BROWSER) {
   await visit(`${BASE}/biblia/ntv?libro=tobit&cap=1`, 'ntv-tobit');
   const ntvTobit = await page.evaluate(() => ({
     h1: document.querySelector('h1')?.textContent.trim(),
-    link: document.querySelector('.empty-state a')?.getAttribute('href')
+    links: [...document.querySelectorAll('.empty-state a')].map(a => a.getAttribute('href'))
   }));
   check(
     'AT: la NTV remite al Codex cuando el libro no está en español',
-    ntvTobit.h1 === 'Tobit solo está en el Codex' && ntvTobit.link === `${PREFIX}/exegesis?libro=tobit`,
+    ntvTobit.h1 === 'Tobit solo está en el Codex' &&
+      ntvTobit.links.some(href => href?.startsWith(`${PREFIX}/exegesis?libro=tobit`)),
     JSON.stringify(ntvTobit)
   );
 
