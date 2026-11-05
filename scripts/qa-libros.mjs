@@ -95,7 +95,18 @@ if (WITH_BROWSER && fichas.length) {
   const errors = [];
   const page = await browser.newPage();
   page.on('pageerror', e => errors.push(String(e)));
-  page.on('console', m => m.type() === 'error' && errors.push(m.text()));
+  // En GitHub Pages una ruta profunda inexistente llega por 404.html con código 404 y
+  // el SPA la recompone (la usamos a propósito para la ficha inexistente): ese 404 del
+  // documento no es un fallo. Se apuntan las rutas para no confundirlo con otros.
+  const docs404 = new Set();
+  page.on('response', r => {
+    if (r.status() === 404 && r.request().isNavigationRequest()) docs404.add(r.url());
+  });
+  page.on('console', m => {
+    if (m.type() !== 'error') return;
+    if (/status of 404/.test(m.text()) && docs404.has(m.location()?.url)) return;
+    errors.push(m.text());
+  });
   await page.setViewport({ width: 1280, height: 900 });
   const wait = ms => new Promise(r => setTimeout(r, ms));
   const go = async url => {
