@@ -73,7 +73,7 @@ npm run dev        # http://localhost:5173/  (panel /admin solo en dev)
 8. **El build es el gate**: si cambias contenido, `npm run build` debe pasar. Si cambias UI/rutas, además `qa:vistas`, `qa:enlaces` y `qa:a11y`.
 9. **No hay página de privacidad, cookies ni analítica**; el sitio no las necesita. No añadas banner ni ruta legal.
 10. **No toques el portafolio de la raíz** (`index.html`, `css/`, `js/`, etc.) para resolver algo de Web Crux.
-11. **No reformatees `public/textos/biblia-patristica.md`** ni los textos fuente sin necesidad; `qa:biblia` verifica su geometría y contenido.
+11. **No reformatees `public/textos/biblia-patristica.md`** ni los textos fuente sin necesidad; `qa:biblia` verifica su geometría y contenido. Es una **copia** del original del usuario, `D:\Biblia\BibliaPatristica\Biblia_Patristica_Completa.md` (allí se traduce y se corrige; los estudios citan ese archivo por número de línea). Para actualizarla se copia tal cual y solo se pasan los fines de línea a LF (el repo usa `eol=lf`); las correcciones de texto se hacen en el original, no aquí.
 12. **NTV es una traducción con derechos** (Tyndale House Foundation). No la trates como dominio público ni etiquetes una traducción nueva como NTV. Las traducciones nuevas del Codex son obras derivadas con **CC BY-NC-SA 3.0** y etiqueta «Traducción de trabajo · Borrador».
 13. **El proyecto bíblico tiene reglas propias**: antes de tocar hebreo, traducciones o fichas, lee `docs/proyecto-biblico/README.md`. No inventes fechas, consensos ni fuentes.
 

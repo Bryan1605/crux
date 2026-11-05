@@ -23,7 +23,9 @@ const EMOJI_RE = /^[\p{Extended_Pictographic}️‍\s]+/u;
  * @returns {{ glyph: string, text: string }} glifo (o '') y texto sin emoji.
  */
 export function headingGlyph(label) {
-  const raw = String(label || '');
+  // Los títulos latinos van en cursiva Markdown (`(*De Lapsis*)`); en pantalla
+  // el encabezado ya tiene su estilo, así que se quitan los asteriscos.
+  const raw = String(label || '').replace(/\*+([^*]+)\*+/g, '$1');
   const m = EMOJI_RE.exec(raw);
   if (!m) return { glyph: '', text: raw };
   const lead = m[0];

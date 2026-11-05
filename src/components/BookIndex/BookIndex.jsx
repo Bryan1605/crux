@@ -38,12 +38,10 @@ export function groupWorks(parts) {
     const top = num.split('.')[0];
     let block = byNum.get(top);
     if (!block) {
-      // Una obra sin encabezado de bloque (Tertuliano, «Parte 4.1» sin «Parte 4»)
-      // se une al bloque anterior: «3–4».
-      block = blocks[blocks.length - 1];
-      if (!block) continue;
-      if (!block.num.includes('–')) block.num = `${block.num}–${top}`;
-      block.title = `${block.title} · ${info.title}`;
+      // Una obra sin encabezado de bloque («Parte 4.1» sin «Parte 4»: Tertuliano;
+      // «Parte 5.1»: Cipriano) abre su propio bloque con su número y su nombre.
+      block = { id: `${part.id}-bloque`, num: top, title: info.title || part.label, part, works: [] };
+      blocks.push(block);
       byNum.set(top, block);
     }
     block.works.push({ part, info });
