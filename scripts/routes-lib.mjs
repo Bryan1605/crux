@@ -18,6 +18,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { libroSeo, librosIndexSeo } from '../src/lib/librosSeo.js';
+
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content');
 
@@ -50,6 +52,18 @@ export function personajesFichas() {
     .map(f => readJson(`personajes/${f}`, null))
     .filter(Boolean)
     .sort((a, b) => String(a.nombre).localeCompare(String(b.nombre), 'es'));
+}
+
+/** Fichas de libros publicadas (sin el registro de fuentes), en orden canónico. */
+export function librosFichas() {
+  const dir = path.join(CONTENT, 'libros');
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter(f => f.endsWith('.json') && f !== 'fuentes.json')
+    .map(f => readJson(`libros/${f}`, null))
+    .filter(Boolean)
+    .sort((a, b) => a.order - b.order);
 }
 
 /** Concilios y herejías. */
@@ -175,6 +189,19 @@ export function siteRoutes() {
       type: 'article',
       ogImage: OG_IMAGE,
       lastmod: s.updated,
+      indexable: true
+    });
+  }
+
+  // Índice de libros y una ruta por ficha que exista (no se publican fichas vacías).
+  routes.push({ path: '/biblia/libros', ...librosIndexSeo(brand), type: 'website', indexable: true });
+  for (const l of librosFichas()) {
+    routes.push({
+      path: `/biblia/libros/${l.id}`,
+      ...libroSeo(l, brand),
+      type: 'article',
+      ogImage: OG_IMAGE,
+      lastmod: l.updated,
       indexable: true
     });
   }

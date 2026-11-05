@@ -1,0 +1,48 @@
+{
+  "_nota": "Registro de fuentes verificadas para las fichas de libros (content/libros/<id>.json). Una ficha solo puede citar claves de aquí; el validador rechaza las que no existan. 'consultado' es la fecha en que se leyó la fuente y 'verificado' resume qué se comprobó en ella. No añadir una fuente que no se haya leído.",
+  "fuentes": {
+    "toy-1906-tobit": {
+      "autor": "Crawford Howell Toy",
+      "titulo": "Tobit, Book of",
+      "obra": "The Jewish Encyclopedia, vol. 12, pp. 171–172",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/14422-tobit-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-04",
+      "verificado": "Canon judío (no incluido), apócrifo para los protestantes, Cartago 397 y Trento 1546; versiones griega, latina, siríaca y aramea; recensiones Vaticano/Alejandrino frente al Sinaítico; lengua original sin decidir (formas arameas «Ather» en 14:4 del Sinaítico); fecha probable 200–50 a. C.; alusión a Ajicar; posible combinación de dos relatos."
+    },
+    "drum-1912-tobias": {
+      "autor": "Walter Drum",
+      "titulo": "Tobias",
+      "obra": "The Catholic Encyclopedia, vol. 14",
+      "editorial": "Robert Appleton Company",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/14749c.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-04",
+      "verificado": "Tres recensiones griegas (AB, Sinaítico, minúsculos 44/106/107); el Sinaítico omite 4:7–19 y 13:6b–9 de AB; la Vulgata de Jerónimo, hecha desde el arameo «en un solo día»; Vetus Latina cercana al Sinaítico; citas patrísticas (Policarpo, Clemente de Alejandría, Orígenes, Cipriano, Ambrosio); listas de Hipona 393, Cartago 397/419, Trento 1546; uso del texto AB en la Iglesia griega; defensa católica de la historicidad (Comisión Bíblica, 1905) y las lecturas contrarias que cita."
+    },
+    "dilella-nets-tobit": {
+      "autor": "Alexander A. Di Lella",
+      "titulo": "Tobit: To the Reader",
+      "obra": "A New English Translation of the Septuagint (NETS), edición electrónica de la 2.ª impresión",
+      "editorial": "Oxford University Press",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/19-tobit-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-04",
+      "verificado": "GI (texto corto: Vaticano, Alejandrino…) y GII (texto largo, unas 1700 palabras más), GII casi solo en el Sinaítico, con errores de copista y dos lagunas (4:7–18 y 13:7–9 en su numeración); la Vetus Latina muy cercana al Sinaítico; Qumrán: cuatro fragmentos arameos y uno hebreo, que concuerdan en general con el texto largo (Fitzmyer), copiados hacia 100 a. C.–50 d. C.; la mayoría de los estudiosos da prioridad a GII; Deselaers y Gross defienden GI; en 2:6 el Sinaítico lee «caminos» frente a la conjetura «cantos» (Am 8:10)."
+    },
+    "csp-codex-sinaiticus": {
+      "autor": "The Codex Sinaiticus Project",
+      "titulo": "Codex Sinaiticus: transcripción y facsímil",
+      "obra": "codexsinaiticus.org",
+      "editorial": "British Library · Universität Leipzig · Monasterio de Santa Catalina · Biblioteca Nacional de Rusia",
+      "anio": "2009",
+      "url": "https://www.codexsinaiticus.org/en/",
+      "tipo": "texto",
+      "consultado": "2026-11-04",
+      "verificado": "Texto griego de Tobit que usa el sitio (public/textos/exegesis/codex/tobit.json, generado de la transcripción del proyecto): 14 capítulos, 232 versículos, y los saltos 4:7→4:19, 9:2→9:4, 13:7→13:11 y 14:7→14:9."
+    }
+  }
+}

@@ -382,6 +382,102 @@ export function validatePersonaje(obj, slug) {
   return true;
 }
 
+// --- fichas de libros (content/libros/) ---
+
+const FUENTE_TIPOS = ['publica', 'estudio', 'texto'];
+
+/** Registro de fuentes verificadas (`content/libros/fuentes.json`). */
+export function validateFuentes(obj) {
+  const label = 'libros/fuentes';
+  const fuentes = required(obj, 'fuentes', 'object', label);
+  for (const [key, f] of Object.entries(fuentes)) {
+    const at = `${label}.${key}`;
+    if (!/^[a-z0-9-]+$/.test(key)) throw new Error(`${at}: la clave solo admite minúsculas, números y guiones`);
+    for (const k of ['autor', 'titulo', 'anio', 'tipo', 'consultado', 'verificado']) required(f, k, 'string', at);
+    if (!f.url && !f.obra) throw new Error(`${at}: necesita "url" u "obra" para poder localizarla`);
+    if (f.url && !/^https:\/\//.test(f.url)) throw new Error(`${at}: "url" debe empezar por https://`);
+    if (!FUENTE_TIPOS.includes(f.tipo)) throw new Error(`${at}: "tipo" debe ser ${FUENTE_TIPOS.join(', ')}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(f.consultado)) throw new Error(`${at}: "consultado" debe ser AAAA-MM-DD`);
+    if (f.verificado.trim().length < 20) throw new Error(`${at}: "verificado" debe resumir qué se comprobó`);
+  }
+  return true;
+}
+
+export const LIBRO_SECCIONES = ['genero', 'contexto', 'composicion', 'teologia', 'texto', 'recepcion', 'lectura'];
+export const LIBRO_PALABRAS = [600, 900];
+const CERTEZAS = ['segura', 'probable', 'discutida', 'desconocida'];
+
+/** Palabras del cuerpo de una ficha: solo las siete secciones. */
+export const palabrasLibro = obj =>
+  (obj.sections || []).reduce((n, s) => n + String(s.body || '').split(/\s+/).filter(Boolean).length, 0);
+
+/**
+ * Ficha de un libro (`docs/proyecto-biblico/FICHAS.md` §4).
+ * ctx: { book } (entrada de la tabla canónica) y { fuentes } (claves del registro).
+ */
+export function validateLibro(obj, slug, ctx = {}) {
+  const label = `libros/${slug}`;
+  const id = required(obj, 'id', 'string', label);
+  if (id !== slug) throw new Error(`${label}: "id" (${id}) debe coincidir con el nombre del archivo`);
+  const book = ctx.book;
+  if (ctx.book !== undefined && !book) throw new Error(`${label}: el libro no está en la tabla canónica (src/data/exegesis.js)`);
+  for (const k of ['title', 'abbr', 'testament', 'summary', 'language', 'status', 'updated']) required(obj, k, 'string', label);
+  required(obj, 'order', 'number', label);
+  if (book) {
+    for (const [k, b] of [['title', 'name'], ['abbr', 'abbr'], ['order', 'order'], ['testament', 'testament']]) {
+      if (obj[k] !== book[b]) throw new Error(`${label}: "${k}" (${obj[k]}) no coincide con la tabla canónica (${book[b]})`);
+    }
+  }
+  const resumen = obj.summary.split(/\s+/).filter(Boolean).length;
+  if (resumen < 20 || resumen > 90) throw new Error(`${label}: "summary" debe tener 2–3 frases (20–90 palabras); tiene ${resumen}`);
+  const genre = required(obj, 'genre', 'array', label);
+  if (!genre.length || !genre.every(isString)) throw new Error(`${label}: "genre" debe ser una lista de textos`);
+
+  const date = required(obj, 'date', 'object', label);
+  for (const k of ['narrative', 'composition', 'certainty']) required(date, k, 'string', `${label}.date`);
+  if (!CERTEZAS.includes(date.certainty)) throw new Error(`${label}.date.certainty: ${CERTEZAS.join(', ')}`);
+
+  const canon = required(obj, 'canon', 'object', label);
+  for (const k of ['judio', 'catolico', 'ortodoxo', 'protestante']) required(canon, k, 'string', `${label}.canon`);
+  if (obj.notice != null && !isString(obj.notice)) throw new Error(`${label}: "notice" debe ser texto o null`);
+
+  const sections = required(obj, 'sections', 'array', label);
+  const ids = sections.map(s => s?.id);
+  if (ids.join() !== LIBRO_SECCIONES.join()) {
+    throw new Error(`${label}: "sections" debe tener, en orden, ${LIBRO_SECCIONES.join(', ')} (tiene ${ids.join(', ')})`);
+  }
+  for (const s of sections) {
+    required(s, 'title', 'string', `${label}.${s.id}`);
+    if (!required(s, 'body', 'string', `${label}.${s.id}`).trim()) throw new Error(`${label}.${s.id}: cuerpo vacío`);
+  }
+  const words = palabrasLibro(obj);
+  if (words < LIBRO_PALABRAS[0] || words > LIBRO_PALABRAS[1]) {
+    throw new Error(`${label}: el cuerpo debe tener ${LIBRO_PALABRAS.join('–')} palabras; tiene ${words}`);
+  }
+
+  const debates = optional(obj, 'debates', 'array', label, []);
+  for (const [i, d] of debates.entries()) {
+    required(d, 'question', 'string', `${label}.debates[${i}]`);
+    const pos = required(d, 'positions', 'array', `${label}.debates[${i}]`);
+    if (pos.length < 2 || pos.length > 3) throw new Error(`${label}.debates[${i}]: 2–3 posiciones`);
+    for (const p of pos) {
+      required(p, 'label', 'string', `${label}.debates[${i}]`);
+      required(p, 'body', 'string', `${label}.debates[${i}]`);
+    }
+  }
+
+  const sources = required(obj, 'sources', 'array', label);
+  if (sources.length < 3 || sources.length > 5) throw new Error(`${label}: 3–5 fuentes (tiene ${sources.length})`);
+  if (new Set(sources).size !== sources.length) throw new Error(`${label}: fuentes repetidas`);
+  if (ctx.fuentes) {
+    const faltan = sources.filter(k => !ctx.fuentes.has(k));
+    if (faltan.length) throw new Error(`${label}: fuentes que no están en content/libros/fuentes.json → ${faltan.join(', ')}`);
+  }
+  if (!['borrador', 'revisado'].includes(obj.status)) throw new Error(`${label}: "status" debe ser borrador o revisado`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(obj.updated)) throw new Error(`${label}: "updated" debe ser AAAA-MM-DD`);
+  return true;
+}
+
 // --- léxico griego (fuente editable) ---
 export function validateLexico(obj) {
   required(obj, 'version', 'number', 'lexico');
@@ -417,7 +513,9 @@ export const VALIDATORS = {
   timeline: validateTimeline,
   concilios: validateConcilios,
   narraciones: validateNarraciones,
-  lexico: validateLexico
+  lexico: validateLexico,
+  fuentes: validateFuentes,
+  libro: validateLibro
 };
 
 export function validate(name, data, slug, ctx) {

@@ -43,6 +43,8 @@ const PAGINAS = [
   '/exegesis?libro=juan&cap=3&vv=16-21',
   '/exegesis?libro=genesis&cap=1',
   '/exegesis?libro=tobit&cap=1',
+  '/biblia/libros',
+  '/biblia/libros/tobit',
   '/videos',
   '/concilios',
   '/temas',

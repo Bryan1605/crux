@@ -13,7 +13,7 @@
 | Rama | `main` |
 | Último commit antes de esta documentación | `f2fdaa2` — «Evita descargar la NTV de los libros solo-Codex» |
 | Build CI | `.github/workflows/pages.yml`, `BASE_PATH=/crux/` |
-| Rutas | **214** (212 indexables) |
+| Rutas | **216** desde el 2026-11-04 (índice de libros + ficha de Tobit); antes 214 |
 
 ## 2. Lo que ya funciona
 
@@ -112,7 +112,8 @@ No los trates como si estuvieran hechos porque aparezcan en la planificación.
 
 | Fase | Qué añade | Rutas nuevas | Total |
 |---|---|---:|---:|
-| Actual | — | — | 214 |
+| Antes del piloto | — | — | 214 |
+| Piloto de Tobit | `/biblia/libros` + `/biblia/libros/tobit` | 2 | 216 |
 | Hebreo, fase 1 | `/biblia/hebreo` + datos | 1 | 215 |
 | Hebreo, fase 2 | columna de exégesis + alineación | 0 | 215 |
 | Fichas, índice | `/biblia/libros` | 1 | 216 |
@@ -192,7 +193,14 @@ Avance del piloto (2026-11-02):
       Codex anotadas y sin rellenar: 4:8–18, 9:3, 13:8–10, 14:8. Tabla de
       revisión: `docs/proyecto-biblico/revision/tobit-04-14.md`. `qa:trad` 18/18.
 - [ ] Revisión del usuario de 4–14 (pendiente, junto con 1–3).
-- [ ] Paso 5: ficha, panel, índice de fichas y registro de fuentes; publicar.
+- [x] Paso 5 (2026-11-04): **ficha de Tobit** (`content/libros/tobit.json`, 834
+      palabras, 2 debates, `borrador`), **registro de fuentes**
+      (`content/libros/fuentes.json`: Toy 1906, Drum 1912, Di Lella/NETS y el
+      Codex Sinaiticus Project, leídas y verificadas ese día), **índice**
+      `/biblia/libros`, **panel** en `/exegesis` y `/biblia/ntv`, validador en el
+      build y `qa:libros` (22/22). Rutas: 216.
+- [ ] Revisión del usuario de la ficha (y de la traducción).
+- [ ] Publicar (push a `main`) y `npm run qa:prod`.
 
 El borrador completo ya está en `public/textos/exegesis/trad/tobit.json` y lo
 usa la web **en local**; se publica con el siguiente push a `main`.

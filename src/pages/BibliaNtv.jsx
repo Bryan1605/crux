@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 
 import BibleSearch from '../components/BibleSearch';
 import BibleCta from '../components/BibleCta';
+import BookIntroPanel from '../components/BookIntroPanel/BookIntroPanel';
 import ChapterAudio from '../components/ChapterAudio';
 import NtvInline from '../components/NtvInline';
 import VersePopover, { NoteBody } from '../components/VersePopover';
@@ -448,6 +449,7 @@ export default function BibliaNtv() {
         <div className="exg__shell">
           <div className="empty-state">
             <h1>{bookMeta.name} solo está en el Codex</h1>
+            <BookIntroPanel bookId={bookId} bookName={bookMeta.name} />
             <p>
               La Nueva Traducción Viviente no incluye este libro. Se conserva en griego en el Codex
               Sinaiticus, con su aparato crítico.
@@ -519,6 +521,8 @@ export default function BibliaNtv() {
             palabras que recuerdes. 66 libros: 39 del Antiguo Testamento y 27 del Nuevo.
           </p>
         </header>
+
+        {bookMeta && <BookIntroPanel bookId={bookId} bookName={bookMeta.name} />}
 
         <div className="reader__bar exg__bar">
           <div className="reader__bar-group">

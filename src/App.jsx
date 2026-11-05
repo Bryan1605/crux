@@ -15,6 +15,8 @@ import EstudioDetalle from './pages/EstudioDetalle';
 import Personaje from './pages/Personaje';
 import Biblia from './pages/Biblia';
 import BibliaNtv from './pages/BibliaNtv';
+import Libros from './pages/Libros';
+import LibroFicha from './pages/LibroFicha';
 import Exegesis from './pages/Exegesis';
 import Videos from './pages/Videos';
 import Concilios from './pages/Concilios';
@@ -99,6 +101,8 @@ export default function App() {
           <Route path="/estudio/:slug" element={<EstudioDetalle />} />
           <Route path="/biblia" element={<Biblia />} />
           <Route path="/biblia/ntv" element={<BibliaNtv />} />
+          <Route path="/biblia/libros" element={<Libros />} />
+          <Route path="/biblia/libros/:id" element={<LibroFicha />} />
           <Route path="/exegesis" element={<Exegesis />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/concilios" element={<Concilios />} />

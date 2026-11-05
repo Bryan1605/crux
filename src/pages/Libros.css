@@ -1,0 +1,244 @@
+/* --- índice de libros ------------------------------------------------------ */
+
+.libros__filtros {
+  margin-top: var(--sp-5);
+}
+
+.libros__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: var(--sp-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.libros__link {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--sp-3);
+  height: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--muted);
+}
+
+.libros__item.has-ficha .libros__link {
+  border-color: var(--border-strong);
+  color: var(--text);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.libros__item.has-ficha .libros__link:hover {
+  background: var(--panel-hover);
+  border-color: #c9a96a;
+}
+
+.libros__abbr {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: #c9a96a;
+}
+
+.libros__item:not(.has-ficha) .libros__abbr {
+  color: var(--muted);
+}
+
+.libros__main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.libros__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.libros__summary {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.libros__estado {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* --- ficha ------------------------------------------------------------------ */
+
+.ficha__estado {
+  margin-top: var(--sp-3);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.ficha__lectores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-5);
+}
+
+.ficha__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+  padding-block: var(--sp-6) var(--sp-8);
+}
+
+.ficha__tecnica {
+  position: sticky;
+  top: calc(var(--marquee-h, 0px) + 100px);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel);
+}
+
+.ficha__tecnica h2 {
+  margin: 0 0 var(--sp-3);
+  font-size: 0.78rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ficha__tecnica dl {
+  margin: 0;
+}
+
+.ficha__tecnica dt {
+  margin-top: var(--sp-3);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ficha__tecnica dd {
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.ficha__certeza,
+.ficha__nota,
+.ficha__consultado {
+  color: var(--muted);
+}
+
+.ficha__nota {
+  margin: var(--sp-4) 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.ficha__cuerpo {
+  max-width: 72ch;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.ficha__neutral,
+.ficha__aviso {
+  margin: 0 0 var(--sp-5);
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 3px solid #c9a96a;
+  border-radius: 0 10px 10px 0;
+  background: var(--panel);
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.ficha__seccion {
+  scroll-margin-top: calc(var(--marquee-h, 0px) + 110px);
+  margin-top: var(--sp-6);
+}
+
+.ficha__seccion h2 {
+  margin: 0 0 var(--sp-3);
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  color: var(--text);
+}
+
+.ficha__seccion p {
+  margin: 0 0 1em;
+}
+
+.ficha__claves,
+.ficha__fuentes {
+  padding-left: 1.3rem;
+}
+
+.ficha__claves li + li,
+.ficha__fuentes li + li {
+  margin-top: 0.6em;
+}
+
+.ficha__debate h3 {
+  margin: var(--sp-4) 0 var(--sp-2);
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.ficha__debate ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.ficha__debate li + li {
+  margin-top: 0.6em;
+}
+
+.ficha__fuentes a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Etiqueta de capa: [Texto] / [Tradición] / [Estudio]. */
+.ficha-capa {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.12em;
+  color: var(--text);
+}
+
+.ficha-capa--tradición {
+  border-color: #c9a96a;
+}
+
+@media (max-width: 900px) {
+  .ficha__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ficha__tecnica {
+    position: static;
+  }
+}

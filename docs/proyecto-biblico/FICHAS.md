@@ -123,10 +123,24 @@ Formato:
 - No inventes páginas ni citas. Si no has consultado la obra, no la pongas.
 - Las fuentes modernas se parafrasean; no se copian párrafos largos.
 
-## 4. Modelo de datos propuesto
+## 4. Modelo de datos
 
-> Estado: **propuesta**. No existe todavía `content/libros/`. Si la
-> implementación cambia el esquema, actualiza este documento.
+> Estado: **implementado el 2026-11-04** con la ficha de Tobit. Diferencias con
+> la propuesta original:
+>
+> - Las fuentes no van escritas en cada ficha: `sources` es una lista de
+>   **claves** del registro verificado `content/libros/fuentes.json` (autor,
+>   título, obra, año, URL, `tipo` publica/estudio/texto, `consultado` y qué se
+>   **verificado** en ella). El validador rechaza una clave que no exista.
+> - No hay `build-libros` ni `public/textos/libros/`: la web importa
+>   `content/libros/*.json` en el build (como los personajes), y el build valida
+>   cada ficha en `contentGuard` (`validateLibro`, `validateFuentes`). Cuando
+>   haya muchas fichas conviene separar un índice ligero y cargar la ficha bajo
+>   demanda (anotado en `src/data/libros.js`).
+> - En el cuerpo, `[Texto]`, `[Tradición]` y `[Estudio]` se escriben en el texto
+>   y la página los muestra como etiquetas; una línea `1. …` abre una lista.
+> - Los títulos/descripciones salen de `src/lib/librosSeo.js`, que comparten la
+>   página y `scripts/routes-lib.mjs`.
 
 ### Archivos
 
@@ -136,7 +150,7 @@ Formato:
 | `scripts/build-libros.mjs` | Valida y genera la salida pública. |
 | `public/textos/libros/index.json` | Índice de fichas disponibles. |
 | `public/textos/libros/<id>.json` | Ficha que consume la web. |
-| `scripts/qa-libros.mjs` | QA de estructura, conteo, fuentes y enlaces (a crear). |
+| `scripts/qa-libros.mjs` | QA de estructura, conteo, fuentes, rutas, páginas y panel (`npm run qa:libros`, dentro de `npm run qa`). |
 
 ### Esquema
 
@@ -242,7 +256,8 @@ Reglas:
 
 ## 6. Rutas y build
 
-Estado actual: **214 rutas**. Plan:
+Estado actual (2026-11-04): **216 rutas** (índice + ficha de Tobit; el hebreo
+aún no). Plan:
 
 | Fase | Rutas nuevas | Total |
 |---|---|---:|

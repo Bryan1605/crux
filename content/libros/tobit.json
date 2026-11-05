@@ -1,0 +1,91 @@
+{
+  "id": "tobit",
+  "title": "Tobit",
+  "abbr": "Tob",
+  "order": 17.1,
+  "testament": "AT",
+  "summary": "Relato de una familia israelita deportada a Nínive: Tobit, ciego por un accidente, y Sara, en Ecbatana, piden morir el mismo día, y Dios envía al ángel Rafael a curar a los dos. Es deuterocanónico en el canon católico y la Iglesia griega lo lee desde antiguo; no está en el canon judío ni en el protestante.",
+  "genre": ["relato (narración en prosa)", "oración e himno", "instrucción sapiencial"],
+  "language": "Griego en sus dos formas principales; original semítico (arameo o hebreo) según los fragmentos de Qumrán",
+  "date": {
+    "narrative": "Época asiria: deportación de Neftalí bajo Salmanasar, Senaquerib y Asaradón, hasta la caída de Nínive",
+    "composition": "Antes de c. 100 a. C. (copias de Qumrán); la Jewish Encyclopedia proponía 200–50 a. C.",
+    "certainty": "discutida",
+    "note": "La fecha narrativa es la que el libro da; la de composición se reconstruye y no hay consenso sobre su punto de partida."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Deuterocanónico (Hipona 393, Cartago 397, Trento 1546)",
+    "ortodoxo": "Leído en la Iglesia griega desde antiguo (texto corto, GI)",
+    "protestante": "No incluido; se edita entre los apócrifos"
+  },
+  "notice": "En esta web, Tobit se lee en el griego del Codex Sinaiticus, que transmite la forma larga del libro (GII), junto a una traducción de trabajo hecha desde ese griego (borrador). La NTV no incluye este libro.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "Tobit es un relato en prosa que intercala oraciones (3:2–6, 3:11–15, 8:5–7), un himno final (cap. 13) y largas instrucciones de padre a hijo (caps. 4 y 14) y del ángel a la familia (cap. 12). Los primeros capítulos los cuenta Tobit en primera persona (1:3–3:6); desde 3:7 la narración pasa a tercera persona y sigue a la vez dos historias: la de Tobit en Nínive y la de Sara en Ecbatana, que se unen cuando sus oraciones son escuchadas «en aquel mismo momento» (3:16–17).\n\n[Estudio] La Jewish Encyclopedia lo describe como uno de los relatos breves más logrados, lo compara con Proverbios, Sirácida, Daniel y Eclesiastés, y sugiere que el episodio de Sara y Asmodeo pudo ser una historia independiente combinada con la de Tobit."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Texto] El libro sitúa la acción entre los israelitas de Neftalí deportados a Asiria: Tobit vive en Nínive bajo Enemesar (Salmanasar), cae en desgracia con Senaquerib y vuelve gracias a Ajicar bajo Asaradón; su hijo viaja a Media (Ecbatana y Rages). El final mira hacia la caída de Nínive (14:15).\n\n[Estudio] El mundo en que se escribió es otro. La Jewish Encyclopedia (1906) señala una piedad muy atenta a los preceptos, propia de después de Esdras, y lee en 14:5 un tiempo en que el Segundo Templo ya está construido; proponía una fecha entre 200 y 50 a. C. Las copias de Qumrán, descubiertas después, son de hacia 100 a. C.–50 d. C., así que el libro es anterior a ellas. Leer Tobit como crónica de la época asiria es, por tanto, una decisión de lectura, no un dato del texto."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] El libro se presenta como «palabras de Tobit» (1:1) y termina con el encargo del ángel: «escriban todo lo que les ha sucedido» (12:20). No nombra a ningún otro autor.\n\n[Estudio] La lengua original fue durante mucho tiempo una pregunta abierta: la Jewish Encyclopedia prefería no decidir entre hebreo, arameo y griego, y anotaba formas arameas en el Sinaítico, como «Ather» por Asur (14:4). Los fragmentos de Qumrán —cuatro en arameo y uno en hebreo— inclinan hoy hacia un original semítico. El libro conoce la historia de Ajicar, el sabio de la corte asiria, que aparece como sobrino de Tobit (1:21–22, 14:10); para la Jewish Encyclopedia es una alusión ilustrativa, no una pieza del argumento."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Los temas se repiten de principio a fin: la limosna, que «libra de la muerte» (12:9); el deber de enterrar a los muertos, que le cuesta a Tobit la persecución; casarse dentro de la propia familia (6:16); la oración en la angustia, y un Dios que «castiga y tiene misericordia» (13:2). Rafael, «uno de los siete ángeles» que están ante la gloria del Señor (12:15), acompaña sin ser reconocido hasta el final. El himno del capítulo 13 y el discurso del 14 abren la mirada a la reconstrucción de Jerusalén y a la conversión de las naciones (14:5–7).\n\n[Tradición] La Catholic Encyclopedia resume el propósito del libro en que Dios es fiel a quienes le son fieles. [Estudio] La Jewish Encyclopedia subraya que el libro no expresa una esperanza mesiánica."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Tobit se conserva en dos formas griegas completas: una corta (GI), la de la mayoría de los manuscritos, con el Vaticano y el Alejandrino, y otra unas 1.700 palabras más larga (GII), que casi solo transmite el Codex Sinaiticus; hay además una tercera forma parcial en algunos minúsculos. El Sinaítico tiene errores de copista y dos lagunas grandes, y la Vetus Latina se tradujo de un texto muy parecido al suyo. Jerónimo hizo la Vulgata desde un texto arameo, con ayuda de un rabino, y según su propio prefacio en un solo día.\n\nEn esta web se lee el Sinaítico: sus saltos (4:7→4:19, 9:2→9:4, 13:7→13:11, 14:7→14:9) se anotan y no se rellenan."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Las comunidades judías no lo incluyeron en su canon, aunque circularon versiones arameas y hebreas del relato, algunas dentro de midrashim. En la Iglesia antigua lo citan Policarpo, Clemente de Alejandría, Orígenes —que advierte que los hebreos no lo usan, pero la Iglesia sí—, Cipriano y Ambrosio, que escribió un tratado sobre Tobías. Figura en las listas de Hipona (393) y Cartago (397) y fue declarado canónico en Trento (1546); la Iglesia griega lee desde antiguo el texto corto. Las tradiciones protestantes lo editan entre los apócrifos. La Catholic Encyclopedia (1912) defendía su carácter histórico; la Jewish Encyclopedia (1906) lo leía como un relato edificante."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer las dos historias en paralelo: Tobit y Sara rezan el mismo día con palabras semejantes, y el libro las resuelve juntas.\n2. Fijarse en la ironía del narrador: el lector sabe desde 3:17 quién es Rafael; los personajes, no hasta el capítulo 12.\n3. Distinguir la fecha del relato (Asiria) de la del libro (época del Segundo Templo).\n4. Comparar las dos formas griegas cuando una frase sorprenda: el texto corto abrevia diálogos y repeticiones del largo.\n5. No convertir la limosna en un mecanismo: en el libro va siempre unida a la justicia y a la oración (12:8)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Historia o relato edificante?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La Catholic Encyclopedia (1912) defiende la historicidad del libro: los Padres trataron a sus personajes como reales, y la Comisión Bíblica (1905) pedía no negar el carácter histórico de un libro tenido por histórico sin argumentos sólidos."
+        },
+        {
+          "label": "Estudio",
+          "body": "Autores citados por esa misma enciclopedia —Marshall, Erbt, Moulton— lo leen como un cuento popular o un relato doméstico edificante con elementos persas (Asmodeo) y relacionado con la historia de Ajicar; la Jewish Encyclopedia lo presenta como relato breve."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál de las dos formas griegas es la más antigua?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Para la mayoría de los estudiosos actuales, según Di Lella (NETS), la forma larga (GII, la del Sinaítico) está más cerca del original: tiene un colorido semítico más marcado y concuerda en general con los fragmentos de Qumrán."
+        },
+        {
+          "label": "Estudio",
+          "body": "Hasta el siglo XIX se prefería la forma corta (GI), que es la que tradujeron la King James (1611) y la RSV (1957), y autores como Deselaers y Gross siguen defendiendo su prioridad."
+        }
+      ]
+    }
+  ],
+  "sources": ["toy-1906-tobit", "drum-1912-tobias", "dilella-nets-tobit", "csp-codex-sinaiticus"],
+  "status": "borrador",
+  "updated": "2026-11-04"
+}

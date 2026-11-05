@@ -10,6 +10,7 @@ import { writeIndexes } from './scripts/content-lib.mjs';
 import { OG_IMAGE, siteRoutes } from './scripts/routes-lib.mjs';
 import { validate } from './scripts/validate-content.mjs';
 import { checkTimelineLabels } from './src/lib/timeline.js';
+import { BOOK_BY_ID } from './src/data/exegesis.js';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const CONTENT = path.join(ROOT, 'content');
@@ -173,6 +174,29 @@ function contentGuard() {
           }
         } catch (e) {
           errors.push(`content/temas.json → ${e.message}`);
+        }
+      }
+
+      // Fichas de libros: cada una cuadra con la tabla canónica, tiene 600–900
+      // palabras y solo cita fuentes del registro verificado (content/libros/fuentes.json).
+      const lDir = path.join(CONTENT, 'libros');
+      if (fs.existsSync(lDir)) {
+        let fuentes = new Set();
+        try {
+          const registro = JSON.parse(fs.readFileSync(path.join(lDir, 'fuentes.json'), 'utf8'));
+          validate('fuentes', registro);
+          fuentes = new Set(Object.keys(registro.fuentes));
+        } catch (e) {
+          errors.push(`content/libros/fuentes.json → ${e.message}`);
+        }
+        for (const f of fs.readdirSync(lDir).filter(x => x.endsWith('.json') && x !== 'fuentes.json')) {
+          const slug = f.replace(/\.json$/, '');
+          try {
+            const data = JSON.parse(fs.readFileSync(path.join(lDir, f), 'utf8'));
+            validate('libro', data, slug, { book: BOOK_BY_ID.get(slug) || null, fuentes });
+          } catch (e) {
+            errors.push(`content/libros/${f} → ${e.message}`);
+          }
         }
       }
 

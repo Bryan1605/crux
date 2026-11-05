@@ -19,6 +19,7 @@ import { loadExegesisIndex, loadLemmas, loadLexicon, loadWitnessBook } from '../
 import { hasSelection } from '../lib/selection';
 import { splitOverline, tokenizeGreek } from '../lib/greek';
 import { useSeo } from '../lib/site';
+import BookIntroPanel from '../components/BookIntroPanel/BookIntroPanel';
 
 import './Biblia.css';
 import './Exegesis.css';
@@ -887,6 +888,8 @@ export default function Exegesis() {
         {bookMeta && NUMBERING_NOTICE[bookMeta.id] && chapterHasCodex && (
           <p className="exg__notice">{NUMBERING_NOTICE[bookMeta.id]}</p>
         )}
+
+        {bookMeta && <BookIntroPanel bookId={bookMeta.id} bookName={bookMeta.name} />}
 
         {/* ------------------------------- barra ------------------------------- */}
         <div className="reader__bar exg__bar">

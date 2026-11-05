@@ -132,8 +132,11 @@ la elección:
 - **Esquema de ficha**: los campos de `FICHAS.md`/`PLANTILLA-FICHA.md` son una
   propuesta; si se añaden campos (por ejemplo, `related`), validarlos y
   documentarlos.
-- **Índice de fichas**: filtros por testamento/canon/estado; decidir si el
-  índice muestra fichas en `borrador` o solo las publicadas.
+- ~~**Índice de fichas**~~ — **resuelto el 2026-11-04**: `/biblia/libros` lista
+  los 73 libros de la tabla canónica; los que tienen ficha enlazan (también en
+  `borrador`, con la etiqueta visible) y los demás dicen «Ficha en preparación».
+  Filtros: todos, AT, NT y «con ficha» (el filtro por canon espera a que haya
+  más fichas, porque el canon solo consta en las fichas escritas).
 - **Revisión**: cómo marca el usuario una traducción/ficha como `revisado`
   (comentario, commit, checklist firmado). Hasta entonces, `borrador`.
 - **Hebreo**: formato exacto de los datos, tipografía y estrategia de alineación

@@ -16,9 +16,11 @@ Si eres un agente nuevo, lee en este orden:
 
 ## Estado en una línea
 
-Versión **0.11.0**, **214 rutas**, **73 libros**: 66 con NTV, 59 con Codex y
-**7 solo-Codex**; **708 paralelos**. El hebreo, la traducción de los seis libros
-solo-Codex y las 73 fichas están **planificados, no implementados**.
+Versión **0.11.0**, **216 rutas**, **73 libros**: 66 con NTV, 59 con Codex y
+**7 solo-Codex**; **708 paralelos**. **Tobit** ya tiene traducción de trabajo
+completa y ficha (las dos en `borrador`, pendientes de revisión). El hebreo, la
+traducción de los otros cinco libros solo-Codex y las 72 fichas restantes están
+**planificados, no implementados**.
 Los datos actuales están verificados en `ESTADO.md`.
 
 ## Reglas que no se negocian
@@ -57,7 +59,7 @@ Los datos actuales están verificados en `ESTADO.md`.
 | Índice y buscadores | `public/textos/exegesis/index.json`, `buscar-at.json`, `buscar-nt.json` | generados |
 | Léxico y lemas | `public/textos/exegesis/lexico.json`, `lemas/*.json`; fuente `content/lexico/griego.json` | generados/editable |
 | Traducción (propuesta) | `src/assets/texts/trad/<libro>.json` → `public/textos/exegesis/trad/<libro>.json` | **Tobit completo, borrador** (columna «Trad» en `/exegesis`) |
-| Fichas (propuesta) | `content/libros/<id>.json` → `public/textos/libros/` | **no existe aún** |
+| Fichas | `content/libros/<id>.json` + registro `content/libros/fuentes.json` → `/biblia/libros/<id>` | **Tobit** (borrador) |
 | Hebreo (propuesta) | `public/textos/hebreo/` y `/biblia/hebreo` | **no existe aún** |
 
 ## Cómo continuar
