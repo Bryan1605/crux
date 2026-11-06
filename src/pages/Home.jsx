@@ -1,4 +1,4 @@
-import { Suspense, lazy, useState } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import LiquidSwap from '../components/LiquidSwap/LiquidSwap';
@@ -98,12 +98,43 @@ function Flecha() {
   );
 }
 
+/**
+ * Dónde cuelga la cruz (coordenadas −1…1 del héroe). En escritorio, sobre la
+ * columna de la derecha; en móvil, a la derecha del titular, por detrás.
+ */
+function useCrossAnchor(heroRef, stageRef) {
+  const [anchor, setAnchor] = useState({ x: 0.45, restY: 0, z: 16 });
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero || typeof ResizeObserver === 'undefined') return undefined;
+    const measure = () => {
+      const h = hero.getBoundingClientRect();
+      const s = stageRef.current?.getBoundingClientRect();
+      const mobile = window.innerWidth <= 900 || !s || s.width === 0;
+      const next = mobile
+        ? // El héroe móvil es más alto (texto incluido): la cámara se aleja para
+          // que la cruz no crezca con él.
+          { x: 0.42, restY: 0.4, z: 24 }
+        : { x: Math.round((((s.left + s.width / 2 - h.left) / h.width) * 2 - 1) * 100) / 100, restY: 0, z: 16 };
+      setAnchor(a => (a.x === next.x && a.restY === next.restY && a.z === next.z ? a : next));
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(hero);
+    return () => ro.disconnect();
+  }, [heroRef, stageRef]);
+  return anchor;
+}
+
 export default function Home() {
   const site = useSite();
   const { home } = site;
   const navigate = useNavigate();
   const hayVideos = VIDEOS.length > 0;
   const [slide, setSlide] = useState(0);
+  const heroRef = useRef(null);
+  const stageRef = useRef(null);
+  const cross = useCrossAnchor(heroRef, stageRef);
   const actual = SLIDES[slide] || SLIDES[0];
 
   useSeo({ title: site.seo.title, description: site.seo.description });
@@ -118,12 +149,19 @@ export default function Home() {
   return (
     <main id="main" className="home">
       {/* Hero: texto y buscador a la izquierda, la cruz ortodoxa colgando a la derecha */}
-      <section className="hero" aria-labelledby="hero-title">
+      <section className="hero" aria-labelledby="hero-title" ref={heroRef}>
         <div
           className="hero__bg"
           aria-hidden="true"
           style={{ backgroundImage: `url(${assetUrl('/img/banners/herobanner4-nicodemo.webp')})` }}
         />
+        {/* La cruz ocupa todo el héroe, entre la imagen y el velo: pasa por detrás
+            del texto y allí se oscurece como la imagen. */}
+        <div className="hero__cross" aria-hidden="true">
+          <Suspense fallback={null}>
+            <CrossLanyard anchorX={cross.x} restY={cross.restY} position={[0, 0, cross.z]} />
+          </Suspense>
+        </div>
         <div className="hero__scrim" aria-hidden="true" />
         <div className="container hero__grid">
           <div className="hero__copy">
@@ -180,10 +218,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero__stage">
-            <Suspense fallback={<div className="cross-lanyard-wrapper" aria-hidden="true" />}>
-              <CrossLanyard position={[0, 0, 16]} gravity={[0, -40, 0]} />
-            </Suspense>
+          <div className="hero__stage" ref={stageRef}>
             <p className="hero__hint" aria-hidden="true">
               Arrastra la cruz
             </p>

@@ -513,6 +513,96 @@ try {
   );
   await reduced.close();
 
+  // ---------------------------------------------------------------- cruz 3D
+  // El componente publica en `data-cross` el centro de la cruz (px del lienzo)
+  // y en `data-state` si la física corre («activa») o está pausada.
+  const cruz = p =>
+    p.evaluate(() => {
+      const w = document.querySelector('.hero__cross .cross-lanyard-wrapper');
+      const c = w?.querySelector('canvas')?.getBoundingClientRect();
+      const h = document.querySelector('.hero')?.getBoundingClientRect();
+      const [x, y] = (w?.dataset.cross || '').split(',').map(Number);
+      return { estado: w?.dataset.state, x, y, cw: c?.width, ch: c?.height, cl: c?.left, ct: c?.top, hw: h?.width, hh: h?.height };
+    });
+  const dentro = q => q.x >= 0 && q.x <= q.cw && q.y >= 0 && q.y <= q.ch;
+
+  const pc = await makePage();
+  await pc.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });
+  await pc.waitForSelector('.hero__cross canvas', { timeout: 30000 });
+  // Primer cuadro con la cruz ya cargada (el modelo 3D tarda en llegar).
+  await pc.waitForFunction(() => document.querySelector('.hero__cross .cross-lanyard-wrapper')?.dataset.cross, { timeout: 30000 });
+  const c0 = await cruz(pc);
+  const capas = await pc.evaluate(() => {
+    const z = s => getComputedStyle(document.querySelector(s)).zIndex;
+    const orden = [...document.querySelector('.hero').children].map(e => e.className.split(' ')[0]);
+    return { grid: z('.hero__grid'), orden };
+  });
+  check(
+    'cruz: el lienzo cubre todo el héroe, por detrás del texto y del velo',
+    Math.abs(c0.cw - c0.hw) <= 1 && Math.abs(c0.ch - c0.hh) <= 1 && capas.grid === '1' &&
+      capas.orden.indexOf('hero__cross') < capas.orden.indexOf('hero__scrim'),
+    `${Math.round(c0.cw)}×${Math.round(c0.ch)} · ${capas.orden.join(' > ')}`
+  );
+  check('cruz: en su primer cuadro ya cuelga dentro del héroe', dentro(c0) && c0.y < c0.ch * 0.8, `${c0.x},${c0.y}`);
+  await wait(1500);
+  const c1 = await cruz(pc);
+  check('cruz: no cae ni rebota al cargar (quieta en su sitio)', Math.abs(c1.y - c0.y) <= 12 && Math.abs(c1.x - c0.x) <= 12, `${c0.x},${c0.y} → ${c1.x},${c1.y}`);
+
+  // Agarrarla y llevarla hacia el texto y arriba: se ve, y al soltarla no sale.
+  const sx = c1.cl + c1.x;
+  const sy = c1.ct + c1.y;
+  await pc.mouse.move(sx, sy);
+  await pc.mouse.down();
+  for (let i = 1; i <= 14; i++) {
+    await pc.mouse.move(sx - i * 60, sy - i * 50);
+    await wait(16);
+  }
+  await wait(200);
+  const cHeld = await cruz(pc);
+  check('cruz: arrastrada hacia el texto sigue visible', dentro(cHeld) && cHeld.x < c1.x - 200, `${cHeld.x},${cHeld.y}`);
+  await pc.mouse.up();
+  let fuera = 0;
+  for (let i = 0; i < 12; i++) {
+    await wait(150);
+    if (!dentro(await cruz(pc))) fuera++;
+  }
+  await wait(3000);
+  const cEnd = await cruz(pc);
+  check('cruz: al soltarla no sale del héroe y vuelve a su sitio', fuera === 0 && Math.abs(cEnd.x - c1.x) < 40, `fuera ${fuera}/12 · ${cEnd.x},${cEnd.y}`);
+  await pc.evaluate(() => window.scrollTo(0, 2500));
+  await wait(500);
+  check('cruz: se pausa fuera de pantalla', (await cruz(pc)).estado === 'pausada');
+  await pc.close();
+
+  const pm = await browser.newPage();
+  await pm.setViewport({ width: 390, height: 844, isMobile: true, hasTouch: true });
+  await pm.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });
+  await pm.waitForSelector('.hero__cross canvas', { timeout: 30000 });
+  await wait(1500);
+  const m0 = await cruz(pm);
+  const titular = await pm.evaluate(() => Math.round(document.querySelector('.hero__copy h1').getBoundingClientRect().top));
+  check('cruz móvil: cuelga por detrás y el titular queda en la primera pantalla', dentro(m0) && titular < 400, `cruz ${m0.x},${m0.y} · titular a ${titular}px`);
+  const cdp = await pm.createCDPSession();
+  const swipe = async (x, y0, dy) => {
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y: y0 }] });
+    for (let i = 1; i <= 10; i++) {
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: x - i * dy[0], y: y0 + i * dy[1] }] });
+      await wait(16);
+    }
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  };
+  await swipe(m0.cl + m0.x, m0.ct + m0.y, [12, 8]);
+  await wait(150);
+  const m1 = await cruz(pm);
+  const scrollCruz = await pm.evaluate(() => window.scrollY);
+  check('cruz móvil: un toque sobre la cruz la arrastra sin desplazar la página', scrollCruz === 0 && Math.hypot(m1.x - m0.x, m1.y - m0.y) > 20, `cruz ${m0.x},${m0.y} → ${m1.x},${m1.y} · scroll ${scrollCruz}`);
+  await wait(3000);
+  await swipe(40, 700, [0, -25]);
+  await wait(500);
+  const scrollFuera = await pm.evaluate(() => window.scrollY);
+  check('cruz móvil: fuera de la cruz el dedo desplaza la página', scrollFuera > 100, `scroll ${scrollFuera}px`);
+  await pm.close();
+
   // ---------------------------------------------------------------- portada
   const home = await makePage('no-preference', 1280, 900);
   await home.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });

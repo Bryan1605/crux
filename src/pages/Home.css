@@ -62,9 +62,24 @@
   );
 }
 
+/* La cruz ocupa todo el héroe, entre la imagen y el velo: por detrás del texto. */
+.hero__cross {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__cross .cross-lanyard-wrapper {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+}
+
 .hero__grid {
   position: relative;
   z-index: 1;
+  /* Los huecos del texto dejan pasar el puntero a la cruz; los textos y los
+     controles lo recogen (ver .hero__copy > *). */
+  pointer-events: none;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
@@ -109,10 +124,10 @@
   margin-right: calc((100vw - min(1160px, 100vw - 2.5rem)) / -2);
 }
 
-.hero__stage .cross-lanyard-wrapper {
-  position: absolute;
-  inset: 0;
-  min-height: 0;
+/* Solo los controles recogen el puntero: el titular y los párrafos dejan
+   agarrar la cruz que cuelga por detrás. */
+.hero__copy :is(a, button, input, label, form, .hero__chips) {
+  pointer-events: auto;
 }
 
 .hero__hint {
@@ -253,11 +268,9 @@
     min-height: 0;
   }
 
-  /* En móvil la cruz va arriba y el texto debajo. */
+  /* En móvil la cruz cuelga por detrás del titular: no hay columna para ella. */
   .hero__stage {
-    order: -1;
-    min-height: clamp(340px, 52svh, 460px);
-    margin: 0 calc(-1 * (100vw - min(1160px, 100vw - 2.5rem)) / 2);
+    display: none;
   }
 
   /* La imagen se ve arriba, detrás de la cruz, y se oscurece bajo el texto. */
@@ -272,7 +285,7 @@
   }
 
   .hero__copy {
-    padding: var(--sp-3) 0 var(--sp-7);
+    padding: calc(60px + 1.2em + var(--sp-6)) 0 var(--sp-7);
   }
 
   .hero__hint {
@@ -281,10 +294,6 @@
 }
 
 @media (max-width: 620px) {
-  .hero__stage {
-    margin: 0 calc(-1 * (100vw - min(1160px, 100vw - 1.75rem)) / 2);
-  }
-
   .hero__copy h1 {
     font-size: clamp(2.6rem, 12vw, 3.4rem);
   }
