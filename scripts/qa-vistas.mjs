@@ -603,6 +603,61 @@ try {
   check('cruz móvil: fuera de la cruz el dedo desplaza la página', scrollFuera > 100, `scroll ${scrollFuera}px`);
   await pm.close();
 
+  // ---------------------------------------------------------------- barras de lectura
+  for (const [w, h] of [[390, 844], [1280, 900]]) {
+    for (const [nombre, url] of [['exégesis', '/exegesis?libro=juan&cap=3'], ['NTV', '/biblia/ntv?libro=juan&cap=3']]) {
+      const pb = await browser.newPage();
+      await pb.setViewport({ width: w, height: h, isMobile: w < 800, hasTouch: w < 800 });
+      await pb.goto(`${BASE}${url}`, { waitUntil: 'domcontentloaded' });
+      await pb.waitForSelector('.exg__bar', { timeout: 30000 });
+      await wait(1200);
+      await pb.evaluate(() => window.scrollTo(0, 800));
+      await wait(400);
+      const bar = await pb.evaluate(() => {
+        const r = document.querySelector('.exg__bar').getBoundingClientRect();
+        const nav = document.querySelector('.card-nav').getBoundingClientRect();
+        const ctrls = [...document.querySelectorAll('.exg__bar :is(button, select, input, a)')].filter(e => {
+          const b = e.getBoundingClientRect();
+          return b.width > 0 && b.height > 0;
+        });
+        return {
+          alto: Math.round(r.height),
+          top: Math.round(r.top),
+          nav: Math.round(nav.bottom),
+          min: Math.min(...ctrls.map(e => Math.round(e.getBoundingClientRect().height)))
+        };
+      });
+      check(
+        `barra ${nombre} ${w}px: pegada bajo el menú, sin taparse`,
+        bar.top >= bar.nav,
+        `barra a ${bar.top}px · menú hasta ${bar.nav}px`
+      );
+      if (w < 900) {
+        check(`barra ${nombre} móvil: una fila de ≤ 64 px y controles ≥ 44 px`, bar.alto <= 64 && bar.min >= 44, `${bar.alto}px · control mínimo ${bar.min}px`);
+        await pb.click('.exg__where');
+        await wait(250);
+        const abierto = await pb.evaluate(() => {
+          const nav = document.querySelector('.exg__nav');
+          return getComputedStyle(nav).display !== 'none' && nav.querySelectorAll('select').length >= 3;
+        });
+        await pb.keyboard.press('Escape');
+        await wait(200);
+        const cerrado = await pb.evaluate(() => getComputedStyle(document.querySelector('.exg__nav')).display === 'none');
+        check(`barra ${nombre} móvil: «Ir a · buscar» abre los selectores y Esc lo cierra`, abierto && cerrado);
+      } else {
+        check(`barra ${nombre} escritorio: una sola fila`, bar.alto <= 60, `${bar.alto}px`);
+      }
+      await pb.click('.rmenu__toggle');
+      await wait(200);
+      const menu = await pb.evaluate(() => {
+        const p = document.querySelector('.rmenu__panel');
+        return !p.hidden && p.querySelectorAll('button').length >= 3;
+      });
+      check(`barra ${nombre} ${w}px: el menú «Aa» abre tamaño de letra y papel`, menu);
+      await pb.close();
+    }
+  }
+
   // ---------------------------------------------------------------- portada
   const home = await makePage('no-preference', 1280, 900);
   await home.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });

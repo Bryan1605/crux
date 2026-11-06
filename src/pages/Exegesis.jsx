@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
 import BibleSearch from '../components/BibleSearch';
+import ReaderMenu from '../components/ReaderMenu';
 import BibleCta from '../components/BibleCta';
 import LexiconPanel from '../components/LexiconPanel';
 import NtvInline from '../components/NtvInline';
@@ -274,6 +275,7 @@ export default function Exegesis() {
   const [size, setSize] = useState(() => Number(read(KEYS.size, 19)));
   const [mode, setMode] = useState(readMode);
   const [pop, setPop] = useState(null);
+  const [navOpen, setNavOpen] = useState(false);
 
   const gridRef = useRef(null);
   const chapterKey = useRef('');
@@ -567,6 +569,25 @@ export default function Exegesis() {
     [params, setParams]
   );
 
+  // El panel «Ir a · buscar» de la barra compacta se cierra con Esc o al tocar fuera.
+  useEffect(() => {
+    if (!navOpen) return undefined;
+    const onKey = e => e.key === 'Escape' && setNavOpen(false);
+    const onDown = e => !e.target.closest?.('.exg__bar') && setNavOpen(false);
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onDown);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('pointerdown', onDown);
+    };
+  }, [navOpen]);
+
+  /** Capítulo anterior/siguiente (barra compacta). */
+  const stepChapter = dir => {
+    const next = chapterNums[chapterNums.indexOf(chapterNum) + dir];
+    if (next) goto({ chapter: next, range: '' }, true);
+  };
+
   const select = useCallback(
     (n, { keepPop = false } = {}) => {
       const q = new URLSearchParams(params);
@@ -627,6 +648,32 @@ export default function Exegesis() {
   const viewMode = view.id;
   const shown = view.columns;
   const columns = shown.length;
+
+  /** Botones de columnas (en la barra o, en móvil, dentro del menú «Aa»). */
+  const modeButtons = (
+    <>
+      {availableModes.map(m => (
+        <button
+          key={m.id}
+          type="button"
+          className={`rb-btn rb-btn--icon${viewMode === m.id ? ' is-active' : ''}`}
+          aria-pressed={viewMode === m.id}
+          title={m.label}
+          aria-label={m.label}
+          onClick={() => {
+            setMode(m.id);
+            if (modeParam) {
+              const q = new URLSearchParams(params);
+              q.delete('modo');
+              setParams(q, { replace: true });
+            }
+          }}
+        >
+          {m.columns.length > 1 ? <LayoutGlyph two /> : m.short}
+        </button>
+      ))}
+    </>
+  );
 
   /* --------------------------------- SEO ---------------------------------- */
 
@@ -893,6 +940,43 @@ export default function Exegesis() {
 
         {/* ------------------------------- barra ------------------------------- */}
         <div className="reader__bar exg__bar">
+          {/* En pantallas estrechas: «Juan 3 ▾» abre selectores y buscador, y ‹ ›
+              pasan de capítulo. En anchas no se ven (todo cabe en la fila). */}
+          <div className="exg__compact">
+            <button
+              type="button"
+              className="exg__where"
+              aria-expanded={navOpen}
+              aria-controls="exg-nav"
+              onClick={() => setNavOpen(o => !o)}
+            >
+              <span className="exg__where-text">
+                {bookMeta?.name} {chapterNum}
+              </span>
+              <span className="exg__where-hint">Ir a · buscar</span>
+              <span aria-hidden="true">▾</span>
+            </button>
+            <button
+              type="button"
+              className="rb-btn rb-btn--icon exg__step"
+              onClick={() => stepChapter(-1)}
+              disabled={chapterNums.indexOf(chapterNum) <= 0}
+              aria-label="Capítulo anterior"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button
+              type="button"
+              className="rb-btn rb-btn--icon exg__step"
+              onClick={() => stepChapter(1)}
+              disabled={chapterNums.indexOf(chapterNum) >= chapterNums.length - 1}
+              aria-label="Capítulo siguiente"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+
+          <div className="exg__nav" id="exg-nav" data-open={navOpen ? 'true' : 'false'}>
           <div className="reader__bar-group">
             <div className="exg__select">
               <label htmlFor="exg-book">Libro</label>
@@ -994,36 +1078,22 @@ export default function Exegesis() {
               q.delete('vv');
               q.set('v', String(record.verse));
               setPop(null);
+              setNavOpen(false);
               setParams(q);
             }}
           />
+          </div>
 
-          <div className="reader__bar-group">
+          <div className="reader__bar-group exg__modes-bar">
             <div className="exg__modes" role="group" aria-label="Columnas que se ven">
-              {availableModes.map(m => (
-                <button
-                  key={m.id}
-                  type="button"
-                  className={`rb-btn rb-btn--icon${viewMode === m.id ? ' is-active' : ''}`}
-                  aria-pressed={viewMode === m.id}
-                  title={m.label}
-                  aria-label={m.label}
-                  onClick={() => {
-                    setMode(m.id);
-                    if (modeParam) {
-                      const q = new URLSearchParams(params);
-                      q.delete('modo');
-                      setParams(q, { replace: true });
-                    }
-                  }}
-                >
-                  {m.columns.length > 1 ? <LayoutGlyph two /> : m.short}
-                </button>
-              ))}
+              {modeButtons}
             </div>
           </div>
 
-          <div className="reader__bar-group">
+          <ReaderMenu>
+            <div className="exg__modes exg__modes--menu" role="group" aria-label="Columnas que se ven">
+              {modeButtons}
+            </div>
             <div className="reader__size" role="group" aria-label="Tamaño de letra">
               <button
                 type="button"
@@ -1046,12 +1116,12 @@ export default function Exegesis() {
             </div>
             <button
               type="button"
-              className="rb-btn rb-btn--icon"
+              className="rb-btn"
               onClick={cycleTheme}
-              title={themeDef.label}
               aria-label={`Tema del papel: ${themeDef.label}. Cambiar`}
             >
-              {themeDef.glyph}
+              <span aria-hidden="true">{themeDef.glyph}</span>
+              <span className="rmenu__text">{themeDef.label}</span>
             </button>
             <button
               type="button"
@@ -1060,8 +1130,8 @@ export default function Exegesis() {
               title="Diccionario griego → español"
               aria-haspopup="dialog"
             >
-              <span className="rb-btn__text">Diccionario</span>
               <span aria-hidden="true">α</span>
+              <span className="rmenu__text">Diccionario</span>
             </button>
             {facsimile && (
               <a
@@ -1071,11 +1141,11 @@ export default function Exegesis() {
                 rel="noopener noreferrer"
                 title="Facsímil del Codex Sinaiticus en codexsinaiticus.org"
               >
-                <span className="rb-btn__text">Facsímil</span>
                 <span aria-hidden="true">↗</span>
+                <span className="rmenu__text">Facsímil</span>
               </a>
             )}
-          </div>
+          </ReaderMenu>
         </div>
 
         {/* ------------------------------ testigos ----------------------------- */}

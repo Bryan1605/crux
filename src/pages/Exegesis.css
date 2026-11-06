@@ -53,7 +53,8 @@
 
 .exg__bar {
   position: sticky;
-  top: calc(76px + var(--marquee-h, 0px));
+  /* Justo bajo el menú flotante (que acaba a ~82 px de la barra de versículos). */
+  top: calc(var(--marquee-h, 0px) + 90px);
   margin-bottom: var(--sp-4, 1rem);
   border-radius: 18px;
 }
@@ -986,51 +987,6 @@
   }
 }
 
-@media (max-width: 700px) {
-  .exg__bar {
-    top: 62px;
-    border-radius: 20px;
-  }
-
-  /* En pantallas estrechas los selectores pasan a una rejilla de dos columnas
-     (el libro ocupa la fila completa) para que nada desborde a lo ancho. */
-  .exg__bar > .reader__bar-group:first-child {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.35rem 0.5rem;
-    flex: 1 1 100%;
-    align-items: center;
-  }
-
-  .exg__select {
-    min-width: 0;
-    padding-inline: 0;
-  }
-
-  .exg__select:first-child {
-    grid-column: 1 / -1;
-  }
-
-  .exg__select + .exg__select {
-    border-left: 0;
-  }
-
-  .exg__select select {
-    min-width: 0;
-    max-width: none;
-    width: 100%;
-  }
-
-  /* El resto de controles también puede repartirse en varias líneas. */
-  .exg__bar .reader__bar-group {
-    flex-wrap: wrap;
-  }
-
-  .exg__bar .rb-btn {
-    padding-inline: 0.55rem;
-  }
-}
-
 /* --- traducción de trabajo (Trad) ------------------------------------------ */
 
 .exg-row__cell--trad {
@@ -1057,4 +1013,211 @@
   font-size: 0.78rem;
   line-height: 1.55;
   color: var(--muted);
+}
+
+/* --- barra compacta y menú «Aa» (exégesis y NTV) -------------------------- */
+
+/* En anchas: los selectores y el buscador forman parte de la fila. */
+.exg__compact {
+  display: none;
+}
+
+.exg__nav {
+  display: contents;
+}
+
+.exg__modes--menu {
+  display: none;
+}
+
+.rmenu {
+  position: relative;
+}
+
+.rmenu__toggle {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.rmenu__panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.25rem;
+  min-width: 15rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #111114;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.rmenu__panel[hidden] {
+  display: none;
+}
+
+.rmenu__panel .rb-btn {
+  justify-content: flex-start;
+  gap: 0.65rem;
+  min-height: 44px;
+  padding-inline: 0.75rem;
+  border-radius: 10px;
+}
+
+.rmenu__panel .reader__size {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
+  padding: 0 0 0.25rem;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.rmenu__panel .reader__size .rb-btn {
+  justify-content: center;
+}
+
+.rmenu__text {
+  font-size: 0.88rem;
+}
+
+@media (max-width: 900px) {
+  .exg__bar {
+    top: calc(var(--marquee-h, 0px) + 86px);
+    gap: 0.3rem;
+    padding: 0.35rem;
+    border-radius: 16px;
+  }
+
+  .exg__compact {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  .exg__where {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--panel);
+    color: var(--text);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .exg__where[aria-expanded='true'] {
+    border-color: var(--border-strong);
+  }
+
+  .exg__where:focus-visible {
+    outline: 2px solid #ca8700;
+    outline-offset: 2px;
+  }
+
+  .exg__where-text {
+    overflow: hidden;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .exg__where-hint {
+    margin-left: auto;
+    font-size: 0.72rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .exg__bar .rb-btn--icon,
+  .exg__modes .rb-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .exg__step {
+    color: var(--text);
+    font-size: 1.35rem;
+  }
+
+  /* Panel «Ir a · buscar», bajo la barra. */
+  .exg__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    z-index: 30;
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #111114;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .exg__nav[data-open='true'] {
+    display: flex;
+  }
+
+  .exg__nav > .reader__bar-group:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  .exg__nav .exg__select {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .exg__nav .exg__select:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .exg__nav .exg__select select {
+    width: 100%;
+    max-width: none;
+    min-height: 44px;
+  }
+}
+
+/* En teléfonos, las columnas pasan al menú «Aa» para que la fila quepa. */
+@media (max-width: 560px) {
+  .exg__modes-bar {
+    display: none;
+  }
+
+  .exg__modes--menu {
+    display: flex;
+    justify-content: stretch;
+    margin-bottom: 0.25rem;
+  }
+
+  .exg__modes--menu .rb-btn {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+
+  .exg__where-hint {
+    display: none;
+  }
 }

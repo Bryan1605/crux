@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
 import BibleSearch from '../components/BibleSearch';
+import ReaderMenu from '../components/ReaderMenu';
 import BibleCta from '../components/BibleCta';
 import BookIntroPanel from '../components/BookIntroPanel/BookIntroPanel';
 import ChapterAudio from '../components/ChapterAudio';
@@ -278,6 +279,7 @@ export default function BibliaNtv() {
   const [size, setSize] = useState(() => Number(read(KEYS.size, 18)));
   const [mode, setMode] = useState(() => (read(KEYS.view, 'rejilla') === 'dos' ? 'dos' : 'rejilla'));
   const [pop, setPop] = useState(null);
+  const [navOpen, setNavOpen] = useState(false);
 
   const railRef = useRef(null);
   const gridRef = useRef(null);
@@ -356,6 +358,25 @@ export default function BibliaNtv() {
     },
     [params, setParams]
   );
+
+  // El panel «Ir a · buscar» de la barra compacta se cierra con Esc o al tocar fuera.
+  useEffect(() => {
+    if (!navOpen) return undefined;
+    const onKey = e => e.key === 'Escape' && setNavOpen(false);
+    const onDown = e => !e.target.closest?.('.exg__bar') && setNavOpen(false);
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onDown);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('pointerdown', onDown);
+    };
+  }, [navOpen]);
+
+  /** Capítulo anterior/siguiente (barra compacta). */
+  const stepChapter = dir => {
+    const next = chaptersOfBook[chaptersOfBook.indexOf(chapterNum) + dir];
+    if (next) goto({ chapter: next });
+  };
 
   const goto = (next, push = true) => {
     const q = new URLSearchParams(params);
@@ -525,6 +546,42 @@ export default function BibliaNtv() {
         {bookMeta && <BookIntroPanel bookId={bookId} bookName={bookMeta.name} />}
 
         <div className="reader__bar exg__bar">
+          {/* En pantallas estrechas: «Juan 3 ▾» abre selectores y buscador; ‹ › pasan de capítulo. */}
+          <div className="exg__compact">
+            <button
+              type="button"
+              className="exg__where"
+              aria-expanded={navOpen}
+              aria-controls="ntv-nav"
+              onClick={() => setNavOpen(o => !o)}
+            >
+              <span className="exg__where-text">
+                {book?.name || bookMeta?.name} {chapterNum}
+              </span>
+              <span className="exg__where-hint">Ir a · buscar</span>
+              <span aria-hidden="true">▾</span>
+            </button>
+            <button
+              type="button"
+              className="rb-btn rb-btn--icon exg__step"
+              onClick={() => stepChapter(-1)}
+              disabled={chaptersOfBook.indexOf(chapterNum) <= 0}
+              aria-label="Capítulo anterior"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button
+              type="button"
+              className="rb-btn rb-btn--icon exg__step"
+              onClick={() => stepChapter(1)}
+              disabled={chaptersOfBook.indexOf(chapterNum) >= chaptersOfBook.length - 1}
+              aria-label="Capítulo siguiente"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+
+          <div className="exg__nav" id="ntv-nav" data-open={navOpen ? 'true' : 'false'}>
           <div className="reader__bar-group">
             <div className="exg__select">
               <label htmlFor="ntv-book">Libro</label>
@@ -604,9 +661,11 @@ export default function BibliaNtv() {
               q.set('cap', String(record.chapter));
               q.set('v', String(record.verse));
               setPop(null);
+              setNavOpen(false);
               setParams(q);
             }}
           />
+          </div>
 
           <div className="reader__bar-group">
             <button
@@ -624,7 +683,7 @@ export default function BibliaNtv() {
             </button>
           </div>
 
-          <div className="reader__bar-group">
+          <ReaderMenu>
             <div className="reader__size" role="group" aria-label="Tamaño de letra">
               <button
                 type="button"
@@ -647,14 +706,14 @@ export default function BibliaNtv() {
             </div>
             <button
               type="button"
-              className="rb-btn rb-btn--icon"
+              className="rb-btn"
               onClick={cycleTheme}
-              title={themeDef.label}
               aria-label={`Tema del papel: ${themeDef.label}. Cambiar`}
             >
-              {themeDef.glyph}
+              <span aria-hidden="true">{themeDef.glyph}</span>
+              <span className="rmenu__text">{themeDef.label}</span>
             </button>
-          </div>
+          </ReaderMenu>
         </div>
 
         {!chapter ? (
