@@ -1,5 +1,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 
+import './ReaderMenu.css';
+
 /**
  * Menú «Aa» de las barras de lectura: agrupa los ajustes que no se usan a cada
  * momento (tamaño de letra, papel, diccionario, facsímil) para que la barra

@@ -658,8 +658,57 @@ try {
     }
   }
 
+  // ---------------------------------------------------------------- libro de la Patrística
+  for (const [w, h] of [[390, 844], [768, 1024], [1440, 900]]) {
+    const pl = await browser.newPage();
+    const movil = w < 900;
+    await pl.setViewport({ width: w, height: h, isMobile: movil, hasTouch: movil });
+    await pl.goto(`${BASE}/biblia?pag=p2-1.1`, { waitUntil: 'domcontentloaded' });
+    await pl.waitForSelector('.book .book-page__body', { timeout: 60000 });
+    await wait(1500);
+    const libro = await pl.evaluate(() => {
+      const bar = document.querySelector('.reader__bar').getBoundingClientRect();
+      const nav = document.querySelector('.card-nav').getBoundingClientRect();
+      const book = document.querySelector('.book').getBoundingClientRect();
+      const ctrls = [...document.querySelectorAll('.reader__bar :is(button, a, input)')].filter(e => {
+        const b = e.getBoundingClientRect();
+        return b.width > 0 && b.height > 0;
+      });
+      return {
+        barTop: Math.round(bar.top),
+        barAlto: Math.round(bar.height),
+        nav: Math.round(nav.bottom),
+        top: Math.round(book.top),
+        bottom: Math.round(book.bottom),
+        min: Math.min(...ctrls.map(e => Math.round(e.getBoundingClientRect().height))),
+        pag: document.querySelector('.reader__bar')?.textContent.match(/p\.\s*(\d+)/)?.[1] || ''
+      };
+    });
+    check(
+      `libro ${w}px: la hoja cabe entera en pantalla, bajo la barra`,
+      libro.top >= libro.barTop + libro.barAlto && libro.bottom <= h,
+      `libro ${libro.top}–${libro.bottom}px · pantalla ${h}px`
+    );
+    check(`libro ${w}px: la barra va bajo el menú`, libro.barTop >= libro.nav, `barra ${libro.barTop}px · menú ${libro.nav}px`);
+    if (movil) {
+      check(`libro ${w}px: barra de ≤ 64 px y controles ≥ 44 px`, libro.barAlto <= 64 && libro.min >= 44, `${libro.barAlto}px · control mínimo ${libro.min}px`);
+      const cdp = await pl.createCDPSession();
+      const y = Math.round((libro.top + libro.bottom) / 2);
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: w - 60, y }] });
+      for (let i = 1; i <= 10; i++) {
+        await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: w - 60 - i * 22, y }] });
+        await wait(16);
+      }
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+      await wait(900);
+      const despues = await pl.evaluate(() => document.querySelector('.reader__bar')?.textContent.match(/p\.\s*(\d+)/)?.[1] || '');
+      check(`libro ${w}px: deslizar pasa la hoja`, Number(despues) > Number(libro.pag), `p. ${libro.pag} → ${despues}`);
+    }
+    await pl.close();
+  }
+
   // ---------------------------------------------------------------- portada
-  const home = await makePage('no-preference', 1280, 900);
+  const home =await makePage('no-preference', 1280, 900);
   await home.goto(`${BASE}/`, { waitUntil: 'domcontentloaded' });
   await wait(3200);
 

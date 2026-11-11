@@ -57,6 +57,9 @@
 .book {
   position: relative;
   display: grid;
+  /* Todas las hojas miden lo mismo: el alto con el que se paginó (no el de su
+     contenido, que dejaba hojas cortas en las que acaba un párrafo largo). */
+  height: var(--page-h, auto);
   background: var(--paper);
   border-radius: 4px;
   /* El arrastre horizontal es «pasar hoja»; el vertical sigue siendo scroll. */

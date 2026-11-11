@@ -16,6 +16,10 @@ const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 /**
  * Geometría del libro a partir del hueco disponible.
  *
+ * `height` es el alto que puede ocupar la página (lo que deja libre el lector:
+ * ver `availableHeight()` en Biblia.jsx). La página no pasa de 1,8 veces su
+ * ancho, para que en pantallas muy altas no quede una columna interminable.
+ *
  * `bodyH` es la altura realmente disponible para el texto (la página menos los
  * márgenes, el encabezado y el folio): es la que se usa para paginar.
  */
@@ -25,7 +29,7 @@ export function bookGeometry({ width, height, fontSize = 17 }) {
   const spine = wide ? 92 : 0; // lomo + aire entre páginas
   const raw = (width - spine) / columns;
   const pageW = Math.round(clamp(raw, 296, wide ? 620 : 700));
-  const pageH = Math.round(clamp(Math.min(height * 0.76, pageW * 1.5), 360, 860));
+  const pageH = Math.round(clamp(Math.min(height, pageW * 1.8), 360, 1000));
   const pad = Math.round(clamp(pageW * 0.078, 16, 34));
   const head = 36; // encabezado + separación (fijo en CSS)
   const foot = 32; // folio (fijo en CSS)

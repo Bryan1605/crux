@@ -267,7 +267,8 @@
 
 .reader__bar {
   position: sticky;
-  top: calc(76px + var(--marquee-h, 0px));
+  /* Justo bajo el menú flotante (que acaba a ~82 px de la barra de versículos). */
+  top: calc(var(--marquee-h, 0px) + 90px);
   z-index: 6;
   display: flex;
   flex-wrap: wrap;
@@ -872,4 +873,99 @@
    así los folios del índice coinciden con los del libro. */
 .biblia__ruler {
   width: min(1560px, calc(100% - 2rem));
+}
+
+/* --- lector en pantallas estrechas: una fila y el libro a pantalla ---------- */
+
+.reader__more {
+  display: none;
+}
+
+.reader__hint-touch {
+  display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .reader__hint-mouse {
+    display: none;
+  }
+
+  .reader__hint-touch {
+    display: inline;
+  }
+}
+
+@media (max-width: 900px) {
+  /* En el lector, las migas ceden su sitio al libro. */
+  .biblia--reader .biblia__crumbs {
+    display: none;
+  }
+
+  .biblia--reader .biblia__reader {
+    padding-top: calc(60px + 1.2em + var(--sp-4));
+  }
+
+  .reader__bar {
+    top: calc(var(--marquee-h, 0px) + 86px);
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    padding: 0.35rem;
+    border-radius: 16px;
+  }
+
+  .reader__bar-group--center {
+    order: 0;
+    width: auto;
+    flex: 1 1 auto;
+    justify-content: center;
+    gap: 0;
+    min-width: 0;
+  }
+
+  .reader__back,
+  .reader__prefs {
+    display: none;
+  }
+
+  .reader__more {
+    display: block;
+  }
+
+  .reader__bar .rb-btn,
+  .reader__bar .rb-btn--icon {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .reader__status {
+    white-space: nowrap;
+  }
+
+  /* Dentro del menú «Aa»: muestras y modos a lo ancho. */
+  .rmenu__panel .reader__papers {
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .rmenu__panel .reader__paper {
+    width: 32px;
+    height: 32px;
+  }
+
+  .rmenu__panel .reader__modes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0.25rem;
+  }
+
+  .rmenu__panel .reader__mode {
+    min-height: 44px;
+  }
+
+  .reader__progress {
+    left: 0.9rem;
+    right: 0.9rem;
+  }
 }

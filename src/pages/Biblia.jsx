@@ -15,6 +15,7 @@ import BlockView from '../components/Book/BlockView';
 import BookMeasurer from '../components/Book/BookMeasurer';
 import BookIndex, { groupWorks } from '../components/BookIndex/BookIndex';
 import BibleCta from '../components/BibleCta';
+import ReaderMenu from '../components/ReaderMenu';
 import { partInfo, plainLabel, standardKind } from '../lib/bibliaGlyphs';
 
 import './Estudio.css';
@@ -139,18 +140,25 @@ const write = (key, value) => {
 
 const clampSize = value => Math.min(FS_MAX, Math.max(FS_MIN, Number(value) || 17));
 
-/** Alto de la barra del lector + su línea de progreso (fijo en CSS). */
-const READER_BAR_H = 64;
+/**
+ * Lo que ocupa el lector alrededor del libro (fijo en CSS): arriba, el hueco bajo
+ * el menú flotante, la barra y su línea de progreso; abajo, el aviso.
+ */
+const readerChrome = width => (width <= 900 ? { top: 86 + 57 + 20, bottom: 36 } : { top: 90 + 55 + 20, bottom: 44 });
+
+const marqueeH = () =>
+  parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--marquee-h')) || 0;
 
 /**
- * Alto disponible para el libro: la ventana menos la barra de versículos
- * (`--marquee-h`, arriba) y la barra del lector. Se usa igual en la portada y
- * en el lector para que los folios coincidan.
+ * Alto que puede ocupar la página: la ventana menos la barra de versículos
+ * (`--marquee-h`) y lo que ocupa el lector. Así el libro cabe entero en pantalla
+ * con la barra pegada arriba. Se usa igual en la portada y en el lector para que
+ * los folios coincidan.
  */
 function availableHeight() {
   if (typeof window === 'undefined') return 800;
-  const marquee = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--marquee-h')) || 0;
-  return Math.max(480, window.innerHeight - marquee - READER_BAR_H);
+  const c = readerChrome(window.innerWidth);
+  return Math.max(420, window.innerHeight - marqueeH() - c.top - c.bottom);
 }
 
 /** Una página impresa: encabezado, cuerpo y folio. */
@@ -386,7 +394,14 @@ export default function Biblia() {
    */
   useEffect(() => {
     if (!page || mode !== 'libro') return;
-    window.scrollTo(0, 0);
+    // El pliego se coloca justo bajo la barra pegada: así cabe entero en pantalla.
+    const stage = document.querySelector('.reader__stage');
+    if (!stage) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    const y = stage.getBoundingClientRect().top + window.scrollY - (marqueeH() + readerChrome(window.innerWidth).top);
+    window.scrollTo(0, Math.max(0, Math.round(y)));
   }, [page, mode]);
 
   /* --------------------- modo scroll: llevar al ancla --------------------- */
@@ -575,6 +590,62 @@ export default function Biblia() {
       ? plainLabel(book.sectionById.get(page.sectionId)?.label)
       : book.partById.get(page.partId)?.label;
 
+    /** Tamaño de letra, papel y modo: en la barra (anchas) o en el menú «Aa» (móvil). */
+    const prefs = (
+      <>
+            <div className="reader__size" role="group" aria-label="Tamaño de letra">
+              <button
+                type="button"
+                className="rb-btn rb-btn--icon"
+                onClick={() => setFontSize(size => clampSize(size - FS_STEP))}
+                disabled={fontSize <= FS_MIN}
+                aria-label="Reducir el tamaño de letra: A−"
+              >
+                A−
+              </button>
+              <button
+                type="button"
+                className="rb-btn rb-btn--icon"
+                onClick={() => setFontSize(size => clampSize(size + FS_STEP))}
+                disabled={fontSize >= FS_MAX}
+                aria-label="Aumentar el tamaño de letra: A+"
+              >
+                A+
+              </button>
+            </div>
+            <div className="reader__papers" role="group" aria-label="Papel">
+              {THEMES.map(t => (
+                <button
+                  key={t.id}
+                  type="button"
+                  className="reader__paper"
+                  style={{ '--swatch': t.swatch }}
+                  aria-pressed={theme === t.id}
+                  aria-label={t.label}
+                  title={t.label}
+                  onClick={() => setTheme(t.id)}
+                />
+              ))}
+            </div>
+            <div className="reader__modes" role="group" aria-label="Modo de lectura">
+              {[
+                ['libro', 'Libro'],
+                ['scroll', 'Scroll']
+              ].map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  className="reader__mode"
+                  aria-pressed={mode === id}
+                  onClick={() => setMode(id)}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+      </>
+    );
+
     return (
       <main
         id="main"
@@ -606,7 +677,7 @@ export default function Biblia() {
 
           <div className="reader__bar">
             <div className="reader__bar-group">
-              <Link className="rb-btn" to="/biblia" title="Volver a la portada y al índice">
+              <Link className="rb-btn reader__back" to="/biblia" title="Volver a la portada y al índice">
                 <Icon name="back" />
                 <span className="rb-btn__text">Índice</span>
               </Link>
@@ -671,57 +742,15 @@ export default function Biblia() {
               </button>
             </div>
 
-            <div className="reader__bar-group">
-              <div className="reader__size" role="group" aria-label="Tamaño de letra">
-                <button
-                  type="button"
-                  className="rb-btn rb-btn--icon"
-                  onClick={() => setFontSize(size => clampSize(size - FS_STEP))}
-                  disabled={fontSize <= FS_MIN}
-                  aria-label="Reducir el tamaño de letra: A−"
-                >
-                  A−
-                </button>
-                <button
-                  type="button"
-                  className="rb-btn rb-btn--icon"
-                  onClick={() => setFontSize(size => clampSize(size + FS_STEP))}
-                  disabled={fontSize >= FS_MAX}
-                  aria-label="Aumentar el tamaño de letra: A+"
-                >
-                  A+
-                </button>
-              </div>
-              <div className="reader__papers" role="group" aria-label="Papel">
-                {THEMES.map(t => (
-                  <button
-                    key={t.id}
-                    type="button"
-                    className="reader__paper"
-                    style={{ '--swatch': t.swatch }}
-                    aria-pressed={theme === t.id}
-                    aria-label={t.label}
-                    title={t.label}
-                    onClick={() => setTheme(t.id)}
-                  />
-                ))}
-              </div>
-              <div className="reader__modes" role="group" aria-label="Modo de lectura">
-                {[
-                  ['libro', 'Libro'],
-                  ['scroll', 'Scroll']
-                ].map(([id, label]) => (
-                  <button
-                    key={id}
-                    type="button"
-                    className="reader__mode"
-                    aria-pressed={mode === id}
-                    onClick={() => setMode(id)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
+            <div className="reader__bar-group reader__prefs">{prefs}</div>
+            <div className="reader__more">
+              <ReaderMenu label="Opciones de lectura">
+                <Link className="rb-btn" to="/biblia">
+                  <Icon name="back" />
+                  <span className="rmenu__text">Volver al índice</span>
+                </Link>
+                {prefs}
+              </ReaderMenu>
             </div>
 
             <div className="reader__progress" aria-hidden="true">
@@ -815,7 +844,10 @@ export default function Biblia() {
           )}
 
           {mode === 'libro' ? (
-            <div className="reader__stage" style={{ '--book-pad': `${geometry.pad}px` }}>
+            <div
+              className="reader__stage"
+              style={{ '--book-pad': `${geometry.pad}px`, '--page-h': `${geometry.pageH}px` }}
+            >
               <Book
                 pages={pagination.pages}
                 mode={spread ? 'spread' : 'single'}
@@ -827,7 +859,10 @@ export default function Biblia() {
                 apiRef={bookApiRef}
                 theme={theme}
               />
-              <p className="reader__hint">Pasa hoja con el margen, la rueda o ← → · el texto se puede marcar y copiar</p>
+              <p className="reader__hint">
+                <span className="reader__hint-mouse">Pasa hoja con el margen, la rueda o ← → · el texto se puede marcar y copiar</span>
+                <span className="reader__hint-touch">Desliza a los lados para pasar hoja</span>
+              </p>
             </div>
           ) : (
             <div className="reader__scroll">
