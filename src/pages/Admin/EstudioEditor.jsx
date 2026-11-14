@@ -1,9 +1,26 @@
-import { useCallback, useEffect, useState } from 'react';
-import { marked } from 'marked';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { parseFrontmatter, serializeFrontmatter } from '../../lib/frontmatter';
 import { api, slugify, Field, Status } from './shared';
-import MediaPicker from './MediaPicker';
+import RichEditor from './RichEditor';
+
+/** Borrador local (por si se cierra la pestaña sin guardar). */
+const draftKey = slug => `crux-admin-draft:${slug || '__nuevo'}`;
+function readDraft(slug) {
+  try {
+    return JSON.parse(localStorage.getItem(draftKey(slug)) || 'null');
+  } catch {
+    return null;
+  }
+}
+function writeDraft(slug, value) {
+  try {
+    if (value) localStorage.setItem(draftKey(slug), JSON.stringify(value));
+    else localStorage.removeItem(draftKey(slug));
+  } catch {
+    /* sin almacenamiento: el borrador solo vive en memoria */
+  }
+}
 
 const emptyForm = category => ({
   title: '',
@@ -11,7 +28,6 @@ const emptyForm = category => ({
   subcategory: '',
   passage: '',
   description: '',
-  portada: '',
   tags: '',
   aliases: '',
   updated: new Date().toISOString().slice(0, 10)
@@ -25,8 +41,32 @@ export default function EstudioEditor() {
   const [isNew, setIsNew] = useState(false);
   const [form, setForm] = useState(null);
   const [body, setBody] = useState('');
-  const [preview, setPreview] = useState(false);
   const [msg, setMsg] = useState(null);
+  const [dirty, setDirty] = useState(false);
+  const [draft, setDraft] = useState(null);
+  const [docKey, setDocKey] = useState(0);
+  const dirtyRef = useRef(false);
+  dirtyRef.current = dirty;
+
+  // Avisa antes de cerrar la pestaña con cambios sin guardar.
+  useEffect(() => {
+    if (!dirty) return undefined;
+    const onBeforeUnload = e => {
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', onBeforeUnload);
+    return () => window.removeEventListener('beforeunload', onBeforeUnload);
+  }, [dirty]);
+
+  // Autoguardado del borrador en este navegador (cada 1,5 s de pausa).
+  useEffect(() => {
+    if (!dirty || !form) return undefined;
+    const id = window.setTimeout(() => writeDraft(origSlug, { form, body, at: Date.now() }), 1500);
+    return () => window.clearTimeout(id);
+  }, [dirty, form, body, origSlug]);
+
+  const confirmDiscard = () => !dirtyRef.current || window.confirm('Hay cambios sin guardar. ¿Descartarlos?');
 
   const loadIndex = useCallback(async () => {
     const data = await api('/estudios');
@@ -39,8 +79,8 @@ export default function EstudioEditor() {
   }, [loadIndex]);
 
   const open = useCallback(async slug => {
+    if (!confirmDiscard()) return;
     setMsg(null);
-    setPreview(false);
     try {
       const { raw } = await api(`/estudio?slug=${encodeURIComponent(slug)}`);
       const { data, body: md } = parseFrontmatter(raw);
@@ -50,7 +90,6 @@ export default function EstudioEditor() {
         subcategory: data.subcategory || '',
         passage: data.passage || '',
         description: data.description || '',
-        portada: data.portada || '',
         tags: (data.tags || []).join(', '),
         aliases: (data.aliases || []).join(', '),
         updated: data.updated || ''
@@ -59,23 +98,52 @@ export default function EstudioEditor() {
       setSelected(slug);
       setOrigSlug(slug);
       setIsNew(false);
+      setDirty(false);
+      setDocKey(k => k + 1);
+      const saved = readDraft(slug);
+      setDraft(saved && saved.body !== md ? saved : null);
     } catch (e) {
       setMsg({ type: 'error', text: String(e.message) });
     }
   }, []);
 
   const createNew = () => {
+    if (!confirmDiscard()) return;
     const firstCat = index?.categories?.[0]?.id || '';
     setForm(emptyForm(firstCat));
     setBody('');
     setSelected(null);
     setOrigSlug(null);
     setIsNew(true);
-    setPreview(false);
     setMsg(null);
+    setDirty(false);
+    setDocKey(k => k + 1);
+    setDraft(readDraft(null));
   };
 
-  const set = (key, value) => setForm(f => ({ ...f, [key]: value }));
+  const set = (key, value) => {
+    setForm(f => ({ ...f, [key]: value }));
+    setDirty(true);
+  };
+
+  const changeBody = md => {
+    setBody(md);
+    setDirty(true);
+  };
+
+  const restoreDraft = () => {
+    if (!draft) return;
+    setForm(draft.form);
+    setBody(draft.body);
+    setDirty(true);
+    setDocKey(k => k + 1);
+    setDraft(null);
+  };
+
+  const discardDraft = () => {
+    writeDraft(origSlug, null);
+    setDraft(null);
+  };
 
   const save = async () => {
     if (!form || !form.title.trim()) {
@@ -93,7 +161,6 @@ export default function EstudioEditor() {
         category: form.category,
         subcategory: form.subcategory.trim(),
         description: form.description.trim(),
-        portada: form.portada.trim(),
         passage: form.passage.trim(),
         tags: form.tags.split(',').map(s => s.trim()).filter(Boolean),
         aliases: form.aliases.split(',').map(s => s.trim()).filter(Boolean),
@@ -111,6 +178,9 @@ export default function EstudioEditor() {
       setSelected(slug);
       setOrigSlug(slug);
       setIsNew(false);
+      setDirty(false);
+      writeDraft(origSlug, null);
+      writeDraft(slug, null);
       setMsg({ type: 'ok', text: `Guardado: content/estudios/${slug}.md` });
     } catch (e) {
       setMsg({ type: 'error', text: String(e.message) });
@@ -126,6 +196,7 @@ export default function EstudioEditor() {
       setSelected(null);
       setOrigSlug(null);
       setForm(null);
+      setDirty(false);
       setMsg({ type: 'ok', text: 'Estudio eliminado.' });
     } catch (e) {
       setMsg({ type: 'error', text: String(e.message) });
@@ -219,7 +290,6 @@ export default function EstudioEditor() {
               <textarea rows={3} value={form.description} onChange={e => set('description', e.target.value)} />
             </Field>
 
-            <MediaPicker label="Portada (imagen de la tarjeta)" value={form.portada} onChange={url => set('portada', url)} />
 
             <div className="admin__row">
               <Field label="Etiquetas (separadas por coma)">
@@ -230,13 +300,24 @@ export default function EstudioEditor() {
               </Field>
             </div>
 
-            <div className="admin__body-head">
-              <span>Contenido (Markdown)</span>
-              <div className="admin__body-actions">
-                <button type="button" className="admin__btn" onClick={() => setPreview(p => !p)}>
-                  {preview ? 'Editar' : 'Vista previa'}
+            {draft && (
+              <p className="admin__draft" role="status">
+                Hay un borrador sin guardar de {new Date(draft.at).toLocaleString('es')}.
+                <button type="button" className="admin__btn" onClick={restoreDraft}>
+                  Recuperar
                 </button>
-                <button type="button" className="admin__btn admin__btn--accent" onClick={save}>
+                <button type="button" className="admin__btn" onClick={discardDraft}>
+                  Descartar
+                </button>
+              </p>
+            )}
+
+            <div className="admin__body-head">
+              <span>
+                Contenido {dirty && <em className="admin__dirty">· cambios sin guardar</em>}
+              </span>
+              <div className="admin__body-actions">
+                <button type="button" className="admin__btn admin__btn--accent" onClick={save} title="Guardar (Ctrl+S)">
                   Guardar
                 </button>
                 {!isNew && (
@@ -247,18 +328,7 @@ export default function EstudioEditor() {
               </div>
             </div>
 
-            {preview ? (
-              <div className="admin__preview study-prose" dangerouslySetInnerHTML={{ __html: marked.parse(body) }} />
-            ) : (
-              <textarea
-                className="admin__body"
-                rows={18}
-                spellCheck={false}
-                value={body}
-                onChange={e => setBody(e.target.value)}
-                placeholder={'## 1. Título de sección\n\nEscribe aquí el contenido del estudio…'}
-              />
-            )}
+            <RichEditor value={body} onChange={changeBody} docKey={docKey} onSave={save} />
           </>
         )}
       </section>

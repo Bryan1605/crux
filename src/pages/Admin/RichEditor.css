@@ -1,0 +1,229 @@
+/* Editor visual de estudios (panel /admin, solo dev). */
+
+.rte {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-alt);
+}
+
+.rte__bar {
+  position: sticky;
+  /* Bajo el menú flotante, como las barras de lectura. */
+  top: calc(var(--marquee-h, 0px) + 90px);
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--r-md) var(--r-md) 0 0;
+  background: var(--panel);
+}
+
+.rte__btn,
+.rte__modes button,
+.rte__style {
+  min-height: 34px;
+  min-width: 34px;
+  padding: 0 0.6rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.rte__btn:hover:not(:disabled),
+.rte__modes button:hover {
+  background: var(--panel-hover);
+  border-color: var(--border);
+}
+
+.rte__btn.is-on,
+.rte__modes button.is-on {
+  background: var(--text);
+  color: var(--ink);
+}
+
+.rte__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.rte__style {
+  border-color: var(--border);
+  background: var(--bg-alt);
+}
+
+.rte__modes {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.rte__sep {
+  width: 1px;
+  height: 22px;
+  margin: 0 0.2rem;
+  background: var(--border);
+}
+
+.rte__spacer {
+  flex: 1;
+}
+
+.rte__count {
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.rte__table {
+  display: inline-flex;
+  gap: 2px;
+  padding-left: 0.3rem;
+  border-left: 1px solid var(--border);
+}
+
+.rte__help {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.4rem 1rem;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.rte__help div {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.rte__help dt {
+  min-width: 9.5rem;
+  color: var(--text);
+  font-family: ui-monospace, monospace;
+  font-size: 0.8rem;
+}
+
+.rte__help dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Hoja: el texto se ve con el mismo estilo que la ficha pública. */
+.rte__page {
+  position: relative;
+  padding: 1.5rem clamp(1rem, 4vw, 3.5rem) 3rem;
+}
+
+.rte__surface {
+  min-height: 420px;
+  max-width: 72ch;
+  margin: 0 auto;
+  outline: none;
+}
+
+.rte__surface p.is-editor-empty:first-child::before,
+.rte__surface .is-empty::before {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  color: var(--faint);
+  pointer-events: none;
+}
+
+.rte__surface .selectedCell {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rte__surface img.ProseMirror-selectednode {
+  outline: 2px solid var(--text);
+}
+
+.rte__grip {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 26px;
+  border-radius: 6px;
+  color: var(--faint);
+  font-size: 0.8rem;
+  letter-spacing: -2px;
+  cursor: grab;
+}
+
+.rte__grip:hover {
+  background: var(--panel-hover);
+  color: var(--text);
+}
+
+.rte__slash {
+  position: absolute;
+  z-index: 10;
+  width: 280px;
+  max-height: 320px;
+  margin: 0;
+  padding: 0.3rem;
+  overflow: auto;
+  list-style: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--panel);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.rte__slash button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rte__slash button.is-on,
+.rte__slash button:hover {
+  background: var(--panel-hover);
+}
+
+.rte__slash span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.rte__md {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0 0 var(--r-md) var(--r-md);
+}
+
+.rte__preview-wrap {
+  padding: 1.5rem;
+  overflow-x: auto;
+  background: var(--bg);
+  border-radius: 0 0 var(--r-md) var(--r-md);
+}
+
+.rte__preview {
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-alt);
+}

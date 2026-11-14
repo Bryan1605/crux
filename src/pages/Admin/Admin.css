@@ -593,3 +593,21 @@
     max-height: 30vh;
   }
 }
+
+.admin__draft {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: var(--sp-4) 0 0;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  background: var(--panel);
+  font-size: 0.9rem;
+}
+
+.admin__dirty {
+  color: #e5c07b;
+  font-size: 0.85rem;
+}
