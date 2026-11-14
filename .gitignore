@@ -37,3 +37,6 @@ content/.history/
 # (las fuentes se regeneran con `node scripts/optimize-images.mjs`)
 src/assets/imgs/**/*.jpg
 src/assets/imgs/**/*.jpeg
+
+# Claude Code: ajustes personales (los comandos y launch.json sí se versionan)
+.claude/settings.local.json

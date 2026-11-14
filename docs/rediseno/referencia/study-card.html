@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referencia — StudyCard (card común)</title>
+<!--
+  Referencia estática de la card común (fase F). Es el modelo para
+  src/components/StudyCard/StudyCard.jsx + StudyCard.css: copiar las reglas CSS
+  y usar los tokens de src/styles/global.css donde coincidan.
+  Las imágenes apuntan a public/img/ (abre este archivo con `npm run dev` en
+  marcha desde http://localhost:5173/… o ajusta las rutas).
+-->
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --text: #f4f4f5;
+    --muted: #a8a8ad;
+    --faint: #8b8b92;
+    --gold: #c9a96a;
+    --bone: #f1ece2;
+    --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+  .demo { max-width: 1160px; margin: 0 auto; padding: 48px 20px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 24px; }
+
+  /* ---------------- StudyCard ---------------- */
+  .study-card { position: relative; height: 100%; min-height: 572px; }
+
+  .study-card__link {
+    display: flex; flex-direction: column; height: 100%; min-height: 572px; box-sizing: border-box;
+    padding: 10px 10px 16px; border-radius: 22px;
+    background: linear-gradient(180deg, #17171c 0%, #121216 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 40px rgba(0, 0, 0, 0.35);
+    color: var(--text); text-decoration: none;
+    transform: perspective(760px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition: transform 0.18s ease-out, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .study-card:hover .study-card__link {
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 26px 60px rgba(0, 0, 0, 0.55);
+  }
+
+  .study-card__media {
+    position: relative; flex: none; height: 210px; overflow: hidden; border-radius: 15px; background: #0d0d10;
+  }
+  .study-card__media::after { /* sombra inferior para los puntos */
+    content: ''; position: absolute; inset: auto 0 0; height: 60px;
+    background: linear-gradient(180deg, transparent, rgba(10, 10, 11, 0.55));
+  }
+  .study-card__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+  .study-card:hover .study-card__img { transform: scale(1.04); }
+  .study-card__mark {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 112px; line-height: 1; color: rgba(201, 169, 106, 0.22);
+  }
+  .study-card__badge {
+    position: absolute; left: 12px; top: 12px; z-index: 1; padding: 3px 10px; border-radius: 999px;
+    background: rgba(10, 10, 11, 0.66); border: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 12px; letter-spacing: 0.04em;
+  }
+  .study-card__dots { position: absolute; left: 0; right: 0; bottom: 12px; z-index: 1; display: flex; justify-content: center; gap: 6px; }
+  .study-card__dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.4); }
+  .study-card__dots span.is-on { background: var(--text); }
+
+  .study-card__body { display: flex; flex-direction: column; gap: 8px; padding: 18px 12px 0; }
+  .study-card__meta { margin: 0; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); }
+  .study-card__title { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 24px; line-height: 1.15; }
+  .study-card__sub { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--gold); }
+  .study-card__desc {
+    margin: 4px 0 0; font-size: 14px; line-height: 1.6; color: var(--muted);
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+
+  .study-card__foot { margin-top: auto; display: flex; flex-direction: column; gap: 14px; padding: 18px 12px 0; }
+  .study-card__stats {
+    margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .study-card__stats div { display: flex; flex-direction: column-reverse; gap: 2px; }
+  .study-card__stats div + div { padding-left: 14px; border-left: 1px solid rgba(255, 255, 255, 0.08); }
+  .study-card__stats dd { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.2; }
+  .study-card__stats dt { font-size: 11px; letter-spacing: 0.04em; color: var(--faint); }
+  .study-card__cta {
+    display: flex; align-items: center; justify-content: center; gap: 8px; height: 44px; border-radius: 999px;
+    border: 1px solid rgba(241, 236, 226, 0.28); background: rgba(241, 236, 226, 0.06);
+    color: var(--bone); font-size: 14px; font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .study-card:hover .study-card__cta { background: var(--bone); color: var(--bg); border-color: var(--bone); }
+
+  .study-card__nav {
+    position: absolute; top: 112px; z-index: 2; width: 32px; height: 32px; border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(10, 10, 11, 0.55); color: var(--text);
+    font-size: 15px; cursor: pointer;
+  }
+  .study-card__nav::after { content: ''; position: absolute; inset: -6px; } /* área táctil 44 px */
+  .study-card__nav--prev { left: 20px; }
+  .study-card__nav--next { right: 20px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .study-card__link, .study-card__img { transition: none; transform: none; }
+    .study-card:hover .study-card__img { transform: none; }
+  }
+</style>
+</head>
+<body>
+<main class="demo">
+  <h1 style="font-family: var(--font-display); font-weight: 500">StudyCard — con imagen · sin imagen · personaje</h1>
+  <div class="grid">
+
+    <!-- 1. Estudio con imagen (portada o imagen del tema) -->
+    <div class="study-card">
+      <a class="study-card__link" href="/estudio/01-fundamentos--26-regeneracion">
+        <div class="study-card__media">
+          <img class="study-card__img" src="/img/banners/herobanner4-nicodemo.webp" alt="" style="object-position: 48% center">
+          <span class="study-card__badge">Nº 26</span>
+        </div>
+        <div class="study-card__body">
+          <p class="study-card__meta">01 · Fundamentos · Salvación</p>
+          <h2 class="study-card__title">Regeneración (nacer de nuevo)</h2>
+          <p class="study-card__sub">Juan 3:3</p>
+          <p class="study-card__desc">Regeneración es el acto soberano de Dios por el cual imparte vida espiritual a una persona que estaba muerta espiritualmente.</p>
+        </div>
+        <div class="study-card__foot">
+          <dl class="study-card__stats">
+            <div><dt>Lectura</dt><dd>3 min</dd></div>
+            <div><dt>Citas</dt><dd>21</dd></div>
+            <div><dt>Secciones</dt><dd>6</dd></div>
+          </dl>
+          <span class="study-card__cta" aria-hidden="true">Leer ficha →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- 2. Estudio sin imagen: abreviatura del libro -->
+    <div class="study-card">
+      <a class="study-card__link" href="/estudio/09-parabolas--02-gracia--11-el-hijo-prodigo">
+        <div class="study-card__media">
+          <span class="study-card__mark" aria-hidden="true">Lc</span>
+          <span class="study-card__badge">Nº 11</span>
+        </div>
+        <div class="study-card__body">
+          <p class="study-card__meta">09 · Parábolas · Gracia</p>
+          <h2 class="study-card__title">El Hijo Pródigo</h2>
+          <p class="study-card__sub">Lucas 15:11-32</p>
+          <p class="study-card__desc">Jesús narra esta parábola —la más conocida del NT— a los fariseos y escribas que criticaban su trato con pecadores (Lc 15:1-2).</p>
+        </div>
+        <div class="study-card__foot">
+          <dl class="study-card__stats">
+            <div><dt>Lectura</dt><dd>6 min</dd></div>
+            <div><dt>Citas</dt><dd>5</dd></div>
+            <div><dt>Secciones</dt><dd>10</dd></div>
+          </dl>
+          <span class="study-card__cta" aria-hidden="true">Leer ficha →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- 3. Personaje con escenas: mini carrusel -->
+    <div class="study-card">
+      <a class="study-card__link" href="/estudio/personajes/apostol-pablo">
+        <div class="study-card__media">
+          <img class="study-card__img" src="/img/personajes/ApostolPablo/ApostolPabloPoseNormal.webp" alt="" style="object-position: center 18%">
+          <span class="study-card__badge">9 escenas</span>
+          <span class="study-card__dots" aria-hidden="true"><span class="is-on"></span><span></span><span></span></span>
+        </div>
+        <div class="study-card__body">
+          <p class="study-card__meta">Personaje · siglo I d. C.</p>
+          <h2 class="study-card__title">Apóstol Pablo</h2>
+          <p class="study-card__sub">Apóstol de los gentiles</p>
+          <p class="study-card__desc">De perseguidor a heraldo: el evangelio sin fronteras hasta Roma.</p>
+        </div>
+        <div class="study-card__foot">
+          <dl class="study-card__stats">
+            <div><dt>Escenas</dt><dd>9</dd></div>
+            <div><dt>Hitos</dt><dd>6</dd></div>
+            <div><dt>Época</dt><dd>s. I</dd></div>
+          </dl>
+          <span class="study-card__cta" aria-hidden="true">Ver la ficha →</span>
+        </div>
+      </a>
+      <button class="study-card__nav study-card__nav--prev" type="button" aria-label="Imagen anterior">‹</button>
+      <button class="study-card__nav study-card__nav--next" type="button" aria-label="Imagen siguiente">›</button>
+    </div>
+
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "01-fundamentos": [
+    { "key": "Salvación", "lema": "Lo que Dios hizo por nosotros", "image": "/img/banners/herobanner4-nicodemo.webp" },
+    { "key": "Santificación", "lema": "Crecer en lo que ya somos" },
+    { "key": "Identidad y servicio", "lema": "Testigo, obrero, soldado, embajador" },
+    { "key": "La Escritura", "lema": "Cómo habla Dios" },
+    { "key": "Cristo", "lema": "Quién es y qué hizo", "image": "/img/banners/herobanner1.webp" },
+    { "key": "Dios y la Trinidad", "lema": "Un solo Dios en tres personas", "image": "/img/banners/herobanner2-patristica.webp" },
+    { "key": "Espíritu Santo", "lema": "Persona, dones y fruto" },
+    { "key": "El ser humano", "lema": "Imagen de Dios, caída y conciencia" },
+    { "key": "La Iglesia", "lema": "Cuerpo, ordenanzas y gobierno" },
+    { "key": "Últimos tiempos", "lema": "Lo que viene" },
+    { "key": "Vida cristiana", "lema": "Fe, oración y práctica" },
+    { "key": "Mundo espiritual", "lema": "Ángeles, Satanás y demonios" },
+    { "key": "Soberanía y misión", "lema": "Creación, providencia, elección y misión" }
+  ],
+  "09-parabolas": [
+    { "key": "Reino", "label": "Reino" },
+    { "key": "Gracia", "label": "Gracia" },
+    { "key": "Juicio", "label": "Juicio" },
+    { "key": "Vida Cristiana", "label": "Vida cristiana" },
+    { "key": "Mayordomia", "label": "Mayordomía" },
+    { "key": "Oracion", "label": "Oración" },
+    { "key": "Alegorias Juan", "label": "Alegorías de Juan" }
+  ],
+  "06-apologetica": [
+    { "key": "Origenes Usa", "label": "Orígenes (EE. UU.)" },
+    { "key": "Shincheonji", "label": "Shincheonji" }
+  ],
+  "03-personajes": [
+    { "key": "Apostoles", "label": "Apóstoles" }
+  ]
+}
