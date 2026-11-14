@@ -8,6 +8,8 @@ import { useSite } from './lib/site';
 
 // El panel de edición solo existe en desarrollo: en el build la rama se elimina.
 const Admin = import.meta.env.DEV ? lazy(() => import('./pages/Admin/Admin')) : null;
+// Las 100 preguntas llevan su propio JSON (~50 KB): se cargan solo al entrar.
+const Shincheonji = lazy(() => import('./pages/Shincheonji'));
 
 import Home from './pages/Home';
 import Estudio from './pages/Estudio';
@@ -108,6 +110,14 @@ export default function App() {
           <Route path="/concilios" element={<Concilios />} />
           <Route path="/buscar" element={<Buscar />} />
           <Route path="/temas" element={<Temas />} />
+          <Route
+            path="/apologetica/shincheonji"
+            element={
+              <Suspense fallback={<main id="main" className="page-loading" aria-busy="true" />}>
+                <Shincheonji />
+              </Suspense>
+            }
+          />
           {import.meta.env.DEV && (
             <Route
               path="/admin"

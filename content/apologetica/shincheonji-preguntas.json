@@ -1,0 +1,3953 @@
+{
+  "version": 1,
+  "fuente": {
+    "archivo": "wiki/06-apologetica/shincheonji/100-preguntas-de-ortodoxia.md",
+    "actualizado": "2026-11-10"
+  },
+  "fuentes": [
+    "csp-acerca-del-codex",
+    "csp-codex-sinaiticus"
+  ],
+  "reglas": [
+    "Se responde con el texto citado, leído en su contexto.",
+    "No vale \"eso es figurado\" sin mostrar dónde la Biblia da esa equivalencia.",
+    "No vale apelar a \"lo que se verá en el curso intermedio o avanzado\".",
+    "Cada pregunta trae la clave: lo que dice el texto según la fe cristiana histórica."
+  ],
+  "bloques": [
+    {
+      "id": "I",
+      "titulo": "Dios y la Trinidad",
+      "desde": 1,
+      "hasta": 10,
+      "preguntas": [
+        {
+          "n": 1,
+          "texto": "En Mateo 28:19, ¿se bautiza en \"los nombres\" o en \"el nombre\" del Padre, del Hijo y del Espíritu Santo?",
+          "clave": "\"el nombre\", en singular, para tres personas: un solo Dios en tres personas.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 28,
+              "desde": 19,
+              "hasta": 19,
+              "label": "Mateo 28:19",
+              "ntv": [
+                {
+                  "n": 19,
+                  "text": "Por lo tanto, vayan y hagan discípulos de todas las naciones, bautizándolos en el nombre del Padre y del Hijo y del Espíritu Santo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 19,
+                  "grc": "πορευθεντεϲ μαθητευϲατε π‹α›τα τα εθνη βαπτιζοντεϲ αυτουϲ · ειϲ το ονομα του §0π‹ρ›ϲ και του ϋϊου και του αγιου ‹πνϲ› ˙"
+                }
+              ],
+              "pagina": "76.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 2,
+          "texto": "Juan 1:1 dice que \"el Verbo era Dios\". ¿Quién es el Verbo según Juan 1:14?",
+          "clave": "Jesús, el Verbo hecho carne. No dice que era \"un dios\" ni \"un pastor\".",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 1,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Juan 1:1",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "En el principio la Palabra ya existía. La Palabra estaba con Dios, y la Palabra era Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "εν αρχη ην ο λογοϲ και ο λογοϲ ην προϲ τον ‹θν› και ‹θϲ› ην ο λογοϲ"
+                }
+              ],
+              "pagina": "80.1r"
+            },
+            {
+              "libro": "juan",
+              "cap": 1,
+              "desde": 14,
+              "hasta": 14,
+              "label": "Juan 1:14",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Entonces la Palabra se hizo hombre y vino a vivir entre nosotros. Estaba lleno de fidelidad y amor inagotable. Y hemos visto su gloria, la gloria del único Hijo del Padre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "και ο λογοϲ ϲαρξ εγενετο και εϲκηνωϲεν §0εν §2ημιν · και εθεαϲαμεθα την δοξ‹α› αυτου · δοξαν · ωϲ μονογενουϲ παρα πατροϲ πληρηϲ χαριτοϲ και αληθιαϲ ˙"
+                }
+              ],
+              "pagina": "80.1r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 3,
+          "texto": "En Juan 20:28 Tomás llama a Jesús \"¡Mi Señor y mi Dios!\". ¿Lo corrige Jesús?",
+          "clave": "No; lo bendice (v. 29).",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 20,
+              "desde": 28,
+              "hasta": 28,
+              "label": "Juan 20:28",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "—¡Mi Señor y mi Dios! —exclamó Tomás."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "απεκριθη ο θωμαϲ και ειπεν αυτω ˙ ο ‹κϲ› μου και ο ‹θϲ› μου"
+                }
+              ],
+              "pagina": "81.5v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "juan",
+              "cap": 20,
+              "desde": 29,
+              "hasta": 29,
+              "label": "Juan 20:29"
+            }
+          ]
+        },
+        {
+          "n": 4,
+          "texto": "En Isaías 44:6 Dios dice \"Yo soy el Primero y el Último\". ¿Quién usa el mismo título en Apocalipsis 1:17 y 22:13?",
+          "clave": "Jesús. El Apocalipsis le da el título exclusivo de Dios.",
+          "refs": [
+            {
+              "libro": "isaias",
+              "cap": 44,
+              "desde": 6,
+              "hasta": 6,
+              "label": "Isaías 44:6",
+              "ntv": [
+                {
+                  "n": 6,
+                  "text": "Esto dice el SEÑOR, el Rey y Redentor de Israel, el SEÑOR de los Ejércitos Celestiales: Yo soy el Primero y el Último; no hay otro Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 6,
+                  "grc": "˜ ουτωϲ λεγει ο §0‹θϲ› §2 του §4‹ιη›λ ο ρυϲαμενοϲ αυτον · ‹θϲ› ϲαβαωθʼ · εγω πρωτοϲ · και εγω μετα ταυτα · πλην εμου ουκ εϲτιν ‹θϲ› ·"
+                }
+              ],
+              "pagina": "45.2v"
+            },
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 17,
+              "hasta": 17,
+              "label": "Apocalipsis 1:17",
+              "ntv": [
+                {
+                  "n": 17,
+                  "text": "Cuando lo vi, caí a sus pies como muerto; pero él puso la mano derecha sobre mí y me dijo: ¡No tengas miedo! Yo soy el Primero y el Último."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 17,
+                  "grc": "και οτε ειδον αυτον επεϲα ειϲ τουϲ ποδαϲ αυτου §0ωϲι νεκροϲ και επεθηκ‹ε› την δεξιαν αυτου §2 επ εμε λεγων §4 εγω ειμι ο πρωτοϲ και ο εϲχατοϲ"
+                }
+              ],
+              "pagina": "90.1v"
+            },
+            {
+              "libro": "apocalipsis",
+              "cap": 22,
+              "desde": 13,
+              "hasta": 13,
+              "label": "Apocalipsis 22:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Yo soy el Alfa y la Omega, el Primero y el Último, el Principio y el Fin."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "εγω το αλφα και το ‹ω› ο πρωτοϲ κ(αι) ο εϲχατοϲ η αρχη κ(αι) το τελοϲ"
+                }
+              ],
+              "pagina": "91.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 5,
+          "texto": "En Hebreos 1:8, el Padre le dice al Hijo: \"Tu trono, oh Dios\". ¿Cómo se explica sin la deidad de Cristo?",
+          "clave": "No se puede: el Padre llama Dios al Hijo.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 1,
+              "desde": 8,
+              "hasta": 8,
+              "label": "Hebreos 1:8",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Pero al Hijo le dice: Tu trono, oh Dios, permanece por siempre y para siempre. Tú gobiernas con cetro de justicia."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "προϲ δε τον ‹υν› ο θρονοϲ ϲου ο ‹θϲ› ειϲ τον αιωνα του αιωνοϲ και η §0ραβδοϲ τηϲ βαϲιλειαϲ αυτου"
+                }
+              ],
+              "pagina": "85.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 6,
+          "texto": "Colosenses 2:9 dice que en Cristo \"habita toda la plenitud de Dios en un cuerpo humano\". ¿Qué le falta?",
+          "clave": "Nada.",
+          "refs": [
+            {
+              "libro": "colosenses",
+              "cap": 2,
+              "desde": 9,
+              "hasta": 9,
+              "label": "Colosenses 2:9",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Pues en Cristo habita toda la plenitud de Dios en un cuerpo humano."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "οτι εν αυτω κατοικει παν το πληρωμα τηϲ θεοτητοϲ ϲωματικωϲ"
+                }
+              ],
+              "pagina": "85.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 7,
+          "texto": "Isaías 43:11 dice \"fuera de mí no hay salvador\". ¿A quién llama Tito 2:13 \"nuestro gran Dios y Salvador\"?",
+          "clave": "A Jesucristo.",
+          "refs": [
+            {
+              "libro": "isaias",
+              "cap": 43,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Isaías 43:11",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Yo, sí, yo soy el SEÑOR, y no hay otro Salvador."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "εγω ο §0‹θϲ› · και ουκ §2εϲιν παρεξʼ εμου ϲωζων ˙"
+                }
+              ],
+              "pagina": "45.2r"
+            },
+            {
+              "libro": "tito",
+              "cap": 2,
+              "desde": 13,
+              "hasta": 13,
+              "label": "Tito 2:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "mientras anhelamos con esperanza ese día maravilloso en que se revele la gloria de nuestro gran Dios y Salvador Jesucristo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "προϲδεχομενοι την μακαρι‹α› ελπιδα και επιφανειαν τηϲ δοξηϲ του μεγαλου ‹θυ› και ϲωτηροϲ ημων §0‹χυ› §2‹ιυ›"
+                }
+              ],
+              "pagina": "86.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 8,
+          "texto": "En Hechos 5:3-4, mentir al Espíritu Santo es mentir a ¿quién?",
+          "clave": "A Dios. El Espíritu es persona divina, no una fuerza ni \"muchos espíritus\".",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 5,
+              "desde": 3,
+              "hasta": 4,
+              "label": "Hechos 5:3-4",
+              "ntv": [
+                {
+                  "n": 3,
+                  "text": "Entonces Pedro le dijo: Ananías, ¿por qué has permitido que Satanás llenara tu corazón? Le mentiste al Espíritu Santo y te quedaste con una parte del dinero."
+                },
+                {
+                  "n": 4,
+                  "text": "La decisión de vender o no la propiedad fue tuya. Y, después de venderla, el dinero también era tuyo para regalarlo o no. ¿Cómo pudiste hacer algo así? ¡No nos mentiste a nosotros sino a Dios!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 3,
+                  "grc": "ειπεν δε ο πετροϲ ανανια δια τι §0επηρωϲεν ο ϲαταναϲ την καρδιαν ϲου ψευϲαϲθαι ϲε το π‹ν›α το αγιον και νοϲφιϲαϲθαι απο τηϲ τιμηϲ του χωριου"
+                },
+                {
+                  "n": 4,
+                  "grc": "ουχι §0εμεν‹ο› ϲοι εμενεν και πραθεν εν τη ϲη εξουϲια ϋπηρχ‹ε› τι οτι εθου εν τη καρδια ϲου το πραγμα τουτο ουκ εψευϲω ανθρωποιϲ αλλα τω ‹θω›"
+                }
+              ],
+              "pagina": "87.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 9,
+          "texto": "¿Qué tres personas nombra la bendición de 2 Corintios 13:14?",
+          "clave": "El Señor Jesucristo, Dios (el Padre) y el Espíritu Santo.",
+          "refs": [
+            {
+              "libro": "2-corintios",
+              "cap": 13,
+              "desde": 14,
+              "hasta": 14,
+              "label": "2 Corintios 13:14",
+              "codex": {
+                "cap": 13,
+                "desde": 13,
+                "hasta": 13
+              },
+              "nota": "En el griego es el 13:13: las biblias en español parten en dos el versículo 12.",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": " Que la gracia del Señor Jesucristo, el amor de Dios y la comunión del Espíritu Santo sean con todos ustedes."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "η χαριϲ του ‹κυ› ‹ιυ› ‹χυ› και η αγαπη του ‹θυ› και η κοινωνια του αγιου ‹πνϲ› μετα παντων υμων §0"
+                }
+              ],
+              "pagina": "84.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 10,
+          "texto": "En Juan 5:18 y 10:30-33, ¿por qué querían apedrear a Jesús?",
+          "clave": "Porque \"se hacía igual a Dios\". Sus enemigos entendieron lo que SCJ niega.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 5,
+              "desde": 18,
+              "hasta": 18,
+              "label": "Juan 5:18",
+              "ntv": [
+                {
+                  "n": 18,
+                  "text": "Entonces los líderes judíos se esforzaron aún más por encontrar una forma de matarlo. Pues no sólo violaba el día de descanso sino que, además, decía que Dios era su Padre, con lo cual se hacía igual a Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 18,
+                  "grc": "δια τουτο μαλλον εζητο‹υ› αυτον οι ϊουδαιοι αποκτιναι · οτι ου μονον ελυε το ϲαββατον · αλλα και πατερα ϊδιον ελεγε τον §0‹θν› · ϊϲ‹ο› εαυτον ποιων τω §2‹θω›"
+                }
+              ],
+              "pagina": "80.3v"
+            },
+            {
+              "libro": "juan",
+              "cap": 10,
+              "desde": 30,
+              "hasta": 33,
+              "label": "Juan 10:30-33",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "El Padre y yo somos uno."
+                },
+                {
+                  "n": 31,
+                  "text": "Una vez más, las personas tomaron piedras para matarlo."
+                },
+                {
+                  "n": 32,
+                  "text": "Jesús dijo: —Bajo la dirección de mi Padre, he realizado muchas buenas acciones. ¿Por cuál de todas ellas me van a apedrear?"
+                },
+                {
+                  "n": 33,
+                  "text": "—No te apedreamos por ninguna buena acción, ¡sino por blasfemia! — contestaron—. Tú, un hombre común y corriente, afirmas ser Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "εγω και ο πατηρ εν εϲμεν ·"
+                },
+                {
+                  "n": 31,
+                  "grc": "εβαϲταϲαν παλιν λιθουϲ οι ϊουδαιοι ϊνα λιθαϲωϲιν §0αυτ‹ο› ·"
+                },
+                {
+                  "n": 32,
+                  "grc": "απεκριθη αυτοιϲ ο ‹ιϲ› · πολλα εργα καλα εδιξα ϋμιν εκ του πατροϲ §0 δια ποιον αυτων εργον εμε λιθαζετε ·"
+                },
+                {
+                  "n": 33,
+                  "grc": "απεκριθηϲαν αυτω οι ϊουδαιοι · περι καλου εργου ου λιθαζομεν ϲε · αλλα περι βλαϲφημιαϲ · οτι ϲυ ανθρωποϲ ων · ποιειϲ ϲεαυτον §0‹θν›"
+                }
+              ],
+              "pagina": "80.7v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "titulo": "Cristo: su persona y su obra",
+      "desde": 11,
+      "hasta": 20,
+      "preguntas": [
+        {
+          "n": 11,
+          "texto": "Hebreos 7:24-25 dice que el sacerdocio de Cristo es \"permanente\". ¿Pasa a otro hombre en los últimos días?",
+          "clave": "No. Él \"vive siempre\" para interceder.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 7,
+              "desde": 24,
+              "hasta": 25,
+              "label": "Hebreos 7:24-25",
+              "ntv": [
+                {
+                  "n": 24,
+                  "text": "pero dado que Jesús vive para siempre, su sacerdocio dura para siempre."
+                },
+                {
+                  "n": 25,
+                  "text": "Por eso puede salvar —una vez y para siempre — a los que vienen a Dios por medio de él, quien vive para siempre, a fin de interceder con Dios a favor de ellos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 24,
+                  "grc": "ο δε δια το μενειν αυτον ειϲ τον αιωνα α>παραβατον εχει > την ϊερωϲυνην"
+                },
+                {
+                  "n": 25,
+                  "grc": "οθεν και ϲωζειν ειϲ το παντελεϲ δυναται τουϲ > > προϲερχομενουϲ δι αυτου τω ‹θω› παντοτε ζων > ειϲ το εντυγχα>νειν ϋπερ αυ>>των"
+                }
+              ],
+              "pagina": "85.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 12,
+          "texto": "1 Timoteo 2:5: \"hay un Dios y un Mediador\". ¿Cuántos mediadores hay?",
+          "clave": "Uno: Cristo Jesús. No hay lugar para un \"pastor prometido\" intermediario.",
+          "refs": [
+            {
+              "libro": "1-timoteo",
+              "cap": 2,
+              "desde": 5,
+              "hasta": 5,
+              "label": "1 Timoteo 2:5",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "Pues hay sólo un Dios y sólo un Mediador que puede reconciliar a la humanidad con Dios, y es el hombre Cristo Jesús."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "ειϲ γαρ ‹θϲ› ειϲ και μεϲειτηϲ ‹θυ› και ανθρωπων ανθρωποϲ ‹χϲ› ‹ιϲ›"
+                }
+              ],
+              "pagina": "86.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 13,
+          "texto": "Juan 14:6: \"nadie puede ir al Padre si no es por medio de mí\". ¿Por qué haría falta además ir por medio de un pastor coreano?",
+          "clave": "No hace falta: Jesús es el camino.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 14,
+              "desde": 6,
+              "hasta": 6,
+              "label": "Juan 14:6",
+              "ntv": [
+                {
+                  "n": 6,
+                  "text": "Jesús le contestó: —Yo soy el camino, la verdad y la vida; nadie puede ir al Padre si no es por medio de mí."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 6,
+                  "grc": "λεγει αυτω §0‹ιϲ› · εγω ειμι η οδοϲ · και η αληθεια · και η ζωη · ουδιϲ ερχεται προϲ τον πατερα ει μη δι εμου ·"
+                }
+              ],
+              "pagina": "81.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 14,
+          "texto": "Jesús dijo \"¡Todo ha terminado!\" (Jn 19:30) y Hebreos 10:14 dice que con una sola ofrenda hizo perfectos \"para siempre\" a los santificados. ¿Qué quedó por completar en 1984?",
+          "clave": "Nada; la obra está consumada.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 19,
+              "desde": 30,
+              "hasta": 30,
+              "label": "Juan 19:30",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "Después de probar el vino, Jesús dijo: ¡Todo ha terminado! Entonces inclinó la cabeza y entregó su espíritu."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "οτε ουν ελαβεν το οξοϲ §0 ειπεν · τετελεϲται · και κλειναϲ την κεφαλην παρεδωκεν το §2π‹ν›α ·"
+                }
+              ],
+              "pagina": "81.5r"
+            },
+            {
+              "libro": "hebreos",
+              "cap": 10,
+              "desde": 14,
+              "hasta": 14,
+              "label": "Hebreos 10:14",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Pues mediante esa única ofrenda, él perfeccionó para siempre a los que está haciendo santos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "μια γαρ προϲφορα τετελιωκεν ειϲ το διηνεκεϲ τουϲ αγιαζομενουϲ"
+                }
+              ],
+              "pagina": "85.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 15,
+          "texto": "Hebreos 1:1-2: Dios habló \"en estos últimos días por medio de su Hijo\". ¿Habla después por medio de otro superior?",
+          "clave": "No; el Hijo es la palabra final.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 1,
+              "desde": 1,
+              "hasta": 2,
+              "label": "Hebreos 1:1-2",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Hace mucho tiempo, Dios habló muchas veces y de diversas maneras a nuestros antepasados por medio de los profetas."
+                },
+                {
+                  "n": 2,
+                  "text": "Y ahora, en estos últimos días, nos ha hablado por medio de su Hijo. Dios le prometió todo al Hijo como herencia y, mediante el Hijo, creó el universo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "πολυμερωϲ και πολυτροπωϲ παλαι ο ‹θϲ› λαληϲαϲ τοιϲ §0πατραϲιν εν τοιϲ προφηταιϲ"
+                },
+                {
+                  "n": 2,
+                  "grc": "επ εϲχατου των ημερων τουτων ελαληϲεν ημιν εν υϊω ον εθηκεν κληρονομον παντων δι ου και εποιηϲεν τουϲ αιωναϲ"
+                }
+              ],
+              "pagina": "85.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 16,
+          "texto": "Hechos 4:12: no hay salvación \"en ningún otro nombre\". ¿Por qué SCJ exige pertenecer a las 12 tribus?",
+          "clave": "La salvación está en el nombre de Jesús, no en un registro de membresía.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 4,
+              "desde": 12,
+              "hasta": 12,
+              "label": "Hechos 4:12",
+              "ntv": [
+                {
+                  "n": 12,
+                  "text": "¡En ningún otro hay salvación! Dios no ha dado ningún otro nombre bajo el cielo, mediante el cual podamos ser salvos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 12,
+                  "grc": "και ουκ εϲτιν εν αλλω ουδενι η ϲωτηρια ουδε γαρ ετερον ονομα εϲτιν ϋπο τον ουρανον το δεδομενον εν ανθρωποιϲ εν ω δει ϲωθηναι ημαϲ"
+                }
+              ],
+              "pagina": "87.1r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 17,
+          "texto": "Mateo 28:20: \"estoy con ustedes siempre, hasta el fin de los tiempos\". ¿Hubo una época en que la iglesia se quedó sin Cristo y en tinieblas?",
+          "clave": "No; Cristo prometió estar siempre.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 28,
+              "desde": 20,
+              "hasta": 20,
+              "label": "Mateo 28:20",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "Enseñen a los nuevos discípulos a obedecer todos los mandatos que les he dado. Y tengan por seguro esto: que estoy con ustedes siempre, hasta el fin de los tiempos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 20,
+                  "grc": "διδαϲκοντεϲ αυτουϲ τηριν παντα οϲα ενετιλαμην ϋμιν και ϊδου εγω ειμι μεθ υμων παϲαϲ ταϲ ημεραϲ εωϲ τηϲ ϲυντελειαϲ του αιωνοϲ ·:·"
+                }
+              ],
+              "pagina": "76.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 18,
+          "texto": "Juan 10:28-29: \"nadie puede arrebatarlas de mi mano\". ¿Puede \"terminar\" el pueblo de Cristo, como enseña la lección de los tres Israel?",
+          "clave": "No.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 10,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Juan 10:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Les doy vida eterna, y nunca perecerán. Nadie puede quitármelas,"
+                },
+                {
+                  "n": 29,
+                  "text": "porque mi Padre me las ha dado, y él es más poderoso que todos. Nadie puede quitarlas de la mano del Padre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "καγω διδωμι αυτοιϲ ζωην αιωνιον · και ου μη §0αποληται ειϲ τον αιωνα · και ου μη αρπαϲη τιϲ αυτα εκ τηϲ χειροϲ μου ·"
+                },
+                {
+                  "n": 29,
+                  "grc": "ο πατηρ §0 · ο δεδωκεν μοι · παντ‹ω› μειζων εϲτιν · και ουδιϲ δυναται αρπαζειν εκ τηϲ χειροϲ του πατροϲ ·"
+                }
+              ],
+              "pagina": "80.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 19,
+          "texto": "Colosenses 1:18: ¿quién es la cabeza de la iglesia?",
+          "clave": "Cristo, no un presidente de asamblea general.",
+          "refs": [
+            {
+              "libro": "colosenses",
+              "cap": 1,
+              "desde": 18,
+              "hasta": 18,
+              "label": "Colosenses 1:18",
+              "ntv": [
+                {
+                  "n": 18,
+                  "text": "Cristo también es la cabeza de la iglesia, la cual es su cuerpo. Él es el principio, es supremo sobre todos los que se levantan de los muertos. Así que él es el primero en todo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 18,
+                  "grc": "και αυτοϲ εϲτιν η κεφαλη του ϲωματοϲ τηϲ εκκληϲιαϲ · οϲ εϲτιν αρχη πρωτοτοκοϲ §0 των νεκρων ϊνα γενηται εν παϲιν αυτοϲ πρωτευων"
+                }
+              ],
+              "pagina": "85.1r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 20,
+          "texto": "Apocalipsis 3:21 promete el trono \"a todos los que salgan vencedores\". ¿Por qué SCJ lo aplica a una sola persona?",
+          "clave": "La promesa es para todo vencedor; y 1 Juan 5:4-5 dice que vence al mundo todo el que cree que Jesús es el Hijo de Dios.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 3,
+              "desde": 21,
+              "hasta": 21,
+              "label": "Apocalipsis 3:21",
+              "ntv": [
+                {
+                  "n": 21,
+                  "text": "Todos los que salgan vencedores se sentarán conmigo en mi trono, tal como yo salí vencedor y me senté con mi Padre en su trono."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 21,
+                  "grc": "ο νικων δωϲω αυτω καθιϲαι μετ εμ(ου) εν τω θρονω μου ωϲ καγω ενικηϲα και εκαθιϲα μετα του ‹πρϲ› μου εν τω θρονω αυτου"
+                }
+              ],
+              "pagina": "90.2v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "1-juan",
+              "cap": 5,
+              "desde": 4,
+              "hasta": 5,
+              "label": "1 Juan 5:4-5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "titulo": "El Espíritu Santo",
+      "desde": 21,
+      "hasta": 30,
+      "preguntas": [
+        {
+          "n": 21,
+          "texto": "Juan 14:16: el Consolador estará con los discípulos \"para siempre\". ¿Para siempre, o hasta que aparezca un nuevo pastor?",
+          "clave": "Para siempre.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 14,
+              "desde": 16,
+              "hasta": 16,
+              "label": "Juan 14:16",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "Y yo le pediré al Padre, y él les dará otro Abogado Defensor, quien estará con ustedes para siempre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "καγω §0τηρηϲω τον πατε ρα · και αλλον παρακλητον δωϲει ϋμιν · ϊνα μεθ υμ‹ω› ῆ ειϲ τον αιωνα ·"
+                }
+              ],
+              "pagina": "81.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 22,
+          "texto": "Juan 14:26: el Espíritu \"les enseñará todo\". ¿Para qué un intérprete humano exclusivo?",
+          "clave": "El Maestro de la iglesia es el Espíritu por medio de la Escritura.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 14,
+              "desde": 26,
+              "hasta": 26,
+              "label": "Juan 14:26",
+              "ntv": [
+                {
+                  "n": 26,
+                  "text": "Sin embargo, cuando el Padre envíe al Abogado Defensor como mi representante —es decir, al Espíritu Santo—, él les enseñará todo y les recordará cada cosa que les he dicho."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 26,
+                  "grc": "ο δε παρακλητοϲ §0πεμψει §2το §4π‹ν›α §6το §8αγιον ο πατηρʼ εν τω ονοματι μου · εκεινοϲ ϋμαϲ διδαξει παντα · και ϋπομνηϲει ϋμαϲ παντα · ἁ ειπον ϋμιν :"
+                }
+              ],
+              "pagina": "81.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 23,
+          "texto": "Juan 16:14: el Espíritu \"me glorificará a mí\". En las clases de SCJ, ¿quién recibe la gloria?",
+          "clave": "El Espíritu glorifica a Cristo, no a un pastor.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 16,
+              "desde": 14,
+              "hasta": 14,
+              "label": "Juan 16:14",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Me glorificará porque les contará todo lo que reciba de mí."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "εκεινοϲ εμε δοξαϲει · οτι εκ του εμου λημψεται · κ(αι) αναγγελλει ϋμιν"
+                }
+              ],
+              "pagina": "81.3r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 24,
+          "texto": "Efesios 4:4 dice \"un solo Espíritu\". ¿Hay \"el Espíritu Santo\" o \"muchos espíritus santos\"?",
+          "clave": "Un solo Espíritu.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 4,
+              "desde": 4,
+              "hasta": 4,
+              "label": "Efesios 4:4",
+              "ntv": [
+                {
+                  "n": 4,
+                  "text": "Pues hay un solo cuerpo y un solo Espíritu, tal como ustedes fueron llamados a una misma esperanza gloriosa para el futuro."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 4,
+                  "grc": "εν ϲωμα και εν ‹πν›α καθωϲ και εκληθητε εν μια ελπιδι τηϲ κληϲεωϲ ϋμων"
+                }
+              ],
+              "pagina": "84.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 25,
+          "texto": "Efesios 1:13: ¿cuándo fueron sellados los creyentes con el Espíritu?",
+          "clave": "\"Cuando creyeron\". No al aprobar un examen ni al graduarse en Sion.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 1,
+              "desde": 13,
+              "hasta": 13,
+              "label": "Efesios 1:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Y ahora ustedes, los gentiles, también han oído la verdad, la Buena Noticia de que Dios los salva. Además, cuando creyeron en Cristo, Dios los identificó como suyos al darles el Espíritu Santo, el cual había prometido tiempo atrás."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "εν ω και §0ϋμιϲ ακουϲαντεϲ τον λογον τηϲ αληθιαϲ το ευαγγελιον τηϲ ϲωτηριαϲ υμων εν ω και πιϲτευϲαντεϲ εϲφραγιϲθητε τω ‹πνι› τηϲ επαγγελιαϲ τω αγιω"
+                }
+              ],
+              "pagina": "84.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 26,
+          "texto": "1 Juan 2:27: \"no necesitan que nadie les enseñe… el Espíritu les enseña\". ¿Cómo encaja con depender del instructor para entender?",
+          "clave": "El Espíritu da a cada creyente acceso a la verdad.",
+          "refs": [
+            {
+              "libro": "1-juan",
+              "cap": 2,
+              "desde": 27,
+              "hasta": 27,
+              "label": "1 Juan 2:27",
+              "ntv": [
+                {
+                  "n": 27,
+                  "text": "Ustedes han recibido al Espíritu Santo, y él vive dentro de cada uno de ustedes, así que no necesitan que nadie les enseñe lo que es la verdad. Pues el Espíritu les enseña todo lo que necesitan saber, y lo que él enseña es verdad, no mentira. Así que, tal como él les ha enseñado, permanezcan en comunión con Cristo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 27,
+                  "grc": "και ϋμιϲ το χριϲμα ο ελαβετε απ αυτου μενει εν υμιν και ου χριαν εχετε ϊνα τιϲ διδαϲκη ϋμαϲ αλλ ωϲ το αυτου §0‹πν›α διδαϲκει ϋμαϲ περι παντ‹ω› και αληθηϲ εϲτ‹ι› και ουκ εϲτιν ψευδοϲ και καθωϲ εδιδαξεν ϋμαϲ μενετε εν αυτω"
+                }
+              ],
+              "pagina": "89.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 27,
+          "texto": "Romanos 8:9: quien no tiene el Espíritu de Cristo no es suyo. ¿Los cristianos fuera de SCJ no tienen el Espíritu?",
+          "clave": "Todo el que pertenece a Cristo tiene su Espíritu.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 8,
+              "desde": 9,
+              "hasta": 9,
+              "label": "Romanos 8:9",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Pero ustedes no están dominados por su naturaleza pecaminosa. Son controlados por el Espíritu si el Espíritu de Dios vive en ustedes. (Y recuerden que los que no tienen al Espíritu de Cristo en ellos, de ninguna manera pertenecen a él)."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "ϋμειϲ δε ουκ εϲτε εν ϲαρκι αλλα εν ‹πνι› ειπερ ‹πνα› ‹θυ› οικει εν υμιν ει δε τιϲ ‹πν›α ‹χυ› ουκ εχει ουτοϲ ουκ εϲτ‹ι› αυτου"
+                }
+              ],
+              "pagina": "82.4r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 28,
+          "texto": "Romanos 8:16: el Espíritu nos confirma que somos hijos de Dios. ¿Necesita esa confirmación el visto bueno de un centro?",
+          "clave": "No; el testimonio es del Espíritu.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 8,
+              "desde": 16,
+              "hasta": 16,
+              "label": "Romanos 8:16",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "Pues su Espíritu se une a nuestro espíritu para confirmar que somos hijos de Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "αυτο το ‹πν›α ϲυνμαρτυρει τω ‹πνι› ημ‹ω› · οτι εϲμεν τεκνα ‹θυ› ·"
+                }
+              ],
+              "pagina": "82.4r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 29,
+          "texto": "Hechos 2:38-39: ¿para quién es la promesa del Espíritu?",
+          "clave": "Para todos los que se arrepienten y creen, \"y para los que están lejos\".",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 2,
+              "desde": 38,
+              "hasta": 39,
+              "label": "Hechos 2:38-39",
+              "ntv": [
+                {
+                  "n": 38,
+                  "text": "Pedro contestó: —Cada uno de ustedes debe arrepentirse de sus pecados y volver a Dios, y ser bautizado en el nombre de Jesucristo para el perdón de sus pecados. Entonces recibirán el regalo del Espíritu Santo."
+                },
+                {
+                  "n": 39,
+                  "text": "Esta promesa es para ustedes, para sus hijos e incluso para los gentiles, es decir, para todos los que han sido llamados por el Señor nuestro Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 38,
+                  "grc": "πετροϲ δε προϲ αυτουϲ ˙ μετανοηϲατε φηϲιν και βαπτιϲθητω εκαϲτοϲ ϋμ‹ω› επι τω ονοματι ‹ιυ› ‹χυ› ειϲ αφεϲιν των αμαρτιων ϋμων και λημψεϲθαι την δωρεαν του αγιου ‹πν›ϲ"
+                },
+                {
+                  "n": 39,
+                  "grc": "ϋμιν γαρ εϲτιν η επαγγελια και τοιϲ τεκνοιϲ ϋμων και παϲι τοιϲ ειϲ μακραν οϲουϲ αν προϲκαλεϲητε ‹κϲ› ο ‹θϲ› ημων"
+                }
+              ],
+              "pagina": "86.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 30,
+          "texto": "1 Corintios 12:13: \"todos fuimos bautizados en un solo cuerpo por un mismo Espíritu\". ¿Cuándo dejó de existir ese cuerpo?",
+          "clave": "Nunca.",
+          "refs": [
+            {
+              "libro": "1-corintios",
+              "cap": 12,
+              "desde": 13,
+              "hasta": 13,
+              "label": "1 Corintios 12:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Entre nosotros hay algunos que son judíos y otros que son gentiles; algunos son esclavos, y otros son libres. Pero todos fuimos bautizados en un solo cuerpo por un mismo Espíritu, y todos compartimos el mismo Espíritu."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "και γαρ εν ενι ‹πν›ι ημειϲ παντεϲ ειϲ εν ϲωμα εβαπτιϲθημεν ειτε ϊουδαιοι ειτε ελληνεϲ ειτε δουλοι ειτε ελευθεροι και παντεϲ εν ‹πν›α εποτιϲθημεν"
+                }
+              ],
+              "pagina": "83.3v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "titulo": "Gracia y salvación",
+      "desde": 31,
+      "hasta": 40,
+      "preguntas": [
+        {
+          "n": 31,
+          "texto": "Efesios 2:8-9: salvos por gracia, \"no por obras\". ¿Por qué son condiciones asistir, aprobar exámenes y evangelizar?",
+          "clave": "Las obras son fruto de la salvación (v. 10), no su precio.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 2,
+              "desde": 8,
+              "hasta": 9,
+              "label": "Efesios 2:8-9",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Dios los salvó por su gracia cuando creyeron. Ustedes no tienen ningún mérito en eso; es un regalo de Dios."
+                },
+                {
+                  "n": 9,
+                  "text": "La salvación no es un premio por las cosas buenas que hayamos hecho, así que ninguno de nosotros puede jactarse de ser salvo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "τη γαρ χαριτι εϲτε ϲεϲωϲμενοι δια πιϲτεωϲ και τουτο ουκ εξ υμων ‹θυ› το δωρον"
+                },
+                {
+                  "n": 9,
+                  "grc": "ουκ εξ εργων ϊνα μη τιϲ καυχηϲηται"
+                }
+              ],
+              "pagina": "84.5r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "efesios",
+              "cap": 2,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Efesios 2:10"
+            }
+          ]
+        },
+        {
+          "n": 32,
+          "texto": "Romanos 4:5: Dios declara justo \"al pecador\" que cree. ¿Es justo solo quien tiene conocimiento + fe + obras?",
+          "clave": "La justicia se recibe por fe.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 4,
+              "desde": 5,
+              "hasta": 5,
+              "label": "Romanos 4:5",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "pero la gente no es considerada justa por sus acciones sino por su fe en Dios, quien perdona a los pecadores."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "τω δε μη εργαζομενω πιϲτευοντι δε επι τον δικαιο‹υ›τα τον αϲεβην λογιζεται η πιϲτιϲ αυτου ειϲ δικαιοϲυν‹η›"
+                }
+              ],
+              "pagina": "82.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 33,
+          "texto": "Lucas 23:42-43: el ladrón de la cruz no hizo ningún curso, examen ni sello. ¿Cómo entró al paraíso \"hoy\"?",
+          "clave": "Por fe en Jesús.",
+          "refs": [
+            {
+              "libro": "lucas",
+              "cap": 23,
+              "desde": 42,
+              "hasta": 43,
+              "label": "Lucas 23:42-43",
+              "ntv": [
+                {
+                  "n": 42,
+                  "text": "Luego dijo: —Jesús, acuérdate de mí cuando vengas en tu reino."
+                },
+                {
+                  "n": 43,
+                  "text": "Jesús respondió: —Te aseguro que hoy estarás conmigo en el paraíso."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 42,
+                  "grc": "και ελεγ‹ε› §0 ‹ιυ› μνηϲθητι μου οταν ελθηϲ εν τη βαϲιλια ϲου"
+                },
+                {
+                  "n": 43,
+                  "grc": "κ(αι) ειπεν αυτω αμην λεγω ϲοι ϲημερον μετ εμου εϲη εν τω παραδιϲω"
+                }
+              ],
+              "pagina": "79.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 34,
+          "texto": "Lucas 18:13-14: el cobrador de impuestos hizo una oración de una frase y \"regresó a casa justificado\". ¿Dónde estaba \"la Palabra\" en su corazón?",
+          "clave": "Dios oye al humilde que clama.",
+          "refs": [
+            {
+              "libro": "lucas",
+              "cap": 18,
+              "desde": 13,
+              "hasta": 14,
+              "label": "Lucas 18:13-14",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "En cambio, el cobrador de impuestos se quedó a la distancia y ni siquiera se atrevía a levantar la mirada al cielo mientras oraba. Sino que golpeó su pecho en señal de dolor mientras decía: «Oh, Dios, ten compasión de mí, porque soy un pecador»."
+                },
+                {
+                  "n": 14,
+                  "text": "Les digo que fue este pecador —y no el fariseo— quien regresó a su casa justificado delante de Dios. Pues los que se exaltan a sí mismos serán humillados, y los que se humillan serán exaltados."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "ὁ δε τελωνηϲ μακροθεν εϲτωϲ ουκ ηθελεν ουδε τουϲ οφθαλμουϲ επαραι ειϲ τον ουραν‹ο› αλλʼ ετυπτε το ϲτηθοϲ αυτου λεγων §0 ιλαϲθητι μοι τω αμαρτωλω ˙"
+                },
+                {
+                  "n": 14,
+                  "grc": "λεγω ϋμιν κατεβη ουτοϲ δεδικαιωμενοϲ ειϲ τον οικον αυτου παρ εκινον οτι παϲ ο ϋψων εαυτον ταπινωθηϲεται ὁ δε ταπινων εαυτον ϋψωθηϲε̣ται ˙"
+                }
+              ],
+              "pagina": "79.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 35,
+          "texto": "Hechos 10:4: las oraciones de Cornelio \"subieron ante Dios\" antes de que conociera el evangelio completo. ¿Dios no oye a quien \"no tiene la Palabra\"?",
+          "clave": "Dios oyó su oración.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 10,
+              "desde": 4,
+              "hasta": 4,
+              "label": "Hechos 10:4",
+              "ntv": [
+                {
+                  "n": 4,
+                  "text": "Cornelio lo miró fijamente, aterrorizado. —¿Qué quieres, señor? —le preguntó al ángel. Y el ángel contestó: —¡Dios ha recibido tus oraciones y tus donativos a los pobres como una ofrenda!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 4,
+                  "grc": "ο δε ατενιϲαϲ αυτω και εμφοβοϲ γενομενοϲ ειπ‹ε› τι εϲτιν ‹κε› ˙ ειπεν δε αυτω αι προϲευχαι ϲου και αι ελεημοϲυναι ϲου ανεβηϲαν §0 εμπροϲθεν του ‹θυ› ·"
+                }
+              ],
+              "pagina": "87.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 36,
+          "texto": "Hechos 16:30-31: \"¿qué debo hacer para ser salvo?\". ¿Cuál fue la respuesta de Pablo?",
+          "clave": "\"Cree en el Señor Jesús\", no \"aprende el Apocalipsis\".",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 16,
+              "desde": 30,
+              "hasta": 31,
+              "label": "Hechos 16:30-31",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "Después los sacó y les preguntó: —Señores, ¿qué debo hacer para ser salvo?"
+                },
+                {
+                  "n": 31,
+                  "text": "Ellos le contestaron: —Cree en el Señor Jesús y serás salvo, junto con todos los de tu casa."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "και §0προαγων αυτουϲ εξω εφη · κυριοι τι με δει ποιειν ϊνα ϲωθω"
+                },
+                {
+                  "n": 31,
+                  "grc": "οι δε ειπ‹α› §0πιϲτευϲαν επι τ‹ο› ‹κν› ‹ιν› και ϲωθηϲη ϲυ και ο οικοϲ ϲου"
+                }
+              ],
+              "pagina": "88.1r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 37,
+          "texto": "Juan 6:28-29: \"la obra de Dios es que crean en el que él ha enviado\". ¿Quién es el enviado?",
+          "clave": "Jesús.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 6,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Juan 6:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "—Nosotros también queremos realizar las obras de Dios —contestaron ellos—. ¿Qué debemos hacer?"
+                },
+                {
+                  "n": 29,
+                  "text": "Jesús les dijo: —La única obra que Dios quiere que hagan es que crean en quien él ha enviado."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "ειπον ουν προϲ αυτον · τι ποιωμεν · §0ϊν εργαζωμεθα τα εργα του ‹θυ› ·"
+                },
+                {
+                  "n": 29,
+                  "grc": "απεκριθη §0‹ιϲ› και ειπεν αυτοιϲ · τουτο εϲτιν το εργον του §2‹θυ› ϊνα πιϲτευηται ειϲ ον απεϲτιλεν εκεινοϲ ·"
+                }
+              ],
+              "pagina": "80.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 38,
+          "texto": "1 Juan 5:13: \"para que sepan que tienen vida eterna\". ¿Puede un cristiano saberlo hoy sin pertenecer a SCJ?",
+          "clave": "Sí; la certeza se basa en el Hijo (v. 12).",
+          "refs": [
+            {
+              "libro": "1-juan",
+              "cap": 5,
+              "desde": 13,
+              "hasta": 13,
+              "label": "1 Juan 5:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Les he escrito estas cosas a ustedes, que creen en el nombre del Hijo de Dios, para que sepan que tienen vida eterna."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "ταυτα εγραψα υμιν ϊνα ειδητε οτι ζωην αιωνιον εχετε §0τοιϲ §2πιϲτευουϲιν ειϲ το ονομα του υϊου του ‹θυ›"
+                }
+              ],
+              "pagina": "89.8r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "1-juan",
+              "cap": 5,
+              "desde": 12,
+              "hasta": 12,
+              "label": "1 Juan 5:12"
+            }
+          ]
+        },
+        {
+          "n": 39,
+          "texto": "Romanos 8:1: \"ya no hay condenación\". ¿Por qué un miembro \"sin fruto\" sería cortado por no cumplir metas de evangelismo?",
+          "clave": "El fruto de Juan 15 nace de permanecer en Cristo, no de una cuota.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 8,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Romanos 8:1",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Por lo tanto, ya no hay condenación para los que pertenecen a Cristo Jesús;"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "ουδεν αρα νυν κατακριμα τοιϲ εν ‹χω› ‹ιυ› §0"
+                }
+              ],
+              "pagina": "82.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 40,
+          "texto": "Gálatas 3:3: \"habiendo comenzado por el Espíritu, ¿ahora terminan por la carne?\". ¿Cómo se aplica a un sistema de méritos?",
+          "clave": "Volver a las obras como condición es apartarse del evangelio.",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 3,
+              "desde": 3,
+              "hasta": 3,
+              "label": "Gálatas 3:3",
+              "ntv": [
+                {
+                  "n": 3,
+                  "text": "¿Será posible que sean tan tontos? Después de haber comenzado a vivir la vida cristiana en el Espíritu, ¿por qué ahora tratan de ser perfectos mediante sus propios esfuerzos?"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 3,
+                  "grc": "ουτωϲ ανοητοι εϲτε εναρξαμενοι ‹πν›ι νυν ϲαρκι επιτελειϲθαι"
+                }
+              ],
+              "pagina": "84.3r"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "V",
+      "titulo": "La Escritura y las parábolas",
+      "desde": 41,
+      "hasta": 50,
+      "preguntas": [
+        {
+          "n": 41,
+          "texto": "Marcos 4:33-34: Jesús \"les explicaba todo\" a sus discípulos. ¿Por qué el sentido habría quedado oculto 2.000 años?",
+          "clave": "Las parábolas fueron explicadas y quedaron escritas.",
+          "refs": [
+            {
+              "libro": "marcos",
+              "cap": 4,
+              "desde": 33,
+              "hasta": 34,
+              "label": "Marcos 4:33-34",
+              "ntv": [
+                {
+                  "n": 33,
+                  "text": "Jesús empleó muchas historias e ilustraciones similares para enseñar a la gente, tanto como pudieran entender."
+                },
+                {
+                  "n": 34,
+                  "text": "De hecho, durante su ministerio público nunca enseñó sin usar parábolas; pero después, cuando estaba a solas con sus discípulos, les explicaba todo a ellos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 33,
+                  "grc": "και τοιαυταιϲ παραβολαιϲ πολλαιϲ ελαλει αυτοιϲ τ‹ο› λογον καθωϲ ηδυναντο ακουε‹ι›"
+                },
+                {
+                  "n": 34,
+                  "grc": "χωριϲ δε παραβοληϲ ουκ ελαλει αυτοιϲ κατ ϊδιαν δε τοιϲ ϊδιοιϲ μαθηταιϲ επελυεν παντα"
+                }
+              ],
+              "pagina": "76.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 42,
+          "texto": "Mateo 13:38-39: ¿qué es el campo y quiénes son los segadores?",
+          "clave": "El campo es el mundo; los segadores son los ángeles, no los miembros de SCJ.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 13,
+              "desde": 38,
+              "hasta": 39,
+              "label": "Mateo 13:38-39",
+              "ntv": [
+                {
+                  "n": 38,
+                  "text": "El campo es el mundo, y la buena semilla representa a la gente del reino. La maleza representa a las personas que pertenecen al maligno."
+                },
+                {
+                  "n": 39,
+                  "text": "El enemigo que sembró la maleza entre el trigo es el diablo. La cosecha es el fin del mundo, y los cosechadores son los ángeles."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 38,
+                  "grc": "ο δε αγροϲ εϲτιν ο κοϲμοϲ το δε καλον ϲπερμα ουτοι ειϲιν οι ϋϊοι τηϲ βαϲιλιαϲ τα δε ζιζανια ειϲιν οι ϋϊοι του πονηρου"
+                },
+                {
+                  "n": 39,
+                  "grc": "ο δε εχθροϲ ο ϲπιραϲ αυτα εϲτ‹ι› ο διαβολοϲ §0οι §3δε θεριϲται αγγελοι ειϲιν"
+                }
+              ],
+              "pagina": "74.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 43,
+          "texto": "Mateo 13:30 y 40-43: en la cosecha, ¿qué se recoge primero?",
+          "clave": "La cizaña; después el trigo.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 13,
+              "desde": 30,
+              "hasta": 30,
+              "label": "Mateo 13:30",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "Dejen que ambas crezcan juntas hasta la cosecha. Entonces les diré a los cosechadores que separen la maleza, la aten en manojos y la quemen, y que pongan el trigo en el granero»."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "αφετε ϲυναυξανεϲθε αμφοτερα §0αχρι του θεριϲμου και εν §3τω καιρω του θεριϲμου ερω τοιϲ θεριϲτεϲ ϲυλλεξατε πρωτον τα ζιζανια και δηϲατε αυτα ειϲ δεϲμαϲ προϲ το κατακαυϲε αυτα τον δε ϲιτον ϲυναγαγετε ειϲ την αποθηκην μου"
+                }
+              ],
+              "pagina": "74.8r"
+            },
+            {
+              "libro": "mateo",
+              "cap": 13,
+              "desde": 40,
+              "hasta": 43,
+              "label": "Mateo 13:40-43",
+              "ntv": [
+                {
+                  "n": 40,
+                  "text": "Tal como se separa la maleza y se quema en el fuego, así será en el fin del mundo."
+                },
+                {
+                  "n": 41,
+                  "text": "El Hijo del Hombre enviará a sus ángeles, y ellos quitarán del reino todo lo que produzca pecado y a todos aquellos que hagan lo malo."
+                },
+                {
+                  "n": 42,
+                  "text": "Y los ángeles los arrojarán al horno ardiente, donde habrá llanto y rechinar de dientes."
+                },
+                {
+                  "n": 43,
+                  "text": "Entonces los justos brillarán como el sol en el reino de su Padre. ¡Todo el que tenga oídos para oír, que escuche y entienda!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 40,
+                  "grc": "ωϲπερ ουν ϲυλλεγετε τα ζιζανια και πυρι κατακαιεται ουτωϲ εϲτε εν τη ϲυντελια του αιωνοϲ"
+                },
+                {
+                  "n": 41,
+                  "grc": "αποϲτελι ο ‹υϲ› του α‹νου› τουϲ αγγελουϲ και ϲυλλεξουϲιν εκ τηϲ βαϲιλιαϲ αυτου παντα τα ϲκανδαλα και τουϲ ποιουνταϲ την ανομιαν"
+                },
+                {
+                  "n": 42,
+                  "grc": "και §0βαλλουϲιν αυτουϲ ειϲ την καμινον του πυροϲ εκι §3εϲτε ο κλαυθμοϲ και ο βρυγμοϲ των οδ‹ο›των"
+                },
+                {
+                  "n": 43,
+                  "grc": "τοτε οι §0δικεοι εκλαμψουϲιν ωϲ ο ηλιοϲ εν τη βαϲιλεια του ‹πρϲ› αυτων ο εχων ωτα §2 ακουετω"
+                }
+              ],
+              "pagina": "74.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 44,
+          "texto": "Marcos 4:11: \"a ustedes se les ha dado el misterio del reino\". ¿A quiénes hablaba Jesús?",
+          "clave": "A sus discípulos del siglo I, no a un hombre en 1980.",
+          "refs": [
+            {
+              "libro": "marcos",
+              "cap": 4,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Marcos 4:11",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Él contestó: A ustedes se les permite entender el secreto del reino de Dios; pero utilizo parábolas para hablarles a los de afuera,"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "και ελεγεν αυτοιϲ ϋμιν το μυϲτηριον δεδοται τηϲ βαϲιλιαϲ του ‹θυ› εκεινοιϲ δε τοιϲ εξω εν παραβολαιϲ π‹α›τα γεινεται ·"
+                }
+              ],
+              "pagina": "76.4r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 45,
+          "texto": "Judas 3: la fe fue \"confiada una vez y para siempre\" a los santos. ¿Puede haber una nueva entrega?",
+          "clave": "No.",
+          "refs": [
+            {
+              "libro": "judas",
+              "cap": 1,
+              "desde": 3,
+              "hasta": 3,
+              "label": "Judas 1:3",
+              "ntv": [
+                {
+                  "n": 3,
+                  "text": "Queridos amigos, con gran anhelo tenía pensado escribirles acerca de la salvación que compartimos. Sin embargo, ahora me doy cuenta de que debo escribirles sobre otro tema para rogarles que defiendan la fe que Dios ha confiado una vez y para siempre a su pueblo santo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 3,
+                  "grc": "αγαπητοι · παϲαν ϲπουδην ποιουμενοϲ του γραφειν ϋμιν περι τηϲ κοινηϲ ημων ϲωτηριαϲ και ζωηϲ αναγκην εϲχον γραφιν υμ‹ι› παρακαλων επαγωνιζεϲθαι τη απαξ παραδοθειϲη τοιϲ αγιοιϲ πιϲτι"
+                }
+              ],
+              "pagina": "89.8v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 46,
+          "texto": "2 Timoteo 3:16-17: la Escritura prepara al creyente \"en todo sentido\". ¿Hace falta \"la palabra revelada\" de SCJ?",
+          "clave": "La Escritura es suficiente.",
+          "refs": [
+            {
+              "libro": "2-timoteo",
+              "cap": 3,
+              "desde": 16,
+              "hasta": 17,
+              "label": "2 Timoteo 3:16-17",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "Toda la Escritura es inspirada por Dios y es útil para enseñarnos lo que es verdad y para hacernos ver lo que está mal en nuestra vida. Nos corrige cuando estamos equivocados y nos enseña a hacer lo correcto."
+                },
+                {
+                  "n": 17,
+                  "text": "Dios la usa para preparar y capacitar a su pueblo para que haga toda buena obra."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "παϲα γραφη θεοπνευϲτοϲ και ωφελιμοϲ προϲ διδαϲκαλιαν · προϲ ελεγμον ˙ προϲ επανορθωϲιν · προϲ παιδιαν την εν δικαιοϲυνη"
+                },
+                {
+                  "n": 17,
+                  "grc": "ϊνα αρτιοϲ η ο του ‹θυ› ανθρωποϲ προϲ παν εργον αγαθ‹ο› εξηρτιϲμενοϲ"
+                }
+              ],
+              "pagina": "86.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 47,
+          "texto": "Apocalipsis 1:20: ¿qué son los siete candeleros según el mismo texto?",
+          "clave": "\"Las siete iglesias\", no \"espíritus y obreros\".",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 20,
+              "hasta": 20,
+              "label": "Apocalipsis 1:20",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "Este es el significado del misterio de las siete estrellas que viste en mi mano derecha y de los siete candelabros de oro: las siete estrellas son los ángeles de las siete iglesias, y los siete candelabros son las siete iglesias."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 20,
+                  "grc": "το μυϲτηριον των επτα αϲτερων ουϲ ειδεϲ επι τηϲ δεξιαϲ μου κ(αι) ταϲ επτα λυχνιαϲ ταϲ χρυϲαϲ οι επτα αϲτερεϲ αγγελοι των επτα εκκληϲιων §0και επτα λυχνιαι επτα εκκληϲιαι ειϲιν"
+                }
+              ],
+              "pagina": "90.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 48,
+          "texto": "Apocalipsis 17:9-12: ¿qué son las cabezas y los cuernos de la bestia según el texto?",
+          "clave": "Colinas y reyes; diez reyes. No \"pastores y ancianos\".",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 17,
+              "desde": 9,
+              "hasta": 12,
+              "label": "Apocalipsis 17:9-12",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Aquí se requiere una mente con entendimiento: las siete cabezas de la bestia representan las siete colinas donde la mujer gobierna. También representan siete reyes:"
+                },
+                {
+                  "n": 10,
+                  "text": "cinco reyes ya han caído, el sexto reina actualmente, y el séptimo todavía no ha llegado pero su reino será breve."
+                },
+                {
+                  "n": 11,
+                  "text": "La bestia escarlata que existía pero que ya no existe es el octavo rey. Este rey es como los otros siete, y él también va rumbo a la destrucción."
+                },
+                {
+                  "n": 12,
+                  "text": "Los diez cuernos de la bestia son diez reyes que todavía no han subido al poder; pero éstos serán designados como reyes por un breve momento para reinar junto con la bestia."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "ωδε ο νουϲ ο εχων ϲοφιαν αι επτα κεφαλαι επτα ορη ειϲ‹ι› οπου η γυνη καθηται επ αυτων και επτα βαϲιλειϲ §0εϲιν"
+                },
+                {
+                  "n": 10,
+                  "grc": "οι πεντε επεϲαν ο ειϲ εϲτιν ο αλλοϲ ουπω ηλθεν και οταν ελθη ολιγ‹ο› αυτον μινε §0ζει"
+                },
+                {
+                  "n": 11,
+                  "grc": "και το θηριον ο ην και ουκ εϲτιν ουτοϲ ο ογδοοϲ εϲτιν και εκ των επτα εϲτ‹ι› και ειϲ απωλιαν ϋπαγει"
+                },
+                {
+                  "n": 12,
+                  "grc": "και τα δεκα καιρατα α ειδεϲ δεκα βαϲιλειϲ ειϲιν οιτινεϲ βαϲιλιαν §0ουτω ελαβ‹ο› αλλα §2εξουϲιν ωϲ βαϲιλειϲ §4βα μιαν ωραν λαμβανουϲ‹ι› μετα του θηριου"
+                }
+              ],
+              "pagina": "90.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 49,
+          "texto": "2 Pedro 1:20: ninguna profecía es \"de interpretación propia\". ¿Cómo encaja una interpretación que depende de un solo hombre?",
+          "clave": "La profecía se lee con la Escritura entera, no por revelación privada.",
+          "refs": [
+            {
+              "libro": "2-pedro",
+              "cap": 1,
+              "desde": 20,
+              "hasta": 20,
+              "label": "2 Pedro 1:20",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "Sobre todo, tienen que entender que ninguna profecía de la Escritura jamás surgió de la comprensión personal de los profetas"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 20,
+                  "grc": "τουτο πρωτον γινωϲκοντεϲ οτι παϲα προφητια γραφηϲ ιδιαϲ επιλυϲεωϲ ου γινεται"
+                }
+              ],
+              "pagina": "89.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 50,
+          "texto": "Oseas 12:10: Dios habló por medio de figuras. ¿Quién fija su significado: el contexto bíblico o un diccionario de un grupo?",
+          "clave": "La Escritura interpreta a la Escritura, en contexto.",
+          "refs": [
+            {
+              "libro": "oseas",
+              "cap": 12,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Oseas 12:10",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Yo envié a mis profetas para advertirte con numerosas visiones y parábolas."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "VI",
+      "titulo": "Apocalipsis por su propio texto",
+      "desde": 51,
+      "hasta": 60,
+      "preguntas": [
+        {
+          "n": 51,
+          "texto": "Apocalipsis 1:1-4: ¿a quién se escribió y cuándo estaba \"cerca\" el tiempo?",
+          "clave": "A siete iglesias de Asia del siglo I; bendito el que lo lee y lo obedece (1:3).",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 1,
+              "hasta": 4,
+              "label": "Apocalipsis 1:1-4",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Esta es una revelación de Jesucristo, la cual Dios le dio para mostrar a sus siervos los acontecimientos que deben suceder pronto. Él envió a un ángel a presentarle esta revelación a su siervo, Juan,"
+                },
+                {
+                  "n": 2,
+                  "text": "quien relató con fidelidad todo lo que vio. Éste es su relato de la palabra de Dios y del testimonio de Jesucristo."
+                },
+                {
+                  "n": 3,
+                  "text": "Dios bendice al que lee a la iglesia las palabras de esta profecía y bendice a todos los que escuchan el mensaje y obedecen lo que dice, porque el tiempo está cerca."
+                },
+                {
+                  "n": 4,
+                  "text": "Yo, Juan, les escribo esta carta a las siete iglesias que están en la provincia de Asia. Gracia y paz a ustedes de aquél que es, que siempre era y que aún está por venir; y del Espíritu de siete aspectos que está delante de su trono;"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "§0αποκαλυψιϲ ‹ιυ› ‹χυ› §2ην §4εδωκεν αυτω ο ‹θϲ› δειξαι τοιϲ §6αγιοιϲ αυτου §8α δει γε>νεϲθαι εν §10ταχει και εϲημανεν αποϲτειλαϲ δια του αγγελου αυτου τω δουλω αυτου §12ϊωανει"
+                },
+                {
+                  "n": 2,
+                  "grc": "οϲ §0εμαρτυρη>ϲεν τον λογον του ‹θυ› και την μαρτυριαν ‹ιυ› ‹χυ› οϲα ϊδ‹ε›"
+                },
+                {
+                  "n": 3,
+                  "grc": "§0μακαριοϲ ο αναγινωϲκων και οι α>κουοντεϲ τον λογον τηϲ προφητιαϲ και τηρουντεϲ τα εν αυτη §2γεγραμμενα ο γαρ καιροϲ εγγυϲ"
+                },
+                {
+                  "n": 4,
+                  "grc": "§0ϊωανηϲ ταιϲ επτα εκκληϲιαιϲ ταιϲ εν τη αϲια §2χαριϲ υμιν και ειρηνη απο ο §4ων και ο §6ην και ο §8ερχομενοϲ και απο των επτα π‹ν›ατων των §10ε>νωπιον του θρονου αυτου"
+                }
+              ],
+              "pagina": "90.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 52,
+          "texto": "Apocalipsis 22:10: \"No selles las palabras\". ¿Cómo pudo estar \"sellado\" el libro durante 2.000 años?",
+          "clave": "El libro se entregó abierto.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 22,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Apocalipsis 22:10",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Entonces me indicó: No selles las palabras proféticas de este libro porque el tiempo está cerca."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 10,
+                  "grc": "και λεγει μοι μη ϲφραγιϲηϲ τουϲ λογουϲ §0τουτουϲ τηϲ προφητειαϲ του βιβλιου τουτου ο καιροϲ γαρ ενγυϲ εϲτιν"
+                }
+              ],
+              "pagina": "91.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 53,
+          "texto": "Apocalipsis 5:5-9: ¿quién es digno de abrir los sellos?",
+          "clave": "El Cordero, Jesús.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 5,
+              "desde": 5,
+              "hasta": 9,
+              "label": "Apocalipsis 5:5-9",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "pero uno de los veinticuatro ancianos me dijo: ¡Deja de llorar! Mira, el León de la tribu de Judá, el heredero del trono de David, ha ganado la victoria. Él es digno de abrir el rollo y sus siete sellos."
+                },
+                {
+                  "n": 6,
+                  "text": "Entonces vi a un Cordero que parecía que había sido sacrificado, pero que ahora estaba de pie entre el trono y los cuatro seres vivientes y en medio de los veinticuatro ancianos. Tenía siete cuernos y siete ojos, que representan los siete aspectos del Espíritu de Dios el cual es enviado a todas las partes de la tierra."
+                },
+                {
+                  "n": 7,
+                  "text": "Él pasó adelante y tomó el rollo de la mano derecha del que estaba sentado en el trono."
+                },
+                {
+                  "n": 8,
+                  "text": "Y cuando tomó el rollo, los cuatro seres vivientes y los veinticuatro ancianos se postraron delante del Cordero. Cada uno tenía un arpa y llevaba copas de oro llenas de incienso, que son las oraciones del pueblo de Dios."
+                },
+                {
+                  "n": 9,
+                  "text": "Y cantaban un nuevo canto con las siguientes palabras: Tú eres digno de tomar el rollo y de romper los sellos y abrirlo. Pues tú fuiste sacrificado y tu sangre pagó el rescate para Dios de gente de todo pueblo, tribu, lengua y nación."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "και ειϲ εκ των πρεϲβυτερων λεγει μοι μη κλαιε ϊδου ενικηϲ‹ε› ο λεων εκ τηϲ φυληϲ ϊουδα η ριζα ‹δα›δ ανοιξαι το βιβλιον και λυϲαι ταϲ επτα ϲφραγιδαϲ αυτου"
+                },
+                {
+                  "n": 6,
+                  "grc": "και ειδον εν μεϲω του θρονου και των τεϲϲαρων ζωων και εν μεϲω των πρεϲβυτερων αρνιον εϲτηκωϲ ωϲ εϲφαγμενον εχων κερατα επτα και οφθαλμουϲ επτα οι ειϲιν τα επτα ‹πνα›τα του ‹θυ› απεϲταλμενα ειϲ παϲαν την γην"
+                },
+                {
+                  "n": 7,
+                  "grc": "και ηλθεν και ειληφεν εκ τηϲ δεξιαϲ §0τηϲ καθημενου επι του θρονου"
+                },
+                {
+                  "n": 8,
+                  "grc": "και οτε ελαβεν το βιβλιον τα τεϲϲερα ζωα και οι εικοϲι τεϲϲαρεϲ πρεϲβυτεροι επεϲ‹α› ενωπιον του αρνιου εκαϲτοϲ εχοντεϲ κιθαραν και φιαλαϲ χρυϲεαϲ γεμουϲαϲ θυμιαματων α ειϲιν §0 προϲευχαι των αγιων"
+                },
+                {
+                  "n": 9,
+                  "grc": "και αδουϲιν ωδην καινην λεγοντεϲ αξιοϲ ει λαβιν το βιβλιον και ανοιξαι ταϲ ϲφραγιδαϲ αυτου οτι εϲφαγηϲ και ηγοραϲαϲ τω ‹θω› ημαϲ εν τω αιματι ϲου εκ παϲηϲ φυληϲ και γλωϲϲηϲ και λαου και εθνουϲ"
+                }
+              ],
+              "pagina": "90.3r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 54,
+          "texto": "Apocalipsis 10:9-11: ¿a quién se le dice \"debes profetizar otra vez\"?",
+          "clave": "A Juan.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 10,
+              "desde": 9,
+              "hasta": 11,
+              "label": "Apocalipsis 10:9-11",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Así que me acerqué al ángel y le dije que me diera el pequeño rollo. Él me dijo: Sí, tómalo y cómelo. Será dulce como la miel en tu boca, ¡pero se volverá amargo en tu estómago!"
+                },
+                {
+                  "n": 10,
+                  "text": "Entonces tomé el pequeño rollo de la mano del ángel, ¡y me lo comí! Fue dulce en mi boca, pero cuando lo tragué, se volvió amargo en mi estómago."
+                },
+                {
+                  "n": 11,
+                  "text": "Entonces me fue dicho: Tienes que volver a profetizar sobre muchos pueblos, naciones, lenguas y reyes."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "και απηλθον προϲ τ‹ο› αγγελον λεγων αυτω δουναι μοι το βιβλιον και λεγει μοι λαβε αυτο και καταφαγε §0 και πικρανι ϲου την κοιλιαν αλλα εν τω ϲτοματι ϲου εϲται γλυκυ ωϲ μελι"
+                },
+                {
+                  "n": 10,
+                  "grc": "και ελαβον το βιβλιον εκ τηϲ χειροϲ του αγγελου και κατεφαγον αυτο και ην εν τω ϲτοματι μου ωϲ μελει γλυκυ και οτε εφαγον αυτο εγεμιϲθη η κοιλια μου §0"
+                },
+                {
+                  "n": 11,
+                  "grc": "και λεγουϲιν μοι δι ϲε παλιν προφητευϲαι επι λαοιϲ και εθνεϲιν και γλωϲϲαιϲ και βαϲιλευϲιν πολλοιϲ"
+                }
+              ],
+              "pagina": "90.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 55,
+          "texto": "Apocalipsis 22:18-19: ¿prohíbe \"no entender del todo\" o prohíbe alterar el texto? ¿Quién añade nombres, lugares y fechas de Corea?",
+          "clave": "Prohíbe alterar el texto.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 22,
+              "desde": 18,
+              "hasta": 19,
+              "label": "Apocalipsis 22:18-19",
+              "ntv": [
+                {
+                  "n": 18,
+                  "text": "Yo declaro solemnemente a todos los que oyen las palabras de la profecía escritas en este libro: si alguien agrega algo a lo que está escrito aquí, Dios le agregará a esa persona las plagas que se describen en este libro."
+                },
+                {
+                  "n": 19,
+                  "text": "Y si alguien quita cualquiera de las palabras de este libro de profecía, Dios le quitará su parte del árbol de la vida y de la ciudad santa que se describen en este libro."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 18,
+                  "grc": "η μαρτυρω εγω παντι τω ακουοντι τουϲ λογουϲ τηϲ προφητειαϲ του βιβλιου τουτου εαν τιϲ επιθηϲει §0 επ αυτον ο ‹θϲ› ταϲ πληγαϲ ταϲ γεγραμμεναϲ ‹ε› τω βιβλιω τουτω ·"
+                },
+                {
+                  "n": 19,
+                  "grc": "και αν τιϲ αφελη απο των λογων τουτων του βιβλιου τηϲ προφητιαϲ ταυτηϲ αφελι ο ‹θϲ› το μεροϲ αυτου απο του ξυλου τηϲ ζωηϲ και εκ τηϲ πολεωϲ τηϲ αγιαϲ των γεγραμμενων εν τω βιβλιω τουτω"
+                }
+              ],
+              "pagina": "91.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 56,
+          "texto": "Apocalipsis 11:3-12: ¿cuántos testigos hay? ¿Qué les pasa a los tres días y medio?",
+          "clave": "Dos testigos, que resucitan y suben al cielo en una nube a la vista de sus enemigos. No es un proceso judicial en Seúl.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 11,
+              "desde": 3,
+              "hasta": 12,
+              "label": "Apocalipsis 11:3-12",
+              "ntv": [
+                {
+                  "n": 3,
+                  "text": "Mientras tanto yo daré poder a mis dos testigos, y ellos se vestirán de tela áspera y profetizarán durante esos 1260 días."
+                },
+                {
+                  "n": 4,
+                  "text": "Estos dos profetas son los dos olivos y los dos candelabros que están delante del Señor de toda la tierra."
+                },
+                {
+                  "n": 5,
+                  "text": "Si alguien trata de hacerles daño, sale fuego de sus bocas y consume a sus enemigos. Así debe morir cualquiera que intente hacerles daño."
+                },
+                {
+                  "n": 6,
+                  "text": "Ellos tienen el poder de cerrar los cielos para que no llueva durante el tiempo que profeticen. También tienen el poder de convertir los ríos y los mares en sangre, y de azotar la tierra cuantas veces quieran con toda clase de plagas."
+                },
+                {
+                  "n": 7,
+                  "text": "Cuando los testigos hayan terminado de dar su testimonio, la bestia que sube del abismo sin fondo declarará la guerra contra ellos, los conquistará y los matará."
+                },
+                {
+                  "n": 8,
+                  "text": "Y sus cuerpos quedarán tendidos en la calle principal de Jerusalén, la ciudad que simbólicamente se llama Sodoma y Egipto, la ciudad en la cual su Señor fue crucificado."
+                },
+                {
+                  "n": 9,
+                  "text": "Y durante tres días y medio, todos los pueblos y todas las tribus, lenguas y naciones se quedarán mirando los cadáveres. A nadie se le permitirá enterrarlos."
+                },
+                {
+                  "n": 10,
+                  "text": "Los que pertenecen a este mundo se alegrarán y se harán regalos unos a otros para celebrar la muerte de los dos profetas que los habían atormentado."
+                },
+                {
+                  "n": 11,
+                  "text": "Pero después de tres días y medio, Dios sopló vida en ellos, ¡y se pusieron de pie! El terror se apoderó de todos los que estaban mirándolos."
+                },
+                {
+                  "n": 12,
+                  "text": "Luego una fuerte voz del cielo llamó a los dos profetas: ¡Suban aquí! Entonces ellos subieron al cielo en una nube mientras sus enemigos los veían."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 3,
+                  "grc": "και δωϲω τοιϲ δυϲιν μαρτυϲιν μου και προφητευϲουϲ‹ι› ημεραϲ χιλιαϲ διακοϲιαϲ εξηκοντα §0 §2περιβεβλημενουϲ ϲακκουϲ"
+                },
+                {
+                  "n": 4,
+                  "grc": "ουτοι ειϲιν §0οι δυο ελαιαι και §2 δυο λυχνιαι ενωπιον του ‹κυ› τηϲ γηϲ §4εϲτωτεϲ"
+                },
+                {
+                  "n": 5,
+                  "grc": "και ει τιϲ θελει αυτουϲ αδικηϲαι πυρ εκπορευεται εκ του ϲτοματοϲ αυτων και κατεϲθιει τουϲ εχθρουϲ αυτων και §0η τιϲ θεληϲη αδικηϲαι αυτουϲ ουτωϲ δι αυτον αποκτανθηναι"
+                },
+                {
+                  "n": 6,
+                  "grc": "ουτοι εχουϲιν εξουϲιαν κλειϲαι τον ουρανον ϊνα μη ϋετοϲ βρεχη ταϲ ημεραϲ τηϲ προφητιαϲ αυτων και εξουϲιαν εχουϲιν επι των ϋδατων ϲτρεφειν αυτα ειϲ αιμα §0 παταξαι την γην εν παϲη πληγη οϲακιϲ εαν θεληϲωϲι"
+                },
+                {
+                  "n": 7,
+                  "grc": "και οταν τελεϲωϲιν την μαρτυριαν αυτων το θηριον §0τοτε αναβαινον εκ τηϲ αβυϲϲου ποιηϲει μετ αυτων πολεμον και νικηϲει αυτουϲ και αποκτενει αυτουϲ"
+                },
+                {
+                  "n": 8,
+                  "grc": "και τα πτωματα αυτων §0 επι τηϲ πλατιαϲ τηϲ πολεωϲ τηϲ μεγαληϲ ητιϲ καλειται ‹πνι›κωϲ ϲοδομα §2 και αιγυπτοϲ ˙ οπου §4και ο ‹κϲ› §6 εϲ(‹τρ›)‹ω›θη"
+                },
+                {
+                  "n": 9,
+                  "grc": "και βλεπουϲιν εκ των φυλων κ(αι) λαων §0 γλωϲϲων και εθνων το πτωμα αυτων ημεραϲ τρειϲ και ημιϲυ και τα πτωματα αυτ‹ω› ουκ §2αφιουϲιν τεθηναι ειϲ §5μνημα"
+                },
+                {
+                  "n": 10,
+                  "grc": "και οι κατοικουντεϲ επι τηϲ γηϲ χαιρουϲιν επ αυτοιϲ κ(αι) ευφραινονται κ(αι) δωρα §0πεμπουϲιν αλληλοιϲ οτι ουτοι οι προφηται οι δυο εβαϲανιϲαν τουϲ κατοικουνταϲ επι τηϲ γηϲ"
+                },
+                {
+                  "n": 11,
+                  "grc": "και μετα τριϲ ημεραϲ και §0ημιϲου ‹πν›α ζωηϲ εκ του ‹θυ› ειϲηλθ‹ε› ειϲ αυτουϲ και εϲτηϲαν επι τουϲ ποδαϲ αυτων και φοβοϲ μεγαϲ επεϲ‹ε› επι τουϲ §2θεορο‹υ›ταϲ αυτουϲ"
+                },
+                {
+                  "n": 12,
+                  "grc": "και §0ηκουϲαν φωνηϲ μεγαληϲ εκ του ο‹υνου› λεγουϲηϲ αυτοιϲ αναβατε ωδε και ανεβηϲαν ειϲ τον ο‹υνον› εν τη νεφελη και εθεωρηϲαν αυτουϲ οι εχθροι αυτων"
+                }
+              ],
+              "pagina": "90.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 57,
+          "texto": "Apocalipsis 12:11: \"ellos lo han vencido\". ¿Por qué SCJ dice que el vencedor es uno solo?",
+          "clave": "Los vencedores son los creyentes, por la sangre del Cordero.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 12,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Apocalipsis 12:11",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Ellos lo han vencido por medio de la sangre del Cordero y por el testimonio que dieron. Y no amaron tanto la vida como para tenerle miedo a la muerte."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "και ουτοι ενικηϲαν αυτον δια το αιμα του αρνιου κ(αι) δια τον λογον τηϲ μαρτυριαϲ αυτ‹ω› και ουκ ηγαπηϲ‹α› την ψυχην §0αυτ‹ω› αχρι θανατου"
+                }
+              ],
+              "pagina": "90.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 58,
+          "texto": "Apocalipsis 6:12-17: el cielo se enrolla y todos los reyes de la tierra se esconden. ¿Describe a una congregación de Gwacheon?",
+          "clave": "Describe un juicio de alcance universal.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 6,
+              "desde": 12,
+              "hasta": 17,
+              "label": "Apocalipsis 6:12-17",
+              "ntv": [
+                {
+                  "n": 12,
+                  "text": "Mientras yo miraba, el Cordero rompió el sexto sello, y hubo un gran terremoto. El sol se volvió tan oscuro como tela negra, y la luna se volvió tan roja como la sangre."
+                },
+                {
+                  "n": 13,
+                  "text": "Entonces las estrellas del cielo cayeron sobre la tierra como los higos verdes que caen de un árbol cuando es sacudido por el fuerte viento."
+                },
+                {
+                  "n": 14,
+                  "text": "El cielo fue enrollado como un pergamino, y todas las montañas y las islas fueron movidas de su lugar."
+                },
+                {
+                  "n": 15,
+                  "text": "Entonces todo el mundo —los reyes de la tierra, los gobernantes, los generales, los ricos, los poderosos, todo esclavo y hombre libre— se escondió en las cuevas y entre las rocas de las montañas."
+                },
+                {
+                  "n": 16,
+                  "text": "Y gritaban a las montañas y a las rocas: Caigan sobre nosotros y escóndannos del rostro de aquél que se sienta en el trono, y de la ira del Cordero;"
+                },
+                {
+                  "n": 17,
+                  "text": "porque ha llegado el gran día de su ira, ¿y quién podrá sobrevivir?"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 12,
+                  "grc": "και ειδον οτε §0ενυξεν την ϲφραγιδα τ‹η› εκτην και ϲιϲμοϲ μεγαϲ εγενετο και ο ηλιοϲ μελαϲ εγενετο ωϲ ϲακκοϲ τριχινοϲ και η ϲεληνη ολη εγενετο ωϲ αιμα"
+                },
+                {
+                  "n": 13,
+                  "grc": "και οι αϲτερεϲ του ‹ουνου› επεϲαν επι την γην ωϲ ϲυκη βαλλουϲα τουϲ ολ‹υ›θουϲ αυτηϲ απο ανεμου §0με §2μειγαλου ϲιομενη"
+                },
+                {
+                  "n": 14,
+                  "grc": "και ο ο‹υνοϲ› απεχωριϲθη ωϲ βιβλιον ελιϲϲομενοϲ και παν οροϲ και βουνοϲ εκ των τοπων §0εκινηϲαν"
+                },
+                {
+                  "n": 15,
+                  "grc": "και οι βαϲιλειϲ τηϲ γηϲ και οι μεγιϲτανεϲ και οι χιλιαρχοι και οι πλουϲιοι και ϊϲχυροι και παϲ δουλοϲ §0 εκρυψαν εαυτουϲ ειϲ τα ϲπηλεα και ειϲ ταϲ πετραϲ τ‹ω› ορεων"
+                },
+                {
+                  "n": 16,
+                  "grc": "και λεγουϲ‹ι› τοιϲ ορεϲιν και ταιϲ πετραιϲ πεϲεται εφ ημαϲ και κρυψεται ημαϲ απο προϲωπου του καθημενου επι τω θρονω και §0επι τηϲ οργηϲ του αρνιου"
+                },
+                {
+                  "n": 17,
+                  "grc": "οτι ηλθεν η ημερα η μεγαλη τηϲ οργηϲ αυτ‹ω› και τιϲ δυναται ϲταθηναι"
+                }
+              ],
+              "pagina": "90.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 59,
+          "texto": "Apocalipsis 7:9: después de los 144.000 aparece una multitud \"que nadie podía contar\" de toda nación. ¿Dónde está esa multitud en SCJ?",
+          "clave": "El pueblo de Dios es incontable y de todas las naciones.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 7,
+              "desde": 9,
+              "hasta": 9,
+              "label": "Apocalipsis 7:9",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Después de esto vi una enorme multitud de todo pueblo y toda nación, tribu y lengua, que era tan numerosa que nadie podía contarla. Estaban de pie delante del trono y delante del Cordero. Vestían túnicas blancas y tenían en sus manos ramas de palmeras."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "μετα ταυτα ιδον και ϊδου οχλοϲ πολυϲ §0οϲ αριθμηϲαι αυτ‹ο› ουδιϲ εδυνατο εκ παντοϲ εθνουϲ και φυλων και λαων και γλωϲϲων εϲτωτεϲ ενωπι‹ο› του θρονου και ενωπιον του αρνιου §2περιβεβλημενουϲ ϲτολαϲ λευκαϲ και §4φοινικαϲ εν ταιϲ χερϲιν αυτ‹ω›"
+                }
+              ],
+              "pagina": "90.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 60,
+          "texto": "Apocalipsis 21:4 y 21:22: en la nueva creación no hay muerte, ni llanto, ni templo. ¿Cómo puede SCJ ser \"nuevo cielo y nueva tierra\" y a la vez \"Templo del Tabernáculo\"?",
+          "clave": "No puede: sus miembros mueren y el texto dice que allí no hay templo.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 21,
+              "desde": 4,
+              "hasta": 4,
+              "label": "Apocalipsis 21:4",
+              "ntv": [
+                {
+                  "n": 4,
+                  "text": "Él les secará toda lágrima de los ojos, y no habrá más muerte ni tristeza ni llanto ni dolor. Todas esas cosas ya no existirán más."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 4,
+                  "grc": "και εξαλιψει παν §0δρακυ εκ των οφθαλμων αυτων και ο θανατοϲ ουκ εϲται ετι ουτε κραυγη ουτε πενθοϲ ουκ εϲται §2οτι τα §4προβατα απηλθεν"
+                }
+              ],
+              "pagina": "91.1r"
+            },
+            {
+              "libro": "apocalipsis",
+              "cap": 21,
+              "desde": 22,
+              "hasta": 22,
+              "label": "Apocalipsis 21:22",
+              "ntv": [
+                {
+                  "n": 22,
+                  "text": "No vi ningún templo en la ciudad, porque el Señor Dios Todopoderoso y el Cordero son el templo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 22,
+                  "grc": "και να‹ο› ουκ ειδον εν αυτη §0οτι ο ‹κϲ› §2ο ‹θϲ› ο παντοκρατωρ ναοϲ αυτηϲ εϲτ‹ι› και το αρνιον"
+                }
+              ],
+              "pagina": "91.1v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "VII",
+      "titulo": "La segunda venida y la resurrección",
+      "desde": 61,
+      "hasta": 70,
+      "preguntas": [
+        {
+          "n": 61,
+          "texto": "Hechos 1:11: Jesús \"regresará de la misma manera\" en que se fue. ¿Se fue en espíritu sobre una persona o visible y en cuerpo?",
+          "clave": "Visible y en cuerpo; así volverá.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 1,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Hechos 1:11",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Hombres de Galilea —les dijeron—, ¿por qué están aquí parados, mirando al cielo? Jesús fue tomado de entre ustedes y llevado al cielo, ¡pero un día volverá del cielo de la misma manera en que lo vieron irse!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "οι και ειπαν ανδρεϲ γαλιλαιοι τι εϲτηκατε §0βλεποντεϲ ειϲ τ‹ο› ουρανον ουτοϲ ο ‹ιϲ› ο αναλημφθειϲ αφ υμων ειϲ τον ουρανον ουτωϲ ελευϲεται ον τροπον εθεαϲαϲθαι αυτον πορευομενον ειϲ τον ουρανον"
+                }
+              ],
+              "pagina": "86.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 62,
+          "texto": "Apocalipsis 1:7: \"todos lo verán\". ¿Quién lo vio venir en los años 80?",
+          "clave": "Nadie; su venida será universal y visible.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 7,
+              "hasta": 7,
+              "label": "Apocalipsis 1:7",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "¡Miren! Él viene en las nubes del cielo. Y todos lo verán, incluso aquéllos que lo traspasaron. Y todas las naciones del mundo se lamentarán por él. ¡Sí! ¡Amén!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 7,
+                  "grc": "§0ϊδου §2ερχεται μετα των νεφελ‹ω› και §4οψονται αυτον §6παρ οφθαλμοϲ και οιτινεϲ §8 εξεκεντηϲαν και κοψονται §10 αυτον παϲαι αι φυλαι τηϲ γηϲ §12ναι §14αμ‹η›"
+                }
+              ],
+              "pagina": "90.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 63,
+          "texto": "Mateo 24:23-27: si dicen \"aquí está el Cristo\", \"no lo crean\". ¿Por qué no aplicar esta advertencia a quien dice que Jesús vino a un pastor?",
+          "clave": "Jesús advirtió exactamente contra eso; su venida será como el relámpago.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 23,
+              "hasta": 27,
+              "label": "Mateo 24:23-27",
+              "ntv": [
+                {
+                  "n": 23,
+                  "text": "Entonces, si alguien les dice: «Miren, aquí está el Mesías» o «Allí está», no lo crean."
+                },
+                {
+                  "n": 24,
+                  "text": "Pues se levantarán falsos mesías y falsos profetas y realizarán grandes señales y milagros para engañar, de ser posible, aun a los elegidos de Dios."
+                },
+                {
+                  "n": 25,
+                  "text": "Miren, que les he advertido esto de antemano."
+                },
+                {
+                  "n": 26,
+                  "text": "Por lo tanto, si alguien les dice: «Miren, el Mesías está en el desierto», ni se molesten en ir a buscarlo. O bien, si les dicen: «Miren, se esconde aquí», ¡no lo crean!"
+                },
+                {
+                  "n": 27,
+                  "text": "Pues, así como el relámpago destella en el oriente y brilla en el occidente, así será cuando venga el Hijo del Hombre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 23,
+                  "grc": "τοτε εαν τιϲ ϋμιν ειπη ϊδου ωδε ο §0‹χϲ› η ωδε μη πιϲτευϲητε"
+                },
+                {
+                  "n": 24,
+                  "grc": "εγερθηϲονται γαρ §0ι ψευδοχριϲτοι και ψευδοπροφητε και δωϲουϲιν ϲημια και τερατα ωϲτε πλανηθηναι ει δυνατον και τουϲ εκλεκτουϲ :"
+                },
+                {
+                  "n": 25,
+                  "grc": "ϊδου προειρηκα ϋμ‹ι›"
+                },
+                {
+                  "n": 26,
+                  "grc": "εαν §0 ειπωϲιν υμ‹ι› ϊδου εν τη ερημω εϲτιν μη εξελθητε ϊδου εν τοιϲ ταμιοιϲ μη πιϲτευϲητε :"
+                },
+                {
+                  "n": 27,
+                  "grc": "ωϲπερ γαρ η αϲτραπη εξερχετε απο ανατολων και φαινετε εωϲ δυϲμ‹ω› ουτωϲ εϲτε η παρουϲια του ‹υυ› του ‹ανο›υ"
+                }
+              ],
+              "pagina": "75.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 64,
+          "texto": "Mateo 24:30: ¿qué verán \"todos los pueblos de la tierra\"?",
+          "clave": "Al Hijo del Hombre venir sobre las nubes.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 30,
+              "hasta": 30,
+              "label": "Mateo 24:30",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "Y entonces, por fin, aparecerá en los cielos la señal de que el Hijo del Hombre viene, y habrá un profundo lamento entre todos los pueblos de la tierra. Verán al Hijo del Hombre venir en las nubes del cielo con poder y gran gloria."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "και τοτε φανηϲετε το ϲημι‹ο› του ‹υυ› του ‹ανου› εν ουρανω και §0 κοψ‹ο›τε §2παϲε §4ε φυλαι τηϲ γηϲ : και οψοντε τ‹ο› ‹υν› του §6ανου ερχομενον επι των νεφελων του ‹ουνου› μετα δυναμεωϲ κ(αι) δοξηϲ πολληϲ"
+                }
+              ],
+              "pagina": "75.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 65,
+          "texto": "1 Tesalonicenses 4:16-17: ¿quién desciende del cielo y qué pasa con los muertos?",
+          "clave": "\"El Señor mismo\", y los muertos en Cristo resucitan.",
+          "refs": [
+            {
+              "libro": "1-tesalonicenses",
+              "cap": 4,
+              "desde": 16,
+              "hasta": 17,
+              "label": "1 Tesalonicenses 4:16-17",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "Pues el Señor mismo descenderá del cielo con un grito de mando, con voz de arcángel y con el llamado de trompeta de Dios. Primero, los cristianos que hayan muerto se levantarán de sus tumbas."
+                },
+                {
+                  "n": 17,
+                  "text": "Luego, junto con ellos, nosotros los que aún sigamos vivos sobre la tierra, seremos arrebatados en las nubes para encontrarnos con el Señor en el aire. Entonces estaremos con el Señor para siempre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "οτι αυτοϲ ο ‹κϲ› εν κελευϲματι ‹ε› φωνη αρχαγγελου και εν ϲαλπιγγι ‹θυ› καταβηϲεται απ ουρανου > και οι νεκροι εν ‹χω› αναϲτηϲονται πρωτον"
+                },
+                {
+                  "n": 17,
+                  "grc": "επειτα ημειϲ οι ζωντεϲ οι περιλιπο>μενοι αμα ϲυν αυτοιϲ αρπαγηϲομεθα εν νεφελαιϲ ειϲ απαντηϲιν > του ‹κυ› ειϲ αερα και ουτωϲ παντοτε ϲυν ‹κω› εϲομεθα"
+                }
+              ],
+              "pagina": "85.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 66,
+          "texto": "Juan 5:28-29: \"todos los muertos que están en sus tumbas oirán su voz\". ¿Es simbólico?",
+          "clave": "Es la resurrección futura y corporal.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 5,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Juan 5:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "¡No se sorprendan tanto! Ciertamente, ya se acerca el tiempo en que todos los que están en las tumbas oirán la voz del Hijo de Dios"
+                },
+                {
+                  "n": 29,
+                  "text": "y resucitarán. Los que hicieron el bien resucitarán para gozar de la vida eterna, y los que continuaron en su maldad resucitarán para sufrir el juicio."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "μη θαυμαζεται τουτο οτι ερχεται ωρα · εν η παντεϲ οι εν τοιϲ μνημιοιϲ ακουϲωϲιν τηϲ φωνηϲ αυτου ·"
+                },
+                {
+                  "n": 29,
+                  "grc": "κ(αι) εκπορευϲονται οι τα αγαθα ποιηϲαντεϲ ειϲ αναϲταϲιν ζωηϲ · οι δε τα φαυλα πραξ‹α›τεϲ · ειϲ αναϲταϲιν κριϲεωϲ ·"
+                }
+              ],
+              "pagina": "80.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 67,
+          "texto": "1 Corintios 15:14-20: si no hay resurrección, ¿qué pasa con nuestra fe?",
+          "clave": "Es inútil; Cristo resucitó en cuerpo y es la primicia.",
+          "refs": [
+            {
+              "libro": "1-corintios",
+              "cap": 15,
+              "desde": 14,
+              "hasta": 20,
+              "label": "1 Corintios 15:14-20",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "y si Cristo no ha resucitado, entonces toda nuestra predicación es inútil, y la fe de ustedes también es inútil."
+                },
+                {
+                  "n": 15,
+                  "text": "Y nosotros, los apóstoles, estaríamos todos mintiendo acerca de Dios, porque hemos dicho que Dios levantó a Cristo de la tumba. Así que eso no puede ser cierto si no hay resurrección de los muertos;"
+                },
+                {
+                  "n": 16,
+                  "text": "y si no hay resurrección de los muertos, entonces Cristo no ha resucitado;"
+                },
+                {
+                  "n": 17,
+                  "text": "y si Cristo no ha resucitado, entonces la fe de ustedes es inútil, y todavía son culpables de sus pecados."
+                },
+                {
+                  "n": 18,
+                  "text": "En ese caso, ¡todos los que murieron creyendo en Cristo están perdidos!"
+                },
+                {
+                  "n": 19,
+                  "text": "Y si nuestra esperanza en Cristo es sólo para esta vida, somos los más dignos de lástima de todo el mundo."
+                },
+                {
+                  "n": 20,
+                  "text": "Lo cierto es que Cristo sí resucitó de los muertos. Él es el primer fruto de una gran cosecha, el primero de todos los que murieron."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "ει δε ‹χϲ› ουκ εγηγερται κενον αρα §0και το κηρυγμα ημ‹ω› καινη και η πιϲτιϲ ϋμων"
+                },
+                {
+                  "n": 15,
+                  "grc": "ευριϲκομεθα δε και ψευδομαρτυρεϲ του ‹θυ› οτι εμαρτυρηϲαμ‹ε› κατα του ‹θυ› οτι ηγειρεν τον ‹χν› §0αυτου ον ουκ ηγειρεν ειπερ αρα νεκροι ουκ εγειρονται ·"
+                },
+                {
+                  "n": 16,
+                  "grc": "ει γαρ νεκροι ουκ εγιρονται ουδε ‹χϲ› εγηγερται"
+                },
+                {
+                  "n": 17,
+                  "grc": "ει δε ‹χϲ› ουκ εγηγερται ματαια η πιϲτιϲ ϋμ‹ω› §0και ετι εϲτε εν ταιϲ αμαρτιαιϲ ϋμων ·"
+                },
+                {
+                  "n": 18,
+                  "grc": "αρα και οι κοιμηθ‹ε›τεϲ εν ‹χω› απωλ‹ο›το"
+                },
+                {
+                  "n": 19,
+                  "grc": "ει εν τη ζωη ταυτη εν ‹χω› ηλπικοτεϲ εϲμεν μον‹ο› ελεεινοτεροι παντων ανθρωπων εϲμεν"
+                },
+                {
+                  "n": 20,
+                  "grc": "νυνϊ δε ‹χϲ› εγηγερται εκ νεκρων απαρχη των κεκοιμημενων"
+                }
+              ],
+              "pagina": "83.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 68,
+          "texto": "1 Corintios 15:51-52: la transformación ocurre \"en un abrir y cerrar de ojos\". ¿Puede ser un proceso de décadas de \"unión de espíritus con cuerpos\"?",
+          "clave": "Es un acto instantáneo en la venida de Cristo.",
+          "refs": [
+            {
+              "libro": "1-corintios",
+              "cap": 15,
+              "desde": 51,
+              "hasta": 52,
+              "label": "1 Corintios 15:51-52",
+              "ntv": [
+                {
+                  "n": 51,
+                  "text": "Pero permítanme revelarles un secreto maravilloso. ¡No todos moriremos, pero todos seremos transformados!"
+                },
+                {
+                  "n": 52,
+                  "text": "Sucederá en un instante, en un abrir y cerrar de ojos, cuando se toque la trompeta final. Pues, cuando suene la trompeta, los que hayan muerto resucitarán para vivir por siempre. Y nosotros, los que estemos vivos también seremos transformados."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 51,
+                  "grc": "ϊδου μυϲτηριον ϋμιν λεγω παντεϲ μεν κοιμηθηϲομεθα ου π‹α›τεϲ δε αλλαγηϲομεθα"
+                },
+                {
+                  "n": 52,
+                  "grc": "εν ατομω εν ριπη οφθαλμου εν τη εϲχατη ϲαλπιγγι ϲαλπιϲει γαρ και οι νεκροι εγερθηϲ‹ο›ται αφθαρτοι κ(αι) ημειϲ αλλαγηϲομεθα"
+                }
+              ],
+              "pagina": "83.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 69,
+          "texto": "Mateo 24:36: nadie sabe el día ni la hora. ¿Cómo se fijan fechas de \"cumplimiento\" como 1980 o 1984?",
+          "clave": "Dios no reveló fechas.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 36,
+              "hasta": 36,
+              "label": "Mateo 24:36",
+              "ntv": [
+                {
+                  "n": 36,
+                  "text": "Sin embargo, nadie sabe el día ni la hora en que sucederán estas cosas, ni siquiera los ángeles en el cielo ni el propio Hijo. Sólo el Padre lo sabe."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 36,
+                  "grc": "περι δε τηϲ ημε>ραϲ εκεινηϲ και > ωραϲ ουδειϲ §0οιδ‹ε› ουδε οι αγγελοι τ‹ω› ουρανων §2ουδε §5> §8ο §11υιοϲ ει μη ο πατηρ μονοϲ"
+                }
+              ],
+              "pagina": "75.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 70,
+          "texto": "Hebreos 9:28: Cristo \"vendrá otra vez\". ¿Ya vino?",
+          "clave": "No: los creyentes aún lo esperan.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 9,
+              "desde": 28,
+              "hasta": 28,
+              "label": "Hebreos 9:28",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "así también Cristo murió en sacrificio una sola vez y para siempre, a fin de quitar los pecados de muchas personas. Cristo vendrá otra vez, no para ocuparse de nuestros pecados, sino para traer salvación a todos los que esperan con anhelo su venida."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "ουτωϲ και ο ‹χϲ› απαξ προϲενεχθειϲ ειϲ το πολλων ανενεγκειν αμαρτιαϲ εκ δευτερου χωριϲ αμαρτιαϲ οφθηϲεται τοιϲ αυτον απεκδεχομενοιϲ ειϲ ϲωτηριαν"
+                }
+              ],
+              "pagina": "85.7v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "VIII",
+      "titulo": "La iglesia, Israel y los 144.000",
+      "desde": 71,
+      "hasta": 80,
+      "preguntas": [
+        {
+          "n": 71,
+          "texto": "Mateo 16:18: \"el poder de la muerte no la conquistará\". ¿La conquistó en algún momento?",
+          "clave": "No.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 16,
+              "desde": 18,
+              "hasta": 18,
+              "label": "Mateo 16:18",
+              "ntv": [
+                {
+                  "n": 18,
+                  "text": "Ahora te digo que tú eres Pedro (que quiere decir «roca»), y sobre esta roca edificaré mi iglesia, y el poder de la muerte no la conquistará."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 18,
+                  "grc": "καγω δε ϲοι λεγω οτι ϲυ ει πετροϲ και επι ταυτη τη πετρα οικοδο>μηϲω μου την εκκληϲιαν και πυλαι αδου ου κατιϲχυϲουϲιν αυτηϲ"
+                }
+              ],
+              "pagina": "75.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 72,
+          "texto": "Hebreos 12:28: los creyentes reciben \"un reino inconmovible\". ¿Puede ser derribado y reemplazado?",
+          "clave": "No.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 12,
+              "desde": 28,
+              "hasta": 28,
+              "label": "Hebreos 12:28",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Ya que estamos recibiendo un reino inconmovible, seamos agradecidos y agrademos a Dios adorándolo con santo temor y reverencia,"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "διο βαϲιλειαν αϲαλευτον παραλαμβανοντεϲ εχομ‹ε› χαριν δι ηϲ λατρευομεν ευαρεϲτωϲ τω ‹θω› μετα ευλαβιαϲ και §0δεουϲ"
+                }
+              ],
+              "pagina": "86.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 73,
+          "texto": "Gálatas 3:28-29: los que son de Cristo son descendencia de Abraham. ¿Existe un \"tercer Israel\"?",
+          "clave": "No; hay un solo pueblo en Cristo (ver también Gl 6:16).",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 3,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Gálatas 3:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Ya no hay judío ni gentil, esclavo ni libre, hombre ni mujer, porque todos ustedes son uno en Cristo Jesús."
+                },
+                {
+                  "n": 29,
+                  "text": "Y ahora que pertenecen a Cristo, son verdaderos hijos de Abraham. Son sus herederos, y la promesa de Dios a Abraham les pertenece a ustedes."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "ουκ ενι ϊουδαιοϲ ουδε ελλην ουκ ενι δουλοϲ ουδε ελευθεροϲ ουκ ενι αρρεν και θηλυ απαντεϲ γαρ ϋμειϲ §0εϲτε §3εν §6‹χυ› ‹ιυ›"
+                },
+                {
+                  "n": 29,
+                  "grc": "ει δε ϋμειϲ ‹χυ› αρα του αβρααμ ϲπερμα εϲτε κατα επαγγελιαν κληρονομοι"
+                }
+              ],
+              "pagina": "84.3v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "galatas",
+              "cap": 6,
+              "desde": 16,
+              "hasta": 16,
+              "label": "Gálatas 6:16"
+            }
+          ]
+        },
+        {
+          "n": 74,
+          "texto": "Efesios 2:14-16: Cristo hizo de los dos pueblos \"un nuevo pueblo\". ¿Cuántos pueblos de Dios hay?",
+          "clave": "Uno.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 2,
+              "desde": 14,
+              "hasta": 16,
+              "label": "Efesios 2:14-16",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Pues Cristo mismo nos ha traído la paz. Él unió a judíos y a gentiles en un solo pueblo cuando, por medio de su cuerpo en la cruz, derribó el muro de hostilidad que nos separaba."
+                },
+                {
+                  "n": 15,
+                  "text": "Lo logró al poner fin al sistema de leyes de mandamientos y ordenanzas. Hizo la paz entre judíos y gentiles al crear de los dos grupos un nuevo pueblo en él."
+                },
+                {
+                  "n": 16,
+                  "text": "Cristo reconcilió a ambos grupos con Dios en un solo cuerpo por medio de su muerte en la cruz, y la hostilidad que había entre nosotros quedó destruida."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "αυτοϲ γαρ εϲτιν η ειρηνη ημων ο ποιηϲαϲ τα αμφοτερα εν κ(αι) το μεϲοτοιχον του φραγμου λυϲαϲ την εχθραν εν τη ϲαρκι αυτου"
+                },
+                {
+                  "n": 15,
+                  "grc": "τον νομ‹ο› των εντολων εν δογμαϲιν καταργηϲαϲ ϊνα τουϲ δυο κτιϲη εν §0αυτω ειϲ ενα καινον ανθρωπον ποιων ιρηνην"
+                },
+                {
+                  "n": 16,
+                  "grc": "και αποκαταλλαξη τουϲ αμφοτερουϲ εν ενι ϲωματι τω ‹θω› δια του ϲταυρου αποκτιναϲ την εχθρ‹α› εν αυτω"
+                }
+              ],
+              "pagina": "84.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 75,
+          "texto": "Hebreos 12:22: \"ustedes han llegado al monte Sion, a la Jerusalén celestial\". ¿Sion es un edificio en Corea?",
+          "clave": "Los creyentes ya han llegado a la Sion celestial.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 12,
+              "desde": 22,
+              "hasta": 22,
+              "label": "Hebreos 12:22",
+              "ntv": [
+                {
+                  "n": 22,
+                  "text": "En cambio, ustedes han llegado al monte Sión, a la ciudad del Dios viviente, a la Jerusalén celestial, y a incontables miles de ángeles que se han reunido llenos de gozo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 22,
+                  "grc": "αλλα προϲεληλυθατε ϲιων ορει και πολει ‹θυ› ζωντοϲ ϊ‹ηλ›μ επουρανιω και μυριαϲιν αγγελων πανηγυρει"
+                }
+              ],
+              "pagina": "86.1r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 76,
+          "texto": "Apocalipsis 14:5 dice que los 144.000 \"no han dicho mentiras\". ¿Es compatible con ocultar el nombre de la iglesia al reclutar?",
+          "clave": "Si el número describe a SCJ, su práctica lo contradice.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 14,
+              "desde": 5,
+              "hasta": 5,
+              "label": "Apocalipsis 14:5",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "Ellos no han dicho mentiras y son intachables."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "και εν τω ϲτοματι αυτων ουχ ευρεθη ψευδοϲ αμωμοι γαρ ειϲιν"
+                }
+              ],
+              "pagina": "90.6r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 77,
+          "texto": "Apocalipsis 7:5-8 nombra las tribus: Judá, Rubén, Gad, Aser… ¿Por qué las 12 tribus de SCJ llevan nombres de apóstoles (Juan, Pedro, Andrés, Tomás…)?",
+          "clave": "SCJ toma el número como literal pero cambia las tribus que nombra el texto; es incoherente.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 7,
+              "desde": 5,
+              "hasta": 8,
+              "label": "Apocalipsis 7:5-8",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "de la tribu de Judá 12.000 de la tribu de Rubén 12.000 de la tribu de Gad 12.000"
+                },
+                {
+                  "n": 6,
+                  "text": "de la tribu de Aser 12.000 de la tribu de Neftalí 12.000 de la tribu de Manasés 12.000"
+                },
+                {
+                  "n": 7,
+                  "text": "de la tribu de Simeón 12.000 de la tribu de Leví 12.000 de la tribu de Isacar 12.000"
+                },
+                {
+                  "n": 8,
+                  "text": "de la tribu de Zabulón 12.000 de la tribu de José 12.000 de la tribu de Benjamín 12.000 Alabanza de la gran multitud"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "εκ φυληϲ ϊουδα δωδεκα §0χιλιαδεϲ εϲφραγιϲμενοι εκ §2φυληϲ ρουβην §4δωδεκα §6χιλιαδεϲ"
+                },
+                {
+                  "n": 6,
+                  "grc": "εκ §0φυληϲ αϲηρ δωδεκα χιλιαδεϲ · εκ φυληϲ νεφθαλι δωδεκα χιλιαδεϲ εκ φυληϲ μαναϲϲη δωδεκα χιλιαδεϲ"
+                },
+                {
+                  "n": 7,
+                  "grc": "εκ φυληϲ λευει δωδεκα χειλιαδεϲ εκ φυληϲ ϊϲϲαχαρ δωδεκα χιλιαδεϲ"
+                },
+                {
+                  "n": 8,
+                  "grc": "εκ φυληϲ ζαβουλ‹ω› δωδεκα χιλιαδεϲ εκ φυληϲ βενιαμ‹ι› δωδεκα χειλιαδεϲ εκ φυληϲ ϊωϲηφ δωδεκα χειλιαδεϲ εϲφραγιϲμενοι"
+                }
+              ],
+              "pagina": "90.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 78,
+          "texto": "Juan 4:21-24: ¿dónde se adora al Padre?",
+          "clave": "En espíritu y en verdad, no en un lugar.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 4,
+              "desde": 21,
+              "hasta": 24,
+              "label": "Juan 4:21-24",
+              "ntv": [
+                {
+                  "n": 21,
+                  "text": "Jesús le contestó: —Créeme, querida mujer, que se acerca el tiempo en que no tendrá importancia si se adora al Padre en este monte o en Jerusalén."
+                },
+                {
+                  "n": 22,
+                  "text": "Ustedes, los samaritanos, saben muy poco acerca de aquel a quien adoran, mientras que nosotros, los judíos, conocemos bien a quien adoramos, porque la salvación viene por medio de los judíos."
+                },
+                {
+                  "n": 23,
+                  "text": "Pero se acerca el tiempo —de hecho, ya ha llegado— cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad. El Padre busca personas que lo adoren de esa manera."
+                },
+                {
+                  "n": 24,
+                  "text": "Pues Dios es Espíritu, por eso todos los que lo adoran deben hacerlo en espíritu y en verdad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 21,
+                  "grc": "λεγει αυτη ο ‹ιϲ› · πιϲτευε μοι γυναι · οτι ερχεται ωρα · οτε ουτε εν τω ορει τουτω ουτε εν ϊεροϲολυμοιϲ προϲκυνηϲεται τω πατρι ·"
+                },
+                {
+                  "n": 22,
+                  "grc": "ϋμιϲ προϲκυνειτε ο ουκ οιδατε · ημιϲ προϲκυνουμεν ο οιδαμεν · οτι η ϲωτηρια εκ των ϊουδαιων εϲτιν ·"
+                },
+                {
+                  "n": 23,
+                  "grc": "αλλα ερχεται ωρα και §0ν‹υ› εϲτιν · οτε οι αληθινοι προϲκυνηται προϲκυνηϲουϲιν τω πατρι · εν ‹πνι› και αληθεια · και γαρ ο πατηρ τοιουτουϲ ζητι τουϲ προϲκυνο‹υ›ταϲ §2αυτω ·"
+                },
+                {
+                  "n": 24,
+                  "grc": "§0π‹ν›α ο ‹θϲ› · και τουϲ προϲκυνουνταϲ §2 εν ‹πν›ι §4αληθειαϲ §6προϲκυν‹ι› §8δει ·"
+                }
+              ],
+              "pagina": "80.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 79,
+          "texto": "1 Pedro 2:9: ¿quiénes son ya \"pueblo elegido, sacerdotes del Rey, nación santa\"?",
+          "clave": "Todos los creyentes.",
+          "refs": [
+            {
+              "libro": "1-pedro",
+              "cap": 2,
+              "desde": 9,
+              "hasta": 9,
+              "label": "1 Pedro 2:9",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Pero ustedes no son así porque son un pueblo elegido. Son sacerdotes del Rey, una nación santa, posesión exclusiva de Dios. Por eso pueden mostrar a otros la bondad de Dios, pues él los ha llamado a salir de la oscuridad y entrar en su luz maravillosa."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "υμειϲ δε γενοϲ εκλεκτον βαϲιλιον ϊερατευμα εθνοϲ αγιον λαοϲ ειϲ περιποιηϲιν οπωϲ ταϲ αρεταϲ εξαγγιληται του εκ ϲκοτουϲ ϋμαϲ καλεϲαντοϲ ειϲ το θαυμαϲτον αυτου φωϲ"
+                }
+              ],
+              "pagina": "89.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 80,
+          "texto": "Hechos 2:41-47: la iglesia empezó con 3.000 y \"el Señor añadía cada día\". ¿Hubo una interrupción hasta 1984?",
+          "clave": "No.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 2,
+              "desde": 41,
+              "hasta": 47,
+              "label": "Hechos 2:41-47",
+              "ntv": [
+                {
+                  "n": 41,
+                  "text": "Los que creyeron lo que Pedro dijo fueron bautizados y sumados a la iglesia en ese mismo día, como tres mil en total."
+                },
+                {
+                  "n": 42,
+                  "text": "Todos los creyentes se dedicaban a las enseñanzas de los apóstoles, a la comunión fraternal, a participar juntos en las comidas (entre ellas la Cena del Señor), y a la oración."
+                },
+                {
+                  "n": 43,
+                  "text": "Un profundo temor reverente vino sobre todos ellos, y los apóstoles realizaban muchas señales milagrosas y maravillas."
+                },
+                {
+                  "n": 44,
+                  "text": "Todos los creyentes se reunían en un mismo lugar y compartían todo lo que tenían."
+                },
+                {
+                  "n": 45,
+                  "text": "Vendían sus propiedades y posesiones y compartían el dinero con aquellos en necesidad."
+                },
+                {
+                  "n": 46,
+                  "text": "Adoraban juntos en el templo cada día, se reunían en casas para la Cena del Señor y compartían sus comidas con gran gozo y generosidad,"
+                },
+                {
+                  "n": 47,
+                  "text": "todo el tiempo alabando a Dios y disfrutando de la buena voluntad de toda la gente. Y cada día el Señor agregaba a esa comunidad cristiana los que iban siendo salvos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 41,
+                  "grc": "οι μεν ουν αποδεξαμενοι τον λογον αυτου εβαπτιϲθηϲ‹α› και προϲετεθηϲ‹α› εν τη ημερα εκινη ψυχαι §0ωϲ τριϲχιλιαι"
+                },
+                {
+                  "n": 42,
+                  "grc": "ηϲαν δε προϲκαρτερουντεϲ τη διδαχη των αποϲτολων · και τη κοινωνια §0 τη κλαϲι του αρτου και ταιϲ προϲευχαιϲ"
+                },
+                {
+                  "n": 43,
+                  "grc": "εγινετο δε παϲη ψυχη φοβοϲ · πολλα δε τερατα και ϲημια δια των αποϲτολων εγινετο εν ϊ‹ηλ›μ φοβοϲ τε ην μεγαϲ επι πανταϲ"
+                },
+                {
+                  "n": 44,
+                  "grc": "και παντεϲ δε οι πιϲτευϲαντεϲ ηϲαν επι το αυτο και ειχ‹ο› απαντα κοινα"
+                },
+                {
+                  "n": 45,
+                  "grc": "κ(αι) τα κτηματα και ταϲ υπαρξειϲ επιπραϲκον και διεμεριζον αυτα παϲιν καθοτι ‹α› τιϲ χριαν ειχεν"
+                },
+                {
+                  "n": 46,
+                  "grc": "καθ ημεραν τε προϲκαρτερουντεϲ ομοθυμαδ‹ο› εν τω ιερω κλ‹ω›τεϲ τε κατ οικον αρτον μετελαμβανον τροφηϲ εν αγαλλιαϲει και αφελοτητι καρδιαϲ"
+                },
+                {
+                  "n": 47,
+                  "grc": "αινουντεϲ τον ‹θν› και εχοντεϲ χαριν προϲ ολον τον λαον ο δε ‹κϲ› προϲετιθει τουϲ ϲωζομενουϲ καθ ημεραν επι το αυτο"
+                }
+              ],
+              "pagina": "86.8r"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "IX",
+      "titulo": "El \"pastor prometido\" y la prueba del profeta",
+      "desde": 81,
+      "hasta": 90,
+      "preguntas": [
+        {
+          "n": 81,
+          "texto": "Deuteronomio 18:21-22: si lo dicho no se cumple, no viene de Dios. ¿Por qué cambian con el tiempo la identidad de la \"bestia de la tierra\" o si Apocalipsis 18 ya se cumplió?",
+          "clave": "Una profecía que se corrige no pasa la prueba.",
+          "refs": [
+            {
+              "libro": "deuteronomio",
+              "cap": 18,
+              "desde": 21,
+              "hasta": 22,
+              "label": "Deuteronomio 18:21-22",
+              "ntv": [
+                {
+                  "n": 21,
+                  "text": "Tal vez se pregunten: «¿Cómo sabremos si una profecía viene o no del SEÑOR?»."
+                },
+                {
+                  "n": 22,
+                  "text": "Si el profeta habla en el nombre del SEÑOR, pero su profecía no se cumple ni ocurre lo que predice, ustedes sabrán que ese mensaje no proviene del SEÑOR. Ese profeta habló sin el respaldo de mi autoridad, y no tienen que temerle."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 82,
+          "texto": "Deuteronomio 13:1-3: aunque haya señales, ¿se sigue a quien aparta del Dios revelado?",
+          "clave": "No.",
+          "refs": [
+            {
+              "libro": "deuteronomio",
+              "cap": 13,
+              "desde": 1,
+              "hasta": 3,
+              "label": "Deuteronomio 13:1-3",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": " Supongamos que, en medio de ti, hay profetas o aquellos que tienen sueños sobre el futuro, y te prometen señales o milagros,"
+                },
+                {
+                  "n": 2,
+                  "text": "y resulta que esas señales o milagros se cumplen. Si de pronto ellos dicen: «Ven, rindamos culto a otros dioses» —dioses que hasta entonces no conocías—"
+                },
+                {
+                  "n": 3,
+                  "text": "no los escuches. El SEÑOR tu Dios te está probando para ver si realmente lo amas con todo el corazón y con toda el alma."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 83,
+          "texto": "Gálatas 1:8: \"aunque un ángel del cielo\" predique otro evangelio, ¿qué dice Pablo?",
+          "clave": "Que sea maldito. Una revelación angélica no está sobre el evangelio.",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 1,
+              "desde": 8,
+              "hasta": 8,
+              "label": "Gálatas 1:8",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Si alguien —ya sea nosotros o incluso un ángel del cielo— les predica otra Buena Noticia diferente de la que nosotros les hemos predicado, que le caiga la maldición de Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "αλλα και εαν ημειϲ η αγγελοϲ εξ ουρανου ευαγγελιϲηται §0 παρ ο ευηγγελιϲαμεθα υμιν αναθεμα εϲτω"
+                }
+              ],
+              "pagina": "84.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 84,
+          "texto": "Juan 5:31-32: el testimonio sobre uno mismo necesita otro testigo. ¿Quién da testimonio de Lee aparte de Lee y su organización?",
+          "clave": "Nadie fuera del propio sistema.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 5,
+              "desde": 31,
+              "hasta": 32,
+              "label": "Juan 5:31-32",
+              "ntv": [
+                {
+                  "n": 31,
+                  "text": "Si yo diera testimonio en mi propio favor, mi testimonio no sería válido;"
+                },
+                {
+                  "n": 32,
+                  "text": "pero hay otro que también da testimonio de mí, y les aseguro que todo lo que dice acerca de mí es verdad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 31,
+                  "grc": "εαν εγω μαρτυρω περι εμαυτου · η μαρτυρια μου ουκ εϲτιν αληθηϲ ·"
+                },
+                {
+                  "n": 32,
+                  "grc": "αλλοϲ εϲτιν ο μαρτυρων περι εμου και §0οιδαται · οτι αληθηϲ εϲτιν η μαρτυρια ην μαρτυρι περι εμου ·"
+                }
+              ],
+              "pagina": "80.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 85,
+          "texto": "Mateo 7:15-20: \"por sus frutos los conocerán\". ¿Qué fruto es una condena firme por malversar fondos de la iglesia (2021, confirmada en 2022)?",
+          "clave": "Un fruto que el propio Jesús manda examinar.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 7,
+              "desde": 15,
+              "hasta": 20,
+              "label": "Mateo 7:15-20",
+              "ntv": [
+                {
+                  "n": 15,
+                  "text": "Ten cuidado de los falsos profetas que vienen disfrazados de ovejas inofensivas pero en realidad son lobos feroces."
+                },
+                {
+                  "n": 16,
+                  "text": "Puedes identificarlos por su fruto, es decir, por la manera en que se comportan. ¿Acaso puedes recoger uvas de los espinos o higos de los cardos?"
+                },
+                {
+                  "n": 17,
+                  "text": "Un buen árbol produce frutos buenos y un árbol malo produce frutos malos."
+                },
+                {
+                  "n": 18,
+                  "text": "Un buen árbol no puede producir frutos malos y un árbol malo no puede producir frutos buenos."
+                },
+                {
+                  "n": 19,
+                  "text": "Por lo tanto, todo árbol que no produce frutos buenos se corta y se arroja al fuego."
+                },
+                {
+                  "n": 20,
+                  "text": "Así es, de la misma manera que puedes identificar un árbol por su fruto, puedes identificar a la gente por sus acciones."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 15,
+                  "grc": "προϲεχεται απο των ψευδοπροφητων οιτινεϲ ερχονται προϲ ϋμαϲ εν ενδυμαϲι προβατων εϲωθεν δε ειϲιν λυκοι αρπαγεϲ"
+                },
+                {
+                  "n": 16,
+                  "grc": "απο των καρπων αυτων επιγνωϲεϲθε αυτουϲ : μητι ϲυλλεγουϲιν απο ακανθων ϲταφυλαϲ η απο τριβολων ϲυκα"
+                },
+                {
+                  "n": 17,
+                  "grc": "ουτω παν δενδρ‹ο› αγαθον καρπουϲ καλουϲ ποιει το δε ϲαπρον δενδρον καρπουϲ πονηρουϲ ποιει :"
+                },
+                {
+                  "n": 18,
+                  "grc": "ου δυναται δενδρον · αγαθον καρπουϲ πονηρουϲ §0ποιειν ουδε δενδρον ϲαπρον καρπουϲ καλουϲ §2ενεγκειν"
+                },
+                {
+                  "n": 19,
+                  "grc": "παν δενδρον μη ποιουν καρπον καλον εκκοπτεται και ειϲ πυρ βαλλεται"
+                },
+                {
+                  "n": 20,
+                  "grc": "αρα γε απο των καρπων αυτων επιγνωϲεϲθαι αυτουϲ :"
+                }
+              ],
+              "pagina": "74.4r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 86,
+          "texto": "1 Timoteo 3:2-7: ¿qué condiciones pide la Biblia a un obispo o anciano?",
+          "clave": "Vida intachable, fidelidad, no amar el dinero, buena reputación entre los de afuera.",
+          "refs": [
+            {
+              "libro": "1-timoteo",
+              "cap": 3,
+              "desde": 2,
+              "hasta": 7,
+              "label": "1 Timoteo 3:2-7",
+              "ntv": [
+                {
+                  "n": 2,
+                  "text": "Por esta razón un anciano debe ser un hombre que lleve una vida intachable. Debe serle fiel a su esposa. Debe tener control propio, vivir sabiamente y tener una buena reputación. Con agrado debe recibir visitas y huéspedes en su casa y también debe tener la capacidad de enseñar."
+                },
+                {
+                  "n": 3,
+                  "text": "No debe emborracharse ni ser violento. Debe ser amable, no debe buscar pleitos ni amar el dinero."
+                },
+                {
+                  "n": 4,
+                  "text": "Debe dirigir bien a su propia familia, y que sus hijos lo respeten y lo obedezcan."
+                },
+                {
+                  "n": 5,
+                  "text": "Pues, si un hombre no puede dirigir a los de su propia casa, ¿cómo podrá cuidar de la iglesia de Dios?"
+                },
+                {
+                  "n": 6,
+                  "text": "Un anciano no debe ser un nuevo creyente porque podría volverse orgulloso, y el diablo lo haría caer."
+                },
+                {
+                  "n": 7,
+                  "text": "Además, la gente que no es de la iglesia debe hablar bien de él, para que no sea deshonrado y caiga en la trampa del diablo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 2,
+                  "grc": "δι ουν τον επιϲκοπον ανεπιλημπτον ειναι μιαϲ γυναικοϲ ανδρα §0νηφαλ̣ι‹ο› ϲωφρονα · κοϲμιον · φιλοξενον διδακτικον ·"
+                },
+                {
+                  "n": 3,
+                  "grc": "μη παροινον · μη πληκτην · αλλα επιεικη αμαχ‹ο› αφιλαργυρον"
+                },
+                {
+                  "n": 4,
+                  "grc": "του ϊδιου οικου καλωϲ προϊϲτανομενον · τεκνα εχοντα εν υποταγη μετα παϲηϲ ϲεμνοτητοϲ"
+                },
+                {
+                  "n": 5,
+                  "grc": "ει δε τιϲ του ϊδιου οικου προϲτηναι ουκ οιδεν πωϲ εκκληϲιαϲ ‹θυ› επιμεληϲεται"
+                },
+                {
+                  "n": 6,
+                  "grc": "μη νεοφυτον ϊνα μη τυφωθειϲ ειϲ κριμα εμπεϲη του διαβολου"
+                },
+                {
+                  "n": 7,
+                  "grc": "δει δε και μαρτυριαν καλην εχιν απο των εξωθεν ινα μη ειϲ ονιδιϲμον εμπεϲη και παγιδα του διαβολου ·"
+                }
+              ],
+              "pagina": "86.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 87,
+          "texto": "Mateo 23:8-10: \"uno solo es su Maestro\". ¿Quién es el maestro en SCJ?",
+          "clave": "Cristo, no \"el pastor prometido\".",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 23,
+              "desde": 8,
+              "hasta": 10,
+              "label": "Mateo 23:8-10",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Pero ustedes, no permitan que nadie los llame «Rabí», porque tienen un solo maestro y todos ustedes son hermanos por igual."
+                },
+                {
+                  "n": 9,
+                  "text": "Además, aquí en la tierra, no se dirijan a nadie llamándolo «Padre», porque sólo Dios, que está en el cielo, es su Padre espiritual."
+                },
+                {
+                  "n": 10,
+                  "text": "Y no permitan que nadie los llame «Maestro», porque ustedes tienen un solo Maestro, el Mesías."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "§0 ειϲ γαρ εϲτιν ϋμ‹ω› ο §2καθηγητηϲ παντεϲ δε ϋμιϲ αδελφοι εϲτε"
+                },
+                {
+                  "n": 9,
+                  "grc": "και ‹πρ›α μη καλεϲη τε ϋμων επι τηϲ γηϲ ειϲ γαρ εϲτιν ϋμ‹ω› ο ‹πη›ρ ο ουρανιοϲ"
+                },
+                {
+                  "n": 10,
+                  "grc": "μηδε κληθητε καθηγηται ειϲ γαρ εϲτιν ϋμων ο καθηγητηϲ ο §0‹χϲ›"
+                }
+              ],
+              "pagina": "75.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 88,
+          "texto": "Hebreos 9:27: todos han de morir. Si los sellados \"no mueren\", ¿por qué mueren miembros sellados?",
+          "clave": "La promesa de no morir no se ha cumplido.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 9,
+              "desde": 27,
+              "hasta": 27,
+              "label": "Hebreos 9:27",
+              "ntv": [
+                {
+                  "n": 27,
+                  "text": "Y así como cada persona está destinada a morir una sola vez y después vendrá el juicio,"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 27,
+                  "grc": "και καθ οϲον αποκειται τοιϲ ανθρωποιϲ απαξ αποθανειν μετα δε τουτο κριϲιϲ"
+                }
+              ],
+              "pagina": "85.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 89,
+          "texto": "Mateo 24:45 y Lucas 12:41-48: el \"siervo fiel y prudente\", ¿es un solo hombre o una advertencia para todo siervo?",
+          "clave": "Es una parábola sobre la vigilancia de todo siervo; Lucas 12:48 la aplica a \"todo aquel\".",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 45,
+              "hasta": 45,
+              "label": "Mateo 24:45",
+              "ntv": [
+                {
+                  "n": 45,
+                  "text": "Un sirviente fiel y sensato es aquel a quien el amo puede darle la responsabilidad de dirigir a los demás sirvientes y alimentarlos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 45,
+                  "grc": "τιϲ αρα εϲτιν ο πιϲτοϲ δουλοϲ και φρονιμοϲ ον καταϲτη>ϲει ο ‹κϲ› επι τηϲ οι>κιαϲ αυτου του δουναι αυτοιϲ την τροφην εν καιρω"
+                }
+              ],
+              "pagina": "75.7r"
+            },
+            {
+              "libro": "lucas",
+              "cap": 12,
+              "desde": 41,
+              "hasta": 48,
+              "label": "Lucas 12:41-48",
+              "ntv": [
+                {
+                  "n": 41,
+                  "text": "Pedro preguntó: —Señor, ¿esa ilustración es sólo para nosotros o es para todos?"
+                },
+                {
+                  "n": 42,
+                  "text": "Y el Señor respondió: —Un siervo fiel y sensato es aquel a quien el amo puede darle la responsabilidad de dirigir a los demás siervos y alimentarlos."
+                },
+                {
+                  "n": 43,
+                  "text": "Si el amo regresa y encuentra que el siervo ha hecho un buen trabajo, habrá una recompensa."
+                },
+                {
+                  "n": 44,
+                  "text": "Les digo la verdad, el amo pondrá a ese siervo a cargo de todo lo que posee."
+                },
+                {
+                  "n": 45,
+                  "text": "¿Pero qué tal si el siervo piensa: «Mi amo no regresará por un tiempo» y comienza a golpear a los otros siervos, a parrandear y a emborracharse?"
+                },
+                {
+                  "n": 46,
+                  "text": "El amo regresará inesperadamente y sin previo aviso, cortará al siervo en pedazos y lo expulsará junto con los infieles."
+                },
+                {
+                  "n": 47,
+                  "text": "Un siervo que sabe lo que su amo quiere, pero no se prepara ni cumple las instrucciones, será severamente castigado."
+                },
+                {
+                  "n": 48,
+                  "text": "Pero alguien que no lo sabe y hace algo malo, será castigado levemente. Alguien a quien se le ha dado mucho, mucho se le pedirá a cambio; y alguien a quien se le ha confiado mucho, aún más se le exigirá."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 41,
+                  "grc": "ειπεν δε αυτω ο πετροϲ §0‹κε› προϲ ημαϲ την παραβολην ταυτην λεγειϲ η και προϲ πανταϲ"
+                },
+                {
+                  "n": 42,
+                  "grc": "και ειπ‹ε› ο §0‹κϲ› τιϲ αρα εϲτιν ο πιϲτοϲ §2δουλοϲ και φρονιμοϲ ον §4κατεϲτηϲεν ο ‹κϲ› επι τηϲ θεραπειαϲ αυτου του §6διαδουναι εν καιρω το §8ϲιτομετρι‹ο›"
+                },
+                {
+                  "n": 43,
+                  "grc": "μακαριοϲ ο δουλοϲ εκεινοϲ ον §0ελθ‹ω› ο ‹κϲ› αυτου ευρηϲει ουτωϲ ποιουντα"
+                },
+                {
+                  "n": 44,
+                  "grc": "αληθωϲ λεγω ϋμιν οτι επι παϲιν τοιϲ υπαρχουϲιν αυτου καταϲτηϲει αυτον"
+                },
+                {
+                  "n": 45,
+                  "grc": "εαν δε ειπη ο δουλοϲ εκεινοϲ εν τη καρδια αυτου χρονιζει §0μου §3ο §6‹κϲ› ερχεϲθαι και αρξηται τυπτειν τουϲ παιδαϲ και ταϲ πεδιϲκαϲ εϲθιειν τε και πινειν και μεθυϲκεϲθαι"
+                },
+                {
+                  "n": 46,
+                  "grc": "ηξει ο ‹κϲ› του δουλου εκεινου εν ημερα η ου προϲδοκα και εν ωρα η ου γινωϲκει και διχοτομηϲει αυτ‹ο› και το μεροϲ αυτου μετα των απιϲτων θηϲει ·"
+                },
+                {
+                  "n": 47,
+                  "grc": "εκεινοϲ δε ο δουλοϲ ο γνουϲ το θελημα του ‹κυ› αυτου και μη ετοιμαϲαϲ η ποιηϲαϲ προϲ το θελημα αυτου δαρηϲεται πολλαϲ"
+                },
+                {
+                  "n": 48,
+                  "grc": "ο δε μη γνουϲ ποιηϲαϲ δε αξια πληγων δαρηϲεται ολιγαϲ παντι §0 ω εδοθη πολυ §3 ζητηθηϲεται παρ αυτου και ω παρεθεντο πολυ περιϲϲοτερον αιτηϲουϲιν αυτον"
+                }
+              ],
+              "pagina": "78.7v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "lucas",
+              "cap": 12,
+              "desde": 48,
+              "hasta": 48,
+              "label": "Lucas 12:48"
+            }
+          ]
+        },
+        {
+          "n": 90,
+          "texto": "2 Corintios 11:13-15: Satanás se disfraza de ángel de luz. ¿Con qué se distingue lo verdadero de lo falso?",
+          "clave": "Con la Escritura y el evangelio de Cristo, no con la autoridad de quien habla.",
+          "refs": [
+            {
+              "libro": "2-corintios",
+              "cap": 11,
+              "desde": 13,
+              "hasta": 15,
+              "label": "2 Corintios 11:13-15",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Estos individuos son falsos apóstoles. Son obreros engañosos que se disfrazan de apóstoles de Cristo."
+                },
+                {
+                  "n": 14,
+                  "text": "¡Pero no me sorprende para nada! Aun Satanás se disfraza de ángel de luz."
+                },
+                {
+                  "n": 15,
+                  "text": "Así que no es de sorprenderse que los que lo sirven también se disfracen de siervos de la justicia. Al final, recibirán el castigo que sus acciones perversas merecen."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "οι γαρ τοιουτοι ψευδαποϲτολοι εργαται δολιοι μεταϲχηματιζομενοι ειϲ §0αποϲτολουϲ §2‹χυ›"
+                },
+                {
+                  "n": 14,
+                  "grc": "και ου θαυμα αυτοϲ γαρ ο ϲαταναϲ μεταϲχηματιζεται ειϲ αγγελον φωτοϲ"
+                },
+                {
+                  "n": 15,
+                  "grc": "ου μεγα ουν ει και οι διακονοι αυτου μεταϲχηματιζονται ωϲ διακονοι δικαιοϲυνηϲ ων το τελοϲ εϲται κατα τα εργα αυτων"
+                }
+              ],
+              "pagina": "84.1v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "X",
+      "titulo": "Práctica y ética",
+      "desde": 91,
+      "hasta": 100,
+      "preguntas": [
+        {
+          "n": 91,
+          "texto": "2 Corintios 4:2: \"rechazamos todas las acciones vergonzosas y los métodos turbios\". ¿Por qué no se dice desde el primer día que el estudio es de Shincheonji?",
+          "clave": "El evangelio se anuncia abiertamente.",
+          "refs": [
+            {
+              "libro": "2-corintios",
+              "cap": 4,
+              "desde": 2,
+              "hasta": 2,
+              "label": "2 Corintios 4:2",
+              "ntv": [
+                {
+                  "n": 2,
+                  "text": "Rechazamos todas las acciones vergonzosas y los métodos turbios. No tratamos de engañar a nadie ni de distorsionar la palabra de Dios. Decimos la verdad delante de Dios, y todos los que son sinceros lo saben bien."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 2,
+                  "grc": "αλλα απειπαμεθα τα κρυπτα τηϲ αιϲχυνηϲ μη περιπατουντεϲ ‹ε› πανουργια μηδε δολουντεϲ τον λογον του ‹θυ› αλλα τη φανερωϲει τηϲ αληθιαϲ ϲυνϊϲταντεϲ εαυτουϲ προϲ παϲαν ϲυνϊδηϲιν ‹α›θρωπων ενωπιον του ‹θυ›"
+                }
+              ],
+              "pagina": "83.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 92,
+          "texto": "Efesios 4:25: \"dejen de decir mentiras\". ¿Es verdad decir \"somos voluntarios de distintas denominaciones\"?",
+          "clave": "La ocultación planificada es mentira.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 4,
+              "desde": 25,
+              "hasta": 25,
+              "label": "Efesios 4:25",
+              "ntv": [
+                {
+                  "n": 25,
+                  "text": "Así que dejen de decir mentiras. Digamos siempre la verdad a todos porque nosotros somos miembros de un mismo cuerpo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 25,
+                  "grc": "διο αποθεμενοι το ψευδοϲ §0λαλειτε §2εκαϲτοϲ §4αληθειαν §6προϲ §8τον πληϲιον αυτου οτι εϲμεν αλληλων μελη"
+                }
+              ],
+              "pagina": "84.6r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 93,
+          "texto": "Proverbios 12:22: \"el Señor detesta los labios mentirosos\". ¿Hay \"mentiras buenas\" para salvar almas?",
+          "clave": "No; el fin no justifica el medio (Ro 3:8).",
+          "refs": [
+            {
+              "libro": "proverbios",
+              "cap": 12,
+              "desde": 22,
+              "hasta": 22,
+              "label": "Proverbios 12:22",
+              "ntv": [
+                {
+                  "n": 22,
+                  "text": "El SEÑOR detesta los labios mentirosos, pero se deleita en los que dicen la verdad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 22,
+                  "grc": "βδελυγμα ‹κω› · χιλη ψευδη ο δε ποιων πιϲτιϲ δεκτοϲ παρ αυτω"
+                }
+              ],
+              "pagina": "64.6v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "romanos",
+              "cap": 3,
+              "desde": 8,
+              "hasta": 8,
+              "label": "Romanos 3:8"
+            }
+          ]
+        },
+        {
+          "n": 94,
+          "texto": "1 Timoteo 5:8: quien no cuida de su familia \"ha negado la fe\". ¿Por qué presentar a la familia preocupada como instrumento de Satanás?",
+          "clave": "La Biblia manda cuidar y honrar a la familia.",
+          "refs": [
+            {
+              "libro": "1-timoteo",
+              "cap": 5,
+              "desde": 8,
+              "hasta": 8,
+              "label": "1 Timoteo 5:8",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Aquellos que se niegan a cuidar de sus familiares, especialmente los de su propia casa, han negado la fe verdadera y son peores que los incrédulos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "ει δε τιϲ των ϊδι‹ω› και μαλιϲτα οικιων ου §0προνοειται την πιϲτιν ηρνηται και εϲτιν απιϲτου χειρων"
+                }
+              ],
+              "pagina": "86.3r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 95,
+          "texto": "Éxodo 20:12 y Efesios 6:2: honra a tu padre y a tu madre. ¿Es honrarlos ocultarles a qué estudio asistes?",
+          "clave": "No.",
+          "refs": [
+            {
+              "libro": "exodo",
+              "cap": 20,
+              "desde": 12,
+              "hasta": 12,
+              "label": "Éxodo 20:12",
+              "ntv": [
+                {
+                  "n": 12,
+                  "text": "Honra a tu padre y a tu madre. Entonces tendrás una vida larga y plena en la tierra que el SEÑOR tu Dios te da."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            },
+            {
+              "libro": "efesios",
+              "cap": 6,
+              "desde": 2,
+              "hasta": 2,
+              "label": "Efesios 6:2",
+              "ntv": [
+                {
+                  "n": 2,
+                  "text": "Honra a tu padre y a tu madre. Ese es el primer mandamiento que contiene una promesa:"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 2,
+                  "grc": "τιμα τον πατερα ϲου και την μητερα ητιϲ εϲτιν εντολη πρωτη εν επαγγελια"
+                }
+              ],
+              "pagina": "84.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 96,
+          "texto": "Mateo 11:28-30: \"mi yugo es fácil de llevar\". ¿Cómo encaja con clases tres veces por semana, castigo por faltas y metas de evangelismo?",
+          "clave": "El yugo de Cristo no es un sistema de agotamiento.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 11,
+              "desde": 28,
+              "hasta": 30,
+              "label": "Mateo 11:28-30",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Luego dijo Jesús: Vengan a mí todos los que están cansados y llevan cargas pesadas, y yo les daré descanso."
+                },
+                {
+                  "n": 29,
+                  "text": "Pónganse mi yugo. Déjenme enseñarles, porque yo soy humilde y tierno de corazón, y encontrarán descanso para el alma."
+                },
+                {
+                  "n": 30,
+                  "text": "Pues mi yugo es fácil de llevar y la carga que les doy es liviana."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "δευτε προϲ με π‹α›τεϲ οι κοπιωντεϲ και πεφορτιϲμενοι καγω αναπαυϲω υμαϲ"
+                },
+                {
+                  "n": 29,
+                  "grc": "αρατε τον ζυγον μ(ου) εφ υμαϲ και §0μαθετε οτι πραϋϲ ειμι και ταπινοϲ τη καρδια και ευρηϲετε αναπαυϲιν ταιϲ ψυχεϲ ϋμων"
+                },
+                {
+                  "n": 30,
+                  "grc": "ο γαρ ζυγοϲ μου χρηϲτοϲ και το φορτιον μου ελαφρον εϲτιν :"
+                }
+              ],
+              "pagina": "74.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 97,
+          "texto": "2 Corintios 9:7: cada uno da \"sin tristeza ni obligación\". ¿Es bíblico recaudar donaciones en cuentas personales de dirigentes?",
+          "clave": "Pablo pide transparencia (2 Co 8:20-21).",
+          "refs": [
+            {
+              "libro": "2-corintios",
+              "cap": 9,
+              "desde": 7,
+              "hasta": 7,
+              "label": "2 Corintios 9:7",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "Cada uno debe decidir en su corazón cuánto dar; y no den de mala gana ni bajo presión, porque Dios ama a la persona que da con alegría."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 7,
+                  "grc": "εκαϲτοϲ καθωϲ προηρηται τη καρδια μη εκ λυπηϲ η εξ αναγκηϲ ϊλαρ‹ο› γαρ δοτην αγαπα ο ‹θϲ›"
+                }
+              ],
+              "pagina": "84.1r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "2-corintios",
+              "cap": 8,
+              "desde": 20,
+              "hasta": 21,
+              "label": "2 Corintios 8:20-21"
+            }
+          ]
+        },
+        {
+          "n": 98,
+          "texto": "Romanos 13:7: \"paguen los impuestos\". Si se probara la acusación de evasión fiscal pendiente, ¿qué diría este texto?",
+          "clave": "Que el líder cristiano debe ser el primero en cumplir la ley.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 13,
+              "desde": 7,
+              "hasta": 7,
+              "label": "Romanos 13:7",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "Ustedes den a cada uno lo que le deben: paguen los impuestos y demás aranceles a quien corresponda, y den respeto y honra a los que están en autoridad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 7,
+                  "grc": "αποδοτε §0 §2παϲι ταϲ οφιλαϲ · τω τον φορον τον φορ‹ο› · τω το τελοϲ το τελοϲ · τω τον φοβον τον φοβον · τω την τιμην την τιμην ·"
+                }
+              ],
+              "pagina": "82.6r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 99,
+          "texto": "Juan 18:36: \"mi reino no es de este mundo\". ¿Cómo encaja con la acusación de afiliar en masa a miembros a un partido político?",
+          "clave": "El reino de Cristo no avanza con maquinaria política. SCJ niega los cargos y el juicio sigue en curso.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 18,
+              "desde": 36,
+              "hasta": 36,
+              "label": "Juan 18:36",
+              "ntv": [
+                {
+                  "n": 36,
+                  "text": "Jesús contestó: —Mi reino no es un reino terrenal. Si lo fuera, mis seguidores lucharían para impedir que yo sea entregado a los líderes judíos; pero mi reino no es de este mundo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 36,
+                  "grc": "απεκριθη ‹ιϲ› η εμη βαϲιλεια ουκ εϲτιν εκ του κοϲμου τουτου · ει εκ του κοϲμου τουτου ην η εμη βαϲιλια · και οι υπηρεται οι εμοι ηγωνιζοντο αν · ινα μη παραδοθω τοιϲ ϊουδαιοιϲ ν‹υ› δε η εμη βαϲιλεια ουκ εϲτιν εντευθεν ·"
+                }
+              ],
+              "pagina": "81.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 100,
+          "texto": "1 Juan 4:1: \"pongan a prueba a los espíritus\". ¿Permite SCJ examinar libremente sus enseñanzas, leer a sus críticos y hacer preguntas sin ser castigado?",
+          "clave": "Una verdad que no se puede examinar no es la verdad de Dios (Hch 17:11).",
+          "refs": [
+            {
+              "libro": "1-juan",
+              "cap": 4,
+              "desde": 1,
+              "hasta": 1,
+              "label": "1 Juan 4:1",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Queridos amigos, no les crean a todos los que afirman hablar de parte del Espíritu. Pónganlos a prueba para averiguar si el espíritu que tienen realmente proviene de Dios, porque hay muchos falsos profetas en el mundo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "αγαπητοι μη παντι ‹πν›ι πιϲτευετε αλλα δοκιμαζετε τα ‹πν›ατα ει εκ του ‹θυ› εϲτ‹ι› οτι πολλοι §0γευδοπροφηται εξεληλυθαϲιν ειϲ τον κοϲμον"
+                }
+              ],
+              "pagina": "89.7v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "hechos",
+              "cap": 17,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Hechos 17:11"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -48,6 +48,7 @@ const PAGINAS = [
   '/videos',
   '/concilios',
   '/temas',
+  '/apologetica/shincheonji',
   '/buscar?q=nicea',
   '/estudio/01-fundamentos--01-perdon',
   '/estudio/03-personajes--apostoles--09-tomas',

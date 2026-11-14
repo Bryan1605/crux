@@ -72,8 +72,17 @@ for (const file of files) {
   for (const k of ficha.sources) usadas.add(k);
   fichas.push(ficha);
 }
+// Las páginas de apologética también citan fuentes del registro.
+for (const extra of ['apologetica/shincheonji-preguntas.json']) {
+  try {
+    const d = await readJson(path.join(DIR, '..', extra));
+    for (const k of d.fuentes || []) usadas.add(k);
+  } catch {
+    /* sin esa página */
+  }
+}
 const sobrantes = [...fuentes].filter(k => !usadas.has(k));
-check('Todas las fuentes del registro se citan en alguna ficha', sobrantes.length === 0, sobrantes.join(', ') || 'todas');
+check('Todas las fuentes del registro se citan en alguna ficha o página', sobrantes.length === 0, sobrantes.join(', ') || 'todas');
 
 const rutas = siteRoutes().map(r => r.path).filter(p => p.startsWith('/biblia/libros'));
 const esperadas = ['/biblia/libros', ...fichas.map(f => `/biblia/libros/${f.id}`)];

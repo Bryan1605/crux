@@ -18,6 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { SHINCHEONJI_PATH, shincheonjiSeo } from '../src/lib/apologeticaSeo.js';
 import { libroSeo, librosIndexSeo } from '../src/lib/librosSeo.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -191,6 +192,11 @@ export function siteRoutes() {
       lastmod: s.updated,
       indexable: true
     });
+  }
+
+  // Apologética: 100 preguntas para Shincheonji (solo si existen los datos).
+  if (fs.existsSync(path.join(CONTENT, 'apologetica', 'shincheonji-preguntas.json'))) {
+    routes.push({ path: SHINCHEONJI_PATH, ...shincheonjiSeo(brand), type: 'article', indexable: true });
   }
 
   // Índice de libros y una ruta por ficha que exista (no se publican fichas vacías).

@@ -34,6 +34,9 @@ npm run dev        # http://localhost:5173/  (panel /admin solo en dev)
 | `npm run exegesis:ntv` / `:codex` / `:index` / `:search` / `:lemas` / `:lexico` | Pasos sueltos, en ese orden si se hacen a mano. |
 | `npm run exegesis:trad` | Valida y publica las traducciones de trabajo (`src/assets/texts/trad/` → `public/textos/exegesis/trad/`). No está dentro de `exegesis`; después, `exegesis:index`. |
 | `npm run qa:libros` | QA de las fichas de libros: validador, registro de fuentes, rutas, páginas y panel en los lectores. Va dentro de `npm run qa`. |
+| `npm run qa:admin` | Editor visual de `/admin`: los estudios pasan por el editor sin cambiar su HTML y prueba de uso (no guarda). Va dentro de `npm run qa`. |
+| `npm run qa:shincheonji` | Página `/apologetica/shincheonji`: datos, texto copiado igual a NTV/Codex, griego, avisos del AT y navegación. Va dentro de `npm run qa`. |
+| `node scripts/import-shincheonji.mjs [--write]` | Importa las 100 preguntas desde el wiki a `content/apologetica/shincheonji-preguntas.json` (simula sin `--write`). |
 | `npm run qa:trad` | QA de la traducción (datos + navegador); necesita el dev server. Va dentro de `npm run qa`. |
 | `node scripts/optimize-images.mjs` | Pasa las fuentes de `src/assets/imgs/` a `.webp` en `public/img/`. |
 | `node scripts/build-audio-peaks.mjs` | Recalcula las ondas de `content/narraciones.json` (usa Chrome). |

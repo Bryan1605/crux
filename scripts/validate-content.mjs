@@ -499,6 +499,39 @@ export function validateLexico(obj) {
   return true;
 }
 
+/**
+ * content/apologetica/shincheonji-preguntas.json (lo genera
+ * scripts/import-shincheonji.mjs desde el wiki): 10 bloques, 100 preguntas
+ * numeradas, cada una con clave y al menos una referencia que exista.
+ */
+export function validateShincheonji(obj, _slug, ctx = {}) {
+  const label = 'apologetica/shincheonji-preguntas';
+  const bloques = required(obj, 'bloques', 'array', label);
+  required(obj, 'reglas', 'array', label);
+  let n = 0;
+  for (const b of bloques) {
+    const at = `${label}.bloque ${b.id || '?'}`;
+    for (const k of ['id', 'titulo']) required(b, k, 'string', at);
+    for (const p of required(b, 'preguntas', 'array', at)) {
+      n += 1;
+      const pa = `${label}.pregunta ${p.n}`;
+      if (p.n !== n) throw new Error(`${pa}: numeración rota (se esperaba ${n})`);
+      for (const k of ['texto', 'clave']) if (!required(p, k, 'string', pa).trim()) throw new Error(`${pa}: "${k}" vacío`);
+      const refs = [...required(p, 'refs', 'array', pa), ...optional(p, 'claveRefs', 'array', pa, [])];
+      if (!p.refs.length) throw new Error(`${pa}: sin referencia bíblica`);
+      for (const r of refs) {
+        if (ctx.books && !ctx.books.has(r.libro)) throw new Error(`${pa}: libro desconocido "${r.libro}"`);
+        if (!(r.cap >= 1 && r.desde >= 1 && r.hasta >= r.desde)) throw new Error(`${pa}: referencia inválida ${r.label}`);
+      }
+    }
+  }
+  if (n !== 100) throw new Error(`${label}: hay ${n} preguntas (se esperaban 100)`);
+  for (const k of optional(obj, 'fuentes', 'array', label, [])) {
+    if (ctx.fuentes && !ctx.fuentes.has(k)) throw new Error(`${label}: la fuente "${k}" no está en content/libros/fuentes.json`);
+  }
+  return true;
+}
+
 // --- mapa para content-api ---
 export const VALIDATORS = {
   site: validateSite,
@@ -515,7 +548,8 @@ export const VALIDATORS = {
   narraciones: validateNarraciones,
   lexico: validateLexico,
   fuentes: validateFuentes,
-  libro: validateLibro
+  libro: validateLibro,
+  shincheonji: validateShincheonji
 };
 
 export function validate(name, data, slug, ctx) {

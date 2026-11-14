@@ -1,0 +1,545 @@
+/* «100 preguntas, solo con la Biblia» — /apologetica/shincheonji */
+
+.scj-page {
+  --scj-gold: #c8a35f;
+  --scj-paper: #fbf8f1;
+  --scj-paper-2: #efe7d6;
+  --scj-ink: #1c1a17;
+  --scj-ink-soft: #4a4236;
+  padding-bottom: var(--sp-8);
+}
+
+/* --- cabecera ------------------------------------------------------------- */
+
+.scj-head {
+  padding: clamp(6.5rem, 14vh, 9rem) 0 var(--sp-6);
+}
+
+.scj-head h1 {
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+
+.scj-head .lead {
+  max-width: 62ch;
+}
+
+.scj-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: var(--sp-5) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scj-chips li {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.88rem;
+}
+
+/* --- introducción --------------------------------------------------------- */
+
+.scj-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-7);
+}
+
+.scj-card {
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--panel);
+}
+
+.scj-card h2 {
+  margin: 0 0 var(--sp-3);
+  font-size: clamp(1.3rem, 2.4vw, 1.55rem);
+}
+
+.scj-card h3 {
+  margin: 0 0 var(--sp-2);
+  font-size: 1.05rem;
+}
+
+.scj-card p {
+  margin: 0 0 var(--sp-3);
+  color: #d4d4d8;
+}
+
+.scj-steps {
+  display: grid;
+  gap: var(--sp-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scj-steps li {
+  display: grid;
+  grid-template-columns: 2.1rem 1fr;
+  gap: var(--sp-3);
+  color: #d4d4d8;
+}
+
+.scj-steps li > span {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--scj-gold);
+  border-radius: 50%;
+  color: var(--scj-gold);
+  font-family: var(--font-display);
+}
+
+.scj-steps strong {
+  display: block;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+}
+
+.scj-berea {
+  margin-top: var(--sp-4) !important;
+}
+
+.scj-berea a,
+.scj-card--codex a,
+.scj-credits a,
+.scj-key a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.scj-rules {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--border);
+}
+
+.scj-rules ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #d4d4d8;
+}
+
+.scj-rules li + li {
+  margin-top: 0.35rem;
+}
+
+/* El recuadro del Codex va en «papel», como el manuscrito. */
+.scj-card--codex {
+  border-color: transparent;
+  background: var(--scj-paper);
+  color: var(--scj-ink);
+}
+
+.scj-card--codex h2,
+.scj-card--codex h3 {
+  color: var(--scj-ink);
+}
+
+.scj-card--codex p,
+.scj-card--codex li {
+  color: var(--scj-ink-soft);
+}
+
+.scj-card--codex a {
+  color: #6b4d14;
+}
+
+.scj-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 0 0 var(--sp-3);
+}
+
+.scj-facts div {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--r-md);
+  background: var(--scj-paper-2);
+}
+
+.scj-facts dt {
+  color: var(--scj-ink);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.scj-facts dd {
+  margin: 0;
+  color: #5b5143;
+  font-size: 0.82rem;
+}
+
+.scj-legend {
+  padding-top: var(--sp-3);
+  border-top: 1px solid #e2d8c4;
+}
+
+.scj-legend ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+}
+
+.scj-ns {
+  text-decoration: overline;
+}
+
+.scj-grc-inline {
+  font-family: var(--font-greek, 'Palatino Linotype', 'Noto Serif', Georgia, serif);
+  font-size: 1.05em;
+}
+
+/* --- índice lateral + bloques --------------------------------------------- */
+
+.scj-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: var(--sp-6);
+  align-items: start;
+}
+
+.scj-side {
+  position: sticky;
+  top: calc(var(--marquee-h, 0px) + 90px);
+}
+
+.scj-side ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scj-side a {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 44px;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--r-sm);
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.scj-side a:hover,
+.scj-side a:focus-visible {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.scj-side__range {
+  color: var(--faint);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.scj-block {
+  scroll-margin-top: calc(var(--marquee-h, 0px) + 100px);
+}
+
+.scj-block + .scj-block {
+  margin-top: var(--sp-7);
+}
+
+.scj-block > h2 {
+  margin: 0;
+}
+
+.scj-block__count {
+  margin: 0.2rem 0 var(--sp-4);
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* --- pregunta -------------------------------------------------------------- */
+
+.scj-q {
+  margin-top: var(--sp-4);
+  padding: clamp(1rem, 2.5vw, 1.4rem);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--panel);
+  scroll-margin-top: calc(var(--marquee-h, 0px) + 100px);
+}
+
+.scj-q__head {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: baseline;
+}
+
+.scj-q__num {
+  min-width: 2.2ch;
+  color: var(--scj-gold);
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.scj-q__text {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.08rem, 2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.scj-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: var(--sp-4);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+}
+
+.scj-col {
+  min-width: 0;
+  padding: 1rem 1.1rem;
+}
+
+.scj-col--grc {
+  background: var(--scj-paper);
+  color: var(--scj-ink);
+}
+
+.scj-col--es {
+  border-left: 1px solid var(--border);
+  background: #121216;
+}
+
+.scj-lab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+  margin: 0 0 0.6rem;
+  color: #7b6c50;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.scj-col--es .scj-lab {
+  color: var(--faint);
+}
+
+.scj-grc {
+  margin: 0;
+  font-family: var(--font-greek, 'Palatino Linotype', 'Noto Serif', Georgia, serif);
+  font-size: 1.18rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.scj-es {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.scj-grc sup,
+.scj-es sup {
+  margin-right: 0.2em;
+  color: var(--scj-gold);
+  font-family: var(--font-sans);
+  font-size: 0.62em;
+}
+
+.scj-wait {
+  margin: 0;
+  color: var(--faint);
+  font-style: italic;
+}
+
+.scj-col--grc .scj-wait {
+  color: #8a7a5c;
+}
+
+.scj-note {
+  margin: 0.6rem 0 0;
+  color: #6d6252;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.scj-mini-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+}
+
+.scj-mini-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.scj-mini-links a:hover {
+  color: var(--text);
+}
+
+.scj-think {
+  margin: var(--sp-4) 0 var(--sp-2);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.scj-key {
+  border-left: 3px solid var(--scj-gold);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  background: rgba(200, 163, 95, 0.07);
+}
+
+.scj-key summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1rem;
+  color: var(--scj-gold);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.scj-key summary::-webkit-details-marker {
+  display: none;
+}
+
+.scj-key summary::before {
+  content: '▸';
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.scj-key[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.scj-key p {
+  margin: 0;
+  padding: 0 1rem 0.9rem;
+  color: var(--text);
+}
+
+.scj-key__refs {
+  color: var(--muted) !important;
+  font-size: 0.9rem;
+}
+
+.scj-q__foot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--sp-3);
+}
+
+.scj-chip {
+  min-height: 44px;
+  padding: 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.scj-chip:hover {
+  border-color: var(--border-strong);
+}
+
+/* --- fuentes --------------------------------------------------------------- */
+
+.scj-credits {
+  margin-top: var(--sp-7);
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.scj-credits h2 {
+  color: var(--text);
+  font-size: 1.3rem;
+}
+
+.scj-license {
+  font-size: 0.8rem;
+}
+
+.scj-credits a[href='#main'] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* --- móvil ----------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .scj-intro,
+  .scj-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* El índice pasa a una fila de temas que se desliza. */
+  .scj-side {
+    position: static;
+    margin: 0 -16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .scj-side ul {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0 16px 0.25rem;
+  }
+
+  .scj-side a {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .scj-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .scj-col--es {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .scj-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .scj-q__num {
+    font-size: 1.5rem;
+  }
+}
+
+/* Sobre el papel, el oro de los números no llega al contraste AA: oro oscuro. */
+.scj-col--grc .scj-grc sup {
+  color: #7a5a1e;
+}

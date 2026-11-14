@@ -43,6 +43,17 @@
       "tipo": "texto",
       "consultado": "2026-11-04",
       "verificado": "Texto griego de Tobit que usa el sitio (public/textos/exegesis/codex/tobit.json, generado de la transcripción del proyecto): 14 capítulos, 232 versículos, y los saltos 4:7→4:19, 9:2→9:4, 13:7→13:11 y 14:7→14:9."
+    },
+    "csp-acerca-del-codex": {
+      "autor": "The Codex Sinaiticus Project",
+      "titulo": "About Codex Sinaiticus (What is Codex Sinaiticus? · Production · Home)",
+      "obra": "codexsinaiticus.org",
+      "anio": "2009",
+      "url": "https://www.codexsinaiticus.org/en/codex/default.aspx",
+      "archivo": "https://web.archive.org/web/20241207104230/https://www.codexsinaiticus.org/en/codex/default.aspx",
+      "tipo": "publica",
+      "consultado": "2026-11-13",
+      "verificado": "Datos del recuadro de /apologetica/shincheonji: escrito a mediados del siglo IV («written in the middle of the fourth century»), a mano y en griego («handwritten well over 1600 years ago»), con la copia completa más antigua del Nuevo Testamento; el AT en la Septuaginta; preparado en pergamino (página Production); cuatro instituciones socias: British Library, Biblioteca Nacional de Rusia, Monasterio de Santa Catalina y Biblioteca Universitaria de Leipzig; manuscrito reunido en forma digital y en línea desde julio de 2009. El sitio no respondía desde aquí: se leyó en copias de web.archive.org (2024-12-07 y 2025-01-12)."
     }
   }
 }

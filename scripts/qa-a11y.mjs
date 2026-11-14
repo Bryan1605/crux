@@ -63,6 +63,8 @@ const ROUTES = [
   { label: 'concilios', path: '/concilios' },
   { label: 'concilios (ancla)', path: '/concilios#nicea' },
   { label: 'temas', path: '/temas' },
+  { label: 'apologética (Shincheonji)', path: '/apologetica/shincheonji' },
+  { label: 'apologética (Shincheonji, móvil)', path: '/apologetica/shincheonji', mobile: true },
   { label: 'buscar (vacío)', path: '/buscar' },
   { label: 'buscar (resultados)', path: '/buscar?q=nicea' },
   { label: '404', path: '/ruta-no-existe' }

@@ -177,6 +177,20 @@ function contentGuard() {
         }
       }
 
+      // Apologética: las 100 preguntas para Shincheonji (generadas desde el wiki).
+      const scjFile = path.join(CONTENT, 'apologetica', 'shincheonji-preguntas.json');
+      if (fs.existsSync(scjFile)) {
+        try {
+          const registro = JSON.parse(fs.readFileSync(path.join(CONTENT, 'libros', 'fuentes.json'), 'utf8'));
+          validate('shincheonji', JSON.parse(fs.readFileSync(scjFile, 'utf8')), undefined, {
+            books: BOOK_BY_ID,
+            fuentes: new Set(Object.keys(registro.fuentes))
+          });
+        } catch (e) {
+          errors.push(`content/apologetica/shincheonji-preguntas.json → ${e.message}`);
+        }
+      }
+
       // Fichas de libros: cada una cuadra con la tabla canónica, tiene 600–900
       // palabras y solo cita fuentes del registro verificado (content/libros/fuentes.json).
       const lDir = path.join(CONTENT, 'libros');
