@@ -7,7 +7,7 @@
  * Deja capturas en C:\Users\PC\AppData\Local\Temp\opencode\crux.
  */
 import puppeteer from 'puppeteer-core';
-import { mkdir, mkdtemp } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -787,6 +787,34 @@ try {
     `pie ${Math.round(abajo.pieAbajo)} ≤ ventana ${abajo.alto} · padding-bottom ${abajo.paddingBody}`
   );
   await barra.close();
+
+  // El menú abierto muestra todos los grupos de content/site.json y ningún enlace queda cortado.
+  const site = JSON.parse(await readFile(new URL('../content/site.json', import.meta.url), 'utf8'));
+  for (const [w, h] of [[1280, 900], [390, 844]]) {
+    const pmenu = await browser.newPage();
+    await pmenu.setViewport({ width: w, height: h, isMobile: w < 800, hasTouch: w < 800 });
+    await pmenu.goto(`${BASE}/`, { waitUntil: 'networkidle2' });
+    await wait(1200);
+    await pmenu.click('.hamburger-menu');
+    await wait(1200);
+    const menu = await pmenu.evaluate(() => {
+      const nav = document.querySelector('.card-nav').getBoundingClientRect();
+      const links = [...document.querySelectorAll('.nav-card-link')];
+      return {
+        grupos: document.querySelectorAll('.nav-card').length,
+        hrefs: links.map(a => a.getAttribute('href')),
+        cortados: links.filter(a => a.getBoundingClientRect().bottom > nav.bottom + 1).map(a => a.textContent)
+      };
+    });
+    const total = site.nav.reduce((n, g) => n + g.links.length, 0);
+    check(
+      `menú ${w}px: los ${site.nav.length} grupos y sus ${total} enlaces, sin cortes`,
+      menu.grupos === site.nav.length && menu.hrefs.length === total && !menu.cortados.length,
+      `${menu.grupos} grupos · ${menu.hrefs.length} enlaces · cortados: ${menu.cortados.join(', ') || 'ninguno'}`
+    );
+    check(`menú ${w}px: enlaza el índice de libros`, menu.hrefs.some(hr => /\/biblia\/libros$/.test(hr)));
+    await pmenu.close();
+  }
 
   // El pie del banner cambia al empezar la transición, no al terminarla (2,2 s).
   const banner = await makePage('no-preference', 1280, 900);

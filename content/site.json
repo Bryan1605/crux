@@ -30,7 +30,8 @@
       "links": [
         { "label": "Biblia Patrística", "href": "/biblia", "ariaLabel": "Leer la Biblia Patrística completa" },
         { "label": "Biblia NTV", "href": "/biblia/ntv", "ariaLabel": "Leer la Biblia NTV capítulo a capítulo" },
-        { "label": "Exégesis comparada", "href": "/exegesis", "ariaLabel": "Exégesis comparada: el Codex Sinaiticus y la NTV, versículo a versículo" }
+        { "label": "Exégesis comparada", "href": "/exegesis", "ariaLabel": "Exégesis comparada: el Codex Sinaiticus y la NTV, versículo a versículo" },
+        { "label": "Libros de la Biblia", "href": "/biblia/libros", "ariaLabel": "Fichas de los libros de la Biblia" }
       ]
     },
     {

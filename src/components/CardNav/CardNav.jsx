@@ -4,6 +4,9 @@ import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
 import './CardNav.css';
 
+/** Alto del menú abierto en escritorio: cabe un grupo de cuatro enlaces. */
+const DESKTOP_H = 300;
+
 const CardNav = ({
   logo,
   logoAlt = 'Logo',
@@ -25,7 +28,7 @@ const CardNav = ({
 
   const calculateHeight = () => {
     const navEl = navRef.current;
-    if (!navEl) return 260;
+    if (!navEl) return DESKTOP_H;
 
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
     if (isMobile) {
@@ -55,7 +58,7 @@ const CardNav = ({
         return topBar + contentHeight + padding;
       }
     }
-    return 260;
+    return DESKTOP_H;
   };
 
   const createTimeline = () => {
@@ -170,7 +173,7 @@ const CardNav = ({
         </div>
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>
-          {(items || []).slice(0, 3).map((item, idx) => (
+          {(items || []).slice(0, 4).map((item, idx) => (
             <div
               key={`${item.label}-${idx}`}
               className="nav-card"
