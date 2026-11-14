@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { BOOK_BY_ID, parsePassage } from '../../data/exegesis';
-import { TEMAS_POR_CATEGORIA } from '../../data/temas';
 
 import './StudyCard.css';
 
@@ -11,10 +10,6 @@ function bookMark(passage, title) {
   const ref = parsePassage(passage);
   const book = ref && BOOK_BY_ID.get(ref.bookId);
   return book ? book.abbr : String(title || '').trim().charAt(0);
-}
-
-function temaImage(s) {
-  return (TEMAS_POR_CATEGORIA[s.category] || []).find(t => t.key === s.subcategory)?.image;
 }
 
 /** Lo que pinta la card, igual para estudios y personajes. */
@@ -38,11 +33,11 @@ function cardData(entry) {
       cta: 'Ver la ficha'
     };
   }
-  const image = d.portada || temaImage(d);
+  // Los estudios no llevan imagen: la card muestra el libro del pasaje.
   return {
-    images: image ? [image] : [],
+    images: [],
     position: 'center',
-    mark: image ? '' : bookMark(d.passage, d.title),
+    mark: bookMark(d.passage, d.title),
     badge: d.number ? `Nº ${d.number}` : '',
     meta: [d.category?.split('-')[0], d.categoryLabel, d.subcategory].filter(Boolean).join(' · '),
     title: d.title,
