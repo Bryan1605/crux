@@ -10,6 +10,8 @@
 import puppeteer from 'puppeteer-core';
 import { readFileSync } from 'node:fs';
 
+import { checkClaves } from '../src/lib/claves.js';
+
 const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const BASE = (process.env.CRUX_BASE || 'http://localhost:5173').replace(/\/$/, '');
 const URL_PAGE = `${BASE}/apologetica/shincheonji`;
@@ -37,6 +39,10 @@ for (const p of preguntas) {
 }
 check('datos: todos los versículos citados existen en la NTV', faltan.length === 0, faltan.slice(0, 5).join(' | '));
 
+const claves = JSON.parse(readFileSync(new URL('../content/apologetica/shincheonji-claves.json', import.meta.url), 'utf8')).claves;
+const malClaves = checkClaves(preguntas, claves);
+check('datos: las 100 preguntas tienen palabra clave y todas están en su versículo', malClaves.length === 0, malClaves.slice(0, 4).join(' | '));
+
 // El texto copiado en el JSON sigue igual que la NTV y el Codex de public/textos.
 const codex = new Map();
 const distintos = [];
@@ -61,6 +67,39 @@ check(
   distintos.length ? `${distintos.slice(0, 4).join(' | ')} — vuelve a ejecutar node scripts/import-shincheonji.mjs --write` : ''
 );
 
+// «¿Qué cree Shincheonji?»: lo que se presenta como NTV es NTV.
+const doctrina = JSON.parse(readFileSync(new URL('../content/apologetica/shincheonji-doctrina.json', import.meta.url), 'utf8'));
+const { BOOK_BY_NAME } = await import('../src/data/exegesis.js');
+const ntvRango = label => {
+  const m = /^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/.exec(label);
+  const book = m && BOOK_BY_NAME.get(m[1]);
+  if (!book) return null;
+  if (!ntv.has(book.id)) ntv.set(book.id, JSON.parse(readFileSync(new URL(`../public/textos/exegesis/ntv/${book.id}.json`, import.meta.url), 'utf8')));
+  const ch = ntv.get(book.id).chapters.find(c => (c.num ?? c.n) === Number(m[2]));
+  const desde = Number(m[3]);
+  const hasta = Number(m[4] || m[3]);
+  return (ch?.verses || [])
+    .filter(v => v.n >= desde && v.n <= hasta)
+    .map(v => v.text.replace(/\[[a-z]{1,2}\]/g, ''))
+    .join(' ');
+};
+const malNtv = [];
+for (const p of doctrina.partes) {
+  const c = p.biblia?.cita;
+  if (c && !ntvRango(c.ref)?.includes(c.texto)) malNtv.push(`Parte ${p.id}: cita de ${c.ref}`);
+  for (const b of p.biblia?.puntos || []) {
+    for (const r of b.refs) if (ntvRango(r) === null || !ntvRango(r)) malNtv.push(`Parte ${p.id}: ${r} no existe en la NTV`);
+    const texto = b.refs.map(ntvRango).join(' ');
+    for (const frase of b.cita || []) if (!texto.includes(frase)) malNtv.push(`Parte ${p.id}: «${frase}» no está en ${b.ref}`);
+  }
+}
+check('«¿Qué cree?»: cada cita y frase atribuida a la NTV está en la NTV', malNtv.length === 0, malNtv.slice(0, 4).join(' | '));
+check(
+  '«¿Qué cree?»: 6 partes y cada cita de Lee con inglés, español y página',
+  doctrina.partes.length === 6 && doctrina.partes.every(p => p.lee.length && p.lee.every(c => c.en && c.es && c.paginas.length)),
+  `${doctrina.partes.reduce((n, p) => n + p.lee.length, 0)} citas`
+);
+
 // ------------------------------------------------------------------ página
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: true });
 try {
@@ -77,7 +116,7 @@ try {
     const head = await page.evaluate(() => ({
       h1: document.querySelector('h1')?.textContent.replace(/\s+/g, ' ').trim(),
       preguntas: document.querySelectorAll('.scj-q').length,
-      bloques: document.querySelectorAll('.scj-block').length,
+      bloques: document.querySelectorAll('#scj-panel-preguntas .scj-block').length,
       codex: Boolean(document.querySelector('.scj-card--codex')),
       over: document.documentElement.scrollWidth - window.innerWidth,
       title: document.title
@@ -101,6 +140,12 @@ try {
     });
     check(`${w}px: Mt 28:19 en griego (ονομα) y en la NTV (en el nombre)`, /ονομα/.test(q1.grc) && /en el nombre/.test(q1.es));
     check(`${w}px: la respuesta está cerrada hasta que se abre`, q1.open === false);
+    const marcas = await page.evaluate(() => ({
+      grc: [...document.querySelectorAll('#p-1 .scj-grc mark')].map(m => m.textContent.trim()),
+      es: [...document.querySelectorAll('#p-1 .scj-es mark')].map(m => m.textContent.trim()),
+      total: document.querySelectorAll('.scj-pair mark').length
+    }));
+    check(`${w}px: Mt 28:19 resalta «ειϲ το ονομα» y «en el nombre»`, marcas.grc.includes('ειϲ το ονομα') && marcas.es.includes('en el nombre'), `${marcas.grc.join(', ')} · ${marcas.es.join(', ')} · ${marcas.total} resaltes en la página`);
     check(`${w}px: enlaces a Exégesis y al manuscrito`, q1.exegesis && q1.manuscrito);
 
     // Pregunta 81 (AT sin Codex): aviso honesto, la NTV sí sale.
@@ -118,13 +163,38 @@ try {
     // El índice de temas lleva al bloque y este no se desplaza al llegar.
     await page.evaluate(() => window.scrollTo(0, 0));
     await page.evaluate(() => document.querySelector('a[href="#bloque-IX"]').click());
-    await wait(1500);
+    // El scroll es suave: se espera a que llegue (con la máquina cargada tarda más).
+    await page
+      .waitForFunction(() => Math.abs(document.getElementById('bloque-IX').getBoundingClientRect().top) < 260, { timeout: 8000 })
+      .catch(() => {});
+    await wait(300);
     const salto = await page.evaluate(() => Math.round(document.getElementById('bloque-IX').getBoundingClientRect().top));
     check(`${w}px: el índice lleva al tema IX y queda arriba`, salto >= 0 && salto < 260, `${salto}px desde arriba`);
 
     await page.click('#p-1 summary');
     const opened = await page.evaluate(() => document.querySelector('#p-1 details').open && /singular/.test(document.querySelector('#p-1 details').textContent));
     check(`${w}px: «Lo que dice el texto» abre la clave`, opened);
+
+    // Pestaña «¿Qué cree Shincheonji?»: se abre, cambia la URL y muestra las citas.
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.click('#scj-tab-doctrina');
+    await wait(500);
+    const doc = await page.evaluate(() => ({
+      url: location.search,
+      visible: !document.getElementById('scj-panel-doctrina').hidden,
+      preguntasOcultas: document.getElementById('scj-panel-preguntas').hidden,
+      citas: document.querySelectorAll('#scj-panel-doctrina .scj-lee').length,
+      ingles: document.querySelector('#parte-I .scj-en')?.textContent || '',
+      pagina: document.querySelector('#parte-I .scj-lab span:last-child')?.textContent || '',
+      over: document.documentElement.scrollWidth - window.innerWidth
+    }));
+    check(
+      `${w}px: la pestaña «¿Qué cree Shincheonji?» abre las ${doctrina.partes.reduce((n, p) => n + p.lee.length, 0)} citas de Lee`,
+      doc.url.includes('vista=doctrina') && doc.visible && doc.preguntasOcultas && doc.citas === doctrina.partes.reduce((n, p) => n + p.lee.length, 0),
+      `${doc.citas} citas · ${doc.url}`
+    );
+    check(`${w}px: cada cita va en inglés con su página`, /God is spirit, not flesh/.test(doc.ingles) && /^pp?\. \d/.test(doc.pagina), `${doc.pagina}`);
+    check(`${w}px: la pestaña no provoca scroll horizontal`, doc.over <= 1, `${doc.over}px`);
     check(`${w}px: sin errores de JavaScript`, errors.length === 0, errors.slice(0, 2).join(' | '));
     await page.close();
   }

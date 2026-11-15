@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 import data from '../../content/apologetica/shincheonji-preguntas.json';
+import clavesData from '../../content/apologetica/shincheonji-claves.json';
 import { BOOK_BY_ID, WITNESS_ATTRIBUTION, exegesisPath, ntvPath } from '../data/exegesis';
-import { splitOverline, tokenizeGreek } from '../lib/greek';
+import { greekMarks, spanishMarks } from '../lib/claves';
+import { splitOverline } from '../lib/greek';
 import { useSeo, useSite } from '../lib/site';
 import { shincheonjiSeo } from '../lib/apologeticaSeo';
+import ShincheonjiDoctrina from './ShincheonjiDoctrina';
 
 import './Shincheonji.css';
 
@@ -20,6 +23,8 @@ import './Shincheonji.css';
 
 /* ------------------------------------------------------------------ textos */
 
+const claves = clavesData.claves;
+
 /** «76.2r» → «cuaderno 76 · f. 2r» (la referencia que usa el propio proyecto). */
 const pageLabel = page => {
   const m = /^(d+).(d+[rv])$/.exec(page || '');
@@ -27,28 +32,58 @@ const pageLabel = page => {
 };
 
 /** Texto del Codex tal como se copió: nomina sacra con raya encima, sin las anclas del aparato. */
-function Greek({ text }) {
-  return tokenizeGreek(text).map((t, i) => {
-    if (t.k === 'sigil' || t.k === 'mark') return null;
-    if (t.k === 't') return <span key={i}>{t.v}</span>;
-    return (
-      <span key={i}>
-        {splitOverline(t.v).map((part, j) =>
-          part.overline ? (
-            <span key={j} className="scj-ns">
-              {part.text}
-            </span>
-          ) : (
-            <span key={j}>{part.text}</span>
-          )
-        )}
+function GreekWord({ v }) {
+  return splitOverline(v).map((part, j) =>
+    part.overline ? (
+      <span key={j} className="scj-ns">
+        {part.text}
       </span>
-    );
+    ) : (
+      <span key={j}>{part.text}</span>
+    )
+  );
+}
+
+/**
+ * Texto del Codex tal como se copió: nomina sacra con raya encima, sin las
+ * anclas del aparato. Las palabras clave seguidas van en un solo <mark>.
+ */
+function Greek({ text, specs }) {
+  const { tokens, marked } = greekMarks(text, specs);
+  const words = tokens.map((t, i) => (t.k === 'w' ? i : -1)).filter(i => i >= 0);
+  // Un espacio o signo entre dos palabras resaltadas también va dentro del resalte.
+  const inMark = tokens.map((t, i) => {
+    if (t.k === 'w') return marked.has(i);
+    const prev = words.filter(w => w < i).pop();
+    const next = words.find(w => w > i);
+    return prev !== undefined && next !== undefined && marked.has(prev) && marked.has(next);
   });
+  const out = [];
+  let run = [];
+  const flush = key => {
+    if (run.length) out.push(<mark key={`m${key}`}>{run}</mark>);
+    run = [];
+  };
+  tokens.forEach((t, i) => {
+    if (t.k === 'sigil' || t.k === 'mark') return;
+    const node = t.k === 'w' ? <GreekWord key={i} v={t.v} /> : <span key={i}>{t.v}</span>;
+    if (inMark[i]) run.push(node);
+    else {
+      flush(i);
+      out.push(node);
+    }
+  });
+  flush('end');
+  return out;
+}
+
+/** NTV con las frases clave resaltadas. */
+function Spanish({ text, specs }) {
+  return spanishMarks(text, specs).parts.map((p, i) => (p.mark ? <mark key={i}>{p.text}</mark> : <span key={i}>{p.text}</span>));
 }
 
 /** Un pasaje: griego del Codex (o aviso) al lado de la NTV. El texto viene en el JSON. */
-function Passage({ r }) {
+function Passage({ r, clave }) {
   const book = BOOK_BY_ID.get(r.libro);
   const ot = book?.testament === 'AT';
   const g = r.codex ? { ...r, ...r.codex } : r;
@@ -71,7 +106,7 @@ function Passage({ r }) {
             {grc.map(v => (
               <span key={v.n}>
                 {grc.length > 1 && <sup>{v.n}</sup>}
-                <Greek text={v.grc} />{' '}
+                <Greek text={v.grc} specs={clave?.grc} />{' '}
               </span>
             ))}
           </p>
@@ -95,7 +130,7 @@ function Passage({ r }) {
           {ntv.map(v => (
             <span key={v.n}>
               {ntv.length > 1 && <sup>{v.n}</sup>}
-              {v.text}{' '}
+              <Spanish text={v.text} specs={clave?.es} />{' '}
             </span>
           ))}
         </p>
@@ -143,7 +178,7 @@ function Question({ p }) {
       </div>
 
       {p.refs.map(r => (
-        <Passage key={r.label} r={r} />
+        <Passage key={r.label} r={r} clave={claves[String(p.n)]?.find(c => c.ref === r.label)} />
       ))}
 
       <p className="scj-think">¿Qué responderías tú, con el texto delante?</p>
@@ -177,14 +212,41 @@ function Question({ p }) {
 export default function Shincheonji() {
   const site = useSite();
   useSeo(shincheonjiSeo(site.marca.nombre));
+  const [params, setParams] = useSearchParams();
+  const vista = params.get('vista') === 'doctrina' ? 'doctrina' : 'preguntas';
 
-  // Al entrar con #p-12 o #bloque-III, ir a esa pregunta cuando ya está pintada.
+  const setVista = next => {
+    const q = new URLSearchParams(params);
+    if (next === 'doctrina') q.set('vista', 'doctrina');
+    else q.delete('vista');
+    setParams(q);
+    const tabs = document.getElementById('scj-tabs');
+    if (tabs && tabs.getBoundingClientRect().top < 0) tabs.scrollIntoView({ block: 'start' });
+  };
+
+  // Al entrar con #p-12, #bloque-III o #parte-II, ir allí cuando ya está pintado
+  // (y abrir la pestaña que lo contiene).
   useEffect(() => {
     const id = window.location.hash.slice(1);
     if (!id) return;
+    const enDoctrina = /^(parte-|preguntas-lee)/.test(id);
+    if (enDoctrina !== (vista === 'doctrina')) {
+      setVista(enDoctrina ? 'doctrina' : 'preguntas');
+    }
     const el = document.getElementById(id);
-    if (el) window.setTimeout(() => el.scrollIntoView({ block: 'start' }), 60);
+    if (el) window.setTimeout(() => el.scrollIntoView({ block: 'start' }), 80);
+    // Solo al entrar en la página.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const keyNav = e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      const next = vista === 'preguntas' ? 'doctrina' : 'preguntas';
+      setVista(next);
+      document.getElementById(`scj-tab-${next}`)?.focus();
+    }
+  };
 
   return (
     <main id="main" className="scj-page">
@@ -335,6 +397,32 @@ export default function Shincheonji() {
           </section>
         </div>
 
+        <div className="scj-tabs" id="scj-tabs" role="tablist" aria-label="Secciones de la página">
+          {[
+            ['preguntas', '100 preguntas'],
+            ['doctrina', '¿Qué cree Shincheonji?']
+          ].map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              role="tab"
+              id={`scj-tab-${id}`}
+              aria-selected={vista === id}
+              aria-controls={`scj-panel-${id}`}
+              tabIndex={vista === id ? 0 : -1}
+              onClick={() => setVista(id)}
+              onKeyDown={keyNav}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        <div role="tabpanel" id="scj-panel-doctrina" aria-labelledby="scj-tab-doctrina" hidden={vista !== 'doctrina'}>
+          <ShincheonjiDoctrina />
+        </div>
+
+        <div role="tabpanel" id="scj-panel-preguntas" aria-labelledby="scj-tab-preguntas" hidden={vista !== 'preguntas'}>
         <div className="scj-layout">
           <nav className="scj-side" aria-label="Temas de las preguntas">
             <ul>
@@ -367,39 +455,49 @@ export default function Shincheonji() {
                 ))}
               </section>
             ))}
-
-            <footer className="scj-credits" id="fuentes">
-              <h2>Fuentes</h2>
-              <p>
-                <strong>Codex Sinaiticus:</strong> transcripción del{' '}
-                <a href="https://www.codexsinaiticus.org/" target="_blank" rel="noopener noreferrer">
-                  Codex Sinaiticus Project
-                </a>
-                , propiedad de la British Library, la Universidad de Leipzig, el Monasterio de Santa Catalina (Sinaí) y
-                la Biblioteca Nacional de Rusia. Uso personal, educativo y no comercial, con atribución.
-              </p>
-              <p className="scj-license">{WITNESS_ATTRIBUTION}</p>
-              <p>
-                <strong>Datos del recuadro «¿Qué es el Codex Sinaiticus?»:</strong> Codex Sinaiticus Project,{' '}
-                <a
-                  href="https://www.codexsinaiticus.org/en/codex/default.aspx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  «About Codex Sinaiticus»
-                </a>{' '}
-                (consultado el 13 de noviembre de 2026).
-              </p>
-              <p>
-                <strong>NTV:</strong> Nueva Traducción Viviente. Las preguntas y las respuestas son de Crux
-                {data.fuente?.actualizado ? ` (revisadas el ${data.fuente.actualizado})` : ''}.
-              </p>
-              <p>
-                <a href="#main">Volver arriba</a>
-              </p>
-            </footer>
           </div>
         </div>
+        </div>
+
+        <footer className="scj-credits" id="fuentes">
+          <h2>Fuentes</h2>
+          <p>
+            <strong>Codex Sinaiticus:</strong> transcripción del{' '}
+            <a href="https://www.codexsinaiticus.org/" target="_blank" rel="noopener noreferrer">
+              Codex Sinaiticus Project
+            </a>
+            , propiedad de la British Library, la Universidad de Leipzig, el Monasterio de Santa Catalina (Sinaí) y
+            la Biblioteca Nacional de Rusia. Uso personal, educativo y no comercial, con atribución.
+          </p>
+          <p className="scj-license">{WITNESS_ATTRIBUTION}</p>
+          <p>
+            <strong>Datos del recuadro «¿Qué es el Codex Sinaiticus?»:</strong> Codex Sinaiticus Project,{' '}
+            <a
+              href="https://www.codexsinaiticus.org/en/codex/default.aspx"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              «About Codex Sinaiticus»
+            </a>{' '}
+            (consultado el 13 de noviembre de 2026).
+          </p>
+          <p>
+            <strong>Lee Man-hee:</strong> <em>The Creation of Heaven and Earth</em>, Shincheonji Press, 2.ª edición
+            inglesa, 2014 (edición coreana 2007). Se citan fragmentos breves, con su página, para comentarlos; el inglés
+            es literal y el español es traducción de Crux.
+          </p>
+          <p>
+            <strong>Credos y confesiones:</strong> Credo de los Apóstoles, Credo Niceno-Constantinopolitano (381),
+            Definición de Calcedonia (451), Catecismo de Heidelberg (1563) y Confesión de Fe de Westminster (1646).
+          </p>
+          <p>
+            <strong>NTV:</strong> Nueva Traducción Viviente. Las preguntas y las respuestas son de Crux
+            {data.fuente?.actualizado ? ` (revisadas el ${data.fuente.actualizado})` : ''}.
+          </p>
+          <p>
+            <a href="#main">Volver arriba</a>
+          </p>
+        </footer>
       </div>
     </main>
   );

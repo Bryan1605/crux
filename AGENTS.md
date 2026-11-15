@@ -36,7 +36,8 @@ npm run dev        # http://localhost:5173/  (panel /admin solo en dev)
 | `npm run qa:libros` | QA de las fichas de libros: validador, registro de fuentes, rutas, páginas y panel en los lectores. Va dentro de `npm run qa`. |
 | `npm run qa:admin` | Editor visual de `/admin`: los estudios pasan por el editor sin cambiar su HTML y prueba de uso (no guarda). Va dentro de `npm run qa`. |
 | `npm run qa:shincheonji` | Página `/apologetica/shincheonji`: datos, texto copiado igual a NTV/Codex, griego, avisos del AT y navegación. Va dentro de `npm run qa`. |
-| `node scripts/import-shincheonji.mjs [--write]` | Importa las 100 preguntas desde el wiki a `content/apologetica/shincheonji-preguntas.json` (simula sin `--write`). |
+| `node scripts/import-shincheonji.mjs [--write]` | Importa las 100 preguntas desde el wiki a `content/apologetica/shincheonji-preguntas.json` (simula sin `--write`). Las palabras clave resaltadas van a mano en `shincheonji-claves.json` y el build comprueba que están en su versículo. |
+| `npm run check:lee` | Comprueba las citas en inglés de `content/apologetica/shincheonji-doctrina.json` («¿Qué cree Shincheonji?») contra el libro de Lee (copia privada del usuario en `D:\Biblia\…`; si no está, solo revisa que no haya datos de la marca de agua). Ejecútalo al tocar esas citas. |
 | `npm run qa:trad` | QA de la traducción (datos + navegador); necesita el dev server. Va dentro de `npm run qa`. |
 | `node scripts/optimize-images.mjs` | Pasa las fuentes de `src/assets/imgs/` a `.webp` en `public/img/`. |
 | `node scripts/build-audio-peaks.mjs` | Recalcula las ondas de `content/narraciones.json` (usa Chrome). |

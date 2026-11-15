@@ -9,6 +9,7 @@ import prerender from './plugins/prerender.mjs';
 import { writeIndexes } from './scripts/content-lib.mjs';
 import { OG_IMAGE, siteRoutes } from './scripts/routes-lib.mjs';
 import { validate } from './scripts/validate-content.mjs';
+import { checkClaves } from './src/lib/claves.js';
 import { checkTimelineLabels } from './src/lib/timeline.js';
 import { BOOK_BY_ID } from './src/data/exegesis.js';
 
@@ -182,12 +183,20 @@ function contentGuard() {
       if (fs.existsSync(scjFile)) {
         try {
           const registro = JSON.parse(fs.readFileSync(path.join(CONTENT, 'libros', 'fuentes.json'), 'utf8'));
-          validate('shincheonji', JSON.parse(fs.readFileSync(scjFile, 'utf8')), undefined, {
+          const scj = JSON.parse(fs.readFileSync(scjFile, 'utf8'));
+          validate('shincheonji', scj, undefined, {
             books: BOOK_BY_ID,
             fuentes: new Set(Object.keys(registro.fuentes))
           });
+          // Palabras clave: cada frase debe estar en su versículo (NTV y Codex).
+          const clavesFile = path.join(CONTENT, 'apologetica', 'shincheonji-claves.json');
+          const claves = JSON.parse(fs.readFileSync(clavesFile, 'utf8')).claves;
+          const problemas = checkClaves(scj.bloques.flatMap(b => b.preguntas), claves);
+          if (problemas.length) throw new Error(`claves: ${problemas.slice(0, 5).join(' | ')}`);
+          const doctrinaFile = path.join(CONTENT, 'apologetica', 'shincheonji-doctrina.json');
+          if (fs.existsSync(doctrinaFile)) validate('shincheonji-doctrina', JSON.parse(fs.readFileSync(doctrinaFile, 'utf8')));
         } catch (e) {
-          errors.push(`content/apologetica/shincheonji-preguntas.json → ${e.message}`);
+          errors.push(`content/apologetica/shincheonji-* → ${e.message}`);
         }
       }
 

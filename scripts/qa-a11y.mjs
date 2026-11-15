@@ -65,6 +65,8 @@ const ROUTES = [
   { label: 'temas', path: '/temas' },
   { label: 'apologética (Shincheonji)', path: '/apologetica/shincheonji' },
   { label: 'apologética (Shincheonji, móvil)', path: '/apologetica/shincheonji', mobile: true },
+  { label: 'apologética (¿Qué cree Shincheonji?)', path: '/apologetica/shincheonji?vista=doctrina' },
+  { label: 'apologética (¿Qué cree Shincheonji?, móvil)', path: '/apologetica/shincheonji?vista=doctrina', mobile: true },
   { label: 'buscar (vacío)', path: '/buscar' },
   { label: 'buscar (resultados)', path: '/buscar?q=nicea' },
   { label: '404', path: '/ruta-no-existe' }

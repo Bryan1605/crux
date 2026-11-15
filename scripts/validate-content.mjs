@@ -532,6 +532,39 @@ export function validateShincheonji(obj, _slug, ctx = {}) {
   return true;
 }
 
+/**
+ * content/apologetica/shincheonji-doctrina.json: «¿Qué cree Shincheonji?».
+ * Cada cita de Lee lleva el inglés del libro, su traducción y las páginas; nunca
+ * datos de la marca de agua del escaneo (teléfono, correo, texto coreano).
+ */
+export function validateShincheonjiDoctrina(obj) {
+  const label = 'apologetica/shincheonji-doctrina';
+  const partes = required(obj, 'partes', 'array', label);
+  required(obj, 'libro', 'object', label);
+  const privado = /\d{3}-\d{3,4}-\d{4}|@|[가-힯]/;
+  if (!partes.length) throw new Error(`${label}: sin partes`);
+  for (const p of partes) {
+    const at = `${label}.parte ${p.id || '?'}`;
+    for (const k of ['id', 'titulo']) required(p, k, 'string', at);
+    for (const c of required(p, 'lee', 'array', at)) {
+      for (const k of ['en', 'es']) {
+        const v = required(c, k, 'string', at).trim();
+        if (!v) throw new Error(`${at}: cita con "${k}" vacío`);
+        if (privado.test(v)) throw new Error(`${at}: la cita lleva datos de la marca de agua`);
+      }
+      const pags = required(c, 'paginas', 'array', at);
+      if (!pags.length || !pags.every(n => Number.isInteger(n) && n > 0)) throw new Error(`${at}: "paginas" debe tener números de página`);
+      if (c.en.split('…').length !== c.es.split('…').length) throw new Error(`${at}, p. ${pags}: el inglés y el español deben tener los mismos tramos («…»)`);
+    }
+    required(p, 'confiesa', 'object', at);
+    required(p, 'biblia', 'object', at);
+  }
+  for (const q of optional(obj, 'preguntas', 'array', label, [])) {
+    if (!Number.isInteger(q.pagina) || !isString(q.texto) || !isString(q.ref)) throw new Error(`${label}: pregunta mal formada`);
+  }
+  return true;
+}
+
 // --- mapa para content-api ---
 export const VALIDATORS = {
   site: validateSite,
@@ -549,7 +582,8 @@ export const VALIDATORS = {
   lexico: validateLexico,
   fuentes: validateFuentes,
   libro: validateLibro,
-  shincheonji: validateShincheonji
+  shincheonji: validateShincheonji,
+  'shincheonji-doctrina': validateShincheonjiDoctrina
 };
 
 export function validate(name, data, slug, ctx) {

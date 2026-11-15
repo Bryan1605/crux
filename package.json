@@ -32,6 +32,7 @@
     "qa:libros": "node scripts/qa-libros.mjs --browser",
     "qa:admin": "node scripts/qa-admin.mjs",
     "qa:shincheonji": "node scripts/qa-shincheonji.mjs",
+    "check:lee": "node scripts/check-shincheonji-lee.mjs",
     "qa:lexico": "node scripts/qa-lexico.mjs",
     "qa:audio": "node scripts/qa-audio.mjs --browser",
     "qa": "npm run check:search && npm run qa:timeline && npm run qa:concilios && npm run qa:buscar && npm run qa:vistas && npm run qa:biblia && npm run qa:exegesis && npm run qa:trad && npm run qa:libros && npm run qa:admin && npm run qa:shincheonji && npm run qa:lexico && npm run qa:audio && npm run qa:imagenes && npm run qa:enlaces && npm run qa:a11y"

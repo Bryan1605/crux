@@ -1,0 +1,379 @@
+{
+  "version": 1,
+  "fuente": {
+    "archivo": "wiki/06-apologetica/shincheonji/teologia-scj-vs-ortodoxia-y-reforma.md",
+    "actualizado": "2026-11-14",
+    "nota": "Las citas en inglés son literales del libro (texto del escaneo de Internet Archive, sin el ruido del OCR ni la marca de agua). El español es una traducción de Crux hecha sobre ese inglés. `node scripts/check-shincheonji-lee.mjs` comprueba cada cita contra el texto del libro."
+  },
+  "libro": {
+    "autor": "Lee Man-hee",
+    "titulo": "The Creation of Heaven and Earth",
+    "edicion": "2.ª edición inglesa, Shincheonji Press, 2014; edición coreana de 2007",
+    "archivo": "Internet Archive: book-the-creation-of-heaven-earth-readable"
+  },
+  "equidad": "Lee también afirma verdades cristianas: el nacimiento virginal, la cruz como expiación y la resurrección de Jesús al tercer día (pp. 74-77, 482). El problema no es que lo niegue todo, sino lo que añade y lo que redefine: quién es Jesús, quién es el Espíritu y qué hace falta para ser salvo.",
+  "partes": [
+    {
+      "id": "I",
+      "titulo": "Dios y la Trinidad",
+      "lee": [
+        {
+          "paginas": [25, 27],
+          "en": "God is spirit, not flesh. … The name of the only God is Jehovah.",
+          "es": "Dios es espíritu, no carne. … El nombre del único Dios es Jehová."
+        },
+        {
+          "paginas": [436],
+          "en": "God, who promised to come to the earth in the Old Testament (Is 19:1, 20; Hos 2), came as he promised to his one chosen pastor—Jesus.",
+          "es": "Dios, que prometió venir a la tierra en el Antiguo Testamento (Is 19:1, 20; Os 2), vino como lo prometió a su único pastor escogido: Jesús."
+        },
+        {
+          "paginas": [436],
+          "en": "As the one who was chosen by God, Jesus served the spirit of God, and spoke God's words on his behalf (Jn 14:8-10, 12:44-45, 14:24).",
+          "es": "Como el que fue escogido por Dios, Jesús servía al espíritu de Dios y hablaba las palabras de Dios de su parte (Jn 14:8-10; 12:44-45; 14:24)."
+        },
+        {
+          "paginas": [543],
+          "en": "When Jesus said, “I and the Father are one,” in Jn 10:30, he was referring to the fact that the spirit of God was in his physical body (Jn 14:10).",
+          "es": "Cuando Jesús dijo «Yo y el Padre somos uno», en Jn 10:30, se refería al hecho de que el espíritu de Dios estaba en su cuerpo físico (Jn 14:10)."
+        },
+        {
+          "paginas": [544],
+          "en": "After Jesus ascended to heaven, however, God and Jesus were separated as two beings in the spiritual world.",
+          "es": "Sin embargo, después de que Jesús ascendió al cielo, Dios y Jesús se separaron como dos seres en el mundo espiritual."
+        },
+        {
+          "paginas": [31],
+          "en": "Thus, when the angel that sinned appeared, the spiritual world was divided in two—into the world of the holy spirits and the world of the evil spirits.",
+          "es": "Así, cuando apareció el ángel que pecó, el mundo espiritual se dividió en dos: el mundo de los espíritus santos y el mundo de los espíritus malos."
+        },
+        {
+          "paginas": [441],
+          "en": "Since the holy spirit is indeed a spirit, he speaks and works through a person just as a person blows a trumpet.",
+          "es": "Como el espíritu santo es en verdad un espíritu, habla y obra por medio de una persona, así como una persona toca una trompeta.",
+          "nota": "En la nota 5 del libro: la palabra coreana para «espíritu» es shin, que significa «dios, ser divino o espíritu»."
+        }
+      ],
+      "leeNota": "En el libro no aparecen ni la palabra «Trinity» ni la doctrina de la Trinidad: cero resultados en todo el texto.",
+      "significa": {
+        "texto": "El esquema de Lee es: un Dios-espíritu que «viene» a habitar en un hombre escogido. Primero en Jesús, y hoy, por medio del «espíritu del abogado», en el pastor prometido. Se parece mucho a ideas que la iglesia ya rechazó:",
+        "puntos": [
+          "Adopcionismo o monarquianismo dinámico (Pablo de Samosata, s. III): Jesús es un hombre en quien habitó el poder de Dios.",
+          "Separación de «dos seres» después de la ascensión: niega que el Hijo sea eternamente uno con el Padre en la misma esencia.",
+          "El Espíritu Santo como «un espíritu» entre muchos, comparable a los ángeles: niega que el Espíritu sea Dios."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Niceno-Constantinopolitano: Jesucristo es «Dios de Dios, Luz de Luz, Dios verdadero de Dios verdadero, engendrado, no creado, de la misma naturaleza que el Padre»; el Espíritu Santo es «Señor y dador de vida… que con el Padre y el Hijo recibe una misma adoración y gloria»."
+        ],
+        "reforma": [
+          "Westminster II.3: «En la unidad de la Divinidad hay tres personas de una misma sustancia, poder y eternidad: Dios el Padre, Dios el Hijo y Dios el Espíritu Santo».",
+          "Heidelberg, preg. 25: hay un solo Dios porque así se ha revelado: «estas tres personas distintas son el único, verdadero y eterno Dios»."
+        ]
+      },
+      "biblia": {
+        "cita": { "ref": "Juan 1:1", "texto": "En el principio la Palabra ya existía. La Palabra estaba con Dios, y la Palabra era Dios." },
+        "puntos": [
+          { "ref": "Mt 28:19", "refs": ["Mateo 28:19"], "texto": "un solo nombre para el Padre, el Hijo y el Espíritu Santo." },
+          { "ref": "Jn 1:1, 14", "refs": ["Juan 1:1", "Juan 1:14"], "texto": "la Palabra era Dios y se hizo hombre. No «vino a habitar» en un hombre ya existente." },
+          { "ref": "Jn 17:5", "refs": ["Juan 17:5"], "texto": "el Hijo compartía la gloria del Padre antes de que existiera el mundo: no es un pastor escogido en el tiempo." },
+          { "ref": "Hch 5:3-4", "refs": ["Hechos 5:3-4"], "texto": "mentir al Espíritu Santo es mentir a Dios." },
+          { "ref": "2 Co 13:14", "refs": ["2 Corintios 13:14"], "texto": "bendición con el Señor Jesucristo, Dios y el Espíritu Santo." }
+        ]
+      }
+    },
+    {
+      "id": "II",
+      "titulo": "Cristo",
+      "lee": [
+        {
+          "paginas": [74],
+          "en": "Jesus, however, was conceived by the spirit in the body of a virgin. … For this reason, Jesus is the son of God and not the son of an ordinary man; he was born of God's seed.",
+          "es": "Jesús, sin embargo, fue concebido por el espíritu en el cuerpo de una virgen. … Por eso Jesús es el hijo de Dios y no el hijo de un hombre común; nació de la semilla de Dios."
+        },
+        {
+          "paginas": [85],
+          "en": "God has chosen a single pastor in every generation of the last 6,000 years of biblical history, from the time of Adam until today.",
+          "es": "Dios ha escogido a un solo pastor en cada generación de los últimos 6.000 años de historia bíblica, desde el tiempo de Adán hasta hoy."
+        },
+        {
+          "paginas": [81],
+          "en": "God was with Jacob because he overcame. God was with Jesus because he overcame. In the same way, God will be with the one who overcomes, who is promised in Revelation.",
+          "es": "Dios estuvo con Jacob porque venció. Dios estuvo con Jesús porque venció. Del mismo modo, Dios estará con el que vence, el prometido en Apocalipsis."
+        },
+        {
+          "paginas": [80],
+          "en": "He will also sit with Jesus on his throne.",
+          "es": "También se sentará con Jesús en su trono.",
+          "nota": "«Él» es «el que vence»."
+        },
+        {
+          "paginas": [544],
+          "en": "Through whom does Jesus fulfill these prophecies? The prophecies will be fulfilled through the one who overcomes (Rv 2-3, 12, 15, 21:6-7) promised by Jesus.",
+          "es": "¿Por medio de quién cumple Jesús estas profecías? Las profecías se cumplirán por medio del que vence (Ap 2-3; 12; 15; 21:6-7), prometido por Jesús."
+        },
+        {
+          "paginas": [436],
+          "en": "The first advocate is Jesus (1 Jn 2:1), and because Jesus said he would send another advocate (Jn 14:16-17, 26), the other advocate must not be Jesus.",
+          "es": "El primer abogado es Jesús (1 Jn 2:1), y como Jesús dijo que enviaría otro abogado (Jn 14:16-17, 26), el otro abogado no puede ser Jesús."
+        },
+        {
+          "paginas": [427],
+          "en": "This means that the holy spirit who acts as the spiritual advocate is inside the chosen pastor who is the physical advocate (Jn 14:16-17).",
+          "es": "Esto significa que el espíritu santo, que actúa como abogado espiritual, está dentro del pastor escogido, que es el abogado físico (Jn 14:16-17)."
+        }
+      ],
+      "significa": {
+        "texto": "Para Lee, Jesús es el sexto de una serie de pastores escogidos, ungido porque «venció», y su obra se completa por medio de un sucesor. Su segunda venida no es personal y visible: es su espíritu obrando en el pastor prometido.",
+        "puntos": []
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Calcedonia (451): «un solo y mismo Cristo… perfecto en divinidad y perfecto en humanidad, verdadero Dios y verdadero hombre… en dos naturalezas, sin confusión, sin cambio, sin división, sin separación».",
+          "Credo de los Apóstoles: «desde allí vendrá a juzgar a los vivos y a los muertos»."
+        ],
+        "reforma": [
+          "Westminster VIII.2: «El Hijo de Dios, la segunda persona de la Trinidad, siendo verdadero y eterno Dios… tomó sobre sí la naturaleza humana».",
+          "Heidelberg, preg. 17-18: el mediador debe ser verdadero hombre y verdadero Dios."
+        ]
+      },
+      "biblia": {
+        "cita": { "ref": "Colosenses 2:9", "texto": "Pues en Cristo habita toda la plenitud de Dios en un cuerpo humano." },
+        "puntos": [
+          { "ref": "Jn 8:58", "refs": ["Juan 8:58"], "texto": "«antes de que Abraham naciera, Yo Soy».", "cita": ["antes de que Abraham naciera, Yo Soy"] },
+          { "ref": "Fil 2:6-7", "refs": ["Filipenses 2:6-7"], "texto": "«Aunque era Dios»: el Hijo es Dios antes de hacerse hombre.", "cita": ["Aunque era Dios"] },
+          { "ref": "Heb 1:3, 8", "refs": ["Hebreos 1:3", "Hebreos 1:8"], "texto": "el Hijo expresa el carácter mismo de Dios, y el Padre lo llama «oh Dios».", "cita": ["oh Dios"] },
+          { "ref": "Heb 7:24-25", "refs": ["Hebreos 7:24-25"], "texto": "su sacerdocio «dura para siempre»: no pasa a otro.", "cita": ["dura para siempre"] },
+          { "ref": "Hch 1:11", "refs": ["Hechos 1:11"], "texto": "volverá «de la misma manera» en que se fue: visible y en cuerpo.", "cita": ["de la misma manera"] },
+          { "ref": "Ap 3:21", "refs": ["Apocalipsis 3:21"], "texto": "la promesa del trono es para «todos los que salgan vencedores», no para uno.", "cita": ["Todos los que salgan vencedores"] }
+        ]
+      }
+    },
+    {
+      "id": "III",
+      "titulo": "El Espíritu Santo",
+      "lee": [
+        {
+          "paginas": [437],
+          "en": "The spirit of the advocate that Jesus sends to this earth chooses a pastor through whom to work.",
+          "es": "El espíritu del abogado que Jesús envía a esta tierra escoge un pastor por medio del cual obrar."
+        },
+        {
+          "paginas": [440],
+          "en": "Just as God, who is also a spirit, worked through Jesus' flesh, the spirit of the truth, who acts as our advocate, dwells within and speaks through the promised pastor (Jn 14:16-17; Rv 19:9-10, 22:8-9, 16).",
+          "es": "Así como Dios, que también es espíritu, obró por medio de la carne de Jesús, el espíritu de la verdad, que actúa como nuestro abogado, mora dentro del pastor prometido y habla por medio de él (Jn 14:16-17; Ap 19:9-10; 22:8-9, 16)."
+        },
+        {
+          "paginas": [441],
+          "en": "Just as Jesus and God are one (Jn 10:30), the pastor to whom the spirit of the advocate comes unites with that spirit.",
+          "es": "Así como Jesús y Dios son uno (Jn 10:30), el pastor al que viene el espíritu del abogado se une con ese espíritu."
+        },
+        {
+          "paginas": [544],
+          "en": "Therefore, the words of the one who overcomes are the words of the holy spirit within him; listening to the words of the one who overcomes is listening to the words of and being taught by the holy spirit within him.",
+          "es": "Por lo tanto, las palabras del que vence son las palabras del espíritu santo que está en él; escuchar las palabras del que vence es escuchar las palabras del espíritu santo que está en él y ser enseñado por él."
+        },
+        {
+          "paginas": [442],
+          "en": "Today, which is the time of the second coming, nothing is more important for Christians than finding the pastor who acts as the advocate because he speaks on behalf of the spirit of truth.",
+          "es": "Hoy, que es el tiempo de la segunda venida, nada es más importante para los cristianos que encontrar al pastor que actúa como el abogado, porque habla en nombre del espíritu de verdad."
+        }
+      ],
+      "significa": {
+        "texto": "Es el punto más grave. El libro aplica la promesa del Consolador a un solo hombre, el pastor prometido. Si sus palabras son las del Espíritu, no se le puede contradecir sin contradecir a Dios.",
+        "puntos": []
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Niceno-Constantinopolitano: el Espíritu es «Señor y dador de vida», adorado con el Padre y el Hijo. No es una fuerza ni un espíritu creado."
+        ],
+        "reforma": [
+          "Westminster XX.2 y I.6: solo Dios es Señor de la conciencia, y a la Escritura no se le añade nada «por nuevas revelaciones del Espíritu»."
+        ]
+      },
+      "biblia": {
+        "puntos": [
+          { "ref": "Jn 14:16-17", "refs": ["Juan 14:16-17"], "texto": "el Abogado Defensor está «con ustedes», los discípulos, «para siempre». No es para un solo hombre del siglo XX.", "cita": ["con ustedes para siempre"] },
+          { "ref": "Hch 2:17", "refs": ["Hechos 2:17"], "texto": "Dios derrama su Espíritu sobre toda la gente.", "cita": ["sobre toda la gente"] },
+          { "ref": "1 Jn 2:27", "refs": ["1 Juan 2:27"], "texto": "«no necesitan que nadie les enseñe lo que es la verdad».", "cita": ["no necesitan que nadie les enseñe lo que es la verdad"] },
+          { "ref": "Ro 8:9", "refs": ["Romanos 8:9"], "texto": "todo el que es de Cristo tiene su Espíritu." },
+          { "ref": "Ef 1:13", "refs": ["Efesios 1:13"], "texto": "los creyentes recibieron el Espíritu «cuando creyeron en Cristo».", "cita": ["cuando creyeron en Cristo"] }
+        ]
+      }
+    },
+    {
+      "id": "IV",
+      "titulo": "La salvación",
+      "lee": [
+        {
+          "paginas": [482],
+          "en": "Only the cross and Jesus' blood can resolve sin, and only those who believe in the cross can be atoned.",
+          "es": "Solo la cruz y la sangre de Jesús pueden resolver el pecado, y solo los que creen en la cruz pueden ser expiados."
+        },
+        {
+          "paginas": [160],
+          "en": "Many people think they are saved just by believing in Jesus. Salvation, however, does not come just by calling on the name of the Lord. Salvation is given only to those who act according to God's will (Mt 7:21).",
+          "es": "Mucha gente piensa que se salva solo por creer en Jesús. Sin embargo, la salvación no viene solo por invocar el nombre del Señor. La salvación se da únicamente a los que actúan según la voluntad de Dios (Mt 7:21)."
+        },
+        {
+          "paginas": [160],
+          "en": "Ultimately, people who fail to follow the one promised pastor sent by Jesus do not really believe in Jesus (Jn 13:20). They claim to be believers, but the God they believe in is a figment of their own imaginations.",
+          "es": "En definitiva, quienes no siguen al único pastor prometido enviado por Jesús en realidad no creen en Jesús (Jn 13:20). Dicen ser creyentes, pero el Dios en el que creen es un producto de su propia imaginación."
+        },
+        {
+          "paginas": [81],
+          "en": "At the end of the age, believers must find the promised pastor, the one who overcomes, in order to attain eternal life and enter the kingdom of heaven.",
+          "es": "Al final de la era, los creyentes deben encontrar al pastor prometido, el que vence, para alcanzar la vida eterna y entrar en el reino de los cielos."
+        },
+        {
+          "paginas": [155],
+          "en": "At this time of judgment, only those who are born again of the water and the spirit inside the holy city are saved.",
+          "es": "En este tiempo de juicio, solo se salvan los que han nacido de nuevo del agua y del espíritu dentro de la ciudad santa."
+        },
+        {
+          "paginas": [512],
+          "en": "Christians must believe that Jesus' promised return occurs according to this logic of betrayal, destruction, and salvation before they can receive that salvation by finding the place where Jesus' promises have been fulfilled.",
+          "es": "Los cristianos deben creer que el regreso prometido de Jesús ocurre según esta lógica de traición, destrucción y salvación antes de poder recibir esa salvación, encontrando el lugar donde se han cumplido las promesas de Jesús."
+        },
+        {
+          "paginas": [485, 486],
+          "en": "God's family in the physical world is comprised of the 144,000 people of the twelve tribes of Shincheonji, who are sealed by God's seal, and the multitude who come out of the great tribulation … Their dwelling place is Shincheonji, which is the paradise of heaven where they will live together forever.",
+          "es": "La familia de Dios en el mundo físico la forman los 144.000 de las doce tribus de Shincheonji, sellados con el sello de Dios, y la multitud que sale de la gran tribulación … Su morada es Shincheonji, que es el paraíso del cielo, donde vivirán juntos para siempre."
+        }
+      ],
+      "significa": {
+        "texto": "Lee afirma la cruz, pero luego añade condiciones: seguir al pastor prometido, pertenecer a las doce tribus, entender la «traición, destrucción y salvación» y estar dentro de la «ciudad santa». Es la misma estructura que Pablo combate en Gálatas: Cristo más algo.",
+        "puntos": []
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Niceno-Constantinopolitano: «confesamos un solo bautismo para el perdón de los pecados».",
+          "Credo de los Apóstoles: «creo… en el perdón de los pecados»."
+        ],
+        "reforma": [
+          "Solus Christus, sola gratia, sola fide.",
+          "Westminster XI.1: Dios justifica «imputándoles la obediencia y la satisfacción de Cristo, recibiéndolo a él y su justicia por la fe».",
+          "Heidelberg, preg. 60: soy justo ante Dios «solo por una fe verdadera en Jesucristo… sin ningún mérito mío»."
+        ]
+      },
+      "biblia": {
+        "cita": { "ref": "Efesios 2:8", "texto": "Dios los salvó por su gracia cuando creyeron. Ustedes no tienen ningún mérito en eso; es un regalo de Dios." },
+        "puntos": [
+          { "ref": "Hch 16:31", "refs": ["Hechos 16:31"], "texto": "«Cree en el Señor Jesús y serás salvo».", "cita": ["Cree en el Señor Jesús y serás salvo"] },
+          { "ref": "Jn 6:29", "refs": ["Juan 6:29"], "texto": "la obra que Dios quiere es creer en el enviado, que es Jesús." },
+          { "ref": "Lc 23:43", "refs": ["Lucas 23:43"], "texto": "el ladrón de la cruz, sin curso ni sello: «hoy estarás conmigo en el paraíso».", "cita": ["hoy estarás conmigo en el paraíso"] },
+          { "ref": "Gl 1:6-9; 3:1-3", "refs": ["Gálatas 1:6-9", "Gálatas 3:1-3"], "texto": "añadir condiciones al evangelio es otro evangelio." },
+          { "ref": "Ro 10:13", "refs": ["Romanos 10:13"], "texto": "«todo el que invoque el nombre del SEÑOR será salvo». En la p. 160 Lee dice que invocarlo no basta.", "cita": ["todo el que invoque el nombre del SEÑOR será salvo"] }
+        ]
+      }
+    },
+    {
+      "id": "V",
+      "titulo": "La revelación y la Escritura",
+      "lee": [
+        {
+          "paginas": [83],
+          "en": "Only the one who comes in the position of Apostle John knows the true identity of these seven stars (angels), the real location of the church of the seven golden lampstands, and the true identity of the Nicolaitans. He knows the secrets of the seven stars and the church of the seven golden lampstands and the truth about the Nicolaitans because Jesus has shown and explained everything to him alone.",
+          "es": "Solo el que viene en la posición del apóstol Juan conoce la verdadera identidad de estas siete estrellas (ángeles), la ubicación real de la iglesia de los siete candelabros de oro y la verdadera identidad de los nicolaítas. Conoce los secretos de las siete estrellas y de la iglesia de los siete candelabros de oro y la verdad sobre los nicolaítas porque Jesús se lo ha mostrado y explicado todo solo a él."
+        },
+        {
+          "paginas": [224],
+          "en": "It is only taught at Mt. Zion because the one person who witnessed the fulfillment of the New Testament prophecies (including Revelation) is at Mt. Zion.",
+          "es": "Solo se enseña en el monte Sion, porque la única persona que presenció el cumplimiento de las profecías del Nuevo Testamento (incluido Apocalipsis) está en el monte Sion.",
+          "nota": "Lo que «solo se enseña» es el «nuevo cántico» de Ap 14."
+        },
+        {
+          "paginas": [219],
+          "en": "The events in this chapter occur in a single place called the tabernacle of heaven. They do not take place all over the world.",
+          "es": "Los acontecimientos de este capítulo ocurren en un único lugar llamado el tabernáculo del cielo. No ocurren en todo el mundo.",
+          "nota": "El capítulo es Apocalipsis 13."
+        }
+      ],
+      "significa": {
+        "texto": "Si solo un hombre conoce el sentido de la Escritura, la Biblia deja de ser la autoridad: lo es su intérprete.",
+        "puntos": []
+      },
+      "confiesa": {
+        "ortodoxia": [],
+        "reforma": [
+          "Sola Scriptura. Westminster I.6: todo lo necesario para la salvación está en la Escritura, «a la cual nada se ha de añadir en ningún tiempo, ni por nuevas revelaciones del Espíritu, ni por tradiciones de los hombres»."
+        ]
+      },
+      "biblia": {
+        "puntos": [
+          { "ref": "Heb 1:1-2", "refs": ["Hebreos 1:1-2"], "texto": "Dios habló «en estos últimos días» por medio del Hijo.", "cita": ["en estos últimos días"] },
+          { "ref": "Jud 3", "refs": ["Judas 1:3"], "texto": "la fe fue confiada «una vez y para siempre».", "cita": ["una vez y para siempre"] },
+          { "ref": "2 P 1:20", "refs": ["2 Pedro 1:20"], "texto": "ninguna profecía surgió de la comprensión personal." },
+          { "ref": "Ap 1:3; 22:10", "refs": ["Apocalipsis 1:3", "Apocalipsis 22:10"], "texto": "el libro se entregó abierto a las iglesias: «No selles las palabras proféticas de este libro».", "cita": ["No selles las palabras proféticas de este libro"] }
+        ]
+      }
+    },
+    {
+      "id": "VI",
+      "titulo": "La iglesia y las últimas cosas",
+      "lee": [
+        {
+          "paginas": [85],
+          "en": "That place is Mt. Zion (Rv 14)—the new heaven and new earth, which is Shincheonji (Rv 21).",
+          "es": "Ese lugar es el monte Sion (Ap 14): el nuevo cielo y la nueva tierra, que es Shincheonji (Ap 21)."
+        },
+        {
+          "paginas": [210],
+          "en": "Their dead physical bodies do not come to life again because no one can inherit God's kingdom through physical flesh and blood alone.",
+          "es": "Sus cuerpos físicos muertos no vuelven a la vida, porque nadie puede heredar el reino de Dios solo por medio de carne y sangre físicas."
+        },
+        {
+          "paginas": [210],
+          "en": "The heavenly souls of the dead resurrect and are transformed by uniting with the bodies of the living.",
+          "es": "Las almas celestiales de los muertos resucitan y son transformadas al unirse con los cuerpos de los vivos."
+        },
+        {
+          "paginas": [522],
+          "en": "Just as Jesus said, the spirits of the martyrs will enter the hearts of those who have been transformed and unite with them.",
+          "es": "Tal como dijo Jesús, los espíritus de los mártires entrarán en el corazón de los que han sido transformados y se unirán con ellos."
+        },
+        {
+          "paginas": [521],
+          "en": "The tombs in this passage represent Jerusalem, which became a spiritual tomb at that time (Mt 23).",
+          "es": "Los sepulcros de este pasaje representan a Jerusalén, que en aquel tiempo se convirtió en un sepulcro espiritual (Mt 23).",
+          "nota": "El pasaje es Juan 5:24-29."
+        },
+        {
+          "paginas": [45],
+          "en": "In addition, 1984 was the year the universe completed its orbit and returned to its point of origin. It is the first year of the sexagenary cycle.",
+          "es": "Además, 1984 fue el año en que el universo completó su órbita y volvió a su punto de origen. Es el primer año del ciclo sexagenario.",
+          "nota": "El libro explica en nota que el ciclo sexagenario viene del sistema cíclico chino de sesenta combinaciones."
+        }
+      ],
+      "significa": {
+        "texto": "La resurrección deja de ser la del cuerpo: es la unión de almas de muertos con cuerpos de vivos, y la nueva creación es un lugar concreto. El año fundacional se apoya en un ciclo del calendario chino, no en la Escritura.",
+        "puntos": []
+      },
+      "confiesa": {
+        "ortodoxia": ["Credo de los Apóstoles: «creo en la resurrección de la carne»."],
+        "reforma": ["Westminster XXXII.2: los muertos resucitarán «con los mismos cuerpos, y no con otros»."]
+      },
+      "biblia": {
+        "puntos": [
+          { "ref": "1 Co 15:42-44", "refs": ["1 Corintios 15:42-44"], "texto": "lo que se siembra es lo mismo que resucita, transformado." },
+          { "ref": "Lc 24:39; Jn 20:27", "refs": ["Lucas 24:39", "Juan 20:27"], "texto": "Jesús resucitado tiene cuerpo, carne y huesos." },
+          { "ref": "Jn 5:28-29", "refs": ["Juan 5:28-29"], "texto": "«todos los que están en las tumbas oirán la voz del Hijo de Dios».", "cita": ["todos los que están en las tumbas oirán la voz del Hijo de Dios"] },
+          { "ref": "Ap 21:1-4", "refs": ["Apocalipsis 21:1-4"], "texto": "en el nuevo cielo y la nueva tierra «no habrá más muerte».", "cita": ["no habrá más muerte"] },
+          { "ref": "Dt 18:10-12; Is 47:13", "refs": ["Deuteronomio 18:10-12", "Isaías 47:13"], "texto": "fundar una fecha en los astros o en los horóscopos es lo que la Escritura prohíbe." }
+        ]
+      }
+    }
+  ],
+  "preguntas": [
+    { "pagina": 436, "ref": "Jn 1:1, 14", "texto": "Si Dios «vino a su pastor escogido, Jesús», ¿Jesús es Dios o es un hombre en quien Dios habitó? ¿Qué dice Juan 1:14: «la Palabra se hizo hombre»?" },
+    { "pagina": 544, "ref": "Jn 17:5", "texto": "Si después de la ascensión «Dios y Jesús se separaron como dos seres», ¿cómo compartía el Hijo la gloria del Padre «antes de que existiera el mundo»?" },
+    { "pagina": 85, "ref": "Heb 1:1-2", "texto": "Si Jesús es uno más en la serie de «un pastor por generación», ¿por qué Hebreos dice que en el Hijo Dios habló su palabra final?" },
+    { "pagina": 441, "ref": "Hch 5:3-4", "texto": "Si el espíritu santo es «un espíritu» comparable a los ángeles, ¿por qué mentirle es mentir a Dios?" },
+    { "pagina": 544, "ref": "Jn 14:16-17", "texto": "Si escuchar al que vence es escuchar al Espíritu, ¿por qué Jesús prometió el Espíritu «a ustedes», sus discípulos, y «para siempre»?" },
+    { "pagina": 160, "ref": "Ro 10:13", "texto": "Lee dice que invocar el nombre del Señor no basta; Pablo dice que «todo el que invoque el nombre del SEÑOR será salvo». ¿A quién creemos?" },
+    { "pagina": 81, "ref": "Hch 4:12", "texto": "Si para la vida eterna hay que «encontrar al pastor prometido», ¿qué significa que no hay «ningún otro nombre»?" },
+    { "pagina": 210, "ref": "1 Co 15:42-44", "texto": "Si los cuerpos muertos «no vuelven a la vida», ¿qué es lo que se siembra y lo que resucita?" },
+    { "pagina": 45, "ref": "Dt 18:10", "texto": "¿Desde cuándo el calendario de Dios depende del ciclo sexagenario chino?" }
+  ]
+}
