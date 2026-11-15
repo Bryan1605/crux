@@ -215,9 +215,10 @@ for (const book of ntvBooks.values()) {
   }
 }
 
+// 2369 desde que «Alabanza de la gran multitud» (Ap 7:9) dejó de pegarse a Ap 7:8.
 check(
-  'NTV: 2368 secciones y las del NT no cierran frase',
-  sectionCount === 2368 && badSections.length === 0,
+  'NTV: 2369 secciones y las del NT no cierran frase',
+  sectionCount === 2369 && badSections.length === 0,
   `${sectionCount} secciones · ${badSections.slice(0, 2).join(' · ')}`
 );
 check('NTV: 4744 notas sin restos de maquetado', noteCount === 4744 && dirtyNotes.length === 0, `${noteCount} notas`);

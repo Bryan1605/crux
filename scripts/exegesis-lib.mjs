@@ -78,7 +78,12 @@ function findVerseStarts(line, last) {
 function headingKind(t, prev, next) {
   if (!prev || !next) return false;
   const endsSentence = /[.!?…»"'\u2019)\]]$/.test(prev);
-  if (!endsSentence) return false;
+  // Las listas (tribus de Ap 7:5-8, censos) cierran en una cifra sin punto
+  // («de la tribu de Benjamín 12.000»). Ahí un título solo se admite si el
+  // renglón siguiente abre versículo: así «Alabanza de la gran multitud» no se
+  // pega a Ap 7:8.
+  const endsList = /\d$/.test(prev) && /^\d{1,3}\s+\S/.test(next);
+  if (!endsSentence && !endsList) return false;
   if (t.length > 64) return false;
   if (!/^[A-ZÁÉÍÓÚÜÑ¿¡«"']/.test(t)) return false;
   if (/[,;:·—-]$/.test(t)) return false;
