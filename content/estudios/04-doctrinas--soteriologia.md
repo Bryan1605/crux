@@ -1,7 +1,7 @@
 ---
 title: "Análisis Soteriológico — NTV (Nueva Traducción Viviente)"
 category: "04-doctrinas"
-description: "- D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md - Traducción por equivalencia funcional (NTV)"
+description: "Análisis soteriológico basado en la NTV, traducción por equivalencia funcional."
 tags: ["doctrina/soteriologia", "estudio"]
 aliases: []
 updated: "2026-09-26"
@@ -10,7 +10,7 @@ updated: "2026-09-26"
 # Análisis Soteriológico — NTV (Nueva Traducción Viviente)
 
 ## Fuente ú nica
-- `D:\Biblia\biblia-pdf-ntv-nueva-traduccion-viviente.md`
+- Nueva Traducción Viviente (NTV)
 - Traducción por equivalencia funcional (NTV)
 
 ---

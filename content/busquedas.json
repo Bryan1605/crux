@@ -1,7 +1,7 @@
 {
   "v": 1,
   "tipos": {
-    "estudio": 188,
+    "estudio": 187,
     "personaje": 17,
     "concilio": 8,
     "herejia": 9
@@ -1158,12 +1158,12 @@
       "href": "/estudio/01-fundamentos--fundamentos-teologia-ntv",
       "title": "Fundamentos de doctrina — NTV",
       "sub": "Fundamentos",
-      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente).",
       "tags": [
         "fundamento",
         "doctrina/general"
       ],
-      "fold": "fundamentos de doctrina — ntv fundamentos basado exclusivamente en la ntv (nueva traduccion viviente) fuente: d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md fundamento doctrina/general"
+      "fold": "fundamentos de doctrina — ntv fundamentos basado exclusivamente en la ntv (nueva traduccion viviente). fundamento doctrina/general"
     },
     {
       "tipo": "estudio",
@@ -1422,12 +1422,12 @@
       "href": "/estudio/04-doctrinas--soteriologia",
       "title": "Análisis Soteriológico — NTV (Nueva Traducción Viviente)",
       "sub": "Doctrinas",
-      "desc": "- D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md - Traducción por equivalencia funcional (NTV)",
+      "desc": "Análisis soteriológico basado en la NTV, traducción por equivalencia funcional.",
       "tags": [
         "doctrina/soteriologia",
         "estudio"
       ],
-      "fold": "analisis soteriologico — ntv (nueva traduccion viviente) doctrinas - d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md - traduccion por equivalencia funcional (ntv) doctrina/soteriologia estudio"
+      "fold": "analisis soteriologico — ntv (nueva traduccion viviente) doctrinas analisis soteriologico basado en la ntv, traduccion por equivalencia funcional. doctrina/soteriologia estudio"
     },
     {
       "tipo": "estudio",
@@ -1464,12 +1464,12 @@
       "href": "/estudio/05-estudios--soledad-y-solteria",
       "title": "Estudio: El dolor de la soltería y cómo ir a Cristo en medio de él",
       "sub": "Estudios temáticos",
-      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente).",
       "tags": [
         "estudio",
         "vida-cristiana"
       ],
-      "fold": "estudio: el dolor de la solteria y como ir a cristo en medio de el estudios tematicos basado exclusivamente en la ntv (nueva traduccion viviente) fuente: d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md estudio vida-cristiana"
+      "fold": "estudio: el dolor de la solteria y como ir a cristo en medio de el estudios tematicos basado exclusivamente en la ntv (nueva traduccion viviente). estudio vida-cristiana"
     },
     {
       "tipo": "estudio",
@@ -1477,12 +1477,12 @@
       "href": "/estudio/05-estudios--vencer-lujuria",
       "title": "Plan práctico: Vencer la lujuria",
       "sub": "Estudios temáticos",
-      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "desc": "Basado exclusivamente en la NTV (Nueva Traducción Viviente).",
       "tags": [
         "estudio",
         "santificacion"
       ],
-      "fold": "plan practico: vencer la lujuria estudios tematicos basado exclusivamente en la ntv (nueva traduccion viviente) fuente: d:\\biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md estudio santificacion"
+      "fold": "plan practico: vencer la lujuria estudios tematicos basado exclusivamente en la ntv (nueva traduccion viviente). estudio santificacion"
     },
     {
       "tipo": "estudio",
@@ -1655,20 +1655,6 @@
         "shincheonji/indice"
       ],
       "fold": "shincheonji apologetica shincheonji (iglesia de jesus el templo del tabernaculo del testimonio) es un movimiento religioso surcoreano fundado por lee man-hee en 1984. se caracteriza por una hermeneutica alegorica… apologetica/secta doctrina/herejia shincheonji/indice shincheonji iglesia de jesus el templo del tabernaculo del testimonio lee man-hee nuevo cielo y nueva tierra"
-    },
-    {
-      "tipo": "estudio",
-      "id": "06-apologetica--shincheonji--analisis-doctrina",
-      "href": "/estudio/06-apologetica--shincheonji--analisis-doctrina",
-      "title": "Análisis Doctrinal — Curso Virtual de Teología (Shincheonji)",
-      "sub": "Apologética · Marcos 4:10-12",
-      "desc": "Análisis forense de un chat real de WhatsApp del \"Curso Virtual de Teología\" (Shincheonji) entre un instructor (Julio Colmenares) y un estudiante (David). Documenta la doctrina central, el…",
-      "tags": [
-        "shincheonji/analisis",
-        "hermeneutica/alegorica",
-        "apologetica/secta"
-      ],
-      "fold": "analisis doctrinal — curso virtual de teologia (shincheonji) apologetica shincheonji marcos 4:10-12 analisis forense de un chat real de whatsapp del \"curso virtual de teologia\" (shincheonji) entre un instructor (julio colmenares) y un estudiante (david). documenta la doctrina central, el… shincheonji/analisis hermeneutica/alegorica apologetica/secta analisis doctrinal shincheonji chat whatsapp shincheonji"
     },
     {
       "tipo": "estudio",

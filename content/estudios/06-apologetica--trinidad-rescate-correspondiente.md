@@ -231,7 +231,7 @@ Respuesta en cinco pasos:
 - Testigos de Jehová — historia del movimiento que niega la Trinidad.
 - Unicitarios — el otro extremo (modalismo); el mismo error de Práxeas, actualizado en 1913.
 - Judaizantes — refutación paralela del mismo estilo (citar un texto y borrar el contexto).
-- Biblia Patrística Completa (`D:\Biblia\Biblia_Patristica_Completa.md`) — textos completos de Didaché, Ignacio, Justino, Atenágoras, Teófilo, Ireneo y Tertuliano (Partes 1-4), base ANF (1885).
+- Biblia Patrística Completa (en la sección Biblia de Crux) — textos completos de Didaché, Ignacio, Justino, Atenágoras, Teófilo, Ireneo y Tertuliano (Partes 1-4), base ANF (1885).
 
 ## Fuentes
 

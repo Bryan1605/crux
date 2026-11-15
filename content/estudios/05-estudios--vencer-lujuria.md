@@ -1,7 +1,7 @@
 ---
 title: "Plan práctico: Vencer la lujuria"
 category: "05-estudios"
-description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md"
+description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente)."
 tags: ["estudio", "santificacion"]
 aliases: []
 updated: "2026-09-26"
@@ -10,7 +10,7 @@ updated: "2026-09-26"
 # Plan práctico: Vencer la lujuria
 
 **Basado exclusivamente en la NTV (Nueva Traducción Viviente)**
-Fuente: `D:\Biblia\biblia-pdf-ntv-nueva-traduccion-viviente.md`
+Fuente: Nueva Traducción Viviente (NTV).
 
 ---
 

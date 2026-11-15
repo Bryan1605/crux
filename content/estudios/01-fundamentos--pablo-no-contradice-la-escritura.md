@@ -12,7 +12,7 @@ updated: "2026-09-26"
 ## Estudio completo para refutar las acusaciones contra el apóstol Pablo
 
 > **Basado exclusivamente en la NTV (Nueva Traducción Viviente)**
-> Fuente: `D:\Biblia\biblia-pdf-ntv-nueva-traduccion-viviente.md`
+> Fuente: Nueva Traducción Viviente (NTV).
 
 ---
 

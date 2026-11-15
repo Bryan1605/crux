@@ -643,7 +643,7 @@ Estos mandamientos **no fueron abolidos** por Cristo. Fueron confirmados, expand
 | **No preocuparse por el mañana** | Mt 6:25-34 | Confianza en la providencia de Dios |
 | **No resistir al malvado** | Mt 5:38-42 | No venganza personal |
 | **Amar a los enemigos** | Mt 5:44-48 | Orar por los que nos persiguen |
-| **No<LM:tool_invocation name="bash" arguments={"command": "(Get-Content \"D:\\Biblia\\SegundoCerebroBiblico\\wiki\\06-apologetica\\judaizantes.md\" -Raw).Split(\"`n\").Count"} />./Strong>** | Mt 18:15-17 | Restauración, no venganza |
+| **Perdonar y restaurar al hermano** | Mt 18:15-17 | Restauración, no venganza |
 | **Obedecer a las autoridades** | Romanos 13:1-7, 1 Pedro 2:13-17 | La autoridad viene de Dios |
 | **No mentir** | Efesios 4:25 | La verdad es fundamental |
 | **No robar** | Efesios 4:28 | Trabajar para dar |

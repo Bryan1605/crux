@@ -22,5 +22,5 @@ La Iglesia de la Unificación, conocida como la Secta Moon, fue fundada en 1954 
 
 ## Fuentes
 
-- `D:\Biblia\¿Perdió Juan el Bautista su fe en Jesús como Mesías (Mateo 113; Lucas 719).md`
-- `D:\Biblia\Video Juan\Guion_Largo_Juan_Bautista.md`
+- Notas de estudio: «¿Perdió Juan el Bautista su fe en Jesús como Mesías? (Mateo 11:3; Lucas 7:19)»
+- Guion del video sobre Juan el Bautista

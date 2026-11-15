@@ -1,7 +1,7 @@
 ---
 title: "Fundamentos de doctrina — NTV"
 category: "01-fundamentos"
-description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md"
+description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente)."
 tags: ["fundamento", "doctrina/general"]
 aliases: []
 updated: "2026-09-26"
@@ -10,7 +10,7 @@ updated: "2026-09-26"
 # Fundamentos de doctrina — NTV
 
 **Basado exclusivamente en la NTV (Nueva Traducción Viviente)**
-Fuente: `D:\Biblia\biblia-pdf-ntv-nueva-traduccion-viviente.md`
+Fuente: Nueva Traducción Viviente (NTV).
 
 ---
 
@@ -317,4 +317,4 @@ La palabra "discípulo" significa **aprendiz**, **alumno**. Un discípulo de Jes
 
 ---
 
-**Referencia**: Todas las citas son de la NTV (Nueva Traducción Viviente), archivo `D:\Biblia\biblia-pdf-ntv-nueva-traduccion-viviente.md`.
+**Referencia**: Todas las citas son de la NTV (Nueva Traducción Viviente).

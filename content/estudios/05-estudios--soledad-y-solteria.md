@@ -1,7 +1,7 @@
 ---
 title: "Estudio: El dolor de la soltería y cómo ir a Cristo en medio de él"
 category: "05-estudios"
-description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md"
+description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente)."
 tags: ["estudio", "vida-cristiana"]
 aliases: []
 updated: "2026-09-26"
@@ -10,7 +10,7 @@ updated: "2026-09-26"
 # Estudio: El dolor de la soltería y cómo ir a Cristo en medio de él
 
 **Basado exclusivamente en la NTV (Nueva Traducción Viviente)**
-Fuente: `D:\Biblia\biblia-pdf-ntv-nueva-traduccion-viviente.md`
+Fuente: Nueva Traducción Viviente (NTV).
 
 ---
 

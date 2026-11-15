@@ -31,6 +31,15 @@ export const CATEGORIES = [
 
 const SKIP_FILES = new Set(['_index.md', '_log.md', '_meta.md']);
 
+/**
+ * Notas del wiki que son solo de referencia y no se publican (p. ej. chats
+ * reales con nombres de personas). Rutas relativas al wiki.
+ */
+export const PRIVATE_FILES = new Set([
+  '06-apologetica/shincheonji/analisis-doctrina.md',
+  '06-apologetica/shincheonji/Analisis_Doctrina_Shincheonji_Chat.md'
+]);
+
 // --- Reparación de mojibake -------------------------------------------------
 // Algunos .md del wiki fueron guardados leyendo UTF-8 como CP1252
 // ("ó" -> "Ã³"). Reparamos en lectura sin tocar los archivos de D:\Biblia.
@@ -219,7 +228,7 @@ export function walk(dir, base = '') {
     const rel = path.posix.join(base, entry.name);
     const abs = path.join(dir, entry.name);
     if (entry.isDirectory()) out.push(...walk(abs, rel));
-    else if (entry.isFile() && entry.name.endsWith('.md') && !SKIP_FILES.has(entry.name)) out.push(rel);
+    else if (entry.isFile() && entry.name.endsWith('.md') && !SKIP_FILES.has(entry.name) && !PRIVATE_FILES.has(rel)) out.push(rel);
   }
   return out;
 }

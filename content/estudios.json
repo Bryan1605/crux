@@ -40,7 +40,7 @@
       "label": "Apologética",
       "short": "Defensa de la fe y sectas",
       "orden": 6,
-      "count": 17
+      "count": 16
     },
     {
       "id": "07-herramientas",
@@ -1936,7 +1936,7 @@
       "categoryLabel": "Fundamentos",
       "categoryShort": "Doctrina fundamental desde la NTV",
       "subcategory": "",
-      "description": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "description": "Basado exclusivamente en la NTV (Nueva Traducción Viviente).",
       "portada": "",
       "passage": "",
       "tags": [
@@ -2418,7 +2418,7 @@
       "categoryLabel": "Doctrinas",
       "categoryShort": "Sistematización bíblica",
       "subcategory": "",
-      "description": "- D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md - Traducción por equivalencia funcional (NTV)",
+      "description": "Análisis soteriológico basado en la NTV, traducción por equivalencia funcional.",
       "portada": "",
       "passage": "",
       "tags": [
@@ -2484,7 +2484,7 @@
       "categoryLabel": "Estudios temáticos",
       "categoryShort": "Planes de estudio prácticos",
       "subcategory": "",
-      "description": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "description": "Basado exclusivamente en la NTV (Nueva Traducción Viviente).",
       "portada": "",
       "passage": "",
       "tags": [
@@ -2505,7 +2505,7 @@
       "categoryLabel": "Estudios temáticos",
       "categoryShort": "Planes de estudio prácticos",
       "subcategory": "",
-      "description": "Basado exclusivamente en la NTV (Nueva Traducción Viviente) Fuente: D:\\Biblia\\biblia-pdf-ntv-nueva-traduccion-viviente.md",
+      "description": "Basado exclusivamente en la NTV (Nueva Traducción Viviente).",
       "portada": "",
       "passage": "",
       "tags": [
@@ -2514,7 +2514,7 @@
       ],
       "aliases": [],
       "updated": "2026-09-26",
-      "minutes": 13,
+      "minutes": 14,
       "citations": 42,
       "sections": 10,
       "number": ""
@@ -2804,7 +2804,7 @@
       ],
       "updated": "2026-07-25",
       "minutes": 1,
-      "citations": 0,
+      "citations": 2,
       "sections": 3,
       "number": ""
     },
@@ -2833,31 +2833,6 @@
       "minutes": 1,
       "citations": 1,
       "sections": 4,
-      "number": ""
-    },
-    {
-      "slug": "06-apologetica--shincheonji--analisis-doctrina",
-      "title": "Análisis Doctrinal — Curso Virtual de Teología (Shincheonji)",
-      "category": "06-apologetica",
-      "categoryLabel": "Apologética",
-      "categoryShort": "Defensa de la fe y sectas",
-      "subcategory": "Shincheonji",
-      "description": "Análisis forense de un chat real de WhatsApp del \"Curso Virtual de Teología\" (Shincheonji) entre un instructor (Julio Colmenares) y un estudiante (David). Documenta la doctrina central, el…",
-      "portada": "",
-      "passage": "Marcos 4:10-12",
-      "tags": [
-        "shincheonji/analisis",
-        "hermeneutica/alegorica",
-        "apologetica/secta"
-      ],
-      "aliases": [
-        "Análisis Doctrinal Shincheonji",
-        "Chat WhatsApp Shincheonji"
-      ],
-      "updated": "2026-09-26",
-      "minutes": 3,
-      "citations": 8,
-      "sections": 9,
       "number": ""
     },
     {
