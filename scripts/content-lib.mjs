@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { ALL_BOOKS } from '../src/data/exegesis.js';
+import { APOLOGETICA_FASCICULOS } from '../src/lib/apologeticaSeo.js';
 import { parseFrontmatter } from '../src/lib/frontmatter.js';
 import { fold } from '../src/lib/fold.js';
 
@@ -121,8 +122,9 @@ export function writeIndex(contentDir) {
 /* -------------------------------------------------------------------------- */
 
 // Cada entrada guarda un haystack ya plegado (`fold`) para que la búsqueda del
-// navegador sea un `includes` sin recalcular acentos. Lo comparten el índice de
-// estudios, las fichas de personajes, los concilios/herejías y los videos.
+// navegador sea un `includes` sin recalcular acentos. Lo comparten los
+// estudios, las fichas de libros, la apologética, los personajes, los
+// concilios/herejías y los videos.
 
 /** Pliega varios textos en un único haystack sin acentos ni mayúsculas. */
 const haystack = parts => fold(parts.filter(Boolean).join(' '));
@@ -197,7 +199,7 @@ export function buildSearchIndex(contentDir, index = buildIndex(contentDir)) {
     });
   }
 
-  // 4 · Videos (vacío hasta que se llene content/videos.json).
+  // 4 · Videos (content/videos.json).
   for (const v of readJson(contentDir, 'videos', [])) {
     if (!v || !v.id) continue;
     items.push({
@@ -210,6 +212,85 @@ export function buildSearchIndex(contentDir, index = buildIndex(contentDir)) {
       tags: [],
       fold: haystack([v.title, v.description, v.date])
     });
+  }
+
+  // 5 · Fichas de libros de la Biblia (content/libros/*.json, sin fuentes.json).
+  const librosDir = path.join(contentDir, 'libros');
+  if (fs.existsSync(librosDir)) {
+    for (const name of fs.readdirSync(librosDir).sort()) {
+      if (!name.endsWith('.json') || name === 'fuentes.json') continue;
+      let l;
+      try {
+        l = JSON.parse(fs.readFileSync(path.join(librosDir, name), 'utf8'));
+      } catch {
+        continue;
+      }
+      if (!l || !l.id) continue;
+      const testamentoLabel = l.testament === 'AT' ? 'Antiguo Testamento' : 'Nuevo Testamento';
+      items.push({
+        tipo: 'libro',
+        id: l.id,
+        href: `/biblia/libros/${l.id}`,
+        title: l.title || l.id,
+        sub: [testamentoLabel, l.abbr].filter(Boolean).join(' · '),
+        desc: l.summary || '',
+        tags: Array.isArray(l.genre) ? l.genre : [],
+        fold: haystack([
+          l.title,
+          l.abbr,
+          l.testament,
+          testamentoLabel,
+          l.summary,
+          l.language,
+          l.date?.narrative,
+          l.date?.composition,
+          l.notice,
+          ...(l.genre || []),
+          ...Object.values(l.canon || {}),
+          ...(l.sections || []).map(s => s.title),
+          ...(l.debates || []).map(d => d.question)
+        ])
+      });
+    }
+  }
+
+  // 6 · Apologética: páginas especiales de cotejo bíblico.
+  for (const f of APOLOGETICA_FASCICULOS) {
+    const pFile = path.join(contentDir, 'apologetica', f.preguntasFile);
+    if (!fs.existsSync(pFile)) continue;
+    try {
+      const preg = JSON.parse(fs.readFileSync(pFile, 'utf8'));
+      const doctrina = f.doctrinaFile
+        ? (() => {
+            const df = path.join(contentDir, 'apologetica', f.doctrinaFile);
+            return fs.existsSync(df) ? JSON.parse(fs.readFileSync(df, 'utf8')) : null;
+          })()
+        : null;
+      const bloques = Array.isArray(preg?.bloques) ? preg.bloques : [];
+      const totalPreguntas = bloques.reduce((acc, b) => acc + (b.preguntas?.length || 0), 0);
+      const partesDoctrina = Array.isArray(doctrina?.partes) ? doctrina.partes.length : 0;
+      const { title, desc, tags = [], extra = [] } = f.search;
+      items.push({
+        tipo: 'apologetica',
+        id: f.slug,
+        href: f.path,
+        title,
+        sub: `${totalPreguntas} preguntas · ${bloques.length} bloques${partesDoctrina ? ` · ${partesDoctrina} secciones doctrinales` : ''}`,
+        desc,
+        tags,
+        fold: haystack([
+          title,
+          desc,
+          ...extra,
+          ...tags,
+          ...bloques.map(b => b.titulo),
+          ...(doctrina?.libro ? [doctrina.libro.autor, doctrina.libro.titulo] : []),
+          ...(doctrina?.partes || []).map(p => p.titulo)
+        ])
+      });
+    } catch {
+      // Si el JSON está dañado lo bloqueará contentGuard en el build.
+    }
   }
 
   const tipos = items.reduce((acc, it) => {

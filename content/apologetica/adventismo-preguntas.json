@@ -1,0 +1,2062 @@
+{
+  "version": 1,
+  "fuente": {
+    "archivo": "scripts/apologetica-data/adventismo.mjs",
+    "actualizado": "2026-11-20"
+  },
+  "fuentes": [
+    "csp-acerca-del-codex",
+    "csp-codex-sinaiticus"
+  ],
+  "reglas": [
+    "Una sola fuente: la Biblia (Codex Sinaiticus donde se conserva y Nueva Traducción Viviente).",
+    "Un tema por vez: cada pregunta se responde con el pasaje completo que tiene delante.",
+    "Respeto por las personas y rigor con el texto: examinamos cada enseñanza como los creyentes de Berea (Hechos 17:11)."
+  ],
+  "bloques": [
+    {
+      "id": "I",
+      "titulo": "El sábado y el reposo en Cristo",
+      "desde": 1,
+      "hasta": 10,
+      "preguntas": [
+        {
+          "n": 1,
+          "texto": "Según Génesis 2:2-3, cuando Dios bendijo el séptimo día y descansó de toda su obra de creación, ¿ordenó a Adán y a toda la humanidad celebrar un rito semanal cada sábado, o describió el descanso acabado de Dios en su obra creadora?",
+          "clave": "El texto narra que Dios descansó porque ya había terminado su obra de creación; no contiene mandamiento alguno dado a Adán, ni cierra el séptimo día con «y cayó la tarde y llegó la mañana» como los seis anteriores. El mandato del sábado semanal aparece siglos después en el pacto con Israel (Éxodo 16 y 20).",
+          "refs": [
+            {
+              "libro": "genesis",
+              "cap": 2,
+              "desde": 2,
+              "hasta": 3,
+              "label": "Génesis 2:2-3",
+              "ntv": [
+                {
+                  "n": 2,
+                  "text": "Cuando llegó el séptimo día, Dios ya había terminado su obra de creación, y descansó de toda su labor."
+                },
+                {
+                  "n": 3,
+                  "text": "Dios bendijo el séptimo día y lo declaró santo, porque ése fue el día en que descansó de toda su obra de creación."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 2,
+          "texto": "Según Éxodo 31:13 y 31:16-17, ¿para quién estableció Dios el día de descanso semanal como una «señal del pacto» específica?",
+          "clave": "Dios ordena «Dile a los israelitas» que el sábado «es una señal del pacto entre ustedes y yo de generación en generación» y una «señal perpetua de mi pacto con el pueblo de Israel». Del mismo modo que la circuncisión fue la señal del pacto abrahámico, el sábado semanal funcionó como señal distintiva del pacto sinaítico entre Dios e Israel.",
+          "refs": [
+            {
+              "libro": "exodo",
+              "cap": 31,
+              "desde": 13,
+              "hasta": 13,
+              "label": "Éxodo 31:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Dile a los israelitas: «Asegúrense de guardar mi día de descanso, porque el día de descanso es una señal del pacto entre ustedes y yo de generación en generación. Se ha establecido para que sepan que yo soy el SEÑOR, quien los hace santos."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            },
+            {
+              "libro": "exodo",
+              "cap": 31,
+              "desde": 16,
+              "hasta": 17,
+              "label": "Éxodo 31:16-17",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "El pueblo de Israel deberá guardar el día de descanso y conmemorarlo de generación en generación. Es una obligación del pacto para siempre."
+                },
+                {
+                  "n": 17,
+                  "text": "Es una señal perpetua de mi pacto con el pueblo de Israel. Pues en seis días el SEÑOR hizo los cielos y la tierra, pero en el séptimo dejó de trabajar y descansó»."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 3,
+          "texto": "Al repetir el mandamiento del sábado en Deuteronomio 5:15, ¿con qué acontecimiento histórico de Israel conecta Moisés la obligación de guardarlo?",
+          "clave": "Moisés fundamenta el mandamiento en la redención nacional de Egipto: «Recuerda que tú también fuiste esclavo en Egipto y que el SEÑOR tu Dios te sacó de allí… Por esa razón, el SEÑOR tu Dios te ordenó descansar el séptimo día». Su vigencia como señal ceremonial pertenecía a ese pacto histórico.",
+          "refs": [
+            {
+              "libro": "deuteronomio",
+              "cap": 5,
+              "desde": 15,
+              "hasta": 15,
+              "label": "Deuteronomio 5:15",
+              "ntv": [
+                {
+                  "n": 15,
+                  "text": "Recuerda que tú también fuiste esclavo en Egipto y que el SEÑOR tu Dios te sacó de allí con mano fuerte y brazo poderoso. Por esa razón, el SEÑOR tu Dios te ordenó descansar el séptimo día."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 4,
+          "texto": "En Colosenses 2:16-17, ¿por qué manda Pablo que «nadie los condene» acerca de «los días de descanso» y cómo califica esas reglas frente a Cristo?",
+          "clave": "Pablo enumera las prácticas del calendario hebreo —días santos, lunas nuevas y días de descanso (en griego ϲαββατων, sábados)— y declara que «esas reglas son sólo sombras de la realidad que vendrá. Y Cristo mismo es esa realidad». Una vez llegada la realidad (Cristo), exigir la sombra contradice la suficiencia de Su obra.",
+          "refs": [
+            {
+              "libro": "colosenses",
+              "cap": 2,
+              "desde": 16,
+              "hasta": 17,
+              "label": "Colosenses 2:16-17",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "Por lo tanto, no permitan que nadie los condene por lo que comen o beben, o porque no celebran ciertos días santos ni ceremonias por luna nueva ni los días de descanso."
+                },
+                {
+                  "n": 17,
+                  "text": "Pues esas reglas son sólo sombras de la realidad que vendrá. Y Cristo mismo es esa realidad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "μη ουν τιϲ ϋμαϲ κρινετω εν βρωϲι η εν ποϲει η ‹ε› μερει εορτηϲ η νουμηνιαϲ η ϲαββατων"
+                },
+                {
+                  "n": 17,
+                  "grc": "α εϲτιν ϲκια των μελλοντ‹ω› το δε ϲωμα §0του ‹χυ›"
+                }
+              ],
+              "pagina": "85.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 5,
+          "texto": "En Romanos 14:5-6, cuando Pablo enseña que algunos piensan que «un día es más sagrado que otro» mientras otros creen que «todos los días son iguales», ¿trata la observancia de días sagrados como un mandamiento moral obligatorio para toda la iglesia o como materia de conciencia?",
+          "clave": "Pablo jamás pondría la idolatría, el homicidio o el adulterio bajo «Cada uno debería estar plenamente convencido de que el día que elija es aceptable». Tratar la distinción entre días sagrados como asunto de conciencia libre confirma que la obligación ceremonial del calendario mosaico ya no rige en el Nuevo Pacto.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 14,
+              "desde": 5,
+              "hasta": 6,
+              "label": "Romanos 14:5-6",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "Del mismo modo, algunos piensan que un día es más sagrado que otro, mientras que otros creen que todos los días son iguales. Cada uno debería estar plenamente convencido de que el día que elija es aceptable."
+                },
+                {
+                  "n": 6,
+                  "text": "Los que adoran al Señor un día en particular lo hacen para honrarlo a él. Los que comen toda clase de alimentos lo hacen para honrar al Señor, ya que le dan gracias a Dios antes de comer. Y los que se niegan a comer ciertos alimentos también quieren agradar al Señor y le dan gracias a Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "οϲ μεν §0γαρ κρινει ημεραν παρ ημεραν · οϲ δε κρινει παϲαν ημεραν · εκαϲτοϲ εν τω ϊδιω νοει πληροφοριϲθω ·:"
+                },
+                {
+                  "n": 6,
+                  "grc": "ο φρονων την ημεραν ‹κω› φρονει · και ο εϲθιων · ‹κω› εϲθιει ˙ ευχαριϲτι γαρ τω ‹θω› · και ο μη εϲθιων · ‹κω› ουκ εϲθιει · και ευχαριϲτι τω ‹θω› ·"
+                }
+              ],
+              "pagina": "82.6r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 6,
+          "texto": "En Gálatas 4:9-11, ¿por qué se alarma tanto Pablo de que los creyentes gentiles pretendan «ganarse el favor de Dios al cumplir con ciertos días» y celebraciones del calendario?",
+          "clave": "El contexto entero de Gálatas trata sobre creyentes gentiles presionados por judaizantes para adoptar el calendario mosaico («ciertos días o meses, estaciones o años»). Pablo llama a esa vuelta una esclavitud a los «débiles e inútiles principios espirituales de este mundo» ya superados en Cristo y teme haber trabajado en vano.",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 4,
+              "desde": 9,
+              "hasta": 11,
+              "label": "Gálatas 4:9-11",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Así que ahora que conocen a Dios (o mejor dicho, ahora que Dios los conoce a ustedes), ¿por qué quieren retroceder y convertirse otra vez en esclavos de los débiles e inútiles principios espirituales de este mundo?"
+                },
+                {
+                  "n": 10,
+                  "text": "Pretenden ganarse el favor de Dios al cumplir con ciertos días o meses, estaciones o años."
+                },
+                {
+                  "n": 11,
+                  "text": "Temo por ustedes. Quizá todo el arduo trabajo que hice entre ustedes fue en vano."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "ν‹υ› δε γνοντεϲ ‹θν› μαλλον δε γνωϲθεντεϲ υπο ‹θυ› πωϲ επιϲτρεφετε παλιν επι τα αϲθενη και πτωχα ϲτοιχια οιϲ παλ‹ι› ανωθεν δουλευϲε θελετε"
+                },
+                {
+                  "n": 10,
+                  "grc": "ημεραϲ παρατηρειϲθε και μηναϲ και καιρουϲ και ενιαυτουϲ"
+                },
+                {
+                  "n": 11,
+                  "grc": "φοβουμαι ϋμαϲ μη πωϲ εικη κεκοπιακα ειϲ ϋμαϲ"
+                }
+              ],
+              "pagina": "84.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 7,
+          "texto": "Cuando los apóstoles y ancianos en Hechos 15:28-29 definieron por escrito las únicas cargas necesarias para los creyentes gentiles, ¿incluyeron en algún lugar la observancia del sábado semanal?",
+          "clave": "No. Si guardar el sábado hubiera sido un mandamiento universal perpetuo y la prueba final de fidelidad, el concilio apostólico habría tenido el deber ineludible de exigirlo al responder precisamente si los gentiles debían guardar la ley de Moisés.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 15,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Hechos 15:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Pues nos pareció bien al Espíritu Santo y a nosotros no imponer sobre ustedes una carga mayor que estos pocos requisitos:"
+                },
+                {
+                  "n": 29,
+                  "text": "deben abstenerse de comer alimentos ofrecidos a ídolos, de consumir sangre o la carne de animales estrangulados y de inmoralidad sexual. Si hacen esto, harán bien. Adiós."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "εδοξεν γαρ τω π‹ν›ι τω αγιω και ημιν §0κ μηδεν πλεον επιτιθεϲθαι ϋμιν βαροϲ πλην τουτων §2 επαναγκαιϲ"
+                },
+                {
+                  "n": 29,
+                  "grc": "απεχεϲθαι ειδωλοθυτων και αιματοϲ και §0πνικτων και πορνιαϲ εξ ων διατηρουντεϲ εαυτουϲ ευ πραξετε ερρωϲθαι"
+                }
+              ],
+              "pagina": "87.8v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 8,
+          "texto": "Según Hechos 20:7 y 1 Corintios 16:2, ¿en qué día específico se reunía la iglesia apostólica para participar de la Cena del Señor y apartar sus ofrendas?",
+          "clave": "Ambos textos nombran expresamente «el primer día de la semana» (μια των ϲαββατων en el griego del Codex), el domingo de la resurrección del Señor. En todo el Nuevo Testamento no hay un solo mandato ni ejemplo donde los creyentes fijen la asamblea cristiana en sábado; cuando entraban a las sinagogas en sábado era para anunciar el Evangelio a los judíos.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 20,
+              "desde": 7,
+              "hasta": 7,
+              "label": "Hechos 20:7",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "El primer día de la semana, nos reunimos con los creyentes locales para participar de la Cena del Señor. Pablo les estaba predicando y, como iba a viajar el día siguiente, siguió hablando hasta la medianoche."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 7,
+                  "grc": "εν δε τη μια των ϲαββατων ϲυνηγμενων ημων κλαϲαι αρτον ο παυλοϲ διελεγετο αυτοιϲ μελλ‹ω› εξιεναι τη επαυριον · παρετινεν τε τον λογον μεχρι μεϲονυκτιου"
+                }
+              ],
+              "pagina": "88.3v"
+            },
+            {
+              "libro": "1-corintios",
+              "cap": 16,
+              "desde": 2,
+              "hasta": 2,
+              "label": "1 Corintios 16:2",
+              "ntv": [
+                {
+                  "n": 2,
+                  "text": "El primer día de cada semana, cada uno debería separar una parte del dinero que ha ganado. No esperen hasta que yo llegue para luego tratar de reunirlo todo de golpe."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 2,
+                  "grc": "κατα μιαν §0ϲαββατω εκαϲτοϲ ϋμ‹ω› παρ εαυτω τιθετω θηϲαυριζων ο τι αν §3ευοδωται ϊνα μη οταν ελθω τοτε λογιαι γιν‹ω›ται"
+                }
+              ],
+              "pagina": "83.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 9,
+          "texto": "En Apocalipsis 1:10, ¿qué expresión griega usa Juan para designar el día en que recibió la revelación en Cristo: el sábado o «el día del Señor»?",
+          "clave": "El texto dice «en el día del Señor» (εν τη κυριακη ημερα), usando el mismo adjetivo («del Señor») que aparece en «la Cena del Señor» de 1 Corintios 11:20, no la palabra sábado. La iglesia primitiva identificó ese «día del Señor» con el primer día de la semana, día en que resucitó Cristo.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Apocalipsis 1:10",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Era el día del Señor, y yo estaba adorando en el Espíritu. De repente, oí detrás de mí una fuerte voz, como un toque de trompeta,"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 10,
+                  "grc": "εγενομην εν ‹πν›ι εν τη κυριακη ημερα και §0ηκουϲα οπιϲω μου φωνην μεγαλην ωϲ ϲαλπιγγοϲ"
+                }
+              ],
+              "pagina": "90.1v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "1-corintios",
+              "cap": 11,
+              "desde": 20,
+              "hasta": 20,
+              "label": "1 Corintios 11:20"
+            }
+          ]
+        },
+        {
+          "n": 10,
+          "texto": "Según Hebreos 4:9-11, ¿en qué consiste el verdadero «descanso especial» (en griego, reposo sabático) que todavía espera para el pueblo de Dios?",
+          "clave": "El versículo 10 explica con claridad qué es entrar en ese reposo: «todos los que han entrado en el descanso de Dios han descansado de su trabajo, tal como Dios descansó del suyo después de crear el mundo». No consiste en abstenerse de trabajar cada sábado, sino en cesar de confiar en las propias obras para descansar en la salvación consumada de Cristo, tal como invita Mateo 11:28-29 (nota: en el versículo 9 el escriba original del Codex omitió la frase y el corrector S1 la suplió en el margen: «αρα απολιπεται ϲαββατιϲμοϲ τω λαω του θυ»).",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 4,
+              "desde": 9,
+              "hasta": 11,
+              "label": "Hebreos 4:9-11",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Así que todavía hay un descanso especial en espera para el pueblo de Dios."
+                },
+                {
+                  "n": 10,
+                  "text": "Pues todos los que han entrado en el descanso de Dios han descansado de su trabajo, tal como Dios descansó del suyo después de crear el mundo."
+                },
+                {
+                  "n": 11,
+                  "text": "Entonces, hagamos todo lo posible por entrar en ese descanso, pero si desobedecemos a Dios, como lo hizo el pueblo de Israel, caeremos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "§0"
+                },
+                {
+                  "n": 10,
+                  "grc": "ο γαρ ειϲελθων ειϲ την καταπαυϲιν αυτου και αυτοϲ κατεπαυϲεν απο §0 τ‹ω› εργων αυτου ωϲπερ απο των ϊδι‹ω› ο ‹θϲ›"
+                },
+                {
+                  "n": 11,
+                  "grc": "ϲπουδαϲωμεν ο‹υ› ειϲελθειν ειϲ εκεινην την καταπαυϲιν εινα μη εν τω αυτω §0 ϋποδιγματι πεϲη τηϲ απιθιαϲ"
+                }
+              ],
+              "pagina": "85.5v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "mateo",
+              "cap": 11,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Mateo 11:28-29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "titulo": "La Ley, el pacto y los alimentos",
+      "desde": 11,
+      "hasta": 18,
+      "preguntas": [
+        {
+          "n": 11,
+          "texto": "Cuando Jesús dijo en Mateo 5:17-18 que no vino a abolir la ley sino «para cumplir sus propósitos», ¿significa «cumplir» dejar intacto el pacto mosaico como régimen vigente para la Iglesia, o llevarlo a su meta en Él mismo?",
+          "clave": "Jesús promete que todo lo escrito en la ley de Moisés y los escritos de los profetas alcanzaría su propósito pleno en su persona y obra, abarcando las exigencias morales de Dios y las figuras que apuntaban a Él. Como confirman Romanos 10:4 y Hebreos 7:12, Cristo es la meta de la ley y, al cambiar el sacerdocio, cambia también la administración pactual de la ley.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 5,
+              "desde": 17,
+              "hasta": 18,
+              "label": "Mateo 5:17-18",
+              "ntv": [
+                {
+                  "n": 17,
+                  "text": "No malinterpreten la razón por la cual he venido. No vine para abolir la ley de Moisés o los escritos de los profetas. Al contrario, vine para cumplir sus propósitos."
+                },
+                {
+                  "n": 18,
+                  "text": "Les digo la verdad, hasta que desaparezcan el cielo y la tierra, no desaparecerá ni el más mínimo detalle de la ley de Dios hasta que su propósito se cumpla."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 17,
+                  "grc": "μη νομιϲητε οτι ηλθον καταλυϲαι τον νομον η τουϲ προφηταϲ ουκʼ ηλθον καταλυϲαι αλʼλα πληρωϲαι ·"
+                },
+                {
+                  "n": 18,
+                  "grc": "αμην γαρ λεγω υμιν ἑωϲ αν παρελθη ὁ ουρανοϲ και ἡ γη ϊῶτα §0εν ἠ μία §2κεραια ου μη παρελθη απο του νομου ἑωϲ αν παντα γενηται ·"
+                }
+              ],
+              "pagina": "74.2v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "romanos",
+              "cap": 10,
+              "desde": 4,
+              "hasta": 4,
+              "label": "Romanos 10:4"
+            },
+            {
+              "libro": "hebreos",
+              "cap": 7,
+              "desde": 12,
+              "hasta": 12,
+              "label": "Hebreos 7:12"
+            }
+          ]
+        },
+        {
+          "n": 12,
+          "texto": "En 2 Corintios 3:7-11, al contrastar el antiguo camino con el nuevo camino en el Espíritu, ¿cómo describe Pablo incluso el ministerio «con leyes grabadas en piedra»?",
+          "clave": "El único código grabado sobre tablas de piedra en la Biblia fueron los Diez Mandamientos. Pablo lo incluye expresamente en «el antiguo camino, que ha sido reemplazado» y cuyo brillo «ya estaba desvaneciéndose» frente a la gloria permanente del Espíritu. Esto desmonta la idea de que las tablas de piedra siguen intactas mientras solo caducó el libro de Moisés: todo el pacto sinaítico cedió ante el Nuevo Pacto, que reafirma las normas morales permanentes pero deja atrás su señal pactual del sábado.",
+          "refs": [
+            {
+              "libro": "2-corintios",
+              "cap": 3,
+              "desde": 7,
+              "hasta": 11,
+              "label": "2 Corintios 3:7-11",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "El camino antiguo, con leyes grabadas en piedra, conducía a la muerte, aunque comenzó con tanta gloria que el pueblo de Israel no podía mirar la cara de Moisés. Pues su rostro brillaba con la gloria de Dios, aun cuando el brillo ya estaba desvaneciéndose."
+                },
+                {
+                  "n": 8,
+                  "text": "¿No deberíamos esperar mayor gloria dentro del nuevo camino, ahora que el Espíritu Santo da vida?"
+                },
+                {
+                  "n": 9,
+                  "text": "Si el antiguo camino, que trae condenación, era glorioso, ¡cuánto más glorioso es el nuevo camino, que nos hace justos ante Dios!"
+                },
+                {
+                  "n": 10,
+                  "text": "De hecho, aquella primera gloria no era para nada gloriosa comparada con la gloria sobreabundante del nuevo camino."
+                },
+                {
+                  "n": 11,
+                  "text": "Así que si el antiguo camino, que ha sido reemplazado, era glorioso, ¡cuánto más glorioso es el nuevo, que permanece para siempre!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 7,
+                  "grc": "ει δε η διακονια του §0‹θυ› εν γραμμαϲιν εντετυπωμενη §2 λιθοιϲ εγενηθη εν δοξη ωϲτε μη δυναϲθε ατενιϲαι τουϲ ϋϊουϲ ‹ιηλ›ʼ ειϲ το προϲωπον μωϋϲεωϲ δια την δοξαν §4αυτου προϲωπου αυτου την καταργουμενην"
+                },
+                {
+                  "n": 8,
+                  "grc": "πωϲ §0ουδι μαλλον η διακονια του π‹νϲ› εϲτε εν δοξη"
+                },
+                {
+                  "n": 9,
+                  "grc": "ει γαρ τη διακονια τηϲ κατακριϲεωϲ δοξα πολλω μαλλον περιϲϲευει η διακονια τηϲ δικεοϲυνηϲ §0δοξα"
+                },
+                {
+                  "n": 10,
+                  "grc": "και γαρ ου δεδοξαϲται το δεδοξαϲμεν‹ο› εν τουτω τω μερει εινεκεν τηϲ υπερβαλλουϲηϲ δοξηϲ"
+                },
+                {
+                  "n": 11,
+                  "grc": "ει γαρ το καταργουμενον δια δοξηϲ πολλω μαλλον το μενον εν δοξη"
+                }
+              ],
+              "pagina": "83.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 13,
+          "texto": "Según Gálatas 3:24-25, ¿cuál era la función temporal de la ley como «tutora», y qué sucede ahora que «ha llegado el camino de la fe»?",
+          "clave": "Pablo afirma sin rodeos: «la ley fue nuestra tutora hasta que vino Cristo… Y ahora que ha llegado el camino de la fe, ya no necesitamos que la ley sea nuestra tutora». El Nuevo Pacto no nos devuelve bajo la tutela del código mosaico.",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 3,
+              "desde": 24,
+              "hasta": 25,
+              "label": "Gálatas 3:24-25",
+              "ntv": [
+                {
+                  "n": 24,
+                  "text": "Dicho de otra manera, la ley fue nuestra tutora hasta que vino Cristo; nos protegió hasta que se nos declarara justos ante Dios por medio de la fe."
+                },
+                {
+                  "n": 25,
+                  "text": "Y ahora que ha llegado el camino de la fe, ya no necesitamos que la ley sea nuestra tutora."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 24,
+                  "grc": "ωϲτε ο νομοϲ παιδαγωγοϲ ημων γεγονεν ειϲ ‹χν› ινα εκ πιϲτεωϲ δικαιωθωμεν"
+                },
+                {
+                  "n": 25,
+                  "grc": "ελθουϲηϲ δε τηϲ πιϲτεωϲ ουκετι υπο παιδαγωγον εϲμεν"
+                }
+              ],
+              "pagina": "84.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 14,
+          "texto": "Al citar la promesa del Nuevo Pacto, ¿qué declara Hebreos 8:13 acerca del primer pacto hecho en el Sinaí?",
+          "clave": "Declara explícitamente que «ha hecho obsoleto al primero, el cual ha caducado y pronto desaparecerá». El sábado, como señal específica de ese primer pacto, no sobrevive como obligación ritual por encima de la caducidad del pacto al que sellaba.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 8,
+              "desde": 13,
+              "hasta": 13,
+              "label": "Hebreos 8:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Cuando Dios habla de un nuevo pacto, quiere decir que ha hecho obsoleto al primero, el cual ha caducado y pronto desaparecerá."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "εν τω λεγειν κεν‹η› πεπαλαιωκε την πρωτην το δε παλαιουμενον και γηραϲκον εγγυϲ αφανιϲμου ·"
+                }
+              ],
+              "pagina": "85.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 15,
+          "texto": "Según Romanos 7:4-6, ¿en qué posición ha quedado el creyente respecto a la ley de Moisés al morir con Cristo en la cruz?",
+          "clave": "Pablo afirma dos veces que «ustedes murieron al poder de la ley cuando murieron con Cristo» y que «ahora fuimos liberados de la ley, porque morimos a ella y ya no estamos presos de su poder». Ahora servimos a Dios viviendo en el Espíritu, no según el antiguo modo de la letra.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 7,
+              "desde": 4,
+              "hasta": 6,
+              "label": "Romanos 7:4-6",
+              "ntv": [
+                {
+                  "n": 4,
+                  "text": "Por lo tanto, mis amados hermanos, la cuestión es la siguiente: ustedes murieron al poder de la ley cuando murieron con Cristo y ahora están unidos a aquel que fue levantado de los muertos. Como resultado, podemos producir una cosecha de buenas acciones para Dios."
+                },
+                {
+                  "n": 5,
+                  "text": "Cuando vivíamos controlados por nuestra vieja naturaleza, los deseos pecaminosos actuaban dentro de nosotros y la ley despertaba esos malos deseos que producían una cosecha de acciones pecaminosas, las cuales nos llevaban a la muerte."
+                },
+                {
+                  "n": 6,
+                  "text": "Pero ahora fuimos liberados de la ley, porque morimos a ella y ya no estamos presos de su poder. Ahora podemos servir a Dios, no según el antiguo modo —que consistía en obedecer la letra de la ley— sino mediante uno nuevo, el de vivir en el Espíritu."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 4,
+                  "grc": "ωϲτε και υμειϲ αδελφοι μου εθανατωθητε τω νομω δια του ϲωματοϲ του §0χ‹ρ›υ ειϲ το γενεϲθαι ϋμαϲ ετερω τω εκ νεκρων εγερθεντι ϊνα καρποφορηϲωμεν τω ‹θω›"
+                },
+                {
+                  "n": 5,
+                  "grc": "οτε γαρ ημεν εν τη ϲαρκι τα παθηματα των αμαρτιων τα δια του νομου ενηργειτο εν τοιϲ μελεϲιν ημων ειϲ το καρποφορηϲαι τω θανατω"
+                },
+                {
+                  "n": 6,
+                  "grc": "νυνϊ δε κατηργηθημεν απο του νομου αποθανοντεϲ εν ω κατειχομεθα ωϲτε δουλευειν ημαϲ εν καινοτητι ‹πνϲ› και ου παλαιοτητι γραμματοϲ"
+                }
+              ],
+              "pagina": "82.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 16,
+          "texto": "En Marcos 7:18-19, ¿qué conclusión inspirada añade el evangelista mismo tras las palabras de Jesús sobre la comida que entra al cuerpo?",
+          "clave": "El comentario apostólico dentro del propio versículo 19 declara que «toda clase de comida es aceptable a los ojos de Dios» —literalmente en el griego del Codex: καθαριζων παντα τα βρωματα («declarando puros todos los alimentos»)—. No se limita a manos sin lavar: el Señor mismo revocó la distinción levítica entre carnes limpias e inmundas.",
+          "refs": [
+            {
+              "libro": "marcos",
+              "cap": 7,
+              "desde": 18,
+              "hasta": 19,
+              "label": "Marcos 7:18-19",
+              "ntv": [
+                {
+                  "n": 18,
+                  "text": "¿Ustedes tampoco entienden? —preguntó—. ¿No se dan cuenta de que la comida que introducen en su cuerpo no puede contaminarlos?"
+                },
+                {
+                  "n": 19,
+                  "text": "La comida no entra en su corazón, sólo pasa a través del estómago y luego termina en la cloaca. (Al decir eso, declaró que toda clase de comida es aceptable a los ojos de Dios)."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 18,
+                  "grc": "και λεγει αυτοιϲ §0ουτω και ϋμιϲ αϲυνετοι εϲτε ουπω νοειτε οτι παν το εξωθεν ειϲπορευομενον ου κοινοι τ‹ο› §2ανον"
+                },
+                {
+                  "n": 19,
+                  "grc": "οτι ουκ ειϲπορευετε αυτου ειϲ την καρδιαν αλλ ειϲ την κοιλιαν και ειϲ τον αφεδρωνα εκβαλλετε καθαριζων παντα τα βρωματα ·"
+                }
+              ],
+              "pagina": "76.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 17,
+          "texto": "Según 1 Timoteo 4:3-5, ¿con qué tipo de advertencia vincula Pablo el prohibir ciertos alimentos que Dios creó para comerse con gratitud, y qué principio establece para el creyente?",
+          "clave": "El contexto inmediato (1 Timoteo 4:1-3) vincula la prohibición religiosa de alimentos con «espíritus engañadores y enseñanzas que provienen de demonios». La regla bíblica es clara: «todo lo que Dios creó es bueno, no deberíamos rechazar nada, sino recibirlo con gratitud. Pues sabemos que se hace aceptable por la palabra de Dios y la oración».",
+          "refs": [
+            {
+              "libro": "1-timoteo",
+              "cap": 4,
+              "desde": 3,
+              "hasta": 5,
+              "label": "1 Timoteo 4:3-5",
+              "ntv": [
+                {
+                  "n": 3,
+                  "text": "Dirán que está mal casarse y que está mal comer determinados alimentos; pero Dios creó esos alimentos para que los coman con gratitud las personas fieles que conocen la verdad."
+                },
+                {
+                  "n": 4,
+                  "text": "Ya que todo lo que Dios creó es bueno, no deberíamos rechazar nada, sino recibirlo con gratitud."
+                },
+                {
+                  "n": 5,
+                  "text": "Pues sabemos que se hace aceptable por la palabra de Dios y la oración."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 3,
+                  "grc": "κωλυοντων γαμειν απεχεϲθαι βρωματων α ο ‹θϲ› εκτιϲεν ειϲ μεταλημψιν μετα ευχαριϲτιαϲ τοιϲ πιϲτοιϲ και επεγνωκοϲι την αληθιαν"
+                },
+                {
+                  "n": 4,
+                  "grc": "οτι παν κτιϲμα ‹θυ› καλον και ουδεν αποβλητον μετα ευχαριϲτιαϲ λαμβανομενον"
+                },
+                {
+                  "n": 5,
+                  "grc": "αγιαζεται γαρ δια λογου ‹θυ› και εντευξεωϲ"
+                }
+              ],
+              "pagina": "86.2v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "1-timoteo",
+              "cap": 4,
+              "desde": 1,
+              "hasta": 3,
+              "label": "1 Timoteo 4:1-3"
+            }
+          ]
+        },
+        {
+          "n": 18,
+          "texto": "En Romanos 14:17, ¿en qué consiste el reino de Dios frente a las normas sobre comidas y bebidas?",
+          "clave": "«Pues el reino de Dios no se trata de lo que comemos o bebemos, sino de llevar una vida de bondad, paz y alegría en el Espíritu Santo» (véase también 1 Corintios 8:8). Convertir la dieta levítica en deber religioso ante Dios desplaza el centro del Evangelio hacia observancias externas.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 14,
+              "desde": 17,
+              "hasta": 17,
+              "label": "Romanos 14:17",
+              "ntv": [
+                {
+                  "n": 17,
+                  "text": "Pues el reino de Dios no se trata de lo que comemos o bebemos, sino de llevar una vida de bondad, paz y alegría en el Espíritu Santo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 17,
+                  "grc": "ου γαρ εϲτιν η βαϲιλεια του ‹θυ› βρωϲιϲ και ποϲιϲ · αλλα δικαιοϲυνη · και ειρηνη · και χαρα εν ‹πν›ι αγιω ˙"
+                }
+              ],
+              "pagina": "82.6v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "1-corintios",
+              "cap": 8,
+              "desde": 8,
+              "hasta": 8,
+              "label": "1 Corintios 8:8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "titulo": "El santuario celestial y 1844",
+      "desde": 19,
+      "hasta": 27,
+      "preguntas": [
+        {
+          "n": 19,
+          "texto": "Según Hebreos 1:3, ¿en qué momento exacto se sentó Jesús «en el lugar de honor, a la derecha del majestuoso Dios en el cielo»?",
+          "clave": "«Después de habernos limpiado de nuestros pecados», es decir, inmediatamente tras su resurrección y ascensión en el siglo I. La Escritura nunca enseña que Cristo permaneciera en un «primer compartimiento» del cielo fuera de la presencia del trono del Padre hasta 1844.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 1,
+              "desde": 3,
+              "hasta": 3,
+              "label": "Hebreos 1:3",
+              "ntv": [
+                {
+                  "n": 3,
+                  "text": "El Hijo irradia la gloria de Dios y expresa el carácter mismo de Dios, y sostiene todo con el gran poder de su palabra. Después de habernos limpiado de nuestros pecados, se sentó en el lugar de honor, a la derecha del majestuoso Dios en el cielo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 3,
+                  "grc": "οϲ ων απαυγαϲμα τηϲ δοξηϲ και χαρακτηρ τηϲ ϋποϲταϲεωϲ αυτου φερ‹ω› τε τα παντα τω ρηματι τηϲ δυναμεωϲ αυτου καθαριϲμ‹ο› των αμαρτιων §0 ποιηϲαμενοϲ εκαθιϲ‹ε› εν δεξια τηϲ μεγαλωϲυνηϲ εν υψηλοιϲ"
+                }
+              ],
+              "pagina": "85.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 20,
+          "texto": "En Hebreos 6:19-20, cuando «Jesús ya entró allí por nosotros», ¿a qué lugar del santuario celestial entró desde su ascensión: al compartimiento exterior o «a través de la cortina al santuario interior de Dios»?",
+          "clave": "La frase «a través de la cortina» (literalmente «al interior del velo», ειϲ το εϲωτερον του καταπεταϲματοϲ) designa en todo el Antiguo Testamento y en Hebreos el Lugar Santísimo mismo, donde está el trono de Dios. Cristo ya está allí desde el siglo I como nuestro Sumo Sacerdote; no tuvo que esperar dieciocho siglos hasta el 22 de octubre de 1844.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 6,
+              "desde": 19,
+              "hasta": 20,
+              "label": "Hebreos 6:19-20",
+              "ntv": [
+                {
+                  "n": 19,
+                  "text": "Esta esperanza es un ancla firme y confiable para el alma; nos conduce a través de la cortina al santuario interior de Dios."
+                },
+                {
+                  "n": 20,
+                  "text": "Jesús ya entró allí por nosotros. Él ha llegado a ser nuestro eterno Sumo Sacerdote, según el orden de Melquisedec."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 19,
+                  "grc": "ην ωϲ αγκυραν εχομεν τηϲ ψυχηϲ αϲφαλη τε και βεβαιαν και ειϲερχομεν‹η› ειϲ το εϲωτερον του καταπεταϲματοϲ"
+                },
+                {
+                  "n": 20,
+                  "grc": "οπου προδρομοϲ υπερ ημων ειϲηλθεν ‹ιϲ› κατα την ταξιν μελχειϲεδεκ αρχϊερευϲ γενομενοϲ ειϲ τον αιωνα"
+                }
+              ],
+              "pagina": "85.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 21,
+          "texto": "En Hebreos 9:11-12, ¿cuántas veces entra Cristo en el Lugar Santísimo y qué resultado aseguró ya con su única entrada?",
+          "clave": "El texto subraya en griego εφαπαξ —«una sola vez y para siempre»— asegurando ya nuestra «redención eterna». El contraste es directo con los sacerdotes levíticos: Cristo no entró en dos fases (primero al Santo en el 31 d.C. y luego al Santísimo en 1844).",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 9,
+              "desde": 11,
+              "hasta": 12,
+              "label": "Hebreos 9:11-12",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Entonces Cristo ahora ha llegado a ser el Sumo Sacerdote por sobre todas las cosas buenas que han venido. Él entró en ese tabernáculo superior y más perfecto que está en el cielo, el cual no fue hecho por manos humanas ni forma parte del mundo creado."
+                },
+                {
+                  "n": 12,
+                  "text": "Con su propia sangre —no con la sangre de cabras ni de becerros— entró en el Lugar Santísimo una sola vez y para siempre, y aseguró nuestra redención eterna."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "‹χϲ› δε παραγενομενοϲ αρχιερευϲ τ‹ω› μελλοντων αγαθων δια τηϲ μειζονοϲ και τελειοτεραϲ ϲκηνηϲ ου χειροποιητου τουτ εϲτιν ου ταυτηϲ τηϲ κτιϲεωϲ"
+                },
+                {
+                  "n": 12,
+                  "grc": "ουδε δι αιματοϲ τραγων και μοϲχων δια δε του ϊδιου αιματοϲ ειϲηλθεν §0ειϲ §2τα §4αγια εφαπαξ ειϲ τα αγια αιωνιαν λυτρωϲιν ευραμενοϲ"
+                }
+              ],
+              "pagina": "85.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 22,
+          "texto": "Según Hebreos 9:24-26, ¿entró Cristo en el cielo mismo para iniciar siglos después una segunda fase de expiación o de investigación, o para presentarse ante Dios con una obra ya consumada?",
+          "clave": "Cristo entró en el cielo mismo «para presentarse ahora delante de Dios a favor de nosotros», y se presentó «una sola vez y para siempre para quitar el pecado mediante su propia muerte en sacrificio». Su intercesión actual descansa en un perdón ya ganado, no en una pesquisa pendiente.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 9,
+              "desde": 24,
+              "hasta": 26,
+              "label": "Hebreos 9:24-26",
+              "ntv": [
+                {
+                  "n": 24,
+                  "text": "Pues Cristo no entró en un lugar santo hecho por manos humanas, que era sólo una copia del verdadero, que está en el cielo. Él entró en el cielo mismo para presentarse ahora delante de Dios a favor de nosotros;"
+                },
+                {
+                  "n": 25,
+                  "text": "y no entró en el cielo para ofrecerse a sí mismo una y otra vez, como lo hace el sumo sacerdote aquí en la tierra, que entra en el Lugar Santísimo año tras año con la sangre de un animal."
+                },
+                {
+                  "n": 26,
+                  "text": "Si eso hubiera sido necesario, Cristo tendría que haber sufrido la muerte una y otra vez, desde el principio del mundo; pero ahora, en el fin de los tiempos, Cristo se presentó una sola vez y para siempre para quitar el pecado mediante su propia muerte en sacrificio."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 24,
+                  "grc": "ου γαρ ειϲ χιροποιητα ειϲηλθεν αγια ‹χϲ› αντιτυπα τ‹ω› αληθινων αλλ ειϲ αυτον τον ουραν‹ο› νυν εμφανιϲθηναι τω προϲωπω του ‹θυ› ϋπερ ημ‹ω›"
+                },
+                {
+                  "n": 25,
+                  "grc": "ουδ ϊνα πολλακιϲ προϲφερη εαυτ‹ο› ωϲπερ ο αρχιερευϲ ειϲερχεται ειϲ τα αγια §0 κατ ενιαυτ‹ο› εν αιματι αλλοτριω"
+                },
+                {
+                  "n": 26,
+                  "grc": "επει εδει αυτ‹ο› πολλακιϲ παθε‹ι› απο καταβοληϲ κοϲμου νυνϊ δε απαξ επι ϲυντελεια των αιωνων ειϲ αθετηϲιν τηϲ αμαρτιαϲ δια τηϲ θυϲιαϲ αυτου πεφανερωται"
+                }
+              ],
+              "pagina": "85.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 23,
+          "texto": "¿Qué enseña Hebreos 10:11-14 sobre la postura de Cristo («se sentó») y el alcance («perfeccionó para siempre») de su único sacrificio frente a los ritos repetidos del santuario?",
+          "clave": "Mientras los sacerdotes oficiaban de pie porque sus sacrificios «nunca pueden quitar los pecados», Cristo «se ofreció a sí mismo a Dios como un solo sacrificio por los pecados, válido para siempre. Luego se sentó». Mediante esa única ofrenda «perfeccionó para siempre a los que está haciendo santos».",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 10,
+              "desde": 11,
+              "hasta": 14,
+              "label": "Hebreos 10:11-14",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Bajo el antiguo pacto, el sacerdote oficia de pie delante del altar día tras día, ofreciendo los mismos sacrificios una y otra vez, los cuales nunca pueden quitar los pecados;"
+                },
+                {
+                  "n": 12,
+                  "text": "pero nuestro Sumo Sacerdote se ofreció a sí mismo a Dios como un solo sacrificio por los pecados, válido para siempre. Luego se sentó en el lugar de honor, a la derecha de Dios."
+                },
+                {
+                  "n": 13,
+                  "text": "Allí espera hasta que sus enemigos sean humillados y puestos por debajo de sus pies."
+                },
+                {
+                  "n": 14,
+                  "text": "Pues mediante esa única ofrenda, él perfeccionó para siempre a los que está haciendo santos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "και παϲ μεν ϊερευϲ εϲτηκεν §0λιτουργων §2καθ §4ημεραν και ταϲ αυταϲ πολλακιϲ προϲφερ‹ω› θυϲιαϲ αιτινεϲ ουδεποτε δυνανται περιελειν αμαρτιαϲ"
+                },
+                {
+                  "n": 12,
+                  "grc": "ουτοϲ δε μιαν ϋπερ αμαρτιων προϲενεγκαϲ θυϲιαν ειϲ το διηνεκεϲ εκαθιϲεν §0εκ δεξια του ‹θυ›"
+                },
+                {
+                  "n": 13,
+                  "grc": "το λοιπον εκδεχομενοϲ εωϲ τεθωϲιν οι εχθροι αυτου υποποδι‹ο› των ποδων αυτου"
+                },
+                {
+                  "n": 14,
+                  "grc": "μια γαρ προϲφορα τετελιωκεν ειϲ το διηνεκεϲ τουϲ αγιαζομενουϲ"
+                }
+              ],
+              "pagina": "85.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 24,
+          "texto": "Cuando Jesús exclamó desde la cruz en Juan 19:30 «¡Todo ha terminado!» (en griego τετελεϲται), ¿dejó incompleta la expiación esperando un juicio investigador iniciado en 1844?",
+          "clave": "Τετελεϲται (tiempo perfecto consumado) significa que la obra ha quedado terminada por completo y su efecto permanece vigente: la deuda del pecado fue saldada íntegramente en el Calvario. Enseñar que en 1844 comenzó una obra de borradura pendiente de pecados confesados vacía el sentido pleno de la cruz.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 19,
+              "desde": 30,
+              "hasta": 30,
+              "label": "Juan 19:30",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "Después de probar el vino, Jesús dijo: ¡Todo ha terminado! Entonces inclinó la cabeza y entregó su espíritu."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "οτε ουν ελαβεν το οξοϲ §0 ειπεν · τετελεϲται · και κλειναϲ την κεφαλην παρεδωκεν το §2π‹ν›α ·"
+                }
+              ],
+              "pagina": "81.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 25,
+          "texto": "En Mateo 27:50-51, ¿qué significó que «la cortina del santuario del templo se rasgó en dos, de arriba a abajo» en el preciso instante de la muerte de Cristo?",
+          "clave": "Aquella cortina separaba el Lugar Santo del Lugar Santísimo. Al rasgarse desde arriba en la muerte de Jesús, Dios anunció el acceso inmediato y abierto a Su presencia por la sangre de Cristo (cf. Hebreos 10:19-20), dejando superada la división en dos recintos.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 27,
+              "desde": 50,
+              "hasta": 51,
+              "label": "Mateo 27:50-51",
+              "ntv": [
+                {
+                  "n": 50,
+                  "text": "Entonces Jesús volvió a gritar y entregó su espíritu."
+                },
+                {
+                  "n": 51,
+                  "text": "En ese momento, la cortina del santuario del templo se rasgó en dos, de arriba a abajo. La tierra tembló, las rocas se partieron en dos,"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 50,
+                  "grc": "ο δε ‹ιϲ› παλιν κραξαϲ φωνη μεγαλη αφηκεν το ‹πνα› ·"
+                },
+                {
+                  "n": 51,
+                  "grc": "και ϊδου το καταπεταϲμα του ναου εϲχιϲθη ειϲ δυο ανωθεν εωϲ κατω · και η γη §0εϲιϲθη και αι πετραι εϲχιϲθηϲαν"
+                }
+              ],
+              "pagina": "76.1v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "hebreos",
+              "cap": 10,
+              "desde": 19,
+              "hasta": 20,
+              "label": "Hebreos 10:19-20"
+            }
+          ]
+        },
+        {
+          "n": 26,
+          "texto": "Al leer Daniel 8:13-14 en su propio contexto, ¿hablan las «dos mil trescientas noches y mañanas» (o «tardes y mañanas») de años proféticos que terminan en 1844, o del atropello al santuario histórico por un rey surgido del imperio griego?",
+          "clave": "El ángel explica en Daniel 8:20-21 que los reinos en escena son Medopersia y Grecia, y que el cuerno pequeño profana el templo y detiene los sacrificios diarios. Convertir días en años usando una regla ajena al capítulo para rescatar el fiasco de William Miller en 1844 fuerza un pasaje que nunca menciona ese año ni un juicio investigador celestial.",
+          "refs": [
+            {
+              "libro": "daniel",
+              "cap": 8,
+              "desde": 13,
+              "hasta": 14,
+              "label": "Daniel 8:13-14",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Entonces oí a dos seres santos que hablaban entre sí. Uno de ellos preguntó: — ¿Cuánto tiempo durarán los sucesos de esta visión? ¿Por cuánto tiempo la rebelión que causa profanación detendrá los sacrificios diarios? ¿Por cuánto tiempo pisotearán el templo y al ejército celestial?"
+                },
+                {
+                  "n": 14,
+                  "text": "El otro le contestó: —Pasarán dos mil trescientas noches y mañanas; después el templo será restaurado."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "daniel",
+              "cap": 8,
+              "desde": 20,
+              "hasta": 21,
+              "label": "Daniel 8:20-21"
+            }
+          ]
+        },
+        {
+          "n": 27,
+          "texto": "Al comparar Levítico 16:21-22 con 1 Pedro 2:24, ¿puede trasladarse la culpa final de los pecados confesados sobre Satanás («Azazel»), o la Escritura atribuye exclusivamente a Cristo cargar nuestros pecados?",
+          "clave": "1 Pedro 2:24 afirma sin ambigüedad que Cristo «cargó nuestros pecados sobre su cuerpo en la cruz» (y Juan 1:29 lo llama el Cordero de Dios que quita el pecado del mundo). En Levítico 16 la expiación ya se había efectuado por sangre antes de enviar el chivo al desierto; enseñar que al fin del juicio investigador Cristo deposita los pecados de los santos sobre Satanás introduce al diablo en la eliminación final del pecado.",
+          "refs": [
+            {
+              "libro": "levitico",
+              "cap": 16,
+              "desde": 21,
+              "hasta": 22,
+              "label": "Levítico 16:21-22",
+              "ntv": [
+                {
+                  "n": 21,
+                  "text": "Pondrá ambas manos encima de la cabeza del chivo y confesará sobre él toda la perversidad, la rebelión y los pecados del pueblo de Israel. De esta forma, traspasará los pecados del pueblo a la cabeza del chivo. Después un hombre, especialmente seleccionado para la tarea, llevará el chivo al desierto."
+                },
+                {
+                  "n": 22,
+                  "text": "Al irse el chivo al desierto, llevará todos los pecados del pueblo sobre sí mismo a una tierra desolada."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            },
+            {
+              "libro": "1-pedro",
+              "cap": 2,
+              "desde": 24,
+              "hasta": 24,
+              "label": "1 Pedro 2:24",
+              "ntv": [
+                {
+                  "n": 24,
+                  "text": "Él mismo cargó nuestros pecados sobre su cuerpo en la cruz, para que nosotros podamos estar muertos al pecado y vivir para lo que es recto. Por sus heridas, son sanados."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 24,
+                  "grc": "οϲ ταϲ αμαρτιαϲ ημων αυτοϲ ανηνεγκεν §0 τω ϲωματι αυτου επι το ξυλον ινα ταιϲ αμαρτιαιϲ απογενομενοι τη δικαιοϲυνη ζηϲωμεν ου τω μωλωπι §2αυτου ϊαθητε"
+                }
+              ],
+              "pagina": "89.4r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "juan",
+              "cap": 1,
+              "desde": 29,
+              "hasta": 29,
+              "label": "Juan 1:29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "titulo": "Seguridad de la salvación y el juicio",
+      "desde": 28,
+      "hasta": 34,
+      "preguntas": [
+        {
+          "n": 28,
+          "texto": "En Juan 5:24, ¿qué asegura Jesús en tiempo presente a quienes escuchan su mensaje y creen en Dios: que serán examinados primero en un juicio investigador futuro para ver si conservan la vida, o que «nunca serán condenados» y «ya han pasado de la muerte a la vida»?",
+          "clave": "El versículo contiene tres tiempos definitivos: «tienen vida eterna» (presente), «nunca serán condenados» (en el griego del Codex, ειϲ κριϲιν ουκ ερχεται, «no viene a juicio») y «ya han pasado de la muerte a la vida» (perfecto consumado). La certeza del perdón está sellada hoy en Cristo, no pendiente de un escrutinio iniciado en 1844.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 5,
+              "desde": 24,
+              "hasta": 24,
+              "label": "Juan 5:24",
+              "ntv": [
+                {
+                  "n": 24,
+                  "text": "Les digo la verdad, todos los que escuchan mi mensaje y creen en Dios, quien me envió, tienen vida eterna. Nunca serán condenados por sus pecados, pues ya han pasado de la muerte a la vida."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 24,
+                  "grc": "αμην αμην λεγω ϋμιν οτι ο τον λογ‹ο› μου ακουων και πιϲτευων τω πεμψαντι με εχει ζωην αιωνιον · και ειϲ κριϲιν ουκ ερχεται · αλλα μεταβεβηκεν εκ του θανατου ειϲ την ζωην :"
+                }
+              ],
+              "pagina": "80.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 29,
+          "texto": "Según Romanos 8:1, ¿qué condición declara Pablo hoy mismo para quienes pertenecen a Cristo Jesús frente a todo juicio condenatorio?",
+          "clave": "«Por lo tanto, ya no hay condenación para los que pertenecen a Cristo Jesús». Quien vive en unión con Cristo por la fe no espera una auditoría posterior de sus obras para saber si la justificación de Romanos 5:1 sigue en pie.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 8,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Romanos 8:1",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Por lo tanto, ya no hay condenación para los que pertenecen a Cristo Jesús;"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "ουδεν αρα νυν κατακριμα τοιϲ εν ‹χω› ‹ιυ› §0"
+                }
+              ],
+              "pagina": "82.3v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "romanos",
+              "cap": 5,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Romanos 5:1"
+            }
+          ]
+        },
+        {
+          "n": 30,
+          "texto": "Según Efesios 1:13-14, ¿cuándo fueron identificados y sellados los creyentes con el Espíritu Santo y qué función tiene ese sello respecto a nuestra herencia eterna?",
+          "clave": "Fueron sellados «cuando creyeron en Cristo» —no después de aprobar una investigación celestial—, y el Espíritu es «la garantía que tenemos de parte de Dios de que nos dará la herencia que nos prometió». Una garantía divina asegura la entrega final.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 1,
+              "desde": 13,
+              "hasta": 14,
+              "label": "Efesios 1:13-14",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Y ahora ustedes, los gentiles, también han oído la verdad, la Buena Noticia de que Dios los salva. Además, cuando creyeron en Cristo, Dios los identificó como suyos al darles el Espíritu Santo, el cual había prometido tiempo atrás."
+                },
+                {
+                  "n": 14,
+                  "text": "El Espíritu es la garantía que tenemos de parte de Dios de que nos dará la herencia que nos prometió y de que nos ha comprado para que seamos su pueblo. Dios hizo todo esto para que nosotros le diéramos gloria y alabanza."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "εν ω και §0ϋμιϲ ακουϲαντεϲ τον λογον τηϲ αληθιαϲ το ευαγγελιον τηϲ ϲωτηριαϲ υμων εν ω και πιϲτευϲαντεϲ εϲφραγιϲθητε τω ‹πνι› τηϲ επαγγελιαϲ τω αγιω"
+                },
+                {
+                  "n": 14,
+                  "grc": "οϲ εϲτ‹ι› αρραβων τηϲ κληρονομιαϲ ημ‹ω› ειϲ απολυτρωϲ‹ι› τηϲ περιποιηϲεωϲ ειϲ επαινον δοξηϲ αυτου"
+                }
+              ],
+              "pagina": "84.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 31,
+          "texto": "Según Efesios 4:30, ¿hasta qué fecha permanece vigente el sello del Espíritu Santo sobre el creyente?",
+          "clave": "«Él los identificó como suyos, y así les ha garantizado que serán salvos el día de la redención» (en griego, un sello «para el día de la redención»). El creyente está sellado desde la conversión hasta la resurrección final.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 4,
+              "desde": 30,
+              "hasta": 30,
+              "label": "Efesios 4:30",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "No entristezcan al Espíritu Santo de Dios con la forma en que viven. Recuerden que él los identificó como suyos, y así les ha garantizado que serán salvos el día de la redención."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "και μη λυπειτε το ‹πν›α το αγιον του ‹θυ› εν ω εϲφραγιϲθητε ειϲ ημεραν απολυτρωϲεωϲ"
+                }
+              ],
+              "pagina": "84.6r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 32,
+          "texto": "Según 1 Juan 5:13, ¿es presunción afirmar que un creyente puede saber hoy que tiene vida eterna, o es el propósito expreso por el cual se escribió la carta?",
+          "clave": "Juan declara el fin exacto de su epístola: «para que sepan que tienen vida eterna». Un sistema que deja al creyente temiendo hasta su muerte no saber si su nombre permanecerá en el libro del juicio investigador contradice esta seguridad bíblica.",
+          "refs": [
+            {
+              "libro": "1-juan",
+              "cap": 5,
+              "desde": 13,
+              "hasta": 13,
+              "label": "1 Juan 5:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Les he escrito estas cosas a ustedes, que creen en el nombre del Hijo de Dios, para que sepan que tienen vida eterna."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "ταυτα εγραψα υμιν ϊνα ειδητε οτι ζωην αιωνιον εχετε §0τοιϲ §2πιϲτευουϲιν ειϲ το ονομα του υϊου του ‹θυ›"
+                }
+              ],
+              "pagina": "89.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 33,
+          "texto": "Frente a la idea de que un tribunal en el cielo examina expedientes vida por vida desde 1844 para demostrar ante el universo quién merece ser salvo, ¿qué declara 2 Timoteo 2:19 sobre el conocimiento que Dios ya tiene de los suyos?",
+          "clave": "«El SEÑOR conoce a los que son suyos». Dios no requiere siglos de revisión documental para descubrir qué personas le pertenecen, ni somete a nuevo examen judicial a quienes ya ha justificado en Su Hijo (cf. Romanos 8:33-34).",
+          "refs": [
+            {
+              "libro": "2-timoteo",
+              "cap": 2,
+              "desde": 19,
+              "hasta": 19,
+              "label": "2 Timoteo 2:19",
+              "ntv": [
+                {
+                  "n": 19,
+                  "text": "Sin embargo, la verdad de Dios se mantiene firme como una piedra de cimiento con la siguiente inscripción: El SEÑOR conoce a los que son suyos, y Todos los que pertenecen al SEÑOR deben apartarse de la maldad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 19,
+                  "grc": "ο μεντοι ϲτερεοϲ θεμελιοϲ του §0‹κυ› εϲτηκεν εχων την ϲφραγιδα ταυτην εγνω ‹κϲ› §2πανταϲ τουϲ ονταϲ αυτου και αποϲτητω απο αδικιαϲ παϲ ο ονομαζων το ονομα ‹κυ›"
+                }
+              ],
+              "pagina": "86.4r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "romanos",
+              "cap": 8,
+              "desde": 33,
+              "hasta": 34,
+              "label": "Romanos 8:33-34"
+            }
+          ]
+        },
+        {
+          "n": 34,
+          "texto": "Según Romanos 3:28 y Efesios 2:8-9, ¿se obtiene o se conserva la salvación por alcanzar obediencia impecable sin Mediador antes de la venida de Cristo, o «por medio de la fe y no por obedecer la ley»?",
+          "clave": "Ambos pasajes excluyen cualquier mérito de ley o logro humano como base ante Dios: somos declarados justos «por medio de la fe y no por obedecer la ley», y salvos por gracia como regalo, no como premio por cosas buenas hechas. Pretender que en la recta final los santos deben sostenerse ante Dios sin pecado y sin intercesor reintroduce la justicia por obras.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 3,
+              "desde": 28,
+              "hasta": 28,
+              "label": "Romanos 3:28",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Así que somos declarados justos a los ojos de Dios por medio de la fe y no por obedecer la ley."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "λογιζομεθα γαρ §0δικαιουϲθαι §2πιϲτι ανθρωπον χωριϲ εργων νομου ˙"
+                }
+              ],
+              "pagina": "82.2r"
+            },
+            {
+              "libro": "efesios",
+              "cap": 2,
+              "desde": 8,
+              "hasta": 9,
+              "label": "Efesios 2:8-9",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Dios los salvó por su gracia cuando creyeron. Ustedes no tienen ningún mérito en eso; es un regalo de Dios."
+                },
+                {
+                  "n": 9,
+                  "text": "La salvación no es un premio por las cosas buenas que hayamos hecho, así que ninguno de nosotros puede jactarse de ser salvo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "τη γαρ χαριτι εϲτε ϲεϲωϲμενοι δια πιϲτεωϲ και τουτο ουκ εξ υμων ‹θυ› το δωρον"
+                },
+                {
+                  "n": 9,
+                  "grc": "ουκ εξ εργων ϊνα μη τιϲ καυχηϲηται"
+                }
+              ],
+              "pagina": "84.5r"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "V",
+      "titulo": "Estado intermedio y destino eterno",
+      "desde": 35,
+      "hasta": 42,
+      "preguntas": [
+        {
+          "n": 35,
+          "texto": "En Lucas 23:42-43, cuando el criminal arrepentido pidió a Jesús que lo recordara cuando llegara en su reino, ¿prometió Jesús un sueño inconsciente hasta el fin del mundo, o estar con Él «hoy» en el paraíso?",
+          "clave": "Jesús respondió de manera directa y enfática: «Te aseguro que hoy estarás conmigo en el paraíso». En ningún pasaje del griego usa Jesús «te aseguro hoy» para retrasar la promesa milenios; «hoy» (ϲημερον) modifica directamente a «estarás conmigo», porque la muerte física no separa de la comunión consciente con Cristo.",
+          "refs": [
+            {
+              "libro": "lucas",
+              "cap": 23,
+              "desde": 42,
+              "hasta": 43,
+              "label": "Lucas 23:42-43",
+              "ntv": [
+                {
+                  "n": 42,
+                  "text": "Luego dijo: —Jesús, acuérdate de mí cuando vengas en tu reino."
+                },
+                {
+                  "n": 43,
+                  "text": "Jesús respondió: —Te aseguro que hoy estarás conmigo en el paraíso."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 42,
+                  "grc": "και ελεγ‹ε› §0 ‹ιυ› μνηϲθητι μου οταν ελθηϲ εν τη βαϲιλια ϲου"
+                },
+                {
+                  "n": 43,
+                  "grc": "κ(αι) ειπεν αυτω αμην λεγω ϲοι ϲημερον μετ εμου εϲη εν τω παραδιϲω"
+                }
+              ],
+              "pagina": "79.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 36,
+          "texto": "Según Filipenses 1:21-23, ¿por qué consideraba Pablo que «partir y estar con Cristo» tras morir sería «mucho mejor» que seguir vivo sirviendo en el cuerpo?",
+          "clave": "Si la muerte equivaliera a siglos de inexistencia o inconsciencia absoluta hasta la resurrección, morir nunca sería estar inmediatamente «con Cristo» ni sería «mucho mejor» que disfrutar ahora de la presencia consciente de Cristo mientras predicaba el Evangelio.",
+          "refs": [
+            {
+              "libro": "filipenses",
+              "cap": 1,
+              "desde": 21,
+              "hasta": 23,
+              "label": "Filipenses 1:21-23",
+              "ntv": [
+                {
+                  "n": 21,
+                  "text": "Pues, para mí, vivir significa vivir para Cristo y morir es aún mejor."
+                },
+                {
+                  "n": 22,
+                  "text": "Pero si vivo, puedo realizar más labor fructífera para Cristo. Así que realmente no sé qué es mejor."
+                },
+                {
+                  "n": 23,
+                  "text": "Estoy dividido entre dos deseos: quisiera partir y estar con Cristo, lo cual sería mucho mejor para mí;"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 21,
+                  "grc": "εμοι γαρ το ζην ‹χϲ› και το αποθανειν κερδοϲ"
+                },
+                {
+                  "n": 22,
+                  "grc": "ει δε το ζην εν ϲαρκι τουτο μοι καρποϲ εργου και τι αιρηϲομαι ου γνωριζω"
+                },
+                {
+                  "n": 23,
+                  "grc": "ϲυνεχομαι δε εκ των δυο την επιθυμιαν εχ‹ω› ειϲ το αναλυϲαι και ϲυν ‹χω› ειναι πολλω §0 μαλλον κριϲϲ‹ο›"
+                }
+              ],
+              "pagina": "84.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 37,
+          "texto": "En 2 Corintios 5:6-8, ¿con qué identifica Pablo estar «fuera de este cuerpo terrenal»?",
+          "clave": "Lo equipara de inmediato con estar «en el hogar celestial con el Señor». Para el apóstol solo hay dos moradas alternativas en este tramo: en el cuerpo terrenal (ausentes del Señor) o fuera de este cuerpo terrenal (en el hogar con el Señor).",
+          "refs": [
+            {
+              "libro": "2-corintios",
+              "cap": 5,
+              "desde": 6,
+              "hasta": 8,
+              "label": "2 Corintios 5:6-8",
+              "ntv": [
+                {
+                  "n": 6,
+                  "text": "Así que siempre vivimos en plena confianza, aunque sabemos que mientras vivamos en este cuerpo no estamos en el hogar celestial con el Señor."
+                },
+                {
+                  "n": 7,
+                  "text": "Pues vivimos por lo que creemos y no por lo que vemos."
+                },
+                {
+                  "n": 8,
+                  "text": "Sí, estamos plenamente confiados, y preferiríamos estar fuera de este cuerpo terrenal porque entonces estaríamos en el hogar celestial con el Señor."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 6,
+                  "grc": "θαρρουντεϲ ουν παντοτε και ειδοτεϲ οτι ενδημο‹υ›τεϲ εν τω ϲωματι εκδημουμεν απο του ‹κυ›"
+                },
+                {
+                  "n": 7,
+                  "grc": "δια πιϲτεωϲ γαρ περιπατουμεν ου δια ειδουϲ"
+                },
+                {
+                  "n": 8,
+                  "grc": "θαρρουντεϲ δε και ευδοκουμεν μαλλον εκδημηϲαι §0 του ϲωματοϲ και ενδημηϲαι προϲ τον ‹κν›"
+                }
+              ],
+              "pagina": "83.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 38,
+          "texto": "En Lucas 16:22-26, ¿qué estado inmediato describe Jesús para Lázaro y para el hombre rico justo después de morir y ser enterrados?",
+          "clave": "Aun empleando recursos propios de una enseñanza narrativa, Jesús retrata a ambos en existencia consciente, con memoria y percepción inmediatamente después de la muerte física —y antes de la resurrección final, pues los hermanos del rico seguían vivos en la tierra—.",
+          "refs": [
+            {
+              "libro": "lucas",
+              "cap": 16,
+              "desde": 22,
+              "hasta": 26,
+              "label": "Lucas 16:22-26",
+              "ntv": [
+                {
+                  "n": 22,
+                  "text": "Con el tiempo, el hombre pobre murió, y los ángeles lo llevaron a estar con Abraham. El hombre rico también murió y fue enterrado,"
+                },
+                {
+                  "n": 23,
+                  "text": "y su alma fue al lugar de los muertos. Allí, en medio del tormento, vio a Abraham a lo lejos con Lázaro junto a él."
+                },
+                {
+                  "n": 24,
+                  "text": "El hombre rico gritó: «¡Padre Abraham, ten piedad! Envíame a Lázaro para que moje la punta de su dedo en agua y refresque mi lengua. Estoy en angustia en estas llamas»."
+                },
+                {
+                  "n": 25,
+                  "text": "Abraham le dijo: «Hijo, recuerda que tuviste todo lo que quisiste durante tu vida, y Lázaro no tuvo nada. Ahora él está aquí recibiendo consuelo y tú estás en angustia."
+                },
+                {
+                  "n": 26,
+                  "text": "Además, hay un gran abismo que nos separa. Ninguno de nosotros puede cruzar hasta allí, y ninguno de ustedes puede cruzar hasta aquí»."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 22,
+                  "grc": "εγενετο δε αποθανιν τον πτωχον και απενεχθηναι αυτον ϋπο τ‹ω› αγγελων ειϲ τον κολπον αβρααμ απεθανεν δε και ο πλουϲιοϲ και εταφη"
+                },
+                {
+                  "n": 23,
+                  "grc": "§0 εν τω αδη επαραϲ τουϲ οφθαλμουϲ αυτου ϋπαρχων εν βαϲανοιϲ ορα αβρααμ απο μακροθεν και λαζαρον εν τοιϲ κολποιϲ αυτου"
+                },
+                {
+                  "n": 24,
+                  "grc": "και αυτοϲ φωνηϲαϲ ειπεν πατερ αβρααμ ελεηϲ‹ο› με και πεμψον λαζαρον ϊνα βαψη το ακρον του δακτυλου αυτου ϋδατι και καταψυξη την γλωϲϲαν μου οτι οδυνωμαι εν τη φλογι ταυτη ·"
+                },
+                {
+                  "n": 25,
+                  "grc": "ειπ‹ε› δε αβρααμ μνηϲθητι τεκνον οτι απελαβεϲ τα αγαθα ϲου εν τη ζωη ϲου και λαζαροϲ ομοιωϲ τα κακα νυν δε ωδε παρακαλειται ϲυ δε οδυναϲαι"
+                },
+                {
+                  "n": 26,
+                  "grc": "και εν παϲι τουτοιϲ μεταξυ ημων και ϋμ‹ω› χαϲμα μεγα §0εϲτηρικται οπωϲ οι θελοντεϲ διαβηναι ενθεν προϲ ϋμαϲ μη δυνωνται μηδε §2 εκειθεν προϲ ημαϲ διαπερωϲιν"
+                }
+              ],
+              "pagina": "79.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 39,
+          "texto": "En Apocalipsis 6:9-11, ¿dónde están las almas de quienes fueron asesinados por la palabra de Dios antes del juicio final, y qué están haciendo?",
+          "clave": "No duermen inconscientes en la tierra: se hallan «debajo del altar» en el cielo, claman con voz consciente («Oh, Soberano Señor, santo y verdadero, ¿cuánto tiempo…?») y reciben una túnica blanca mientras esperan hasta que se complete el número de sus hermanos.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 6,
+              "desde": 9,
+              "hasta": 11,
+              "label": "Apocalipsis 6:9-11",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Cuando el Cordero rompió el quinto sello, vi debajo del altar las almas de todos los que habían muerto como mártires por causa de la palabra de Dios y por haber sido fieles en su testimonio."
+                },
+                {
+                  "n": 10,
+                  "text": "Ellos clamaban al Señor y decían: Oh, Soberano Señor, santo y verdadero, ¿cuánto tiempo hasta que juzgues a la gente de este mundo y tomes venganza de nuestra sangre por lo que nos han hecho?"
+                },
+                {
+                  "n": 11,
+                  "text": "Entonces a cada uno de ellos se le dio una túnica blanca, y se les dijo que descansaran un poco más hasta que se completara el número de sus hermanos, los consiervos de Jesús que se unirían a ellos después de morir como mártires."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "και οτε ηνοιξεν την §0ϲφραγιδαν §2την ειδον ϋποκατω του θυϲιαϲτηριου ταϲ ψυχαϲ των ανθρωπ‹ω› των εϲφαγμεν‹ω› δια τον λογον του ‹θυ› και δια την μαρτυριαν §4και §6δια §8την §10μαρτυριαν ην §12εϲχ‹ο›"
+                },
+                {
+                  "n": 10,
+                  "grc": "και εκραξαν φωνη μεγαλη λεγοντεϲ εωϲ ποτε ο δεϲποτηϲ ο αγιοϲ και αληθινοϲ ου κρινειϲ κ(αι) εκδικηϲειϲ το αιμα ημων εκ των κατοικουντων επι τηϲ γηϲ"
+                },
+                {
+                  "n": 11,
+                  "grc": "και εδοθη αυτοιϲ εκαϲτω ϲτολη λευκη και ερεθη αυτοιϲ ϊνα αναπαυϲωνται επι χρονον μικρ‹ο› εωϲ πληρωϲωϲ‹ι› και οι ϲυνδουλοι αυτων και οι αδελφοι αυτων οι μελλοντεϲ αποκτεννεϲθαι §0υπο §2αυτ‹ω› ωϲ και αυτοι"
+                }
+              ],
+              "pagina": "90.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 40,
+          "texto": "Al leer juntos Eclesiastés 9:5 y 12:7 en el contexto del libro, ¿niega Eclesiastés la conciencia del espíritu ante Dios, o describe lo que ocurre «bajo el sol» antes de concluir que el espíritu regresa a Dios?",
+          "clave": "Eclesiastés 9:5 describe la condición visible de la existencia terrenal («los muertos no saben nada. Ya no reciben más recompensas, y nadie los recuerda»), razón por la cual el propio libro culmina en Eclesiastés 12:7 distinguiendo el destino del cuerpo y del espíritu: «el polvo volverá a la tierra, y el espíritu regresará a Dios, que fue quien lo dio».",
+          "refs": [
+            {
+              "libro": "eclesiastes",
+              "cap": 9,
+              "desde": 5,
+              "hasta": 5,
+              "label": "Eclesiastés 9:5",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "Los que están vivos al menos saben que un día van a morir, pero los muertos no saben nada. Ya no reciben más recompensas, y nadie los recuerda."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "οτι οι ζωντεϲ γνωϲ‹ο›ται · οτι αποθανουνται · και οι νεκροι · ουκ ειϲιν γινωϲκοντεϲ ουδεν · και ουκ εϲτιν αυτοιϲ ετι μιϲθοϲ · οτι επληϲθη η μνημη αυτων ·"
+                }
+              ],
+              "pagina": "66.3v"
+            },
+            {
+              "libro": "eclesiastes",
+              "cap": 12,
+              "desde": 7,
+              "hasta": 7,
+              "label": "Eclesiastés 12:7",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "Pues ese día el polvo volverá a la tierra, y el espíritu regresará a Dios, que fue quien lo dio."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 7,
+                  "grc": "και επιϲτρεψη επι την γην ο χουϲ ωϲ ην · και το π‹ν›α επιϲτρεψη προϲ τον ‹θν› · §0ωϲ εδωκεν αυτο ·"
+                }
+              ],
+              "pagina": "66.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 41,
+          "texto": "En Mateo 25:46, Jesús contrapone dos destinos finales usando exactamente el mismo adjetivo griego: «castigo eterno» y «vida eterna». ¿Permite la gramática del versículo tomar «eterno» como interminable en un lado de la frase y solo como efecto pasajero aniquilador en el otro?",
+          "clave": "No. «Castigo eterno» (κολαϲιν αιωνιον) y «vida eterna» (ζωην αιωνιον) forman una antítesis estrictamente simétrica dentro de una sola oración. Si el castigo cesara por extinción y no durara conscientemente como la vida, el paralelo de Cristo perdería coherencia lingüística (véase también Mateo 25:41).",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 25,
+              "desde": 46,
+              "hasta": 46,
+              "label": "Mateo 25:46",
+              "ntv": [
+                {
+                  "n": 46,
+                  "text": "Y ellos irán al castigo eterno, pero los justos entrarán en la vida eterna."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 46,
+                  "grc": "και > απελευϲονται > ουτοι ειϲ κολαϲ‹ι› αιωνιον οι δε δικαιοι ειϲ ζωην > αιωνιον"
+                }
+              ],
+              "pagina": "75.7v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "mateo",
+              "cap": 25,
+              "desde": 41,
+              "hasta": 41,
+              "label": "Mateo 25:41"
+            }
+          ]
+        },
+        {
+          "n": 42,
+          "texto": "¿Cómo concilia Apocalipsis 14:11 y 20:10 la doctrina de la aniquilación rápida del impío con la afirmación textual de que la bestia y el falso profeta siguen allí cuando el diablo es lanzado «para ser atormentados día y noche por siempre jamás»?",
+          "clave": "Mil años después de ser arrojados al lago de fuego en Apocalipsis 19:20, la bestia y el falso profeta no han dejado de existir: en Apocalipsis 20:10 siguen allí junto al diablo bajo el verbo en plural «serán atormentados día y noche por siempre jamás» (literalmente «por los siglos de los siglos»).",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 14,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Apocalipsis 14:11",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "El humo de su tormento subirá por siempre jamás, y no tendrán alivio ni de día ni de noche, porque adoraron a la bestia y a su estatua y aceptaron la marca de su nombre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "και ο καπνοϲ του βαϲανιϲμου αυτ‹ω› ειϲ §0εωναϲ των αιωνων αναβαινει και ουκ εχουϲιν αναπαυϲιν ημεραϲ και νυκτοϲ οι προϲκυνουντεϲ το θηριον και τ‹η› εικονα αυτου και ει τιϲ λαμβανει το χαραγμα του ονοματοϲ αυτου"
+                }
+              ],
+              "pagina": "90.6v"
+            },
+            {
+              "libro": "apocalipsis",
+              "cap": 20,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Apocalipsis 20:10",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Después el diablo, que los había engañado, fue lanzado al lago de fuego que arde con azufre, donde ya estaban la bestia y el falso profeta. Allí serán atormentados día y noche por siempre jamás."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 10,
+                  "grc": "§0 του πυροϲ και του θιου οπου το θηριον και οπου ο ψευδοπροφητηϲ και βαϲανιϲθηϲονται ημεραϲ και νυκτοϲ ειϲ τουϲ αιωναϲ τ‹ω› αιωνων"
+                }
+              ],
+              "pagina": "90.8v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 19,
+              "desde": 20,
+              "hasta": 20,
+              "label": "Apocalipsis 19:20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VI",
+      "titulo": "La profecía bíblica y el «Espíritu de Profecía»",
+      "desde": 43,
+      "hasta": 50,
+      "preguntas": [
+        {
+          "n": 43,
+          "texto": "Según Hebreos 1:1-2, después de haber hablado muchas veces por medio de los profetas en la antigüedad, ¿por medio de quién nos habló Dios de forma culminante en «estos últimos días»?",
+          "clave": "«Por medio de su Hijo», heredero de todo y creador del universo. La revelación definitiva de Dios no quedó esperando a una profetisa del siglo XIX que completara lo que supuestamente Cristo y los apóstoles no aclararon.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 1,
+              "desde": 1,
+              "hasta": 2,
+              "label": "Hebreos 1:1-2",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Hace mucho tiempo, Dios habló muchas veces y de diversas maneras a nuestros antepasados por medio de los profetas."
+                },
+                {
+                  "n": 2,
+                  "text": "Y ahora, en estos últimos días, nos ha hablado por medio de su Hijo. Dios le prometió todo al Hijo como herencia y, mediante el Hijo, creó el universo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "πολυμερωϲ και πολυτροπωϲ παλαι ο ‹θϲ› λαληϲαϲ τοιϲ §0πατραϲιν εν τοιϲ προφηταιϲ"
+                },
+                {
+                  "n": 2,
+                  "grc": "επ εϲχατου των ημερων τουτων ελαληϲεν ημιν εν υϊω ον εθηκεν κληρονομον παντων δι ου και εποιηϲεν τουϲ αιωναϲ"
+                }
+              ],
+              "pagina": "85.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 44,
+          "texto": "En Judas 1:3, ¿en qué sentido dice la Escritura que la fe cristiana fue confiada «una vez y para siempre» a su pueblo santo?",
+          "clave": "En griego απαξ («una sola vez y para siempre»), sin nuevas entregas doctrinales que reformulen el Evangelio. Cualquier revelación posterior que añada condiciones (como 1844, el juicio investigador o la prohibición de alimentos) se aparta de la fe apostólica ya entregada.",
+          "refs": [
+            {
+              "libro": "judas",
+              "cap": 1,
+              "desde": 3,
+              "hasta": 3,
+              "label": "Judas 1:3",
+              "ntv": [
+                {
+                  "n": 3,
+                  "text": "Queridos amigos, con gran anhelo tenía pensado escribirles acerca de la salvación que compartimos. Sin embargo, ahora me doy cuenta de que debo escribirles sobre otro tema para rogarles que defiendan la fe que Dios ha confiado una vez y para siempre a su pueblo santo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 3,
+                  "grc": "αγαπητοι · παϲαν ϲπουδην ποιουμενοϲ του γραφειν ϋμιν περι τηϲ κοινηϲ ημων ϲωτηριαϲ και ζωηϲ αναγκην εϲχον γραφιν υμ‹ι› παρακαλων επαγωνιζεϲθαι τη απαξ παραδοθειϲη τοιϲ αγιοιϲ πιϲτι"
+                }
+              ],
+              "pagina": "89.8v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 45,
+          "texto": "Según 2 Timoteo 3:16-17, ¿necesita la Escritura un cuerpo de escritos inspirados modernos como «luz menor» o intérprete autorizado para que el creyente sea completo en Dios?",
+          "clave": "Pablo enseña que toda la Escritura es inspirada por Dios y basta por sí misma para enseñar, reprender, corregir e instruir, de modo que Dios «la usa para preparar y capacitar a su pueblo para que haga toda buena obra».",
+          "refs": [
+            {
+              "libro": "2-timoteo",
+              "cap": 3,
+              "desde": 16,
+              "hasta": 17,
+              "label": "2 Timoteo 3:16-17",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "Toda la Escritura es inspirada por Dios y es útil para enseñarnos lo que es verdad y para hacernos ver lo que está mal en nuestra vida. Nos corrige cuando estamos equivocados y nos enseña a hacer lo correcto."
+                },
+                {
+                  "n": 17,
+                  "text": "Dios la usa para preparar y capacitar a su pueblo para que haga toda buena obra."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "παϲα γραφη θεοπνευϲτοϲ και ωφελιμοϲ προϲ διδαϲκαλιαν · προϲ ελεγμον ˙ προϲ επανορθωϲιν · προϲ παιδιαν την εν δικαιοϲυνη"
+                },
+                {
+                  "n": 17,
+                  "grc": "ϊνα αρτιοϲ η ο του ‹θυ› ανθρωποϲ προϲ παν εργον αγαθ‹ο› εξηρτιϲμενοϲ"
+                }
+              ],
+              "pagina": "86.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 46,
+          "texto": "¿Qué significa realmente en Apocalipsis 19:10 que «la esencia de la profecía es dar un claro testimonio de Jesús» (literalmente en griego, «el testimonio de Jesús es el espíritu de la profecía»)?",
+          "clave": "El ángel explica por qué él y Juan son consiervos junto con los hermanos «que dan testimonio de su fe en Jesús»: toda verdadera profecía bíblica apunta cristológicamente a Cristo (cf. Apocalipsis 22:9). El texto no predice ni titula los escritos de ninguna autora moderna como una institución llamada «el Espíritu de Profecía».",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 19,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Apocalipsis 19:10",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Entonces me postré a sus pies para adorarlo, pero me dijo: No, no me adores a mí. Yo soy un siervo de Dios, como tú y tus hermanos que dan testimonio de su fe en Jesús. Adora sólo a Dios, porque la esencia de la profecía es dar un claro testimonio de Jesús."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 10,
+                  "grc": "και επεϲα εμπροϲθεν των ποδων αυτου προϲκυνηϲαι αυτω και λεγει μοι ορα μη ϲυνδουλοϲ ϲου ειμι και των αδελφων §0 των εχοντων την μαρτυριαν ‹ιυ› τω ‹θω› προϲκυνηϲον η γαρ μαρτυρια ‹ιυ› εϲτ‹ι› το π‹ν›α τηϲ προφητιαϲ"
+                }
+              ],
+              "pagina": "90.8v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 22,
+              "desde": 9,
+              "hasta": 9,
+              "label": "Apocalipsis 22:9"
+            }
+          ]
+        },
+        {
+          "n": 47,
+          "texto": "Según el criterio inequívoco de Deuteronomio 18:20-22, ¿cómo debe evaluarse cualquier afirmación profética que anuncia acontecimientos o fechas en nombre de Dios que no se cumplen?",
+          "clave": "«Si el profeta habla en el nombre del SEÑOR, pero su profecía no se cumple ni ocurre lo que predice, ustedes sabrán que ese mensaje no proviene del SEÑOR». Una profecía errónea no se salva diciendo que el evento ocurrió «en silencio en el cielo» ni cerrando la puerta de la salvación hasta redefinir la fecha fallida.",
+          "refs": [
+            {
+              "libro": "deuteronomio",
+              "cap": 18,
+              "desde": 20,
+              "hasta": 22,
+              "label": "Deuteronomio 18:20-22",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "Pero todo profeta que falsamente afirme hablar en mi nombre o hable en nombre de otro dios, tendrá que morir»."
+                },
+                {
+                  "n": 21,
+                  "text": "Tal vez se pregunten: «¿Cómo sabremos si una profecía viene o no del SEÑOR?»."
+                },
+                {
+                  "n": 22,
+                  "text": "Si el profeta habla en el nombre del SEÑOR, pero su profecía no se cumple ni ocurre lo que predice, ustedes sabrán que ese mensaje no proviene del SEÑOR. Ese profeta habló sin el respaldo de mi autoridad, y no tienen que temerle."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 48,
+          "texto": "Frente al origen mismo del movimiento adventista en los cálculos cronológicos de 1843 y 1844, ¿qué mandaron expresamente Jesús y el Padre en Mateo 24:36 y Hechos 1:7 sobre fijar «fechas y tiempos»?",
+          "clave": "«Nadie sabe el día ni la hora… Sólo el Padre lo sabe» y «Sólo el Padre tiene la autoridad para fijar esas fechas y tiempos, y a ustedes no les corresponde saberlo». Calcular fechas específicas para la venida de Cristo desobedece abiertamente su palabra.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 36,
+              "hasta": 36,
+              "label": "Mateo 24:36",
+              "ntv": [
+                {
+                  "n": 36,
+                  "text": "Sin embargo, nadie sabe el día ni la hora en que sucederán estas cosas, ni siquiera los ángeles en el cielo ni el propio Hijo. Sólo el Padre lo sabe."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 36,
+                  "grc": "περι δε τηϲ ημε>ραϲ εκεινηϲ και > ωραϲ ουδειϲ §0οιδ‹ε› ουδε οι αγγελοι τ‹ω› ουρανων §2ουδε §5> §8ο §11υιοϲ ει μη ο πατηρ μονοϲ"
+                }
+              ],
+              "pagina": "75.7r"
+            },
+            {
+              "libro": "hechos",
+              "cap": 1,
+              "desde": 7,
+              "hasta": 7,
+              "label": "Hechos 1:7",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "Él les contestó: —Sólo el Padre tiene la autoridad para fijar esas fechas y tiempos, y a ustedes no les corresponde saberlo;"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 7,
+                  "grc": "ειπεν δε προϲ αυτουϲ ουχʼ υμων εϲτιν γνωναι χρονουϲ η καιρουϲ ουϲ ο πατηρ εθετο εν τη ϊδια εξουϲια"
+                }
+              ],
+              "pagina": "86.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 49,
+          "texto": "¿Qué advierte Pablo en Gálatas 1:8-9 si «nosotros o incluso un ángel del cielo» (o cualquier mensajero posterior) predica una Buena Noticia distinta de la que anunciaron los apóstoles?",
+          "clave": "«Que le caiga la maldición de Dios» y «que esa persona sea maldita» (en griego αναθεμα εϲτω). La autenticidad de cualquier enseñanza espiritual no se mide por el carisma o las visiones de su mensajero, sino por su fidelidad estricta al evangelio apostólico predicado una vez para siempre.",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 1,
+              "desde": 8,
+              "hasta": 9,
+              "label": "Gálatas 1:8-9",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Si alguien —ya sea nosotros o incluso un ángel del cielo— les predica otra Buena Noticia diferente de la que nosotros les hemos predicado, que le caiga la maldición de Dios."
+                },
+                {
+                  "n": 9,
+                  "text": "Repito lo que ya hemos dicho: si alguien predica otra Buena Noticia distinta de la que ustedes han recibido, que esa persona sea maldita."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "αλλα και εαν ημειϲ η αγγελοϲ εξ ουρανου ευαγγελιϲηται §0 παρ ο ευηγγελιϲαμεθα υμιν αναθεμα εϲτω"
+                },
+                {
+                  "n": 9,
+                  "grc": "ωϲ §0προειρηκα και αρτι παλιν λεγω ει τιϲ ϋμαϲ ευαγγελιζεται παρ ο παρελαβετε αναθεμα εϲτω"
+                }
+              ],
+              "pagina": "84.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 50,
+          "texto": "Conforme a 1 Tesalonicenses 5:21 y Hechos 17:11, ¿qué actitud práctica pide Dios ante todo profeta, libro o iglesia que afirma hablar de parte suya?",
+          "clave": "«Pongan a prueba todo lo que se dice» y examinen las Escrituras día tras día como los de Berea. Ninguna autoridad humana ni tradición denominacional puede colocarse por encima del texto claro de la Biblia ni impedir someter sus enseñanzas al examen del versículo abierto.",
+          "refs": [
+            {
+              "libro": "1-tesalonicenses",
+              "cap": 5,
+              "desde": 21,
+              "hasta": 21,
+              "label": "1 Tesalonicenses 5:21",
+              "ntv": [
+                {
+                  "n": 21,
+                  "text": "sino pongan a prueba todo lo que se dice. Retengan lo que es bueno."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 21,
+                  "grc": "παντα §0 δο>κιμαζετε το καλ‹ο› κατεχετε"
+                }
+              ],
+              "pagina": "85.3v"
+            },
+            {
+              "libro": "hechos",
+              "cap": 17,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Hechos 17:11",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Los de Berea tenían una mentalidad más abierta que los de Tesalónica y escucharon con entusiasmo el mensaje de Pablo. Día tras día examinaban las Escrituras para ver si Pablo y Silas enseñaban la verdad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "ουτοι δε ηϲαν ευγενεϲτεροι των εν θεϲϲαλονικη οιτινεϲ εδεξαντο τον λογ‹ο› μετα παϲηϲ προθυμιαϲ καθ ημεραν ανακρινοντεϲ ταϲ γραφαϲ ει εχοι ταυτα ουτωϲ"
+                }
+              ],
+              "pagina": "88.1v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    }
+  ]
+}

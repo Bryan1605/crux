@@ -136,8 +136,8 @@ Su primera acción tras ser llamado **no** es predicar, sino **invitar**: abre s
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 9:9-13; 10:2-4; Marcos 2:13-17; 3:16-19; Lucas 5:27-32; 6:13-16; Hechos 1:13; tabla editorial de autores (línea 97956)
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Papías Frag. 7 (línea 1073) y Frag. 2 (línea 1053); Ireneo AH III.4.4 (línea 3249)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 9:9-13; 10:2-4; Marcos 2:13-17; 3:16-19; Lucas 5:27-32; 6:13-16; Hechos 1:13; tabla editorial de autores (línea 97956)
+- **Patrística**: Biblia Patrística Completa — Papías Frag. 7 (línea 1073) y Frag. 2 (línea 1053); Ireneo AH III.4.4 (línea 3249)
 
 ## Conexiones
 

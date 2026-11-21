@@ -223,8 +223,8 @@ Su respuesta tiene tres pasos: (1) **recordar los juicios del pasado** (Israel, 
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Judas 1:1-25 (líneas 82074-82158); notas al pie `[a]`-`[j]` (líneas 97645-97678); tabla editorial de autores (línea 97983)
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — sin menciones de la carta de Judas
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Judas 1:1-25 (líneas 82074-82158); notas al pie `[a]`-`[j]` (líneas 97645-97678); tabla editorial de autores (línea 97983)
+- **Patrística**: Biblia Patrística Completa — sin menciones de la carta de Judas
 
 ## Conexiones
 

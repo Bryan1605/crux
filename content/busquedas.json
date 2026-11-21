@@ -1,10 +1,13 @@
 {
   "v": 1,
   "tipos": {
-    "estudio": 187,
+    "estudio": 184,
     "personaje": 17,
     "concilio": 8,
-    "herejia": 9
+    "herejia": 9,
+    "video": 1,
+    "libro": 1,
+    "apologetica": 3
   },
   "items": [
     {
@@ -1733,20 +1736,6 @@
     },
     {
       "tipo": "estudio",
-      "id": "07-herramientas--notebook-navigator",
-      "href": "/estudio/07-herramientas--notebook-navigator",
-      "title": "Guía de Notebook Navigator 3 (NN3)",
-      "sub": "Herramientas",
-      "desc": "Reemplaza el explorador de archivos por defecto de Obsidian por un panel de dos paneles (árbol + lista) con vista previa, búsqueda, calendario, etiquetas (tags), propiedades, carpetas de…",
-      "tags": [
-        "wiki/herramientas",
-        "obsidian",
-        "notebook-navigator"
-      ],
-      "fold": "guia de notebook navigator 3 (nn3) herramientas reemplaza el explorador de archivos por defecto de obsidian por un panel de dos paneles (arbol + lista) con vista previa, busqueda, calendario, etiquetas (tags), propiedades, carpetas de… wiki/herramientas obsidian notebook-navigator"
-    },
-    {
-      "tipo": "estudio",
       "id": "07-herramientas--slides-hermeneutica",
       "href": "/estudio/07-herramientas--slides-hermeneutica",
       "title": "Introducción a la Hermenéutica Bíblica",
@@ -1757,32 +1746,6 @@
         "estudio/hermeneutica"
       ],
       "fold": "introduccion a la hermeneutica biblica herramientas - arte y ciencia de interpretar la biblia - no es solo leer, sino entender lo que dios comunica - requiere disciplina y metodo slides/ensenanza estudio/hermeneutica"
-    },
-    {
-      "tipo": "estudio",
-      "id": "07-herramientas--taxonomia-tags",
-      "href": "/estudio/07-herramientas--taxonomia-tags",
-      "title": "Taxonomía de Tags — Second Brain Bíblico",
-      "sub": "Herramientas",
-      "desc": "1. Siempre usar tags jerárquicos con / 2. Mínimo 2 tags por nota 3. Incluir categoría + subcategoría 4. No crear tags nuevos sin agregarlos aquí primero 5. Usar Tag Wrangler para…",
-      "tags": [
-        "meta/tags",
-        "meta/taxonomia"
-      ],
-      "fold": "taxonomia de tags — second brain biblico herramientas 1. siempre usar tags jerarquicos con / 2. minimo 2 tags por nota 3. incluir categoria + subcategoria 4. no crear tags nuevos sin agregarlos aqui primero 5. usar tag wrangler para… meta/tags meta/taxonomia"
-    },
-    {
-      "tipo": "estudio",
-      "id": "08-recursos--index-pdf",
-      "href": "/estudio/08-recursos--index-pdf",
-      "title": "Índice de PDFs — Biblioteca Bíblica",
-      "sub": "Recursos",
-      "desc": "- !../../biblia-pdf-ntv-nueva-traduccion-viviente.pdf",
-      "tags": [
-        "recurso/pdf",
-        "indice"
-      ],
-      "fold": "indice de pdfs — biblioteca biblica recursos - !../../biblia-pdf-ntv-nueva-traduccion-viviente.pdf recurso/pdf indice"
     },
     {
       "tipo": "estudio",
@@ -2955,6 +2918,80 @@
       "desc": "Movimiento que prohibía y destruía las imágenes sagradas. Nicea II lo rechazó distinguiendo la veneración (permisible) de la adoración (solo a Dios).",
       "tags": [],
       "fold": "iconoclasia siglo viii movimiento que prohibia y destruia las imagenes sagradas. nicea ii lo rechazo distinguiendo la veneracion (permisible) de la adoracion (solo a dios)."
+    },
+    {
+      "tipo": "video",
+      "id": "0Rou8PPA2Oo",
+      "href": "/videos#0Rou8PPA2Oo",
+      "title": "Shincheonji y su Mentira Refutada por los Apostoles y la Historia #sectas #shincheonji #biblia",
+      "sub": "2026-08-15",
+      "desc": "Galatas 1:9: Lo he dicho antes y ahora lo repito: Si alguien les anuncia un evangelio diferente del que ya recibieron, que caiga sobre él la maldición de Dios.",
+      "tags": [],
+      "fold": "shincheonji y su mentira refutada por los apostoles y la historia #sectas #shincheonji #biblia galatas 1:9: lo he dicho antes y ahora lo repito: si alguien les anuncia un evangelio diferente del que ya recibieron, que caiga sobre el la maldicion de dios. 2026-08-15"
+    },
+    {
+      "tipo": "libro",
+      "id": "tobit",
+      "href": "/biblia/libros/tobit",
+      "title": "Tobit",
+      "sub": "Antiguo Testamento · Tob",
+      "desc": "Relato de una familia israelita deportada a Nínive: Tobit, ciego por un accidente, y Sara, en Ecbatana, piden morir el mismo día, y Dios envía al ángel Rafael a curar a los dos. Es deuterocanónico en el canon católico y la Iglesia griega lo lee desde antiguo; no está en el canon judío ni en el protestante.",
+      "tags": [
+        "relato (narración en prosa)",
+        "oración e himno",
+        "instrucción sapiencial"
+      ],
+      "fold": "tobit tob at antiguo testamento relato de una familia israelita deportada a ninive: tobit, ciego por un accidente, y sara, en ecbatana, piden morir el mismo dia, y dios envia al angel rafael a curar a los dos. es deuterocanonico en el canon catolico y la iglesia griega lo lee desde antiguo; no esta en el canon judio ni en el protestante. griego en sus dos formas principales; original semitico (arameo o hebreo) segun los fragmentos de qumran epoca asiria: deportacion de neftali bajo salmanasar, senaquerib y asaradon, hasta la caida de ninive antes de c. 100 a. c. (copias de qumran); la jewish encyclopedia proponia 200–50 a. c. en esta web, tobit se lee en el griego del codex sinaiticus, que transmite la forma larga del libro (gii), junto a una traduccion de trabajo hecha desde ese griego (borrador). la ntv no incluye este libro. relato (narracion en prosa) oracion e himno instruccion sapiencial no incluido deuterocanonico (hipona 393, cartago 397, trento 1546) leido en la iglesia griega desde antiguo (texto corto, gi) no incluido; se edita entre los apocrifos genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿historia o relato edificante? ¿cual de las dos formas griegas es la mas antigua?"
+    },
+    {
+      "tipo": "apologetica",
+      "id": "shincheonji",
+      "href": "/apologetica/shincheonji",
+      "title": "Shincheonji — 100 preguntas, solo con la Biblia",
+      "sub": "100 preguntas · 10 bloques · 6 secciones doctrinales",
+      "desc": "100 preguntas con el texto griego del Codex Sinaiticus frente a la NTV y contraste doctrinal con «The Creation of Heaven and Earth» de Lee Man-hee.",
+      "tags": [
+        "shincheonji",
+        "apologética",
+        "sectas",
+        "lee man-hee",
+        "codex sinaiticus"
+      ],
+      "fold": "shincheonji — 100 preguntas, solo con la biblia 100 preguntas con el texto griego del codex sinaiticus frente a la ntv y contraste doctrinal con «the creation of heaven and earth» de lee man-hee. scj nuevo cielo nueva tierra pastor prometido vencedor parabolas shincheonji apologetica sectas lee man-hee codex sinaiticus dios y la trinidad cristo: su persona y su obra el espiritu santo gracia y salvacion la escritura y las parabolas apocalipsis por su propio texto la segunda venida y la resurreccion la iglesia, israel y los 144.000 el \"pastor prometido\" y la prueba del profeta practica y etica lee man-hee the creation of heaven and earth dios y la trinidad cristo el espiritu santo la salvacion la revelacion y la escritura la iglesia y las ultimas cosas"
+    },
+    {
+      "tipo": "apologetica",
+      "id": "adventismo",
+      "href": "/apologetica/adventismo",
+      "title": "Adventismo — 50 preguntas, solo con la Biblia",
+      "sub": "50 preguntas · 6 bloques",
+      "desc": "50 preguntas con el texto griego del Codex Sinaiticus frente a la NTV sobre el sábado, la ley, 1844, el juicio investigador, el estado intermedio y el don de profecía.",
+      "tags": [
+        "adventismo",
+        "apologética",
+        "sábado",
+        "1844",
+        "juicio investigador",
+        "codex sinaiticus"
+      ],
+      "fold": "adventismo — 50 preguntas, solo con la biblia 50 preguntas con el texto griego del codex sinaiticus frente a la ntv sobre el sabado, la ley, 1844, el juicio investigador, el estado intermedio y el don de profecia. adventistas del septimo dia ellen white elena de white santuario celestial sueno del alma aniquilacionismo ley ceremonial adventismo apologetica sabado 1844 juicio investigador codex sinaiticus el sabado y el reposo en cristo la ley, el pacto y los alimentos el santuario celestial y 1844 seguridad de la salvacion y el juicio estado intermedio y destino eterno la profecia biblica y el «espiritu de profecia»"
+    },
+    {
+      "tipo": "apologetica",
+      "id": "dispensacionalismo",
+      "href": "/apologetica/dispensacionalismo",
+      "title": "Dispensacionalismo — 50 preguntas, solo con la Biblia",
+      "sub": "50 preguntas · 6 bloques · 6 secciones doctrinales",
+      "desc": "50 preguntas con el texto griego del Codex Sinaiticus frente a la NTV y contraste doctrinal con «Eventos del Porvenir» de J. Dwight Pentecost.",
+      "tags": [
+        "dispensacionalismo",
+        "apologética",
+        "escatología",
+        "rapto",
+        "milenio",
+        "codex sinaiticus"
+      ],
+      "fold": "dispensacionalismo — 50 preguntas, solo con la biblia 50 preguntas con el texto griego del codex sinaiticus frente a la ntv y contraste doctrinal con «eventos del porvenir» de j. dwight pentecost. israel y la iglesia nuevo pacto pentecost eventos del porvenir pretribulacional esta generacion monte de los olivos trono de david sacrificios mileniales dispensacionalismo apologetica escatologia rapto milenio codex sinaiticus un solo pueblo y el nuevo pacto el reino presente y el trono de david «esta generacion», el monte de los olivos y el lenguaje cosmico una sola venida, no un rapto secreto una sola resurreccion y un solo juicio final sacrificios, templo y la plenitud del sacrificio de cristo j. dwight pentecost eventos del porvenir: estudios de escatologia biblica dos pueblos y pactos separados (israel frente a la iglesia) la iglesia como «parentesis» y la oferta contingente del reino dos regresos, el rapto pretribulacional y el vacio en daniel 9 «esta generacion», pentecostes y el trono de david jerarquia etnica y subordinacion de los gentiles en el milenio sacrificios de animales, multiples resurrecciones y rebelion final"
     }
   ]
 }

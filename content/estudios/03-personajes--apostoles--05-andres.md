@@ -98,8 +98,8 @@ Andrés es el **apóstol del primer paso**: no predica multitudes, no escribe te
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Juan 1:35-42; 6:8-9; 12:20-22; Hechos 1:13
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Papías vía Eusebio (línea 1053)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Juan 1:35-42; 6:8-9; 12:20-22; Hechos 1:13
+- **Patrística**: Biblia Patrística Completa — Papías vía Eusebio (línea 1053)
 
 ## Conexiones
 

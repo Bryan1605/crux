@@ -824,6 +824,329 @@
   color: var(--gold);
 }
 
+/* --- apologética: preguntas con la Biblia --------------------------------- */
+
+.apologetica-home {
+  background: var(--bg);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+}
+
+.apolo-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-4) var(--sp-6);
+  padding-bottom: var(--sp-6);
+  margin-bottom: var(--sp-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.apolo-head__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  max-width: 58ch;
+}
+
+.apolo-eyebrow {
+  color: var(--gold);
+}
+
+.apolo-eyebrow::before {
+  background: var(--gold);
+  opacity: 0.7;
+}
+
+.apolo-head__copy h2 {
+  font-weight: 600;
+  font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+  line-height: 1;
+  color: var(--text);
+}
+
+.apolo-head__copy .lead {
+  color: var(--soft);
+}
+
+.apolo-head__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  padding: 0 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.apolo-head__btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--text);
+}
+
+.apolo-head__btn:hover .arrow,
+.apolo-card--active:hover .arrow,
+.apolo-bar__link:hover .arrow {
+  transform: translateX(4px);
+}
+
+.apolo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-5);
+}
+
+.apolo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+}
+
+.apolo-card--active {
+  background: var(--panel);
+  border-color: rgba(201, 169, 106, 0.35);
+  border-top: 2px solid var(--gold);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.apolo-card--active:hover {
+  transform: translateY(-2px);
+  background: var(--panel-hover);
+  border-color: rgba(201, 169, 106, 0.65);
+  border-top-color: var(--gold);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.48);
+}
+
+.apolo-card--soon {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+}
+
+/* Excepción editorial en papel pergamino claro: solo la tarjeta «MÉTODO CRUX». */
+.apolo-card--quote {
+  background: var(--bone);
+  color: var(--ink);
+  border: 1px dashed rgba(10, 10, 11, 0.28);
+  justify-content: center;
+}
+
+.apolo-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-2);
+}
+
+.apolo-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.apolo-card__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.apolo-card__tag {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.apolo-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.2vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.apolo-card__desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.apolo-card--active .apolo-card__desc {
+  color: var(--soft);
+}
+
+.apolo-card__foot {
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-3);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.apolo-card__foot strong {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.apolo-card__cta {
+  margin-top: var(--sp-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 2.85rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  background: var(--bone);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: background-color 0.2s ease;
+}
+
+.apolo-card__cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-md);
+}
+
+.apolo-card--active:hover .apolo-card__cta {
+  background: #ffffff;
+}
+
+.apolo-quote__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4a453d;
+}
+
+.apolo-quote__cross {
+  color: #634717;
+  font-size: 0.9rem;
+}
+
+.apolo-quote__text {
+  margin: var(--sp-2) 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.08rem, 1.45vw, 1.22rem);
+  line-height: 1.48;
+  color: var(--ink);
+}
+
+.apolo-quote__ref {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #634717;
+}
+
+.apolo-bar {
+  margin-top: var(--sp-6);
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2) var(--sp-5);
+}
+
+.apolo-bar__text {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.apolo-bar__text strong {
+  color: var(--text);
+}
+
+.apolo-bar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold);
+  transition: color 0.2s ease;
+}
+
+.apolo-bar__link:hover {
+  color: var(--bone);
+}
+
+@media (max-width: 960px) {
+  .apolo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .apolo-bar {
+    border-radius: var(--r-md);
+    padding: var(--sp-4) var(--sp-5);
+  }
+}
+
+@media (max-width: 640px) {
+  .apolo-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apolo-head__btn,
+  .apolo-card--active,
+  .apolo-card__cta,
+  .apolo-bar__link {
+    transition: none;
+  }
+
+  .apolo-card--active:hover {
+    transform: none;
+  }
+}
+
 /* --- cierre --------------------------------------------------------------- */
 
 .closing {

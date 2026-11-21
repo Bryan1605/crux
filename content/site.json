@@ -12,7 +12,8 @@
       "links": [
         { "label": "Fundamentos", "href": "/estudio?cat=01-fundamentos", "ariaLabel": "Estudios de fundamentos doctrinales" },
         { "label": "Parábolas", "href": "/estudio?cat=09-parabolas", "ariaLabel": "Estudios de las parábolas de Jesús" },
-        { "label": "Apologética", "href": "/estudio?cat=06-apologetica", "ariaLabel": "Estudios de apologética" }
+        { "label": "Apologética", "href": "/estudio?cat=06-apologetica", "ariaLabel": "Estudios de apologética" },
+        { "label": "Preguntas a Shincheonji", "href": "/apologetica/shincheonji", "ariaLabel": "Preguntas a Shincheonji: 100 preguntas solo con la Biblia" }
       ]
     },
     {
@@ -55,7 +56,9 @@
       { "label": "Buscar", "href": "/buscar" },
       { "label": "Biblia Patrística", "href": "/biblia" },
       { "label": "Biblia NTV", "href": "/biblia/ntv" },
+      { "label": "Libros de la Biblia", "href": "/biblia/libros" },
       { "label": "Exégesis comparada", "href": "/exegesis" },
+      { "label": "Apologética: Shincheonji", "href": "/apologetica/shincheonji" },
       { "label": "Videos", "href": "/videos" }
     ],
     "copyright": "© {year} Crux",
@@ -86,7 +89,7 @@
           "meta1": "Padres de la Iglesia",
           "meta2": "siglos I–VIII",
           "title": "Biblia Patrística",
-          "desc": "Las cartas, homilías y tratados de los Padres de la Iglesia, parte por parte, con su fólio y su contexto.",
+          "desc": "Las cartas, homilías y tratados de los Padres de la Iglesia, parte por parte, con su folio y su contexto.",
           "cta": "Abrir la Patrística"
         },
         {

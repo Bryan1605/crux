@@ -70,7 +70,7 @@ function Icon({ name }) {
 function WorkTimeline({ parts, onOpen }) {
   const rows = parts
     .map(part => ({ part, info: partInfo(part.label) }))
-    .filter(r => r.info.num.includes('.') && r.info.from != null);
+    .filter(r => r.info.from != null && (r.info.num.includes('.') || r.part.sections.length > 0));
   if (!rows.length) return null;
   const end = Math.ceil(Math.max(...rows.map(r => r.info.to)) / 100) * 100;
   const pct = year => `${(year / end) * 100}%`;

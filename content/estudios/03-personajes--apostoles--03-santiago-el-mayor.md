@@ -133,8 +133,8 @@ Santiago el Mayor es el **apóstol del silencio testigo**: vio la gloria (transf
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 4:21-22; 17:1-8; 20:20-23; 26:37-39; Marcos 1:19-20; 5:37; 10:35-40; Hechos 12:1-2; Santiago 1-2
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Ireneo, *Contra las herejías* III.12 (líneas 3353-3367)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 4:21-22; 17:1-8; 20:20-23; 26:37-39; Marcos 1:19-20; 5:37; 10:35-40; Hechos 12:1-2; Santiago 1-2
+- **Patrística**: Biblia Patrística Completa — Ireneo, *Contra las herejías* III.12 (líneas 3353-3367)
 
 ## Conexiones
 

@@ -131,8 +131,8 @@ Hechos 21:8: "Llegamos a Cesarea y nos quedamos en la casa de **Felipe el evange
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Juan 1:43-46; 12:20-22; 14:8-9; Hechos 1:13; 6:1-6; 8:1-40; 21:8
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Papías vía Eusebio (línea 1053)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Juan 1:43-46; 12:20-22; 14:8-9; Hechos 1:13; 6:1-6; 8:1-40; 21:8
+- **Patrística**: Biblia Patrística Completa — Papías vía Eusebio (línea 1053)
 
 ## Conexiones
 

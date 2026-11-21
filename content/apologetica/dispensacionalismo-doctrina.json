@@ -1,0 +1,520 @@
+{
+  "version": 1,
+  "fuente": {
+    "archivo": "Eventos del Porvenir (Editorial Vida)",
+    "actualizado": "2026-11-20",
+    "nota": "Citas literales en español de J. Dwight Pentecost, «Eventos del Porvenir: Estudios de Escatología Bíblica» (Editorial Vida, traducción de «Things to Come», 1958), comprobadas página por página frente a la edición impresa. Las citas bíblicas en la sección «Lo que dice la Biblia» provienen literalmente de la NTV del sitio."
+  },
+  "etiquetas": {
+    "introTitulo": "Lo que enseña el dispensacionalismo clásico, con su manual en la mano",
+    "citas": "Lo que enseña Pentecost",
+    "preguntasId": "preguntas-libro",
+    "preguntasNav": "Preguntas con su manual",
+    "preguntasTitulo": "Preguntas con su manual en la mano",
+    "preguntasIntro": "Cada pregunta indica la página exacta de «Eventos del Porvenir» y el pasaje de la Biblia, para leerlos juntos."
+  },
+  "libro": {
+    "autor": "J. Dwight Pentecost",
+    "titulo": "Eventos del Porvenir: Estudios de Escatología Bíblica",
+    "edicion": "Editorial Vida (traducción al español de Things to Come, 1958)"
+  },
+  "equidad": "El dispensacionalismo clásico afirma doctrinas centrales de la fe cristiana histórica: confiesa la Trinidad, la deidad plena de Cristo, la inspiración y autoridad de las Escrituras, la salvación por gracia mediante la fe en la sangre de Cristo y su regreso visible. No se examina aquí como una secta ajena al Evangelio, sino como un sistema hermenéutico y escatológico que introduce dos pueblos eternamente separados, una Iglesia «paréntesis», un rapto secreto previo a la tribulación y la reanudación de sacrificios animales en el milenio.",
+  "partes": [
+    {
+      "id": "I",
+      "titulo": "Dos pueblos y pactos separados (Israel frente a la Iglesia)",
+      "citas": [
+        {
+          "paginas": [62],
+          "es": "En Rom 9:4, Pablo declara que la nación de Israel había recibido pactos del Señor. En Efe 2:11-12, él declara, a la inversa, que los gentiles no han recibido ninguno de tales pactos y por consiguiente no gozan de las relaciones de esos pactos con Dios."
+        },
+        {
+          "paginas": [74],
+          "es": "La única conclusión lógica que puede originarse de esta discusión es que los creyentes gentiles del presente día, aun considerados como una descendencia de Abraham, no son la descendencia en la cual las promesas nacionales han de cumplirse. … El punto de que la Iglesia de hoy no es el Israel en el cual se cumplen estos pactos, parece, pues, bien establecido."
+        },
+        {
+          "paginas": [99],
+          "es": "Prescindiendo de la relación de la Iglesia con el Nuevo Pacto como se ha explicado en estos tres puntos de vista, hay un punto general acorde: el Nuevo Pacto de Jer 31:31-34 debe cumplirse y sólo podrá cumplirse en la nación de Israel y no en la Iglesia. … Es una tergiversación del pensamiento del escritor a los Hebreos afirmar que él enseña que el Nuevo Pacto de Israel es actualmente operante en la Iglesia."
+        },
+        {
+          "paginas": [100],
+          "es": "El término Israel en ninguna parte es usado en las Escrituras para otros que no sean los descendientes físicos de Abraham. Ya que la Iglesia hoy se compone tanto de judíos como de gentiles sin distinciones nacionales, sería imposible que en esa Iglesia se cumplieran estas promesas hechas a la nación."
+        }
+      ],
+      "significa": {
+        "texto": "La columna vertebral del sistema dispensacional es mantener una dicotomía permanente entre Israel y la Iglesia, incluso al precio de negar que la Iglesia participe plenamente del Nuevo Pacto prometido en Jeremías 31:",
+        "puntos": [
+          "Toma Efesios 2:11-12 (la antigua alienación de los gentiles «en aquel tiempo», antes de Cristo) y pasa por alto Efesios 2:13-19, donde Pablo enseña justo lo contrario: ahora somos conciudadanos e integrantes de un solo pueblo nuevo.",
+          "Niega que la Iglesia actual sea la destinataria del Nuevo Pacto de Jeremías 31:31-34, pese a que Hebreos 8:8-13 lo cita textualmente para demostrar que el primer pacto ya caducó en Cristo.",
+          "Divide a los redimidos en dos programas, dos esperanzas y dos destinos eternos separados (uno terrenal para Israel, otro celestial para la Iglesia)."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381): «Creo en una sola Iglesia santa, católica y apostólica» —un único pueblo de Dios en toda la historia de la salvación."
+        ],
+        "reforma": [
+          "Confesión de Fe de Westminster VII.6: «No hay pues dos pactos de gracia diferentes en sustancia, sino uno y el mismo bajo varias dispensaciones».",
+          "Confesión Belga, art. 27: «Creemos y confesamos una única Iglesia católica o universal, la cual es una santa congregación de verdaderos creyentes en Cristo, todos esperando su salvación en un solo Jesucristo»."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Efesios 2:14-15",
+          "texto": "Pues Cristo mismo nos ha traído la paz. Él unió a judíos y a gentiles en un solo pueblo cuando, por medio de su cuerpo en la cruz, derribó el muro de hostilidad que nos separaba. Lo logró al poner fin al sistema de leyes de mandamientos y ordenanzas. Hizo la paz entre judíos y gentiles al crear de los dos grupos un nuevo pueblo en él."
+        },
+        "puntos": [
+          {
+            "ref": "Gá 3:28-29",
+            "refs": ["Gálatas 3:28-29"],
+            "cita": ["todos ustedes son uno en Cristo Jesús", "son verdaderos hijos de Abraham"],
+            "texto": "quienes pertenecen a Cristo son declarados herederos de la promesa hecha a Abraham."
+          },
+          {
+            "ref": "Ro 9:6-8",
+            "refs": ["Romanos 9:6-8"],
+            "cita": ["no todos los que nacen en la nación de Israel son en verdad miembros del pueblo de Dios", "Sólo los hijos de la promesa son considerados hijos de Abraham"],
+            "texto": "la Escritura misma distingue al Israel étnico del verdadero Israel de la promesa."
+          },
+          {
+            "ref": "Ro 11:17",
+            "refs": ["Romanos 11:17"],
+            "cita": ["fueron injertados"],
+            "texto": "un solo árbol de olivo en el que los gentiles creyentes son injertados junto al remanente fiel."
+          },
+          {
+            "ref": "He 8:10-13",
+            "refs": ["Hebreos 8:10-13"],
+            "cita": ["éste es el nuevo pacto que haré", "ha hecho obsoleto al primero"],
+            "texto": "el escritor a los Hebreos aplica expresamente Jeremías 31 a los creyentes en Cristo."
+          }
+        ]
+      }
+    },
+    {
+      "id": "II",
+      "titulo": "La Iglesia como «paréntesis» y la oferta contingente del Reino",
+      "citas": [
+        {
+          "paginas": [104],
+          "es": "Después de la muerte de Cristo, Dios instituyó un programa nuevo, no para reemplazar el programa para Israel, sino para interrumpir ese programa divinamente pactado."
+        },
+        {
+          "paginas": [108],
+          "autorCitado": "G. H. Pember",
+          "es": "… los tiempos de la Iglesia no son propiamente una parte de la quinta dispensación, sino un paréntesis fijado dentro de ella debido a la perversidad de los judíos; un período insertado, desconocido para la profecía del Antiguo Testamento, y separado para la preparación de un pueblo celestial, y no uno terrenal."
+        },
+        {
+          "paginas": [149],
+          "es": "La Iglesia es manifiestamente una interrupción del programa de Dios para con Israel, y no entra en existencia hasta el rechazamiento del ofrecimiento del Reino por parte de Israel."
+        },
+        {
+          "paginas": [304, 305],
+          "es": "La oferta del reino era una oferta contingente. Dios conocía demasiado bien la respuesta que la nación de Israel daría a la oferta del reino; no obstante, el establecimiento del reino teocrático dependía del arrepentimiento de la nación, el reconocimiento de Juan el Bautista como el precursor prometido, y la recepción de Jesucristo como el rey teocrático. … Lo que alcanzó el propósito divino de salvación mediante la muerte de Cristo fue el rechazamiento del reino que le ofreció a Israel."
+        }
+      ],
+      "significa": {
+        "texto": "Para encajar los veinte siglos de la Iglesia dentro de una expectativa política terrenal para Israel, el dispensacionalismo convierte la era cristiana entera en una interrupción imprevista por los profetas:",
+        "puntos": [
+          "Si el reino hubiera dependido de una recepción política en Galilea, la cruz aparece casi como un desvío provocado por el rechazo, en lugar del cumplimiento soberano anunciado desde el Génesis y los Profetas.",
+          "Tratar la Iglesia como un «paréntesis» desconocido en el Antiguo Testamento contradice a Pablo y a Pedro, quienes demuestran que la inclusión de todas las naciones estaba anunciada desde Abraham, los Salmos, Isaías y Amós (Romanos 15:9-12; Hechos 15:15-17)."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381): «Por nosotros los hombres y por nuestra salvación bajó del cielo… y fue crucificado… según las Escrituras, y subió al cielo… y su reino no tendrá fin»."
+        ],
+        "reforma": [
+          "Catecismo de Heidelberg, preg. 54: «El Hijo de Dios, desde el principio del mundo hasta el fin, reúne, protege y conserva de todo el género humano una comunidad elegida para la vida eterna»."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Marcos 1:14-15",
+          "texto": "Más tarde, después del arresto de Juan, Jesús entró en Galilea, donde predicó la Buena Noticia de Dios. ¡Por fin ha llegado el tiempo prometido por Dios! —anunciaba—. ¡El reino de Dios está cerca! ¡Arrepiéntanse de sus pecados y crean la Buena Noticia!"
+        },
+        "puntos": [
+          {
+            "ref": "Mt 16:18",
+            "refs": ["Mateo 16:18"],
+            "cita": ["sobre esta roca edificaré mi iglesia"],
+            "texto": "antes de la crucifixión ya anunció Jesús el propósito soberano de edificar su Iglesia."
+          },
+          {
+            "ref": "Col 1:13",
+            "refs": ["Colosenses 1:13"],
+            "cita": ["nos trasladó al reino de su Hijo amado"],
+            "texto": "el reino de Cristo no quedó aplazado dos mil años: los creyentes ya han sido trasladados a él."
+          },
+          {
+            "ref": "Jn 18:36",
+            "refs": ["Juan 18:36"],
+            "cita": ["Mi reino no es un reino terrenal"],
+            "texto": "Jesús rechazó expresamente la expectativa de un reino político nacional."
+          },
+          {
+            "ref": "He 8:13",
+            "refs": ["Hebreos 8:13"],
+            "cita": ["ha hecho obsoleto al primero"],
+            "texto": "el antiguo pacto mosaico no quedó meramente en pausa: quedó obsoleto ante el Nuevo Pacto definitivo."
+          }
+        ]
+      }
+    },
+    {
+      "id": "III",
+      "titulo": "Dos regresos, el rapto pretribulacional y el vacío en Daniel 9",
+      "citas": [
+        {
+          "paginas": [144],
+          "es": "La Iglesia e Israel son dos grupos distintos con los cuales Dios tiene un plan divino. … Esta edad presente de misterio interviene en el programa de Dios para Israel, debido al rechazamiento del Mesías por Israel en su primera venida. Este programa de misterio debe cumplirse antes que Dios pueda reanudar su programa para con Israel y llevarlo a término."
+        },
+        {
+          "paginas": [152, 153],
+          "es": "(2) La traslación se refiere a los santos arrebatados en el aire, y en la segunda venida, Él regresa a la tierra. … (7) La traslación está relacionada con el programa para la Iglesia, mientras que la segunda venida está relacionada con el programa para Israel y el mundo. … Estos y otros contrastes que puedan presentarse, sostienen el argumento de que éstos son dos programas diferentes y no pueden unificarse en un solo evento."
+        },
+        {
+          "paginas": [178],
+          "es": "Si no hubiese paréntesis alguno en cualquier programa profético revelado, la profecía no podría tener cumplimiento literal, por cuanto los eventos en muchas profecías mayores no eran consecutivos. … Relacionando esto con Hch 1:6-8, vemos que toda una era de duración indeterminada ha de intervenir entre la sexagésimo nona y la septuagésima semanas de la profecía."
+        },
+        {
+          "paginas": [187],
+          "autorCitado": "G. B. Stanton y J. F. Walvoord",
+          "nota": "Pentecost resume aquí la postura de Stanton y Walvoord sobre la supuesta partida del Espíritu Santo residente junto con el rapto previo a la tribulación.",
+          "es": "La era de la iglesia comenzó con el advenimiento del Espíritu en Pentecostés, y cerrará con un reverso del Pentecostés, la remoción del Espíritu. Esto no significa que Él no será operante, sino que ya no estará residente. … Se insiste en que los ministerios particulares del Espíritu Santo para con el creyente en esta edad presente (bautismo, 1Co 12:12-13; morada, 1Co 6:19-20; sello, Efe 1:13; Efe 4:30; y plenitud, Efe 5:18) terminarán."
+        }
+      ],
+      "significa": {
+        "texto": "Esta construcción divide el único regreso glorioso de Cristo en dos venidas separadas por siete años y parte las setenta semanas de Daniel 9 con una brecha sin fundamento textual:",
+        "puntos": [
+          "Inserta un silencio de dos mil años entre la semana 69 y la semana 70 de Daniel 9, ignorando que un reloj de «setenta semanas» continuas se mide desde el decreto hasta la muerte del Ungido y la ruina de Jerusalén.",
+          "Imagina una «segunda venida» secreta para la Iglesia siete años antes de la segunda venida visible —con lo cual resultan tres venidas de Cristo, algo desconocido en el Nuevo Testamento—.",
+          "Supone que el Espíritu Santo deja de morar e identificarse como sello tras el rapto, dejando sin base la regeneración y fe de millones que supuestamente se convertirían en la tribulación."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo de los Apóstoles: «Subió a los cielos, y está sentado a la derecha de Dios, Padre todopoderoso; desde allí ha de venir a juzgar a vivos y muertos» —un único regreso público para el juicio."
+        ],
+        "reforma": [
+          "Catecismo de Heidelberg, preg. 52: en su regreso del cielo, el mismo Cristo «arrojará a todos sus enemigos y los míos en la condenación eterna, y me llevará consigo… al gozo y gloria celestiales»."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Hebreos 9:28",
+          "texto": "así también Cristo murió en sacrificio una sola vez y para siempre, a fin de quitar los pecados de muchas personas. Cristo vendrá otra vez, no para ocuparse de nuestros pecados, sino para traer salvación a todos los que esperan con anhelo su venida."
+        },
+        "puntos": [
+          {
+            "ref": "1 Ts 4:16-17",
+            "refs": ["1 Tesalonicenses 4:16-17"],
+            "cita": ["con un grito de mando, con voz de arcángel y con el llamado de trompeta de Dios"],
+            "texto": "la escena más sonora y visible del regreso público de Cristo, no un episodio silencioso."
+          },
+          {
+            "ref": "2 Ts 1:7-10",
+            "refs": ["2 Tesalonicenses 1:7-10"],
+            "cita": ["les brindará descanso", "en llamas de fuego"],
+            "texto": "el alivio de la Iglesia y el juicio de sus opresores suceden el mismo día."
+          },
+          {
+            "ref": "Mt 13:30",
+            "refs": ["Mateo 13:30"],
+            "cita": ["separen la maleza, la aten en manojos y la quemen"],
+            "texto": "en la cosecha final se recoge primero la maleza para juicio, invirtiendo el esquema pretribulacional."
+          },
+          {
+            "ref": "Dn 9:26-27",
+            "refs": ["Daniel 9:26-27"],
+            "cita": ["matarán al Ungido sin que parezca haber logrado nada", "pondrá fin a los sacrificios y a las ofrendas"],
+            "texto": "el fin de los sacrificios y la destrucción de Jerusalén fluyen sin pausa tras la obra del Mesías."
+          }
+        ]
+      }
+    },
+    {
+      "id": "IV",
+      "titulo": "«Esta generación», Pentecostés y el trono de David",
+      "citas": [
+        {
+          "paginas": [88],
+          "autorCitado": "J. F. Walvoord",
+          "es": "El Nuevo Testamento carece totalmente de enseñanzas positivas en el sentido de que el trono del Padre en el cielo deba ser identificado con el trono davídico. La inferencia es clara: Cristo está sentado sobre el trono de Dios; pero esto no es en ninguna manera lo mismo que estar sentado sobre el trono de David."
+        },
+        {
+          "paginas": [92],
+          "es": "El alegato de que Cristo está sentado sobre el trono del Padre, reinando sobre un reino espiritual, la Iglesia, sencillamente no cumple las promesas del pacto."
+        },
+        {
+          "paginas": [198],
+          "es": "Aún otros sostienen que la palabra generación ha de tomarse en su uso básico como \"raza, clase, familia, linaje, progenie\"; de manera que el Señor está prometiendo aquí que la nación de Israel será preservada hasta la consumación de su programa de la segunda venida, a pesar de la obra del desolador para destruirla. Esta parece ser la mejor explicación."
+        },
+        {
+          "paginas": [314],
+          "es": "Sin embargo, parece mejor entender que Pedro no está diciendo que la experiencia que tienen ante ellos es el cumplimiento de la profecía de Joel, para que ellos se consideren en el reino, sino que más bien, Pedro está citando la profecía de Joel para verificar el hecho, que Israel conocía por sus Escrituras, de que tal experiencia de la plenitud del Espíritu era posible."
+        }
+      ],
+      "significa": {
+        "texto": "Cuando los textos del Nuevo Testamento declaran que el cumplimiento ya ocurrió en Cristo y en el siglo I, la hermenéutica dispensacional se ve obligada a redefinir las palabras más claras de Jesús y de Pedro:",
+        "puntos": [
+          "Pedro en Hechos 2:30-35 une expresamente la promesa de sentar a un descendiente en el trono de David con la resurrección y ascensión de Cristo a la derecha del Padre; negar que ese trono sea davídico contradice su sermón entero.",
+          "En Mateo 24:34 «esta generación» designa siempre en el Evangelio de Mateo a los contemporáneos de Jesús (cf. Mateo 23:36), nunca a la «raza judía» durante milenios.",
+          "Pedro no presentó a Joel como una analogía distante: afirmó explícitamente «lo que ustedes ven es lo que el profeta Joel predijo hace mucho tiempo», situando el lenguaje cósmico profético (cf. Isaías 13, 19, 34; Ezequiel 32) en el horizonte del siglo I."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381): «Subió a los cielos, y está sentado a la derecha del Padre… y su reino no tendrá fin»."
+        ],
+        "reforma": [
+          "Confesión de Fe de Westminster VIII.4: «Resucitó de entre los muertos al tercer día con el mismo cuerpo con que padeció; con el cual también ascendió al cielo y está sentado a la diestra de su Padre, intercediendo»."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Mateo 24:34",
+          "texto": "Les digo la verdad, no pasará esta generación hasta que todas estas cosas sucedan."
+        },
+        "puntos": [
+          {
+            "ref": "Hch 2:33-36",
+            "refs": ["Hechos 2:33-36"],
+            "cita": ["ha sido exaltado al lugar de más alto honor en el cielo, a la derecha de Dios", "Dios lo ha hecho tanto Señor como Mesías"],
+            "texto": "Pedro conecta directamente la ascensión con el cumplimiento del juramento hecho a David (v. 30)."
+          },
+          {
+            "ref": "Hch 2:16-17",
+            "refs": ["Hechos 2:16-17"],
+            "cita": ["lo que ustedes ven es lo que el profeta Joel predijo hace mucho tiempo", "En los últimos días"],
+            "texto": "cumplimiento real en Pentecostés y aviso a aquella generación en v. 40."
+          },
+          {
+            "ref": "Mt 26:64",
+            "refs": ["Mateo 26:64"],
+            "cita": ["verán al Hijo del Hombre sentado en el lugar de poder", "viniendo en las nubes del cielo"],
+            "texto": "dirigido personalmente al sanedrín contemporáneo de Jesús."
+          },
+          {
+            "ref": "Is 13:10",
+            "refs": ["Isaías 13:10"],
+            "cita": ["las estrellas no darán luz. El sol estará oscuro cuando salga"],
+            "texto": "lenguaje profético metafórico usado para la caída histórica de Babilonia en 539 a.C."
+          }
+        ]
+      }
+    },
+    {
+      "id": "V",
+      "titulo": "Jerarquía étnica y subordinación de los gentiles en el milenio",
+      "citas": [
+        {
+          "paginas": [285],
+          "es": "Este grupo de gentiles que será introducido al reino cumple las profecías (Dan 7:14; Isa 55:5; Miq 4:2) que declaran que un gran grupo de gentiles será sojuzgado bajo el reinado del Rey, aun cuando éste sea el reino de Israel."
+        },
+        {
+          "paginas": [334],
+          "es": "Se concluye que en el gobierno del milenio, David será designado regente sobre Palestina y reinará sobre esa tierra como príncipe, ministrando bajo la autoridad de Jesucristo, el Rey."
+        },
+        {
+          "paginas": [339, 340],
+          "es": "(4) Ella será exaltada sobre los gentiles (Isa 14:1-2; Isa 49:22-23; Isa 60:14-17; Isa 61:6-7). … (2) Los gentiles serán siervos de Israel durante esa era (Isa 14:1-2; Isa 49:22-23; Isa 60:14; Isa 61:5; Zac 8:22-23). Las naciones que usurparon la autoridad sobre Israel en tiempos pasados se encontrarán con que ese pueblo antes pisoteado será entonces exaltado, y ellas mismas sujetas a su reino."
+        },
+        {
+          "paginas": [352],
+          "autorCitado": "M. F. Unger y J. D. Pentecost",
+          "nota": "El primer párrafo corresponde a la cita de M. F. Unger recogida por Pentecost en esa página (la edición impresa escribe «sólo será bendecidas» y «separan»); el segundo párrafo es la respuesta editorial de Pentecost.",
+          "es": "Una concierne al cristianismo donde no hay judío ni gentil, sino que todos son uno en Cristo. La otra trata del judaísmo restablecido, cuando Israel será bendecido directamente, y los gentiles sólo será bendecidas [sic] por medio de los judíos y mediante la subordinación a ellos: ése será un estado de cosas que estará en contraste diametral con el cristianismo. … Surgen a veces objeciones de que Dios ha roto para siempre la barrera que separan a judíos y gentiles y los ha hecho uno. Este punto surge por no tener en cuenta que éste es el propósito de Dios para la edad presente, pero no tiene ninguna relación con el programa de Dios para la era milenaria."
+        }
+      ],
+      "significa": {
+        "texto": "Al tomar las figuras de los profetas sobre las naciones acudiendo a Sión como un futuro orden geopolítico literal, el dispensacionalismo termina afirmando abiertamente que en el milenio se levantará de nuevo la distinción entre judío y gentil:",
+        "puntos": [
+          "Relegar «ya no hay judío ni gentil» (Gálatas 3:28) a un paréntesis temporal («la edad presente») convierte en reversible la unidad que Cristo compró con su sangre (Efesios 2:14-16).",
+          "Postular un «judaísmo restablecido… en contraste diametral con el cristianismo» donde los gentiles reciben bendición «mediante la subordinación» a Israel contradice todo el testimonio apostólico de Efesios, Gálatas y Romanos."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381): confiesa «un solo Señor Jesucristo… por quien todo fue hecho» y «una sola Iglesia», sin castas étnicas ni jerarquías nacionales dentro de la redención."
+        ],
+        "reforma": [
+          "Confesión Belga, art. 27: «Esta Iglesia no está atada, ligada o limitada a un lugar cierto o a ciertas personas, sino que está extendida y esparcida por todo el mundo, aun estando unida y ligada de corazón y voluntad en un mismo Espíritu por la fuerza de la fe»."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Gálatas 3:28",
+          "texto": "Ya no hay judío ni gentil, esclavo ni libre, hombre ni mujer, porque todos ustedes son uno en Cristo Jesús."
+        },
+        "puntos": [
+          {
+            "ref": "Ef 2:14-15",
+            "refs": ["Efesios 2:14-15"],
+            "cita": ["derribó el muro de hostilidad que nos separaba", "crear de los dos grupos un nuevo pueblo en él"],
+            "texto": "el muro divisorio entre judío y gentil quedó demolido definitivamente en la cruz."
+          },
+          {
+            "ref": "Ef 2:19-20",
+            "refs": ["Efesios 2:19-20"],
+            "cita": ["ya no son unos desconocidos ni extranjeros. Son ciudadanos junto con todo el pueblo santo de Dios"],
+            "texto": "ningún creyente es ciudadano de segunda categoría ni súbdito extranjero."
+          },
+          {
+            "ref": "Sal 110:1",
+            "refs": ["Salmos 110:1"],
+            "cita": ["Siéntate en el lugar de honor a mi derecha, hasta que humille a tus enemigos"],
+            "texto": "quien gobierna y somete a las naciones es el Señor Jesucristo mismo, exaltado a la derecha del Padre."
+          },
+          {
+            "ref": "Hch 15:16-17",
+            "refs": ["Hechos 15:16-17"],
+            "cita": ["restauraré la casa caída de David", "incluidos todos los gentiles"],
+            "texto": "la promesa davídica sobre los gentiles se cumple llamándolos por el Evangelio al único pueblo de Dios."
+          }
+        ]
+      }
+    },
+    {
+      "id": "VI",
+      "titulo": "Sacrificios de animales, múltiples resurrecciones y rebelión final",
+      "citas": [
+        {
+          "paginas": [278, 279],
+          "es": "El orden de los eventos en el programa de la resurrección sería: (1) la resurrección de Cristo como el principio del programa de resurrección (1Co 15:23); (2) la resurrección de los santos de la era de la Iglesia en el traslado (1Ts 4:16); (3) la resurrección de los santos del período de la tribulación (Apo 20:3-5), junto con (4) la resurrección de los santos del Antiguo Testamento (Dan 12:2; Isa 26:19) en la segunda venida de Cristo a la tierra; y finalmente (5) la resurrección final de los muertos no salvados (Apo 20:5, Apo 20:11-14) al final de la era milenaria."
+        },
+        {
+          "paginas": [287],
+          "es": "Parecería que aun el observador superficial podría ver que la Palabra de Dios no se puede usar para sostener la idea de un juicio general, cuando hay no menos de ocho juicios diferentes que se mencionan en la Escritura, cada uno con un tiempo, un lugar, unos sujetos, una base y un resultado diferentes."
+        },
+        {
+          "paginas": [351, 354],
+          "autorCitado": "A. C. Gaebelein y J. D. Pentecost",
+          "nota": "El primer párrafo recoge la cita de A. C. Gaebelein en p. 351; el segundo es la explicación de Pentecost en p. 354.",
+          "es": "Nunca más se celebrará la Cena del Señor después que los santos de Dios hayan dejado la tierra para estar con el Señor en gloria. Los sacrificios que se reanudarán serán en memoria de la cruz y de toda la maravillosa historia de la Redención de Israel y de las naciones de la tierra, durante el reino de Cristo. … El sistema de sacrificios no será un judaísmo restablecido, sino el establecimiento de un nuevo orden que tiene como propósito la remembranza de la obra de Cristo sobre la cual descansa toda salvación."
+        },
+        {
+          "paginas": [366, 367],
+          "es": "La progenie que tengan ellos durante la era milenaria nacerá con la misma naturaleza caída de pecado con la cual nacieron sus padres y, por consiguiente, necesitarán la regeneración. … Pero de los no regenerados en aquel día saldrá la multitud que se llamará \"Gog y Magog\", que se levantará contra \"el campamento de los santos\", que debe ser Palestina, y \"la ciudad amada\", que debe ser Jerusalén."
+        }
+      ],
+      "significa": {
+        "texto": "Aquí culminan las tensiones internas del sistema frente a la cristología y escatología del Nuevo Testamento:",
+        "puntos": [
+          "Fragmentar la resurrección en cinco fases y el juicio final en ocho tribunales contradice la enseñanza literal de Jesús (una sola «hora», Juan 5:28-29; «el día final», Juan 6:39-40) y de Pablo («una resurrección», Hechos 24:15; 1 Corintios 15:23-26).",
+          "Suprimir la Cena del Señor para volver a sacrificar animales en un templo de piedra —aun llamándolos «conmemorativos»— invierte directamente la epístola a los Hebreos (7:12; 10:1-18).",
+          "Imaginar santos glorificados e inmortales conviviendo sobre la tierra con pecadores mortales que finalmente rodean y asedian a Cristo y sus santos (Gog y Magog) confunde la naturaleza simbólica de Apocalipsis 20."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381): «Vendrá de nuevo con gloria para juzgar a vivos y muertos… Espero la resurrección de los muertos y la vida del mundo futuro»."
+        ],
+        "reforma": [
+          "Confesión de Augsburgo (1530), art. XVII: rechaza a quienes difunden que antes de la resurrección los piadosos tomarán posesión de un reino mundano tras exterminar a todos los impíos, y afirma un único regreso de Cristo para resucitar a todos los muertos y pronunciar el juicio final.",
+          "Confesión Belga, art. 37: «Todos los muertos resucitarán de la tierra, y sus almas se unirán y juntarán con los propios cuerpos en que antes habían vivido» en la única venida final del Señor."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Hebreos 10:14",
+          "texto": "Pues mediante esa única ofrenda, él perfeccionó para siempre a los que está haciendo santos."
+        },
+        "puntos": [
+          {
+            "ref": "He 10:18",
+            "refs": ["Hebreos 10:18"],
+            "cita": ["cuando los pecados han sido perdonados, ya no hace falta ofrecer más sacrificios"],
+            "texto": "ningún sacrificio animal vuelve a ofrecerse tras la cruz, ni siquiera como memorial."
+          },
+          {
+            "ref": "1 Co 11:26",
+            "refs": ["1 Corintios 11:26"],
+            "cita": ["anuncian la muerte del Señor hasta que él vuelva"],
+            "texto": "el memorial instituido por Cristo es la Cena del Señor, no sacrificios de toros ni machos cabríos."
+          },
+          {
+            "ref": "Jn 5:28-29",
+            "refs": ["Juan 5:28-29"],
+            "cita": ["ya se acerca el tiempo en que todos los que están en las tumbas oirán la voz del Hijo de Dios"],
+            "texto": "una sola hora para la resurrección de justos e injustos."
+          },
+          {
+            "ref": "1 Co 15:23-26",
+            "refs": ["1 Corintios 15:23-26"],
+            "cita": ["Después de eso, vendrá el fin, cuando él le entregará el reino a Dios el Padre", "el último enemigo que será destruido es la muerte"],
+            "texto": "a la venida de Cristo le sigue directamente el fin y la entrega del reino al Padre, sin un milenio mortal intermedio."
+          },
+          {
+            "ref": "2 P 3:10-13",
+            "refs": ["2 Pedro 3:10-13"],
+            "cita": ["los cielos desaparecerán con un terrible estruendo", "esperamos con entusiasmo los cielos nuevos y la tierra nueva"],
+            "texto": "el día del Señor desemboca directamente en los cielos nuevos y la tierra nueva."
+          }
+        ]
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "pagina": 62,
+      "ref": "Efesios 2:14-16",
+      "texto": "Si Efesios 2:11-12 describe lo que los gentiles eran «en aquel tiempo» antes de Cristo, ¿por qué se omite el versículo 14, donde Pablo declara que Cristo «unió a judíos y a gentiles en un solo pueblo»?"
+    },
+    {
+      "pagina": 99,
+      "ref": "Hebreos 8:8-13",
+      "texto": "Si el Nuevo Pacto de Jeremías 31:31-34 «sólo podrá cumplirse en la nación de Israel y no en la Iglesia», ¿por qué lo cita íntegro Hebreos 8 para probar que el pacto del Sinaí ya caducó para los creyentes en Jesús?"
+    },
+    {
+      "pagina": 108,
+      "ref": "Efesios 3:6",
+      "texto": "Si la Iglesia fuera un «paréntesis» ausente en las Escrituras hebreas, ¿por qué Pablo y Santiago prueban la entrada de los gentiles citando la Ley, los Profetas y los Salmos?"
+    },
+    {
+      "pagina": 304,
+      "ref": "Marcos 1:14-15",
+      "texto": "Cuando Jesús anunció «¡Por fin ha llegado el tiempo prometido por Dios!», ¿enseñó algún Evangelio que el reino era una oferta contingente que Dios tuvo que aplazar tras el rechazo?"
+    },
+    {
+      "pagina": 152,
+      "ref": "1 Tesalonicenses 4:16-17",
+      "texto": "¿Qué versículo del Nuevo Testamento llama a 1 Tesalonicenses 4:16-17 una venida distinta y separada por siete años de la descrita en 2 Tesalonicenses 1:7-10?"
+    },
+    {
+      "pagina": 178,
+      "ref": "Daniel 9:24-27",
+      "texto": "¿En qué frase de Daniel 9 se menciona una pausa de dos mil años entre la semana 69 y la 70, cuando el texto une directamente la muerte del Ungido con la ruina de la ciudad y del santuario?"
+    },
+    {
+      "pagina": 88,
+      "ref": "Hechos 2:30-35",
+      "texto": "Si el trono actual de Cristo a la derecha del Padre no es el trono prometido a David, ¿por qué Pedro citó el juramento de David justo para explicar la resurrección y ascensión de Jesús?"
+    },
+    {
+      "pagina": 198,
+      "ref": "Mateo 24:34",
+      "texto": "Si «esta generación» en Mateo 24:34 significa la «raza judía» a través de los siglos, ¿por qué significa sus contemporáneos del siglo I en Mateo 11:16, 12:41-42 y 23:36?"
+    },
+    {
+      "pagina": 352,
+      "ref": "Gálatas 3:28",
+      "texto": "¿Cómo puede la Escritura enseñar que Cristo derribó para siempre el muro divisorio entre judío y gentil si en el milenio ha de levantarse un «judaísmo restablecido» con subordinación gentil?"
+    },
+    {
+      "pagina": 278,
+      "ref": "Juan 5:28-29",
+      "texto": "Frente a cinco etapas de resurrección y ocho juicios separados, ¿cómo encaja eso con la única «hora» en que todos los muertos oyen la voz del Hijo de Dios y salen unos a vida y otros a juicio?"
+    },
+    {
+      "pagina": 351,
+      "ref": "Hebreos 10:18",
+      "texto": "Si la Cena del Señor anuncia la muerte de Cristo hasta que Él vuelva y Hebreos declara que «ya no hace falta ofrecer más sacrificios», ¿con qué base volverían a ofrecerse sacrificios de animales?"
+    },
+    {
+      "pagina": 366,
+      "ref": "1 Corintios 15:24-26",
+      "texto": "Si cuando Cristo regresa el último enemigo en ser destruido es la muerte y luego entrega el reino al Padre, ¿cómo podría seguir un reino de mil años donde todavía nacen pecadores, mueren hombres y Satanás reúne ejércitos contra Jerusalén?"
+    }
+  ]
+}

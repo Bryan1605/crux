@@ -67,6 +67,12 @@ const ROUTES = [
   { label: 'apologética (Shincheonji, móvil)', path: '/apologetica/shincheonji', mobile: true },
   { label: 'apologética (¿Qué cree Shincheonji?)', path: '/apologetica/shincheonji?vista=doctrina' },
   { label: 'apologética (¿Qué cree Shincheonji?, móvil)', path: '/apologetica/shincheonji?vista=doctrina', mobile: true },
+  { label: 'apologética (Adventismo)', path: '/apologetica/adventismo' },
+  { label: 'apologética (Adventismo, móvil)', path: '/apologetica/adventismo', mobile: true },
+  { label: 'apologética (Dispensacionalismo)', path: '/apologetica/dispensacionalismo' },
+  { label: 'apologética (Dispensacionalismo, móvil)', path: '/apologetica/dispensacionalismo', mobile: true },
+  { label: 'apologética (¿Qué enseña el dispensacionalismo?)', path: '/apologetica/dispensacionalismo?vista=doctrina' },
+  { label: 'apologética (¿Qué enseña el dispensacionalismo?, móvil)', path: '/apologetica/dispensacionalismo?vista=doctrina', mobile: true },
   { label: 'buscar (vacío)', path: '/buscar' },
   { label: 'buscar (resultados)', path: '/buscar?q=nicea' },
   { label: '404', path: '/ruta-no-existe' }

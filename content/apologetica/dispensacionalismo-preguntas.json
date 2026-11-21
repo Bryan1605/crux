@@ -1,0 +1,2796 @@
+{
+  "version": 1,
+  "fuente": {
+    "archivo": "scripts/apologetica-data/dispensacionalismo.mjs",
+    "actualizado": "2026-11-20"
+  },
+  "fuentes": [
+    "csp-acerca-del-codex",
+    "csp-codex-sinaiticus"
+  ],
+  "reglas": [
+    "Una sola fuente: la Biblia (Codex Sinaiticus donde se conserva y Nueva Traducción Viviente).",
+    "Leer la Escritura con la Escritura: respetar el género profético, la audiencia original y los indicadores de tiempo del texto.",
+    "Diálogo entre cristianos con firmeza en el texto y caridad con el hermano: distinguir entre la ortodoxia esencial compartida y el sistema escatológico dispensacional."
+  ],
+  "bloques": [
+    {
+      "id": "I",
+      "titulo": "Un solo pueblo y el Nuevo Pacto",
+      "desde": 1,
+      "hasta": 9,
+      "preguntas": [
+        {
+          "n": 1,
+          "texto": "Según Efesios 2:14-16, ¿mantiene Dios a Israel y a la Iglesia como dos pueblos eternamente separados con destinos distintos, o Cristo derribó el muro divisorio para crear «de los dos grupos un nuevo pueblo en él»?",
+          "clave": "El texto declara explícitamente que Cristo «unió a judíos y a gentiles en un solo pueblo», derribando «el muro de hostilidad que nos separaba» para crear en sí mismo «un nuevo pueblo en él» (ενα καινον ανθρωπον). Levantar otra vez una barrera teológica permanente entre un pueblo terrenal (Israel) y un pueblo celestial (la Iglesia) deshace la obra reconciliadora que Pablo expone aquí.",
+          "refs": [
+            {
+              "libro": "efesios",
+              "cap": 2,
+              "desde": 14,
+              "hasta": 16,
+              "label": "Efesios 2:14-16",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Pues Cristo mismo nos ha traído la paz. Él unió a judíos y a gentiles en un solo pueblo cuando, por medio de su cuerpo en la cruz, derribó el muro de hostilidad que nos separaba."
+                },
+                {
+                  "n": 15,
+                  "text": "Lo logró al poner fin al sistema de leyes de mandamientos y ordenanzas. Hizo la paz entre judíos y gentiles al crear de los dos grupos un nuevo pueblo en él."
+                },
+                {
+                  "n": 16,
+                  "text": "Cristo reconcilió a ambos grupos con Dios en un solo cuerpo por medio de su muerte en la cruz, y la hostilidad que había entre nosotros quedó destruida."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "αυτοϲ γαρ εϲτιν η ειρηνη ημων ο ποιηϲαϲ τα αμφοτερα εν κ(αι) το μεϲοτοιχον του φραγμου λυϲαϲ την εχθραν εν τη ϲαρκι αυτου"
+                },
+                {
+                  "n": 15,
+                  "grc": "τον νομ‹ο› των εντολων εν δογμαϲιν καταργηϲαϲ ϊνα τουϲ δυο κτιϲη εν §0αυτω ειϲ ενα καινον ανθρωπον ποιων ιρηνην"
+                },
+                {
+                  "n": 16,
+                  "grc": "και αποκαταλλαξη τουϲ αμφοτερουϲ εν ενι ϲωματι τω ‹θω› δια του ϲταυρου αποκτιναϲ την εχθρ‹α› εν αυτω"
+                }
+              ],
+              "pagina": "84.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 2,
+          "texto": "En Gálatas 3:28-29, ¿quiénes son declarados «verdaderos hijos de Abraham» y «herederos» de las promesas hechas a Abraham?",
+          "clave": "«Ya no hay judío ni gentil… todos ustedes son uno en Cristo Jesús. Y ahora que pertenecen a Cristo, son verdaderos hijos de Abraham. Son sus herederos, y la promesa de Dios a Abraham les pertenece a ustedes». La herencia de Abraham no pasa por una línea genética paralela aparte de Cristo.",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 3,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Gálatas 3:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Ya no hay judío ni gentil, esclavo ni libre, hombre ni mujer, porque todos ustedes son uno en Cristo Jesús."
+                },
+                {
+                  "n": 29,
+                  "text": "Y ahora que pertenecen a Cristo, son verdaderos hijos de Abraham. Son sus herederos, y la promesa de Dios a Abraham les pertenece a ustedes."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "ουκ ενι ϊουδαιοϲ ουδε ελλην ουκ ενι δουλοϲ ουδε ελευθεροϲ ουκ ενι αρρεν και θηλυ απαντεϲ γαρ ϋμειϲ §0εϲτε §3εν §6‹χυ› ‹ιυ›"
+                },
+                {
+                  "n": 29,
+                  "grc": "ει δε ϋμειϲ ‹χυ› αρα του αβρααμ ϲπερμα εϲτε κατα επαγγελιαν κληρονομοι"
+                }
+              ],
+              "pagina": "84.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 3,
+          "texto": "Según Romanos 2:28-29, ¿qué define ante Dios al «verdadero judío» y la «verdadera circuncisión»?",
+          "clave": "«No se es un verdadero judío sólo por haber nacido de padres judíos… un verdadero judío es aquel que tiene el corazón recto a los ojos de Dios», por el Espíritu y no meramente obedeciendo la letra de la ley. La Biblia misma distingue al descendiente meramente étnico del heredero espiritual regenerado.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 2,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Romanos 2:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Pues no se es un verdadero judío sólo por haber nacido de padres judíos ni por haber pasado por la ceremonia de la circuncisión."
+                },
+                {
+                  "n": 29,
+                  "text": "No, un verdadero judío es aquel que tiene el corazón recto a los ojos de Dios. La verdadera circuncisión no consiste meramente en obedecer la letra de la ley, sino que es un cambio en el corazón, producido por el Espíritu de Dios. Y una persona con un corazón transformado busca la aprobación de Dios, no la de la gente."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "ου γαρ ο εν τω φανερω ϊουδαιοϲ εϲτιν ουδε η εν τω φανερω εν ϲαρκι περιτομη"
+                },
+                {
+                  "n": 29,
+                  "grc": "αλλ ο εν τω κρυπτω ϊουδαιοϲ και περιτομη καρδιαϲ εν ‹πν›ι ου γραμματι ου ο επαινοϲ ουκ εξ ‹ανω›ν αλλ εκ του ‹θυ›"
+                }
+              ],
+              "pagina": "82.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 4,
+          "texto": "En Romanos 9:6-8, ¿por qué aclara Pablo que «no todos los que nacen en la nación de Israel son en verdad miembros del pueblo de Dios»?",
+          "clave": "Porque ya dentro del Antiguo Testamento «Sólo los hijos de la promesa son considerados hijos de Abraham», y no meramente todos los descendientes naturales según la carne.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 9,
+              "desde": 6,
+              "hasta": 8,
+              "label": "Romanos 9:6-8",
+              "ntv": [
+                {
+                  "n": 6,
+                  "text": "Ahora bien, ¿acaso Dios no cumplió su promesa a Israel? ¡No, porque no todos los que nacen en la nación de Israel son en verdad miembros del pueblo de Dios!"
+                },
+                {
+                  "n": 7,
+                  "text": "Ser descendientes de Abraham no los hace verdaderos hijos de Abraham, pues las Escrituras dicen: Isaac es el hijo mediante el cual procederán tus descendientes, aunque Abraham también tuvo otros hijos."
+                },
+                {
+                  "n": 8,
+                  "text": "Eso significa que no todos los descendientes naturales de Abraham son necesariamente hijos de Dios. Sólo los hijos de la promesa son considerados hijos de Abraham;"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 6,
+                  "grc": "ουχʼ οιον δε οτι εκπεπτωκεν ο λογοϲ του ‹θυ› ου γαρ παντεϲ οι εξ ‹ιηλ›ʼ ουτοι ‹ιηλ› ·"
+                },
+                {
+                  "n": 7,
+                  "grc": "ουδʼ οτι ειϲιν ϲπερμα αβρααμ · παντεϲ τεκνα · αλλ εν §0ϊϲακ κληθηϲεται ϲοι ϲπερμα ·"
+                },
+                {
+                  "n": 8,
+                  "grc": "τουτ εϲτ‹ι› §0 ου τα τεκνα τηϲ ϲαρκοϲ ταυτα τεκνα του ‹θυ› · αλλα τα τεκνα τηϲ επαγγελιαϲ λογιζεται ειϲ ϲπερμα ˙"
+                }
+              ],
+              "pagina": "82.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 5,
+          "texto": "En la metáfora del árbol de olivo de Romanos 11:17-20, ¿planta Dios un segundo árbol nuevo para la Iglesia gentil manteniendo aparte el árbol de Israel, o injerta a los creyentes gentiles en el único olivo?",
+          "clave": "Dios no tiene dos árboles ni dos programas separados. Los gentiles creyentes son ramas injertadas en el mismo olivo que se sostiene en Cristo, y los israelitas que lleguen a creer permanecen o se reinjertan en ese mismo tronco por la fe, nunca en un programa paralelo aparte del Evangelio.",
+          "refs": [
+            {
+              "libro": "romanos",
+              "cap": 11,
+              "desde": 17,
+              "hasta": 20,
+              "label": "Romanos 11:17-20",
+              "ntv": [
+                {
+                  "n": 17,
+                  "text": "Algunas ramas del árbol de Abraham —algunos del pueblo de Israel— han sido arrancadas; y ustedes, los gentiles, que eran ramas de un olivo silvestre, fueron injertados. Así que ahora ustedes también reciben la bendición que Dios prometió a Abraham y a sus hijos, con lo cual comparten con ellos el alimento nutritivo que proviene de la raíz del olivo especial de Dios."
+                },
+                {
+                  "n": 18,
+                  "text": "Así que no se jacten de haber sido injertados para reemplazar a las ramas que fueron arrancadas. Ustedes son sólo una rama, no son la raíz."
+                },
+                {
+                  "n": 19,
+                  "text": "Tal vez digas: Bueno, esas ramas fueron arrancadas para darme lugar a mí."
+                },
+                {
+                  "n": 20,
+                  "text": "Es cierto, pero recuerda: esas ramas fueron arrancadas porque no creyeron en Cristo, y tú estás allí porque sí crees. Así que no te consideres tan importante, más bien teme lo que podría suceder."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 17,
+                  "grc": "ει δε τινεϲ των κλαδων εξεκλαϲθηϲ‹α› · ϲυ δε αγριελεοϲ ‹ω› ενεκεντριϲθηϲ εν αυτοιϲ · και ϲυνκοινωνοϲ τηϲ ριζηϲ · §0 τηϲ πιοτητοϲ τηϲ ελεαϲ εγενου ·"
+                },
+                {
+                  "n": 18,
+                  "grc": "μη κατακαυχω τ‹ω› κλαδων ˙ ει δε κατακαυχαϲαι ˙ ου ϲυ την ριζαν βαϲταζειϲ · αλλα η ριζα ϲε ·"
+                },
+                {
+                  "n": 19,
+                  "grc": "εριϲ ουν εξεκλαϲθηϲαν κλαδοι ϊνα εγω ενκεντριϲθω ˙"
+                },
+                {
+                  "n": 20,
+                  "grc": "καλωϲ τη απιϲτια εξεκλαϲθηϲαν ˙ ϲυ δε τη πιϲτι εϲτηκαϲ μη υψηλα φρονει · αλλα φοβου ·"
+                }
+              ],
+              "pagina": "82.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 6,
+          "texto": "¿A quiénes aplica 1 Pedro 2:9-10 los títulos pactuales del Antiguo Testamento —«un pueblo elegido», «sacerdotes del Rey», «una nación santa»— que antes se pronunciaron sobre Israel en Éxodo 19 y Oseas?",
+          "clave": "A toda la Iglesia (compuesta de judíos y gentiles en Cristo): quienes «Antes no tenían identidad como pueblo, ahora son pueblo de Dios». Pedro traslada sin reserva la identidad corporativa del pueblo pactual a los creyentes en Jesús.",
+          "refs": [
+            {
+              "libro": "1-pedro",
+              "cap": 2,
+              "desde": 9,
+              "hasta": 10,
+              "label": "1 Pedro 2:9-10",
+              "ntv": [
+                {
+                  "n": 9,
+                  "text": "Pero ustedes no son así porque son un pueblo elegido. Son sacerdotes del Rey, una nación santa, posesión exclusiva de Dios. Por eso pueden mostrar a otros la bondad de Dios, pues él los ha llamado a salir de la oscuridad y entrar en su luz maravillosa."
+                },
+                {
+                  "n": 10,
+                  "text": "Antes no tenían identidad como pueblo, ahora son pueblo de Dios. Antes no recibieron misericordia, ahora han recibido la misericordia de Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 9,
+                  "grc": "υμειϲ δε γενοϲ εκλεκτον βαϲιλιον ϊερατευμα εθνοϲ αγιον λαοϲ ειϲ περιποιηϲιν οπωϲ ταϲ αρεταϲ εξαγγιληται του εκ ϲκοτουϲ ϋμαϲ καλεϲαντοϲ ειϲ το θαυμαϲτον αυτου φωϲ"
+                },
+                {
+                  "n": 10,
+                  "grc": "οι ποτε ου λαοϲ νυν δε λαοϲ ‹θυ› οι ουκ ηλεημενοι νυν δε ελεηθεντεϲ"
+                }
+              ],
+              "pagina": "89.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 7,
+          "texto": "Al citar literalmente Jeremías 31:31-34, ¿a quién aplica el autor inspirado de Hebreos 8:8-12 el cumplimiento presente del Nuevo Pacto?",
+          "clave": "A la Iglesia en Cristo. Lejos de posponer Jeremías 31:31-34 hasta un milenio futuro para Israel nacional, Hebreos cita el pasaje íntegro precisamente para demostrar en Hebreos 8:13 que el primer pacto ya caducó porque Cristo ya inauguró el Nuevo Pacto con su sangre.",
+          "refs": [
+            {
+              "libro": "jeremias",
+              "cap": 31,
+              "desde": 31,
+              "hasta": 34,
+              "label": "Jeremías 31:31-34",
+              "codex": {
+                "cap": 38,
+                "desde": 31,
+                "hasta": 34
+              },
+              "nota": "En la Septuaginta (Codex Sinaiticus) corresponde a Jeremías 38:31-34: la ordenación de capítulos en la segunda mitad de Jeremías difiere entre la Septuaginta y el texto masorético.",
+              "ntv": [
+                {
+                  "n": 31,
+                  "text": "Se acerca el día —dice el SEÑOR—, en que haré un nuevo pacto con el pueblo de Israel y de Judá."
+                },
+                {
+                  "n": 32,
+                  "text": "Este pacto no será como el que hice con sus antepasados cuando los tomé de la mano y los saqué de la tierra de Egipto. Ellos rompieron ese pacto, a pesar de que los amé como un hombre ama a su esposa, dice el SEÑOR."
+                },
+                {
+                  "n": 33,
+                  "text": "Pero este es el nuevo pacto que haré con el pueblo de Israel en ese día —dice el SEÑOR—. Pondré mis instrucciones en lo más profundo de ellos y las escribiré en su corazón. Yo seré su Dios y ellos serán mi pueblo."
+                },
+                {
+                  "n": 34,
+                  "text": "Y no habrá necesidad de enseñar a sus vecinos ni habrá necesidad de enseñar a sus parientes diciendo: «Deberías conocer al SEÑOR». Pues todos ya me conocerán, desde el más pequeño hasta el más grande —dice el SEÑOR—. Perdonaré sus maldades y nunca más me acordaré de sus pecados."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 31,
+                  "grc": "ϊδου §0ημερεʼ ερχ‹ο›ται §2λεγι ‹κϲ› · και διαθηϲομαι τω οικω ‹ιϲλ› και τω οικω ϊουδα διαθηκην §4"
+                },
+                {
+                  "n": 32,
+                  "grc": "ου κατα την §0διαθην ην διεθεμ‹η› τοιϲ πατραϲιν ϋμ‹ω› εν ημερα επιλαβομενου μου τηϲ §2χιροϲ αυτ‹ω› · εξαγαγειν αυτουϲ εκ γηϲ αιγυπτου · οτι αυτοι ουκ §4ενεμιναν εν τη διαθηκη μου · και εγω ημεληϲα αυτων φηϲιν ‹κϲ› ·"
+                },
+                {
+                  "n": 33,
+                  "grc": "οτι αυτη η διαθηκη · ην διαθηϲομαι τω οικω ι‹ϲλ› μετα ταϲ ημεραϲ §0εκιναϲ φηϲιν ‹κϲ› · διδουϲ δωϲω §2νομον μου ειϲ τ‹η› §4καρδιαν αυτων · και επι καρδιαν αυτων γραψω αυτουϲ §6και §8οψομε §10αυτουϲ και §12εϲομε αυτοιϲ ειϲ ‹θν› ˙ και αυτοι §14εϲοντε §16μου ειϲ λαον"
+                },
+                {
+                  "n": 34,
+                  "grc": "και · ου μη διδαξωϲ‹ι› εκαϲτοϲ τον πολιτην αυτου · και εκαϲτοϲ τον αδελφον αυτου λεγ‹ω› . γνωθι τον ‹κν› ˙ οτι παντεϲ ειδηϲουϲουϲιν §0μαι απο μικρου αυτων και εωϲ μεγαλου αυτων ˙ οτι ειλεωϲ εϲομαι ταιϲ αδικιαιϲ αυτων · και των αμαρτιων αυτων ου §2μη μνηϲθω ετι ˙"
+                }
+              ],
+              "pagina": "48.7v"
+            },
+            {
+              "libro": "hebreos",
+              "cap": 8,
+              "desde": 8,
+              "hasta": 12,
+              "label": "Hebreos 8:8-12",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Pero cuando Dios encontró defectos en el pueblo, dijo: Llegará el día, dice el SEÑOR, en que haré un nuevo pacto con el pueblo de Israel y de Judá."
+                },
+                {
+                  "n": 9,
+                  "text": "Este pacto no será como el que hice con sus antepasados cuando los tomé de la mano y los saqué de la tierra de Egipto. Ellos no permanecieron fieles a mi pacto, por eso les di la espalda, dice el SEÑOR."
+                },
+                {
+                  "n": 10,
+                  "text": "Pero éste es el nuevo pacto que haré con el pueblo de Israel en ese día, dice el SEÑOR: Pondré mis leyes en su mente y las escribiré en su corazón. Yo seré su Dios, y ellos serán mi pueblo."
+                },
+                {
+                  "n": 11,
+                  "text": "Y no habrá necesidad de enseñar a sus vecinos ni habrá necesidad de enseñar a sus parientes, diciendo: «Deberías conocer al SEÑOR». Pues todos ya me conocerán, desde el más pequeño hasta el más grande."
+                },
+                {
+                  "n": 12,
+                  "text": "Y perdonaré sus maldades y nunca más me acordaré de sus pecados."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "μεμφομενοϲ γαρ §0αυτουϲ λεγει ϊδου ημεραι ερχονται λεγει ‹κϲ› και ϲυντελεϲω επι τον οικ‹ο› ‹ιϲ›λ και επι τον §2οι ϊουδα διαθηκην καινην"
+                },
+                {
+                  "n": 9,
+                  "grc": "ου κατα την διαθηκην §0‹η› εποιηϲα τοιϲ πατραϲιν αυτων εν ημερα επιλαβομενου μου τηϲ χειροϲ αυτων εξαγαγειν αυτουϲ εκ γηϲ αιγυπτου οτι αυτοι ουκ ενεμιναν εν τη διαθηκη μου καγω ημεληϲα αυτ‹ω› λεγει ‹κϲ›"
+                },
+                {
+                  "n": 10,
+                  "grc": "οτι αυτη η διαθηκη ην διαθηϲομαι τω οικω ι‹η›λ μετα ταϲ ημεραϲ εκιναϲ λεγει ‹κϲ› διδουϲ νομουϲ μου ειϲ την διανοιαν αυτων και επι §0καρδιαν αυτων επιγραψω αυτουϲ και εϲομαι αυτοιϲ ειϲ ‹θν› και αυτοι εϲονται §2μοι ειϲ λαον"
+                },
+                {
+                  "n": 11,
+                  "grc": "και ου μη διδαξωϲιν εκαϲτοϲ τ‹ο› πολιτην αυτου κ(αι) εκαϲτοϲ τον αδελφον αυτου λεγων γνωθι τον ‹κν› οτι παντεϲ ειδηϲουϲιν με απο μικρου εωϲ μεγαλου αυτ‹ω›"
+                },
+                {
+                  "n": 12,
+                  "grc": "οτι ϊλεωϲ εϲομαι ταιϲ αδικιαιϲ αυτ‹ω› και των §0αμαρτι‹ω› αυτων §3 ου μη μνηϲθω ετι ·"
+                }
+              ],
+              "pagina": "85.7r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "hebreos",
+              "cap": 8,
+              "desde": 13,
+              "hasta": 13,
+              "label": "Hebreos 8:13"
+            }
+          ]
+        },
+        {
+          "n": 8,
+          "texto": "Según 2 Corintios 3:6 y Lucas 22:20, ¿fue hecho el Nuevo Pacto para esperar un futuro milenario o ya ministra la Iglesia en él porque se confirmó con la sangre de Cristo?",
+          "clave": "Pablo afirma que Dios «nos capacitó para que seamos ministros de su nuevo pacto», y Jesús mismo declaró en la copa: «Esta copa es el nuevo pacto entre Dios y su pueblo, un acuerdo confirmado con mi sangre». Todo cristiano participa hoy del único Nuevo Pacto mencionado en la Escritura.",
+          "refs": [
+            {
+              "libro": "2-corintios",
+              "cap": 3,
+              "desde": 6,
+              "hasta": 6,
+              "label": "2 Corintios 3:6",
+              "ntv": [
+                {
+                  "n": 6,
+                  "text": "Él nos capacitó para que seamos ministros de su nuevo pacto. Este no es un pacto de leyes escritas, sino del Espíritu. El antiguo pacto escrito termina en muerte; pero, de acuerdo con el nuevo pacto, el Espíritu da vida."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 6,
+                  "grc": "οϲ και ϊκανωϲεν ημαϲ διακονουϲ καινηϲ διαθηκηϲ ου γραμματοϲ αλλα ‹πνϲ› το γαρ γραμμα αποκτεννι το δε ‹πνα› ζωοποιει"
+                }
+              ],
+              "pagina": "83.7r"
+            },
+            {
+              "libro": "lucas",
+              "cap": 22,
+              "desde": 20,
+              "hasta": 20,
+              "label": "Lucas 22:20",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "Después de la cena, tomó en sus manos otra copa de vino y dijo: Esta copa es el nuevo pacto entre Dios y su pueblo, un acuerdo confirmado con mi sangre, la cual es derramada como sacrificio por ustedes."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 20,
+                  "grc": "και το ποτηριον ωϲαυτωϲ μετα το διπνηϲαι λεγων του το το ποτηριον η καινη διαθηκη εν τω αιματι μου το ϋπερ υμων εκχυννομενον"
+                }
+              ],
+              "pagina": "79.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 9,
+          "texto": "¿A quiénes bendice Pablo en Gálatas 6:15-16 como «el nuevo pueblo de Dios» (literalmente en el griego del Codex, «el Israel de Dios») al concluir su carta sobre la nulidad de la circuncisión frente a la creación nueva en Cristo?",
+          "clave": "Declara que «Lo que importa es que hayamos sido transformados en una creación nueva», y pronuncia paz y misericordia «sobre el Israel de Dios» (επι τον ιηλ του θυ), es decir, todo el pueblo de Dios unido en esa nueva creación.",
+          "refs": [
+            {
+              "libro": "galatas",
+              "cap": 6,
+              "desde": 15,
+              "hasta": 16,
+              "label": "Gálatas 6:15-16",
+              "ntv": [
+                {
+                  "n": 15,
+                  "text": "No importa si fuimos o no circuncidados. Lo que importa es que hayamos sido transformados en una creación nueva."
+                },
+                {
+                  "n": 16,
+                  "text": "Que la paz y la misericordia de Dios sean con todos los que viven según ese principio; ellos son el nuevo pueblo de Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 15,
+                  "grc": "εν γαρ ‹χω› ‹ιυ› ουτε περιτομη τι §0εϲτιν ουτε ακροβυϲτια αλλα καινη κτιϲιϲ"
+                },
+                {
+                  "n": 16,
+                  "grc": "κ(αι) οϲοι τω κανονι τουτω ϲτοιχηϲουϲ‹ι› ϊρηνη επ αυτουϲ και ελεοϲ και επι τον ‹ιηλ› του ‹θυ›"
+                }
+              ],
+              "pagina": "84.4v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "titulo": "El Reino presente y el trono de David",
+      "desde": 10,
+      "hasta": 18,
+      "preguntas": [
+        {
+          "n": 10,
+          "texto": "Según Marcos 1:14-15, al comenzar Jesús su ministerio, ¿anunció un reino condicional que podría posponerse miles de años si los líderes lo rechazaban, o proclamó que «¡Por fin ha llegado el tiempo prometido por Dios!»?",
+          "clave": "«¡Por fin ha llegado el tiempo prometido por Dios! —anunciaba—. ¡El reino de Dios está cerca!» La cruz no fue un recurso secundario tras el fracaso de una oferta contingente; fue el camino mismo por el cual el Rey venció e inauguró Su reino.",
+          "refs": [
+            {
+              "libro": "marcos",
+              "cap": 1,
+              "desde": 14,
+              "hasta": 15,
+              "label": "Marcos 1:14-15",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Más tarde, después del arresto de Juan, Jesús entró en Galilea, donde predicó la Buena Noticia de Dios."
+                },
+                {
+                  "n": 15,
+                  "text": "¡Por fin ha llegado el tiempo prometido por Dios! —anunciaba—. ¡El reino de Dios está cerca! ¡Arrepiéntanse de sus pecados y crean la Buena Noticia!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "μετα δε το παραδοθηναι τον ϊωαννην ηλθεν ο ‹ιϲ› ειϲ την γαλιλαιαν κηρυϲϲων το ευαγγελιον του ‹θυ›"
+                },
+                {
+                  "n": 15,
+                  "grc": "§0 οτι πεπληρωται ο καιροϲ και ηγγεικεν η βαϲιλια του ‹θυ› μετανοειτε και πιϲτευεται εν τω ευαγγελιω"
+                }
+              ],
+              "pagina": "76.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 11,
+          "texto": "En Mateo 12:28 y Lucas 17:20-21, ¿describió Jesús su reino como un estado geopolítico futuro centrado en Jerusalén, o declaró que «el reino de Dios ha llegado y está entre ustedes»?",
+          "clave": "«El reino de Dios ha llegado y está entre ustedes» y «No pueden descubrir el reino de Dios por medio de señales visibles… porque el reino de Dios ya está entre ustedes». Reducir el reino prometido a una restauración militar terrenal pasa por alto la enseñanza explícita de Jesús.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 12,
+              "desde": 28,
+              "hasta": 28,
+              "label": "Mateo 12:28",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "Sin embargo, si yo expulso a los demonios por el Espíritu de Dios, entonces el reino de Dios ha llegado y está entre ustedes."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "ει δε εν ‹πν›ι ‹θυ› εγω εκβαλλω τα §0δεμονια αρα εφθαϲεν εφ ϋμαϲ η βαϲιλια του ‹θυ›"
+                }
+              ],
+              "pagina": "74.7r"
+            },
+            {
+              "libro": "lucas",
+              "cap": 17,
+              "desde": 20,
+              "hasta": 21,
+              "label": "Lucas 17:20-21",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "Un día, los fariseos le preguntaron a Jesús: —¿Cuándo vendrá el reino de Dios? Jesús contestó: —No pueden descubrir el reino de Dios por medio de señales visibles."
+                },
+                {
+                  "n": 21,
+                  "text": "Nunca podrán decir: «¡Aquí está!» o «¡Está por allí!», porque el reino de Dios ya está entre ustedes."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 20,
+                  "grc": "επερωτηθειϲ δε ϋπο των φαριϲαιων ποτε ερχεται η βαϲιλια του ‹θυ› απεκριθη αυτοιϲ και ειπεν ουκ ερχεται η βαϲιλεια του ‹θυ› μετα παρατηρηϲεωϲ"
+                },
+                {
+                  "n": 21,
+                  "grc": "ουδε ερουϲιν ιδου ωδε η εκει ϊδου γαρ η βαϲιλεια του ‹θυ› εντοϲ ϋμων εϲτιν"
+                }
+              ],
+              "pagina": "79.2r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 12,
+          "texto": "Ante el gobernador romano en Juan 18:36, ¿cómo definió Jesús mismo la naturaleza y procedencia de su reino?",
+          "clave": "«Mi reino no es un reino terrenal. Si lo fuera, mis seguidores lucharían para impedir que yo sea entregado… pero mi reino no es de este mundo». Cristo niega expresamente que su realeza sea un dominio político armado al estilo de los reinos terrenales.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 18,
+              "desde": 36,
+              "hasta": 36,
+              "label": "Juan 18:36",
+              "ntv": [
+                {
+                  "n": 36,
+                  "text": "Jesús contestó: —Mi reino no es un reino terrenal. Si lo fuera, mis seguidores lucharían para impedir que yo sea entregado a los líderes judíos; pero mi reino no es de este mundo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 36,
+                  "grc": "απεκριθη ‹ιϲ› η εμη βαϲιλεια ουκ εϲτιν εκ του κοϲμου τουτου · ει εκ του κοϲμου τουτου ην η εμη βαϲιλια · και οι υπηρεται οι εμοι ηγωνιζοντο αν · ινα μη παραδοθω τοιϲ ϊουδαιοιϲ ν‹υ› δε η εμη βαϲιλεια ουκ εϲτιν εντευθεν ·"
+                }
+              ],
+              "pagina": "81.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 13,
+          "texto": "En el discurso de Pentecostés (Hechos 2:30-36), ¿dice Pedro que Dios pospuso sentar a Jesús en el trono de David hasta la segunda venida, o afirma que Dios ya cumplió el juramento davídico al resucitarlo y exaltarlo a Su derecha?",
+          "clave": "Pedro une directamente el juramento de Dios a David —que uno de sus descendientes se sentaría en su trono— con la resurrección y ascensión de Jesús: «ha sido exaltado al lugar de más alto honor en el cielo, a la derecha de Dios» y «Dios lo ha hecho tanto Señor como Mesías». El trono de Cristo está vigente ahora en el cielo.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 2,
+              "desde": 30,
+              "hasta": 36,
+              "label": "Hechos 2:30-36",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "pero él era un profeta y sabía que Dios había prometido mediante un juramento que uno de los propios descendientes de David se sentaría en su trono."
+                },
+                {
+                  "n": 31,
+                  "text": "David estaba mirando hacia el futuro y hablaba de la resurrección del Mesías. Él decía que Dios no lo dejaría entre los muertos ni permitiría que su cuerpo se pudriera en la tumba."
+                },
+                {
+                  "n": 32,
+                  "text": "Dios levantó a Jesús de los muertos y de esto todos nosotros somos testigos."
+                },
+                {
+                  "n": 33,
+                  "text": "Ahora él ha sido exaltado al lugar de más alto honor en el cielo, a la derecha de Dios. Y el Padre, según lo había prometido, le dio el Espíritu Santo para que lo derramara sobre nosotros, tal como ustedes lo ven y lo oyen hoy."
+                },
+                {
+                  "n": 34,
+                  "text": "Pues David nunca ascendió al cielo; sin embargo, dijo: «El SEÑOR dijo a mi Señor: «Siéntate en el lugar de honor a mi derecha,"
+                },
+                {
+                  "n": 35,
+                  "text": "hasta que humille a tus enemigos y los ponga por debajo de tus pies»»."
+                },
+                {
+                  "n": 36,
+                  "text": "Por lo tanto, que todos en Israel sepan sin lugar a dudas, que a este Jesús, a quien ustedes crucificaron, ¡Dios lo ha hecho tanto Señor como Mesías!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "προφητηϲ ουν ϋπαρχων και ειδωϲ οτι ορκω ωμοϲεν αυτω ο ‹θϲ› εκ καρπου τηϲ οϲφυοϲ αυτου καθιϲε επι τον θρονον αυτου"
+                },
+                {
+                  "n": 31,
+                  "grc": "προϊδων ελαληϲεν περι τηϲ αναϲταϲεωϲ του ‹χυ› οτι ουτε ενκατελιφθη ειϲ αδην ουτε η ϲαρξ αυτου ειδεν διαφθοραν"
+                },
+                {
+                  "n": 32,
+                  "grc": "τουτον τον ‹ιν› ανεϲτηϲεν ο ‹θϲ› ου παντεϲ εϲμ‹ε› ημειϲ μαρτυρεϲ"
+                },
+                {
+                  "n": 33,
+                  "grc": "τη δεξια ουν του ‹θυ› ϋψωθειϲ την τε επαγγελιαν του π‹ν›ϲ του αγιου λαβων παρα του πατροϲ εξεχεεν τουτο ο ϋμειϲ βλεπετε και ακουετε"
+                },
+                {
+                  "n": 34,
+                  "grc": "ου γαρ δ‹α›δ ανεβη ειϲ τουϲ ουρανουϲ ˙ λεγει δε αυτοϲ · ειπεν §0 ‹κϲ› τω ‹κω› μου καθου εκ δεξιων μου"
+                },
+                {
+                  "n": 35,
+                  "grc": "εωϲ αν θω τουϲ εχθρουϲ ϲου ϋποποδιον των ποδων ϲου ·"
+                },
+                {
+                  "n": 36,
+                  "grc": "αϲφαλωϲ ουν γινωϲκετω παϲ οικοϲ ϊ‹η›λ οτι και ‹κν› αυτον και ‹χν› εποιηϲεν ο ‹θϲ› τουτον τον ‹ιν› ον ϋμειϲ εϲταυρωϲατε ·"
+                }
+              ],
+              "pagina": "86.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 14,
+          "texto": "Al leer Salmos 110:1 junto con 1 Corintios 15:25, ¿cuándo reina Cristo hasta derrotar a su último enemigo (la muerte): solo después de volver, o desde que se sentó a la derecha del Padre?",
+          "clave": "«Cristo tiene que reinar hasta que humille a todos sus enemigos debajo de sus pies. Y el último enemigo que será destruido es la muerte». Como señala Salmos 110:1, Cristo ya está sentado reinando ahora, y ese reinado presente culmina cuando al regresar destruya la muerte.",
+          "refs": [
+            {
+              "libro": "salmos",
+              "cap": 110,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Salmos 110:1",
+              "codex": {
+                "cap": 109,
+                "desde": 1,
+                "hasta": 1
+              },
+              "nota": "En la Septuaginta (Codex Sinaiticus) es el Salmo 109:1: entre el Salmo 10 y el 147 la numeración griega va un número detrás.",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "El SEÑOR le dijo a mi Señor: Siéntate en el lugar de honor a mi derecha, hasta que humille a tus enemigos y los ponga por debajo de tus pies."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "§0τω §2‹δα›δ §4ψαλμοϲ ειπεν ο ‹κϲ› τω ‹κω› μου καθου εκ δεξιων μου εωϲ αν θω τουϲ εχθρουϲ ϲου ϋποποδιον των ποδων ϲου"
+                }
+              ],
+              "pagina": "62.8r"
+            },
+            {
+              "libro": "1-corintios",
+              "cap": 15,
+              "desde": 25,
+              "hasta": 25,
+              "label": "1 Corintios 15:25",
+              "ntv": [
+                {
+                  "n": 25,
+                  "text": "Pues Cristo tiene que reinar hasta que humille a todos sus enemigos debajo de sus pies."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 25,
+                  "grc": "δει γαρ αυτον βαϲιλευειν §0αχρι ου §3 θη πανταϲ τουϲ εχθρουϲ ϋπο τουϲ ποδαϲ αυτου §5"
+                }
+              ],
+              "pagina": "83.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 15,
+          "texto": "En el concilio de Jerusalén (Hechos 15:14-17), ¿a qué acontecimiento aplica Santiago la profecía de Amós sobre restaurar «la casa caída de David»?",
+          "clave": "A la conversión presente de los gentiles que ya estaba sucediendo en el siglo I mediante la predicación del Evangelio («para que el resto de la humanidad busque al SEÑOR, incluidos todos los gentiles»). No lo relega a un reino futuro después de un rapto.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 15,
+              "desde": 14,
+              "hasta": 17,
+              "label": "Hechos 15:14-17",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Pedro les ha contado de cuando Dios visitó por primera vez a los gentiles para tomar de entre ellos un pueblo para sí mismo."
+                },
+                {
+                  "n": 15,
+                  "text": "Y la conversión de los gentiles es precisamente lo que los profetas predijeron. Como está escrito:"
+                },
+                {
+                  "n": 16,
+                  "text": "«Después yo volveré y restauraré la casa caída de David. Reconstruiré sus ruinas y la restauraré,"
+                },
+                {
+                  "n": 17,
+                  "text": "para que el resto de la humanidad busque al SEÑOR, incluidos todos los gentiles, todos los que he llamado para que sean míos. El SEÑOR ha hablado,"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "ϲυ μεων εξηγηϲατο καθωϲ πρωτ‹ο› ο ‹θϲ› επεϲκεψατο λαβιν εξ εθνων λαον τω ονοματι αυτου"
+                },
+                {
+                  "n": 15,
+                  "grc": "και τουτω ϲυμφωνουϲιν οι λογοι των προφητων καθωϲ γεγραπται ·"
+                },
+                {
+                  "n": 16,
+                  "grc": "μετα ταυτα αναϲτρεψω και ανοικοδομηϲω την ϲκην‹η› δ‹α›δ την πεπτωκυϊαν και τα κατεϲτραμμενα αυτηϲ ανοικοδομηϲω και ανορθωϲω αυτην"
+                },
+                {
+                  "n": 17,
+                  "grc": "οπωϲ αν εκζητηϲωϲιν οι καταλοιποι των ανθρωπων τον ‹κν› και παντα τα εθνη εφ ουϲ επικεκληται το ονομα μου επ αυτουϲ λεγει ‹κϲ› §0 ποιων ταυτα"
+                }
+              ],
+              "pagina": "87.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 16,
+          "texto": "Según Colosenses 1:13 y Apocalipsis 1:5-6, ¿esperan los creyentes entrar en el reino del Hijo y ser constituidos «un reino de sacerdotes» después de la tribulación, o ya lo son en el presente?",
+          "clave": "El Padre «nos trasladó al reino de su Hijo amado», y Cristo «ha hecho de nosotros un reino de sacerdotes para Dios, su Padre». Ambos hechos se expresan en pasado consumado.",
+          "refs": [
+            {
+              "libro": "colosenses",
+              "cap": 1,
+              "desde": 13,
+              "hasta": 13,
+              "label": "Colosenses 1:13",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Pues él nos rescató del reino de la oscuridad y nos trasladó al reino de su Hijo amado,"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 13,
+                  "grc": "οϲ ερρυϲατο ημαϲ εκ τηϲ εξουϲιαϲ του ϲκοτουϲ και μετεϲτηϲεν ειϲ την βαϲιλειαν του ϋϊου τηϲ αγαπηϲ αυτου"
+                }
+              ],
+              "pagina": "85.1r"
+            },
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 5,
+              "hasta": 6,
+              "label": "Apocalipsis 1:5-6",
+              "ntv": [
+                {
+                  "n": 5,
+                  "text": "y de Jesucristo. Él es el testigo fiel de estas cosas, el primero en resucitar de los muertos y el gobernante de todos los reyes del mundo. Toda la gloria sea al que nos ama y nos ha libertado de nuestros pecados al derramar su sangre por nosotros."
+                },
+                {
+                  "n": 6,
+                  "text": "Él ha hecho de nosotros un reino de sacerdotes para Dios, su Padre. ¡A él sea toda la gloria y el poder por siempre y para siempre! Amén."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 5,
+                  "grc": "και απο ‹ιυ› ‹χυ› ο §0μαρτυϲ ο πιϲτοϲ ο πρωτοτοκοϲ τ‹ω› νεκρων και ο αρχ‹ω› των §2βαϲειλειων τηϲ γηϲ §5 αγαπωντι ημαϲ και λυϲαντι §7 εκ των αμαρτιων ημων εν τω §9αιματι αυτου"
+                },
+                {
+                  "n": 6,
+                  "grc": "και εποιηϲεν ημαϲ βαϲιλει‹α› §0 ϊερειϲ τω ‹θω› και ‹πρ›ι αυτου §2αυτω η δοξα και το κρατοϲ ειϲ §4τ‹ο› §6αιωνα των αιων‹ω› αμην ·"
+                }
+              ],
+              "pagina": "90.1v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 17,
+          "texto": "Según Mateo 28:18 y Efesios 1:20-22, ¿cuánta autoridad tiene hoy Cristo sobre el cielo, la tierra y todo poder gobernante?",
+          "clave": "«Se me ha dado toda autoridad en el cielo y en la tierra», sentado a la derecha de Dios «muy por encima de todo… no sólo en este mundo sino también en el mundo que vendrá». A Cristo no le falta un trono en Palestina para llegar a ser rey absoluto.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 28,
+              "desde": 18,
+              "hasta": 18,
+              "label": "Mateo 28:18",
+              "ntv": [
+                {
+                  "n": 18,
+                  "text": "Jesús se acercó y dijo a sus discípulos: Se me ha dado toda autoridad en el cielo y en la tierra."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 18,
+                  "grc": "και προϲελθων ο ‹ιϲ› ελαληϲεν §0 λεγων εδοθη μοι παϲα εξουϲια εν ουρανω και επι γηϲ ·"
+                }
+              ],
+              "pagina": "76.2r"
+            },
+            {
+              "libro": "efesios",
+              "cap": 1,
+              "desde": 20,
+              "hasta": 22,
+              "label": "Efesios 1:20-22",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "que levantó a Cristo de los muertos y lo sentó en el lugar de honor, a la derecha de Dios, en los lugares celestiales."
+                },
+                {
+                  "n": 21,
+                  "text": "Ahora Cristo está muy por encima de todo, sean gobernantes o autoridades o poderes o dominios o cualquier otra cosa, no sólo en este mundo sino también en el mundo que vendrá."
+                },
+                {
+                  "n": 22,
+                  "text": "Dios ha puesto todo bajo la autoridad de Cristo, a quien hizo cabeza de todas las cosas para beneficio de la iglesia."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 20,
+                  "grc": "ην ενηργηϲ‹ε› εν τω ‹χω› εγειραϲ αυτον εκ νεκρων και καθιϲαϲ αυτον εν δεξια αυτου εν τοιϲ επουρανιοιϲ"
+                },
+                {
+                  "n": 21,
+                  "grc": "ϋπερανω παϲηϲ αρχηϲ και εξουϲιαϲ και δυναμεωϲ και κυριοτητοϲ και παντοϲ ονοματοϲ ονομαζομενου ου μονον εν τω αιωνι τουτω αλλα και εν τω μελλοντι"
+                },
+                {
+                  "n": 22,
+                  "grc": "και παντα ϋπεταξεν ϋπο τουϲ ποδαϲ αυτου και αυτον εδωκεν κεφαλην ϋπερ παντα τη εκκληϲια"
+                }
+              ],
+              "pagina": "84.5r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 18,
+          "texto": "En Hechos 1:6-8, cuando los apóstoles preguntaron si Jesús restauraría el reino a Israel en ese momento, ¿confirmó Jesús un reino político nacional o reorientó su expectativa hacia la misión del Espíritu hasta los confines de la tierra?",
+          "clave": "Jesús rechazó que les tocara especular sobre fechas nacionales («a ustedes no les corresponde saberlo») y los envió a ser testigos espirituales en Jerusalén, Judea, Samaria y hasta los lugares más lejanos de la tierra en el poder del Espíritu Santo.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 1,
+              "desde": 6,
+              "hasta": 8,
+              "label": "Hechos 1:6-8",
+              "ntv": [
+                {
+                  "n": 6,
+                  "text": "Así que mientras los apóstoles estaban con Jesús, le preguntaron con insistencia: —Señor, ¿ha llegado ya el tiempo de que liberes a Israel y restaures nuestro reino?"
+                },
+                {
+                  "n": 7,
+                  "text": "Él les contestó: —Sólo el Padre tiene la autoridad para fijar esas fechas y tiempos, y a ustedes no les corresponde saberlo;"
+                },
+                {
+                  "n": 8,
+                  "text": "pero recibirán poder cuando el Espíritu Santo descienda sobre ustedes; y serán mis testigos, y le hablarán a la gente acerca de mí en todas partes: en Jerusalén, por toda Judea, en Samaria y hasta los lugares más lejanos de la tierra."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 6,
+                  "grc": "οι μεν ουν §0ελθ‹ο›τεϲ ηρωτων αυτον λεγοντεϲ ‹κε› ει εν τω χρονω τουτω αποκαθιϲτανειϲ την βαϲιλειαν τω ι‹η›λ"
+                },
+                {
+                  "n": 7,
+                  "grc": "ειπεν δε προϲ αυτουϲ ουχʼ υμων εϲτιν γνωναι χρονουϲ η καιρουϲ ουϲ ο πατηρ εθετο εν τη ϊδια εξουϲια"
+                },
+                {
+                  "n": 8,
+                  "grc": "αλλα λημψεϲθαι δυναμιν επελθ‹ο›τοϲ του αγιου ‹πν›ϲ εφ υμαϲ και εϲεϲθε μου μαρτυρεϲ εν τε ϊερουϲαλημ και εν παϲη τη ϊουδαια και ϲαμαρια και εωϲ αιϲχατου τηϲ γηϲ ·"
+                }
+              ],
+              "pagina": "86.7r"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "titulo": "«Esta generación», el Monte de los Olivos y el lenguaje cósmico",
+      "desde": 19,
+      "hasta": 27,
+      "preguntas": [
+        {
+          "n": 19,
+          "texto": "En Mateo 24:1-3, ¿qué edificaciones admiraban los discípulos y qué destrucción acababa de anunciar Jesús justo antes de sentarse en el Monte de los Olivos?",
+          "clave": "Miraban los edificios del templo de Jerusalén del siglo I, y Jesús acababa de profetizar su ruina literal («¡No quedará ni una sola piedra sobre otra!»). Toda la conversación parte de esa catástrofe histórica concreta.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 1,
+              "hasta": 3,
+              "label": "Mateo 24:1-3",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Cuando Jesús salía del terreno del templo, sus discípulos le señalaron los diversos edificios del templo."
+                },
+                {
+                  "n": 2,
+                  "text": "Pero él les respondió: ¿Ven todos esos edificios? Les digo la verdad, serán demolidos por completo. ¡No quedará ni una sola piedra sobre otra!"
+                },
+                {
+                  "n": 3,
+                  "text": "Más tarde, Jesús se sentó en el monte de los Olivos. Sus discípulos se le acercaron en privado y le dijeron: —Dinos, ¿cuándo sucederá todo eso? ¿Qué señal marcará tu regreso y el fin del mundo?"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "και εξελθων ο ‹ιϲ› απο του ϊερου επορευετο και προϲηλθον οι μαθητε αυτου επιδιξε αυτω ταϲ οικοδομαϲ του ϊερου"
+                },
+                {
+                  "n": 2,
+                  "grc": "ο δε αποκριθειϲ ειπεν αυτοιϲ ου βλεπετε ταυτα §0παντα αμην λεγω ϋμιν ου μη αφεθη ωδε λιθοϲ επι λιθον οϲ ου καταλυθηϲεται"
+                },
+                {
+                  "n": 3,
+                  "grc": "καθημενου δε αυτου επι του ορουϲ τ‹ω› ελεων προϲηλθ‹ο› αυτω οι μαθηται καθ ϊδιαν λεγοντεϲ ειπε ημιν §0ποτε ταυτα εϲτε και τι το ϲημιον τηϲ ϲηϲ παρουϲιαϲ και ϲυντελιαϲ του αιωνοϲ"
+                }
+              ],
+              "pagina": "75.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 20,
+          "texto": "Cuando Jesús dijo en Mateo 24:34 «no pasará esta generación hasta que todas estas cosas sucedan», ¿hablaba de una «raza» futura dos mil años después, o de la misma generación de sus contemporáneos?",
+          "clave": "En todo el Evangelio de Mateo (Mateo 11:16, Mateo 12:41-42 y Mateo 23:36), la expresión «esta generación» designa invariablemente a los contemporáneos de Jesús que vivían en el siglo I —la misma sobre la cual Jesús acaba de decir en Mateo 23:36 que caería todo juicio—. Cambiar su sentido aquí por «raza judía» rompe el uso unánime del propio Evangelio.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 34,
+              "hasta": 34,
+              "label": "Mateo 24:34",
+              "ntv": [
+                {
+                  "n": 34,
+                  "text": "Les digo la verdad, no pasará esta generación hasta que todas estas cosas sucedan."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 34,
+                  "grc": "αμην λεγω ϋμιν ου μη παρελθη η γενεα αυτη εωϲ παντα ταυτα γενητε"
+                }
+              ],
+              "pagina": "75.6v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "mateo",
+              "cap": 11,
+              "desde": 16,
+              "hasta": 16,
+              "label": "Mateo 11:16"
+            },
+            {
+              "libro": "mateo",
+              "cap": 12,
+              "desde": 41,
+              "hasta": 42,
+              "label": "Mateo 12:41-42"
+            },
+            {
+              "libro": "mateo",
+              "cap": 23,
+              "desde": 36,
+              "hasta": 36,
+              "label": "Mateo 23:36"
+            }
+          ]
+        },
+        {
+          "n": 21,
+          "texto": "Al comparar Mateo 24:15-20 con el pasaje paralelo de Lucas 21:20-22, ¿qué hecho histórico claro explica Lucas a sus lectores gentiles que significa el signo de desolación en Judea?",
+          "clave": "Lucas traduce la señal en términos históricos inequívocos: «Cuando vean a Jerusalén rodeada de ejércitos, entonces sabrán que ha llegado el tiempo de su destrucción». Además, la orden de huir de Judea a las colinas sin bajar de la azotea y orar para que no sea en día de descanso supone la Jerusalén del siglo I, destruida por Roma entre el 66 y el 70 d.C.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 15,
+              "hasta": 20,
+              "label": "Mateo 24:15-20",
+              "ntv": [
+                {
+                  "n": 15,
+                  "text": "Llegará el día cuando verán de lo que habló el profeta Daniel: el objeto sacrílego que causa profanación de pie en el Lugar Santo. (Lector, ¡presta atención!)."
+                },
+                {
+                  "n": 16,
+                  "text": "Entonces los que estén en Judea huyan a las colinas."
+                },
+                {
+                  "n": 17,
+                  "text": "La persona que esté en la azotea no baje a la casa para empacar."
+                },
+                {
+                  "n": 18,
+                  "text": "La persona que esté en el campo no regrese ni para buscar un abrigo."
+                },
+                {
+                  "n": 19,
+                  "text": "¡Qué terribles serán esos días para las mujeres embarazadas y para las madres que amamantan!"
+                },
+                {
+                  "n": 20,
+                  "text": "Y oren para que la huída no sea en invierno o en día de descanso."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 15,
+                  "grc": "οταν §0ουν ϊδητε το βδελυγμα τηϲ ερημωϲεωϲ το ρηθ‹ε› δια §2ι‹η›λ του προφητου εϲτοϲ εν τοπω αγιω ο αναγινωϲκων νοειτω :"
+                },
+                {
+                  "n": 16,
+                  "grc": "τοτε οι εν τη §0ϊουδεα φευγετωϲαν επι τα ορη"
+                },
+                {
+                  "n": 17,
+                  "grc": "ο επι του δωματοϲ μη §0καταβατω αραι §2το εκ τηϲ οικιαϲ αυτου"
+                },
+                {
+                  "n": 18,
+                  "grc": "και ο ‹ε› τω αγρω μη επιϲτρεψατω οπιϲω §0αρε το ϊματιον αυτου"
+                },
+                {
+                  "n": 19,
+                  "grc": "ουαι δε ταιϲ εν γαϲτρι §0εχουϲεϲ και ταιϲ §2θηλαζουϲεϲ εν §4εκινεϲ ταιϲ §6ημερεϲ"
+                },
+                {
+                  "n": 20,
+                  "grc": "προϲευχεϲθε δε ινα μη γενηται η φυγη ϋμων χιμωνοϲ μηδε ϲαββατω"
+                }
+              ],
+              "pagina": "75.6v"
+            },
+            {
+              "libro": "lucas",
+              "cap": 21,
+              "desde": 20,
+              "hasta": 22,
+              "label": "Lucas 21:20-22",
+              "ntv": [
+                {
+                  "n": 20,
+                  "text": "Cuando vean a Jerusalén rodeada de ejércitos, entonces sabrán que ha llegado el tiempo de su destrucción."
+                },
+                {
+                  "n": 21,
+                  "text": "Entonces los que estén en Judea huyan a las colinas. Los que estén en Jerusalén deben salir, y los que estén en el campo no deben volver a la ciudad."
+                },
+                {
+                  "n": 22,
+                  "text": "Pues serán días de la venganza de Dios, y las palabras proféticas de las Escrituras se cumplirán."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 20,
+                  "grc": "οταν δε ϊδητε κυκλουμενην υπο ϲτρατοπαιδων ι‹ηλ›μ τοτε γνωτε οτι ηγγικεν η ερημωϲιϲ αυτηϲ ˙"
+                },
+                {
+                  "n": 21,
+                  "grc": "τοτε οι εν τη ϊουδαια φευγετωϲαν ειϲ τα ορη και οι εν μεϲω αυτηϲ εκχωριτωϲαν και οι εν ταιϲ χωραιϲ μη ειϲερχεϲθωϲαν ειϲ αυτ‹η›"
+                },
+                {
+                  "n": 22,
+                  "grc": "οτι ημεραι εκδικηϲεωϲ αυται του πληϲθηναι παντα τα γεγραμμενα"
+                }
+              ],
+              "pagina": "79.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 22,
+          "texto": "Cuando Isaías 13:10 anuncia que «las estrellas no darán luz» y «el sol estará oscuro cuando salga y la luna no iluminará», ¿contra qué ciudad histórica profetiza y qué ejército despachó Dios en Isaías 13:17 sin que se apagara el sol literal?",
+          "clave": "El pasaje identifica su objetivo con toda claridad: «Profecía sobre Babilonia» (Isaías 13:1) por medio de «los medos» (Isaías 13:17), caída histórica ocurrida en el 539 a.C. (cf. Isaías 13:6). En los profetas hebreos, oscurecer sol, luna y estrellas es lenguaje poético de juicio pactual y colapso político sobre un imperio, no destrucción física de los astros.",
+          "refs": [
+            {
+              "libro": "isaias",
+              "cap": 13,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Isaías 13:10",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Los cielos se pondrán negros sobre ellos; las estrellas no darán luz. El sol estará oscuro cuando salga y la luna no iluminará."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 10,
+                  "grc": "οι γαρʼ αϲτερεϲ του ουρανου · και §0ωριον · και παϲ ο §2οικοϲ του ουρανου · το φωϲ ου δωϲουϲιν · και ϲκοτιϲθηϲεται του ηλιου ανατελλοντοϲ · και η ϲεληνη ου §4δωϲι το φωϲ αυτηϲ ·"
+                }
+              ],
+              "pagina": "43.6r"
+            },
+            {
+              "libro": "isaias",
+              "cap": 13,
+              "desde": 17,
+              "hasta": 17,
+              "label": "Isaías 13:17",
+              "ntv": [
+                {
+                  "n": 17,
+                  "text": "Miren, yo incitaré a los medos contra Babilonia. No se les puede tentar con plata ni sobornar con oro."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 17,
+                  "grc": "ϊδου §0επεγιρω §2ϋμ‹ι› τουϲ μηδουϲ · ὁι ου λογειζονται αργυριον · ουδε §4χρυϲιου χριαν εχουϲιν ·"
+                }
+              ],
+              "pagina": "43.6r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "isaias",
+              "cap": 13,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Isaías 13:1"
+            },
+            {
+              "libro": "isaias",
+              "cap": 13,
+              "desde": 6,
+              "hasta": 6,
+              "label": "Isaías 13:6"
+            }
+          ]
+        },
+        {
+          "n": 23,
+          "texto": "En Isaías 34:4-5 y Ezequiel 32:7-8, cuando «los cielos se esfumarán y desaparecerán como quien enrolla un pergamino» y «Taparé el sol con una nube», ¿sobre qué dos naciones antiguas cayeron esos juicios proféticos?",
+          "clave": "Sobre Edom (Isaías 34:5) y Egipto bajo Babilonia (Ezequiel 32:2 y Ezequiel 32:11). En ambas profecías cayeron gobiernos y ciudades reales dejando ruinas históricas, mientras los astros siguieron en el cielo. Al emplear exactamente esas mismas imágenes en Mateo 24:29, Jesús aplica el lenguaje profético tradicional a la caída de Jerusalén.",
+          "refs": [
+            {
+              "libro": "isaias",
+              "cap": 34,
+              "desde": 4,
+              "hasta": 5,
+              "label": "Isaías 34:4-5",
+              "ntv": [
+                {
+                  "n": 4,
+                  "text": "Arriba, los cielos se esfumarán y desaparecerán como quien enrolla un pergamino. Las estrellas caerán de los cielos como caen las hojas marchitas de una vid, o los higos secos de una higuera."
+                },
+                {
+                  "n": 5,
+                  "text": "Y cuando mi espada haya terminado su trabajo en los cielos, caerá sobre Edom, la nación que he señalado para ser destruida."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 4,
+                  "grc": "και ελιγηϲεται ο ουρανοϲ ωϲ βιβλιον ˙ και §0π‹α›τα τα αϲτρα §2πεϲιται · ωϲ φυλʼλα εξ αμʼπελου · και ωϲ §4πιπτι φυλʼλαʼ απο ϲυκηϲ ·"
+                },
+                {
+                  "n": 5,
+                  "grc": "εμεθυϲθη η μαχαιρα μου εν τω ουρανω · ϊδου επι την ιδουμαιαν καταβηϲεται · και επι §0τ‹ο› λαον τηϲ §2γηϲ μετα κριϲεωϲ ·"
+                }
+              ],
+              "pagina": "44.6r"
+            },
+            {
+              "libro": "ezequiel",
+              "cap": 32,
+              "desde": 7,
+              "hasta": 8,
+              "label": "Ezequiel 32:7-8",
+              "ntv": [
+                {
+                  "n": 7,
+                  "text": "Cuando yo borre tu existencia, cubriré los cielos y oscureceré las estrellas. Taparé el sol con una nube y la luna no te dará su luz."
+                },
+                {
+                  "n": 8,
+                  "text": "Oscureceré las estrellas brillantes en lo alto y cubriré tu territorio con tinieblas. ¡Yo, el SEÑOR Soberano, he hablado!"
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "isaias",
+              "cap": 34,
+              "desde": 5,
+              "hasta": 5,
+              "label": "Isaías 34:5"
+            },
+            {
+              "libro": "ezequiel",
+              "cap": 32,
+              "desde": 2,
+              "hasta": 2,
+              "label": "Ezequiel 32:2"
+            },
+            {
+              "libro": "ezequiel",
+              "cap": 32,
+              "desde": 11,
+              "hasta": 11,
+              "label": "Ezequiel 32:11"
+            },
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 29,
+              "hasta": 29,
+              "label": "Mateo 24:29"
+            }
+          ]
+        },
+        {
+          "n": 24,
+          "texto": "Al comparar Isaías 19:1 con Daniel 7:13-14, ¿qué simboliza bíblicamente «venir en las nubes»: un descenso geográfico para aterrizar en la tierra, o el juicio divino y la entronización celestial del Hijo del Hombre ante el Anciano de Días?",
+          "clave": "En Isaías 19:1, el SEÑOR avanza contra Egipto «montado sobre una nube veloz» trayendo guerra civil y derrota histórica (Isaías 19:2-4); en Daniel 7:13-14, alguien parecido a un hijo de hombre entra con las nubes del cielo directamente hasta la presencia del Anciano («Se acercó al Anciano y lo llevaron ante su presencia») para recibir dominio eterno. La nube manifiesta teofanía judicial y entronización divina ante Dios, no un desplazamiento atmosférico.",
+          "refs": [
+            {
+              "libro": "isaias",
+              "cap": 19,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Isaías 19:1",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Este es el mensaje que recibí acerca de Egipto: ¡Miren! El SEÑOR avanza contra Egipto, montado sobre una nube veloz. Los ídolos de Egipto tiemblan; el corazón de los egipcios se paraliza de miedo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "οραϲιϲ αιγυπτου §0ϊδου §2‹κϲ› καθηται επι νεφεληϲ κουφηϲ · και §4ηξι ειϲ αιγυπτον · και ϲιϲθηϲεται τα §6χιροποιητα αιγυπου · απο προϲωπου αυτου · και η καρδια §8αυτ‹ω› · ητʼτηθηϲεται εν αυτοιϲ ·"
+                }
+              ],
+              "pagina": "43.8r"
+            },
+            {
+              "libro": "daniel",
+              "cap": 7,
+              "desde": 13,
+              "hasta": 14,
+              "label": "Daniel 7:13-14",
+              "ntv": [
+                {
+                  "n": 13,
+                  "text": "Mientras continuó mi visión esa noche, vi a alguien parecido a un hijo de hombre descender con las nubes del cielo. Se acercó al Anciano y lo llevaron ante su presencia."
+                },
+                {
+                  "n": 14,
+                  "text": "Se le dio autoridad, honra y soberanía sobre todas las naciones del mundo, para que lo obedecieran los de toda raza, nación y lengua. Su gobierno es eterno, no tendrá fin. Su reino jamás será destruido."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "isaias",
+              "cap": 19,
+              "desde": 2,
+              "hasta": 4,
+              "label": "Isaías 19:2-4"
+            }
+          ]
+        },
+        {
+          "n": 25,
+          "texto": "En Mateo 26:64, cuando Jesús dijo ante el sumo sacerdote y el sanedrín «en el futuro verán al Hijo del Hombre sentado en el lugar de poder… y viniendo en las nubes del cielo», ¿a quiénes se dirigía personalmente?",
+          "clave": "Directamente a sus jueces del siglo I («verán» en segunda persona plural, junto al griego απ αρτι, literalmente «desde ahora»). Si aquello no tuviera verificación histórica visible para aquella generación en la ruina del templo y de Jerusalén (70 d.C.) que vindicó la exaltación de Cristo, la palabra ante el sanedrín quedaría vacía.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 26,
+              "desde": 64,
+              "hasta": 64,
+              "label": "Mateo 26:64",
+              "ntv": [
+                {
+                  "n": 64,
+                  "text": "Jesús respondió: —Tú lo has dicho; y en el futuro verán al Hijo del Hombre sentado en el lugar de poder, a la derecha de Dios, y viniendo en las nubes del cielo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 64,
+                  "grc": "λεγει αυτω ο ‹ιϲ› ϲυ ειπαϲ πλην λεγω ϋμιν απ αρτι οψεϲθε τον ‹υν› του ‹ανο›υ καθημενον εκ δεξιων τηϲ δυναμεωϲ και ερχομενον επι των §0νεφελ‹ω› του ο‹υνου›"
+                }
+              ],
+              "pagina": "75.8v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 26,
+          "texto": "En el sermón de Pentecostés (Hechos 2:16-20), al citar Joel 2:28-32 con su «sol se oscurecerá, y la luna se pondrá roja como la sangre», ¿dijo Pedro que aquel evento era apenas una «ilustración parecida» o dijo literalmente «lo que ustedes ven es lo que el profeta Joel predijo hace mucho tiempo»?",
+          "clave": "Pedro declaró categóricamente que aquello era el cumplimiento mismo de Joel (τουτο εϲτιν το ειρημενον), situó «los últimos días» en aquel presente y exhortó a sus oyentes de Jerusalén: «¡Sálvense de esta generación perversa!» (Hechos 2:40). Reducir la cita de Joel a mera ilustración niega la interpretación inspirada del apóstol.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 2,
+              "desde": 16,
+              "hasta": 20,
+              "label": "Hechos 2:16-20",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "No, lo que ustedes ven es lo que el profeta Joel predijo hace mucho tiempo:"
+                },
+                {
+                  "n": 17,
+                  "text": "«En los últimos días —dice Dios—, derramaré mi Espíritu sobre toda la gente. Sus hijos e hijas profetizarán. Sus jóvenes tendrán visiones, y sus ancianos tendrán sueños."
+                },
+                {
+                  "n": 18,
+                  "text": "En esos días derramaré mi Espíritu sobre mis siervos —hombres y mujeres por igual— y profetizarán."
+                },
+                {
+                  "n": 19,
+                  "text": "Y haré maravillas arriba en los cielos y señales abajo en la tierra: sangre, fuego y nubes de humo."
+                },
+                {
+                  "n": 20,
+                  "text": "El sol se oscurecerá, y la luna se pondrá roja como la sangre antes de que llegue el grande y glorioso día del SEÑOR."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "αλλα τουτο εϲτιν το ειρημενον δια του προφητου ϊωηλʼ ·"
+                },
+                {
+                  "n": 17,
+                  "grc": "και εϲτε εν ταιϲ εϲχαταιϲ ημεραιϲ λεγει ο ‹θϲ› εκχεω απο του π‹ν›ϲ μου επι παϲαν ϲαρκα και προφητευϲουϲιν οι ϋϊοι υμων · και αι θυγατερεϲ ϋμων και οι νεανιϲκοι ϋμων οραϲειϲ οψονται · και οι πρεϲβυτεροι ϋμων ενυπνιοιϲ ενυπνιαϲθηϲονται"
+                },
+                {
+                  "n": 18,
+                  "grc": "και γε επι ταϲ δουλαϲ μου και επι τουϲ δουλουϲ μου εν ταιϲ ημεραιϲ εκιναιϲ ˙ εκχεω απο του ‹πν›ϲ μου κ(αι) προφητευϲουϲ‹ι›"
+                },
+                {
+                  "n": 19,
+                  "grc": "και δωϲω τερατα εν τω ουρανω ανω και ϲημια επι τηϲ γηϲ κατω αιμα και πυρ και ατμιδα καπνου"
+                },
+                {
+                  "n": 20,
+                  "grc": "ο ηλιοϲ μεταϲτραφηϲεται ειϲ ϲκοτοϲ και η ϲεληνη ειϲ αιμα πριν ελθιν §0 ημεραν ‹κυ› τ‹η› μεγαλην"
+                }
+              ],
+              "pagina": "86.7v"
+            },
+            {
+              "libro": "joel",
+              "cap": 2,
+              "desde": 28,
+              "hasta": 32,
+              "label": "Joel 2:28-32",
+              "codex": {
+                "cap": 3,
+                "desde": 1,
+                "hasta": 5
+              },
+              "nota": "En la Septuaginta (Codex Sinaiticus) corresponde a Joel 3:1-5: la división de capítulos hebrea y griega difiere aquí de las biblias en español.",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": " Entonces, después de hacer todas esas cosas, derramaré mi Espíritu sobre toda la gente. Sus hijos e hijas profetizarán. Sus ancianos tendrán sueños y sus jóvenes tendrán visiones."
+                },
+                {
+                  "n": 29,
+                  "text": "En esos días derramaré mi Espíritu aun sobre los sirvientes, hombres y mujeres por igual."
+                },
+                {
+                  "n": 30,
+                  "text": "Y haré maravillas en los cielos y en la tierra: sangre, fuego y columnas de humo."
+                },
+                {
+                  "n": 31,
+                  "text": "El sol se oscurecerá y la luna se pondrá roja como la sangre antes de que llegue el grande y terrible día del SEÑOR."
+                },
+                {
+                  "n": 32,
+                  "text": "Pero todo el que invoque el nombre del SEÑOR será salvo; pues algunos que están en el monte Sión en Jerusalén escaparan, tal como el SEÑOR lo ha dicho. Estos se contarán entre los sobrevivientes a quienes el SEÑOR ha llamado."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "και §0εϲτε μετα ταυτα §2και εκχεω απο του §4π‹ν›ϲ μου επι παϲαν ϲαρκαν · κ(αι) §6προφητευϲουϲ‹ι› οι ϋϊοι ϋμων · και §8ε θυγατερεϲ §10ϋμ‹ω› · και οι πρεϲβυτεροι ϋμων §12ενυ̇πνα §15ενυ̇πνιαϲθηϲονται · και οι νεανιϲκοι ϋμων §18οραϲιϲ οψονται ·"
+                },
+                {
+                  "n": 2,
+                  "grc": "§0και επι τουϲ δουλουϲ §3 και επι ταϲ δουλαϲ §6 εν §8τεϲ §11ημερεϲ §14εκιναιϲ . εκχεω απο του §17π‹νϲ› μου ·"
+                },
+                {
+                  "n": 3,
+                  "grc": "και δωϲω τερατα εν τω ουρανω §0και §3επι τηϲ γηϲ · αιμα και πυρ και ατμιδα καπνου"
+                },
+                {
+                  "n": 4,
+                  "grc": "ο ηλιοϲ μεταϲτραφηϲεται ει ϲκοτοϲ · και η ϲεληνη ειϲ αιμα ˙ πριν ελθειν §0ημεραν ‹κυ› την μεγαλην και §2επιφανην"
+                },
+                {
+                  "n": 5,
+                  "grc": "και §0εϲτε παϲ · οϲ εαν §2επικαληται το ονομα ‹κυ› ϲωθηϲεται · οτι εν τω ορι ϲιων και εν ‹ιημ› §5εϲτε αναϲωζομενοϲ · καθοτι ειπεν ‹κϲ› · και ευαγʼγελιζομενοϲ · ουϲ ‹κϲ› προϲκεκληται :"
+                }
+              ],
+              "pagina": "57.2r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "hechos",
+              "cap": 2,
+              "desde": 40,
+              "hasta": 40,
+              "label": "Hechos 2:40"
+            }
+          ]
+        },
+        {
+          "n": 27,
+          "texto": "Al abrir y cerrar Apocalipsis (Apocalipsis 1:1-3 y 22:10), ¿por qué se prohíbe sellar el libro afirmando dos veces que las cosas «deben suceder pronto» y que «el tiempo está cerca», justo al contrario que Daniel 12:4?",
+          "clave": "A Daniel (siglo VI a.C.) se le mandó sellar su profecía porque faltaban siglos; a Juan (siglo I d.C.) se le ordena literalmente «No selles las palabras proféticas de este libro porque el tiempo está cerca». Vaciar «pronto» (εν ταχει) y «cerca» (εγγυϲ) convirtiéndolos en miles de años ignora las marcas de tiempo explícitas del texto.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 1,
+              "hasta": 3,
+              "label": "Apocalipsis 1:1-3",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Esta es una revelación de Jesucristo, la cual Dios le dio para mostrar a sus siervos los acontecimientos que deben suceder pronto. Él envió a un ángel a presentarle esta revelación a su siervo, Juan,"
+                },
+                {
+                  "n": 2,
+                  "text": "quien relató con fidelidad todo lo que vio. Éste es su relato de la palabra de Dios y del testimonio de Jesucristo."
+                },
+                {
+                  "n": 3,
+                  "text": "Dios bendice al que lee a la iglesia las palabras de esta profecía y bendice a todos los que escuchan el mensaje y obedecen lo que dice, porque el tiempo está cerca."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "§0αποκαλυψιϲ ‹ιυ› ‹χυ› §2ην §4εδωκεν αυτω ο ‹θϲ› δειξαι τοιϲ §6αγιοιϲ αυτου §8α δει γε>νεϲθαι εν §10ταχει και εϲημανεν αποϲτειλαϲ δια του αγγελου αυτου τω δουλω αυτου §12ϊωανει"
+                },
+                {
+                  "n": 2,
+                  "grc": "οϲ §0εμαρτυρη>ϲεν τον λογον του ‹θυ› και την μαρτυριαν ‹ιυ› ‹χυ› οϲα ϊδ‹ε›"
+                },
+                {
+                  "n": 3,
+                  "grc": "§0μακαριοϲ ο αναγινωϲκων και οι α>κουοντεϲ τον λογον τηϲ προφητιαϲ και τηρουντεϲ τα εν αυτη §2γεγραμμενα ο γαρ καιροϲ εγγυϲ"
+                }
+              ],
+              "pagina": "90.1v"
+            },
+            {
+              "libro": "apocalipsis",
+              "cap": 22,
+              "desde": 10,
+              "hasta": 10,
+              "label": "Apocalipsis 22:10",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Entonces me indicó: No selles las palabras proféticas de este libro porque el tiempo está cerca."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 10,
+                  "grc": "και λεγει μοι μη ϲφραγιϲηϲ τουϲ λογουϲ §0τουτουϲ τηϲ προφητειαϲ του βιβλιου τουτου ο καιροϲ γαρ ενγυϲ εϲτιν"
+                }
+              ],
+              "pagina": "91.1v"
+            },
+            {
+              "libro": "daniel",
+              "cap": 12,
+              "desde": 4,
+              "hasta": 4,
+              "label": "Daniel 12:4",
+              "ntv": [
+                {
+                  "n": 4,
+                  "text": "Pero tú, Daniel, mantén en secreto esta profecía; sella el libro hasta el tiempo del fin, cuando muchos correrán de aquí para allá y el conocimiento aumentará."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "titulo": "Una sola venida, no un rapto secreto",
+      "desde": 28,
+      "hasta": 35,
+      "preguntas": [
+        {
+          "n": 28,
+          "texto": "Al leer 1 Tesalonicenses 4:16-17, ¿describe Pablo un rapto silencioso y secreto para sacar a la Iglesia siete años antes del regreso público de Cristo, o la venida audible y visible del Señor con grito de mando, voz de arcángel y trompeta?",
+          "clave": "Es el pasaje más sonoro y público de toda la Biblia sobre el retorno de Cristo: grito de mando, voz de arcángel y llamado de trompeta de Dios. Además, la palabra griega traducida «encontrarnos» (απαντηϲιν en el Codex) describe en la antigüedad a la comitiva que sale a recibir a un rey que llega para escoltarlo en su entrada, no para sacarlo a escondidas.",
+          "refs": [
+            {
+              "libro": "1-tesalonicenses",
+              "cap": 4,
+              "desde": 16,
+              "hasta": 17,
+              "label": "1 Tesalonicenses 4:16-17",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "Pues el Señor mismo descenderá del cielo con un grito de mando, con voz de arcángel y con el llamado de trompeta de Dios. Primero, los cristianos que hayan muerto se levantarán de sus tumbas."
+                },
+                {
+                  "n": 17,
+                  "text": "Luego, junto con ellos, nosotros los que aún sigamos vivos sobre la tierra, seremos arrebatados en las nubes para encontrarnos con el Señor en el aire. Entonces estaremos con el Señor para siempre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "οτι αυτοϲ ο ‹κϲ› εν κελευϲματι ‹ε› φωνη αρχαγγελου και εν ϲαλπιγγι ‹θυ› καταβηϲεται απ ουρανου > και οι νεκροι εν ‹χω› αναϲτηϲονται πρωτον"
+                },
+                {
+                  "n": 17,
+                  "grc": "επειτα ημειϲ οι ζωντεϲ οι περιλιπο>μενοι αμα ϲυν αυτοιϲ αρπαγηϲομεθα εν νεφελαιϲ ειϲ απαντηϲιν > του ‹κυ› ειϲ αερα και ουτωϲ παντοτε ϲυν ‹κω› εϲομεθα"
+                }
+              ],
+              "pagina": "85.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 29,
+          "texto": "En 2 Tesalonicenses 1:6-10, ¿cuándo reciben descanso los creyentes perseguidos y cuándo reciben juicio sus opresores: en dos venidas separadas por siete años, o ambos «Aquel día cuando él venga» desde el cielo en llamas de fuego?",
+          "clave": "El descanso de la Iglesia y el juicio de los incrédulos ocurren en el mismo acontecimiento y «Aquel día cuando él venga» desde el cielo «con sus ángeles poderosos, en llamas de fuego». No existe intervalo de siete años entre liberación y juicio.",
+          "refs": [
+            {
+              "libro": "2-tesalonicenses",
+              "cap": 1,
+              "desde": 6,
+              "hasta": 10,
+              "label": "2 Tesalonicenses 1:6-10",
+              "ntv": [
+                {
+                  "n": 6,
+                  "text": "En su justicia él les dará su merecido a quienes los persiguen."
+                },
+                {
+                  "n": 7,
+                  "text": "Y Dios les brindará descanso a ustedes que están siendo perseguidos y también a nosotros cuando el Señor Jesús aparezca desde el cielo. Él vendrá con sus ángeles poderosos,"
+                },
+                {
+                  "n": 8,
+                  "text": "en llamas de fuego, y traerá juicio sobre los que no conocen a Dios y sobre los que se niegan a obedecer la Buena Noticia de nuestro Señor Jesús."
+                },
+                {
+                  "n": 9,
+                  "text": "Serán castigados con destrucción eterna, separados para siempre del Señor y de su glorioso poder."
+                },
+                {
+                  "n": 10,
+                  "text": "Aquel día cuando él venga, recibirá gloria de su pueblo santo y alabanza de todos los que creen. Esto también los incluye a ustedes, porque creyeron lo que les dijimos acerca de él."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 6,
+                  "grc": "ειπερ δικαιον παρα ‹θω› ανταποδουναι τοιϲ θλιβουϲ‹ι› ϋμαϲ θλιψιν"
+                },
+                {
+                  "n": 7,
+                  "grc": "και ϋμιν τοιϲ θλιβομενοιϲ ανεϲιν μεθ §0υμων εν τη αποκαλυψει του ‹κυ› ‹ιυ› απ ουρανου μετ αγγελων δυναμεωϲ αυτου"
+                },
+                {
+                  "n": 8,
+                  "grc": "εν πυρι φλογοϲ διδοντοϲ εκδικηϲιν τοιϲ μη ειδοϲι §0 ‹θν› και τοιϲ μη ϋπακουουϲιν τω ευαγγελιω του ‹κυ› ημων ‹ιυ› ‹χυ›"
+                },
+                {
+                  "n": 9,
+                  "grc": "οιτινεϲ δικην τιϲουϲιν ολεθρον αιωνιον απο προϲωπου του ‹κυ› και απο τηϲ δοξηϲ τηϲ ϊϲχυοϲ αυτου"
+                },
+                {
+                  "n": 10,
+                  "grc": "οταν ελθη ενδοξαϲθηναι εν τοιϲ αγιοιϲ αυτου και θαυμαϲθηναι εν παϲι τοιϲ πιϲτευϲαϲ‹ι› οτι επιϲτευθη το μαρτυριον ημ‹ω› εφ υμαϲ εν τη ημερα εκεινη"
+                }
+              ],
+              "pagina": "85.4r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 30,
+          "texto": "Según 2 Tesalonicenses 2:1-3, acerca de la venida del Señor y «cómo seremos reunidos para encontrarnos con él», ¿sucede antes de la gran rebelión y la revelación del hombre de anarquía, o «aquel día no vendrá hasta que» acontezca todo ello?",
+          "clave": "Pablo nombra expresamente «cómo seremos reunidos para encontrarnos con él» y ordena no dejarse engañar porque «aquel día no vendrá hasta que haya una gran rebelión contra Dios y se dé a conocer el hombre de anarquía». El pasaje mismo excluye un rapto anterior que evite esas tribulaciones.",
+          "refs": [
+            {
+              "libro": "2-tesalonicenses",
+              "cap": 2,
+              "desde": 1,
+              "hasta": 3,
+              "label": "2 Tesalonicenses 2:1-3",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Ahora, amados hermanos, aclaremos algunos aspectos sobre la venida de nuestro Señor Jesucristo y cómo seremos reunidos para encontrarnos con él."
+                },
+                {
+                  "n": 2,
+                  "text": "No se dejen perturbar ni se alarmen tan fácilmente por los que dicen que el día del Señor ya ha comenzado. No les crean, ni siquiera si afirman haber tenido una visión espiritual, una revelación o haber recibido una carta supuestamente de nosotros."
+                },
+                {
+                  "n": 3,
+                  "text": "No se dejen engañar por lo que dicen. Pues aquel día no vendrá hasta que haya una gran rebelión contra Dios y se dé a conocer el hombre de anarquía, aquél que trae destrucción."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "§0ερωτωμεν δε υμαϲ αδελφοι ϋπερ τηϲ παρουϲιαϲ του ‹κυ› ημων ‹ιυ› ‹χυ› και ημων επιϲυναγωγηϲ επ αυτον"
+                },
+                {
+                  "n": 2,
+                  "grc": "ειϲ το μη ταχεωϲ ϲαλευθηναι υμαϲ απο του νοοϲ μηδε θροειϲθαι μητε δια π‹νϲ› μητε δια λογου μητε δι επιϲτοληϲ ωϲ δι ημων ωϲ οτι ενεϲτηκεν η ημερα του ‹κυ›"
+                },
+                {
+                  "n": 3,
+                  "grc": "μη τιϲ ϋμαϲ εξαπατηϲη κατα μηδενα τροπον οτι εαν μη ελθη η αποϲταϲια πρωτ‹ο› και αποκαλυφθη ο ανθρωποϲ τηϲ ανομιαϲ ο ϋϊοϲ τηϲ απωλειαϲ"
+                }
+              ],
+              "pagina": "85.4r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 31,
+          "texto": "En la parábola del trigo y la maleza explicada por Jesús mismo (Mateo 13:30 y 13:40-43), ¿quiénes son reunidos y apartados primero en el fin del mundo: los justos antes de la tribulación, o la maleza para el fuego?",
+          "clave": "La orden es expresa: «separen primero la maleza» (ϲυλλεξατε πρωτον τα ζιζανια), «la aten en manojos y la quemen», y al explicar la escena Jesús sitúa primero la extracción de todo lo que produzca pecado y de quienes hacen lo malo, para que luego los justos brillen como el sol en el reino de su Padre. Invierte por completo el orden de un rapto pretribulacional.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 13,
+              "desde": 30,
+              "hasta": 30,
+              "label": "Mateo 13:30",
+              "ntv": [
+                {
+                  "n": 30,
+                  "text": "Dejen que ambas crezcan juntas hasta la cosecha. Entonces les diré a los cosechadores que separen la maleza, la aten en manojos y la quemen, y que pongan el trigo en el granero»."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 30,
+                  "grc": "αφετε ϲυναυξανεϲθε αμφοτερα §0αχρι του θεριϲμου και εν §3τω καιρω του θεριϲμου ερω τοιϲ θεριϲτεϲ ϲυλλεξατε πρωτον τα ζιζανια και δηϲατε αυτα ειϲ δεϲμαϲ προϲ το κατακαυϲε αυτα τον δε ϲιτον ϲυναγαγετε ειϲ την αποθηκην μου"
+                }
+              ],
+              "pagina": "74.8r"
+            },
+            {
+              "libro": "mateo",
+              "cap": 13,
+              "desde": 40,
+              "hasta": 43,
+              "label": "Mateo 13:40-43",
+              "ntv": [
+                {
+                  "n": 40,
+                  "text": "Tal como se separa la maleza y se quema en el fuego, así será en el fin del mundo."
+                },
+                {
+                  "n": 41,
+                  "text": "El Hijo del Hombre enviará a sus ángeles, y ellos quitarán del reino todo lo que produzca pecado y a todos aquellos que hagan lo malo."
+                },
+                {
+                  "n": 42,
+                  "text": "Y los ángeles los arrojarán al horno ardiente, donde habrá llanto y rechinar de dientes."
+                },
+                {
+                  "n": 43,
+                  "text": "Entonces los justos brillarán como el sol en el reino de su Padre. ¡Todo el que tenga oídos para oír, que escuche y entienda!"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 40,
+                  "grc": "ωϲπερ ουν ϲυλλεγετε τα ζιζανια και πυρι κατακαιεται ουτωϲ εϲτε εν τη ϲυντελια του αιωνοϲ"
+                },
+                {
+                  "n": 41,
+                  "grc": "αποϲτελι ο ‹υϲ› του α‹νου› τουϲ αγγελουϲ και ϲυλλεξουϲιν εκ τηϲ βαϲιλιαϲ αυτου παντα τα ϲκανδαλα και τουϲ ποιουνταϲ την ανομιαν"
+                },
+                {
+                  "n": 42,
+                  "grc": "και §0βαλλουϲιν αυτουϲ ειϲ την καμινον του πυροϲ εκι §3εϲτε ο κλαυθμοϲ και ο βρυγμοϲ των οδ‹ο›των"
+                },
+                {
+                  "n": 43,
+                  "grc": "τοτε οι §0δικεοι εκλαμψουϲιν ωϲ ο ηλιοϲ εν τη βαϲιλεια του ‹πρϲ› αυτων ο εχων ωτα §2 ακουετω"
+                }
+              ],
+              "pagina": "74.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 32,
+          "texto": "En Mateo 24:37-41, al comparar «uno será llevado, el otro será dejado» con los días de Noé, ¿quiénes fueron los que el diluvio «arrasó» y llevó: los salvados o los condenados?",
+          "clave": "El contexto inmediato responde sin dejar duda: «llegó el diluvio y arrasó con todos» (en griego, ηρεν απανταϲ, se los llevó a todos en juicio). Quien queda preservado tras la depuración es el sobreviviente (como Noé en el arca); el que es «llevado» en ese paralelo es barrido por el castigo.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 24,
+              "desde": 37,
+              "hasta": 41,
+              "label": "Mateo 24:37-41",
+              "ntv": [
+                {
+                  "n": 37,
+                  "text": "Cuando el Hijo del Hombre regrese, será como en los días de Noé."
+                },
+                {
+                  "n": 38,
+                  "text": "En esos días, antes del diluvio, la gente disfrutaba de banquetes, fiestas y casamientos, hasta el momento en que Noé entró en su barco."
+                },
+                {
+                  "n": 39,
+                  "text": "La gente no se daba cuenta de lo que iba a suceder hasta que llegó el diluvio y arrasó con todos. Así será cuando venga el Hijo del Hombre."
+                },
+                {
+                  "n": 40,
+                  "text": "Dos hombres estarán trabajando juntos en el campo; uno será llevado, el otro será dejado."
+                },
+                {
+                  "n": 41,
+                  "text": "Dos mujeres estarán moliendo harina en el molino; una será llevada, la otra será dejada."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 37,
+                  "grc": "ωϲπερ δε αι ημεραι του > νωε ουτωϲ εϲται η παρουϲια §0 του ‹α›θρωπου"
+                },
+                {
+                  "n": 38,
+                  "grc": "ωϲ γαρ ηϲαν εν ταιϲ ημεραιϲ ταιϲ προ του κατακλυϲμου τρωγοντεϲ και πειν‹ο›τεϲ §0 γαμουντεϲ κ(αι) γαμιζοντεϲ αχρι ηϲ ημεραϲ ειϲηλ>θεν νωε ειϲ την κιβωτον"
+                },
+                {
+                  "n": 39,
+                  "grc": "και ουκ εγνωϲαν §0ο εωϲ ηλθεν ο κατακλυϲμοϲ και ηρεν α>πανταϲ ουτωϲ εϲται και η παρουϲια του υϊου του > ανθρωπου"
+                },
+                {
+                  "n": 40,
+                  "grc": "τοτε §0εϲονται §2δυο ‹ε› τω αγρω ειϲ παραλαμβανετε και ειϲ αφιετε"
+                },
+                {
+                  "n": 41,
+                  "grc": "δυο αληθου>ϲαι εν τω μυλω μια παραλαμβανεται και μια αφιεται"
+                }
+              ],
+              "pagina": "75.7r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 33,
+          "texto": "Cuando Jesús oró por sus discípulos ante la oposición del mundo en Juan 17:15, ¿pidió al Padre que los sacara de la tierra, o que los guardara del maligno en medio del mundo?",
+          "clave": "«No te pido que los quites del mundo, sino que los protejas del maligno». En toda la historia bíblica, Dios sostiene y guarda a Su pueblo a través de las pruebas, no mediante una evacuación secreta previa.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 17,
+              "desde": 15,
+              "hasta": 15,
+              "label": "Juan 17:15",
+              "ntv": [
+                {
+                  "n": 15,
+                  "text": "No te pido que los quites del mundo, sino que los protejas del maligno."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 15,
+                  "grc": "ουκ ερωτω ινα αρηϲ αυτουϲ εκ του κοϲμου . αλλ ϊνα τηρηϲηϲ αυτουϲ εκ του πονηρου ·"
+                }
+              ],
+              "pagina": "81.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 34,
+          "texto": "Según 1 Corintios 15:51-52, ¿con qué trompeta específica acontece la resurrección y transformación de los creyentes: con una trompeta «previa» siete años antes del final, o «cuando se toque la trompeta final»?",
+          "clave": "El texto la llama literalmente la última trompeta (εν τη εϲχατη ϲαλπιγγι) —sin otras trompetas de juicio posteriores durante siete años—. Y ocurre simultáneamente con la derrota definitiva de la muerte.",
+          "refs": [
+            {
+              "libro": "1-corintios",
+              "cap": 15,
+              "desde": 51,
+              "hasta": 52,
+              "label": "1 Corintios 15:51-52",
+              "ntv": [
+                {
+                  "n": 51,
+                  "text": "Pero permítanme revelarles un secreto maravilloso. ¡No todos moriremos, pero todos seremos transformados!"
+                },
+                {
+                  "n": 52,
+                  "text": "Sucederá en un instante, en un abrir y cerrar de ojos, cuando se toque la trompeta final. Pues, cuando suene la trompeta, los que hayan muerto resucitarán para vivir por siempre. Y nosotros, los que estemos vivos también seremos transformados."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 51,
+                  "grc": "ϊδου μυϲτηριον ϋμιν λεγω παντεϲ μεν κοιμηθηϲομεθα ου π‹α›τεϲ δε αλλαγηϲομεθα"
+                },
+                {
+                  "n": 52,
+                  "grc": "εν ατομω εν ριπη οφθαλμου εν τη εϲχατη ϲαλπιγγι ϲαλπιϲει γαρ και οι νεκροι εγερθηϲ‹ο›ται αφθαρτοι κ(αι) ημειϲ αλλαγηϲομεθα"
+                }
+              ],
+              "pagina": "83.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 35,
+          "texto": "¿Cuántas apariciones o venidas de Cristo después de su primera encarnación enseña Hebreos 9:28: dos etapas adicionales separadas por siete años, o una única segunda aparición («otra vez», literalmente en griego εκ δευτερου, «por segunda vez»)?",
+          "clave": "«Cristo murió en sacrificio una sola vez y para siempre… Cristo vendrá otra vez (εκ δευτερου, literalmente por segunda vez), no para ocuparse de nuestros pecados, sino para traer salvación a todos los que esperan con anhelo su venida». El Nuevo Testamento nunca conoce una segunda venida partida en dos regresos separados por siete años.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 9,
+              "desde": 28,
+              "hasta": 28,
+              "label": "Hebreos 9:28",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "así también Cristo murió en sacrificio una sola vez y para siempre, a fin de quitar los pecados de muchas personas. Cristo vendrá otra vez, no para ocuparse de nuestros pecados, sino para traer salvación a todos los que esperan con anhelo su venida."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "ουτωϲ και ο ‹χϲ› απαξ προϲενεχθειϲ ειϲ το πολλων ανενεγκειν αμαρτιαϲ εκ δευτερου χωριϲ αμαρτιαϲ οφθηϲεται τοιϲ αυτον απεκδεχομενοιϲ ειϲ ϲωτηριαν"
+                }
+              ],
+              "pagina": "85.7v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    },
+    {
+      "id": "V",
+      "titulo": "Una sola resurrección y un solo juicio final",
+      "desde": 36,
+      "hasta": 42,
+      "preguntas": [
+        {
+          "n": 36,
+          "texto": "Según Juan 5:28-29, ¿enseña Jesús que los justos y los injustos resucitan en fases separadas por mil años, o que «ya se acerca el tiempo en que todos los que están en las tumbas oirán la voz del Hijo de Dios» y saldrán unos a vida y otros a juicio?",
+          "clave": "Jesús engloba a todos los muertos —tanto los que hicieron el bien como los que continuaron en su maldad— dentro de una sola «hora» (ωρα) de resurrección simultánea. Dividir la resurrección en cuatro o cinco fases escalonadas a lo largo de un milenio contradice esta afirmación directa del Señor.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 5,
+              "desde": 28,
+              "hasta": 29,
+              "label": "Juan 5:28-29",
+              "ntv": [
+                {
+                  "n": 28,
+                  "text": "¡No se sorprendan tanto! Ciertamente, ya se acerca el tiempo en que todos los que están en las tumbas oirán la voz del Hijo de Dios"
+                },
+                {
+                  "n": 29,
+                  "text": "y resucitarán. Los que hicieron el bien resucitarán para gozar de la vida eterna, y los que continuaron en su maldad resucitarán para sufrir el juicio."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 28,
+                  "grc": "μη θαυμαζεται τουτο οτι ερχεται ωρα · εν η παντεϲ οι εν τοιϲ μνημιοιϲ ακουϲωϲιν τηϲ φωνηϲ αυτου ·"
+                },
+                {
+                  "n": 29,
+                  "grc": "κ(αι) εκπορευϲονται οι τα αγαθα ποιηϲαντεϲ ειϲ αναϲταϲιν ζωηϲ · οι δε τα φαυλα πραξ‹α›τεϲ · ειϲ αναϲταϲιν κριϲεωϲ ·"
+                }
+              ],
+              "pagina": "80.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 37,
+          "texto": "En Juan 6:39-40, ¿en qué momento único y preciso promete Jesús hasta cuatro veces en ese capítulo resucitar a todo aquel que cree en Él?",
+          "clave": "«Yo los resucitaré en el día final». Si los creyentes resucitaran en el rapto o al comenzar un reino milenario de mil años antes del fin del mundo, ese día ya no sería «el día final» de la historia humana.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 6,
+              "desde": 39,
+              "hasta": 40,
+              "label": "Juan 6:39-40",
+              "ntv": [
+                {
+                  "n": 39,
+                  "text": "Y la voluntad de Dios es que yo no pierda ni a uno solo de todos los que él me dio, sino que los resucite, en el día final."
+                },
+                {
+                  "n": 40,
+                  "text": "Pues la voluntad de mi Padre es que todos los que vean a su Hijo y crean en él tengan vida eterna; y yo los resucitaré en el día final."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 39,
+                  "grc": "§0 ϊνα παν ο δεδωκεν μοι μη απολεϲω εξ αυτου αλλα αναϲτηϲω αυτο εν τη εϲχατη ημερα ·"
+                },
+                {
+                  "n": 40,
+                  "grc": "τουτο γαρ εϲτιν το θελημα του πατροϲ μου · ϊνα παϲ ο §0θεωρ‹ω› τον §2‹υν› και πιϲτευων ειϲ αυτον εχη ζωην αιωνιον · και αναϲτηϲω αυτον εγω εν τη εϲχατη ημερα ·"
+                }
+              ],
+              "pagina": "80.4v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 38,
+          "texto": "Ante el gobernador Félix en Hechos 24:15, ¿habló Pablo en plural de múltiples «resurrecciones» separadas, o literalmente en el griego de una única «resurrección tanto de los justos como de los injustos»?",
+          "clave": "El texto del Codex usa el singular explícito αναϲταϲιν (resurrección tanto de los justos como de los injustos). La esperanza apostólica siempre fue una resurrección única y general para el juicio final.",
+          "refs": [
+            {
+              "libro": "hechos",
+              "cap": 24,
+              "desde": 15,
+              "hasta": 15,
+              "label": "Hechos 24:15",
+              "ntv": [
+                {
+                  "n": 15,
+                  "text": "Tengo la misma esperanza en Dios que la que tienen estos hombres, la esperanza de que él resucitará tanto a los justos como a los injustos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 15,
+                  "grc": "ελπιδα εχων προϲ τον ‹θν› ην και αυτοι προϲδεχονται αναϲταϲιν μελλ‹ι› εϲεϲθαι δικαι‹ω› τε και αδικων"
+                }
+              ],
+              "pagina": "88.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 39,
+          "texto": "En Mateo 25:31-34 y 25:46, cuando el Hijo del Hombre venga en su gloria con todos sus ángeles y se siente sobre su trono glorioso, ¿instaura primero un reino terrenal de mil años con pecadores mortales, o pronuncia de inmediato la separación final hacia el castigo eterno y la vida eterna?",
+          "clave": "El regreso glorioso de Cristo desemboca inmediatamente en la comparecencia de todas las naciones y en el veredicto definitivo eterno: heredar el reino preparado desde la creación del mundo o ir al castigo eterno. No hay reino político temporal de por medio.",
+          "refs": [
+            {
+              "libro": "mateo",
+              "cap": 25,
+              "desde": 31,
+              "hasta": 34,
+              "label": "Mateo 25:31-34",
+              "ntv": [
+                {
+                  "n": 31,
+                  "text": "Cuando el Hijo del Hombre venga en su gloria acompañado por todos los ángeles, entonces se sentará sobre su trono glorioso."
+                },
+                {
+                  "n": 32,
+                  "text": "Todas las naciones se reunirán en su presencia, y él separará a la gente como un pastor separa a las ovejas de las cabras."
+                },
+                {
+                  "n": 33,
+                  "text": "Pondrá las ovejas a su derecha y las cabras a su izquierda."
+                },
+                {
+                  "n": 34,
+                  "text": "Entonces el Rey dirá a los que estén a su derecha: «Vengan, ustedes, que son benditos de mi Padre, hereden el reino preparado para ustedes desde la creación del mundo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 31,
+                  "grc": "οταν δε ελθη ο ϋιοϲ του ανθρωπου εν τη δοξη αυτου και παντεϲ οι αγγελοι μετ αυτου τοτε > καθιϲει επι θρονου δοξηϲ αυτου"
+                },
+                {
+                  "n": 32,
+                  "grc": "και > ϲυναχθηϲονται εμπροϲθεν αυτου παντα τα εθνη κ(αι) §0αφοριϲει αυτουϲ απ αλληλων ωϲ>περ ο ποιμην αφοριζει τα προβατα απο των εριφων"
+                },
+                {
+                  "n": 33,
+                  "grc": "και ϲτηϲει τα μ‹ε› προβατα εκ δεξι‹ω› τα δε εριφια εξ ευωνυμων αυτου"
+                },
+                {
+                  "n": 34,
+                  "grc": "τοτε ερει ο βαϲιλευϲ τοιϲ εκ δεξιων αυτου δευτε οι ευλογημενοι του §0π‹ρ›ϲ μου κληρονομηϲατε την ητοιμαϲμενην υμιν βαϲιλειαν απο καταβοληϲ κοϲμου"
+                }
+              ],
+              "pagina": "75.7v"
+            },
+            {
+              "libro": "mateo",
+              "cap": 25,
+              "desde": 46,
+              "hasta": 46,
+              "label": "Mateo 25:46",
+              "ntv": [
+                {
+                  "n": 46,
+                  "text": "Y ellos irán al castigo eterno, pero los justos entrarán en la vida eterna."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 46,
+                  "grc": "και > απελευϲονται > ουτοι ειϲ κολαϲ‹ι› αιωνιον οι δε δικαιοι ειϲ ζωην > αιωνιον"
+                }
+              ],
+              "pagina": "75.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 40,
+          "texto": "Según 1 Corintios 15:23-26, ¿qué viene justo después de la venida de Cristo y de la resurrección de los suyos: un milenio terrenal donde aún se peca y se muere, o el fin mismo en que le entrega el reino a Dios el Padre tras destruir la muerte?",
+          "clave": "La secuencia paulina es lineal y sin escalón intermedio: primero Cristo como primero de la cosecha; luego los que pertenecen a Cristo cuando él regrese; «Después de eso, vendrá el fin, cuando él le entregará el reino a Dios el Padre» y «el último enemigo que será destruido es la muerte». Donde ya está destruida la muerte no puede seguir un milenio con mortales que aún mueren (cf. Apocalipsis 20:7-9).",
+          "refs": [
+            {
+              "libro": "1-corintios",
+              "cap": 15,
+              "desde": 23,
+              "hasta": 26,
+              "label": "1 Corintios 15:23-26",
+              "ntv": [
+                {
+                  "n": 23,
+                  "text": "pero esta resurrección tiene un orden: Cristo fue resucitado como el primero de la cosecha, luego todos los que pertenecen a Cristo serán resucitados cuando él regrese."
+                },
+                {
+                  "n": 24,
+                  "text": "Después de eso, vendrá el fin, cuando él le entregará el reino a Dios el Padre, luego de destruir a todo gobernante y poder y toda autoridad."
+                },
+                {
+                  "n": 25,
+                  "text": "Pues Cristo tiene que reinar hasta que humille a todos sus enemigos debajo de sus pies."
+                },
+                {
+                  "n": 26,
+                  "text": "Y el último enemigo que será destruido es la muerte."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 23,
+                  "grc": "εκαϲτοϲ §0 εν τω ϊδιω ταγματι απαρχη ‹χϲ› επειτα οι του ‹χυ› εν τη παρουϲια αυτου"
+                },
+                {
+                  "n": 24,
+                  "grc": "ειτα το τελοϲ οταν παραδιδω την βαϲιλιαν §0του §2‹θυ› και ‹πρ›ι οταν καταργηϲη παϲαν αρχην και παϲαν εξουϲιαν και δυναμιν"
+                },
+                {
+                  "n": 25,
+                  "grc": "δει γαρ αυτον βαϲιλευειν §0αχρι ου §3 θη πανταϲ τουϲ εχθρουϲ ϋπο τουϲ ποδαϲ αυτου §5"
+                },
+                {
+                  "n": 26,
+                  "grc": "εϲχατοϲ εχθροϲ καταργειται ο θανατοϲ"
+                }
+              ],
+              "pagina": "83.5r"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 20,
+              "desde": 7,
+              "hasta": 9,
+              "label": "Apocalipsis 20:7-9"
+            }
+          ]
+        },
+        {
+          "n": 41,
+          "texto": "En 2 Pedro 3:10-13, cuando llegue el «día del Señor» como un ladrón, ¿da paso a una edad milenaria pasajera sobre esta misma tierra corrompida, o a la disolución ígnea presente hacia «los cielos nuevos y la tierra nueva» eternos?",
+          "clave": "Pedro une directamente el «día del Señor» con la desaparición de los cielos actuales, la disolución ígnea de los elementos y la entrada en «los cielos nuevos y la tierra nueva que él prometió, un mundo lleno de la justicia de Dios», sin etapa terrenal intermedia de mil años.",
+          "refs": [
+            {
+              "libro": "2-pedro",
+              "cap": 3,
+              "desde": 10,
+              "hasta": 13,
+              "label": "2 Pedro 3:10-13",
+              "ntv": [
+                {
+                  "n": 10,
+                  "text": "Pero el día del Señor llegará tan inesperadamente como un ladrón. Entonces los cielos desaparecerán con un terrible estruendo, y los mismos elementos se consumirán en el fuego, y la tierra con todo lo que hay en ella quedará sometida a juicio."
+                },
+                {
+                  "n": 11,
+                  "text": "Dado que todo lo que nos rodea será destruido de esta manera, ¡cómo no llevar una vida santa y vivir en obediencia a Dios,"
+                },
+                {
+                  "n": 12,
+                  "text": "esperar con ansias el día de Dios y apresurar que este llegue! En aquel día, él prenderá fuego a los cielos, y los elementos se derretirán en las llamas."
+                },
+                {
+                  "n": 13,
+                  "text": "Pero nosotros esperamos con entusiasmo los cielos nuevos y la tierra nueva que él prometió, un mundo lleno de la justicia de Dios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 10,
+                  "grc": "ηξει δε η ημερα ‹κυ› ωϲ κλεπτηϲ εν η ουρανοι μεν ρυζηδον παρελευϲ‹ο›ται ϲτοιχεια δε καυϲουμενα λυθηϲεται γη και τα εν αυτη εργα ευρεθηϲεται"
+                },
+                {
+                  "n": 11,
+                  "grc": "τουτων ουν παντων λυομεν‹ω› ποταπουϲ δει ϋπαρχειν §0ημαϲ εν αγιαιϲ αναϲτροφαιϲ και ευϲεβειαιϲ"
+                },
+                {
+                  "n": 12,
+                  "grc": "προϲδοκωνταϲ §0 τ‹η› παρουϲιαν τηϲ του ‹θυ› ημεραϲ δι ην ουρανοι πυρουμενοι λυθηϲονται και ϲτοιχια καυϲουμενα τηκεται"
+                },
+                {
+                  "n": 13,
+                  "grc": "καινουϲ δε ουρανουϲ και κενην γην κατα τα επαγγελματα αυτου προϲδοκωμ‹ε› εν οιϲ δικαιοϲυνη κατοικει ·"
+                }
+              ],
+              "pagina": "89.6r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 42,
+          "texto": "Al leer Apocalipsis 20:1-6 en el único pasaje de toda la Biblia que menciona la cifra simbólica «mil años», ¿menciona el capítulo en algún verso a Jerusalén terrenal, un templo reconstruido, sacrificios de animales o subordinación política de los gentiles a Israel?",
+          "clave": "Ni una sola palabra. En un libro altamente simbólico (Apocalipsis 1:1), Juan describe en visión celestial las almas de los mártires reinando con Cristo tras haber atado al dragón (tal como Jesús mismo explicó su ministerio en Mateo 12:29 y Lucas 10:18). Construir sobre este único capítulo apocalíptico un sistema político terrenal contradice la enseñanza unánime de todo el Nuevo Testamento.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 20,
+              "desde": 1,
+              "hasta": 6,
+              "label": "Apocalipsis 20:1-6",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "Luego vi a un ángel que bajaba del cielo con la llave del abismo sin fondo y una pesada cadena en la mano."
+                },
+                {
+                  "n": 2,
+                  "text": "Sujetó con fuerza al dragón —la serpiente antigua, quien es el diablo, Satanás— y lo encadenó por mil años."
+                },
+                {
+                  "n": 3,
+                  "text": "El ángel lo lanzó al abismo sin fondo y lo encerró con llave para que Satanás no pudiera engañar más a las naciones hasta que se cumplieran los mil años. Pasado ese tiempo, debe ser soltado por un poco de tiempo."
+                },
+                {
+                  "n": 4,
+                  "text": "Después vi tronos, y los que estaban sentados en ellos habían recibido autoridad para juzgar. Vi las almas de aquéllos que habían sido decapitados por dar testimonio acerca de Jesús y proclamar la palabra de Dios. Ellos no habían adorado a la bestia ni a su estatua, ni habían aceptado su marca en la frente o en las manos. Volvieron a la vida, y reinaron con Cristo durante mil años."
+                },
+                {
+                  "n": 5,
+                  "text": "Ésta es la primera resurrección. (El resto de los muertos no volvieron a la vida hasta que se cumplieron los mil años)."
+                },
+                {
+                  "n": 6,
+                  "text": "Benditos y santos son aquéllos que forman parte de la primera resurrección, porque la segunda muerte no tiene ningún poder sobre ellos, sino que serán sacerdotes de Dios y de Cristo, y reinarán con él durante mil años."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "και ειδον §0αγγε καταβαινοντα §2 εχοντα την κλιν τηϲ αβυϲϲου και §4αλυϲεϲιν μεγαλ‹η› εν τη χειρι αυτου"
+                },
+                {
+                  "n": 2,
+                  "grc": "και εκρατηϲεν τον δρακοντα τον οφ‹ι› τον αρχαιον ο εϲτ‹ι› ο διαβολοϲ και ο ϲαταναϲ και εδηϲ‹ε› αυτον"
+                },
+                {
+                  "n": 3,
+                  "grc": "ειϲ την αβυϲϲον και εκλιϲεν κ(αι) εϲφραγιϲεν επανω αυτου ϊνα μη πλανηϲει ετι τα εθνη αχρι τελεϲθη τα χιλια ετη μετα ταυτα §0δι αυτον λυθηναι μικρον χρονον"
+                },
+                {
+                  "n": 4,
+                  "grc": "και ειδον θρονουϲ και εκαθιϲαν επ αυτουϲ και κριμα εδοθη αυτοιϲ και ταϲ ψυχαϲ των πεπελεκιϲμεν‹ω› δια την μαρτυριαν ‹ιυ› και δια τον λογον του ‹θυ› · ειτινεϲ ουν §0 προϲεκυνηϲ‹α› το θηριον ουδε τ‹η› εικονα αυτου και ουκ ελαβον το χαραγμα επι το μετωπον και επι την χειρα αυτων και εζηϲαν και εβαϲιλευϲαν μετα του ‹χυ› χιλια ετη"
+                },
+                {
+                  "n": 5,
+                  "grc": "αυτη η αναϲταϲιϲ η πρωτη"
+                },
+                {
+                  "n": 6,
+                  "grc": "μακαριοϲ και αγιοϲ ο εχων μεροϲ εν τη αναϲταϲι τη πρωτη επι τουτων ο δευτεροϲ θανατοϲ ουκ εχει εξουϲιαν αλλα εϲ‹ο›ται ϊερειϲ και του ‹θυ› και του ‹χυ› και βαϲιλευϲουϲιν μετ αυτου τα χιλια ετη"
+                }
+              ],
+              "pagina": "90.8v"
+            }
+          ],
+          "claveRefs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 1,
+              "desde": 1,
+              "hasta": 1,
+              "label": "Apocalipsis 1:1"
+            },
+            {
+              "libro": "mateo",
+              "cap": 12,
+              "desde": 29,
+              "hasta": 29,
+              "label": "Mateo 12:29"
+            },
+            {
+              "libro": "lucas",
+              "cap": 10,
+              "desde": 18,
+              "hasta": 18,
+              "label": "Lucas 10:18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "VI",
+      "titulo": "Sacrificios, templo y la plenitud del sacrificio de Cristo",
+      "desde": 43,
+      "hasta": 50,
+      "preguntas": [
+        {
+          "n": 43,
+          "texto": "Al contraponer la tesis dispensacional de que en el milenio volverán a ofrecerse sacrificios de sangre con Hebreos 10:1-4 y 10:8-10, ¿qué enseña la Escritura sobre la relación entre el único sacrificio de Cristo y los antiguos sacrificios de animales?",
+          "clave": "El sistema antiguo era «sólo una sombra» incapaz de quitar pecados, de modo que «Él anula el primer pacto para que el segundo entre en vigencia» (literalmente en griego, «quita lo primero para establecer lo segundo»). Reinstaurar matanzas de toros y cabras en un templo de piedra tras la cruz invierte todo el argumento de Hebreos.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 10,
+              "desde": 1,
+              "hasta": 4,
+              "label": "Hebreos 10:1-4",
+              "ntv": [
+                {
+                  "n": 1,
+                  "text": "El sistema antiguo bajo la ley de Moisés era sólo una sombra —un tenue anticipo de las cosas buenas por venir— no las cosas buenas en sí mismas. Bajo aquel sistema se repetían los sacrificios una y otra vez, año tras año, pero nunca pudieron limpiar por completo a quienes venían a adorar."
+                },
+                {
+                  "n": 2,
+                  "text": "Si los sacrificios hubieran podido limpiar por completo, entonces habrían dejado de ofrecerlos, porque los adoradores se habrían purificado una sola vez y para siempre, y habrían desaparecido los sentimientos de culpa."
+                },
+                {
+                  "n": 3,
+                  "text": "Pero en realidad, esos sacrificios les recordaban sus pecados año tras año."
+                },
+                {
+                  "n": 4,
+                  "text": "Pues no es posible que la sangre de los toros y las cabras quite los pecados."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 1,
+                  "grc": "ϲκιαν γαρ εχων ο νομοϲ των μελλοντων αγαθ‹ω› ουκ αυτην την εικονα των πραγματων κατ ενιαυτ‹ο› ταιϲ αυταιϲ θυϲιαιϲ αυτων αϲ προϲφερουϲιν ειϲ το διηνεκεϲ ουδεποτε δυνανται τουϲ προϲερχομενουϲ τελιωϲαι"
+                },
+                {
+                  "n": 2,
+                  "grc": "επει ουκ αν επαυϲ‹α›το προϲφερομεναι δια το μηδεμιαν εχιν ετι ϲυνϊδηϲιν αμαρτιων τουϲ λατρευονταϲ απαξ κεκαθαριϲμενουϲ"
+                },
+                {
+                  "n": 3,
+                  "grc": "αλλ εν αυταιϲ αναμνηϲιϲ αμαρτι‹ω› κατ ενιαυτον"
+                },
+                {
+                  "n": 4,
+                  "grc": "αδυνατον γαρ αιμα τραγων και ταυρων §0αφεριν αμαρτιαϲ"
+                }
+              ],
+              "pagina": "85.7v"
+            },
+            {
+              "libro": "hebreos",
+              "cap": 10,
+              "desde": 8,
+              "hasta": 10,
+              "label": "Hebreos 10:8-10",
+              "ntv": [
+                {
+                  "n": 8,
+                  "text": "Primero, Cristo dijo: No quisiste sacrificios de animales ni ofrendas por el pecado; ni ofrendas quemadas ni otras ofrendas por el pecado. Todas esas ofrendas tampoco te agradaron (aun cuando la ley de Moisés las exige)."
+                },
+                {
+                  "n": 9,
+                  "text": "Luego dijo: Aquí estoy, he venido a hacer tu voluntad. Él anula el primer pacto para que el segundo entre en vigencia."
+                },
+                {
+                  "n": 10,
+                  "text": "Pues la voluntad de Dios fue que el sacrificio del cuerpo de Jesucristo nos hiciera santos, una vez y para siempre."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 8,
+                  "grc": "ανωτερον λεγων οτι §0θυϲιαϲ §2και §4προϲφοραϲ και ολοκαυτωματα και περι αμαρτιαϲ ουκ ηθεληϲαϲ ουδε ευδοκηϲαϲ αιτινεϲ κατα νομον προϲφερονται"
+                },
+                {
+                  "n": 9,
+                  "grc": "τοτε ειρηκεν ϊδου ηκω του ποιηϲαι §0 το θελημα ϲου αναιρει το πρωτ‹ο› ϊνα το δευτερον ϲτηϲη"
+                },
+                {
+                  "n": 10,
+                  "grc": "εν ω θεληματι ηγιαϲμενοι εϲμεν δια τηϲ προϲφοραϲ του ϲωματοϲ ‹ιυ› ‹χυ› εφαπαξ"
+                }
+              ],
+              "pagina": "85.7v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 44,
+          "texto": "Según Hebreos 10:14 y 10:18, ¿por qué declara Dios categóricamente que «cuando los pecados han sido perdonados, ya no hace falta ofrecer más sacrificios» —ni siquiera como supuestos «sacrificios conmemorativos»?",
+          "clave": "Si la única ofrenda de Cristo «perfeccionó para siempre a los que está haciendo santos», el texto concluye que toda ofrenda sacrificial cesa de raíz. Volver a derramar sangre animal «en memoria» desconoce que el propio Cristo ya instituyó la señal conmemorativa del Nuevo Pacto.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 10,
+              "desde": 14,
+              "hasta": 14,
+              "label": "Hebreos 10:14",
+              "ntv": [
+                {
+                  "n": 14,
+                  "text": "Pues mediante esa única ofrenda, él perfeccionó para siempre a los que está haciendo santos."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 14,
+                  "grc": "μια γαρ προϲφορα τετελιωκεν ειϲ το διηνεκεϲ τουϲ αγιαζομενουϲ"
+                }
+              ],
+              "pagina": "85.7v"
+            },
+            {
+              "libro": "hebreos",
+              "cap": 10,
+              "desde": 18,
+              "hasta": 18,
+              "label": "Hebreos 10:18",
+              "ntv": [
+                {
+                  "n": 18,
+                  "text": "Y cuando los pecados han sido perdonados, ya no hace falta ofrecer más sacrificios."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 18,
+                  "grc": "οπου δε §0αφειϲ §3 ουκετι προϲφορα περι αμαρτιαϲ"
+                }
+              ],
+              "pagina": "85.8r"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 45,
+          "texto": "¿Qué memorial único instituyó Jesús mismo para anunciar Su muerte «hasta que él vuelva» según 1 Corintios 11:26: sacrificios animales en Jerusalén, o el pan y la copa de la Cena del Señor?",
+          "clave": "La Cena del Señor es el memorial del Nuevo Pacto «hasta que él vuelva». Sostener que la Cena cesará en un milenio terrenal para sustituirla por sacrificios sangrientos del Antiguo Testamento vuelve atrás de la realidad a la sombra.",
+          "refs": [
+            {
+              "libro": "1-corintios",
+              "cap": 11,
+              "desde": 26,
+              "hasta": 26,
+              "label": "1 Corintios 11:26",
+              "ntv": [
+                {
+                  "n": 26,
+                  "text": "Pues, cada vez que coman este pan y beban de esta copa, anuncian la muerte del Señor hasta que él vuelva."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 26,
+                  "grc": "οϲακιϲ γαρ εαν εϲθιητε τον αρτ‹ο› §0τουτο και §2το §4ποτηριον §6 πινητε τον θανατον του ‹κυ› καταγγελλετε §8αχρι ου §10 ελθη"
+                }
+              ],
+              "pagina": "83.3v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 46,
+          "texto": "Según Hebreos 7:11-12 y 7:27, si Dios restaurara un sacerdocio levítico y un templo ritual terrenal, ¿qué implicaría eso respecto a la ley mosaica y al sacerdocio irrepetible de Cristo?",
+          "clave": "«Si se cambia el sacerdocio, también es necesario cambiar la ley para permitirlo». Como el sacerdocio de Cristo según el orden de Melquisedec es definitivo e inmutable, toda restauración sacerdotal levítica presupone anular o retroceder sobre el cambio ya consumado en Cristo.",
+          "refs": [
+            {
+              "libro": "hebreos",
+              "cap": 7,
+              "desde": 11,
+              "hasta": 12,
+              "label": "Hebreos 7:11-12",
+              "ntv": [
+                {
+                  "n": 11,
+                  "text": "Entonces, si el sacerdocio de Leví —sobre el cual se basó la ley— hubiera podido lograr la perfección que Dios propuso, ¿por qué fue necesario que Dios estableciera un sacerdocio diferente, con un sacerdote según el orden de Melquisedec en lugar del orden de Leví y Aarón?"
+                },
+                {
+                  "n": 12,
+                  "text": "Y si se cambia el sacerdocio, también es necesario cambiar la ley para permitirlo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 11,
+                  "grc": "ει μεν ο‹υ› τελειωϲιϲ δια τηϲ λευειτικηϲ ϊερωϲυνηϲ ην ο λαοϲ γαρ επ αυτηϲ νενομοθετηται τιϲ ετι χρεια κατα την ταξιν > μελχιϲεδεκ ετερ‹ο› ανιϲταϲθαι ϊερεα και ου κατα την ταξιν ααρων λεγεϲθαι"
+                },
+                {
+                  "n": 12,
+                  "grc": "μετατιθεμενηϲ γαρ τηϲ ϊερωϲυνηϲ εξ αναγκηϲ και νομου μεταθεϲιϲ > γινεται"
+                }
+              ],
+              "pagina": "85.6v"
+            },
+            {
+              "libro": "hebreos",
+              "cap": 7,
+              "desde": 27,
+              "hasta": 27,
+              "label": "Hebreos 7:27",
+              "ntv": [
+                {
+                  "n": 27,
+                  "text": "A diferencia de los demás sumos sacerdotes, no tiene necesidad de ofrecer sacrificios cada día. Ellos los ofrecían primero por sus propios pecados y luego por los del pueblo. Sin embargo, Jesús lo hizo una vez y para siempre cuando se ofreció a sí mismo como sacrificio por los pecados del pueblo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 27,
+                  "grc": "οϲ ουκ εχει καθ η>μεραν αναγκην ωϲπερ οι αρχιερειϲ προτερον ϋπερ των ϊδιων αμαρ>τιων θυϲιαϲ αναφερειν επειτα τ‹ω› του λαου τουτο γαρ εποιηϲεν εφα>παξ εαυτον προϲενεγκαϲ"
+                }
+              ],
+              "pagina": "85.6v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 47,
+          "texto": "Según las palabras directas de Jesús a la mujer samaritana en Juan 4:21-24, ¿quedaría la verdadera adoración ligada otra vez al templo físico de Jerusalén o quedó liberada de lugares sagrados geográficos para siempre?",
+          "clave": "«Se acerca el tiempo —de hecho, ya ha llegado— cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad», y «no tendrá importancia si se adora al Padre en este monte o en Jerusalén». La adoración cristiana en Cristo nunca retrocede a un santuario geográfico local.",
+          "refs": [
+            {
+              "libro": "juan",
+              "cap": 4,
+              "desde": 21,
+              "hasta": 24,
+              "label": "Juan 4:21-24",
+              "ntv": [
+                {
+                  "n": 21,
+                  "text": "Jesús le contestó: —Créeme, querida mujer, que se acerca el tiempo en que no tendrá importancia si se adora al Padre en este monte o en Jerusalén."
+                },
+                {
+                  "n": 22,
+                  "text": "Ustedes, los samaritanos, saben muy poco acerca de aquel a quien adoran, mientras que nosotros, los judíos, conocemos bien a quien adoramos, porque la salvación viene por medio de los judíos."
+                },
+                {
+                  "n": 23,
+                  "text": "Pero se acerca el tiempo —de hecho, ya ha llegado— cuando los verdaderos adoradores adorarán al Padre en espíritu y en verdad. El Padre busca personas que lo adoren de esa manera."
+                },
+                {
+                  "n": 24,
+                  "text": "Pues Dios es Espíritu, por eso todos los que lo adoran deben hacerlo en espíritu y en verdad."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 21,
+                  "grc": "λεγει αυτη ο ‹ιϲ› · πιϲτευε μοι γυναι · οτι ερχεται ωρα · οτε ουτε εν τω ορει τουτω ουτε εν ϊεροϲολυμοιϲ προϲκυνηϲεται τω πατρι ·"
+                },
+                {
+                  "n": 22,
+                  "grc": "ϋμιϲ προϲκυνειτε ο ουκ οιδατε · ημιϲ προϲκυνουμεν ο οιδαμεν · οτι η ϲωτηρια εκ των ϊουδαιων εϲτιν ·"
+                },
+                {
+                  "n": 23,
+                  "grc": "αλλα ερχεται ωρα και §0ν‹υ› εϲτιν · οτε οι αληθινοι προϲκυνηται προϲκυνηϲουϲιν τω πατρι · εν ‹πνι› και αληθεια · και γαρ ο πατηρ τοιουτουϲ ζητι τουϲ προϲκυνο‹υ›ταϲ §2αυτω ·"
+                },
+                {
+                  "n": 24,
+                  "grc": "§0π‹ν›α ο ‹θϲ› · και τουϲ προϲκυνουνταϲ §2 εν ‹πν›ι §4αληθειαϲ §6προϲκυν‹ι› §8δει ·"
+                }
+              ],
+              "pagina": "80.2v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 48,
+          "texto": "Según 1 Corintios 3:16 y Efesios 2:19-22, ¿qué edificio reconoce el Nuevo Testamento como el templo real donde habita el Espíritu de Dios: una futura estructura de piedra construida en Oriente Medio, o la Iglesia unida en Cristo?",
+          "clave": "«Todos ustedes juntos son el templo de Dios» y «Juntos constituimos su casa… y vamos formando un templo santo para el Señor». La presencia gloriosa de Dios (ναοϲ) ya no mora en edificios de ladrillo o mármol.",
+          "refs": [
+            {
+              "libro": "1-corintios",
+              "cap": 3,
+              "desde": 16,
+              "hasta": 16,
+              "label": "1 Corintios 3:16",
+              "ntv": [
+                {
+                  "n": 16,
+                  "text": "¿No se dan cuenta de que todos ustedes juntos son el templo de Dios y que el Espíritu de Dios vive en ustedes?"
+                }
+              ],
+              "grc": [
+                {
+                  "n": 16,
+                  "grc": "ουκ οιδατε οτι ναοϲ ‹θυ› εϲτε και το ‹πν›α του ‹θυ› οικει εν υμ‹ι›"
+                }
+              ],
+              "pagina": "82.8v"
+            },
+            {
+              "libro": "efesios",
+              "cap": 2,
+              "desde": 19,
+              "hasta": 22,
+              "label": "Efesios 2:19-22",
+              "ntv": [
+                {
+                  "n": 19,
+                  "text": "Así que ahora ustedes, los gentiles, ya no son unos desconocidos ni extranjeros. Son ciudadanos junto con todo el pueblo santo de Dios. Son miembros de la familia de Dios."
+                },
+                {
+                  "n": 20,
+                  "text": "Juntos constituimos su casa, la cual está edificada sobre el fundamento de los apóstoles y los profetas. Y la piedra principal es Cristo Jesús mismo."
+                },
+                {
+                  "n": 21,
+                  "text": "Estamos cuidadosamente unidos en él y vamos formando un templo santo para el Señor."
+                },
+                {
+                  "n": 22,
+                  "text": "Por medio de él, ustedes, los gentiles, también llegan a formar parte de esa morada donde Dios vive mediante su Espíritu."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 19,
+                  "grc": "αρα ουν ουκετι εϲτε ξενοι και παροικοι αλλα εϲτε ϲυνπολιται των αγιων και οικειοι του ‹θυ›"
+                },
+                {
+                  "n": 20,
+                  "grc": "εποικοδομηθεντεϲ επι τω θεμελιω των αποϲτολων και προφητων οντοϲ ακρογωνιαιου §0του §2‹χυ›"
+                },
+                {
+                  "n": 21,
+                  "grc": "εν ω παϲα §0 οικοδομη ϲυναρμολογουμενη αυξει ειϲ ναον αγιον ‹ε› ‹κω›"
+                },
+                {
+                  "n": 22,
+                  "grc": "εν ω και ϋμιϲ ϲυνοικοδομειϲθε ειϲ κατοικητηριον του ‹θυ› εν ‹πν›ι"
+                }
+              ],
+              "pagina": "84.5v"
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 49,
+          "texto": "En Daniel 9:24-27, ¿coloca el texto una brecha silenciosa de dos mil años entre la semana 69 y la semana 70, o declara que tras sesenta y nueve conjuntos de siete «matarán al Ungido», cesarán «los sacrificios y las ofrendas» y «un gobernante cuyos ejércitos destruirán la ciudad y el templo»?",
+          "clave": "El texto fija un período continuo de «setenta conjuntos de siete» para poner fin al pecado, dar muerte al Ungido, poner fin a los sacrificios y provocar la destrucción de la ciudad y del templo por el ejército invasor —secuencia cumplida exactamente con Cristo en el siglo I y con la destrucción romana de Jerusalén en el 70 d.C.—.",
+          "refs": [
+            {
+              "libro": "daniel",
+              "cap": 9,
+              "desde": 24,
+              "hasta": 27,
+              "label": "Daniel 9:24-27",
+              "ntv": [
+                {
+                  "n": 24,
+                  "text": "Un período de setenta conjuntos de siete se ha decretado para tu pueblo y tu ciudad santa para poner fin a su rebelión, para terminar con su pecado, para obtener perdón por su culpa, para traer justicia eterna, para confirmar la visión profética y para ungir el lugar santísimo."
+                },
+                {
+                  "n": 25,
+                  "text": "¡Ahora escucha y entiende! Pasarán siete conjuntos de siete más sesenta y dos conjuntos de siete desde el momento en que se dé la orden de reconstruir Jerusalén hasta que venga un gobernante, el Ungido. Jerusalén será reconstruida con calles y fuertes defensas, a pesar de los tiempos peligrosos."
+                },
+                {
+                  "n": 26,
+                  "text": "Después de este período de sesenta y dos conjuntos de siete, matarán al Ungido sin que parezca haber logrado nada y surgirá un gobernante cuyos ejércitos destruirán la ciudad y el templo. El fin llegará con una inundación; guerra, y la miseria que acarrea, está decretada desde ese momento hasta el fin."
+                },
+                {
+                  "n": 27,
+                  "text": "El gobernante firmará un tratado con el pueblo por un período de un conjunto de siete, pero al cumplirse la mitad de ese tiempo, pondrá fin a los sacrificios y a las ofrendas. Como punto culminante de todos sus terribles actos, colocará un objeto sacrílego que causa profanación hasta que el destino decretado para este profanador finalmente caiga sobre él."
+                }
+              ],
+              "grc": [],
+              "pagina": ""
+            }
+          ],
+          "claveRefs": []
+        },
+        {
+          "n": 50,
+          "texto": "Al leer Apocalipsis 21:22 junto con Lucas 24:25-27, ¿por qué no hay templo físico en la Nueva Jerusalén eterna, y quién es el cumplimiento verdadero de toda la Ley y los Profetas?",
+          "clave": "«No vi ningún templo en la ciudad, porque el Señor Dios Todopoderoso y el Cordero son el templo». Como explicó Jesús mismo en el camino a Emaús, las Escrituras de Moisés y de todos los profetas hablaban acerca de Él: Cristo es la verdadera tierra prometida, el verdadero Israel fiel, el Sacerdote, el Sacrificio y el Templo eterno de Dios.",
+          "refs": [
+            {
+              "libro": "apocalipsis",
+              "cap": 21,
+              "desde": 22,
+              "hasta": 22,
+              "label": "Apocalipsis 21:22",
+              "ntv": [
+                {
+                  "n": 22,
+                  "text": "No vi ningún templo en la ciudad, porque el Señor Dios Todopoderoso y el Cordero son el templo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 22,
+                  "grc": "και να‹ο› ουκ ειδον εν αυτη §0οτι ο ‹κϲ› §2ο ‹θϲ› ο παντοκρατωρ ναοϲ αυτηϲ εϲτ‹ι› και το αρνιον"
+                }
+              ],
+              "pagina": "91.1v"
+            },
+            {
+              "libro": "lucas",
+              "cap": 24,
+              "desde": 25,
+              "hasta": 27,
+              "label": "Lucas 24:25-27",
+              "ntv": [
+                {
+                  "n": 25,
+                  "text": "Entonces Jesús les dijo: —¡Qué necios son! Les cuesta tanto creer todo lo que los profetas escribieron en las Escrituras."
+                },
+                {
+                  "n": 26,
+                  "text": "¿Acaso no profetizaron claramente que el Mesías tendría que sufrir todas esas cosas antes de entrar en su gloria?"
+                },
+                {
+                  "n": 27,
+                  "text": "Entonces Jesús los guió por los escritos de Moisés y de todos los profetas, explicándoles lo que las Escrituras decían acerca de él mismo."
+                }
+              ],
+              "grc": [
+                {
+                  "n": 25,
+                  "grc": "και αυτοϲ ειπεν προϲ αυτουϲ ω ανοητοι και βραδειϲ τη καρδια του πιϲτευειν επι παϲιν οιϲ ελαληϲαν οι προφηται"
+                },
+                {
+                  "n": 26,
+                  "grc": "ουχι ταυτα εδει παθειν τον ‹χν› και ειϲελθειν ειϲ την δοξαν αυτου"
+                },
+                {
+                  "n": 27,
+                  "grc": "και αρξαμενοϲ απο μωϲεωϲ και απο §0π‹α›των των προφητων §2και §4διερμηνευειν αυτοιϲ τι ην εν ταιϲ γραφαιϲ τα περι εαυτου"
+                }
+              ],
+              "pagina": "79.7v"
+            }
+          ],
+          "claveRefs": []
+        }
+      ]
+    }
+  ]
+}

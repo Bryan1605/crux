@@ -15,6 +15,7 @@ import { PERSONAJES } from '../data/personajes';
 import { CONCILIOS, CONCILIOS_LIST } from '../data/concilios';
 import { BIBLE_BOOKS, NT_BOOKS, OT_BOOKS } from '../data/exegesis';
 import { VIDEOS } from '../data/videos';
+import { APOLOGETICA_EXAMS, APOLOGETICA_QUOTE } from '../data/apologetica';
 
 import './Home.css';
 
@@ -36,6 +37,21 @@ const SUGERENCIAS = ['Trinidad', 'El hijo pródigo', 'Arrianismo', 'Juan 1:1'];
 
 /** Categorías del mapa: de la que más fichas tiene a la que menos. */
 const CATEGORIAS = [...STUDY_CATEGORIES].sort((a, b) => (b.count || 0) - (a.count || 0));
+
+const CARDINAL_CAP = {
+  1: 'Un',
+  2: 'Dos',
+  3: 'Tres',
+  4: 'Cuatro',
+  5: 'Cinco',
+  6: 'Seis',
+  7: 'Siete',
+  8: 'Ocho',
+  9: 'Nueve',
+  10: 'Diez',
+  11: 'Once',
+  12: 'Doce'
+};
 
 /**
  * Personajes destacados: primero los que ya tienen la ficha ilustrada (escenas
@@ -96,6 +112,13 @@ function Flecha() {
       →
     </span>
   );
+}
+
+/** Resalta en cursiva los nombres latinos dentro de una descripción plana. */
+function renderApoloDesc(desc) {
+  return String(desc)
+    .split(/(Codex Sinaiticus|ex cathedra)/)
+    .map((part, i) => (part === 'Codex Sinaiticus' || part === 'ex cathedra' ? <em key={i}>{part}</em> : part));
 }
 
 /**
@@ -318,7 +341,10 @@ export default function Home() {
         <div className="container mapa__inner">
           <div className="home-head mapa__head">
             <p className="eyebrow home-kicker">Mapa del estudio</p>
-            <h2 id="categorias-title">Diez caminos para entrar</h2>
+            <h2 id="categorias-title">
+              {CARDINAL_CAP[CATEGORIAS.length] || CATEGORIAS.length}{' '}
+              {CATEGORIAS.length === 1 ? 'camino' : 'caminos'} para entrar
+            </h2>
             <p className="lead">
               Cada categoría agrupa fichas con el mismo método: pasaje clave, contexto, exégesis y
               aplicación.
@@ -463,6 +489,90 @@ export default function Home() {
                 </p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Apologética: exámenes y preguntas con la Biblia frente a distintas corrientes */}
+      <section className="section apologetica-home" aria-labelledby="apologetica-home-title">
+        <div className="container">
+          <div className="apolo-head">
+            <div className="apolo-head__copy">
+              <p className="eyebrow apolo-eyebrow">Apologética bíblica</p>
+              <h2 id="apologetica-home-title">Preguntas con la Biblia</h2>
+              <p className="lead">
+                Cuestionarios directos y contraste textual para examinar cada doctrina a la luz de la
+                Escritura y del testimonio histórico.
+              </p>
+            </div>
+            <Link className="apolo-head__btn" to="/estudio">
+              Ver todos los estudios <Flecha />
+            </Link>
+          </div>
+
+          <div className="apolo-grid">
+            {APOLOGETICA_EXAMS.map(item =>
+              item.href ? (
+                <article className="apolo-card apolo-card--active" key={item.id}>
+                  <div className="apolo-card__top">
+                    <span className="apolo-card__status">
+                      <span className="apolo-card__dot" aria-hidden="true" />
+                      {item.badge}
+                    </span>
+                    <span className="apolo-card__tag">{item.tag}</span>
+                  </div>
+                  <h3 className="apolo-card__title">{item.nombre}</h3>
+                  <p className="apolo-card__desc">{renderApoloDesc(item.desc)}</p>
+                  <div className="apolo-card__foot">
+                    <span>{item.footLeft}</span>
+                    <strong>{item.footRight}</strong>
+                  </div>
+                  <Link className="apolo-card__cta" to={item.href}>
+                    {item.cta} <Flecha />
+                  </Link>
+                </article>
+              ) : (
+                <article className="apolo-card apolo-card--soon" key={item.id}>
+                  <div className="apolo-card__top">
+                    <span className="apolo-card__status">
+                      <span aria-hidden="true">† </span>
+                      {item.badge}
+                    </span>
+                    <span className="apolo-card__tag">{item.tag}</span>
+                  </div>
+                  <h3 className="apolo-card__title">{item.nombre}</h3>
+                  <p className="apolo-card__desc">{renderApoloDesc(item.desc)}</p>
+                  <div className="apolo-card__foot">
+                    <span>{item.footLeft}</span>
+                    <span>{item.footRight}</span>
+                  </div>
+                </article>
+              )
+            )}
+
+            <aside className="apolo-card apolo-card--quote" aria-label="Cita bíblica del método Crux">
+              <div className="apolo-quote__top">
+                <span>{APOLOGETICA_QUOTE.label}</span>
+                <span className="apolo-quote__cross" aria-hidden="true">
+                  †
+                </span>
+              </div>
+              <blockquote className="apolo-quote__text">{APOLOGETICA_QUOTE.texto}</blockquote>
+              <p className="apolo-quote__ref">
+                <span aria-hidden="true">† </span>
+                {APOLOGETICA_QUOTE.cita}
+              </p>
+            </aside>
+          </div>
+
+          <div className="apolo-bar">
+            <p className="apolo-bar__text">
+              ¿Buscas un cotejo bíblico sobre otro movimiento?{' '}
+              <strong>Publicamos nuevos cuestionarios periódicamente.</strong>
+            </p>
+            <Link className="apolo-bar__link" to="/estudio?cat=06-apologetica">
+              Explorar estudios de apologética <Flecha />
+            </Link>
           </div>
         </div>
       </section>

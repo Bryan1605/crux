@@ -726,9 +726,11 @@ try {
       imgsRotas: [...document.images].filter(i => i.complete && i.naturalWidth === 0).length
     };
   });
+  const estudiosIndex = JSON.parse(await readFile(new URL('../content/estudios.json', import.meta.url), 'utf8'));
+  const expectedCategorias = (estudiosIndex.categories || []).length;
   check('la portada pinta sus secciones', portada.clases.length >= 8, portada.clases.map(c => c.split(' ')[0]).join(' · '));
   check('cifras reales en la portada', portada.stats === 5, `${portada.stats} cifras`);
-  check('rejilla de categorías completa', portada.categorias === 10, `${portada.categorias} tarjetas`);
+  check('rejilla de categorías completa', portada.categorias === expectedCategorias, `${portada.categorias} tarjetas`);
   check('personajes destacados con portada', portada.personajes === 4, `${portada.personajes} tarjetas`);
   check('buscador en el héroe', portada.buscador);
   check('una sola acción primaria (héroe y cierre)', portada.principales.length === 2 && portada.principales.every(h => /(^|\/)estudio$/.test(h)), portada.principales.join(' | '));

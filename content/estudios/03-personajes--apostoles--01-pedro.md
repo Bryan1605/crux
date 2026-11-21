@@ -157,8 +157,8 @@ Su cristología se reduce a cinco imágenes: **Mesías**, **crucificado**, **res
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 4; 10; 16; 26; Juan 1; 6; 21; Hechos 1-12; 1 Pedro 1-5; 2 Pedro
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Ireneo, *Contra las herejías* III.12 (líneas 3353-3367)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 4; 10; 16; 26; Juan 1; 6; 21; Hechos 1-12; 1 Pedro 1-5; 2 Pedro
+- **Patrística**: Biblia Patrística Completa — Ireneo, *Contra las herejías* III.12 (líneas 3353-3367)
 
 ## Conexiones
 

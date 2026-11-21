@@ -23,6 +23,7 @@ import { fileURLToPath } from 'node:url';
 
 import { writeIndex } from './content-lib.mjs';
 import {
+  PRIVATE_FILES,
   descriptionFrom,
   parseFrontmatter,
   parseIndexDescriptions,
@@ -152,6 +153,7 @@ function main() {
       const fm = parseFrontmatter(text);
       const fileBase = path.basename(rel, '.md');
       const folderRel = path.posix.join(cat.id, rel);
+      if (PRIVATE_FILES.has(folderRel)) continue;
       const slug = slugify(folderRel);
       const title = titleFrom(text, titleCase(fileBase));
       const desc =

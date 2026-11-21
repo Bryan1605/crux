@@ -14,7 +14,7 @@ export function renderProse(body) {
       .replace(/<h1(\s|>)/gi, '<h2$1')
       .replace(/<\/h1>/gi, '</h2>')
       // eslint-disable-next-line no-useless-escape
-      .replace(/<a href="(https?:\/\/(?!bryan1605\.github\.io\/crux\/)[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"')
+      .replace(/<a href="(https?:\/\/(?!(?:www\.)?cruxestudios\.com\/|bryan1605\.github\.io\/crux\/)[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"')
   );
 }
 

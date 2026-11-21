@@ -49,6 +49,8 @@ const PAGINAS = [
   '/concilios',
   '/temas',
   '/apologetica/shincheonji',
+  '/apologetica/adventismo',
+  '/apologetica/dispensacionalismo',
   '/buscar?q=nicea',
   '/estudio/01-fundamentos--01-perdon',
   '/estudio/03-personajes--apostoles--09-tomas',
@@ -201,7 +203,7 @@ try {
     try {
       const res = await fetch(url, {
         redirect: 'follow',
-        headers: { 'user-agent': 'Mozilla/5.0 (compatible; crux-qa/1.0; +https://bryan1605.github.io/crux/)' },
+        headers: { 'user-agent': 'Mozilla/5.0 (compatible; crux-qa/1.0; +https://cruxestudios.com/)' },
         signal: AbortSignal.timeout(20000)
       });
       if (res.status >= 400 && ![403, 429].includes(res.status)) return { rota: `${url} → ${res.status}` };
@@ -239,7 +241,7 @@ try {
     const texto = readFileSync(join('content/estudios', archivo), 'utf8');
     for (const m of texto.matchAll(/https?:\/\/[^\s"'`)<>\]]+/g)) {
       const url = m[0].replace(/[.,;)]+$/, '');
-      if (/bryan1605\.github\.io/.test(url)) continue;
+      if (/(?:bryan1605\.github\.io|cruxestudios\.com)/.test(url)) continue;
       if (!citas.has(url)) citas.set(url, new Set());
       citas.get(url).add(archivo.replace(/\.md$/, ''));
     }

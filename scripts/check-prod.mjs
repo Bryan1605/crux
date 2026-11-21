@@ -12,7 +12,7 @@ import { join } from 'node:path';
 
 import { OG_IMAGE, escapeHtml, siteRoutes } from './routes-lib.mjs';
 
-const BASE = (process.env.CRUX_BASE || 'https://bryan1605.github.io/crux').replace(/\/$/, '');
+const BASE = (process.env.CRUX_BASE || 'https://cruxestudios.com').replace(/\/$/, '');
 const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 const OUT = join(process.env.TEMP || tmpdir(), 'opencode', 'crux', 'prod');
 
@@ -48,6 +48,12 @@ const cases = [
   { url: `${BASE}/exegesis?libro=salmos&cap=151`, label: '/exegesis (Salmo 151 solo Codex)', selector: '.exg-grid, main' },
   { url: `${BASE}/concilios`, label: '/concilios (concilios y herejías)', selector: '.concilios__list, .herejias__list, main' },
   { url: `${BASE}/concilios#nicea`, label: 'ancla #nicea en /concilios', selector: '.concilios__card, main' },
+  { url: `${BASE}/biblia/libros`, label: '/biblia/libros (índice de libros)', selector: '.libros__lista, main' },
+  { url: `${BASE}/biblia/libros/tobit`, label: '/biblia/libros/tobit (ficha de Tobit)', selector: '.ficha, main' },
+  { url: `${BASE}/apologetica/shincheonji`, label: '/apologetica/shincheonji (100 preguntas)', selector: '.scj-tabs, main' },
+  { url: `${BASE}/apologetica/adventismo`, label: '/apologetica/adventismo (50 preguntas)', selector: '.scj-q, main' },
+  { url: `${BASE}/apologetica/dispensacionalismo`, label: '/apologetica/dispensacionalismo (50 preguntas)', selector: '.scj-tabs, main' },
+  { url: `${BASE}/videos`, label: '/videos (parrilla de videos)', selector: '.video-card, .empty-state, main' },
   { url: `${BASE}/temas`, label: '/temas (categorías y temas)', selector: '.temas__cats, .temas__cloud, main' },
   { url: `${BASE}/buscar?q=nicea`, label: '/buscar?q=nicea (búsqueda global)', selector: '.buscar__item, main' },
   { url: `${BASE}/ruta-no-existe`, label: 'ruta inventada → portada (SPA)', selector: 'main, #root *' },
@@ -61,7 +67,7 @@ for (const { url, label, selector } of cases) {
   let realErrors = errors;
   page.on('pageerror', e => errors.push(String(e)));
   page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
-  page.on('response', r => { if (r.status() === 404) http404.push(r.url().replace('https://bryan1605.github.io', '')); });
+  page.on('response', r => { if (r.status() === 404) http404.push(r.url().replace(new URL(BASE).origin, '')); });
 
   try {
     await page.goto(url, { waitUntil: 'load', timeout: 60000 });
@@ -160,11 +166,12 @@ check(
 const robots = await fetch(`${BASE}/robots.txt`).then(r => r.text());
 const sitemap = await fetch(`${BASE}/sitemap.xml`).then(r => r.text());
 const indexables = routes.filter(r => r.indexable).length;
+const videosIndexable = routes.find(r => r.path === '/videos')?.indexable;
 check(
   'El sitemap lista solo rutas indexables',
   sitemap.includes(`<loc>${BASE}/estudio/</loc>`) &&
     !sitemap.includes(`<loc>${BASE}/buscar/</loc>`) &&
-    !sitemap.includes(`<loc>${BASE}/videos/</loc>`) &&
+    (videosIndexable ? sitemap.includes(`<loc>${BASE}/videos/</loc>`) : !sitemap.includes(`<loc>${BASE}/videos/</loc>`)) &&
     (sitemap.match(/<loc>/g) || []).length === indexables,
   `${(sitemap.match(/<loc>/g) || []).length} URLs · ${indexables} indexables`
 );

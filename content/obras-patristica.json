@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "parte": "1.3",
+      "titulo": "Ignacio de Antioquía",
+      "fuente": "Personajes/Ignacio de Antioquia/Portada_Ignacio_de_Antioquia_Estilo_Crux.jpg",
+      "portada": "/img/obras/1-3-ignacio-de-antioquia.webp",
+      "alt": "Ignacio de Antioquía en mosaico: obispo de barba larga con halo y manos cruzadas sobre el pecho"
+    }
+  ]
+}

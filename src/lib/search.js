@@ -10,10 +10,12 @@ import { fold } from './fold.js';
 
 export const TIPOS = {
   estudio: { label: 'Estudios', orden: 0 },
-  personaje: { label: 'Personajes', orden: 1 },
-  concilio: { label: 'Concilios', orden: 2 },
-  herejia: { label: 'Herejías', orden: 3 },
-  video: { label: 'Vídeos', orden: 4 }
+  libro: { label: 'Libros de la Biblia', orden: 1 },
+  apologetica: { label: 'Apologética', orden: 2 },
+  personaje: { label: 'Personajes', orden: 3 },
+  concilio: { label: 'Concilios', orden: 4 },
+  herejia: { label: 'Herejías', orden: 5 },
+  video: { label: 'Vídeos', orden: 6 }
 };
 
 export const TIPO_ORDER = Object.keys(TIPOS).sort((a, b) => TIPOS[a].orden - TIPOS[b].orden);

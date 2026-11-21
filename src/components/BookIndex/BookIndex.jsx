@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import { fold } from '../../data/biblia';
+import { portadaDe } from '../../data/obras';
 import { STANDARD, headingGlyph, partInfo, plainLabel, standardKind } from '../../lib/bibliaGlyphs';
 
 import './BookIndex.css';
@@ -82,22 +83,37 @@ function WorkDetail({ work, block, sectionById, folioOfPart, folioOfSection, pag
   else if (!showAll && rest.length > INSIDE_LIMIT) inside = rest.filter(s => s.level === top).slice(0, INSIDE_LIMIT);
   const folio = folioOfPart.get(work.part.id);
   const { info } = work;
+  const portada = portadaDe(info.num);
 
   return (
     <div className="toc-work">
-      <p className="toc-work__kicker">
-        {info.num && info.num !== '0' ? `Parte ${info.num} · ` : ''}
-        {block.title}
-      </p>
-      <h3 className="toc-work__title">{info.title || work.part.label}</h3>
-      <p className="toc-work__meta">
-        {[info.date, pages ? `${fmt(pages)} ${pages === 1 ? 'página' : 'páginas'}` : '', `desde la p. ${fmt(folio ?? 0)}`]
-          .filter(Boolean)
-          .join(' · ')}
-        <button type="button" className="toc-work__open" onClick={() => onSelect(work.part.id)}>
-          Empezar a leer →
-        </button>
-      </p>
+      <div className={`toc-work__head ${portada ? 'has-cover' : ''}`.trim()}>
+        {portada && (
+          <button
+            type="button"
+            className="toc-work__cover"
+            onClick={() => onSelect(work.part.id)}
+            aria-label={`Empezar a leer ${info.title || work.part.label}`}
+          >
+            <img src={portada.src} alt={portada.alt} width="600" height="800" loading="lazy" decoding="async" />
+          </button>
+        )}
+        <div className="toc-work__head-text">
+          <p className="toc-work__kicker">
+            {info.num && info.num !== '0' ? `Parte ${info.num} · ` : ''}
+            {block.title}
+          </p>
+          <h3 className="toc-work__title">{info.title || work.part.label}</h3>
+          <p className="toc-work__meta">
+            {[info.date, pages ? `${fmt(pages)} ${pages === 1 ? 'página' : 'páginas'}` : '', `desde la p. ${fmt(folio ?? 0)}`]
+              .filter(Boolean)
+              .join(' · ')}
+            <button type="button" className="toc-work__open" onClick={() => onSelect(work.part.id)}>
+              Empezar a leer →
+            </button>
+          </p>
+        </div>
+      </div>
 
       {standard.length > 0 && (
         <ul className="toc-work__entries">

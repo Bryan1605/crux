@@ -95,7 +95,7 @@ const DEFAULTS = {
           meta1: 'Padres de la Iglesia',
           meta2: 'siglos I–VIII',
           title: 'Biblia Patrística',
-          desc: 'Las cartas, homilías y tratados de los Padres de la Iglesia, parte por parte, con su fólio y su contexto.',
+          desc: 'Las cartas, homilías y tratados de los Padres de la Iglesia, parte por parte, con su folio y su contexto.',
           cta: 'Abrir la Patrística'
         },
         {

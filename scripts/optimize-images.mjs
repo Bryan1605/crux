@@ -1,5 +1,5 @@
-import { readdirSync, statSync, existsSync, mkdirSync } from 'node:fs';
-import { join, relative, dirname, extname } from 'node:path';
+import { existsSync, mkdirSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { dirname, extname, join, relative, resolve } from 'node:path';
 import sharp from 'sharp';
 
 const ROOT = process.cwd();
@@ -27,9 +27,24 @@ async function convert(src, dest, width, quality = 78) {
 
 const jobs = [];
 
+// Portadas de obras (Biblia Patrística) → public/img/obras/<archivo>.webp (600px, q78)
+const obrasFile = join(ROOT, 'content', 'obras-patristica.json');
+const obraFuentes = new Set();
+if (existsSync(obrasFile)) {
+  const obras = JSON.parse(readFileSync(obrasFile, 'utf8'));
+  for (const item of obras.items || []) {
+    if (!item?.fuente) continue;
+    obraFuentes.add(resolve(IMG, item.fuente).toLowerCase());
+    if (item.portada) {
+      jobs.push([join(IMG, item.fuente), join(ROOT, 'public', item.portada), 600, 78]);
+    }
+  }
+}
+
 // Personajes → public/img/personajes/<Rel>/<Archivo>.webp
 const pjRoot = join(IMG, 'Personajes');
 for (const src of walk(pjRoot)) {
+  if (obraFuentes.has(resolve(src).toLowerCase())) continue;
   const rel = relative(pjRoot, src).replace(/\\/g, '/').replace(/\.(jpe?g|png)$/i, '.webp');
   jobs.push([src, join(OUT, 'personajes', rel), 1100, 70]);
 }

@@ -104,8 +104,8 @@ El NT no cuenta qué hizo ni qué dijo. Su valor documental está en **la compos
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 10:2-4; Marcos 3:16-18; Lucas 6:13-16; Hechos 1:13; notas al pie de Mateo 10:4 y Marcos 3:18
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — sin menciones de "zelote" ni "cananeo"
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 10:2-4; Marcos 3:16-18; Lucas 6:13-16; Hechos 1:13; notas al pie de Mateo 10:4 y Marcos 3:18
+- **Patrística**: Biblia Patrística Completa — sin menciones de "zelote" ni "cananeo"
 
 ## Conexiones
 

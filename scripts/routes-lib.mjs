@@ -18,7 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { SHINCHEONJI_PATH, shincheonjiSeo } from '../src/lib/apologeticaSeo.js';
+import { APOLOGETICA_FASCICULOS } from '../src/lib/apologeticaSeo.js';
 import { libroSeo, librosIndexSeo } from '../src/lib/librosSeo.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -176,7 +176,7 @@ export function siteRoutes() {
     {
       path: '/buscar',
       title: `${brand} — Buscar`,
-      description: 'Busca a la vez en los estudios, los personajes, los concilios y los vídeos del sitio.',
+      description: 'Busca a la vez en los estudios, los libros de la Biblia, la apologética, los personajes, los concilios y los vídeos del sitio.',
       type: 'website',
       indexable: false
     }
@@ -194,9 +194,11 @@ export function siteRoutes() {
     });
   }
 
-  // Apologética: 100 preguntas para Shincheonji (solo si existen los datos).
-  if (fs.existsSync(path.join(CONTENT, 'apologetica', 'shincheonji-preguntas.json'))) {
-    routes.push({ path: SHINCHEONJI_PATH, ...shincheonjiSeo(brand), type: 'article', indexable: true });
+  // Apologética: fascículos publicados («Preguntas con la Biblia»).
+  for (const f of APOLOGETICA_FASCICULOS) {
+    if (fs.existsSync(path.join(CONTENT, 'apologetica', f.preguntasFile))) {
+      routes.push({ path: f.path, ...f.seo(brand), type: 'article', ogImage: OG_IMAGE, indexable: true });
+    }
   }
 
   // Índice de libros y una ruta por ficha que exista (no se publican fichas vacías).

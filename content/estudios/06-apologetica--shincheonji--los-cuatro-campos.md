@@ -78,4 +78,4 @@ Shincheonji reinterpreta la parábola como un **sistema de auto-esfuerzo**:
 
 ## Fuentes
 
-- [Transcripción completa de la clase](../../../../Shincheonji/Resumen_Los_Cuatro_Campos-20251116.md)
+- Transcripción y notas de estudio de la clase introductoria sobre la Parábola del Sembrador (Los Cuatro Campos).

@@ -1,0 +1,79 @@
+{
+  "_nota": "Palabras clave que se resaltan en cada versículo de /apologetica/adventismo. Se eligen a mano, pregunta por pregunta. «es» son frases literales de la NTV; «grc» son palabras seguidas del Codex (solo cuando la referencia conserva texto griego). El build y qa:apologetica comprueban que todas aparecen en su versículo.",
+  "claves": {
+    "1": [{ "ref": "Génesis 2:2-3", "es": ["descansó de toda su labor", "descansó de toda su obra de creación"] }],
+    "2": [
+      { "ref": "Éxodo 31:13", "es": ["una señal del pacto entre ustedes y yo de generación en generación"] },
+      { "ref": "Éxodo 31:16-17", "es": ["El pueblo de Israel deberá guardar el día de descanso", "señal perpetua de mi pacto con el pueblo de Israel"] }
+    ],
+    "3": [{ "ref": "Deuteronomio 5:15", "es": ["fuiste esclavo en Egipto", "te ordenó descansar el séptimo día"] }],
+    "4": [{ "ref": "Colosenses 2:16-17", "es": ["no permitan que nadie los condene", "los días de descanso", "sólo sombras de la realidad que vendrá"], "grc": ["μη ουν τιϲ ϋμαϲ κρινετω", "η ϲαββατων", "α εϲτιν ϲκια των μελλοντω"] }],
+    "5": [{ "ref": "Romanos 14:5-6", "es": ["un día es más sagrado que otro", "todos los días son iguales", "plenamente convencido"], "grc": ["κρινει ημεραν παρ ημεραν", "κρινει παϲαν ημεραν", "πληροφοριϲθω"] }],
+    "6": [{ "ref": "Gálatas 4:9-11", "es": ["convertirse otra vez en esclavos", "cumplir con ciertos días o meses, estaciones o años"], "grc": ["ημεραϲ παρατηρειϲθε και μηναϲ και καιρουϲ και ενιαυτουϲ"] }],
+    "7": [{ "ref": "Hechos 15:28-29", "es": ["no imponer sobre ustedes una carga mayor que estos pocos requisitos"], "grc": ["μηδεν πλεον επιτιθεϲθαι ϋμιν βαροϲ"] }],
+    "8": [
+      { "ref": "Hechos 20:7", "es": ["El primer día de la semana", "para participar de la Cena del Señor"], "grc": ["εν δε τη μια των ϲαββατων"] },
+      { "ref": "1 Corintios 16:2", "es": ["El primer día de cada semana"], "grc": ["κατα μιαν ϲαββατω"] }
+    ],
+    "9": [{ "ref": "Apocalipsis 1:10", "es": ["el día del Señor"], "grc": ["εν τη κυριακη ημερα"] }],
+    "10": [{ "ref": "Hebreos 4:9-11", "es": ["hay un descanso especial en espera para el pueblo de Dios", "han descansado de su trabajo"], "grc": ["κατεπαυϲεν απο τω εργων αυτου"] }],
+    "11": [{ "ref": "Mateo 5:17-18", "es": ["No vine para abolir la ley", "vine para cumplir sus propósitos", "hasta que su propósito se cumpla"], "grc": ["πληρωϲαι", "εωϲ αν παντα γενηται"] }],
+    "12": [{ "ref": "2 Corintios 3:7-11", "es": ["con leyes grabadas en piedra", "ya estaba desvaneciéndose", "el antiguo camino, que ha sido reemplazado"], "grc": ["εν γραμμαϲιν εντετυπωμενη λιθοιϲ", "το καταργουμενον"] }],
+    "13": [{ "ref": "Gálatas 3:24-25", "es": ["la ley fue nuestra tutora hasta que vino Cristo", "ya no necesitamos que la ley sea nuestra tutora"], "grc": ["ο νομοϲ παιδαγωγοϲ ημων γεγονεν ειϲ χν", "ουκετι υπο παιδαγωγον εϲμεν"] }],
+    "14": [{ "ref": "Hebreos 8:13", "es": ["ha hecho obsoleto al primero, el cual ha caducado y pronto desaparecerá"], "grc": ["πεπαλαιωκε την πρωτην", "εγγυϲ αφανιϲμου"] }],
+    "15": [{ "ref": "Romanos 7:4-6", "es": ["ustedes murieron al poder de la ley", "ahora fuimos liberados de la ley"], "grc": ["εθανατωθητε τω νομω", "νυνϊ δε κατηργηθημεν απο του νομου"] }],
+    "16": [{ "ref": "Marcos 7:18-19", "es": ["declaró que toda clase de comida es aceptable a los ojos de Dios"], "grc": ["καθαριζων παντα τα βρωματα"] }],
+    "17": [{ "ref": "1 Timoteo 4:3-5", "es": ["todo lo que Dios creó es bueno, no deberíamos rechazar nada"], "grc": ["παν κτιϲμα θυ καλον και ουδεν αποβλητον"] }],
+    "18": [{ "ref": "Romanos 14:17", "es": ["no se trata de lo que comemos o bebemos"], "grc": ["ου γαρ εϲτιν η βαϲιλεια του θυ βρωϲιϲ και ποϲιϲ"] }],
+    "19": [{ "ref": "Hebreos 1:3", "es": ["Después de habernos limpiado de nuestros pecados, se sentó en el lugar de honor"], "grc": ["καθαριϲμο των αμαρτιων ποιηϲαμενοϲ εκαθιϲε εν δεξια"] }],
+    "20": [{ "ref": "Hebreos 6:19-20", "es": ["a través de la cortina al santuario interior de Dios", "Jesús ya entró allí por nosotros"], "grc": ["ειϲ το εϲωτερον του καταπεταϲματοϲ", "οπου προδρομοϲ υπερ ημων ειϲηλθεν ιϲ"] }],
+    "21": [{ "ref": "Hebreos 9:11-12", "es": ["entró en el Lugar Santísimo una sola vez y para siempre, y aseguró nuestra redención eterna"], "grc": ["ειϲηλθεν ειϲ τα αγια εφαπαξ", "αιωνιαν λυτρωϲιν ευραμενοϲ"] }],
+    "22": [{ "ref": "Hebreos 9:24-26", "es": ["para presentarse ahora delante de Dios", "se presentó una sola vez y para siempre para quitar el pecado"], "grc": ["νυν εμφανιϲθηναι τω προϲωπω του θυ", "νυνϊ δε απαξ"] }],
+    "23": [{ "ref": "Hebreos 10:11-14", "es": ["un solo sacrificio por los pecados, válido para siempre. Luego se sentó", "perfeccionó para siempre"], "grc": ["μιαν ϋπερ αμαρτιων προϲενεγκαϲ θυϲιαν ειϲ το διηνεκεϲ εκαθιϲεν", "τετελιωκεν ειϲ το διηνεκεϲ"] }],
+    "24": [{ "ref": "Juan 19:30", "es": ["¡Todo ha terminado!"], "grc": ["τετελεϲται"] }],
+    "25": [{ "ref": "Mateo 27:50-51", "es": ["la cortina del santuario del templo se rasgó en dos, de arriba a abajo"], "grc": ["το καταπεταϲμα του ναου εϲχιϲθη ειϲ δυο ανωθεν εωϲ κατω"] }],
+    "26": [{ "ref": "Daniel 8:13-14", "es": ["dos mil trescientas noches y mañanas; después el templo será restaurado"] }],
+    "27": [
+      { "ref": "Levítico 16:21-22", "es": ["llevará todos los pecados del pueblo sobre sí mismo a una tierra desolada"] },
+      { "ref": "1 Pedro 2:24", "es": ["Él mismo cargó nuestros pecados sobre su cuerpo en la cruz"], "grc": ["ταϲ αμαρτιαϲ ημων αυτοϲ ανηνεγκεν", "επι το ξυλον"] }
+    ],
+    "28": [{ "ref": "Juan 5:24", "es": ["tienen vida eterna. Nunca serán condenados", "ya han pasado de la muerte a la vida"], "grc": ["εχει ζωην αιωνιον", "ειϲ κριϲιν ουκ ερχεται", "μεταβεβηκεν εκ του θανατου ειϲ την ζωην"] }],
+    "29": [{ "ref": "Romanos 8:1", "es": ["ya no hay condenación para los que pertenecen a Cristo Jesús"], "grc": ["ουδεν αρα νυν κατακριμα τοιϲ εν χω ιυ"] }],
+    "30": [{ "ref": "Efesios 1:13-14", "es": ["cuando creyeron en Cristo, Dios los identificó como suyos", "la garantía que tenemos de parte de Dios"], "grc": ["πιϲτευϲαντεϲ εϲφραγιϲθητε", "αρραβων τηϲ κληρονομιαϲ ημω"] }],
+    "31": [{ "ref": "Efesios 4:30", "es": ["les ha garantizado que serán salvos el día de la redención"], "grc": ["εϲφραγιϲθητε ειϲ ημεραν απολυτρωϲεωϲ"] }],
+    "32": [{ "ref": "1 Juan 5:13", "es": ["para que sepan que tienen vida eterna"], "grc": ["ϊνα ειδητε οτι ζωην αιωνιον εχετε"] }],
+    "33": [{ "ref": "2 Timoteo 2:19", "es": ["El SEÑOR conoce a los que son suyos"], "grc": ["εγνω κϲ πανταϲ τουϲ ονταϲ αυτου"] }],
+    "34": [
+      { "ref": "Romanos 3:28", "es": ["por medio de la fe y no por obedecer la ley"], "grc": ["δικαιουϲθαι πιϲτι ανθρωπον χωριϲ εργων νομου"] },
+      { "ref": "Efesios 2:8-9", "es": ["es un regalo de Dios", "no es un premio por las cosas buenas que hayamos hecho"], "grc": ["τη γαρ χαριτι εϲτε ϲεϲωϲμενοι", "ουκ εξ εργων"] }
+    ],
+    "35": [{ "ref": "Lucas 23:42-43", "es": ["hoy estarás conmigo en el paraíso"], "grc": ["ϲημερον μετ εμου εϲη εν τω παραδιϲω"] }],
+    "36": [{ "ref": "Filipenses 1:21-23", "es": ["quisiera partir y estar con Cristo, lo cual sería mucho mejor"], "grc": ["το αναλυϲαι και ϲυν χω ειναι πολλω μαλλον κριϲϲο"] }],
+    "37": [{ "ref": "2 Corintios 5:6-8", "es": ["preferiríamos estar fuera de este cuerpo terrenal porque entonces estaríamos en el hogar celestial con el Señor"], "grc": ["εκδημηϲαι του ϲωματοϲ και ενδημηϲαι προϲ τον κν"] }],
+    "38": [{ "ref": "Lucas 16:22-26", "es": ["en medio del tormento", "Ahora él está aquí recibiendo consuelo y tú estás en angustia"], "grc": ["ϋπαρχων εν βαϲανοιϲ", "νυν δε ωδε παρακαλειται ϲυ δε οδυναϲαι"] }],
+    "39": [{ "ref": "Apocalipsis 6:9-11", "es": ["vi debajo del altar las almas", "Ellos clamaban al Señor"], "grc": ["ϋποκατω του θυϲιαϲτηριου ταϲ ψυχαϲ", "εκραξαν φωνη μεγαλη"] }],
+    "40": [
+      { "ref": "Eclesiastés 9:5", "es": ["los muertos no saben nada"], "grc": ["οι νεκροι ουκ ειϲιν γινωϲκοντεϲ ουδεν"] },
+      { "ref": "Eclesiastés 12:7", "es": ["el espíritu regresará a Dios, que fue quien lo dio"], "grc": ["το πνα επιϲτρεψη προϲ τον θν"] }
+    ],
+    "41": [{ "ref": "Mateo 25:46", "es": ["castigo eterno", "vida eterna"], "grc": ["ειϲ κολαϲι αιωνιον", "ειϲ ζωην αιωνιον"] }],
+    "42": [
+      { "ref": "Apocalipsis 14:11", "es": ["por siempre jamás, y no tendrán alivio ni de día ni de noche"], "grc": ["ειϲ εωναϲ των αιωνων"] },
+      { "ref": "Apocalipsis 20:10", "es": ["donde ya estaban la bestia y el falso profeta", "serán atormentados día y noche por siempre jamás"], "grc": ["οπου το θηριον και οπου ο ψευδοπροφητηϲ", "βαϲανιϲθηϲονται ημεραϲ και νυκτοϲ ειϲ τουϲ αιωναϲ τω αιωνων"] }
+    ],
+    "43": [{ "ref": "Hebreos 1:1-2", "es": ["en estos últimos días, nos ha hablado por medio de su Hijo"], "grc": ["επ εϲχατου των ημερων τουτων ελαληϲεν ημιν εν υϊω"] }],
+    "44": [{ "ref": "Judas 1:3", "es": ["la fe que Dios ha confiado una vez y para siempre a su pueblo santo"], "grc": ["τη απαξ παραδοθειϲη τοιϲ αγιοιϲ πιϲτι"] }],
+    "45": [{ "ref": "2 Timoteo 3:16-17", "es": ["Toda la Escritura es inspirada por Dios", "preparar y capacitar a su pueblo para que haga toda buena obra"], "grc": ["παϲα γραφη θεοπνευϲτοϲ", "προϲ παν εργον αγαθο εξηρτιϲμενοϲ"] }],
+    "46": [{ "ref": "Apocalipsis 19:10", "es": ["la esencia de la profecía es dar un claro testimonio de Jesús"], "grc": ["η γαρ μαρτυρια ιυ εϲτι το πνα τηϲ προφητιαϲ"] }],
+    "47": [{ "ref": "Deuteronomio 18:20-22", "es": ["su profecía no se cumple ni ocurre lo que predice", "ese mensaje no proviene del SEÑOR"] }],
+    "48": [
+      { "ref": "Mateo 24:36", "es": ["nadie sabe el día ni la hora", "Sólo el Padre lo sabe"], "grc": ["ουδειϲ οιδε ουδε οι αγγελοι τω ουρανων", "ει μη ο πατηρ μονοϲ"] },
+      { "ref": "Hechos 1:7", "es": ["a ustedes no les corresponde saberlo"], "grc": ["υμων εϲτιν γνωναι χρονουϲ η καιρουϲ"] }
+    ],
+    "49": [{ "ref": "Gálatas 1:8-9", "es": ["que le caiga la maldición de Dios", "que esa persona sea maldita"], "grc": ["αναθεμα εϲτω"] }],
+    "50": [
+      { "ref": "1 Tesalonicenses 5:21", "es": ["pongan a prueba todo lo que se dice"], "grc": ["το καλο κατεχετε"] },
+      { "ref": "Hechos 17:11", "es": ["examinaban las Escrituras"], "grc": ["ανακρινοντεϲ ταϲ γραφαϲ"] }
+    ]
+  }
+}

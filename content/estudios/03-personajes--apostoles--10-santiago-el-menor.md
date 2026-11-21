@@ -138,8 +138,8 @@ Su identificación depende de **dos inferencias en cadena**: (1) que "Santiago h
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 10:3; 13:55; 27:56; Marcos 3:18; 6:3; 15:40; 16:1; Lucas 6:15-16; 24:10; Juan 19:25; Hechos 1:13; 12:17; 15:13; 21:18; Gálatas 1:19; 2:9,12
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — sin menciones de Alfeo, Cleofas, "zelote" ni "Santiago el menor"
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 10:3; 13:55; 27:56; Marcos 3:18; 6:3; 15:40; 16:1; Lucas 6:15-16; 24:10; Juan 19:25; Hechos 1:13; 12:17; 15:13; 21:18; Gálatas 1:19; 2:9,12
+- **Patrística**: Biblia Patrística Completa — sin menciones de Alfeo, Cleofas, "zelote" ni "Santiago el menor"
 
 ## Conexiones
 

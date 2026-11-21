@@ -147,6 +147,36 @@ try {
     `${pabloHrefs.join(' | ')} → ${pablo.items.map(i => i.href).slice(0, 5).join(', ')}`
   );
 
+  // --- ficha de libro (Tobit).
+  await setQuery(page, 'tobit');
+  await wait(500);
+  const tobit = await readResults(page);
+  check(
+    '«tobit» encuentra la ficha (/biblia/libros/tobit)',
+    tobit.items.some(i => i.href === '/biblia/libros/tobit'),
+    tobit.items.map(i => i.href).slice(0, 4).join(', ')
+  );
+  check(
+    'agrupa bajo «Libros de la Biblia»',
+    tobit.groups.some(g => /Libros de la Biblia/i.test(g)),
+    tobit.groups.join(' | ')
+  );
+
+  // --- apologética (Shincheonji).
+  await setQuery(page, 'shincheonji');
+  await wait(500);
+  const scj = await readResults(page);
+  check(
+    '«shincheonji» encuentra la página (/apologetica/shincheonji)',
+    scj.items.some(i => i.href === '/apologetica/shincheonji'),
+    scj.items.map(i => i.href).slice(0, 4).join(', ')
+  );
+  check(
+    'agrupa bajo «Apologética»',
+    scj.groups.some(g => /Apologética/i.test(g)),
+    scj.groups.join(' | ')
+  );
+
   // --- sin resultados.
   await setQuery(page, 'zzzzqqq');
   await wait(500);

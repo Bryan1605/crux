@@ -197,8 +197,8 @@ Su cristología tiene tres movimientos que conviene separar: `[Estudio]`
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Hechos 9; 13-18; 21; 22; 26; 28; Romanos 1; 8; Gálatas 1-2; Filipenses 1-2; Colosenses 1; 1 Corintios 15; Efesios 4
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Ireneo, *Contra las herejías* III.13-15 (líneas 3385-3409); 1 Clemente 5 (línea 229)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Hechos 9; 13-18; 21; 22; 26; 28; Romanos 1; 8; Gálatas 1-2; Filipenses 1-2; Colosenses 1; 1 Corintios 15; Efesios 4
+- **Patrística**: Biblia Patrística Completa — Ireneo, *Contra las herejías* III.13-15 (líneas 3385-3409); 1 Clemente 5 (línea 229)
 
 ## Conexiones
 

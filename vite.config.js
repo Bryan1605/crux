@@ -9,6 +9,7 @@ import prerender from './plugins/prerender.mjs';
 import { writeIndexes } from './scripts/content-lib.mjs';
 import { OG_IMAGE, siteRoutes } from './scripts/routes-lib.mjs';
 import { validate } from './scripts/validate-content.mjs';
+import { APOLOGETICA_FASCICULOS } from './src/lib/apologeticaSeo.js';
 import { checkClaves } from './src/lib/claves.js';
 import { checkTimelineLabels } from './src/lib/timeline.js';
 import { BOOK_BY_ID } from './src/data/exegesis.js';
@@ -79,9 +80,24 @@ function contentGuard() {
       };
       const readJson = name => JSON.parse(fs.readFileSync(path.join(CONTENT, `${name}.json`), 'utf8'));
 
-      for (const name of ['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias', 'concilios', 'narraciones']) {
+      for (const name of ['videos', 'slides', 'versiculos', 'anuncios', 'site', 'categorias', 'concilios', 'narraciones', 'obras-patristica']) {
         const file = path.join(CONTENT, `${name}.json`);
         if (fs.existsSync(file)) check(name, () => readJson(name));
+      }
+
+      // Portadas de obras (Biblia Patrística): cada .webp debe existir en public/img/obras/.
+      const obrasFile = path.join(CONTENT, 'obras-patristica.json');
+      if (fs.existsSync(obrasFile)) {
+        try {
+          const { items } = JSON.parse(fs.readFileSync(obrasFile, 'utf8'));
+          for (const item of items || []) {
+            if (item?.portada && !fs.existsSync(path.join(PUBLIC, item.portada))) {
+              errors.push(`content/obras-patristica.json → falta public${item.portada}`);
+            }
+          }
+        } catch {
+          // El error de JSON o esquema ya se registra arriba.
+        }
       }
 
       // Léxico: la fuente editable vive en content/lexico/griego.json.
@@ -178,25 +194,34 @@ function contentGuard() {
         }
       }
 
-      // Apologética: las 100 preguntas para Shincheonji (generadas desde el wiki).
-      const scjFile = path.join(CONTENT, 'apologetica', 'shincheonji-preguntas.json');
-      if (fs.existsSync(scjFile)) {
+      // Apologética: fascículos de preguntas + palabras clave + contraste doctrinal opcional.
+      const registroFuentes = JSON.parse(fs.readFileSync(path.join(CONTENT, 'libros', 'fuentes.json'), 'utf8'));
+      const fuentesApolo = new Set(Object.keys(registroFuentes.fuentes));
+      for (const f of APOLOGETICA_FASCICULOS) {
+        const pFile = path.join(CONTENT, 'apologetica', f.preguntasFile);
+        if (!fs.existsSync(pFile)) continue;
         try {
-          const registro = JSON.parse(fs.readFileSync(path.join(CONTENT, 'libros', 'fuentes.json'), 'utf8'));
-          const scj = JSON.parse(fs.readFileSync(scjFile, 'utf8'));
-          validate('shincheonji', scj, undefined, {
+          const preg = JSON.parse(fs.readFileSync(pFile, 'utf8'));
+          validate('apologetica-preguntas', preg, f.slug, {
             books: BOOK_BY_ID,
-            fuentes: new Set(Object.keys(registro.fuentes))
+            fuentes: fuentesApolo,
+            expectedCount: f.expectedCount
           });
           // Palabras clave: cada frase debe estar en su versículo (NTV y Codex).
-          const clavesFile = path.join(CONTENT, 'apologetica', 'shincheonji-claves.json');
+          const clavesFile = path.join(CONTENT, 'apologetica', f.clavesFile);
           const claves = JSON.parse(fs.readFileSync(clavesFile, 'utf8')).claves;
-          const problemas = checkClaves(scj.bloques.flatMap(b => b.preguntas), claves);
+          const problemas = checkClaves(preg.bloques.flatMap(b => b.preguntas), claves);
           if (problemas.length) throw new Error(`claves: ${problemas.slice(0, 5).join(' | ')}`);
-          const doctrinaFile = path.join(CONTENT, 'apologetica', 'shincheonji-doctrina.json');
-          if (fs.existsSync(doctrinaFile)) validate('shincheonji-doctrina', JSON.parse(fs.readFileSync(doctrinaFile, 'utf8')));
+          if (f.doctrinaFile) {
+            const doctrinaFile = path.join(CONTENT, 'apologetica', f.doctrinaFile);
+            if (fs.existsSync(doctrinaFile)) {
+              validate('apologetica-doctrina', JSON.parse(fs.readFileSync(doctrinaFile, 'utf8')), f.slug, {
+                bilingual: f.bilingualDoctrina
+              });
+            }
+          }
         } catch (e) {
-          errors.push(`content/apologetica/shincheonji-* → ${e.message}`);
+          errors.push(`content/apologetica/${f.slug}-* → ${e.message}`);
         }
       }
 
@@ -278,7 +303,7 @@ function seoFiles(env) {
 
 /** URL pública del sitio, sin barra final. */
 function siteUrlFrom(env) {
-  return (env.SITE_URL || 'https://bryan1605.github.io/crux').replace(/\/$/, '');
+  return (env.SITE_URL || 'https://cruxestudios.com').replace(/\/$/, '');
 }
 
 export default defineConfig(({ mode }) => {

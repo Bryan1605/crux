@@ -37,7 +37,10 @@ const SKIP_FILES = new Set(['_index.md', '_log.md', '_meta.md']);
  */
 export const PRIVATE_FILES = new Set([
   '06-apologetica/shincheonji/analisis-doctrina.md',
-  '06-apologetica/shincheonji/Analisis_Doctrina_Shincheonji_Chat.md'
+  '06-apologetica/shincheonji/Analisis_Doctrina_Shincheonji_Chat.md',
+  '07-herramientas/notebook-navigator.md',
+  '07-herramientas/taxonomia-tags.md',
+  '08-recursos/index-pdf.md'
 ]);
 
 // --- Reparación de mojibake -------------------------------------------------
@@ -252,6 +255,7 @@ function main() {
       const fm = parseFrontmatter(text);
       const fileBase = path.basename(rel, '.md');
       const folderRel = path.posix.join(cat.id, rel);
+      if (PRIVATE_FILES.has(folderRel)) continue;
       const title = titleFrom(text, titleCase(fileBase));
       const desc =
         descriptions.get(folderRel.replace(/\.md$/, '')) ||

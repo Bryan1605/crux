@@ -227,8 +227,8 @@ Conviene precisar dos cosas: el "Evangelio de Judas" es un **escrito apócrifo a
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 10:1-4 (63657-63675); 26:14-28 (65203-65228); 27:3-10 (65349-65362); Marcos 3:19 (65771); 6:7,12-13 (66027, 66036-66039); 14:10-11 (66884-66888); 14:43-45 (66957-66965); Lucas 6:16 (67807); 9:1 (68177); 22:3-6 (69548-69553); 22:47-48 (69642-69644); Juan 6:64,70-71 (70562-70579); 12:4-6 (71162-71168); 13:1-30 (71273-71328); 17:12 (71587-71589); 18:2-5 (71625-71633); Hechos 1:16-20 (72056-72070); notas `[dg]` (95295), `[di]` (95300), `[ea]` (95355), `[hj]` `[hk]` `[hl]` Mateo 27 (94089-94094)
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Papías, *Fragmento 3* (línea 1057); Ireneo, *Adversus Haereses* I (línea 2859); Ireneo, *Historia de las Herejías* 3.2 (líneas 3233, 3611); Tertuliano, *De Praescriptione Haereticorum* (línea 4157); Tertuliano, *Adversus Praxean* (línea 4388). **No** hay menciones de "Iscariote", "Acéldama", "Arimatea" ni "treinta piezas" en el corpus
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 10:1-4 (63657-63675); 26:14-28 (65203-65228); 27:3-10 (65349-65362); Marcos 3:19 (65771); 6:7,12-13 (66027, 66036-66039); 14:10-11 (66884-66888); 14:43-45 (66957-66965); Lucas 6:16 (67807); 9:1 (68177); 22:3-6 (69548-69553); 22:47-48 (69642-69644); Juan 6:64,70-71 (70562-70579); 12:4-6 (71162-71168); 13:1-30 (71273-71328); 17:12 (71587-71589); 18:2-5 (71625-71633); Hechos 1:16-20 (72056-72070); notas `[dg]` (95295), `[di]` (95300), `[ea]` (95355), `[hj]` `[hk]` `[hl]` Mateo 27 (94089-94094)
+- **Patrística**: Biblia Patrística Completa — Papías, *Fragmento 3* (línea 1057); Ireneo, *Adversus Haereses* I (línea 2859); Ireneo, *Historia de las Herejías* 3.2 (líneas 3233, 3611); Tertuliano, *De Praescriptione Haereticorum* (línea 4157); Tertuliano, *Adversus Praxean* (línea 4388). **No** hay menciones de "Iscariote", "Acéldama", "Arimatea" ni "treinta piezas" en el corpus
 
 ## Conexiones
 

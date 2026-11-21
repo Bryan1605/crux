@@ -1,7 +1,7 @@
 # Estado del proyecto bíblico
 
-> Verificado el **2026-10-28** sobre el árbol de trabajo. Si cambias datos,
-> vuelve a contar y actualiza este archivo. No copies cifras de memoria.
+> Verificado el **2026-11-20** sobre el árbol de trabajo (pendiente de commit/push). Si
+> cambias datos, vuelve a contar y actualiza este archivo. No copies cifras de memoria.
 
 ## 1. Versión y despliegue
 
@@ -11,23 +11,35 @@
 | Repositorio | `Bryan1605/crux` (GitHub Pages) |
 | URL publicada | <https://bryan1605.github.io/crux/> |
 | Rama | `main` |
-| Último commit antes de esta documentación | `f2fdaa2` — «Evita descargar la NTV de los libros solo-Codex» |
+| Último commit publicado en `main` | `be7e5f7` — «NTV: "Alabanza de la gran multitud" ya no se pega a Apocalipsis 7:8» |
 | Build CI | `.github/workflows/pages.yml`, `BASE_PATH=/crux/` |
-| Rutas | **216** desde el 2026-11-04 (índice de libros + ficha de Tobit); antes 214 |
+| Rutas | **213** prerenderizadas (**212** URLs indexables en `sitemap.xml`, sin `/buscar`): 11 de sección + 184 estudios + 17 personajes + 1 ficha de libro (`tobit`). *(Histórico: 214 hasta 2026-10-31; 216 tras añadir Tobit el 2026-11-04; +1 por `/apologetica/shincheonji`, −1 análisis privado en `e76ad6d` y −3 notas internas del vault → 213).* |
 
 ## 2. Lo que ya funciona
 
 ### Lectores
 
-- **Biblia Patrística** (`/biblia`): lector por pliegos, buscador, geometría de
-  página; fuente `public/textos/biblia-patristica.md`.
+- **Biblia Patrística** (`/biblia`): lector por pliegos o desplazamiento, buscador,
+  geometría de página, línea temporal de obras y portadas por obra (Fase I: Parte 1.3
+  Ignacio de Antioquía); fuente `public/textos/biblia-patristica.md` actualizada hasta la
+  **Parte 6 — San Hipólito de Roma (c. 170–235 d.C.)** (23 partes, 1.504 secciones, 4.175
+  páginas).
 - **NTV** (`/biblia/ntv`): 66 libros, rejilla/pliego, notas del traductor,
-  selector de versículo, buscador, narración en el raíl.
-- **Exégesis comparada** (`/exegesis`): Codex × NTV, aparato crítico, notas,
-  léxico, buscador; incluye los 7 libros solo-Codex.
-- **Buscar** (`/buscar`): índice de estudios.
-- **Administración** (`/admin`): solo en dev; estudios, personajes, videos,
-  banner, versículos, anuncios, timeline, concilios, categorías, ajustes, medios.
+  selector de versículo, buscador, panel de libro y narración en el raíl.
+- **Exégesis comparada** (`/exegesis`): Codex × NTV (y columna `Trad` para Tobit en
+  borrador), aparato crítico, notas, léxico griego, buscador y panel de libro; incluye los
+  7 libros solo-Codex.
+- **Libros de la Biblia** (`/biblia/libros` y `/biblia/libros/:id`): índice de los 73
+  libros, registro de fuentes verificadas (`content/libros/fuentes.json`) y primera ficha
+  piloto (`tobit`, 834 palabras, `borrador`).
+- **Apologética** (`/apologetica/shincheonji`): 100 preguntas en 10 bloques (Codex × NTV
+  con palabras clave resaltadas) y pestaña «¿Qué cree Shincheonji?» con 35 citas
+  contrastadas de Lee Man-hee.
+- **Buscar** (`/buscar`): búsqueda global de estudios, libros de la Biblia, apologética,
+  personajes, concilios, herejías y vídeos (**221 entradas**).
+- **Administración** (`/admin`): solo en dev; estudios (con editor visual TipTap, fase 1),
+  personajes, videos, banner, versículos, anuncios, timeline, concilios, categorías,
+  ajustes y medios.
 
 ### Datos
 
@@ -40,11 +52,12 @@
 | Paralelos Codex/NTV | **708** |
 | NTV: capítulos | **1.189** |
 | NTV: versículos | **31.021** |
-| NTV: secciones | **2.368** |
+| NTV: secciones | **2.369** *(2.368 antes de `be7e5f7`)* |
 | NTV: notas | **4.744** |
 | Codex: capítulos | **859** |
 | Codex: versículos | **21.127** |
 | Codex: variantes de aparato | **57.381** |
+| Traducción de trabajo (`trad/`) | **1 libro · 232 versículos** (`tobit`, `borrador`) |
 | Léxico: entradas | **250** |
 | Léxico: tokens | **136.612** |
 | Léxico: cobertura | **77,31 %** |
@@ -65,44 +78,42 @@ Libros solo-Codex y sus versículos:
 
 | Tipo | Cantidad |
 |---|---:|
-| Estudios | 188 |
-| Personajes | 17 |
-| Concilios/herejías | 17 |
-| Narraciones de audio | 2 |
+| Estudios | **184** *(en 9 categorías activas; frente a los 188 iniciales: 1 análisis privado retirado en `e76ad6d` y 3 notas internas de Obsidian retiradas localmente)* |
+| Personajes | **17** |
+| Concilios/herejías | **17** (8 concilios · 9 herejías) |
+| Narraciones de audio | **2** |
+| Vídeos | **1** (`0Rou8PPA2Oo`) |
+| Fichas de libros | **1** (`tobit`, `borrador`) |
+| Páginas de apologética | **1** (`shincheonji`) |
+| Portadas de obras (Biblia Patrística) | **1** (Parte 1.3 — Ignacio de Antioquía) |
 
 ### Calidad
 
-Última verificación registrada **antes** de esta documentación:
+Verificado el **2026-11-20** sobre el árbol de trabajo local (build de producción y dev server `http://localhost:5173`):
 
-- Build local y QA local en verde.
-- `qa:prod` 63/63.
-- Auditorías de móvil y accesibilidad sobre producción en verde.
-- `main` limpio en `f2fdaa2` antes de crear `AGENTS.md` y `docs/`.
-- Build local verificado el **2026-10-28** después de crear esta documentación:
-  **214 rutas** prerenderizadas. No se tocó código de la app; el QA completo no
-  se repitió en esa pasada.
+- `npm run build`: **OK** (213 rutas prerenderizadas, 212 URLs en `dist/sitemap.xml`, `content/busquedas.json` con 221 entradas).
+- `npm run check:search`: **17/17 checks OK** (cubre `estudio`, `libro`, `apologetica`, `personaje`, `concilio`, `herejia` y `video`).
+- `npm run qa:biblia`: **80/80 comprobaciones OK** (23 partes, 1.504 secciones, 4.175 páginas).
+- `npm run qa:imagenes`: **66/66 comprobaciones OK** (incluye `/img/obras/1-3-ignacio-de-antioquia.webp`).
+- `npm run qa:buscar`: **32/32 checks OK** (incluye `tobit` y `shincheonji` en navegador).
+- `npm run qa:vistas`: **124/124 comprobaciones OK**.
+- `npm run qa:libros`: **22/22 comprobaciones OK**.
+- `npm run qa:a11y`: **0 violaciones `critical`/`serious`** y **0 controles < 24 px**.
+- `npm run qa:enlaces`: **6/7 OK** — las 21 páginas, 675 destinos internos, 70 anclas y 39 citas externas de estudios en verde; falla solo el bloque de enlaces externos de páginas hacia `codexsinaiticus.org` por `UND_ERR_CONNECT_TIMEOUT` desde esta máquina (como en mediciones previas).
+- Comprobación visual de Fase I (`1280px` y `390px`): Ignacio 1.3 muestra la portada (184 px en escritorio, 104 px en móvil, 0 px de desbordamiento, clic abre `?pag=p1-3.1`); Policarpo 1.4 no muestra portada.
+- Antes del último bloque (sobre el árbol previo al cierre de Fase I y buscador ampliado) también pasaron `qa:shincheonji` (38/38) y `qa:admin` (10/10).
 
-Línea base del **2026-10-31** (dev server local):
+*Histórico anterior:*
 
-- `npm run build`: OK, 214 rutas.
-- `npm run qa`: todo en verde salvo `qa:enlaces`, que falla solo en la
-  comprobación de los 7 enlaces externos de páginas a `codexsinaiticus.org`
-  (`UND_ERR_CONNECT_TIMEOUT`; desde esta máquina el sitio no respondía a `curl`
-  tampoco). Las 39 citas externas del contenido responden. Es un fallo de red
-  externa, no del código; repetir cuando el sitio responda.
-- Como `qa` encadena con `&&`, `qa:a11y` no llegó a correr dentro de la suite;
-  ejecutado aparte: 0 violaciones critical/serious, 0 controles < 24 px
-  (avisos de 24–44 px, como antes).
-
-No des estas cifras por vigentes sin volver a ejecutar. La documentación no
-cambia el build, pero el árbol queda con archivos nuevos sin commitear.
+Última verificación registrada el **2026-10-28**: Build local y QA local en verde, `qa:prod` 63/63, auditorías móvil/a11y sobre producción en verde y `main` en `f2fdaa2`.
+Línea base del **2026-10-31**: `npm run build` OK (214 rutas) y `npm run qa` en verde salvo el timeout externo a `codexsinaiticus.org`; `qa:a11y` con 0 critical/serious y 0 controles < 24 px. El **2026-11-02** se publicó el rediseño fases A–H (`qa:prod` 63/63).
 
 ## 3. Lo que **no** existe todavía
 
 - Lector de hebreo (`/biblia/hebreo`).
 - Columna hebrea en `/exegesis`.
-- Traducción de los seis libros solo-Codex (`trad/`).
-- Fichas de los 73 libros (`content/libros/`, `/biblia/libros`).
+- Traducción de los otros cinco libros solo-Codex (`trad/`: Judit, Sabiduría, 4 Macabeos, 1 Macabeos y Sirácida; Tobit ya tiene borrador completo de 232 vv pendiente de revisión del usuario).
+- Fichas de los 72 libros restantes (`content/libros/`; el índice `/biblia/libros` y Tobit en borrador ya existen).
 - Comentarios capítulo a capítulo.
 - Editor de traducciones o fichas en `/admin`.
 
@@ -112,13 +123,12 @@ No los trates como si estuvieran hechos porque aparezcan en la planificación.
 
 | Fase | Qué añade | Rutas nuevas | Total |
 |---|---|---:|---:|
-| Antes del piloto | — | — | 214 |
-| Piloto de Tobit | `/biblia/libros` + `/biblia/libros/tobit` | 2 | 216 |
-| Hebreo, fase 1 | `/biblia/hebreo` + datos | 1 | 215 |
-| Hebreo, fase 2 | columna de exégesis + alineación | 0 | 215 |
-| Fichas, índice | `/biblia/libros` | 1 | 216 |
-| Fichas, 7 solo-Codex | 7 páginas | 7 | 223 |
-| Fichas, 66 NTV | 66 páginas | 66 | 289 |
+| Base previa (2026-10-31) | — | — | 214 |
+| Estado actual (2026-11-20) | +Tobit (`/biblia/libros`, `/biblia/libros/tobit`) + `/apologetica/shincheonji` − 1 análisis privado (`e76ad6d`) − 3 notas internas | −1 neto | **213** |
+| Hebreo, fase 1 | `/biblia/hebreo` + datos | 1 | 214 |
+| Hebreo, fase 2 | columna de exégesis + alineación | 0 | 214 |
+| Fichas, 6 solo-Codex restantes | 6 páginas (2 Esdras, Judit, Sabiduría, 4 Mac, 1 Mac, Sirácida) | 6 | 220 |
+| Fichas, 66 NTV | 66 páginas | 66 | 286 |
 
 - La versión **0.12.0** está reservada para el hebreo; no la bumpees antes de
   implementarlo.
@@ -135,8 +145,8 @@ Reordenado el **2026-10-31** (antes: hebreo primero; ver `DECISIONES.md` §6).
 0. ~~**Línea base**~~ — hecho (`21e29d4`, 2026-10-31).
 1. ~~**Refactor de columnas de `/exegesis`**~~ — hecho el 2026-11-02
    (`DECISIONES.md` §9).
-2. **Tobit**: glosario mínimo, traducción piloto, ficha, panel, índice de
-   fichas, registro de fuentes, revisión del usuario.
+2. **Tobit**: ~~glosario mínimo, traducción piloto (232 vv en borrador), ficha, panel, índice de
+   fichas y registro de fuentes~~ (piloto completado); pendiente la **revisión del usuario**.
 3. **Los otros cinco**: Judit, Sabiduría, 4 Macabeos, 1 Macabeos, Sirácida, y
    la ficha de 2 Esdras.
 4. **Hebreo, fase 1**: OSHB/WLC solo texto y marcas (arameo por palabra,
@@ -199,11 +209,14 @@ Avance del piloto (2026-11-02):
       Codex Sinaiticus Project, leídas y verificadas ese día), **índice**
       `/biblia/libros`, **panel** en `/exegesis` y `/biblia/ntv`, validador en el
       build y `qa:libros` (22/22). Rutas: 216.
-- [ ] Revisión del usuario de la ficha (y de la traducción).
-- [ ] Publicar (push a `main`) y `npm run qa:prod`.
+- [ ] **Revisión del usuario** de la traducción de Tobit (caps. 1–14) y de su ficha (pendiente, sin prisa).
+- [x] Bloques previos publicados en `main` hasta `be7e5f7` (Tobit piloto + `/apologetica/shincheonji` + Cipriano + editor `/admin` + Apocalipsis 7:8).
+- [ ] **Revisión, commit y push** de los cambios locales actuales (sección apologética de portada, Hipólito de Roma Parte 6, vídeo `0Rou8PPA2Oo`, limpieza de notas/rutas locales en estudios, Fase I portadas de obras en `/biblia`, buscador global ampliado, documentación) y, tras desplegar, ejecutar `npm run qa:prod`.
 
-El borrador completo ya está en `public/textos/exegesis/trad/tobit.json` y lo
-usa la web **en local**; se publica con el siguiente push a `main`.
+El borrador completo de Tobit ya está publicado en `public/textos/exegesis/trad/tobit.json`
+y `/biblia/libros/tobit` en `main`; el último lote local (Fase I, buscador ampliado,
+portada apologética, Hipólito, vídeo y limpieza) queda verificado en local y pendiente de
+commit/push.
 
 Hecho antes (2026-11-02): la línea base y el refactor de columnas de
 `/exegesis` (`COLUMNS` + `modesFor()`; añadir `trad` es una entrada más). Ese

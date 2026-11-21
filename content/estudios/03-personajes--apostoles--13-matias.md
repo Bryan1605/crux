@@ -203,8 +203,8 @@ Precisamente por eso su caso enseña algo sobre **cómo el NT define el apostola
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Hechos 1:15-26 (líneas 72055-72085); notas `[d]` (línea 95446) y `[e]` (línea 95449)
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Tertuliano, *De Praescriptione Haereticorum* 20 (línea 4143); Ireneo, *Adversus Haereses* III.12 (línea 3355). Es la **única** mención nominal de Matías en todo el corpus (línea 4143); Ireneo narra el episodio pero no lo nombra
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Hechos 1:15-26 (líneas 72055-72085); notas `[d]` (línea 95446) y `[e]` (línea 95449)
+- **Patrística**: Biblia Patrística Completa — Tertuliano, *De Praescriptione Haereticorum* 20 (línea 4143); Ireneo, *Adversus Haereses* III.12 (línea 3355). Es la **única** mención nominal de Matías en todo el corpus (línea 4143); Ireneo narra el episodio pero no lo nombra
 
 ## Conexiones
 

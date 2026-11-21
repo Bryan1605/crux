@@ -74,13 +74,7 @@ export default function Videos() {
           ) : (
             <div className="grid grid--3">
               {VIDEOS.map(v => (
-                <button
-                  type="button"
-                  key={v.id}
-                  className="card video-card"
-                  onClick={() => setActive(v)}
-                  aria-label={`Reproducir: ${v.title}`}
-                >
+                <article key={v.id} id={v.id} className="card video-card">
                   <div className="video-card__thumb">
                     <img src={thumb(v.id)} alt="" loading="lazy" />
                     <span className="video-card__play" aria-hidden="true">
@@ -88,9 +82,13 @@ export default function Videos() {
                     </span>
                   </div>
                   <div className="card__meta">{v.date}</div>
-                  <h2 className="card__title">{v.title}</h2>
+                  <h2 className="card__title">
+                    <button type="button" className="video-card__btn" onClick={() => setActive(v)}>
+                      {v.title}
+                    </button>
+                  </h2>
                   {v.description && <p className="card__desc">{v.description}</p>}
-                </button>
+                </article>
               ))}
             </div>
           )}

@@ -18,7 +18,7 @@ export default function Buscar() {
 
   useSeo({
     title: `${site.marca.nombre} — Buscar`,
-    description: 'Busca a la vez en los estudios, los personajes, los concilios y los vídeos del sitio.'
+    description: 'Busca a la vez en los estudios, los libros de la Biblia, la apologética, los personajes, los concilios y los vídeos del sitio.'
   });
 
   // El índice vive en su propio chunk: se carga al entrar, no en la portada.
@@ -74,7 +74,7 @@ export default function Buscar() {
           <p className="eyebrow">Buscar en el sitio</p>
           <h1>Buscar</h1>
           <p className="lead">
-            Un solo cuadro para todo el estudio: estudios, personajes, concilios, herejías y vídeos.
+            Un solo cuadro para todo el estudio: estudios, libros de la Biblia, apologética, personajes, concilios, herejías y vídeos.
             Escribe un tema, un pasaje o un nombre.
           </p>
 
@@ -93,7 +93,7 @@ export default function Buscar() {
               id="buscar-global"
               type="search"
               className="buscar__input"
-              placeholder="Buscar por tema, pasaje, personaje o concilio…"
+              placeholder="Buscar por tema, pasaje, libro, personaje o concilio…"
               value={input}
               onChange={e => update(e.target.value)}
               autoComplete="off"

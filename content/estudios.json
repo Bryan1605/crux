@@ -47,14 +47,7 @@
       "label": "Herramientas",
       "short": "Métodos y guías de estudio",
       "orden": 7,
-      "count": 4
-    },
-    {
-      "id": "08-recursos",
-      "label": "Recursos",
-      "short": "Bibliotecas y materiales",
-      "orden": 8,
-      "count": 1
+      "count": 2
     },
     {
       "id": "09-parabolas",
@@ -2385,7 +2378,7 @@
       ],
       "updated": "2026-09-26",
       "minutes": 10,
-      "citations": 45,
+      "citations": 47,
       "sections": 14,
       "number": ""
     },
@@ -2880,7 +2873,7 @@
         "Parábola del Sembrador"
       ],
       "updated": "2026-09-26",
-      "minutes": 2,
+      "minutes": 3,
       "citations": 4,
       "sections": 6,
       "number": ""
@@ -2960,28 +2953,6 @@
       "number": ""
     },
     {
-      "slug": "07-herramientas--notebook-navigator",
-      "title": "Guía de Notebook Navigator 3 (NN3)",
-      "category": "07-herramientas",
-      "categoryLabel": "Herramientas",
-      "categoryShort": "Métodos y guías de estudio",
-      "subcategory": "",
-      "description": "Reemplaza el explorador de archivos por defecto de Obsidian por un panel de dos paneles (árbol + lista) con vista previa, búsqueda, calendario, etiquetas (tags), propiedades, carpetas de…",
-      "portada": "",
-      "passage": "",
-      "tags": [
-        "wiki/herramientas",
-        "obsidian",
-        "notebook-navigator"
-      ],
-      "aliases": [],
-      "updated": "2026-09-26",
-      "minutes": 4,
-      "citations": 0,
-      "sections": 11,
-      "number": ""
-    },
-    {
       "slug": "07-herramientas--slides-hermeneutica",
       "title": "Introducción a la Hermenéutica Bíblica",
       "category": "07-herramientas",
@@ -3000,48 +2971,6 @@
       "minutes": 1,
       "citations": 2,
       "sections": 9,
-      "number": ""
-    },
-    {
-      "slug": "07-herramientas--taxonomia-tags",
-      "title": "Taxonomía de Tags — Second Brain Bíblico",
-      "category": "07-herramientas",
-      "categoryLabel": "Herramientas",
-      "categoryShort": "Métodos y guías de estudio",
-      "subcategory": "",
-      "description": "1. Siempre usar tags jerárquicos con / 2. Mínimo 2 tags por nota 3. Incluir categoría + subcategoría 4. No crear tags nuevos sin agregarlos aquí primero 5. Usar Tag Wrangler para…",
-      "portada": "",
-      "passage": "",
-      "tags": [
-        "meta/tags",
-        "meta/taxonomia"
-      ],
-      "aliases": [],
-      "updated": "2026-08-22",
-      "minutes": 2,
-      "citations": 0,
-      "sections": 3,
-      "number": ""
-    },
-    {
-      "slug": "08-recursos--index-pdf",
-      "title": "Índice de PDFs — Biblioteca Bíblica",
-      "category": "08-recursos",
-      "categoryLabel": "Recursos",
-      "categoryShort": "Bibliotecas y materiales",
-      "subcategory": "",
-      "description": "- !../../biblia-pdf-ntv-nueva-traduccion-viviente.pdf",
-      "portada": "",
-      "passage": "",
-      "tags": [
-        "recurso/pdf",
-        "indice"
-      ],
-      "aliases": [],
-      "updated": "2026-08-22",
-      "minutes": 1,
-      "citations": 0,
-      "sections": 4,
       "number": ""
     },
     {

@@ -500,12 +500,12 @@ export function validateLexico(obj) {
 }
 
 /**
- * content/apologetica/shincheonji-preguntas.json (lo genera
- * scripts/import-shincheonji.mjs desde el wiki): 10 bloques, 100 preguntas
- * numeradas, cada una con clave y al menos una referencia que exista.
+ * Valida un archivo `content/apologetica/<slug>-preguntas.json`: bloques,
+ * cantidad esperada de preguntas numeradas, clave y referencias válidas.
  */
-export function validateShincheonji(obj, _slug, ctx = {}) {
-  const label = 'apologetica/shincheonji-preguntas';
+export function validateApologeticaPreguntas(obj, slug = 'shincheonji', ctx = {}) {
+  const label = `apologetica/${slug}-preguntas`;
+  const expectedCount = ctx.expectedCount ?? 100;
   const bloques = required(obj, 'bloques', 'array', label);
   required(obj, 'reglas', 'array', label);
   let n = 0;
@@ -525,7 +525,7 @@ export function validateShincheonji(obj, _slug, ctx = {}) {
       }
     }
   }
-  if (n !== 100) throw new Error(`${label}: hay ${n} preguntas (se esperaban 100)`);
+  if (n !== expectedCount) throw new Error(`${label}: hay ${n} preguntas (se esperaban ${expectedCount})`);
   for (const k of optional(obj, 'fuentes', 'array', label, [])) {
     if (ctx.fuentes && !ctx.fuentes.has(k)) throw new Error(`${label}: la fuente "${k}" no está en content/libros/fuentes.json`);
   }
@@ -533,12 +533,12 @@ export function validateShincheonji(obj, _slug, ctx = {}) {
 }
 
 /**
- * content/apologetica/shincheonji-doctrina.json: «¿Qué cree Shincheonji?».
- * Cada cita de Lee lleva el inglés del libro, su traducción y las páginas; nunca
- * datos de la marca de agua del escaneo (teléfono, correo, texto coreano).
+ * Valida `content/apologetica/<slug>-doctrina.json`. Admite citas bilingües
+ * (`en` + `es` con igual cantidad de tramos `…`) o fuentes originales en español
+ * (`es`), además de impedir restos de marcas de agua de escaneo.
  */
-export function validateShincheonjiDoctrina(obj) {
-  const label = 'apologetica/shincheonji-doctrina';
+export function validateApologeticaDoctrina(obj, slug = 'shincheonji', ctx = {}) {
+  const label = `apologetica/${slug}-doctrina`;
   const partes = required(obj, 'partes', 'array', label);
   required(obj, 'libro', 'object', label);
   const privado = /\d{3}-\d{3,4}-\d{4}|@|[가-힯]/;
@@ -546,21 +546,72 @@ export function validateShincheonjiDoctrina(obj) {
   for (const p of partes) {
     const at = `${label}.parte ${p.id || '?'}`;
     for (const k of ['id', 'titulo']) required(p, k, 'string', at);
-    for (const c of required(p, 'lee', 'array', at)) {
-      for (const k of ['en', 'es']) {
-        const v = required(c, k, 'string', at).trim();
-        if (!v) throw new Error(`${at}: cita con "${k}" vacío`);
-        if (privado.test(v)) throw new Error(`${at}: la cita lleva datos de la marca de agua`);
+    const citas = Array.isArray(p.citas) ? p.citas : Array.isArray(p.lee) ? p.lee : null;
+    if (!citas || !citas.length) throw new Error(`${at}: sin citas doctrinales`);
+    for (const c of citas) {
+      const es = required(c, 'es', 'string', at).trim();
+      if (!es) throw new Error(`${at}: cita con "es" vacío`);
+      if (privado.test(es)) throw new Error(`${at}: la cita lleva datos de la marca de agua`);
+      const needsEn = Boolean(ctx.bilingual) || c.en !== undefined;
+      if (needsEn) {
+        const en = required(c, 'en', 'string', at).trim();
+        if (!en) throw new Error(`${at}: cita con "en" vacío`);
+        if (privado.test(en)) throw new Error(`${at}: la cita lleva datos de la marca de agua`);
+        if (en.split('…').length !== es.split('…').length) {
+          throw new Error(`${at}, p. ${c.paginas}: el inglés y el español deben tener los mismos tramos («…»)`);
+        }
       }
       const pags = required(c, 'paginas', 'array', at);
-      if (!pags.length || !pags.every(n => Number.isInteger(n) && n > 0)) throw new Error(`${at}: "paginas" debe tener números de página`);
-      if (c.en.split('…').length !== c.es.split('…').length) throw new Error(`${at}, p. ${pags}: el inglés y el español deben tener los mismos tramos («…»)`);
+      if (!pags.length || !pags.every(num => Number.isInteger(num) && num > 0)) {
+        throw new Error(`${at}: "paginas" debe tener números de página`);
+      }
     }
     required(p, 'confiesa', 'object', at);
     required(p, 'biblia', 'object', at);
   }
   for (const q of optional(obj, 'preguntas', 'array', label, [])) {
     if (!Number.isInteger(q.pagina) || !isString(q.texto) || !isString(q.ref)) throw new Error(`${label}: pregunta mal formada`);
+  }
+  return true;
+}
+
+/**
+ * content/apologetica/shincheonji-preguntas.json (lo genera
+ * scripts/import-shincheonji.mjs desde el wiki): 10 bloques, 100 preguntas.
+ */
+export function validateShincheonji(obj, slug = 'shincheonji', ctx = {}) {
+  return validateApologeticaPreguntas(obj, slug, { ...ctx, expectedCount: ctx.expectedCount ?? 100 });
+}
+
+/**
+ * content/apologetica/shincheonji-doctrina.json: «¿Qué cree Shincheonji?».
+ */
+export function validateShincheonjiDoctrina(obj, slug = 'shincheonji', ctx = {}) {
+  return validateApologeticaDoctrina(obj, slug, { ...ctx, bilingual: true });
+}
+
+/** Portadas de obras de la Biblia Patrística (`content/obras-patristica.json`). */
+export function validateObrasPatristica(obj) {
+  const label = 'obras-patristica';
+  required(obj, 'version', 'number', label);
+  const items = required(obj, 'items', 'array', label);
+  const seen = new Set();
+  for (const [i, item] of items.entries()) {
+    const at = `${label}.items[${i}]`;
+    if (!isObject(item)) throw new Error(`${at}: debe ser objeto`);
+    const parte = required(item, 'parte', 'string', at);
+    if (!/^\d+(\.\d+)?$/.test(parte)) throw new Error(`${at}: "parte" (${parte}) debe tener forma "1" o "1.3"`);
+    if (seen.has(parte)) throw new Error(`${at}: parte repetida "${parte}"`);
+    seen.add(parte);
+    const portada = required(item, 'portada', 'string', at);
+    if (!portada.startsWith('/img/obras/') || !portada.endsWith('.webp')) {
+      throw new Error(`${at}: "portada" debe empezar por /img/obras/ y terminar en .webp`);
+    }
+    const alt = required(item, 'alt', 'string', at).trim();
+    if (!alt) throw new Error(`${at}: "alt" vacío`);
+    if (alt.length > 160) throw new Error(`${at}: "alt" supera los 160 caracteres (${alt.length})`);
+    optional(item, 'titulo', 'string', at);
+    optional(item, 'fuente', 'string', at);
   }
   return true;
 }
@@ -579,9 +630,12 @@ export const VALIDATORS = {
   timeline: validateTimeline,
   concilios: validateConcilios,
   narraciones: validateNarraciones,
+  'obras-patristica': validateObrasPatristica,
   lexico: validateLexico,
   fuentes: validateFuentes,
   libro: validateLibro,
+  'apologetica-preguntas': validateApologeticaPreguntas,
+  'apologetica-doctrina': validateApologeticaDoctrina,
   shincheonji: validateShincheonji,
   'shincheonji-doctrina': validateShincheonjiDoctrina
 };

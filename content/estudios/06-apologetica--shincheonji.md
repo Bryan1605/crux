@@ -21,7 +21,6 @@ Shincheonji (Iglesia de Jesús el Templo del Tabernáculo del Testimonio) es un 
 |---|---|
 | Los Cuatro Campos del Corazón | Clase sobre la Parábola del Sembrador: 4 tipos de corazón, auto-examen, buena tierra por esfuerzo |
 | La Parábola del Fuego | Clase sobre Lucas 12:49: fuego = palabra de juicio, el librito de Ap 10 para Lee Man-hee |
-| Análisis Doctrinal | Forense del chat WhatsApp: 3 condiciones, 31 lecciones, diccionario de símbolos, técnicas de captación |
 | Refutación Doctrinal | 12 contrastes punto por punto entre la doctrina Shincheonji y la Biblia (NTV) |
 
 ---
@@ -35,4 +34,4 @@ Shincheonji (Iglesia de Jesús el Templo del Tabernáculo del Testimonio) es un 
 
 ## Fuentes
 
-- `../../Shincheonji/` — carpeta completa (chat WhatsApp, transcripciones de clases, análisis)
+- Notas del Curso Virtual de Teología de Shincheonji y contraste bíblico con la Nueva Traducción Viviente (NTV).

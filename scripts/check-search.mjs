@@ -13,6 +13,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { buildSearchIndex } from './content-lib.mjs';
+import { APOLOGETICA_FASCICULOS } from '../src/lib/apologeticaSeo.js';
 import { MIN_QUERY, searchItems } from '../src/lib/search.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -34,8 +35,19 @@ const personajes = fs
   .readdirSync(path.join(CONTENT, 'personajes'))
   .filter(f => f.endsWith('.json'))
   .map(f => read(`personajes/${f}`));
+const librosDir = path.join(CONTENT, 'libros');
+const libros = fs.existsSync(librosDir)
+  ? fs
+      .readdirSync(librosDir)
+      .filter(f => f.endsWith('.json') && f !== 'fuentes.json')
+      .map(f => read(`libros/${f}`))
+  : [];
+const activeApologetica = APOLOGETICA_FASCICULOS.filter(f =>
+  fs.existsSync(path.join(CONTENT, 'apologetica', f.preguntasFile))
+);
+const apoloById = new Map(activeApologetica.map(f => [f.slug, f]));
 
-const TIPOS_OK = new Set(['estudio', 'personaje', 'concilio', 'herejia', 'video']);
+const TIPOS_OK = new Set(['estudio', 'libro', 'apologetica', 'personaje', 'concilio', 'herejia', 'video']);
 const FOLD_OK = /^[^A-ZÁÀÄÂÃÅÉÈËÊÍÌÏÎÓÒÖÔÕÚÙÜÛÑÇÝŸÆŒØß]*$/;
 
 // 1 · El archivo en disco está al día (mismo contenido que una regeneración).
@@ -67,10 +79,12 @@ for (const it of items) {
 }
 check('Esquema de las entradas', schemaErrors.length === 0, schemaErrors.slice(0, 3).join(' · ') || `${items.length} entradas`);
 
-// 3 · Cobertura: exactamente una entrada por estudio, personaje, concilio, herejía y video.
+// 3 · Cobertura: exactamente una entrada por estudio, libro, apologética, personaje, concilio, herejía y video.
 const count = t => items.filter(it => it.tipo === t).length;
 const expected = {
   estudio: (estudios.studies || []).length,
+  libro: libros.length,
+  apologetica: activeApologetica.length,
   personaje: personajes.length,
   concilio: concilios.filter(c => c.tipo === 'concilio').length,
   herejia: concilios.filter(c => c.tipo === 'herejia').length,
@@ -92,6 +106,7 @@ check(
 
 // 4 · Los destinos resuelven a rutas reales.
 const studySlugs = new Set((estudios.studies || []).map(s => s.slug));
+const libroIds = new Set(libros.map(l => l.id));
 const personajeSlugs = new Set(personajes.map(p => p.slug));
 const concilioIds = new Set(concilios.map(c => c.id));
 const videoIds = new Set(videos.map(v => v.id));
@@ -101,6 +116,13 @@ for (const it of items) {
   const hash = it.href.split('#')[1] || '';
   if (it.tipo === 'estudio') {
     if (!studySlugs.has(pathname.replace('/estudio/', ''))) badHref.push(`${it.id} → ${it.href}`);
+  } else if (it.tipo === 'libro') {
+    if (pathname !== `/biblia/libros/${it.id}` || !libroIds.has(it.id)) badHref.push(`${it.id} → ${it.href}`);
+  } else if (it.tipo === 'apologetica') {
+    const f = apoloById.get(it.id);
+    if (!f || pathname !== f.path) {
+      badHref.push(`${it.id} → ${it.href}`);
+    }
   } else if (it.tipo === 'personaje') {
     const ok = pathname.startsWith('/estudio/personajes/')
       ? personajeSlugs.has(pathname.replace('/estudio/personajes/', ''))
@@ -122,6 +144,14 @@ const top = list => (list[0] ? `${list[0].tipo}:${list[0].id}` : 'nada');
 check('«nicea» encuentra el Concilio de Nicea', has(q('nicea'), 'concilio', 'nicea'), top(q('nicea')));
 check('«jerusalen» encuentra el Concilio de Jerusalén', has(q('jerusalen'), 'concilio', 'jerusalen'), top(q('jerusalen')));
 check('«arrianismo» encuentra la herejía', has(q('arrianismo'), 'herejia', 'arrianismo'), top(q('arrianismo')));
+check('«tobit» encuentra la ficha del libro', has(q('tobit'), 'libro', 'tobit'), top(q('tobit')));
+check('«shincheonji» encuentra la página de 100 preguntas', has(q('shincheonji'), 'apologetica', 'shincheonji'), top(q('shincheonji')));
+if (apoloById.has('adventismo')) {
+  check('«adventismo» encuentra el fascículo de 50 preguntas', has(q('adventismo'), 'apologetica', 'adventismo'), top(q('adventismo')));
+}
+if (apoloById.has('dispensacionalismo')) {
+  check('«dispensacionalismo» encuentra el fascículo de 50 preguntas', has(q('dispensacionalismo'), 'apologetica', 'dispensacionalismo'), top(q('dispensacionalismo')));
+}
 check('«pablo» encuentra el personaje', has(q('pablo'), 'personaje', 'apostol-pablo'), top(q('pablo')));
 check('«perdon» encuentra el estudio Perdón', has(q('perdon'), 'estudio', '01-fundamentos--01-perdon'), top(q('perdon')));
 check(

@@ -107,8 +107,8 @@ Su caso contiene un patrón que reaparecerá: **el prejuicio no se responde con 
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Juan 1:45-51; 21:2; Mateo 10:2-4; Marcos 3:16-19; Lucas 6:13-16; Hechos 1:13
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — sin menciones de Bartolomé; Papías Frag. 2 (línea 1053) lista a los apóstoles sin incluirlo
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Juan 1:45-51; 21:2; Mateo 10:2-4; Marcos 3:16-19; Lucas 6:13-16; Hechos 1:13
+- **Patrística**: Biblia Patrística Completa — sin menciones de Bartolomé; Papías Frag. 2 (línea 1053) lista a los apóstoles sin incluirlo
 
 ## Conexiones
 

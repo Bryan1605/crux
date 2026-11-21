@@ -135,5 +135,4 @@ Shincheonji cita este versículo para proteger su doctrina, pero son ellos quien
 
 ## Fuentes
 
-- [Refutación completa](../../../../Shincheonji/Refutacion_Doctrinal_Shincheonji.md)
-- [Análisis del chat](../../../../Shincheonji/Analisis_Doctrina_Shincheonji_Chat.md)
+- Notas de contraste doctrinal entre el Curso Virtual de Teología de Shincheonji y la Nueva Traducción Viviente (NTV).

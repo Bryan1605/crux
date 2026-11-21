@@ -176,8 +176,8 @@ Su único diálogo registrado —la pregunta de Juan 14:22— provoca una de las
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 10:3 (+ nota `[bw]`); 13:55; Marcos 3:18; 6:3; Lucas 6:13-16; Juan 14:22-26; Hechos 1:13; 5:37; 15:22,27,32; Judas 1:1
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — sin menciones de "Tadeo" ni "Lebeo"; el "Fragmento 3 - Sobre Judas" (línea 1057) se refiere a Judas Iscariote, no a este apóstol
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 10:3 (+ nota `[bw]`); 13:55; Marcos 3:18; 6:3; Lucas 6:13-16; Juan 14:22-26; Hechos 1:13; 5:37; 15:22,27,32; Judas 1:1
+- **Patrística**: Biblia Patrística Completa — sin menciones de "Tadeo" ni "Lebeo"; el "Fragmento 3 - Sobre Judas" (línea 1057) se refiere a Judas Iscariote, no a este apóstol
 
 ## Conexiones
 

@@ -8,8 +8,10 @@ import { useSite } from './lib/site';
 
 // El panel de edición solo existe en desarrollo: en el build la rama se elimina.
 const Admin = import.meta.env.DEV ? lazy(() => import('./pages/Admin/Admin')) : null;
-// Las 100 preguntas llevan su propio JSON (~50 KB): se cargan solo al entrar.
+// Las páginas de apologética llevan su propio JSON (~30–50 KB): se cargan solo al entrar.
 const Shincheonji = lazy(() => import('./pages/Shincheonji'));
+const Adventismo = lazy(() => import('./pages/Adventismo'));
+const Dispensacionalismo = lazy(() => import('./pages/Dispensacionalismo'));
 
 import Home from './pages/Home';
 import Estudio from './pages/Estudio';
@@ -115,6 +117,22 @@ export default function App() {
             element={
               <Suspense fallback={<main id="main" className="page-loading" aria-busy="true" />}>
                 <Shincheonji />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/apologetica/adventismo"
+            element={
+              <Suspense fallback={<main id="main" className="page-loading" aria-busy="true" />}>
+                <Adventismo />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/apologetica/dispensacionalismo"
+            element={
+              <Suspense fallback={<main id="main" className="page-loading" aria-busy="true" />}>
+                <Dispensacionalismo />
               </Suspense>
             }
           />

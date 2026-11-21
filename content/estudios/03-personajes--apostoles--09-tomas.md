@@ -135,8 +135,8 @@ Jesús **no rechaza** ninguna de las tres: responde a la primera con una declara
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Juan 11:16; 14:5-6; 20:24-31; 21:2; Mateo 10:2-4; Marcos 3:16-19; Lucas 6:13-16; Hechos 1:13
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Tertuliano *Adversus Praxean* 24 (línea 4395); Papías Frag. 2 (línea 1053)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Juan 11:16; 14:5-6; 20:24-31; 21:2; Mateo 10:2-4; Marcos 3:16-19; Lucas 6:13-16; Hechos 1:13
+- **Patrística**: Biblia Patrística Completa — Tertuliano *Adversus Praxean* 24 (línea 4395); Papías Frag. 2 (línea 1053)
 
 ## Conexiones
 

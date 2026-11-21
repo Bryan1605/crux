@@ -194,8 +194,8 @@ La tradición (Ireneo, Tertuliano, Eusebio) lo identifica con: `[Ireneo] [Tradic
 
 ## Fuentes
 
-- **Biblia NTV**: `../../../biblia-pdf-ntv-nueva-traduccion-viviente.md` — Mateo 4:21-22; 17:1-8; 20:20-23; 26:37; Juan 13:23-30; 19:25-27; 20:3-9; 21:1-24; Hechos 1:13, 22; 2:1-4; 3-4; 8:14-17; 1 Juan 1:1-4
-- **Patrística**: `../../../Biblia_Patristica_Completa.md` — Ireneo AH III.3.4 (L3269), III.4.4 (L3249), III.11.1 (L3335), III.11.5 (L3421); Tertuliano *Adv. Praxean* 18 (L4388); Papías vía Eusebio (L1053)
+- **Biblia NTV**: Nueva Traducción Viviente (NTV) — Mateo 4:21-22; 17:1-8; 20:20-23; 26:37; Juan 13:23-30; 19:25-27; 20:3-9; 21:1-24; Hechos 1:13, 22; 2:1-4; 3-4; 8:14-17; 1 Juan 1:1-4
+- **Patrística**: Biblia Patrística Completa — Ireneo AH III.3.4 (L3269), III.4.4 (L3249), III.11.1 (L3335), III.11.5 (L3421); Tertuliano *Adv. Praxean* 18 (L4388); Papías vía Eusebio (L1053)
 
 ## Conexiones
 

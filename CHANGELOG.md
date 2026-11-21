@@ -3,6 +3,101 @@
 Todas las versiones notables de Web Crux. El formato sigue, a grandes rasgos,
 [Keep a Changelog](https://keepachangelog.com/es/1.1.0/).
 
+## [Sin publicar]
+
+Trabajo de noviembre de 2026 sobre la `0.11.0` (piloto bíblico, rediseño del sitio,
+apologética, ampliación de la Biblia Patrística y primer vídeo en la parrilla). La
+versión `0.12.0` sigue reservada para el módulo de hebreo.
+
+### Añadido
+
+- **Piloto bíblico de Tobit**: traducción de trabajo completa desde el Codex Sinaiticus
+  (14 capítulos, 232 versículos, licencia CC BY-NC-SA 3.0 en borrador), ficha
+  introductoria (`content/libros/tobit.json`), registro de fuentes verificadas
+  (`content/libros/fuentes.json`), índice `/biblia/libros`, panel lateral en `/exegesis`
+  y `/biblia/ntv`, y comprobaciones `qa:trad` y `qa:libros`.
+- **`/apologetica/shincheonji`**: 100 preguntas organizadas en 10 bloques con el texto
+  griego del Codex Sinaiticus frente a la NTV, frases clave resaltadas en ambos testigos
+  (`shincheonji-claves.json`) y pestaña «¿Qué cree Shincheonji?» con 35 citas literales de
+  *The Creation of Heaven and Earth* verificables mediante `npm run check:lee` y
+  `npm run qa:shincheonji`.
+- **Sección «Preguntas con la Biblia» en portada** (`/`): tablero oscuro de 6 tarjetas
+  (Shincheonji disponible y cuatro exámenes doctrinales próximos junto a la tarjeta «MÉTODO
+  CRUX») y enlaces en menú y pie.
+- **Portada por obra en `/biblia` (Fase I del rediseño)**: `content/obras-patristica.json`,
+  `src/data/obras.js`, generación a 600 px en `optimize-images.mjs`, validación en
+  `validate-content.mjs` y `vite.config.js`, y primera ilustración en la Parte 1.3
+  (Ignacio de Antioquía, `/img/obras/1-3-ignacio-de-antioquia.webp`).
+- **Editor visual de estudios (fase 1)** en `/admin` basado en TipTap (modos Visual,
+  Markdown y Vista previa) y comprobación `qa:admin`.
+- **Primer vídeo en `/videos`**: `0Rou8PPA2Oo` («Shincheonji y su Mentira Refutada por
+  los Apostoles y la Historia»), con modal accesible y entrada indexable en `sitemap.xml`.
+
+### Cambiado
+
+- **Rediseño completo del sitio (fases A–H)**: barra superior de versículos con cierre,
+  héroe con Jesús y Nicodemo junto a la cruz 3D (`CrossLanyard`) detrás del texto, pie del
+  banner sincronizado al inicio de la transición, catálogo `content/temas.json` con temas
+  asignados en Fundamentos, sidebar y vistas agrupadas + card común en `/estudio` (con
+  abreviatura de libro en lugar de portadas heredadas), menú ampliado con los cuatro
+  grupos visibles, barra compacta en los lectores y Biblia Patrística a pantalla completa.
+- **Biblia Patrística**: texto actualizado hasta la **Parte 6 — San Hipólito de Roma**
+  (incorporada antes la **Parte 5.1 — Cipriano de Cartago**; 23 partes, 1.504 secciones y
+  4.175 páginas), con San Hipólito visible tanto en el índice como en «La obra en el
+  tiempo».
+- **Columnas de `/exegesis` por testigo**: refactor de columnas con apoyo de la columna
+  `Trad` (borrador).
+- **Buscador global (`/buscar`)**: pasa a indexar también las fichas de libros (`libro`) y
+  `/apologetica/shincheonji` (`apologetica`) hasta alcanzar **221 entradas**, junto a
+  `check:search` (17/17) y `qa:buscar` (32/32).
+- **`qa:prod`** (`scripts/check-prod.mjs`): la fase 1 cubre además `/biblia/libros`,
+  `/biblia/libros/tobit`, `/apologetica/shincheonji` y `/videos`.
+
+### Corregido
+
+- **Limpieza de estudios**: retiradas tres notas internas de Obsidian y el análisis
+  privado del curso virtual (excluidos de forma permanente con `PRIVATE_FILES` en
+  `index:wiki`), y eliminadas las rutas locales del disco en los estudios restantes
+  (quedan **184 estudios** en **9 categorías activas**).
+- **Analizador NTV**: «Alabanza de la gran multitud» ya no queda pegado a Apocalipsis 7:8
+  al admitir títulos de sección tras versículos acabados en cifra (**2.369 secciones**).
+- **Accesibilidad en `/videos` y menú**: refactor de tarjeta en `/videos` y etiqueta de
+  «Preguntas a Shincheonji» para cumplir WCAG 2.5.3 y anclaje por id.
+
+## [0.11.0] — 2026-10-26
+
+El lector bíblico y la exégesis comparada se amplían al **Antiguo Testamento**.
+
+### Añadido
+
+- **NTV completa**: 66 libros (39 del AT + 27 del NT) y **31.021 versículos** con sus
+  notas del traductor.
+- **Codex Sinaiticus en el AT**: 59 libros disponibles (32 del AT + 27 del NT), incluidos
+  los **7 libros solo-Codex** (2 Esdras, Tobit, Judit, 1 Macabeos, 4 Macabeos, Sabiduría
+  y Sirácida) con avisos de numeración en Salmos (incluido el Salmo 151), Ester, Jeremías
+  y libros propios del Codex.
+- **Buscadores separados**: `public/textos/exegesis/buscar-at.json` y `buscar-nt.json`,
+  con selectores, raíles y rutas del AT.
+
+### Corregido
+
+- **Peticiones 404 innecesarias en `/exegesis`**: se evita descargar `ntv/<libro>.json`
+  para libros solo-Codex y se omiten mapas de lemas para libros del AT.
+- **`qa:prod`**: espera de carga robusta cuando Chrome no emite `networkidle2`.
+
+## [0.10.0] — 2026-10-20
+
+Diccionario griego integrado sobre la transcripción del Codex Sinaiticus en `/exegesis`.
+
+### Añadido
+
+- **Léxico griego del Codex**: 250 entradas editables en `content/lexico/griego.json` y
+  léxico compilado en `public/textos/exegesis/lexico.json` (`exegesis:lexico`).
+- **Mapas de lemas del NT**: 27 libros en `public/textos/exegesis/lemas/`
+  (`exegesis:lemas`, 77,31 % de cobertura de los 136.612 tokens griegos).
+- **Ficha léxica interactiva** (`LexiconPanel` y `VersePopover`) al pulsar palabras
+  griegas en `/exegesis` (parámetro `?dic=`) y suite **`npm run qa:lexico`**.
+
 ## [0.9.1] — 2026-10-19
 
 Repaso de la interfaz en el móvil: nada estaba roto, pero había detalles que

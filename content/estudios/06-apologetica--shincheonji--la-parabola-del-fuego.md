@@ -76,4 +76,4 @@ Clase del nivel introductorio (Lección 21) que explica Lucas 12:49 ("Fuego vine
 
 ## Fuentes
 
-- [Transcripción completa de la clase](../../../../Shincheonji/LaParaboladelFuego20251205.md)
+- Transcripción y notas de estudio de la clase introductoria sobre la Parábola del Fuego (Lección 21).
