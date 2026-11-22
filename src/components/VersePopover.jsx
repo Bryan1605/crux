@@ -143,15 +143,44 @@ export function NoteBody({ note, reference }) {
 }
 
 /**
- * Ficha léxica de una palabra del Codex. `analysis` es la entrada del mapa de
- * lemas (`[lema, Strong, parse, ns, categoría]`); `entry` es la entrada del
- * diccionario (o null si el lema aún no está entre los 250 publicados).
+ * Ficha léxica de una palabra del Codex. Acepta `morphemes` V2 (`[{ lemma, strong, parse, ns, pos }]`)
+ * o el formato plano anterior (`analysis`), además de `entry` (glosa curada) y
+ * `baseEntry` (respaldo TBESG para Strongs fuera de la selección curada).
  */
-export function LexiconBody({ analysis, entry, token, reference, onOpenDictionary }) {
-  const [lemma, strong, parse, ns, pos] = analysis || [];
+export function LexiconBody({
+  morphemes,
+  analysis,
+  entry,
+  baseEntry,
+  loading = false,
+  token,
+  reference,
+  onOpenDictionary
+}) {
+  const resolved = useMemo(() => {
+    if (Array.isArray(morphemes) && morphemes.length) return morphemes;
+    if (Array.isArray(analysis) && analysis.length) {
+      return [{
+        lemma: analysis[0],
+        strong: analysis[1] || null,
+        parse: analysis[2] || null,
+        ns: Boolean(analysis[3]),
+        pos: analysis[4] || ''
+      }];
+    }
+    return [];
+  }, [morphemes, analysis]);
+
+  const primary = resolved[0] || null;
+  const lemma = primary?.lemma || '';
+  const strong = primary?.strong || '';
+  const parse = primary?.parse || '';
+  const pos = primary?.pos || '';
+  const isNs = resolved.some(m => m.ns);
   const morph = describeMorph(pos, parse);
-  const isNs = Boolean(ns);
-  const kind = morph || entry?.posLabel || posLabel(pos);
+  const kind = morph || entry?.posLabel || baseEntry?.[2] || posLabel(pos);
+  const translit = entry?.translit || baseEntry?.[1] || '';
+  const baseGloss = baseEntry?.[3] || '';
   const surface = splitOverline(token?.v || token?.plain || '');
 
   return (
@@ -169,18 +198,38 @@ export function LexiconBody({ analysis, entry, token, reference, onOpenDictionar
         )}
       </p>
 
-      {analysis ? (
+      {primary ? (
         <>
           <p className="vpop__lex-head">
             <span className="vpop__lex-lemma">{lemma}</span>
-            {entry?.translit ? <span className="vpop__lex-translit">{entry.translit}</span> : null}
+            {translit ? <span className="vpop__lex-translit">{translit}</span> : null}
           </p>
           {kind ? <p className="vpop__lex-pos">{kind}</p> : null}
+
+          {resolved.length > 1 && (
+            <ul className="vpop__lex-morphemes" aria-label="Desglose de morfemas">
+              {resolved.map((m, idx) => (
+                <li key={`${m.lemma}-${idx}`}>
+                  <b>{m.lemma}</b>
+                  {m.strong ? <span> · {m.strong}</span> : null}
+                  {describeMorph(m.pos, m.parse) ? <span> · {describeMorph(m.pos, m.parse)}</span> : null}
+                </li>
+              ))}
+            </ul>
+          )}
+
           {entry ? (
             <p className="vpop__lex-gloss">{entry.gloss}</p>
+          ) : baseGloss ? (
+            <div className="vpop__lex-base">
+              <span className="vpop__lex-badge">Glosa base (TBESG · inglés)</span>
+              <p className="vpop__lex-gloss">{baseGloss}</p>
+            </div>
+          ) : loading ? (
+            <p className="vpop__lex-missing">Cargando definición…</p>
           ) : (
             <p className="vpop__lex-missing">
-              Este lema todavía no está entre los 250 del diccionario.
+              Ficha en español todavía en preparación para este lema.
             </p>
           )}
           {entry?.note ? <p className="vpop__lex-note">{entry.note}</p> : null}

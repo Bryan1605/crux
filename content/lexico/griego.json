@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "glosas": {
     "G3588": "el, la, lo (artículo determinado)",
     "G2532": "y, también, incluso",
@@ -17,7 +17,7 @@
     "G2316": "Dios, dios",
     "G3754": "que, porque",
     "G3956": "todo, cada, entero",
-    "G5101": "¿quién?, ¿qué?, alguien",
+    "G5101": "¿quién?, ¿qué?, ¿cuál?",
     "G1063": "pues, porque, en efecto",
     "G3361": "no (con subjuntivo o imperativo)",
     "G2424": "Jesús",
@@ -250,9 +250,13 @@
     "G5346": "decir, afirmar",
     "G4521": "sábado",
     "G5140": "tres",
-    "G1380": "parecer, pensar, opinar"
+    "G1380": "parecer, pensar, opinar",
+    "G1520": "uno, una, único",
+    "G5100": "alguien, alguno, algo, cierto"
   },
   "notas": {
+    "G1520": "Numeral «uno» (εἷς, μία, ἕν); distinto de la preposición εἰς («a, hacia», G1519) por su espíritu áspero.",
+    "G5100": "Pronombre indefinido enclítico «alguien, cierto»; distinto del interrogativo τίς («¿quién?», G5101) por carecer de acento propio.",
     "G2316": "En el NT designa al Dios de Israel; el plural θεοί se usa para los dioses paganos.",
     "G2424": "Nombre propio de Jesús. En el Codex aparece abreviado como nomen sacrum: ιϲ, ιυ, ιν.",
     "G2962": "Título de respeto y, aplicado a Jesús, confesión de su señorío (Ro 10:9). En el Codex se abrevia κυ, κϲ, κω, κν, κε.",

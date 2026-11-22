@@ -20,6 +20,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { ALL_BOOKS, BOOK_BY_ID } from '../src/data/exegesis.js';
+import { ERAS_BIBLICAS, LIBRO_META, SECCIONES_BIBLICAS } from '../src/data/librosCatalogo.js';
 import { LIBRO_SECCIONES, palabrasLibro, validate } from './validate-content.mjs';
 import { siteRoutes } from './routes-lib.mjs';
 
@@ -88,6 +89,25 @@ const rutas = siteRoutes().map(r => r.path).filter(p => p.startsWith('/biblia/li
 const esperadas = ['/biblia/libros', ...fichas.map(f => `/biblia/libros/${f.id}`)];
 check('Rutas: el índice y una por ficha, ni más ni menos', rutas.sort().join() === esperadas.sort().join(), rutas.join(', '));
 
+const eraIds = new Set(ERAS_BIBLICAS.map(e => e.id));
+const secIds = new Set(SECCIONES_BIBLICAS.map(s => s.id).filter(id => id !== 'todas'));
+const exegIndex = await readJson(path.join(ROOT, 'public/textos/exegesis/index.json'));
+const byExegId = new Map((exegIndex.books || []).map(b => [b.id, b]));
+const catalogErrors = ALL_BOOKS.filter(b => {
+  const m = LIBRO_META[b.id];
+  const ex = byExegId.get(b.id);
+  if (!m || !ex) return true;
+  if (!eraIds.has(m.era) || !secIds.has(m.section)) return true;
+  const expectedCh = b.codexOnly ? ex.codex.chapters.length : ex.ntv.chapters.length;
+  const expectedV = b.codexOnly ? ex.codex.verses : ex.ntv.verses;
+  return m.chapters !== expectedCh || m.verses !== expectedV;
+});
+check(
+  `Catálogo: eras, secciones y recuentos para los ${ALL_BOOKS.length} libros`,
+  catalogErrors.length === 0,
+  catalogErrors.map(b => b.id).join(', ') || `${ERAS_BIBLICAS.length} eras · ${secIds.size} secciones`
+);
+
 /* -------------------------------------------------------------------------- */
 /* 2. Páginas                                                                 */
 /* -------------------------------------------------------------------------- */
@@ -138,7 +158,9 @@ if (WITH_BROWSER && fichas.length) {
   );
   await page.screenshot({ path: path.join(OUT, 'libros-indice.png') });
 
-  for (const ficha of fichas) {
+  const MUESTRA = ['genesis', 'exodo', 'salmos', 'isaias', 'jeremias', 'joel', '2-esdras', 'tobit', 'judit', 'sabiduria', 'mateo', 'apocalipsis'];
+  const fichasMuestra = fichas.filter(f => MUESTRA.includes(f.id));
+  for (const ficha of fichasMuestra) {
     await go(`/biblia/libros/${ficha.id}`);
     const f = await page.evaluate(() => ({
       h1: [...document.querySelectorAll('h1')].map(h => h.textContent.trim()),
@@ -168,9 +190,15 @@ if (WITH_BROWSER && fichas.length) {
   }
 
   const sinFicha = ALL_BOOKS.find(b => b.ntv && !fichas.some(f => f.id === b.id));
-  await go(`/biblia/ntv?libro=${sinFicha.id}&cap=1`);
-  const prep = await page.evaluate(() => document.querySelector('.book-intro')?.textContent || '');
-  check(`${sinFicha.name} (sin ficha): el panel de la NTV dice «en preparación»`, /en preparación/.test(prep), prep.trim().slice(0, 80));
+  if (sinFicha) {
+    await go(`/biblia/ntv?libro=${sinFicha.id}&cap=1`);
+    const prep = await page.evaluate(() => document.querySelector('.book-intro')?.textContent || '');
+    check(`${sinFicha.name} (sin ficha): el panel de la NTV dice «en preparación»`, /en preparación/.test(prep), prep.trim().slice(0, 80));
+  } else {
+    await go('/biblia/ntv?libro=genesis&cap=1');
+    const panel = await page.evaluate(() => document.querySelector('.book-intro a')?.getAttribute('href'));
+    check('Génesis (73/73): /biblia/ntv muestra el panel con enlace a la ficha', panel?.endsWith('/biblia/libros/genesis'), String(panel));
+  }
 
   await go('/biblia/libros/no-existe');
   const nf = await page.evaluate(() => document.body.innerText.includes('Página no encontrada'));

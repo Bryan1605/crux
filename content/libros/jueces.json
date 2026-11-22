@@ -1,0 +1,100 @@
+{
+  "id": "jueces",
+  "title": "Jueces",
+  "abbr": "Jue",
+  "order": 7,
+  "testament": "AT",
+  "summary": "Séptimo libro bíblico en veintiún capítulos sobre el período premonárquico entre la muerte de Josué y Samuel: ciclos repetidos de apostasía, opresión, clamor y rescate mediante líderes carismáticos como Débora, Gedeón, Jefté y Sansón, cerrados con la anarquía de los últimos capítulos. Protocanónico; en el Sinaiticus sobreviven nueve capítulos.",
+  "genre": [
+    "saga heroica tribal",
+    "ciclo historiográfico deuteronomista",
+    "oda arcaica (Cántico de Débora)"
+  ],
+  "language": "Hebreo bíblico clásico (con poesía norteña arcaica en el cap. 5)",
+  "date": {
+    "narrative": "Época premonárquica de las tribus en Canaán (c. siglos XII–XI a. C.)",
+    "composition": "Tradiciones heroicas tribales editadas dentro de la Historia Deuteronomista (c. siglos VII–VI a. C.)",
+    "certainty": "probable",
+    "note": "El Cántico de Débora (cap. 5) está ampliamente reconocido por su gramática y léxico como una de las piezas poéticas más antiguas del Antiguo Testamento."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — Profetas Anteriores, segundo libro)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Kritai)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Jueces está completo en la NTV (21 capítulos, 618 versículos). Del Codex Sinaiticus perduran nueve capítulos fragmentarios (2 y 4–11; 228 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Jueces despliega en veintiún capítulos el contraste sombrío entre la promesa ideal de Josué y la realidad fragmentada de las tribus israelitas antes de la monarquía. Tras una doble introducción sobre conquistas incompletas (1:1–2:5) y el esquema cíclico de fidelidad y caída (2:6–3:6), narra las gestas de doce libertadores —«jueces» mayores y menores como Otoniel, Aod, Débora y Barac, Gedeón, Jefté y Sansón (3:7–16:31)— culminando en dos relatos oscuros sobre la idolatría de Micaía, la emigración de Dan y el crimen de Guibeá (caps. 17–21).\n\n[Estudio] Destacan el Cántico triunfal de Débora (cap. 5) y la fábula política de Jotam sobre los árboles (9:7–15)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los relatos reflejan la vida descentralizada de las aldeas israelitas en el Hierro I (siglos XII–XI a. C.), sin ejército profesional ni capital fija, amenazadas sucesivamente por moabitas, cananeos de la llanura de Jezreel, camelleros madianitas, amonitas y filisteos de la costa.\n\nLa coalición voluntaria de tribus reflejada en el capítulo 5 —y las fricciones internas entre Efraín, Galaad y Benjamín— muestran una sociedad aún fluida anterior al Estado davídico."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición talmúdica adjudica el libro a Samuel como último juez que precedió a los reyes.\n\n[Estudio] Hirsch y Ryssel (Jewish Encyclopedia) y Walter Drum (Catholic Encyclopedia) muestran cómo una colección antigua de leyendas heroicas locales —conservada especialmente en el norte y encabezada por Débora, Gedeón y Sansón— fue enmarcada teológicamente por un editor deuteronomista que conectó cada ciclo mediante la fórmula «hicieron los israelitas lo malo ante los ojos del Señor», añadiendo la introducción (1:1–2:5) y los apéndices promonárquicos de 17–21."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El estribillo final repite cuatro veces un diagnóstico lúcido: «En aquellos días no había rey en Israel; cada uno hacía lo que bien le parecía» (17:6; 21:25). El libro muestra que Dios suscita por su Espíritu libertadores profundamente imperfectos —dudosos, violentos o temerarios— no por mérito tribal, sino por compasión ante el clamor del pueblo (2:18). A la vez, la espiral descendente revela cómo incluso los jueces (Gedeón con su efod, Jefté con su voto, Sansón con sus pasiones) sucumben a la crisis moral.\n\n[Tradición] Hebreos 11:32 evoca a Gedeón, Barac, Sansón y Jefté dentro de la nube de testigos de la fe."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] En Qumrán, el fragmento 4QJudga omite 6:7–10, dando pie a debates sobre el crecimiento redaccional del libro. En la tradición griega, los manuscritos de la Septuaginta divergen en dos familias marcadas (Alejandrino frente a Vaticano), al punto de imprimirse en paralelo en ediciones críticas clásicas (como Rahlfs). El Sinaítico solo conserva restos desde el cap. 2 y de 4 a 11 (Débora, Gedeón, Abimelec y Jefté).\n\n[Texto] Aquí la NTV abarca los 21 capítulos (618 vv.), y el Codex Sinaiticus aporta 9 capítulos (2, 4–11; 228 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Además de Hebreos 11:32, el vellón de Gedeón (cap. 6) y la figura nazirea de Sansón (caps. 13–16) alimentaron siglos de exégesis tipológica en Agustín, Ambrosio y César de Arlés, así como una vasta tradición artística y literaria (como Samson Agonistes de Milton). Los rabinos debatieron hondamente sobre el voto de Jefté (cap. 11) para censurar promesas precipitadas contrarias a la Ley.\n\nEn el canon hebreo precede inmediatamente a Samuel; en el griego y cristiano Rut hace de puente entre Jueces y Samuel."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir la espiral descendente: cada juez empieza más firme (Otoniel) y termina más ambiguo moralmente (Sansón, y luego los anónimos caps. 17–21).\n2. Comparar el relato en prosa del capítulo 4 con el poema arcaico paralelo del capítulo 5 (Cántico de Débora).\n3. Tener presente que narrar un crimen horrible en el relato (como la hija de Jefté o la concubina de Guibeá) no equivale a aprobarlo: el texto lo denuncia explícitamente (19:30).\n4. Contrastar Jueces 2 y 4–11 entre NTV y el Codex Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo interpretar la cronología total de los jueces (más de 400 años frente a 1 Reyes 6:1)?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de historiadores concluye que las magistraturas de los jueces no fueron consecutivas en todo Israel, sino simultáneas en distintas regiones tribales y enmarcadas en cifras redondas simbólicas (40 y 80 años)."
+        },
+        {
+          "label": "Tradición",
+          "body": "Cronologías antiguas estrictamente lineales aceptan duraciones acumuladas o superposiciones puntuales manteniendo la datación alta del Éxodo."
+        }
+      ]
+    },
+    {
+      "question": "¿Implica Jueces 11 que Jefté sacrificó literalmente a su hija o la consagró en retiro perpetuo?",
+      "positions": [
+        {
+          "label": "Texto",
+          "body": "Lecturas contextuales señalan que «ofrecer en holocausto» (11:31, 39) describe trágicamente un voto imprudente ejecutado de hecho —sin aprobación divina—, reflejo de la descomposición espiritual de la época."
+        },
+        {
+          "label": "Tradición",
+          "body": "Varios comentaristas medievales judíos (Kimhi) y cristianos propusieron que el «y» de 11:31 equivalía a «o», interpretando que fue consagrada en celibato de por vida ante el santuario."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-judges",
+    "ce-judges",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

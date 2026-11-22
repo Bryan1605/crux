@@ -1,0 +1,100 @@
+{
+  "id": "1-timoteo",
+  "title": "1 Timoteo",
+  "abbr": "1 Ti",
+  "order": 54,
+  "testament": "NT",
+  "summary": "Primera de las tres Epístolas Pastorales en seis capítulos, dirigida por Pablo a su joven colaborador Timoteo encargado de la iglesia de Éfeso: combate especulaciones genealógicas falsas, organiza la oración pública por toda autoridad, fija los requisitos morales de obispos/ancianos y diáconos, protege la «sana doctrina» y orienta el cuidado de viudas, ancianos y ricos en piedad genuina. Canónica; completa en NTV y Codex Sinaiticus.",
+  "genre": [
+    "epístola pastoral eclesiástica (mandata principis)",
+    "catálogo de virtudes y ministerios",
+    "polémica contra falsos maestros"
+  ],
+  "language": "Griego koiné helenístico de léxico ético-cívico elevado («piedad», «sana enseñanza», «epifanía»)",
+  "date": {
+    "narrative": "Pablo tras partir hacia Macedonia dejando a Timoteo en Éfeso para frenar doctrinas extrañas (1:3)",
+    "composition": "Debatida: por Pablo hacia 63–65 d. C. tras ser liberado en Roma, o escrita en su nombre por un discípulo suyo c. 90–110 d. C.",
+    "certainty": "discutida",
+    "note": "Ausente del Papiro P46 (posiblemente por falta de folios finales del códice) pero ya conocida en el siglo II y presente íntegra en el Sinaiticus."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 1 Timoteo encabeza el bloque de las llamadas desde el siglo XVIII «Epístolas Pastorales» (1–2 Timoteo y Tito), combinando instrucciones personales de maestro a delegado apostólico con ordenanzas comunitarias permanentes en seis capítulos: I. Encargo contra mitos y genealogías estériles, y testimonio personal del Pablo ex-blasfemo alcanzado por misericordia (cap. 1); II. Oración intercesora por reyes y orden en el culto común (cap. 2); III. Requisitos de carácter familiar y comunitario para supervisores (episkopoi) y diáconos junto al himno cristológico de 3:16 (cap. 3); IV. Discernimiento ante falsos ascetismos que prohíben casarse y alimentos (cap. 4); V. Atención justa a viudas reales, presbíteros dignos y esclavos (5–6:2); VI. Alerta final contra el amor al dinero («raíz de todos los males») y llamado a guardar el depósito (6:3–21).\n\n[Estudio] Su estilo evoca las cartas administrativas grecorromanas a delegados."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] En Éfeso —con una comunidad cristiana ya de segunda generación y estructura familiar compleja—, maestros internos promovían disputas especulativas sobre la Ley y «fábulas judías» mezcladas con ascetismo dualista que condenaba el matrimonio y ciertos alimentos creados por Dios (1:4–7; 4:3). Al mismo tiempo, la comunidad necesitaba criterios transparentes ante la sociedad grecorromana sobre la reputación cívica de sus dirigentes y el uso responsable de los recursos comunes dedicados a las viudas."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atestiguada por Ireneo, el Fragmento Muratoriano, Clemente de Alejandría y Tertuliano bajo autoría de Pablo (con ecos ya en Policarpo hacia c. 115 d. C.), se sitúa tradicionalmente tras una liberación del primer cautiverio romano narrado al fin de Hechos 28.\n\n[Estudio] Cornelius Aherne (Catholic Encyclopedia) defiende la autenticidad paulina explicando el vocabulario nuevo por el cambio de tema organizativo y posible empleo de un secretario (quizá Lucas); en contraste, la mayoría de críticos modernos sostiene autoría deutero-paulina (fines del s. I) por las decenas de términos helenísticos ausentes en Romanos–Gálatas, el silencio de Hch 20 sobre un viaje posterior de Pablo a Macedonia y una organización eclesial más institucionalizada."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Dios es «el Salvador» que «quiere que todos los hombres sean salvos y vengan al conocimiento de la verdad», mediante «un solo Dios y un solo mediador entre Dios y los hombres, Jesucristo hombre» (2:3–5). Rechazando cualquier ascetismo hostil a la creación —«todo lo que Dios creó es bueno» (4:4)— y la codicia que confunde piedad con negocio (6:5–10), centra toda meta pastoral en «el amor nacido de corazón limpio, de buena conciencia y de fe no fingida» (1:5), sostenido por el himno cristológico encarnacional de 3:16.\n\n[Tradición] Este himno («Manifestado en carne, justificado en el Espíritu…») nutrió los credos cristianos tempranos."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitida íntegra en el Codex Sinaiticus (núm. 47) y el Alejandrino (faltan folios de las Pastorales en Vaticano B y P46; Marción tampoco las incluyó en su canon reducido), destaca una célebre variante en el himno de 3:16: los testigos bizantinos posteriores leen «Dios fue manifestado en carne» (Theos), mientras los unciales alejandrinos más antiguos —incluido el Codex Sinaiticus en su escritura original, el Alejandrino y las versiones latinas y siríacas— leen «El que fue manifestado en carne» (hos, pronombro relativo refiriéndose a Cristo «misterio de la piedad»).\n\n[Texto] Aquí la NTV (6 caps., 113 vv.) y el Sinaiticus (6 caps., 113 vv.) coinciden en extensión exacta."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Desde Policarpo (citando 6:7 y 6:10) y Clemente de Alejandría, 1 Timoteo suministró a la Iglesia antigua el vocabulario normativo de ministerios (episkopoi, presbyteroi, diakonoi), el principio de hospitalidad e intercesión cívica por gobernantes incluso no cristianos (2:1–2) y la advertencia contra las falsamente llamadas «ciencias / gnoseos» de 6:20 aprovechada por Ireneo contra el gnosticismo."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Notar que 1:5 define la meta real de la «sana doctrina»: no ganar debates estériles sino formar amor, buena conciencia y fe sincera.\n2. Leer 2:1–7 y 3:16 observando cómo el único Mediador fundamenta la oración universal por todos los pueblos y gobernantes.\n3. En el cap. 3, fijarse en que casi todos los requisitos de líderes comunitarios son virtudes de integridad doméstica y reputación honrada, más la capacidad de enseñar.\n4. Comparar «Él/El que fue manifestado en carne» de 3:16 en NTV con el manuscrito del Codex Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue redactada 1 Timoteo personalmente por Pablo o por un discípulo posterior dentro de su tradición?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Defensores de la autoría directa señalan que un secretario distinto (como Lucas), el paso de los años y la lucha contra especulaciones helenísticas explican las diferencias estilísticas, mientras las alusiones personales concretas reflejan al apóstol real."
+        },
+        {
+          "label": "Estudio",
+          "body": "Gran parte de la crítica (Dibelius, Conzelmann, Fiore) propone un autor posterior de la escuela paulina (c. 90–100 d. C.) que actualiza la voz de Pablo —recurso literario respetado en la Antigüedad— para consolidar iglesias frente al protognosticismo."
+        }
+      ]
+    },
+    {
+      "question": "¿Es 1 Timoteo 2:11–15 una regla eclesial permanente o una medida coyuntural frente a enseñanzas engañosas en Éfeso?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Interpretaciones complementarias clásicas ven en la apelación a la creación y caída de 2:13–14 una norma transcultural para el orden de enseñanza oficial dentro de la asamblea."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros exegetas destacan el contexto específico efesio de falsas maestras (cfr. 2 Ti 3:6; 1 Ti 5:13), la mención del culto a Artemisa en Éfeso y la tensión con Priscila enseñando a Apolos (Hch 18:26) o mujeres profetizando en 1 Co 11, limitando la prohibición a un abuso local concreto."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-pastorals",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

@@ -53,9 +53,9 @@ node scripts/build-audio-peaks.mjs   # recalcula la onda de las narraciones (nec
 node scripts/fix-biblia-doc.mjs --file <ruta> --write   # repara la Biblia Patrística (simula sin --write)
 ```
 
-`npm run qa` agrupa 16 comprobaciones: `check:search`, `qa:timeline`, `qa:concilios`,
+`npm run qa` agrupa 17 comprobaciones: `check:search`, `qa:timeline`, `qa:concilios`,
 `qa:buscar`, `qa:vistas`, `qa:biblia`, `qa:exegesis`, `qa:trad`, `qa:libros`, `qa:admin`,
-`qa:shincheonji`, `qa:lexico`, `qa:audio`, `qa:imagenes`, `qa:enlaces` y `qa:a11y`. Todas
+`qa:shincheonji`, `qa:apologetica`, `qa:lexico`, `qa:audio`, `qa:imagenes`, `qa:enlaces` y `qa:a11y`. Todas
 las suites de navegador necesitan el servidor de desarrollo en `http://localhost:5173` (y Chrome instalado).
 Para auditar el sitio publicado, ejecuta cualquiera de ellas con
 `CRUX_BASE=https://bryan1605.github.io/crux`.
@@ -73,11 +73,13 @@ Los informes quedan en `%TEMP%\opencode\crux\`.
 | `/estudio/:slug` | Ficha de estudio (Markdown) |
 | `/estudio/personajes/:slug` | Ficha de personaje: portada, escenas, biografía y línea de tiempo |
 | `/biblia` | Biblia Patrística: Domo 3D, línea temporal de obras, índice con portadas por obra y lector paginado (libro o desplazamiento) |
-| `/biblia/libros` | Índice de libros de la Biblia (73 libros canónicos y solo-Codex), con filtro por testamento y enlace a las fichas publicadas |
+| `/biblia/libros` | Índice de los 73 libros de la Biblia (66 NTV + 7 solo-Codex), con filtro por testamento o solo-Codex y enlace a las 73 fichas publicadas |
 | `/biblia/libros/:id` | Ficha introductoria de un libro (género, contexto, composición, teología, texto, recepción, claves, debates y fuentes) |
 | `/biblia/ntv` | Lector de la Nueva Traducción Viviente completa: 66 libros (39 AT + 27 NT), en rejilla por versículo o pliego, con notas del traductor, selector de versículo, buscador, panel de libro y narración en el raíl |
 | `/exegesis` | Exégesis comparada: Codex Sinaiticus ↔ NTV (y traducción de trabajo donde exista) en rejilla por versículo, con aparato crítico, diccionario griego interactivo, notas y buscador; incluye los 7 libros que solo conserva el Codex |
-| `/apologetica/shincheonji` | 100 preguntas solo con la Biblia (Codex Sinaiticus × NTV con palabras clave resaltadas) y pestaña «¿Qué cree Shincheonji?» con contraste doctrinal |
+| `/apologetica/shincheonji` | Fascículo I — 100 preguntas solo con la Biblia (Codex Sinaiticus × NTV con palabras clave resaltadas) y pestaña «¿Qué cree Shincheonji?» con contraste doctrinal |
+| `/apologetica/adventismo` | Fascículo II — 50 preguntas solo con la Biblia (Codex Sinaiticus × NTV con palabras clave resaltadas) sobre el sábado, la ley, el santuario celestial y el estado de los muertos |
+| `/apologetica/dispensacionalismo` | Fascículo IV — 50 preguntas solo con la Biblia (Codex Sinaiticus × NTV con palabras clave resaltadas) y pestaña «¿Qué enseña el dispensacionalismo?» con 24 citas de J. Dwight Pentecost |
 | `/videos` | Parrilla de videos de YouTube |
 | `/concilios` | Concilios y herejías, con ancla por id (`/concilios#nicea`) |
 | `/temas` | Índice de categorías y etiquetas (enlaza a `/estudio?cat=…` y `/estudio?q=…`) |
@@ -180,8 +182,8 @@ y publica en GitHub Pages. La URL de producción es
 | `content/timeline.json` | Hitos propios de la línea de tiempo (los demás se derivan de personajes y concilios). |
 | `content/obras-patristica.json` | Portadas por obra en el índice de `/biblia` (`.webp` en `public/img/obras/`). |
 | `content/lexico/griego.json` | Glosas y notas del léxico griego (250 entradas editables). |
-| `content/libros/fuentes.json` | Registro de fuentes verificadas para fichas y páginas bíblicas. |
-| `content/libros/*.json` | Fichas introductorias por libro de la Biblia (p. ej. `tobit.json`). |
+| `content/libros/fuentes.json` | Registro de fuentes verificadas (128 entradas) para fichas y páginas bíblicas. |
+| `content/libros/*.json` | 73 fichas introductorias por libro de la Biblia (`66` NTV + `7` solo-Codex, en `borrador`). |
 | `content/apologetica/shincheonji-*.json` | 100 preguntas, palabras clave y contraste doctrinal de Shincheonji. |
 | `content/busquedas.json` | Índice de búsqueda global (se regenera en cada `build`; no lo edites a mano). |
 | `public/textos/biblia-patristica.md` | Texto de la Biblia Patrística (copia fiel del archivo original del proyecto; se carga bajo demanda desde `/textos/`). |
@@ -193,7 +195,7 @@ y publica en GitHub Pages. La URL de producción es
 | `public/textos/exegesis/buscar-at.json` | Índice de búsqueda por palabras del AT (NTV + Codex; generado). |
 | `public/textos/exegesis/buscar-nt.json` | Índice de búsqueda por palabras del NT (NTV + Codex; generado). |
 | `src/assets/texts/*.md` | Fuentes de la NTV y del Codex Sinaiticus 1911 (las usan los scripts, no el build). |
-| `src/assets/texts/trad/*.json` | Fuentes editables de las traducciones de trabajo (p. ej. `tobit.json`). |
+| `src/assets/texts/trad/*.json` | Fuentes editables de las traducciones de trabajo (`tobit`, `judit`, `salmos` 151 y `joel` 4). |
 
 `content/estudios.json` y `content/busquedas.json` se regeneran automáticamente en cada
 `build` (y al editar desde el panel). No los edites a mano.
@@ -235,11 +237,11 @@ npm run index:wiki -- --force   # regenera y guarda un backup en content/.histor
 - **SPA en GitHub Pages** (`/crux/`): `base` se define con `BASE_PATH`; se emite un `404.html`
   que restaura enlaces profundos vía `sessionStorage` antes de que monte el router.
 - **Prerender por ruta** (`plugins/prerender.mjs` + `scripts/routes-lib.mjs`): el build
-  escribe `dist/<ruta>/index.html` para las 213 rutas públicas (11 de sección + 184 estudios
-  + 1 ficha de libro + 17 fichas de personaje) con el `<title>`, la `description`, el `canonical`, las etiquetas
+  escribe `dist/<ruta>/index.html` para las 287 rutas públicas (13 de sección/apologética + 184 estudios
+  + 73 fichas de libros + 17 fichas de personaje) con el `<title>`, la `description`, el `canonical`, las etiquetas
   `og:*`/`twitter:*` y el JSON-LD de esa ruta ya en el HTML, sin depender de JavaScript.
   `routes-lib.mjs` es la fuente única de rutas y SEO (la comparten el prerender, el sitemap
-  y la QA) y el mismo plugin genera `sitemap.xml` (212 URLs indexables, excluyendo `/buscar`) y `robots.txt`.
+  y la QA) y el mismo plugin genera `sitemap.xml` (286 URLs indexables, excluyendo `/buscar`) y `robots.txt`.
 - **API de contenido** (`plugins/content-api.mjs`): sirve `/api/content/*` para leer en
   desarrollo y en el build; los endpoints de escritura solo existen con `npm run dev`.
 - **Rutas de assets**: usa siempre `assetUrl('/img/...')` de `src/lib/assets.js`; las rutas

@@ -1,0 +1,101 @@
+{
+  "id": "marcos",
+  "title": "Marcos",
+  "abbr": "Mc",
+  "order": 41,
+  "testament": "NT",
+  "summary": "Evangelio más breve y antiguo del Nuevo Testamento en dieciséis capítulos, de ritmo trepidante («enseguida») y crudo realismo humano: ministerio galileo de Jesús con exorcismos y curaciones, el vuelco de Cesarea de Filipo hacia la cruz, la confesión del centurión al pie del madero y el sepulcro vacío con el final corto en 16:8 en los manuscritos más antiguos. Canónico; completo en NTV y Codex Sinaiticus con divergencia clave en 16:9–20.",
+  "genre": [
+    "evangelio narrativo de acción",
+    "narración de la Pasión con prólogo extenso",
+    "kerygma apostólico biográfico"
+  ],
+  "language": "Griego koiné directo, vívido y coloquial con frecuentes latinismos y explicaciones de términos arameos",
+  "date": {
+    "narrative": "Desde el bautismo en el Jordán hasta el sepulcro vacío en Jerusalén (c. 28–30/33 d. C.)",
+    "composition": "Entre c. 65 y 73 d. C. (en torno al martirio de Pedro en Roma o la guerra judeo-romana del 70 d. C.)",
+    "certainty": "probable",
+    "note": "Es ampliamente reconocido hoy como el primero de los cuatro Evangelios escritos."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento (con final largo 16:9–20 recibido en el uso canónico tradicional)",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento (con nota crítica habitual sobre 16:9–20)"
+  },
+  "notice": "Nota crítica fundamental en Marcos 16: el Codex Sinaiticus (núm. 34, 16 capítulos, 661 versículos) —al igual que el Codex Vaticanus— termina abruptamente el Evangelio en 16:8 («porque tenían miedo»), omitiendo los doce versículos finales 16:9–20 que sí trae la NTV (673 versículos) entre corchetes o notas críticas.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Marcos inventa el género literario «evangelio» en dieciséis capítulos rápidos, sin relatos de infancia y concentrados casi en una mitad sobre el camino a Jerusalén y la última semana. Se articula en torno a dos preguntas fundamentales: en Galilea, «¿Quién es este que aun el viento y el mar le obedecen?» (1:1–8:26); en el camino hacia la cruz tras la confesión de Pedro en Cesarea de Filipo («Tú eres el Cristo») y los tres anuncios de muerte y resurrección, qué significa seguir al Hijo del Hombre sufriente (8:27–10:52), culminando en Jerusalén y la Pasión (11–16).\n\n[Estudio] Emplea reiteradamente el adverbio euthys («enseguida»), el presente histórico vivo y la técnica de «relatos intercalados» (un relato dentro de otro: Hija de Jairo/hemorroísa; higuera/Templo)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Escrito probablemente en Roma (bajo la sombra reciente de la persecución de Nerón del 64 d. C., lo que explica su acento en tomar la cruz, beber el cáliz y mantenerse fiel sin avergonzarse en medio de tribulación, 8:34–38; 13:9–13) o en Siria/Galilea durante los tumultos de la revuelta judía (66–70 d. C.), Marcos traduce costumbres judías de pureza (7:3–4) y voces arameas (boanerges, talita cum, efatá, abbá, eloi) para lectores gentiles de cultura grecorromana."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Papías de Hierápolis (siglo II), Clemente de Alejandría, Tertuliano y Eusebio identifican unánimemente al autor con Juan Marcos (compañero de Pablo, Bernabé y «mi hijo Marcos» junto a Pedro en Roma en 1 P 5:13), señalando que puso por escrito con fidelidad las predicaciones orales de Simón Pedro («intérprete de Pedro»).\n\n[Estudio] Joseph MacRory y Francis Gigot (Catholic Encyclopedia) discuten cómo la crítica sinóptica moderna confirmó la «prioridad marcana»: Mateo y Lucas usaron el esquema narrativo y la casi totalidad del texto de Marcos, puliendo su griego coloquial."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Marcos no oculta las emociones humanas intensas de Jesús (compasión, ira entristecida, asombro, angustia mortal en Getsemaní) ni la incomprensión contumaz de sus propios discípulos («¿Todavía no entienden?», 8:21), quienes terminan abandonándolo y huyendo en el arresto. Precisamente porque ningún ser humano descifra quién es Jesús solo desde sus milagros (el llamado «secreto mesiánico»), solo al ver cómo muere en la cruz proclama finalmente un pagano, el centurión romano, el título supremo que abrió 1:1: «¡Verdaderamente este hombre era Hijo de Dios!» (15:39).\n\n[Estudio] La cruz no es accidente de la historia, sino el rescate por muchos (10:45)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El problema textual más famoso del Nuevo Testamento cierra Marcos en el capítulo 16: los dos unciales más antiguos y prestigiosos —el Codex Sinaiticus y el Vaticanus—, junto a antiguos manuscritos siríacos, armenios y testimonios explícitos de Eusebio y Jerónimo, terminan en 16:8 («no dijeron nada a nadie, porque tenían miedo»). Otros manuscritos añaden un final intermedio breve, y la mayoría de copias posteriores (Codex Alexandrinus, Vulgata, tradición bizantina) transmiten el final largo de 16:9–20, reflejado también en citas del s. II como Ireneo.\n\n[Texto] Aquí la NTV trae 16 capítulos (673 vv., con 16:9–20 anotados); el Codex Sinaiticus (núm. 34) concluye en 16:8 (661 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Al haber quedado casi íntegramente absorbido dentro de los más extensos Mateo y Lucas, Marcos recibió relativamente pocos comentarios patrísticos propios hasta el siglo V–VI (Víctor de Antioquía, Beda el Venerable) en comparación con Mateo o Juan, pero Agustín valoró su fuerza vivaz. Desde el siglo XIX, el redescubrimiento de su prioridad cronológica como fuente directa para conocer la narración evangélica más temprana lo elevó al centro absoluto de la investigación moderna sobre el Jesús histórico."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Marcos de una sola sentada (apenas dura una hora en voz alta) para sentir el vértigo continuo de «enseguida» desde el Jordán hasta la cruz.\n2. Seguir el «secreto mesiánico»: por qué Jesús prohíbe a demonios y curados divulgarlo hasta después de la cruz y resurrección (9:9).\n3. Observar la lucidez paradójica de los discípulos en 8–10: tras cada anuncio de la cruz responden con ambición por puestos de poder, y Jesús invierte siempre el modelo de liderazgo (10:42–45).\n4. Abrir Marcos 16 en la comparación NTV vs Codex Sinaiticus para examinar directamente el cierre en 16:8."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue 16:8 el final intencionado por el autor de Marcos, o se perdió una hoja final original luego reemplazada por 16:9–20?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Gran parte de críticos literarios sostiene que 16:8 es un final deliberadamente abierto e inquietante («¡Ya lo dijo en 14:28 y 16:7: él va delante a Galilea, ahora toca al lector venciendo el miedo anunciar la buena nueva!»); otros ven probable la pérdida física de la última hoja del rollo."
+        },
+        {
+          "label": "Tradición",
+          "body": "Aunque los críticos coinciden casi unánimemente en que 16:9–20 refleja vocabulario distinto a Marcos 1–16, las iglesias católica y ortodoxa (y muchas tradiciones protestantes) lo conservan por su antigüedad del s. II y contenido conforme a la predicación apostólica."
+        }
+      ]
+    },
+    {
+      "question": "¿Es Marcos la fuente cronológica anterior usada por Mateo y Lucas?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La amplísima mayoría de especialistas defiende la «prioridad marcana»: cuando Mateo y Lucas coinciden en el orden de episodios coinciden con Marcos, pero corrigen y pulen su griego rudo y sus detalles abruptos."
+        },
+        {
+          "label": "Tradición",
+          "body": "Minorías académicas (hipótesis de Griesbach / Dos Evangelios) siguen defendiendo la prioridad tradicional agustiniana de Mateo sobre Marcos como epítome posterior."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-mark",
+    "ce-synoptics",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

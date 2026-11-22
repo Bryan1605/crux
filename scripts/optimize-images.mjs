@@ -5,6 +5,8 @@ import sharp from 'sharp';
 const ROOT = process.cwd();
 const IMG = join(ROOT, 'src', 'assets', 'imgs');
 const OUT = join(ROOT, 'public', 'img');
+const FORCE = process.argv.includes('--force');
+const FORCE_OBRAS = FORCE || process.argv.includes('--force-obras');
 
 const IMAGE_EXT = new Set(['.jpg', '.jpeg', '.png', '.webp']);
 
@@ -18,8 +20,8 @@ function walk(dir) {
   return out;
 }
 
-async function convert(src, dest, width, quality = 78) {
-  if (existsSync(dest) && statSync(dest).mtimeMs >= statSync(src).mtimeMs) return 0;
+async function convert(src, dest, width, quality = 78, force = FORCE) {
+  if (!force && existsSync(dest) && statSync(dest).mtimeMs >= statSync(src).mtimeMs) return 0;
   mkdirSync(dirname(dest), { recursive: true });
   const info = await sharp(src).resize({ width, withoutEnlargement: true }).webp({ quality }).toFile(dest);
   return info.size;
@@ -27,16 +29,19 @@ async function convert(src, dest, width, quality = 78) {
 
 const jobs = [];
 
-// Portadas de obras (Biblia Patrística) → public/img/obras/<archivo>.webp (600px, q78)
+// Portadas de obras (Biblia Patrística) → public/img/obras/<archivo>.webp (640px vertical / 960px horizontal, q80)
 const obrasFile = join(ROOT, 'content', 'obras-patristica.json');
-const obraFuentes = new Set();
+const obraFuentes = new Set([
+  resolve(IMG, 'Personajes', 'Ignacio de Antioquia', 'Portada_Ignacio_de_Antioquia_Estilo_Crux.jpg').toLowerCase()
+]);
 if (existsSync(obrasFile)) {
   const obras = JSON.parse(readFileSync(obrasFile, 'utf8'));
   for (const item of obras.items || []) {
     if (!item?.fuente) continue;
     obraFuentes.add(resolve(IMG, item.fuente).toLowerCase());
     if (item.portada) {
-      jobs.push([join(IMG, item.fuente), join(ROOT, 'public', item.portada), 600, 78]);
+      const width = item.width || (item.formato === 'horizontal' ? 960 : 640);
+      jobs.push([join(IMG, item.fuente), join(ROOT, 'public', item.portada), width, 80, FORCE_OBRAS]);
     }
   }
 }
@@ -69,13 +74,13 @@ if (existsSync(portadaBiblia)) {
 
 let converted = 0;
 let bytes = 0;
-for (const [src, dest, width, quality] of jobs) {
+for (const [src, dest, width, quality, force] of jobs) {
   if (!existsSync(src)) {
     console.log('SKIP (no existe):', src);
     continue;
   }
   try {
-    const size = await convert(src, dest, width, quality);
+    const size = await convert(src, dest, width, quality, force);
     if (size > 0) {
       converted += 1;
       bytes += size;

@@ -1,0 +1,101 @@
+{
+  "id": "proverbios",
+  "title": "Proverbios",
+  "abbr": "Pr",
+  "order": 20,
+  "testament": "AT",
+  "summary": "Antología sapiencial hebrea en treinta y un capítulos atribuida principalmente a Salomón junto con dichos de «los sabios», Agur y la madre de Lemuel: abre con discursos de invitación entre la Sabiduría y la Necedad (1–9), sigue con centenares de máximas prácticas sobre rectitud, palabra, familia y justicia (10–29) y cierra con el acróstico de la mujer ejemplar (31). Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "colección de sentencias (mashal)",
+    "poesía didáctica paterno-filial",
+    "poema acróstico alfabético"
+  ],
+  "language": "Hebreo sapiencial conciso en dísticos paralelos; versión griega libre y reordenada en la Septuaginta",
+  "date": {
+    "narrative": "Enseñanzas recopiladas bajo el patrocinio del rey Salomón y los escribas del rey Ezequías (25:1)",
+    "composition": "Material preexílico monárquico (caps. 10–29) enmarcado por discursos teológicos posexílicos (caps. 1–9) hacia los siglos V–IV a. C.",
+    "certainty": "probable",
+    "note": "La sección 22:17–24:22 muestra afinidad notable con las Instrucciones egipcias de Amenemope, atestiguando diálogo cultural internacional entre escribas."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — Mishlé, segundo libro tras Salmos)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Paroimiai)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "Aunque Proverbios está completo en ambos testigos (NTV: 31 capítulos, 915 versículos; Codex Sinaiticus: 31 capítulos, 893 versículos), la Septuaginta reordena profundamente las colecciones a partir de 24:23 y añade proverbios griegos propios o suprime versículos respecto al hebreo.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Proverbios es una antología explícita compuesta por múltiples colecciones señaladas en sus títulos internos: I. Discursos introductorios del padre y poemas de la Sabiduría personificada (1–9); II. Proverbios de Salomón (10:1–22:16); III. Dichos de los sabios (22:17–24:34); IV. Proverbios de Salomón transcritos por hombres de Ezequías (25–29); V. Oráculos extranjeros o sapienciales de Agur hijo de Jaqué (30) y del rey Lemuel (31:1–9); VI. Elogio acróstico alfabético de la mujer virtuosa o valiente (31:10–31).\n\n[Estudio] Predomina el dístico paralelo en contraste antitético (caps. 10–15) o sinonímico y analógico."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] En el Antiguo Oriente Próximo, las escuelas de escribas cortesanos de Egipto y Mesopotamia producían colecciones de «instrucciones» sapienciales para formar funcionarios íntegros, prudentes en el consejo y respetuosos del orden cósmico (maat). El descubrimiento egipcio de la Sabiduría de Amenemope en 1923 reveló diez paralelos notables con Proverbios 22:17–23:11.\n\nEn Jerusalén, las cortes reales de Salomón y posteriormente de Ezequías (25:1) asimilaron esta cultura sapiencial internacional purificándola de magia y politeísmo bajo el principio rector único: «El temor del Señor es el principio de la sabiduría» (1:7; 9:10)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La atribución a Salomón (1:1; cfr. 1 R 4:32 sobre sus tres mil proverbios) funcionó como título honorífico de todo el libro, análogo al nombre de David sobre el Salterio.\n\n[Estudio] Crawford Howell Toy (Jewish Encyclopedia) y Francis Gigot (Catholic Encyclopedia) explican cómo núcleos sentenciosos reales anteriores al exilio —confirmado explícitamente por la nota editorial sobre «los hombres de Ezequías» hacia 700 a. C. en 25:1— recibieron posteriormente el extenso prólogo teológico de caps. 1–9 y el acróstico conclusivo."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La sabiduría bíblica no equivale a mera astucia intelectual: nace de la reverencia moral ante Dios, se forja escuchando corrección en el hogar y en la plaza pública, cuida la lengua veraz, aborrece el fraude comercial y socorre al necesitado («el que se apiada del pobre presta al Señor», 19:17). En el clímax teológico del capítulo 8, la Sabiduría proclama haber estado junto a Dios como artífice o criatura primera antes de los mares y los montes, deleitándose en los hijos de los hombres (8:22–31).\n\n[Tradición] Los Padres vieron en Proverbios 8:22 uno de los ejes principales de las controversias cristológicas del siglo IV."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Como analiza Johann Cook (NETS), la Septuaginta de Proverbios constituye una traducción sorprendentemente libre, elegante en su griego y marcada por un reordenamiento drástico después de 24:22: intercala 30:1–14, sigue con 24:23–34, luego 30:15–33 y 31:1–9 antes de regresar a los caps. 25–29 y cerrar con la mujer ejemplar (31:10–31), agregando además máximas griegas propias y alterando versículos en clave moralizante.\n\n[Texto] En Crux, la NTV ofrece 31 capítulos y 915 vv., y el Codex Sinaiticus (núm. 27) presenta 31 capítulos y 893 vv."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque el Talmud relata discusiones rabínicas iniciales sobre aparentes contradicciones internas como 26:4–5 (Shabat 30b), Proverbios se impuso como manual formativo inseparable de la ética judía y la catequesis cristiana temprana (1 Clemente, Santiago, Hebreos 12:5–6 citando Pr 3:11–12 y 1 Pedro 4:8). En el siglo IV, Atanasio, Arrio y los Padres capadocios debatieron incansablemente el verbo griego ektisen («creó / poseyó») de Proverbios 8:22 en la Septuaginta durante la crisis cristológica arriana.\n\nAún hoy conserva vigencia universal como guía práctica sobre sobriedad en el habla, justicia laboral y prudencia cotidiana."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer un proverbio como principio general de experiencia cotidiana, nunca como promesa mecánica absoluta (por ello Pr 26:4–5 yuxtaponen consejos opuestos según la ocasión).\n2. Comparar la personificación femenina de Señora Sabiduría (caps. 1, 8, 9) con el retrato concreto de la mujer hacendosa y generosa de 31:10–31 que cierra el libro.\n3. En los capítulos 24–31, recordar que el Codex Sinaiticus reordena los bloques según el orden septuagintal.\n4. Contrasta 8:22 entre NTV («me formó / poseyó») y el griego del Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo interpretar el verbo qaná («adquirió / creó / engendró») sobre la Sabiduría en Proverbios 8:22?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Filólogos del hebreo muestran que el verbo qaná oscila entre «adquirir/poseer» y «crear/dar a luz» (cfr. Gn 4:1; Dt 32:6), retratando poéticamente a la Sabiduría cósmica como el atributo racional con que Dios ordena la creación."
+        },
+        {
+          "label": "Tradición",
+          "body": "En la controversia nicena, los arrianos alegaron la traducción griega ektisen («me creó») de LXX para subordinar al Hijo, mientras Atanasio respondió que 8:22 se refiere a la encarnación económica o a la Sabiduría creada en las obras."
+        }
+      ]
+    },
+    {
+      "question": "¿Obedeció la reordenación de los capítulos 24–31 en la Septuaginta a un rollo hebreo distinto o al criterio del traductor?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Johann Cook (NETS) y Tov sugieren que el traductor alejandrino de Proverbios gozó de amplia libertad literaria para reorganizar colecciones finales y helenizar proverbios."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores plantean que los apéndices finales circulaban todavía en cuadernos hebreos independientes con distintos órdenes de encuadernación."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-proverbs",
+    "ce-proverbs",
+    "cook-nets-proverbs",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

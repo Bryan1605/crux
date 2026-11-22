@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import { foldGreek, foldText, greekLetter } from '../lib/greek';
+import { BOOK_BY_ID } from '../data/exegesis';
+import { LEXICON_LANGS, normalizeStrongQuery, searchLexiconEntries } from '../lib/lexicon';
 
 import './LexiconPanel.css';
 
@@ -9,24 +11,44 @@ const number = new Intl.NumberFormat('es-ES');
 const SOURCE_TBESG = 'https://github.com/STEPBible/STEPBible-Data';
 const SOURCE_MORPH = 'https://github.com/morphgnt/morphological-analysis-of-greek-new-testament';
 
+const FILTERS = [
+  { id: 'all', label: 'Todo' },
+  { id: 'V', label: 'Verbos' },
+  { id: 'N', label: 'Sustantivos' },
+  { id: 'A', label: 'Adjetivos' },
+  { id: 'func', label: 'Nexos / pronombres' },
+  { id: 'notes', label: 'Con nota' },
+  { id: 'ns', label: 'Nomina sacra' }
+];
+
+const SORTS = [
+  { id: 'freq', label: 'Frecuencia' },
+  { id: 'alpha', label: 'Alfabético (Α–Ω)' },
+  { id: 'strong', label: 'Strong (G0001…)' }
+];
+
 /**
- * Diccionario griego → español del Codex.
+ * Diccionario léxico del proyecto (V2 multi-idioma).
  *
  * El panel se abre con `?dic=` (vacío para la lista, `?dic=G3056` para una
- * entrada). La lista se filtra por lema, transcripción, glosa o número Strong;
- * las letras reproducen el abecedario del léxico. En pantallas estrechas la
- * ficha sustituye a la lista y se vuelve con «Volver».
+ * entrada). Busca por lema, formas del Codex (como `θϲ` o `εϲτιν`),
+ * transcripción, glosa, nota o código Strong (con o sin ceros: `25` o `G25`),
+ * ordena coincidencias exactas primero e incluye pasajes y familia léxica.
  */
 export default function LexiconPanel({
   lexicon,
   loading = false,
   error = false,
   value = '',
+  lang = 'grc',
   onSelect,
+  onGoToVerse,
   onClose
 }) {
   const [query, setQuery] = useState('');
   const [letter, setLetter] = useState('');
+  const [filter, setFilter] = useState('all');
+  const [sort, setSort] = useState('freq');
 
   const searchRef = useRef(null);
   const listRef = useRef(null);
@@ -34,32 +56,27 @@ export default function LexiconPanel({
   const dialogRef = useRef(null);
   const restoreRef = useRef(null);
   const focusedRef = useRef(false);
+  const restoreBrowseFocusRef = useRef(false);
   const onCloseRef = useRef(onClose);
   onCloseRef.current = onClose;
 
-  const entries = lexicon?.entries || [];
-  const entry = useMemo(
-    () => entries.find(item => item.strong === value) || null,
-    [entries, value]
-  );
+  const adapter = LEXICON_LANGS[lang] || LEXICON_LANGS.grc;
+  const entries = useMemo(() => lexicon?.entries || [], [lexicon]);
+  const strongMap = useMemo(() => new Map(entries.map(item => [item.strong, item])), [entries]);
+
+  const entry = useMemo(() => {
+    if (!value) return null;
+    const direct = strongMap.get(value);
+    if (direct) return direct;
+    const normalized = normalizeStrongQuery(value, adapter.strongPrefix);
+    return normalized ? strongMap.get(normalized.toUpperCase()) || strongMap.get(normalized) || null : null;
+  }, [strongMap, value, adapter.strongPrefix]);
   const letters = lexicon?.letters || [];
 
-  const filtered = useMemo(() => {
-    const raw = query.trim();
-    const folded = foldText(raw);
-    const greek = /[\u0370-\u03ff\u1f00-\u1fff]/.test(raw) ? foldGreek(raw) : '';
-    return entries.filter(item => {
-      if (letter && greekLetter(item.lemma) !== letter) return false;
-      if (!raw) return true;
-      if (item.strong.toLowerCase().includes(folded)) return true;
-      if (greek && foldGreek(item.lemma).includes(greek)) return true;
-      return (
-        foldText(item.lemma).includes(folded) ||
-        foldText(item.translit).includes(folded) ||
-        foldText(item.gloss).includes(folded)
-      );
-    });
-  }, [entries, query, letter]);
+  const filtered = useMemo(
+    () => searchLexiconEntries(entries, { query, letter, filter, sort, lang }),
+    [entries, query, letter, filter, sort, lang]
+  );
 
   /* Bloquea el scroll y cierra con Escape mientras el panel está abierto. */
   useEffect(() => {
@@ -113,71 +130,167 @@ export default function LexiconPanel({
     }
   }, [lexicon, value, entry]);
 
+  /* Al volver de una ficha en móvil, devolver foco al buscador de la lista. */
+  useEffect(() => {
+    if (!value && restoreBrowseFocusRef.current) {
+      restoreBrowseFocusRef.current = false;
+      searchRef.current?.focus({ preventScroll: true });
+    }
+  }, [value]);
+
   /* Mantén visible la entrada activa al abrir un enlace directo o al elegirla. */
   useEffect(() => {
     const node = listRef.current?.querySelector('.lex__item.is-active');
     node?.scrollIntoView({ block: 'nearest' });
   }, [value, filtered]);
 
+  const handleBackToList = () => {
+    restoreBrowseFocusRef.current = true;
+    onSelect('');
+  };
+
+  const handleSearchKeyDown = event => {
+    if (event.key === 'ArrowDown' && filtered.length) {
+      event.preventDefault();
+      listRef.current?.querySelector('.lex__item')?.focus();
+    }
+  };
+
+  const handleListKeyDown = event => {
+    if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+    const items = [...(listRef.current?.querySelectorAll('.lex__item') || [])];
+    const currentIdx = items.indexOf(document.activeElement);
+    if (currentIdx < 0) return;
+    event.preventDefault();
+    if (event.key === 'ArrowDown') {
+      items[Math.min(items.length - 1, currentIdx + 1)]?.focus();
+    } else if (currentIdx === 0) {
+      searchRef.current?.focus();
+    } else {
+      items[currentIdx - 1]?.focus();
+    }
+  };
+
+  const formatRef = ref => {
+    const [bookId, cap, verse] = ref;
+    const meta = BOOK_BY_ID.get(bookId);
+    return `${meta?.abbr || bookId} ${cap}:${verse}`;
+  };
+
   const detail = entry ? (
     <article className="lex-entry" aria-labelledby="lex-entry-title">
       <button
         type="button"
         className="lex-entry__back"
-        onClick={() => onSelect('')}
+        onClick={handleBackToList}
       >
         <span aria-hidden="true">←</span> Volver a la lista
       </button>
-      <p className="lex-entry__strong">{entry.strong}</p>
-      <h3 id="lex-entry-title" className="lex-entry__lemma" tabIndex={-1} ref={detailRef}>
+      <p className="lex-entry__strong">
+        {entry.strong}
+        {entry.ns ? ' · nomen sacrum' : ''}
+      </p>
+      <h3
+        id="lex-entry-title"
+        className="lex-entry__lemma"
+        ref={detailRef}
+        tabIndex={-1}
+        lang={adapter.langAttr}
+        dir={adapter.dir}
+      >
         {entry.lemma}
       </h3>
       <p className="lex-entry__translit">
-        {entry.translit}
-        {entry.posLabel ? <span> · {entry.posLabel}</span> : null}
+        {entry.translit} · {entry.posLabel}
       </p>
       <p className="lex-entry__gloss">{entry.gloss}</p>
-      {entry.note ? <p className="lex-entry__note">{entry.note}</p> : null}
+      {entry.note && <p className="lex-entry__note">{entry.note}</p>}
+
       <dl className="lex-entry__meta">
         <div>
-          <dt>En el Codex</dt>
+          <dt>Frecuencia en el NT</dt>
           <dd>
-            {number.format(entry.count)} {entry.count === 1 ? 'aparición' : 'apariciones'}
+            {number.format(entry.count)} apariciones{' '}
             {lexicon?.tokens ? (
               <span className="lex-entry__pct">
-                {' '}
-                · {((entry.count / lexicon.tokens) * 100).toFixed(2)} % de las palabras
+                ({((entry.count / lexicon.tokens) * 100).toFixed(2)} %)
               </span>
             ) : null}
           </dd>
         </div>
         {entry.forms?.length ? (
           <div>
-            <dt>Formas más frecuentes</dt>
-            <dd className="lex-entry__forms">{entry.forms.join(' · ')}</dd>
+            <dt>Formas en el códice</dt>
+            <dd className="lex-entry__forms" lang={adapter.langAttr}>
+              {entry.forms.join(' · ')}
+            </dd>
           </div>
         ) : null}
-        {entry.ns ? (
+        {entry.refs?.length ? (
           <div>
-            <dt>Nombre sacro</dt>
-            <dd>Aparece abreviado y sobrelineado en el códice.</dd>
+            <dt>Pasajes en el códice</dt>
+            <dd className="lex-entry__chips">
+              {entry.refs.map(ref => {
+                const label = formatRef(ref);
+                return (
+                  <button
+                    key={`${ref[0]}-${ref[1]}-${ref[2]}`}
+                    type="button"
+                    className="lex-ref"
+                    onClick={() => onGoToVerse?.(ref[0], ref[1], ref[2])}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </dd>
+          </div>
+        ) : null}
+        {entry.related?.length ? (
+          <div>
+            <dt>Familia léxica</dt>
+            <dd className="lex-entry__chips">
+              {entry.related.map(relStrong => {
+                const rel = strongMap.get(relStrong);
+                if (!rel) return null;
+                return (
+                  <button
+                    key={relStrong}
+                    type="button"
+                    className="lex-rel"
+                    onClick={() => onSelect(relStrong)}
+                  >
+                    <span className="lex-rel__lemma" lang={adapter.langAttr}>
+                      {rel.lemma}
+                    </span>{' '}
+                    <span className="lex-rel__strong">{relStrong}</span>
+                  </button>
+                );
+              })}
+            </dd>
           </div>
         ) : null}
       </dl>
+
       <p className="lex-entry__source">
-        Glosa española adaptada de TBESG (STEPBible, CC BY 4.0; Abbott-Smith, 1922).
-        Lematización contextual de MorphGNT (CC BY-SA 3.0). Número Strong de dominio público.
+        Frecuencia y formas medidas sobre la transcripción del Codex Sinaiticus (NT); lema y morfología de
+        MorphGNT; glosa base adaptada de TBESG (STEPBible).
       </p>
     </article>
   ) : (
     <div className="lex-empty" ref={detailRef} tabIndex={-1}>
+      {value ? (
+        <button type="button" className="lex-entry__back" onClick={handleBackToList}>
+          <span aria-hidden="true">←</span> Volver a la lista
+        </button>
+      ) : null}
       <p className="lex-empty__title">
         {value ? 'Entrada no disponible' : 'Elige una palabra'}
       </p>
       <p>
         {value
-          ? `La entrada ${value} no está entre los 250 lemas publicados.`
-          : 'Busca un lema griego, una transcripción o una glosa española; también puedes filtrar por letra.'}
+          ? `La entrada ${value} no figura entre las ${lexicon?.count || ''} fichas curadas publicadas del NT.`
+          : 'Busca un lema griego, una forma del códice (θϲ, εϲτιν), transcripción, glosa o Strong (25, G3056).'}
       </p>
     </div>
   );
@@ -185,14 +298,14 @@ export default function LexiconPanel({
   return (
     <div className="lex" role="dialog" aria-modal="true" aria-labelledby="lex-title">
       <div className="lex__backdrop" aria-hidden="true" onMouseDown={onClose} />
-      <div className={`lex__dialog${entry ? ' lex--detail' : ''}`} ref={dialogRef}>
+      <div className={`lex__dialog${entry || value ? ' lex--detail' : ''}`} ref={dialogRef}>
         <header className="lex__head">
           <div>
             <p className="eyebrow">Léxico del Codex</p>
-            <h2 id="lex-title">Diccionario griego → español</h2>
+            <h2 id="lex-title">{adapter.title}</h2>
             <p className="lex__sub">
               {lexicon
-                ? `${lexicon.count} lemas · ${(lexicon.coverage * 100).toFixed(1)} % de las palabras del códice`
+                ? `${lexicon.count} lemas curados · ${(lexicon.coverage * 100).toFixed(1)} % de las palabras del NT en el códice`
                 : 'Preparando el léxico…'}
             </p>
           </div>
@@ -211,11 +324,49 @@ export default function LexiconPanel({
                 type="search"
                 value={query}
                 onChange={event => setQuery(event.target.value)}
-                placeholder="λόγος, logos, palabra, G3056"
+                onKeyDown={handleSearchKeyDown}
+                placeholder={adapter.placeholder}
                 autoComplete="off"
                 spellCheck="false"
                 aria-controls="lex-list"
               />
+            </div>
+
+            <div className="lex__controls">
+              <div>
+                <label htmlFor="lex-filter" className="sr-only">
+                  Filtrar por categoría
+                </label>
+                <select
+                  id="lex-filter"
+                  className="lex__select"
+                  value={filter}
+                  onChange={event => setFilter(event.target.value)}
+                >
+                  {FILTERS.map(f => (
+                    <option key={f.id} value={f.id}>
+                      {f.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="lex-sort" className="sr-only">
+                  Ordenar resultados
+                </label>
+                <select
+                  id="lex-sort"
+                  className="lex__select"
+                  value={sort}
+                  onChange={event => setSort(event.target.value)}
+                >
+                  {SORTS.map(s => (
+                    <option key={s.id} value={s.id}>
+                      Orden: {s.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             <div className="lex__letters" role="group" aria-label="Filtrar por letra inicial">
@@ -266,15 +417,16 @@ export default function LexiconPanel({
                   onClick={() => {
                     setQuery('');
                     setLetter('');
+                    setFilter('all');
                   }}
                 >
-                  Limpiar la búsqueda
+                  Limpiar filtros
                 </button>
               </div>
             ) : (
-              <ul className="lex__list" id="lex-list" ref={listRef}>
+              <ul className="lex__list" id="lex-list" ref={listRef} onKeyDown={handleListKeyDown}>
                 {filtered.map(item => {
-                  const active = item.strong === value;
+                  const active = item.strong === (entry?.strong || value);
                   return (
                     <li key={item.strong}>
                       <button
@@ -283,7 +435,9 @@ export default function LexiconPanel({
                         aria-current={active ? 'true' : undefined}
                         onClick={() => onSelect(item.strong)}
                       >
-                        <span className="lex__lemma">{item.lemma}</span>
+                        <span className="lex__lemma" lang={adapter.langAttr}>
+                          {item.lemma}
+                        </span>
                         <span className="lex__translit">{item.translit}</span>
                         <span className="lex__gloss">{item.gloss}</span>
                       </button>
@@ -292,6 +446,13 @@ export default function LexiconPanel({
                 })}
               </ul>
             )}
+
+            <Link
+              className="lex__guide"
+              to="/exegesis/guia?lengua=griego"
+            >
+              ¿Empiezas con el alfabeto? Abrir guía de lectura →
+            </Link>
           </section>
 
           <section className="lex__detail" aria-live="polite">

@@ -1,0 +1,100 @@
+{
+  "id": "filemon",
+  "title": "Filemón",
+  "abbr": "Flm",
+  "order": 57,
+  "testament": "NT",
+  "summary": "Billete personal de Pablo de apenas veinticinco versículos dirigido a Filemón (cristiano acomodado en cuya casa se reúne la iglesia, probablemente en Colosas) intercediendo por Onésimo, esclavo fugitivo que ha llegado a la fe junto a Pablo en prisión y regresa ahora «no ya como esclavo, sino… como hermano amado» tanto en la carne como en el Señor. Canónica; completa en NTV y Codex.",
+  "genre": [
+    "carta personal de intercesión (commendatio)",
+    "diplomacia pastoral retórica",
+    "petición fraterna epistolar"
+  ],
+  "language": "Griego koiné sumamente delicado, irónico y afectuoso (juegos de palabras con Onésimo = «útil»)",
+  "date": {
+    "narrative": "Pablo preso como «anciano y prisionero de Cristo Jesús» (v. 9) junto a Timoteo, Epafras, Marcos, Aristarco, Demas y Lucas",
+    "composition": "Simultánea a Colosenses (c. 60–62 d. C. desde Roma, o c. 54–55 d. C. desde Éfeso)",
+    "certainty": "segura",
+    "note": "Su autenticidad paulina es unánime; el vínculo de nombres idénticos con Colosenses 4 fija su fecha conjunta."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Filemón es la carta más breve de Pablo y la única dirigida primordialmente a un asunto doméstico privado (aunque leída también ante Apia, Arquipo y «la iglesia que está en tu casa», v. 2). En un solo capítulo de veinticinco versículos desplegados con finísima retórica persuasiva, Pablo alaba primero el amor refrescante de Filemón (vv. 4–7), renuncia a mandarlo por autoridad apostólica para apelar por amor como anciano preso (vv. 8–10), juega suavemente con el nombre del esclavo huido Onésimo («útil» — antes inútil, ahora útil para ambos, vv. 11–14), sugiere su emancipación o acogida fraterna («haz incluso más de lo que digo», v. 21) y firma pagaré autógrafo por toda deuda (vv. 17–20).\n\n[Estudio] Se conserva como paralelo fascinante de las cartas de recomendación latinas clásicas (como la de Plinio el Joven por un liberto a Sabiniano)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] La economía urbana grecorromana descansaba masivamente en la esclavitud legal, bajo la cual un esclavo fugitivo (fugitivus) o quien hubiera buscado mediación de un amigo del amo (amicus domini) arriesgaba azotes, marcas o la cruz. Aunque la hipótesis tradicional veía a Onésimo huyendo hasta Pablo en Roma tras robarle a su amo en Colosas, estudiosos recientes sugieren también que pudo refugiarse deliberadamente ante Pablo (amigo respetado de Filemón y quizá su padre espiritual en el Evangelio, v. 19) en Éfeso o Roma buscando un mediador reconocido para reconciliarse sin castigo."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] Escrita por «Pablo, prisionero de Cristo Jesús, y el hermano Timoteo» (v. 1), garantizando de puño y letra su pago («Yo Pablo lo escribo de mi propia mano, yo lo pagaré», v. 19) y despidiéndose desde la cárcel junto a cinco colaboradores nombrados también en Colosenses 4:7–14.\n\n[Estudio] Achille Camerlynck (Catholic Encyclopedia) destaca cómo incluso los críticos más escépticos del siglo XIX reconocieron el sello inconfundible e inimitable del estilo vivo de Pablo."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Sin redactar un manifiesto jurídico abolicionista contra la legislación imperial romana, Pablo planta la dinamita espiritual que corroe toda esclavitud desde dentro: al recibir a Onésimo como «mi propio corazón» (v. 12) y devolverlo «no ya como esclavo, sino por encima de esclavo, como hermano amado… tanto en la carne como en el Señor» (v. 16), el Evangelio iguala en dignidad al amo y al sirviente ante un único Señor común. Además, Pablo encarna la sustitución amorosa en vivo: «Si en algo te dañó o te debe, cárgalo a mi cuenta» (v. 18).\n\n[Tradición] En la Iglesia primitiva, la lectura de Filemón preparó la emancipación progresiva de esclavos cristianos."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitida en los papiros P87 (siglo III, entre los más antiguos conservados), P61 y P139, así como completa en el Codex Sinaiticus (núm. 50, cerrando allí el corpus de epístolas paulinas justo antes de Hechos de los Apóstoles) y el Vaticanus, sin variantes significativas fuera de un detalle léxico en el v. 9 entre presbytes («anciano», lectura mayoritaria) o presbeutes («embajador», preferido por algunos editores).\n\n[Texto] La NTV (1 capítulo, 25 vv.) y el Codex Sinaiticus (1 capítulo, 25 vv.) concuerdan exactamente verso a verso."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Ya en el siglo IV, Jerónimo y Juan Crisóstomo defendieron frente a quienes menospreciaban Filemón por tratar un «mero asunto doméstico» que la gracia mostrada hacia un solo esclavo revela la esencia misma del Evangelio; Crisóstomo dedicó tres homilías notando además el elogio tácito hacia la manumisión. Muchos historiadores han especulado sugestivamente —aunque sin certeza probada— si aquel Onésimo acogido y liberado en Colosas llegó a ser el obispo Onésimo de Éfeso elogiado por Ignacio de Antioquía hacia el 110 d. C."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Filemón junto a Colosenses 4:7–17 para conectar a Arquipo, Epafras y Onésimo («uno de ustedes», Col 4:9).\n2. Descubrir los tres juegos afectuosos de palabras de Pablo: «Onésimo» (útil) / inútil-útil (v. 11); «refresca mis entrañas» (vv. 7, 12, 20); «me debes aún tu propia vida» (v. 19).\n3. Observar la elegancia pastoral de Pablo al no forzar por orden autoritaria (v. 8, 14), sino convencer por gratitud y fraternidad cristiana hasta insinuar la libertad («harás aún más de lo que digo», v. 21).\n4. Meditar el v. 18 («cárgalo a mi cuenta») como imagen viva de la gracia en Cristo."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Pide Pablo en Filemón explícitamente la libertad jurídica (manumisión) de Onésimo o solo trato fraterno benigno?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Crisóstomo y gran número de exegetas actuales (Wright, Dunn) perciben un pedido tácito pero inequívoco de libertad legal en la suma de indicios: v. 13 (devolverlo libremente), v. 16 («no ya como esclavo») y v. 21 («harás aún más de lo que digo» —o enviarlo de vuelta a servir al Evangelio)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores (Barclay) señalan la ambigüedad cuidadosa de Pablo, quien evita dictar abiertamente un mandato social único dejando la decisión concreta a la conciencia de Filemón en Cristo."
+        }
+      ]
+    },
+    {
+      "question": "¿Escribió Pablo Filemón desde Roma (c. 61 d. C.) o desde Éfeso (c. 54–55 d. C.)?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La tradición antigua (con el refugio más probable de un esclavo fugitivo en la gran metrópoli imperial) sitúa Filemón en la prisión romana de Hechos 28 junto a Colosenses."
+        },
+        {
+          "label": "Estudio",
+          "body": "Defensores de Éfeso destacan la cercanía geográfica inmediata (unos 160 km hasta Colosas) que hace natural prometer «prepárame alojamiento, pues espero serles concedido» (v. 22) mientras Pablo planeaba visitar Asia Menor (frente a su plan hacia España desde Roma)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-philemon",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

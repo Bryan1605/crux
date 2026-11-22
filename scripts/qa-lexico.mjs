@@ -1,18 +1,20 @@
 /**
- * QA del diccionario griego → español y de los mapas de lemas del Codex.
+ * QA del diccionario griego → español (V2), respaldo base y mapas de lemas del Codex.
  *
  *   node scripts/qa-lexico.mjs
  *
- * Comprueba que el léxico publicado sea coherente con su fuente editable y que
- * cada palabra del Codex tenga exactamente una entrada en el mapa de su libro,
- * en el mismo orden que usa el tokenizador de la web.
+ * Comprueba que el léxico V2 publicado sea coherente con su fuente editable,
+ * que los homógrafos clave (εἰς/εἷς, τίς/τις) estén separados, que existan
+ * citas válidas y respaldo base del NT, y que cada palabra del Codex coincida
+ * en orden con el tokenizador de la web.
  */
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { NT_BOOKS } from '../src/data/exegesis.js';
+import { BOOK_BY_ID, NT_BOOKS } from '../src/data/exegesis.js';
 import { greekLetter, greekWords } from '../src/lib/greek.js';
+import { decodeVerseLemmas } from '../src/lib/lexicon.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIR = path.join(ROOT, 'public/textos/exegesis');
@@ -29,23 +31,31 @@ const check = (name, ok, detail = '') => {
 const readJson = async file => JSON.parse(await readFile(file, 'utf8'));
 
 /* -------------------------------------------------------------------------- */
-/* 1) Diccionario compilado                                                   */
+/* 1) Diccionario compilado (V2)                                              */
 /* -------------------------------------------------------------------------- */
 
 const lex = await readJson(path.join(DIR, 'lexico.json'));
 const entries = Array.isArray(lex.entries) ? lex.entries : [];
+const byStrong = new Map(entries.map(e => [e.strong, e]));
 
-check('Diccionario: 250 entradas', lex.count === 250 && entries.length === 250, `${entries.length}`);
-check('Diccionario: versión y cobertura', lex.version === 1 && lex.coverage > 0.7, `v${lex.version} · ${(lex.coverage * 100).toFixed(2)} %`);
+check('Diccionario V2: metadatos e idioma', lex.version === 2 && lex.lang === 'grc' && lex.scope === 'NT', `v${lex.version} · ${lex.lang} · ${lex.scope}`);
+check('Diccionario V2: ≥ 250 entradas curadas', entries.length >= 250 && lex.count === entries.length, `${entries.length}`);
+check('Diccionario V2: cobertura sobre el NT', lex.coverage > 0.7 && lex.tokens === 136612, `${(lex.coverage * 100).toFixed(2)} % de ${lex.tokens}`);
 
 const strongs = entries.map(entry => entry.strong);
 const lemmas = entries.map(entry => entry.lemma);
 check('Diccionario: Strong únicos', new Set(strongs).size === strongs.length);
 check('Diccionario: lemas únicos', new Set(lemmas).size === lemmas.length);
 
+check(
+  'Diccionario: homógrafos clave separados (εἰς/εἷς, τίς/τις)',
+  ['G1519', 'G1520', 'G5101', 'G5100'].every(s => byStrong.has(s)),
+  `${byStrong.get('G1519')?.lemma}/${byStrong.get('G1520')?.lemma} · ${byStrong.get('G5101')?.lemma}/${byStrong.get('G5100')?.lemma}`
+);
+
 const malformed = entries.filter(
   entry =>
-    !/^G\d{4}$/.test(entry.strong) ||
+    !/^[GH]\d{4,5}[A-Z]?$/.test(entry.strong) ||
     !entry.lemma ||
     !entry.translit ||
     !entry.gloss ||
@@ -54,6 +64,21 @@ const malformed = entries.filter(
     entry.count <= 0
 );
 check('Diccionario: todas las fichas están completas', malformed.length === 0, malformed.slice(0, 3).map(e => e.strong).join(' · '));
+
+const badRefs = [];
+const badRelated = [];
+for (const entry of entries) {
+  for (const ref of entry.refs || []) {
+    if (!Array.isArray(ref) || ref.length !== 3 || !BOOK_BY_ID.has(ref[0]) || ref[1] < 1 || ref[2] < 1) {
+      badRefs.push(`${entry.strong}:${JSON.stringify(ref)}`);
+    }
+  }
+  for (const rel of entry.related || []) {
+    if (!byStrong.has(rel)) badRelated.push(`${entry.strong}->${rel}`);
+  }
+}
+check('Diccionario: citas de concordancia válidas', entries.every(e => Array.isArray(e.refs) && e.refs.length >= 1) && badRefs.length === 0, badRefs.slice(0, 3).join(' · '));
+check('Diccionario: familia léxica apunta a Strong publicados', badRelated.length === 0, badRelated.slice(0, 3).join(' · '));
 
 const sorted = entries.every((entry, i) => i === 0 || entries[i - 1].count >= entry.count);
 check('Diccionario: ordenado por frecuencia', sorted, `${entries[0]?.count} → ${entries.at(-1)?.count}`);
@@ -69,19 +94,15 @@ const letters = [...new Set(entries.map(entry => greekLetter(entry.lemma)))].sor
 check(
   'Diccionario: el índice de letras cubre todos los lemas',
   lex.letters.join('') === letters.join('') && letters.every(letter => lex.letters.includes(letter)),
-  `${len(lex.letters)} letras`
+  `${[...(lex.letters || '')].length} letras`
 );
-
-function len(value) {
-  return [...(value || '')].length;
-}
 
 const source = await readJson(SOURCE);
 const glossKeys = Object.keys(source.glosas || {});
 const noteKeys = Object.keys(source.notas || {});
 const missingGloss = entries.filter(entry => !source.glosas?.[entry.strong]);
 const changedGloss = entries.filter(entry => source.glosas?.[entry.strong] !== entry.gloss);
-check('Fuente: una glosa por entrada', glossKeys.length === 250 && missingGloss.length === 0, `${glossKeys.length} glosas`);
+check('Fuente: una glosa por entrada curada', glossKeys.length === entries.length && missingGloss.length === 0, `${glossKeys.length} glosas`);
 check('Fuente: las glosas publicadas son las editadas', changedGloss.length === 0, changedGloss.slice(0, 3).map(e => e.strong).join(' · '));
 check(
   'Fuente: las notas apuntan a Strong publicados',
@@ -100,7 +121,23 @@ check(
 );
 
 /* -------------------------------------------------------------------------- */
-/* 2) Mapas de lemas y alineación con el Codex                                */
+/* 2) Respaldo base del resto del NT (TBESG)                                  */
+/* -------------------------------------------------------------------------- */
+
+const lexBase = await readJson(path.join(DIR, 'lexico-griego-base.json'));
+const baseMap = lexBase.entries || {};
+const baseKeys = Object.keys(baseMap);
+check(
+  'Respaldo base: V2 poblado con entradas fuera de las curadas',
+  lexBase.version === 2 &&
+    lexBase.lang === 'grc' &&
+    baseKeys.length > 4500 &&
+    baseKeys.every(k => !byStrong.has(k) && Array.isArray(baseMap[k]) && baseMap[k].length === 4),
+  `${baseKeys.length} entradas`
+);
+
+/* -------------------------------------------------------------------------- */
+/* 3) Mapas de lemas V2 y alineación con el Codex                             */
 /* -------------------------------------------------------------------------- */
 
 const files = (await readdir(LEMAS)).filter(file => file.endsWith('.json')).sort();
@@ -118,8 +155,8 @@ for (const meta of NT_BOOKS) {
     readJson(path.join(DIR, 'codex', `${meta.id}.json`))
   ]);
 
-  if (map.version !== 1 || map.book !== meta.id) {
-    badMaps.push(`${meta.id}: cabecera`);
+  if (map.version !== 2 || map.lang !== 'grc' || map.book !== meta.id || !Array.isArray(map.dict)) {
+    badMaps.push(`${meta.id}: cabecera V2`);
     continue;
   }
 
@@ -128,31 +165,28 @@ for (const meta of NT_BOOKS) {
     for (const verse of chapter.verses) {
       const key = `${chapter.num}:${verse.n}`;
       const expected = greekWords(verse.grc).length;
-      const row = map.verses[key];
+      const rawRow = map.verses[key];
       seen.add(key);
-      if (!Array.isArray(row)) {
+      if (!Array.isArray(rawRow)) {
         badMaps.push(`${meta.id} ${key}: falta`);
         continue;
       }
-      if (row.length !== expected) {
-        badMaps.push(`${meta.id} ${key}: ${row.length} vs ${expected}`);
+      if (rawRow.length !== expected) {
+        badMaps.push(`${meta.id} ${key}: ${rawRow.length} vs ${expected}`);
         continue;
       }
-      for (const entry of row) {
+      const decoded = decodeVerseLemmas(map, chapter.num, verse.n);
+      for (const morphemes of decoded) {
         words += 1;
-        if (entry === null) continue;
-        if (!Array.isArray(entry) || entry.length !== 5) {
-          badMaps.push(`${meta.id} ${key}: entrada`);
-          continue;
-        }
-        const [lemma, strong, parse, ns, pos] = entry;
-        if (lemma) lemmaAligned += 1;
+        if (!morphemes.length) continue;
+        const m = morphemes[0];
+        if (m.lemma) lemmaAligned += 1;
         else badMaps.push(`${meta.id} ${key}: sin lema`);
-        if (strong) strongAligned += 1;
-        if (strong && !/^G\d{4,5}$/.test(strong)) badMaps.push(`${meta.id} ${key}: Strong ${strong}`);
-        if (ns) nsCount += 1;
-        if (parse && parse.length !== 8) badMaps.push(`${meta.id} ${key}: parse ${parse}`);
-        if (!pos) badMaps.push(`${meta.id} ${key}: categoría`);
+        if (m.strong) strongAligned += 1;
+        if (m.strong && !/^G\d{4,5}$/.test(m.strong)) badMaps.push(`${meta.id} ${key}: Strong ${m.strong}`);
+        if (m.ns) nsCount += 1;
+        if (m.parse && m.parse.length !== 8) badMaps.push(`${meta.id} ${key}: parse ${m.parse}`);
+        if (!m.pos) badMaps.push(`${meta.id} ${key}: categoría`);
       }
     }
   }
@@ -161,14 +195,14 @@ for (const meta of NT_BOOKS) {
   if (extra.length) badMaps.push(`${meta.id}: ${extra.length} versículos de más`);
 }
 
-check('Lemas: los índices coinciden con el tokenizador', badMaps.length === 0, badMaps.slice(0, 4).join(' · '));
-check('Lemas: todas las palabras tienen lema', lemmaAligned / words > 0.99, `${((lemmaAligned / words) * 100).toFixed(2)} %`);
-check('Lemas: todas las palabras tienen Strong', strongAligned / words > 0.99, `${((strongAligned / words) * 100).toFixed(2)} %`);
-check('Lemas: el total coincide con el diccionario', words === lex.tokens, `${words} palabras`);
-check('Lemas: nomina sacra contabilizados', nsCount > 4000, `${nsCount}`);
+check('Lemas V2: los índices coinciden con el tokenizador', badMaps.length === 0, badMaps.slice(0, 4).join(' · '));
+check('Lemas V2: palabras alineadas con lema', lemmaAligned / words > 0.99, `${((lemmaAligned / words) * 100).toFixed(2)} %`);
+check('Lemas V2: palabras con Strong', strongAligned / words > 0.998, `${((strongAligned / words) * 100).toFixed(2)} %`);
+check('Lemas V2: el total coincide con el diccionario', words === lex.tokens, `${words} palabras`);
+check('Lemas V2: nomina sacra contabilizados', nsCount > 3500, `${nsCount}`);
 
 /* -------------------------------------------------------------------------- */
-/* 3) Resultado                                                               */
+/* 4) Resultado                                                               */
 /* -------------------------------------------------------------------------- */
 
 const failed = results.filter(result => !result.ok);

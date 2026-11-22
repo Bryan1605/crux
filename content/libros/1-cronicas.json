@@ -1,0 +1,101 @@
+{
+  "id": "1-cronicas",
+  "title": "1 Crónicas",
+  "abbr": "1 Cr",
+  "order": 13,
+  "testament": "AT",
+  "summary": "Primera parte de la obra del Cronista (1 Paralipómenos en la Septuaginta), en veintinueve capítulos: genealogías desde Adán hasta las doce tribus (caps. 1–9) y relectura sacerdotal-litúrgica del reinado de David centrada en el arca, los cantores levíticos y los preparativos del Templo (caps. 10–29). Protocanónico; en el Codex Sinaiticus solo sobreviven los caps. 9–11.",
+  "genre": [
+    "genealogía universal y tribal",
+    "historiografía teológica posexílica",
+    "ordenanza litúrgica levítica"
+  ],
+  "language": "Hebreo bíblico tardío (posexílico, con aramaísmos e influencias persas)",
+  "date": {
+    "narrative": "Desde Adán hasta la muerte de David (caps. 1–9 condensan milenios; 10–29 cubren c. 1010–970 a. C.)",
+    "composition": "Período persa tardío o inicios del helenístico (c. 400–300 a. C.)",
+    "certainty": "probable",
+    "note": "La mención de monedas persas («dáricos» en 29:7) y la descendencia postexílica de Zorobabel en 3:19–24 sitúan la redacción bien entrado el siglo IV a. C."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — libro final del canon hebreo, unido a 2 Crónicas)",
+    "catolico": "Antiguo Testamento (protocanónico; Paralipómenos)",
+    "ortodoxo": "Antiguo Testamento (1 Paraleipomenon)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, 1 Crónicas está completo en la NTV (29 capítulos, 942 versículos). Del Codex Sinaiticus solo sobreviven fragmentos de los capítulos 9–11 (54 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 1 Crónicas abre una extensa relectura de toda la historia bíblica escrita para la comunidad del Segundo Templo. Sus veintinueve capítulos constan de dos bloques bien diferenciados: una gran obertura genealógica desde Adán y los patriarcas hasta los habitantes de Jerusalén tras el exilio (caps. 1–9, donde destaca la célebre oración de Jabes en 4:9–10), y una historia idealizada de David que parte directamente de la muerte de Saúl (cap. 10) para consagrarse casi por entero al arca en Jerusalén, los coros y turnos levíticos y las ofrendas monumentales para construir el Templo (caps. 11–29).\n\n[Estudio] El nombre griego Paraleipomena («cosas omitidas» respecto a Samuel–Reyes) refleja solo parcialmente su propósito teológico autónomo."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Redactado en una Yehud pequeña y sin rey bajo dominio persa tardío o albores helenísticos (c. siglo IV a. C.), el libro responde a la pregunta existencial de los repatriados: ¿seguimos siendo nosotros el verdadero Israel heredero de las promesas si carecemos de soberanía política? Al anclar la historia entera en la genealogía desde la Creación y centrar la gloria de David no en intrigas palaciegas sino en el culto perpetuo de Jerusalén, el Cronista demuestra que la identidad de Israel pervive alrededor del Templo y de la Torá."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición talmúdica (Bava Batra 15a) atribuye Crónicas al escriba Esdras.\n\n[Estudio] Aunque Hirsch y Bennett (Jewish Encyclopedia) y Florentine Bechtel (Catholic Encyclopedia) recogen los vínculos compartidos con Esdras–Nehemías (nótese el final de 2 Cr 36:22–23 repetido al inicio de Esd 1), gran parte de la crítica moderna (Japhet, Williamson) distingue al Cronista como autor propio diferente del editor de Esdras–Nehemías. Utilizó como fuente principal una forma de Samuel–Reyes próxima al texto de 4QSama, además de listas genealógicas y registros levíticos."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] 1 Crónicas reescribe la figura de David omitiendo la guerra civil con los descendientes de Saúl y el episodio de Betsabé y Urías, para presentarlo como rey-liturgo que organiza los turnos de cantores, porteros y sacerdotes (caps. 23–26) y lega los planos arquitectónicos inspirados por el Señor a Salomón (28:11–19). Reitera la alianza davídica (cap. 17), identifica explícitamente el lugar del sacrificio tras el censo como monte futuro del Templo (21:18–22:1) y subraya el principio de «buscar al Señor con corazón íntegro» (28:9).\n\n[Tradición] Su trazado genealógico de Adán a David prepara las genealogías evangélicas de Mateo 1 y Lucas 3."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El Texto Masorético de Crónicas manifiesta a menudo huellas de errores de copia en nombres propios y cifras grandes, mientras las secciones paralelas a Samuel conservan a veces lecturas más próximas al hebreo reflejado en Qumrán (4QSama) que al masorético de Samuel. La versión griega antigua (Paraleipomena) sigue de cerca su fuente hebrea.\n\n[Texto] La NTV ofrece aquí los 29 capítulos completos (942 vv.); el Codex Sinaiticus (núm. 7) solo preserva los capítulos 9–11 (54 vv.) sobre los retornados, la muerte de Saúl y la unción de David."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En el canon hebreo tripartito (Tanaj), 1–2 Crónicas ocupan el último puesto —resumen de toda la Biblia de Adán al edicto de Ciro para reconstruir la Casa de Dios— y Jesús alude probablemente a este orden canónico en Mateo 23:35 («desde Abel hasta Zacarías», cfr. 2 Cr 24:20–21). Aunque menos comentado en la patrística que los Profetas, Jerónimo elogió Crónicas como síntesis indispensable del Antiguo Testamento e «instrumento para entender los Evangelios».\n\nLa oración de despedida de David en 29:10–13 nutrió además doxologías judías y cristianas."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. No leer 1–2 Crónicas buscando una mera repetición de Samuel–Reyes: sus silencios y añadidos revelan la teología litúrgica de su autor.\n2. Ver los capítulos 1–9 como mapa teológico que sitúa a Israel dentro de toda la familia humana desde Adán hasta el retorno del exilio.\n3. Notar en 16:8–36 cómo el Cronista teje una liturgia festiva combinando los Salmos 105, 96 y 106.\n4. Comparar los caps. 9–11 en la NTV con los fragmentos griegos del Codex Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Comparten Crónicas y Esdras–Nehemías el mismo autor («el Cronista»)?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La hipótesis clásica (Zunz, Albright, Jewish Encyclopedia) defendió un autor o círculo único de Cronista para 1–2 Crónicas y Esdras–Nehemías por afinidades de vocabulario, el interés levítico y la repetición textual de 2 Cr 36:22–23 al comienzo de Esdras."
+        },
+        {
+          "label": "Estudio",
+          "body": "La investigación moderna mayoritaria (Sara Japhet, Hugh Williamson) señala divergencias teológicas marcadas (como la apertura de Crónicas a tribus del norte frente al exclusivismo de Esdras) y matices lingüísticos que apuntan a autores distintos."
+        }
+      ]
+    },
+    {
+      "question": "¿Son fiables las fuentes extrabíblicas que cita Crónicas fuera de Samuel–Reyes?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Muchos arqueólogos e historiadores reconocen noticias históricas auténticas no conservadas en Reyes (por ejemplo listas de ciudades fortificadas de Roboam o genealogías antiguas de Judá)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros consideran que varios discursos, cifras militares enormes y el catálogo de cantores del cap. 25 proyectan retrospectivamente instituciones del Segundo Templo hacia tiempos de David."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-chronicles",
+    "ce-paralipomenon",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "je-bible-canon"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

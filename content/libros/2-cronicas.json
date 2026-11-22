@@ -1,0 +1,100 @@
+{
+  "id": "2-cronicas",
+  "title": "2 Crónicas",
+  "abbr": "2 Cr",
+  "order": 14,
+  "testament": "AT",
+  "summary": "Segunda parte de Crónicas en treinta y seis capítulos: el reinado unificado de Salomón y la consagración del Templo (caps. 1–9), seguido exclusivamente por la historia de los reyes de Judá hasta el incendio babilónico y el decreto de regreso de Ciro (caps. 10–36). Protocanónico; ausente del Sinaiticus.",
+  "genre": [
+    "crónica teológica de Judá",
+    "oración y reforma litúrgica",
+    "compendio histórico sapiencial"
+  ],
+  "language": "Hebreo bíblico tardío (posexílico)",
+  "date": {
+    "narrative": "Desde Salomón (c. 970 a. C.) hasta el edicto persa de Ciro en 538 a. C.",
+    "composition": "Período persa tardío o inicios del helenístico (c. siglo IV a. C.)",
+    "certainty": "probable",
+    "note": "Cierra citando la proclamación de Ciro (538 a. C.) como horizonte de restauración perpetua de Jerusalén."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — libro final de la Biblia hebrea, unido a 1 Crónicas)",
+    "catolico": "Antiguo Testamento (protocanónico; 2 Paralipómenos)",
+    "ortodoxo": "Antiguo Testamento (2 Paraleipomenon)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, 2 Crónicas se lee completo en la NTV (36 capítulos, 822 versículos). No perduran folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Crónicas continúa sin fisura la narración de 1 Crónicas desplegando treinta y seis capítulos en dos mitades claras: el reinado sin sombras internas de Salomón, dedicado casi íntegramente a la edificación y consagración festiva del Templo (caps. 1–9), y la trayectoria de los monarcas de la dinastía davídica de Judá desde Roboam hasta Sedequías y el decreto de Ciro (caps. 10–36).\n\n[Estudio] A diferencia de 1–2 Reyes, prescinde de seguir la historia autónoma del Reino del Norte —citada solo cuando interfiere con Judá— para concentrarse en la legitimidad del Templo, la Pascua y el sacerdocio."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Para los judíos de la provincia persa de Yehud en los siglos V–IV a. C., 2 Crónicas ofrece un espejo esperanzador frente al desencanto de vivir sin rey ni independencia: la historia de los grandes reyes reformadores —Asa, Josafat, Ezequías y Josías— muestra que cada generación hereda intacta la posibilidad de buscar a Dios con oración, alabanza y reforma del culto, obteniendo paz y auxilio más allá del poder militar.\n\n[Texto] Culmina en el decreto de Ciro (36:22–23): «¡Que suba!» hacia Jerusalén."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Estudio] Al redactar 2 Crónicas, su autor empleó el texto de 1–2 Reyes omitiendo las faltas finales de Salomón (1 R 11) e incorporando amplios relatos propios de gran valor religioso y administrativo: la reforma judicial y la victoria entonando himnos de Josafat (caps. 19–20), el arrepentimiento y oración de Manasés en Babilonia (cap. 33, fuente remota del texto apócrifo Oración de Manasés) y la monumental Pascua unificada de Ezequías (cap. 30), en la que invita incluso a los sobrevivientes de las tribus del norte."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] 2 Crónicas articula una teología pastoral de retribución generacional inmediata —cada rey cosecha en su propio reinado bendición por la fidelidad o derrota y enfermedad al abandonar la Ley— equilibrada por un llamado vibrante a la conversión: «Si se humilla mi pueblo… y oraren y buscaren mi rostro… entonces yo oiré desde los cielos, perdonaré sus pecados y sanaré su tierra» (7:14). Incluso reyes extraviados como Roboam o Manasés hallan misericordia al humillarse, mientras héroes como Asa, Josías o Uzías tropiezan al final por orgullo.\n\n[Estudio] La victoria de Dios «no es vuestra la batalla, sino de Dios» (20:15) condensa la fe del Cronista."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] En el canon griego de la Septuaginta, 2 Crónicas circula bajo el título de 2 Paraleipomenon —traducido en NETS por S. Peter Cowe bajo el nombre de 2 Supplements— y presenta numerosas armonizaciones con Reyes y adiciones puntuales respecto al Texto Masorético.\n\n[Texto] En esta web se lee íntegro en la NTV (36 capítulos, 822 vv.); el Codex Sinaiticus no conserva este libro al haberse perdido la sección entre 1 Crónicas 11 y 2 Esdras 9."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] La figura penitente de Manasés en 2 Cr 33:12–13 engendró en el judaísmo helenístico y el cristianismo primitivo la célebre Oración de Manasés, incorporada en las Constituciones Apostólicas y en los apéndices griegos de los Salmos (cfr. Codex Alexandrinus).\n\nEn la historia de la piedad y homilética moderna, 2 Crónicas 7:14, la alabanza guerrera de Josafat (cap. 20) y la vigilancia «los ojos del Señor recorren toda la tierra» (16:9) han ocupado un lugar predilecto."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Notar cómo la presencia de Dios llenando el Templo (5:13–14; 7:1–3) y la promesa de 7:14 enmarcan todo el resto de la historia de Judá.\n2. Seguir el verbo clave «buscar» (darash / biqqesh) y «humillarse» (kana) como motor de auge o caída en cada monarca.\n3. Observar la inclusión abierta a las tribus del norte en la Pascua de Ezequías (cap. 30).\n4. Comparar la despedida trágica de 2 Reyes con el último versículo esperanzado de 2 Crónicas 36:23 («el Señor su Dios esté con él, y suba»)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo interpretar la doctrina de retribución inmediata propia de Crónicas frente al sufrimiento del justo en Job o Josías?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Sara Japhet y otros analistas muestran que el Cronista reacciona contra el fatalismo exílico («los padres comieron uvas agrias»): cada generación tiene responsabilidad moral propia e inmediata para buscar a Dios y cambiar su destino."
+        },
+        {
+          "label": "Tradición",
+          "body": "Lectores canónicos destacan que incluso el propio Cronista matiza la regla al mostrar la muerte trágica de Josías en Meguido (35:20–24) y la conversión tardía de Manasés (33:10–17)."
+        }
+      ]
+    },
+    {
+      "question": "¿Posee base histórica el arrepentimiento y cautiverio de Manasés en Babilonia (2 Cr 33:11–13), ausente en 2 Reyes 21?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica histórica lo juzga una construcción teológica del Cronista para explicar por qué un rey tan idolátrico reinó cincuenta y cinco años."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros historiadores señalan que inscripciones de Asarhaddón y Asurbanipal mencionan a «Manasés rey de Judá» rindiendo tributo y que tras la revuelta de Shamash-shum-ukin en Babilonia (652–648 a. C.) varios vasallos occidentales fueron conducidos brevemente ante el rey asirio en Babilonia."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-chronicles",
+    "ce-paralipomenon",
+    "pietersma-wright-nets-front",
+    "tyndale-ntv-2009"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

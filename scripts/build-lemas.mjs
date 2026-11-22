@@ -61,6 +61,23 @@ for (const [file, book] of MORPHGNT_FILES) {
   }
   const codex = readJson(codexPath);
   const morph = morphByBook.get(book);
+  const dictMap = new Map();
+  const dict = [];
+  const encodeEntry = entry => {
+    if (!entry) return null;
+    const [lemma, strong, parse, ns, pos] = entry;
+    const dKey = `${lemma}\u0000${strong || ''}\u0000${pos || ''}`;
+    let idx = dictMap.get(dKey);
+    if (idx === undefined) {
+      idx = dict.length;
+      dictMap.set(dKey, idx);
+      dict.push([lemma, strong || null, pos || null]);
+    }
+    if (ns) return [idx, parse || null, 1];
+    if (parse) return [idx, parse];
+    return [idx];
+  };
+
   const verses = {};
   let tokens = 0;
   let mapped = 0;
@@ -76,7 +93,7 @@ for (const [file, book] of MORPHGNT_FILES) {
       const words = prepareCodexWords(greekWords(verse.grc));
       const morphWords = morph.get(key) || [];
       const map = mapVerse(words, morphWords, tbesg, formIndex);
-      verses[key] = map;
+      verses[key] = map.map(encodeEntry);
       let verseMapped = 0;
       for (let i = 0; i < words.length; i += 1) {
         tokens += 1;
@@ -114,7 +131,7 @@ for (const [file, book] of MORPHGNT_FILES) {
 
   fs.mkdirSync(LEMAS_DIR, { recursive: true });
   const outPath = path.join(LEMAS_DIR, `${book}.json`);
-  fs.writeFileSync(outPath, JSON.stringify({ version: 1, book, verses }));
+  fs.writeFileSync(outPath, JSON.stringify({ version: 2, lang: 'grc', book, dict, verses }));
   const coverage = tokens ? mapped / tokens : 0;
   const strongCoverage = tokens ? strong / tokens : 0;
   books.push({
@@ -165,7 +182,7 @@ const report = {
   topLemmas: topLemmas(collectStats(books.map(b => ({
     codex: readJson(path.join('public/textos/exegesis/codex', `${b.book}.json`)),
     map: readJson(path.join(LEMAS_DIR, `${b.book}.json`))
-  }))), 300)
+  }))), Infinity)
 };
 fs.mkdirSync(CACHE, { recursive: true });
 fs.writeFileSync(path.join(CACHE, 'alignment-report.json'), JSON.stringify(report, null, 2));

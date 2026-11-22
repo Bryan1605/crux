@@ -85,17 +85,26 @@ function WorkDetail({ work, block, sectionById, folioOfPart, folioOfSection, pag
   const { info } = work;
   const portada = portadaDe(info.num);
 
+  const wide = portada?.formato === 'horizontal';
+
   return (
     <div className="toc-work">
-      <div className={`toc-work__head ${portada ? 'has-cover' : ''}`.trim()}>
+      <div className={`toc-work__head ${portada ? `has-cover${wide ? ' has-cover--wide' : ''}` : ''}`.trim()}>
         {portada && (
           <button
             type="button"
-            className="toc-work__cover"
+            className={`toc-work__cover${wide ? ' toc-work__cover--wide' : ''}`}
             onClick={() => onSelect(work.part.id)}
             aria-label={`Empezar a leer ${info.title || work.part.label}`}
           >
-            <img src={portada.src} alt={portada.alt} width="600" height="800" loading="lazy" decoding="async" />
+            <img
+              src={portada.src}
+              alt={portada.alt}
+              width={portada.width}
+              height={portada.height}
+              loading="lazy"
+              decoding="async"
+            />
           </button>
         )}
         <div className="toc-work__head-text">

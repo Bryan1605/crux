@@ -1,0 +1,101 @@
+{
+  "id": "4-macabeos",
+  "title": "4 Macabeos",
+  "abbr": "4 Mac",
+  "order": 17.4,
+  "testament": "AT",
+  "summary": "Discurso filosófico y encomio en dieciocho capítulos sobre el dominio de la razón piadosa sobre las pasiones, ilustrado con el martirio de Eleazar y los siete hermanos con su madre. Conservado en el Codex Sinaiticus como apéndice griego; fuera del canon occidental y judío.",
+  "genre": [
+    "discurso filosófico",
+    "diatriba helenística",
+    "encomio martirial"
+  ],
+  "language": "Griego koiné retórico original, influido por la filosofía estoica y platónica",
+  "date": {
+    "narrative": "El martirio de Eleazar y los siete hermanos bajo Antíoco IV Epífanes (c. 167 a. C.)",
+    "composition": "Siglo I d. C. (entre c. 20 d. C. y la revuelta judía o comienzos del s. II)",
+    "certainty": "probable",
+    "note": "Por su estilo asiánico, su léxico filosófico y la ausencia de huellas de la destrucción de Jerusalén o del judaísmo rabínico desarrollado, suele situarse en la diáspora de Antioquía o Alejandría antes o poco después del 70 d. C."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "No incluido en el canon (Trento 1546 excluye 3 y 4 Macabeos)",
+    "ortodoxo": "Apéndice en las Biblias griegas (no figura entre los Anagignoskomena canónicos centrales)",
+    "protestante": "No incluido; tratado como escrito pseudoepigráfico o apócrifo judío helenístico"
+  },
+  "notice": "En esta web, 4 Macabeos se lee completo en el griego del Codex Sinaiticus (18 capítulos, 479 versículos). La NTV no lo incluye y permanece fuera del canon hebreo, católico y protestante.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 4 Macabeos se abre explícitamente como tratado filosófico («Un argumento sumamente filosófico estoy a punto de exponer», 1:1) en forma de diatriba escolar combinada con un panegírico epidíctico. Su estructura consta de una tesis filosófica inicial sobre la razón piadosa (eusebés logismós) que gobierna las pasiones, ilustrada con episodios bíblicos como la templanza de José y David (caps. 1–3), seguida de la demostración narrativa mediante los martirios de Eleazar, los siete hermanos y su madre (caps. 3:19–17:6) y un cierre oratorio fúnebre (17:7–18:24).\n\n[Estudio] Stephen Westerholm (NETS) analiza la maestría retórica del griego y el uso de vocabulario de la tragedia y del estoicismo."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] El autor se dirige a una comunidad judía de habla griega plenamente expuesta a la paideia helenística —probablemente en Antioquía de Siria, donde veneraban posteriormente las reliquias de los mártires macabeos, o en Alejandría y Asia Menor— que necesitaba defender la observancia de la Torá frente a acusaciones de irracionalidad cultural.\n\nAl presentar la Ley de Moisés como la verdadera filosofía que educa en la templanza, la justicia, el valor y la piedad, la obra dialoga directamente con la ética estoica imperial del siglo I d. C."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Eusebio de Cesarea (Historia Eclesiástica 3.10.6) y Jerónimo atribuyeron el libro a Flavio Josefo con el título Sobre el dominio de la razón (Peri autokratoros logismou), atribución bajo la cual circuló en manuscritos griegos y siríacos.\n\n[Estudio] La crítica moderna rechaza unánimemente la autoría de Josefo por diferencias marcadas en estilo griego, uso sistemático de 2 Macabeos y errores históricos ajenos al historiador judío. Toy y Barton (Jewish Encyclopedia) fechan esta obra anónima de un judío helenizado en el siglo I d. C., probablemente en torno a los reinados de Calígula o Claudio."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El eje teológico identifica la piedad hacia Dios con la verdadera sabiduría racional capaz de dominar deseos, ira y dolor físico. A diferencia de la fe en la resurrección corporal prominente en 2 Macabeos 7, el discurso acentúa la inmortalidad inmediata del alma junta a los patriarcas Abraham, Isaac y Jacob (7:19; 13:17; 16:25) y atribuye al martirio de los justos valor vicario y purificador (antipsichon e hilasterion, 6:29; 17:22) en favor de Israel.\n\n[Estudio] Ese léxico sacrificial suscitó intensa comparación académica con las cartas paulinas y la epístola a los Hebreos."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] 4 Macabeos se ha conservado en unos setenta manuscritos griegos de la Septuaginta —entre ellos como piezas capitales el Codex Sinaiticus (núm. 13, inmediatamente detrás de 1 Macabeos) y el Codex Alexandrinus—, además de una antigua versión siríaca y una paráfrasis latina llamada Passio Sanctorum Machabaeorum. Faltan folios en el Vaticano y el Veneciano; la edición de referencia es la de Rahlfs.\n\n[Texto] En Crux se despliega íntegro el texto griego del Codex Sinaiticus con 18 capítulos y 479 versículos. La NTV no lo incluye al ser ajeno al canon masorético y protestante."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Su recepción más profunda tuvo lugar en la Iglesia cristiana antigua, donde la teología del martirio vio en Eleazar y la madre de los siete hermanos modelos de constancia antes del fin de las persecuciones. Gregorio Nacianceno, Juan Crisóstomo y Ambrosio de Milán compusieron homilías celebrando a los mártires macabeos y reutilizaron la retórica de 4 Macabeos.\n\nAunque no entró en el canon definido por Roma ni en el núcleo de las Iglesias ortodoxas, se mantuvo como apéndice en las ediciones griegas de la Septuaginta como testigo venerado del siglo I."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer los caps. 1–3 como la definición filosófica de la tesis y los caps. 4–17 como su demostración dramática con episodios tomados de 2 Macabeos.\n2. Observar los términos griegos estoicos (logismos, pathe, sophrosyne) al servicio de la observancia de la Ley judía.\n3. Comparar el discurso final de la madre (cap. 18) con las cartas paulinas sobre la inmortalidad y la muerte expiatoria (6:29; 17:22).\n4. Recordar su ausencia del canon hebreo y occidental para valorar por qué el escriba del Sinaítico lo colocó junto a 1 Macabeos."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue compuesto originalmente como discurso conmemorativo leído ante una sinagoga o como tratado literario de lectura privada?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Varios comentaristas señalan los apóstrofes directos al auditorio («oh israelitas», 18:1) y el epílogo litúrgico de 17:8–10 como huellas de una homilía pronunciada en la festividad de los mártires en Antioquía."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros filólogos sostienen que la complejidad sintáctica y la extensión equilibrada corresponden a un tratado diatríbico retórico destinado a lectores cultos de la diáspora helenística, antes que a una prédica oral."
+        }
+      ]
+    },
+    {
+      "question": "¿Pertenece al período anterior al 70 d. C. o a la generación posterior a la caída del Templo?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La datación tradicional pre-70 (Bickermann, Hadas) destaca el funcionamiento normal del Templo como marco dado por sentado en las alusiones iniciales y el vocabulario político de comienzos del Imperio."
+        },
+        {
+          "label": "Estudio",
+          "body": "Estudios más recientes (van Henten, deSilva) proponen las últimas décadas del siglo I o comienzos del II d. C., viendo paralelos con la literatura martirial cristiana temprana e Ignacio de Antioquía."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "toy-barton-1906-maccabees",
+    "bechtel-1910-machabees",
+    "westerholm-nets-4makk",
+    "csp-codex-sinaiticus",
+    "csp-acerca-del-codex"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

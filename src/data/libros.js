@@ -18,6 +18,13 @@ const modules = import.meta.glob(['../../content/libros/*.json', '!../../content
   import: 'default'
 });
 
+const tradModules = import.meta.glob('../assets/texts/trad/*.json');
+
+/** Libros que ya cuentan con traducción de trabajo (`src/assets/texts/trad/<id>.json`). */
+export const BOOKS_WITH_TRAD = new Set(
+  Object.keys(tradModules).map(p => p.replace(/^.*\/|\.json$/g, ''))
+);
+
 /** Fichas publicadas, en el orden canónico del sitio. */
 export const LIBROS = Object.values(modules).sort((a, b) => a.order - b.order);
 

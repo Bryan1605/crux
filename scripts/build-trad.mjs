@@ -28,6 +28,7 @@ import { BOOK_BY_ID } from '../src/data/exegesis.js';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, 'src/assets/texts/trad');
 const CODEX = path.join(ROOT, 'public/textos/exegesis/codex');
+const NTV = path.join(ROOT, 'public/textos/exegesis/ntv');
 const OUT = path.join(ROOT, 'public/textos/exegesis/trad');
 const CHECK = process.argv.includes('--check');
 
@@ -38,7 +39,7 @@ const STATUSES = ['borrador', 'revisado'];
 const readJson = async file => JSON.parse(await readFile(file, 'utf8'));
 
 /** Errores de un libro traducido frente a su Codex. */
-export function validateTrad(trad, codex, meta) {
+export function validateTrad(trad, codex, meta, ntv = null) {
   const errors = [];
   const where = trad?.id || '?';
   if (!meta) return [`${where}: no está en la tabla canónica (src/data/exegesis.js)`];
@@ -50,10 +51,12 @@ export function validateTrad(trad, codex, meta) {
   if (trad.license !== TRAD_LICENSE) errors.push(`${where}: license debe ser «${TRAD_LICENSE}»`);
   if (!Array.isArray(trad.chapters) || !trad.chapters.length) errors.push(`${where}: no hay capítulos`);
 
+  const ntvChapters = new Set((ntv?.chapters || []).map(c => c.num));
   const seen = new Set();
   for (const ch of trad.chapters || []) {
     if (seen.has(ch.num)) errors.push(`${where} ${ch.num}: capítulo repetido`);
     seen.add(ch.num);
+    if (ntvChapters.has(ch.num)) errors.push(`${where} ${ch.num}: la NTV ya incluye este capítulo (no se retraduce)`);
     const base = codex?.chapters.find(c => c.num === ch.num);
     if (!base) {
       errors.push(`${where} ${ch.num}: el Codex no tiene este capítulo`);
@@ -119,7 +122,15 @@ async function main() {
     } catch {
       errors.push(`${file}: no existe public/textos/exegesis/codex/${trad.id}.json`);
     }
-    errors.push(...validateTrad(trad, codex, meta));
+    let ntv = null;
+    if (meta?.ntv) {
+      try {
+        ntv = await readJson(path.join(NTV, `${trad.id}.json`));
+      } catch {
+        ntv = null;
+      }
+    }
+    errors.push(...validateTrad(trad, codex, meta, ntv));
     if (meta) out.push(publishTrad(trad, meta));
   }
 

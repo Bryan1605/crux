@@ -190,9 +190,10 @@ const CASE_LABEL = { N: 'nominativo', G: 'genitivo', D: 'dativo', A: 'acusativo'
 const NUMBER_LABEL = { S: 'singular', P: 'plural' };
 const GENDER_LABEL = { M: 'masculino', F: 'femenino', N: 'neutro' };
 const TENSE_LABEL = { P: 'presente', I: 'imperfecto', F: 'futuro', A: 'aoristo', X: 'perfecto', Y: 'pluscuamperfecto' };
-const VOICE_LABEL = { A: 'activa', M: 'media', P: 'pasiva' };
+const VOICE_LABEL = { A: 'activo', M: 'medio', P: 'pasivo' };
 const MOOD_LABEL = { I: 'indicativo', D: 'imperativo', S: 'subjuntivo', O: 'optativo', N: 'infinitivo', P: 'participio' };
 const PERSON_LABEL = { 1: '1.ª', 2: '2.ª', 3: '3.ª' };
+const DEGREE_LABEL = { C: 'comparativo', S: 'superlativo' };
 
 /**
  * Traduce el código de 8 caracteres de MorphGNT a una descripción breve.
@@ -202,6 +203,7 @@ const PERSON_LABEL = { 1: '1.ª', 2: '2.ª', 3: '3.ª' };
  *   `3AAI-S--` → aoristo activo indicativo, 3.ª singular
  *   `-PAPNSM-` → participio presente activo, nominativo singular masculino
  *   `-AAN----` → infinitivo aoristo activo
+ *   `----NSNC` → nominativo singular neutro, comparativo
  */
 export function describeMorph(pos, parse) {
   const code = String(parse || '').trim();
@@ -213,10 +215,11 @@ export function describeMorph(pos, parse) {
   const grammaticalCase = code[4];
   const number = code[5];
   const gender = code[6];
+  const degree = code[7];
 
   const kind = String(pos || '').replace(/-$/, '');
   const label = POS_LABEL[kind] || '';
-  const nominal = [CASE_LABEL[grammaticalCase], NUMBER_LABEL[number], GENDER_LABEL[gender]]
+  const nominal = [CASE_LABEL[grammaticalCase], NUMBER_LABEL[number], GENDER_LABEL[gender], DEGREE_LABEL[degree]]
     .filter(Boolean)
     .join(' ');
 
@@ -240,4 +243,4 @@ export function describeMorph(pos, parse) {
 }
 
 /** Etiqueta española de una categoría MorphGNT (`N`, `V`, `RA`…). */
-export const posLabel = pos => POS_LABEL[pos] || '';
+export const posLabel = pos => POS_LABEL[String(pos || '').replace(/-$/, '')] || '';

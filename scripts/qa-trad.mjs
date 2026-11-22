@@ -58,6 +58,15 @@ for (const file of sources) {
   const meta = BOOK_BY_ID.get(id);
   const src = await readJson(path.join(SRC, file));
   const codex = await readJson(path.join(DIR, 'codex', `${id}.json`));
+  let ntv = null;
+  if (meta?.ntv) {
+    try {
+      ntv = await readJson(path.join(DIR, 'ntv', `${id}.json`));
+    } catch {
+      ntv = null;
+    }
+  }
+  const ntvChapters = new Set((ntv?.chapters || []).map(c => c.num));
   let pub = null;
   try {
     pub = await readJson(path.join(DIR, 'trad', `${id}.json`));
@@ -67,7 +76,7 @@ for (const file of sources) {
   check(`${id}: está publicado en public/textos/exegesis/trad/`, Boolean(pub), 'npm run exegesis:trad');
   if (!pub) continue;
 
-  const errors = validateTrad(pub, codex, meta);
+  const errors = validateTrad(pub, codex, meta, ntv);
   check(`${id}: cobertura, numeración, texto y etiquetas válidos`, errors.length === 0, errors.slice(0, 4).join(' | ') || 'sin errores');
   check(
     `${id}: lo publicado es idéntico a su fuente validada`,
@@ -84,7 +93,11 @@ for (const file of sources) {
     pub.label === TRAD_LABEL && pub.license === TRAD_LICENSE && pub.base === 'codex',
     `${pub.label} · ${pub.status}`
   );
-  check(`${id}: el libro no tiene NTV (la traducción no sustituye a la NTV)`, !meta.ntv, String(meta.ntv));
+  check(
+    `${id}: la traducción solo cubre capítulos sin NTV (no sustituye a la NTV)`,
+    !pub.chapters.some(c => ntvChapters.has(c.num)),
+    `NTV: ${ntvChapters.size} caps.`
+  );
 
   const entry = index.books.find(b => b.id === id);
   const chapters = pub.chapters.map(c => c.num);
@@ -94,7 +107,7 @@ for (const file of sources) {
     entry?.trad && entry.trad.chapters.join() === chapters.join() && entry.trad.verses === verses && entry.trad.status === pub.status,
     entry?.trad ? `caps. ${entry.trad.chapters.join(', ')} · ${entry.trad.verses} vers.` : 'npm run exegesis:index'
   );
-  books.push({ id, chapters, name: meta.name });
+  books.push({ id, chapters, name: meta.name, hasNtv: Boolean(meta.ntv), ntvChapters });
 }
 
 /* -------------------------------------------------------------------------- */
@@ -151,7 +164,8 @@ if (WITH_BROWSER && books.length) {
     // aviso lo explica. Si el libro está completo, el último capítulo tiene una celda
     // traducida por cada versículo del Codex (las lagunas no se rellenan).
     const codexChapters = index.books.find(b => b.id === book.id).codex.chapters;
-    const pending = codexChapters.find(n => !book.chapters.includes(n));
+    const codexOnlyChapters = codexChapters.filter(n => !book.ntvChapters.has(n));
+    const pending = codexOnlyChapters.find(n => !book.chapters.includes(n));
     if (pending) {
       await page.goto(`${BASE}/exegesis?libro=${book.id}&cap=${pending}&modo=trad`, { waitUntil: 'networkidle2', timeout: 60000 });
       await page.waitForSelector('.exg-grid', { timeout: 20000 });
@@ -170,18 +184,20 @@ if (WITH_BROWSER && books.length) {
       await wait(400);
       const end = await state();
       check(
-        `${book.id} ${last}: libro completo, cada versículo del Codex tiene su traducción`,
+        `${book.id} ${last}: alcance completo, cada versículo del Codex tiene su traducción`,
         end.witnesses.join() === 'codex,trad' && end.trad === want && !/cubre por ahora/.test(end.notice),
         `${end.trad}/${want} celdas`
       );
     }
 
-    await page.goto(`${BASE}/biblia/ntv?libro=${book.id}`, { waitUntil: 'networkidle2', timeout: 60000 });
-    await wait(800);
-    const href = await page.evaluate(() =>
-      [...document.querySelectorAll('.empty-state a')].map(a => a.getAttribute('href')).find(h => /modo=trad/.test(h || ''))
-    );
-    check(`/biblia/ntv?libro=${book.id} enlaza a la traducción de trabajo`, Boolean(href), String(href));
+    if (!book.hasNtv) {
+      await page.goto(`${BASE}/biblia/ntv?libro=${book.id}`, { waitUntil: 'networkidle2', timeout: 60000 });
+      await wait(800);
+      const href = await page.evaluate(() =>
+        [...document.querySelectorAll('.empty-state a')].map(a => a.getAttribute('href')).find(h => /modo=trad/.test(h || ''))
+      );
+      check(`/biblia/ntv?libro=${book.id} enlaza a la traducción de trabajo`, Boolean(href), String(href));
+    }
   }
 
   const mobile = await browser.newPage();

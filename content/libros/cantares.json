@@ -1,0 +1,101 @@
+{
+  "id": "cantares",
+  "title": "Cantar de los Cantares",
+  "abbr": "Cnt",
+  "order": 22,
+  "testament": "AT",
+  "summary": "Poema lírico de amor mutuo en ocho capítulos entre la Sulamita y su amado entre viñas, huertos y calles de Jerusalén. Célebre por celebrar el deseo y la fidelidad humana sin mención explícita de Dios (salvo la «llama de Yah» en 8:6), y leído a la vez alegóricamente sobre el amor entre Dios e Israel o Cristo y la Iglesia. Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "poesía lírica amorosa",
+    "ciclo de cantos nupciales",
+    "alegoría mística en la recepción"
+  ],
+  "language": "Hebreo poético exuberante y sensorial con términos dialectales norteños y préstamos persas y posiblemente griegos (3:9)",
+  "date": {
+    "narrative": "Cantos atribuidos en el título al rey Salomón (1:1)",
+    "composition": "Debatida: tradiciones poéticas antiguas recopiladas o editadas en el período persa o helenístico (siglos V–III a. C.)",
+    "certainty": "discutida",
+    "note": "Combina imaginería arcaica con palabras tardías (pardes persa en 4:13, appirion posiblemente griego phoreion en 3:9 y el relativo she-)."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — primero o principal de las Cinco Meguilot, leído en Pésaj)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Asma Asmaton)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] El «Cantar de los Cantares» (superlativo hebreo: «el canto más hermoso de todos») despliega en ocho capítulos un diálogo lírico de voces alternadas —la joven amada, el amado pastor-rey y el coro de las «hijas de Jerusalén»— sin trama narrativa lineal rígida, sino como sinfonía de deseos, búsquedas nocturnas, elogios corporales descriptivos (wasf, caps. 4, 5 y 7) y estribillos recurrentes de conjuro y pertenencia mutua («Yo soy de mi amado y mi amado es mío», 2:16; 6:3).\n\n[Estudio] Culmina en el solemne himno de 8:6–7: el amor es fuerte como la muerte y sus brasas son «llama misma del Señor» (shalhevetyah)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] La geografía del libro recorre todo el país desde Tirsa y el Líbano hasta Engadí y Jerusalén, mientras sus metáforas sensoriales (el huerto cerrado, la hermana-esposa, los ungüentos exóticos de mirra, nardo y canela) muestran profundo parentesco literario con la poesía amatoria egipcia del Imperio Nuevo (Papiros Chester Beatty y Harris) y con cantos nupciales siriopalestinos.\n\n[Tradición] Para el pueblo que recopilaba sus Escrituras tras el exilio, la lectura nupcial de los profetas (Oseas, Isaías 54, Jeremías 2) facilitó integrar este canto en el canon."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] El título «de Salomón» (1:1) orientó la tradición antigua hacia una obra de juventud de Salomón (frente a Proverbios en madurez y Eclesiastés en vejez).\n\n[Estudio] Hirsch y Toy (Jewish Encyclopedia) y Gerhard Gietmann (Catholic Encyclopedia) recogen el consenso crítico que ve en el libro una antología o ciclo unificado de cantos de amor redactados probablemente en época persa o helenística temprana (por su gramática tardía y referencias exóticas), preservando materiales poéticos populares anteriores."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Incluso en su lectura literal inmediata, Cantares afirma teológicamente la bondad sagrada de la creación corporal y del amor recíproco entre mujer y hombre —redimiendo en el jardín recuperado la fractura descrita en Génesis 3 («su deseo es hacia mí», 7:10)— y exaltando la fidelidad indestructible frente a la muerte (8:6–7) que ni las riquezas de Salomón pueden comprar.\n\n[Tradición] En la lectura alegórica judía y cristiana, esa pasión sin reservas revela el ardor con que Dios ama a Israel en el Sinaí y Cristo ama a la Iglesia y a cada alma (Ef 5:25–32)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Cuatro rollos fragmentarios de Qumrán (4QCanta-c, 6QCant) conservan partes del texto —faltando ciertos pasajes por abreviación litúrgica o deterioro— y testimonian su estima temprana antes del siglo I d. C. El texto griego de la Septuaginta sigue muy de cerca al masorético, conservando incluso la identificación dramática de interlocutores en manuscritos antiguos.\n\n[Texto] Aquí se halla íntegro en NTV (8 capítulos, 117 vv.) y en el Codex Sinaiticus (núm. 29; 8 capítulos, 117 vv.), completo."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Cuando en Yavne (c. 90 d. C.) algunos cuestionaron Cantares junto con Eclesiastés, Rabí Akiva pronunció la frase célebre recogida en la Misná (Yadayim 3:5): «Todas las Escrituras son santas, pero el Cantar de los Cantares es el Santo de los Santos», consagrando su lectura alegórica para la Pascua (Pésaj). Orígenes redactó su comentario capital aplicando el Cantar a la Iglesia y al alma, seguido por Gregorio de Nisa, Bernardo de Claraval (86 sermones sobre caps. 1–3) y Juan de la Cruz en su Cántico Espiritual."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir las voces sin forzar una obra teatral de tres personajes si no es claro: los diálogos saltan oníricamente entre sueño, campo y ciudad.\n2. Detenerse en los tres estribillos del conjuro («No despierten ni provoquen el amor hasta que quiera», 2:7; 3:5; 8:4) y en el himno final de 8:6–7.\n3. Apreciar cómo el sentido literal (celebración honesta del amor nupcial) y el sentido simbólico (alianza Dios–pueblo) se iluminan sin anularse.\n4. Comparar los 8 capítulos en la NTV y en el Codex Sinaiticus, donde este incluye incluso epígrafes escénicos antiguos."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo debe interpretarse primariamente el Cantar: literal-nupcial, dramático o alegórico?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Durante dieciocho siglos tanto la tradición sinagogal (Tárgum, Rashi) como la patrística y monástica (Orígenes, Bernardo) sostuvieron que el sentido principal del libro es la alegoría del amor entre Dios e Israel o Cristo y la Iglesia."
+        },
+        {
+          "label": "Estudio",
+          "body": "Desde Teodoro de Mopsuestia y especialmente desde Herder hasta hoy, la mayoría de exegetas reconoce ante todo una colección de cantos nupciales y eróticos humanos cuya santidad misma sustenta su uso tipológico espiritual posterior."
+        }
+      ]
+    },
+    {
+      "question": "¿Es un ciclo suelto de poemas amorosos o un drama con trama entre la Sulamita, un pastor y Salomón?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Autores como Ewald y Ginsburg vieron un triángulo dramático donde la joven rechaza al rey Salomón por su pastor amado."
+        },
+        {
+          "label": "Estudio",
+          "body": "La mayoría de estudiosos literarios (Murphy, Fox, Pope) no encuentra evidencia textual suficiente para tal triángulo y lee los títulos regios y pastorales como juego poético tradicional del amor entre dos amantes."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-song",
+    "ce-canticle",
+    "je-bible-canon",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

@@ -1,0 +1,101 @@
+{
+  "id": "judas",
+  "title": "Judas",
+  "abbr": "Jud",
+  "order": 65,
+  "testament": "NT",
+  "summary": "Epístola encíclica vigorosa de veinticinco versículos escrita por «Judas, siervo de Jesucristo y hermano de Santiago»: planeando escribir sobre nuestra «común salvación», cambia bruscamente ante la infiltración de falsos maestros inmorales que convierten la gracia en libertinaje y niegan al único Señor; los desenmascara mediante tríadas memorables del Antiguo Testamento y tradiciones judías (1 Enoc 1:9 y Asunción de Moisés) y cierra con la doxología más gloriosa del Nuevo Testamento (vv. 24–25). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "epístola encíclica polémica",
+    "midrás tipológico en tríadas",
+    "doxología litúrgica final"
+  ],
+  "language": "Griego koiné enérgico, culto y denso con fuerte trasfondo apocalíptico palestino",
+  "date": {
+    "narrative": "Judas «hermano de Santiago» exhortando a «contender ardientemente por la fe que ha sido una vez dada a los santos» (v. 3)",
+    "composition": "Debatida: por Judas hermano del Señor (c. 60–80 d. C.) o por un maestro judeocristiano de su círculo hacia fines del siglo I d. C.",
+    "certainty": "discutida",
+    "note": "Su prioridad respecto a 2 Pedro 2 es hoy casi unánime; el uso libre de 1 Enoc refleja un período anterior a la exclusión tajante de libros apócrifos."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Judas concentra en un único capítulo de veinticinco versículos una fuerza retórica volcánica organizada en ternas simétricas (Dios amado-guardado-llamado; misericordia-paz-amor; Israel-ángeles-Sodoma; Caín-Balaam-Coré). Tras renunciar a un tratado pacífico para llamar a «contender ardientemente por la fe transmitida una vez para siempre» (v. 3), aplica ejemplos antiguos al desenfreno moral de intrusos soberbios con metáforas inolvidables —escollos ocultos en los ágapes, nubes sin agua, árboles estériles dos veces muertos, olas bravas, estrellas errantes— antes de exhortar con ternura a rescatar a los vacilantes y elevar la alabanza final a Aquel que es poderoso para guardar sin caída (vv. 24–25).\n\n[Estudio] Achille Camerlynck (Catholic Encyclopedia) subraya la maestría estilística en tríadas paralelas."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] En comunidades cristianas habituadas al banquete fraterno («ágapes» o comidas de amor, v. 12), maestros jactanciosos introducidos subrepticiamente predicaban una falsa espiritualidad visionaria que despreciaba las autoridades morales y convertía «la gracia de nuestro Dios en desenfreno (aselgeia)» sexual e insolencia verbal (vv. 4, 8, 16), rompiendo la unidad comunitaria con divisiones entre «espirituales» y «naturales» (v. 19)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Identificado tempranamente en el Fragmento Muratoriano, Tertuliano, Clemente de Alejandría y Orígenes con Judas, hermano de Santiago el Justo y pariente del Señor (Mt 13:55; Mc 6:3) —quien humildemente evita llamarse apóstol y se presenta «siervo de Jesucristo» (v. 1)—.\n\n[Estudio] Aun cuando algunos críticos plantean seudonimia posterior por el buen griego del autor y por el tono retrospectivo sobre «las palabras antes dichas por los apóstoles» (v. 17), investigadores como Bauckham señalan el fuerte sabor semítico palestino de su exégesis (cercano al estilo de Qumrán y al entorno familiar de Santiago) y el recurso respetuoso a libros judíos tempranos como 1 Enoc."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La preocupación cardinal de Judas es proteger el vínculo inseparable entre gracia y santidad: la salvación gratuita jamás autoriza el abuso inmoral ni la arrogancia ante las realidades espirituales (vv. 4, 8–10). Frente a intrusos cínicos, llama a edificarse sobre la fe santísima, orar en el Espíritu Santo, mantenerse en el amor de Dios aguardando la misericordia de Cristo y rescatar «arrebatando del fuego» a quienes dudan (vv. 20–23). Culmina con la doxología suprema: «Al único Dios nuestro Salvador, mediante Jesucristo nuestro Señor, sea gloria, majestad, imperio y autoridad desde antes de todos los siglos, ahora y por todos los siglos» (v. 25).\n\n[Tradición] Los versículos 3 y 24–25 resuenan en toda la historia litúrgica cristiana."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Presente íntegra en el papiro P72 (s. III–IV), P78 (s. III–IV), Codex Sinaiticus (núm. 58) y Vaticanus. Su variante textual más famosa se encuentra en el versículo 5 sobre quién rescató a Israel de Egipto: mientras muchos códices dicen «el Señor» (kyrios) o «Dios» (Sinaiticus), testigos muy antiguos notables (Vaticanus, Alejandrino y versiones) leen directamente «Jesús» (Iesous) liberando al pueblo de Egipto, lectura adoptada por varias ediciones críticas modernas (UBS5/NTV nota).\n\n[Texto] Tanto la NTV (1 capítulo, 25 vv.) como el Codex Sinaiticus (1 capítulo, 25 vv.) están completos."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque la cita explícita de 1 Enoc 1:9 (vv. 14–15) y el episodio del arcángel Miguel disputando el cuerpo de Moisés (v. 9, atribuido por Orígenes a la Asunción de Moisés) provocaron dudas ocasionales en algunos autores del siglo III–IV (reseñadas por Eusebio y Jerónimo), Clemente de Alejandría, Tertuliano, Atanasio y Cartago la confirmaron en el canon explicando que citar una verdad tradicional en un escrito extracanónico no canoniza toda la fuente (como Pablo cita poetas griegos en Hch 17 y Tit 1)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Judas de un tirón prestando atención a las ternas de ejemplos (Israel incrédulo / ángeles rebeldes / Sodoma; Caín / Balaam / Coré) para captar el arte retórico semítico.\n2. Comparar los vv. 4–18 con 2 Pedro 2 para ver cómo ambos textos comparten un armazón común.\n3. Notar en los vv. 20–23 el equilibrio pastoral tras la dureza: edificar en el Espíritu y mostrar misericordia discernida a los que vacilan.\n4. Disfrutar la doxología trinitaria-cristológica de los vv. 24–25 y notar la variante de «Señor / Dios / Jesús» en el v. 5."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Implica citar 1 Enoc 1:9 (vv. 14–15) y la Asunción de Moisés (v. 9) que Judas consideraba canónicos esos libros?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Jerónimo (De viris illustribus 4) observó que aunque esos apócrifos suscitaron reservas sobre Judas en algunas iglesias, la epístola ganó autoridad universal porque el apóstol cita únicamente un oráculo veraz conservado en la tradición (igual que Pablo cita a Menandro o Epiménides en 1 Co 15:33 y Tit 1:12)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Historiadores del judaísmo del Segundo Templo señalan que en el siglo I d. C. (antes de fijarse rígidamente los límites rabínicos y eclesiales del canon) círculos palestinos como Qumrán y grupos judeocristianos tempranos tenían en muy alta estima los escritos enóquicos."
+        }
+      ]
+    },
+    {
+      "question": "¿Utilizó 2 Pedro a Judas, o viceversa?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "El amplísimo consenso crítico actual concluye que 2 Pedro (cap. 2) adaptó y amplió a Judas (no al revés): es mucho más lógico que 2 Pedro haya omitido las citas incómodas de 1 Enoc y Miguel (dejando solo menciones generales a ángeles caídos y a Balaam) y que Judas fuera anterior."
+        },
+        {
+          "label": "Tradición",
+          "body": "Minorías conservadoras defendieron en el pasado que Judas desarrolló la profecía futura anunciada por Pedro («habrá falsos maestros», 2 P 2:1) como ya cumplida («se han infiltrado», Jud 4)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-jude",
+    "ce-canon-nt",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

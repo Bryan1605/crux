@@ -481,13 +481,13 @@ export function validateLibro(obj, slug, ctx = {}) {
 // --- léxico griego (fuente editable) ---
 export function validateLexico(obj) {
   required(obj, 'version', 'number', 'lexico');
-  if (obj.version !== 1) throw new Error(`lexico: versión desconocida (${obj.version})`);
+  if (![1, 2].includes(obj.version)) throw new Error(`lexico: versión desconocida (${obj.version})`);
 
   const glosas = required(obj, 'glosas', 'object', 'lexico');
   const keys = Object.keys(glosas);
-  if (keys.length !== 250) throw new Error(`lexico.glosas: se esperaban 250 entradas y hay ${keys.length}`);
+  if (keys.length < 250) throw new Error(`lexico.glosas: se esperaban al menos 250 entradas y hay ${keys.length}`);
   for (const [strong, gloss] of Object.entries(glosas)) {
-    if (!/^G\d{4}$/.test(strong)) throw new Error(`lexico.glosas: Strong inválido "${strong}"`);
+    if (!/^[GH]\d{4,5}[A-Z]?$/.test(strong)) throw new Error(`lexico.glosas: Strong inválido "${strong}"`);
     if (!isString(gloss) || !gloss.trim()) throw new Error(`lexico.glosas.${strong}: glosa vacía`);
   }
 

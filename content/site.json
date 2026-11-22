@@ -58,6 +58,7 @@
       { "label": "Biblia NTV", "href": "/biblia/ntv" },
       { "label": "Libros de la Biblia", "href": "/biblia/libros" },
       { "label": "Exégesis comparada", "href": "/exegesis" },
+      { "label": "Guía de lectura", "href": "/exegesis/guia" },
       { "label": "Apologética: Shincheonji", "href": "/apologetica/shincheonji" },
       { "label": "Videos", "href": "/videos" }
     ],

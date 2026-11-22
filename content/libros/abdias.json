@@ -1,0 +1,101 @@
+{
+  "id": "abdias",
+  "title": "Abdías",
+  "abbr": "Abd",
+  "order": 31,
+  "testament": "AT",
+  "summary": "El libro más breve del Antiguo Testamento en un único capítulo de veintiún versículos: oráculo de juicio contra Edom por su soberbia montañosa y su complicidad cruel tras la caída de Jerusalén, culminando en el anuncio del Día del Señor sobre todas las naciones y el reino definitivo de Yahvé en Sión. Protocanónico; completo en NTV y Codex Sinaiticus.",
+  "genre": [
+    "oráculo contra las naciones",
+    "profecía del Día del Señor",
+    "elegía teopolítica breve"
+  ],
+  "language": "Hebreo profético denso y elocuente en paralelismos breves",
+  "date": {
+    "narrative": "Saqueo de Jerusalén y traición de los edomitas capturando a los fugitivos judíos",
+    "composition": "Siglo VI a. C. (poco después de la caída de Jerusalén ante Babilonia en 586 a. C.)",
+    "certainty": "probable",
+    "note": "Los versos 10–14 reflejan vivamente la participación edomita en el desastre del 586 a. C. atestiguada también en Sal 137:7, Lm 4:21–22 y Ez 25:12."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — cuarto de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Abdiou, quinto en orden griego)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Abdías es una miniatura profética de veintiún versículos agrupados en un único capítulo, centrada en el conflicto milenario entre dos hermanos rivales: Jacob (Israel) y Esaú (Edom). Abre con un oráculo de derribo contra la arrogancia rocosa edomita («Aunque te remontes como el águila… de allí te haré descender», vv. 1–9), expone la causa moral inmediata —haber permanecido mirando con burla y entregando fugitivos el día de la catástrofe de Jerusalén (vv. 10–14)— y amplía la mira al Día del Señor sobre todas las naciones con la herencia restaurada del Monte Sión («Y el reino será del Señor», vv. 15–21).\n\n[Estudio] Hirsch y Barton (Jewish Encyclopedia) muestran sus notables paralelismos literales con Jeremías 49:7–22."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Situado al sur del Mar Muerto entre peñascos de Seír y Temán (la región luego asociada a Petra), Edom aprovechó el colapso de Judá bajo los babilonios en 586 a. C. para apoderarse del Neguev meridional y entregar a judíos fugitivos (Sal 137:7; Ez 35). Siglos después, las incursiones nabateas acabarían expulsando a los edomitas de su tierra ancestral hacia el sur de Judá (Idumea), cumpliendo históricamente el giro anunciado en los versículos 7 y 19."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Nada se conoce fuera del libro acerca del profeta Abdías («siervo de Yahvé»); el Talmud (Sanedrín 39b) lo identificó piadosamente con el administrador de Acab en 1 Reyes 18 o con un prosélito edomita.\n\n[Estudio] Como resume Francis Gigot (Catholic Encyclopedia), los versos iniciales 1–9 muestran cercanía casi palabra por palabra con Jeremías 49:7–16: bien Jeremías y Abdías aprovecharon un oráculo común más antiguo contra Edom, bien Abdías actualizó esa profecía incorporando la denuncia del saqueo del 586 a. C. (vv. 10–14) y la esperanza universal de vv. 15–21."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Abdías eleva la ley de reciprocidad ética internacional: quien se alegra de la ruina del hermano o saquea al vencido en el cruce de caminos sufrirá el mismo destino («Como hiciste, se hará contigo; tu recompensa volverá sobre tu cabeza», v. 15). Ninguna fortaleza natural ni alianza comercial protege del juicio moral del Creador. Al final, el horizonte supera la mera revancha tribal: cuando la justicia venza la soberbia, «liberadores subirán al monte Sión» y la soberanía exclusiva pasará a ser de Dios («el reino será del Señor», v. 21).\n\n[Tradición] Este versículo final resuena en la doxología de las Escrituras y de Apocalipsis 11:15."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Su brevedad hizo que se copiara siempre sin divisiones capitulares en los rollos hebreos de los Doce (Qumrán, Wadi Murabba’at) y en los códices griegos. En el orden de la Septuaginta ocupa el quinto lugar después de Joel y antes de Jonás, mientras en la ordenación masorética figura en cuarto lugar detrás de Amós (probablemente como desarrollo temático del «remanente de Edom» de Amós 9:12).\n\n[Texto] Tanto la NTV (1 capítulo, 21 vv.) como el Codex Sinaiticus (núm. 18; 1 capítulo, 21 vv.) lo transmiten íntegro y con coincidencia exacta versículo por versículo."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En la literatura rabínica y en los Padres de la Iglesia, Edom terminó convirtiéndose en símbolo cifrado de los imperios opresores sucesivos (Roma e incluso las potencias mundiales enemigas de Sión). Al mismo tiempo, la promesa final «el reino será del Señor» (v. 21) ingresó como frase culminante en la oración sinagogal diaria del Aleinu y en las antífonas cristianas sobre el reinado escatológico de Dios."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Abdías junto a Jeremías 49:7–22 y Salmo 137:7 para percibir el trauma compartido tras 586 a. C.\n2. Seguir la lista progresiva de complicidades reprobadas en los vv. 12–14: mirar con gozo, entrar a saquear y atajar al que huye.\n3. Observar el paso del v. 15 de lo particular («Edom») a lo universal («todas las naciones») y del v. 21 al reino definitivo de Dios.\n4. Confrontar directamente los 21 versículos entre NTV y Codex Sinaiticus en una sola vista."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Quién citó a quién entre Abdías 1–9 y Jeremías 49:7–16?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Gran parte de la crítica observa que los paralelos en Abdías forman un conjunto poético más trabado e intacto que en Jeremías 49, sugiriendo que ambos profetas bebieron de un oráculo anónimo preexistente contra Edom (o que Jeremías retomó un núcleo temprano)."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros comentaristas sostienen que el profeta posexílico Abdías citó libremente el oráculo de Jeremías y lo amplió aplicándolo explícitamente a los sucesos del 586 a. C."
+        }
+      ]
+    },
+    {
+      "question": "¿Alude el v. 11 al saqueo babilónico de 586 a. C. o a una invasión anterior bajo Joram (2 Cr 21)?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Autores antiguos (incluyendo algunos críticos conservadores que colocan Abdías en el s. IX a. C. por su vecindad con Amós) vincularon el saqueo con ataques filisteos y árabes bajo Joram."
+        },
+        {
+          "label": "Estudio",
+          "body": "La historiografía moderna mayoritaria identifica sin duda el v. 11 con la destrucción de Jerusalén del 586 a. C., descrita exactamente en términos idénticos en Ez 25:12 y Lm 4:21."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-obadiah",
+    "ce-abdias",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

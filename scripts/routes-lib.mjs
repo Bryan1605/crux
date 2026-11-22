@@ -19,6 +19,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { APOLOGETICA_FASCICULOS } from '../src/lib/apologeticaSeo.js';
+import { guiaLecturaSeo } from '../src/lib/guiaSeo.js';
 import { libroSeo, librosIndexSeo } from '../src/lib/librosSeo.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -150,6 +151,13 @@ export function siteRoutes() {
       description:
         'Lectura paralela de la Biblia, versículo a versículo: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.',
       type: 'website',
+      indexable: true
+    },
+    {
+      path: '/exegesis/guia',
+      ...guiaLecturaSeo(brand),
+      type: 'article',
+      ogImage: OG_IMAGE,
       indexable: true
     },
     {

@@ -1,0 +1,100 @@
+{
+  "id": "daniel",
+  "title": "Daniel",
+  "abbr": "Dn",
+  "order": 27,
+  "testament": "AT",
+  "summary": "Libro bilingüe (hebreo y arameo) en doce capítulos: seis relatos de fidelidad en la corte babilónica y persa (caps. 1–6: dieta, estatua imperial, horno ardiente, escritura en la pared y foso de los leones) y cuatro grandes visiones apocalípticas sobre la sucesión de imperios, «uno como hijo de hombre», las setenta semanas y la resurrección final (caps. 7–12). Protocanónico en sus doce capítulos; sus tres adiciones griegas son deuterocanónicas.",
+  "genre": [
+    "relato cortesano de diáspora",
+    "literatura apocalíptica simbólica",
+    "visión escatológica de la historia"
+  ],
+  "language": "Trilingüe según tradición: hebreo (1:1–2:4a y caps. 8–12), arameo (2:4b–7:28) y griego en adiciones deuterocanónicas",
+  "date": {
+    "narrative": "Desde el año 605 a. C. en Babilonia hasta el año tercero de Ciro el persa (c. 536 a. C.)",
+    "composition": "Debatida: redacción exílica del siglo VI a. C. frente a compilación definitiva bajo la crisis de Antíoco IV Epífanes (c. 167–164 a. C.)",
+    "certainty": "discutida",
+    "note": "Presente ya como libro sagrado en múltiples manuscritos de Qumrán desde finales del siglo II a. C. (4QDanc c. 125 a. C.)."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — ubicado entre los Escritos y no entre los Profetas en la Biblia hebrea)",
+    "catolico": "Antiguo Testamento (protocanónico caps. 1–12; deuterocanónico en Oración de Azarías / Cántico, Susana y Bel)",
+    "ortodoxo": "Antiguo Testamento (incluye las secciones griegas)",
+    "protestante": "Antiguo Testamento (solo los 12 capítulos hebreo-arameos; las adiciones griegas se editan entre los apócrifos)"
+  },
+  "notice": "En esta web, Daniel se lee en los 12 capítulos hebreo-arameos de la NTV (357 versículos); no sobrevive en los folios conservados del Codex Sinaiticus. Los pasajes griegos adicionales de Susana, Bel y el Dragón y el Cántico de los Tres Jóvenes pertenecen a la tradición deuterocanónica.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Daniel combina dos grandes géneros literarios repartidos exactamente en seis y seis capítulos: la primera mitad reúne relatos edificantes en tercera persona ambientados en Babilonia y Medopersia donde jóvenes sabios fieles a la Ley superan pruebas mortales (caps. 1–6); la segunda mitad adopta la voz en primera persona de Daniel para desplegar cuatro visiones apocalípticas cifradas en bestias monstruosas, ángeles intérpretes (Gabriel, Miguel), números simbólicos y el juicio final que entrega el reino eterno al Hijo del Hombre y a «los santos del Altísimo» (caps. 7–12).\n\n[Estudio] Curiosamente, la división lingüística (arameo de 2:4b hasta el final del cap. 7) cabalga entre ambos bloques uniendo el sueño de los cuatro reinos (2) con la visión paralela (7)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Mientras los relatos cortesanos reflejan recuerdos del ambiente babilónico-persa (como Nabónido y Belsasar en el cap. 5, corregente en Babilonia según las crónicas cuneiformes) junto a imprecisiones cronológicas notables («Darío el medo», ausencia de fuentes sobre asedios en 605), las profecías detalladísimas de los capítulos 8 y 11 trazan con precisión asombrosa las guerras entre lágidas y seléucidas hasta la profanación del altar por Antíoco IV Epífanes en 167 a. C., deteniendo el detalle justo antes de su muerte en 164 a. C.\n\nPor ello la mayoría de historiadores vincula la edición final del libro a la resistencia fiel judía («los entendidos / maskilim» de 11:33–35) bajo la persecución antioquena."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición judía y cristiana clásica atribuyó la redacción al propio Daniel en Babilonia en el siglo VI a. C., explicando el detalle de los imperios futuros como revelación profética directa.\n\n[Estudio] Ya en el siglo III d. C., el filósofo neoplatónico Porfirio propuso la datación macabea, tesis desarrollada sistemáticamente por la investigación histórica moderna (Hirsch y König en la Jewish Encyclopedia; reseñada y contrastada por Gigot en la Catholic Encyclopedia): tradiciones orales arameas anteriores del s. IV–III a. C. sobre un sabio Daniel habrían sido recopiladas y coronadas por las visiones hebreas (8–12) en 165 a. C."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Frente a imperios que se divinizan y persiguen el culto legítimo, Daniel proclama la soberanía absoluta del «Dios del cielo» que muda tiempos y estaciones, quita y pone reyes (2:21; 4:34–35) y garantiza que todos los reinos brutales pasan mientras permanece un Reino eterno otorgado a «uno como hijo de hombre» (7:13–14). Asimismo, el libro introduce la afirmación más explícita del Antiguo Testamento hebreo sobre la resurrección corporal individual: «Muchos de los que duermen en el polvo de la tierra serán despertados, unos para vida eterna y otros para vergüenza perpetua» (12:2).\n\n[Tradición] Jesús toma de Daniel 7:13 el título predilecto de «Hijo del Hombre»."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] En Qumrán aparecieron ocho rollos de Daniel —incluyendo los tránsitos lingüísticos exactos del arameo al hebreo en 2:4 y 8:1—, confirmando su alta autoridad temprana. En griego, la Iglesia primitiva terminó desplazando la versión Antigua de los Setenta (muy parafraseada y preservada en un único manuscrito griego tardío y el papiro 967) por la recensión literal de Teodoción, que incluye además Susana, la Oración de Azarías y el Cántico de los Tres Jóvenes, y Bel y el Dragón.\n\n[Texto] Aquí se consulta en la NTV (12 capítulos, 357 vv.); falta íntegramente del Codex Sinaiticus conservado."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] El peso de Daniel en el Nuevo Testamento es inmenso: desde la «abominación desoladora» citada en el Discurso del Monte de los Olivos (Mt 24:15) y el título de «Hijo del Hombre» viniendo en las nubes (Mc 14:62) hasta la iconografía entera del Apocalipsis (anciano de días, bestias, libros abiertos, reino eterno). Los Padres —Hipólito de Roma en el comentario bíblico cristiano más antiguo conservado, Jerónimo refutando a Porfirio— y la literatura escatológica posterior hallaron en Daniel la matriz de toda teología de la historia."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Notar el paralelismo entre Daniel 2 (la estatua de cuatro metales) y Daniel 7 (las cuatro bestias y el Hijo del Hombre): ambos enseñan la fragilidad de los imperios ante el Reino de Dios.\n2. Observar la frontera lingüística: caps. 2:4b–7 están escritos en arameo, lengua internacional de los imperios.\n3. Leer el género apocalíptico con atención a sus símbolos animales y numéricos (3,5 años / «un tiempo, tiempos y la mitad de un tiempo»).\n4. Recordar que las Biblias católicas y ortodoxas incorporan además tres capítulos/secciones griegas ausentes de la NTV."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue escrito en el siglo VI a. C. en Babilonia o compilado en su forma final hacia el 165 a. C. en Judea?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Defensores de la datación del s. VI a. C. destacan el conocimiento real de figuras babilónicas olvidadas luego por historiadores griegos (como Belsasar) y sostienen la capacidad profética predictiva de 7–11."
+        },
+        {
+          "label": "Estudio",
+          "body": "La historiografía crítica abrumadora apunta al 167–164 a. C. por su posición en los Ketuvim (fuera de los Profetas), préstamos lingüísticos persas y griegos («instrumentos musicales» en cap. 3), olvidos históricos sobre Babilonia y Media y la exactitud exclusiva hasta Antíoco IV."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo interpretar el «uno como hijo de hombre» (7:13) y las «setenta semanas» (9:24–27)?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Lecturas mesiánicas cristianas identifican en 7:13 al Mesías divino-humano y calculan las 70 semanas (490 años) hasta la venida, muerte y obra expiatoria de Cristo y la ruina de Jerusalén en el 70 d. C."
+        },
+        {
+          "label": "Estudio",
+          "body": "Exégesis histórico-críticas leen 7:13 ante todo como símbolo angélico-corporativo de «los santos del Altísimo» (7:18, 27) y encuadran las semanas simbólicas desde Jeremías hasta la crisis macabea del 167–164 a. C."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-daniel",
+    "ce-daniel",
+    "ce-canon-ot",
+    "tyndale-ntv-2009"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 
 import { BOOK_BY_ID } from '../data/exegesis';
-import { CANON_LABEL, FUENTES, bloquesDe, libroById } from '../data/libros';
+import { BOOKS_WITH_TRAD, CANON_LABEL, FUENTES, bloquesDe, libroById } from '../data/libros';
 import { libroSeo } from '../lib/librosSeo';
 import { useSite, useSeo } from '../lib/site';
 import NotFound from './NotFound';
@@ -43,6 +43,17 @@ export default function LibroFicha() {
 
   const book = BOOK_BY_ID.get(ficha.id);
   const hasNtv = Boolean(book?.ntv);
+  const hasTrad = BOOKS_WITH_TRAD.has(ficha.id);
+  const firstCap = ficha.id === '2-esdras' ? 9 : 1;
+  const tradCap = ficha.id === 'salmos' ? 151 : ficha.id === 'joel' ? 4 : firstCap;
+  const tradLabel =
+    hasTrad && hasNtv
+      ? ficha.id === 'salmos'
+        ? 'Salmo 151 (traducción de trabajo)'
+        : ficha.id === 'joel'
+          ? 'Joel 4 LXX (traducción de trabajo)'
+          : 'Traducción de trabajo'
+      : 'Traducción de trabajo';
 
   return (
     <main id="main" className="libros ficha">
@@ -70,12 +81,22 @@ export default function LibroFicha() {
                 Leer en la NTV
               </Link>
             )}
-            <Link className={`btn ${hasNtv ? 'btn--ghost' : 'btn--primary'}`} to={`/exegesis?libro=${ficha.id}&cap=1`}>
+            <Link className={`btn ${hasNtv ? 'btn--ghost' : 'btn--primary'}`} to={`/exegesis?libro=${ficha.id}&cap=${firstCap}`}>
               Leer en el Codex
             </Link>
-            {book?.codexOnly && (
-              <Link className="btn btn--ghost" to={`/exegesis?libro=${ficha.id}&cap=1&modo=trad`}>
-                Traducción de trabajo
+            {hasTrad && (
+              <Link className="btn btn--ghost" to={`/exegesis?libro=${ficha.id}&cap=${tradCap}&modo=trad`}>
+                {tradLabel}
+              </Link>
+            )}
+            {book?.ntvEquivalents?.includes('esdras') && (
+              <Link className="btn btn--ghost" to="/biblia/ntv?libro=esdras&cap=9">
+                Esdras en la NTV
+              </Link>
+            )}
+            {book?.ntvEquivalents?.includes('nehemias') && (
+              <Link className="btn btn--ghost" to="/biblia/ntv?libro=nehemias&cap=1">
+                Nehemías en la NTV
               </Link>
             )}
           </div>

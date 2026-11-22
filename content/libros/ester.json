@@ -1,0 +1,101 @@
+{
+  "id": "ester",
+  "title": "Ester",
+  "abbr": "Est",
+  "order": 17,
+  "testament": "AT",
+  "summary": "Relato cortesano en diez capítulos ubicado en Susa bajo el rey persa Asuero (Jerjes I): la reina judía Ester y su primo Mardoqueo desbaratan mediante audacia e inversión de suertes el decreto genocida de Amán, dando origen a la fiesta de Purim. Protocanónico en sus diez capítulos hebreos; los capítulos adicionales griegos son deuterocanónicos.",
+  "genre": [
+    "novela cortesana de diáspora",
+    "relato etiológico festivo (Purim)",
+    "literatura de inversión irónica"
+  ],
+  "language": "Hebreo bíblico tardío (texto breve protocanónico); seis extensas adiciones en griego septuagintal",
+  "date": {
+    "narrative": "Reinado de Asuero (Jerjes I, 486–465 a. C.) en la capital elamita de Susa",
+    "composition": "Período persa tardío o helenístico (siglos IV–II a. C.); traducciones/adiciones griegas hacia c. 114–78 a. C.",
+    "certainty": "probable",
+    "note": "El libro refleja conocimiento minucioso del palacio y protocolo aqueménida, pero su lengua y tono festivo lo sitúan probablemente en época persa tardía o helenística temprana."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — la «Meguilá» por excelencia entre las Cinco Meguilot, leída en Purim; solo el texto hebreo sin las adiciones griegas)",
+    "catolico": "Antiguo Testamento (protocanónico caps. 1–10:3; deuterocanónico en las seis secciones griegas A–F)",
+    "ortodoxo": "Antiguo Testamento (versión griega con las secciones adicionales)",
+    "protestante": "Antiguo Testamento (solo los 10 capítulos hebreos; las adiciones griegas se editan entre los apócrifos)"
+  },
+  "notice": "En esta web, la NTV ofrece los 10 capítulos hebreos (167 versículos), mientras el Codex Sinaiticus transmite la forma griega de la Septuaginta en 10 capítulos (164 versículos en su partición, incorporando las amplias secciones griegas adicionales de sueños, decretos y oraciones que cambian el contenido por capítulo).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Ester es una brillante comedia seria de diáspora marcada por banquetes simétricos, decretos irreversibles e inversiones repentinas: la deposición de Vasti abre paso a la coronación de la huérfana Hadasa/Ester; el odio del visir agagueo Amán fija por suertes (purim) el exterminio de los judíos el 13 de Adar; una noche de insomnio real invierte la trama hasta colgar a Amán en su propia horca y promulgar un contraedicto de defensa e instaurar para siempre la alegría anual de Purim.\n\n[Estudio] Como analizan Hirsch, Prince y Schechter (Jewish Encyclopedia), cada detalle sigue reglas dramáticas de ironía y espejo."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] El autor demuestra un conocimiento notable de la corte de Susa (pabellones con cortinajes de lino blanco y púrpura, siete eunucos, correo imperial rápido en mulas de posta, protocolo de audiencia mortal sin ser llamado) y del período persa tardío, cuando comunidades judías prósperas habitaban desde Babilonia hasta Egipto y Asia Menor (3:8: «un pueblo esparcido y disperso entre los pueblos»).\n\nEn el mundo helenístico posterior (cfr. 1–2 Macabeos), el «Día de Mardoqueo» (2 Mac 15:36) celebraba ya la supervivencia frente a persecuciones estatales."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atribuido en el judaísmo clásico a la Gran Asamblea a partir de cartas de Mardoqueo y Ester (9:20–32).\n\n[Estudio] Karen Jobes (NETS) y Arthur McMahon (Catholic Encyclopedia) resumen los estratos de su transmisión: tras un texto hebreo breve que llamativamente evita nombrar a Dios una sola vez, traductores y editores en lengua griega (con colofón al final de la versión griega mencionando a Lisímaco de Jerusalén y un cuarto año de Ptolomeo y Cleopatra) intercalaron seis amplias secciones religiosas —sueño de Mardoqueo, decretos reales, oraciones ardientes de Mardoqueo y Ester (caps. 4 y 13–14 en la numeración latina)— para explicitar la piedad y la oración."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La ausencia deliberada del nombre de Dios en el texto hebreo enseña una teología de la providencia silenciosa en tierra extranjera: Dios gobierna detrás del azar aparente de las suertes y el insomnio nocturno de un rey caprichoso (6:1). A la vez, el desafío de Mardoqueo a la reina dudosa («¿y quién sabe si para esta hora has llegado al reino?», 4:14) proclama que si alguien calla, «respiro y liberación vendrán de otro lugar», responsabilizando la valentía humana en el peligro.\n\n[Estudio] En el texto griego del Sinaiticus, la teología implícita se vuelve oración explícita ante el Dios soberano de Israel."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Ester posee una de las historias textuales más complejas del Antiguo Testamento: sobreviven la forma hebrea masorética (sin mención de Dios), la versión griega Antigua (OG, muy ampliada con seis secciones A–F, testigo principal en los grandes unciales Vaticano, Alejandrino y Sinaítico) y un tercer texto griego llamado Texto Alfa (Lucianico), más breve. Llamativamente, es el único libro del Tanaj del que no se ha identificado fragmento alguno en Qumrán.\n\n[Texto] Aquí la NTV trae los 10 capítulos hebreos (167 vv.) y el Codex Sinaiticus ofrece 10 capítulos griegos (164 vv. con las adiciones integradas)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque en el Talmud (Meguilá 7a) algunos sabios debatieron si «ensucia las manos» por no citar a Dios ni haber sido hallado en Qumrán, Meguilat Ester devino el libro más celebrado popularmente del judaísmo, leído con estruendo cada fiesta de Purim. En contraste, los Padres griegos y latinos lo citaron menos que otros libros (Atanasio y Melitón omitieron Ester en algunas listas, aunque Orígenes y Jerónimo —quien agrupó las adiciones griegas al final del libro— lo defendieron).\n\nLutero criticó el libro severamente por su tono nacionalista, mientras el protestantismo mantuvo el texto hebreo en el canon."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer el texto hebreo (NTV) fijándose en coincidencias aparentemente casuales (4:14; 6:1) donde se esconde la mano providencial.\n2. Contrastar los capítulos del Sinaiticus (esp. caps. 3–5 y 8–10) con la NTV para descubrir las extensas oraciones y decretos propios del texto griego.\n3. Notar el humor político que ridiculiza los decretos «irrevocables» de un imperio que depende de la vanidad del monarca.\n4. Entender la autodefensa armada del capítulo 9 dentro del marco de un decreto previo de aniquilación imposible de revocar jurídicamente."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Por qué omite por completo el nombre de Dios el libro hebreo de Ester?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La exégesis rabínica medieval (Ibn Ezra) y comentaristas clásicos sugirieron el ocultamiento prudente para un libro leído festivamente entre vino o con menciones paganas en Susa."
+        },
+        {
+          "label": "Estudio",
+          "body": "La mayoría de críticos literarios modernos ve un recurso artístico intencional que contrasta el ocultamiento del nombre divino («Ester» ligado popularmente al hebreo «ocultar» en el Talmud) con la certeza de que la historia no queda abandonada al azar de las suertes."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo se relacionan el texto masorético y las adiciones griegas de la Septuaginta?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Investigadores (Fox, Jobes) coinciden en que las seis adiciones (o al menos B, D y E redactadas en griego retórico) se insertaron en la traducción griega alejandrina o jerosolimitana para adaptar el relato al gusto teológico helenístico."
+        },
+        {
+          "label": "Tradición",
+          "body": "La Iglesia católica (Trento) declara canónico el libro íntegro con todas sus partes heredadas de la Vulgata antigua, mientras el judaísmo y el protestantismo restringen la canonicidad a los 10 capítulos hebreos."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-esther",
+    "ce-esther",
+    "jobes-nets-esther",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

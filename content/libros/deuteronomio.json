@@ -1,0 +1,101 @@
+{
+  "id": "deuteronomio",
+  "title": "Deuteronomio",
+  "abbr": "Dt",
+  "order": 5,
+  "testament": "AT",
+  "summary": "Quinto y último libro de la Torá en treinta y cuatro capítulos: tres grandes discursos de despedida de Moisés en Moab antes de cruzar el Jordán, repetición del Decálogo, el Shemá, un código centralizado de leyes y el cántico y muerte de Moisés. Protocanónico; en el Codex Sinaiticus sobreviven cinco capítulos.",
+  "genre": [
+    "discursos parenéticos de despedida",
+    "tratado de alianza (vasallaje)",
+    "código jurídico e himno final"
+  ],
+  "language": "Hebreo bíblico retórico-deuteronómico clásico; griego septuagintal (Deuteronomion)",
+  "date": {
+    "narrative": "Undécimo mes del año cuarenta tras el Éxodo, en las llanuras de Moab frente a Jericó",
+    "composition": "Discursos mosaicos según la tradición; redacción del núcleo jurídico vinculada por la crítica a la reforma de Josías (622 a. C.) y adición exílica",
+    "certainty": "discutida",
+    "note": "De Wette (1805) relacionó el código centralizado de los caps. 12–26 con el «libro de la Ley» hallado bajo el rey Josías en 2 Reyes 22."
+  },
+  "canon": {
+    "judio": "Tanaj (Torá — Devarim, «Palabras»)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Deuteronomio está completo en la NTV (34 capítulos, 959 versículos). Del Codex Sinaiticus solo sobreviven cinco capítulos (3–4 y 28–30; 87 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Deuteronomio —nombre nacido de la traducción griega de 17:18, «copia de esta ley»— adopta la forma de un testamento oratorio y renovación de alianza articulado en tres discursos de Moisés al otro lado del Jordán: repaso histórico de Cades a Moab (1:1–4:43), proclamación del Decálogo, el Shemá («Escucha, Israel», 6:4–9) y el Código Deuteronómico (4:44–26:19), y bendiciones, maldiciones y renovación del pacto culminadas en el Cántico de Moisés, su bendición y muerte en el monte Nebo (27–34).\n\n[Estudio] Su estructura jurídica reproduce sorprendentemente los tratados políticos de suzeranía del Antiguo Oriente (prólogo histórico, estipulaciones, testigos y bendiciones/maldiciones)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los tratados asirios de vasallaje de los siglos VIII–VII a. C. (como los juramentos de sucesión de Asarhaddón) ofrecen paralelos sorprendentes con la retórica lealista de Deuteronomio 13 y las maldiciones del capítulo 28. Para la historiografía crítica, la exigencia de centralizar el culto en «el lugar que Yahvé escoja» (cap. 12) fue el motor espiritual de la reforma del rey Josías en el 622 a. C. (2 Reyes 22–23) tras la caída del reino norteño de Israel y durante la crisis del dominio asirio."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición judía y patrística vio en el libro el testamento directo de Moisés salvo el relato final de su muerte y sepultura en el capítulo 34, atribuido en el Talmud a Josué.\n\n[Estudio] Jastrow, Driver, Hirsch y Jacob (Jewish Encyclopedia) y Anthony Maas (Catholic Encyclopedia) explican la síntesis entre el núcleo legal del siglo VII a. C., discursos marco que lo conectan con la gran «Historia Deuteronomista» (Josué–Reyes) durante el exilio babilónico y piezas poéticas más antiguas como el cántico de Moisés (cap. 32)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Deuteronomio concentra la religión de Israel en el amor indiviso al único Señor: «Amarás al Señor tu Dios con todo tu corazón, con toda tu alma y con todas tus fuerzas» (6:5). Ese amor se expresa en el recuerdo («acuérdate que fuiste esclavo»), la centralización del Templo, la protección generosa del huérfano, la viuda, el levita y el extranjero, la circuncisión del corazón (10:16; 30:6) y la libre decisión ante la vida y la muerte (30:19).\n\n[Tradición] Es uno de los libros más citados por Jesús (especialmente en las tentaciones, Mt 4) y por Pablo (Ro 10; Gá 3)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Deuteronomio fue uno de los libros más copiados en Qumrán (más de treinta rollos, solo superado por Salmos) y presenta célebres diferencias textuales con la Septuaginta y 4QDeut-q al cierre del Cántico de Moisés (32:8 y 32:43 sobre los «hijos de Dios» y las naciones). El papiro griego Rylands 458 (s. II a. C.) es uno de los testigos bíblicos más tempranos conocidos.\n\n[Texto] Aquí se consulta íntegro en la NTV (34 capítulos, 959 vv.); el Codex Sinaiticus solo conserva restos de los capítulos 3–4 y 28–30 (87 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] El Shemá de Dt 6:4–9 y 11:13–21 pasó a ser el credo y la oración diaria fundamental del judaísmo en la liturgia sinagogal, las filacterias y las mezuzot. En los Evangelios, Jesús responde las tres tentaciones en el desierto únicamente con citas de Deuteronomio 6 y 8, y une 6:5 con Levítico 19:18 como compendio de toda la Ley.\n\nTambién fundamentó la catequesis temprana de los Dos Caminos en la Didaché y la carta de Bernabé, así como la teología paulina de la fe accesible («la palabra está muy cerca de ti», Ro 10:6–8)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Escuchar la cadencia oratoria repetitiva («hoy», «escucha, Israel», «acuérdate») como un sermón que actualiza la alianza para cada nueva generación.\n2. Leer 6:4–9, 10:12–22 y 30:11–20 como síntesis de la espiritualidad de toda la Torá.\n3. Notar el vínculo directo entre las bendiciones/maldiciones (caps. 28–30, conservados en el Sinaiticus) y el destino posterior de Israel en Reyes.\n4. Comparar las variantes de Dt 32:8 y 32:43 entre NTV y tradiciones qumránicas/septuagintales."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Era Deuteronomio el «libro de la Ley» descubierto en el Templo bajo Josías en 622 a. C.?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de la historiografía crítica relaciona el código centralizado de Dt 12–26 con la reforma cultual de Josías descrita en 2 Reyes 22–23."
+        },
+        {
+          "label": "Tradición",
+          "body": "Exegetas tradicionales sostienen que el hallazgo recuperó un ejemplar antiguo del Pentateuco o de Deuteronomio escrito por Moisés que había permanecido oculto durante el reinado de Manasés."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo entender el mandato de destrucción completa (jerem) de las poblaciones cananeas en Dt 7 y 20?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Muchos historiadores observan que el vocabulario de conquista total refleja una retórica ideológica tardía de separación religiosa del s. VII–VI a. C. más que campañas reales exterminadoras, contradicha por la coexistencia mostrada en Jueces 1."
+        },
+        {
+          "label": "Tradición",
+          "body": "Las tradiciones judía y patrística lo leyeron como juicio histórico singular contra prácticas idolátricas extremas y, en clave espiritual (Orígenes), como lucha contra los vicios."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-deuteronomy",
+    "ce-deuteronomy",
+    "je-pentateuch",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

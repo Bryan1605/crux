@@ -1,0 +1,101 @@
+{
+  "id": "malaquias",
+  "title": "Malaquías",
+  "abbr": "Mal",
+  "order": 39,
+  "testament": "AT",
+  "summary": "Último libro de los Doce y cierre tradicional del Antiguo Testamento cristiano: cuatro capítulos en la NTV (tres capítulos en el Codex Sinaiticus) con seis disputas dialógicas entre Dios y el pueblo incrédulo en la Judea persa del siglo V a. C. sobre culto descuidado, infidelidad conyugal, diezmos y justicia, culminando en el anuncio del mensajero preparador y el regreso de Elías antes del Día del Señor. Protocanónico; completo en ambos testigos.",
+  "genre": [
+    "disputa profética dialogada (diatriba)",
+    "exhortación sacerdotal-ética",
+    "oráculo escatológico final"
+  ],
+  "language": "Hebreo bíblico posexílico tardío directo en formato de pregunta y objeción",
+  "date": {
+    "narrative": "Comunidad del Segundo Templo ya funcionando bajo un «gobernador» persa (1:8), con abusos paralelos a Nehemías 13",
+    "composition": "Mediados del siglo V a. C. (c. 460–430 a. C., poco antes o contemporáneo a Esdras y Nehemías)",
+    "certainty": "probable",
+    "note": "El Templo ya está reedificado y en pleno culto (1:10; 3:10), Edom ha sido devastado recientemente (1:2–4) y se repiten exactamente los males combatidos por Nehemías (diezmos, sacerdotes indiferentes, divorcios por matrimonios mixtos)."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — cierre de los Doce Profetas y fin de la sección profética en el canon hebreo)",
+    "catolico": "Antiguo Testamento (protocanónico; último libro del AT en las Biblias occidentales)",
+    "ortodoxo": "Antiguo Testamento (Malachias)",
+    "protestante": "Antiguo Testamento (cierre de los Profetas y del AT)"
+  },
+  "notice": "Atención a la numeración final: ambos testigos preservan exactamente los 55 versículos completos, pero la NTV los reparte en 4 capítulos (separando los últimos seis versículos en el capítulo 4), mientras el Codex Sinaiticus (núm. 25) y la Septuaginta los mantienen unidos en el capítulo 3 (3:19–24 = NTV 4:1–6) e invierten además los vv. 3:22 y 3:24 respecto al hebreo.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Malaquías adopta una forma literaria original conocida como diálogo de disputa escolar: seis controversias sucesivas siguen invariablemente el patrón «afirmación de Dios → réplica escéptica del pueblo («¿En qué nos has amado?», «¿En qué hemos despreciado tu nombre?») → refutación divina y llamado». Abarcan el amor gratuito frente a Edom (1:2–5), el culto indigno con animales defectuosos (1:6–2:9), el divorcio y matrimonios idolátricos (2:10–16), la duda sobre la justicia de Dios frente al anuncio del mensajero (2:17–3:5), el fraude en diezmos (3:6–12) y la vindicación final de los que temen a Dios antes de recordar la Ley de Moisés y esperar a Elías (3:13–4:6 NTV).\n\n[Estudio] Ya prefigura el método dialéctico de preguntas y respuestas de las escuelas posteriores."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Medio siglo después del entusiasmo constructor de Hageo y Zacarías (515 a. C.), el Templo estaba en pie pero el Reino mesiánico glorioso no había llegado; cundió el desencanto práctico («Es inútil servir a Dios», 3:14). Sacerdotes cansados calificaban de «fastidio» el altar aceptando animales ciegos o robados que no ofrecerían al gobernador persa (pehá, 1:8), mientras maridos judíos repudiaban «a la esposa de su juventud» (2:14).\n\nLas reformas casi idénticas descritas en Nehemías 13 ubican sólidamente el libro hacia 460–430 a. C."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Aunque tradicionalmente Malaquías se leyó como nombre propio, ya la Septuaginta en 1:1 vertió mal’akí como «por mano de su mensajero» (angelou autou) y el Tárgum de Jonatán identificó al autor con Esdras el escriba.\n\n[Estudio] Singer y Guttmacher (Jewish Encyclopedia) y Albin Van Hoonacker (Catholic Encyclopedia) coinciden en que el título actual «Oráculo de la palabra del Señor a Israel por mano de Malaquías» proviene posiblemente de 3:1 («He aquí yo envío a mi mensajero [mal’akí]»), siendo un profeta anónimo de enorme hondura moral cuyas seis disputas fueron editadas como bloque único al cierre del rollo de los Doce."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] En el momento de mayor desilusión posexílica, Malaquías reafirma el amor electivo de Dios y denuncia el divorcio ético en la alianza matrimonial («Yo aborrezco el divorcio», 2:16) y el culto rutinario sin honra al Padre (1:6). Su pasaje más sorprendente proclama que desde la salida del sol hasta el ocaso se ofrece ya «incienso y ofrenda pura» entre las naciones (1:11), mientras promete la venida súbita al Templo del «Mensajero del pacto» cual fuego purificador (3:1–3) precedido por Elías profeta para reconciliar padres e hijos (4:5–6).\n\n[Tradición] Todos los Evangelios sinópticos y Mateo 11:10 identifican en Juan el Bautista el cumplimiento de Malaquías 3:1 y 4:5."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitido sin grandes rupturas textuales salvo el célebre cambio de orden al final de los manuscritos: mientras la Biblia hebrea concluye en la advertencia de Elías con el anatemismo condicional de 3:24 (4:6 NTV), la Septuaginta —incluyendo el Codex Sinaiticus (núm. 25)— concluye en el v. 3:22 («Acuérdense de la Ley de Moisés…») para evitar cerrar el libro profético con la palabra «maldición» (herem), exactamente igual que las comunidades sinagogales que leen de nuevo 3:23 tras leer 3:24.\n\n[Texto] Aquí la NTV lo reparte en 4 capítulos (55 vv.) y el Sinaiticus en 3 capítulos (55 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Al ocupar en el canon cristiano el último puesto inmediato antes del Evangelio de Mateo, Malaquías se convirtió en puente teológico por excelencia entre los dos Testamentos: Marcos 1:2 abre su Evangelio citando Malaquías 3:1 («Envío mi mensajero delante de ti»); el anuncio del Bautista «en el espíritu y el poder de Elías… para volver el corazón de los padres hacia los hijos» (Lc 1:17) cita directamente Mal 4:5–6; y Pablo toma 1:2–3 («Amé a Jacob y aborrecí a Esaú») en Romanos 9:13.\n\nLa tradición cristiana patrística (Justino, Ireneo, Didaché 14) aplicó además Malaquías 1:11 («ofrenda pura en todo lugar entre las naciones») a la Eucaristía universal."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer las seis disputas identificando la voz cínica del oyente que replica «¿En qué…?» y la respuesta precisa de Dios.\n2. Recordar que los últimos seis versículos en NTV (cap. 4:1–6) corresponden exactamente a 3:19–24 en el Codex Sinaiticus.\n3. Notar cómo los versículos finales reúnen toda la Torá («Acuérdense de Moisés») y todos los Profetas («Envío a Elías»), sellando el diálogo del Antiguo Testamento.\n4. Abrir Marcos 1:2 y Lucas 1:17 justo al terminar Malaquías 4 para apreciar la costura canónica entre Testamentos."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Qué significa la «ofrenda pura» ofrecida entre las naciones en Malaquías 1:11?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica histórica entiende que el profeta alude elogiosamente a la veneración monoteísta extendida del Dios Altísimo en los altares de la diáspora judía o entre temerosos de Dios gentiles en época persa frente al descrédito del altar de Jerusalén."
+        },
+        {
+          "label": "Tradición",
+          "body": "Desde la Didaché (cap. 14), Justino Mártir e Ireneo hasta el Concilio de Trento, la exégesis cristiana leyó 1:11 en sentido futuro profético sobre el culto universal cristiano y el sacrificio eucarístico."
+        }
+      ]
+    },
+    {
+      "question": "¿Fue «Malaquías» el nombre propio del profeta o un título editorial derivado de 3:1?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de biblistas modernos (notando que la LXX dice «su mensajero», ningún otro lugar menciona al personaje y 1:1 repite la fórmula anónima massá de Zacarías 9:1 y 12:1) concluye que es título editorial anónimo («Mi mensajero»)."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros exegetas conservan Malaquías como nombre propio abreviado de Malakiyá («mensajero de Yahvé»), paralelo al uso habitual de los Doce Profetas encabezados por nombre personal."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-malachi",
+    "ce-malachias",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

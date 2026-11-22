@@ -1,0 +1,101 @@
+{
+  "id": "levitico",
+  "title": "Levítico",
+  "abbr": "Lv",
+  "order": 3,
+  "testament": "AT",
+  "summary": "Tercer libro del Pentateuco en veintisiete capítulos dedicado al culto sacrificial, la consagración sacerdotal de Aarón, la pureza ritual y el Código de Santidad culminado en «amarás a tu prójimo como a ti mismo». Protocanónico; en el Codex Sinaiticus solo sobreviven los capítulos 20–22.",
+  "genre": [
+    "manual litúrgico-sacrificial",
+    "código de santidad ética",
+    "narrativa cultual breve"
+  ],
+  "language": "Hebreo bíblico sacerdotal clásico; griego septuagintal (Leuitikon)",
+  "date": {
+    "narrative": "Instrucciones dictadas a Moisés en la Tienda de Reunión al pie del monte Sinaí antes de partir",
+    "composition": "Debatida: tradiciones cúlticas tempranas del santuario sistematizadas en la redacción sacerdotal exílica o posexílica (c. s. VI–V a. C.)",
+    "certainty": "discutida",
+    "note": "Muchos especialistas datan el Código de Santidad (caps. 17–26) en torno al exilio o fines de la monarquía de Judá, mientras tradiciones litúrgicas nucleares reflejan usos más antiguos."
+  },
+  "canon": {
+    "judio": "Tanaj (Torá — Vayikrá; libro central de la Ley y primer texto en la enseñanza tradicional infantil)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Levítico está completo en la NTV (27 capítulos, 859 versículos). Del Codex Sinaiticus solo se conservan tres capítulos (20–22, 55 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Levítico se aparta de la narrativa épica para centrarse durante veintisiete capítulos en la legislación ritual y ética revelada desde la Tienda de Reunión. Comprende cinco bloques principales: leyes sobre los cinco grandes sacrificios (caps. 1–7), investidura sacerdotal de Aarón e incidente de Nadab y Abiú (caps. 8–10), normas sobre lo puro e impuro (caps. 11–15), el rito central del Día de la Expiación o Yom Kipur (cap. 16) y el «Código de Santidad» con las fiestas y el año jubilar (caps. 17–27).\n\n[Estudio] Su nombre castellano proviene del griego Leuitikon y del latín Vulgata, aunque concierne sobre todo a los hijos de Aarón y a todo Israel."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Levítico responde a la cuestión vital de cómo un Dios santo puede habitar en medio de una comunidad humana frágil sin que la impureza y la culpa destruyan el santuario. Tanto si el orden cúltico remonta al período del primer Templo de Jerusalén como si su codificación definitiva respondió al programa de reconstrucción sacerdotal del Segundo Templo (siglos VI–V a. C.), sus ritos guardan analogías terminológicas y prácticas con los sistemas sacrificiales del Levante antiguo.\n\n[Tradición] En Israel definió el calendario sagrado y la separación ética frente a los pueblos vecinos."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición atribuye sus revelaciones directamente a Moisés en el Sinaí (cf. 26:46; 27:34).\n\n[Estudio] Hirsch y Barton (Jewish Encyclopedia) distinguen al menos dos grandes estratos sacerdotales: el núcleo ritual de los capítulos 1–16 (P) y el llamado Código de Santidad en los capítulos 17–26 (H, marcado por el estribillo «Sean santos, porque yo, el Señor su Dios, soy santo»), más un apéndice sobre votos en el capítulo 27. Para parte de la crítica reciente, H actuó como la última mano redaccional que unificó el libro entero."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La sangre «hace expiación por la vida» (17:11), descontaminando el santuario mediante el Yom Kipur anual (cap. 16). Pero la santidad nunca queda reducida al rito externo: el capítulo 19 entrelaza reverencia a los padres, sábado y cuidado del pobre con el mandato supremo «amarás a tu prójimo como a ti mismo» (19:18) y al extranjero (19:34), mientras el jubileo de 25:10 proclama libertad social y descanso de la tierra.\n\n[Tradición] Jesús cita Levítico 19:18 junto al Shemá como segundo gran mandamiento (Mt 22:39), y Hebreos lee la cruz como cumplimiento del Día de la Expiación."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El texto hebreo de Levítico se transmitió con notable estabilidad, confirmada por rollos arcaicos de Qumrán en escritura paleohebrea (como 11QpaleoLev); la Septuaginta reproduce casi palabra por palabra su vocabulario técnico cúltico. Su presencia escasa en el Codex Sinaiticus obedece únicamente a mutilación física del inicio del códice, que en su origen abría con el Pentateuco entero.\n\n[Texto] Aquí se lee completo en la NTV (27 capítulos, 859 versículos), mientras el Codex Sinaiticus conserva únicamente los capítulos 20–22 (55 versículos)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En el judaísmo, Levítico —denominado Torat Kohanim («Ley de los sacerdotes»)— dio materia a gran parte del orden Qodashim y al comentario halájico Sifrá. Para el cristianismo primitivo, tras el cese de los sacrificios en el Templo, la Epístola a los Hebreos (caps. 7–10) y Clemente de Alejandría interpretaron sus ritos tipológicamente en Cristo sumo sacerdote, mientras las cartas apostólicas citaron 19:18 y 11:44 («sean santos», 1 P 1:16).\n\nSu lectura sigue vigente en la liturgia anual judía, los leccionarios cristianos y la teología moral del perdón."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer el cap. 16 (Yom Kipur) como la bisagra central de todo el libro entre la pureza ritual (1–15) y la santidad moral (17–26).\n2. No confundir «impureza ritual» (estados físicos transitorios que exigen purificación antes de acercarse al santuario) con culpa moral.\n3. Observar cómo el capítulo 19 sitúa el amor al prójimo (19:18) y al forastero en el corazón mismo de las leyes de santidad.\n4. En los capítulos 20–22, comparar directamente la NTV con los folios griegos conservados del Codex Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue redactado el código sacerdotal antes o después del exilio de Babilonia?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La escuela clásica de Wellhausen (reflejada en la Jewish Encyclopedia) situó P y el propio Levítico en el período exílico y posexílico (s. V a. C.) por su centralización absoluta en Jerusalén."
+        },
+        {
+          "label": "Estudio",
+          "body": "Investigadores posteriores (Kaufmann, Milgrom, Knohl) sostienen que la lengua y las prácticas de P reflejan tradiciones preexílicas del santuario de Jerusalén conservadas durante siglos antes de su edición final."
+        }
+      ]
+    },
+    {
+      "question": "¿Caducaron íntegramente sus leyes cúlticas o mantienen vigencia permanente sus principios éticos?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La teología cristiana clásica distingue entre preceptos ceremoniales (cumplidos y cesados en Cristo según Hechos 15 y Hebreos) y principios morales permanentes (como 19:18)."
+        },
+        {
+          "label": "Tradición",
+          "body": "La tradición judía rabínica mantiene la obligatoriedad halájica del texto, adaptando la imposibilidad de los sacrificios desde el 70 d. C. mediante la oración y el estudio de la Torá."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-leviticus",
+    "ce-leviticus",
+    "ce-pentateuch",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

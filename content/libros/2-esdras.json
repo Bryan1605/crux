@@ -1,0 +1,101 @@
+{
+  "id": "2-esdras",
+  "title": "2 Esdras",
+  "abbr": "2 Esd",
+  "order": 15.5,
+  "testament": "AT",
+  "summary": "Bajo el título «2 Esdras» (Esdras B de la Septuaginta), el Codex Sinaiticus transmite en un solo libro continuo la versión griega de los libros canónicos de Esdras y Nehemías. En el códice se perdieron los primeros ocho capítulos y el comienzo del noveno: el texto conservado empieza en 9:9 (Esdras 9:9) y llega hasta el capítulo 23 (Nehemías 13). No debe confundirse con el apocalipsis judío llamado «2 Esdras» o «4 Esdras» en los apócrifos latinos e ingleses.",
+  "genre": [
+    "narración histórica",
+    "memorias en primera persona",
+    "listas genealógicas y documentos oficiales",
+    "oración penitencial"
+  ],
+  "language": "Griego de la Septuaginta (traducción muy literal desde el texto hebreo y arameo de Esdras y Nehemías)",
+  "date": {
+    "narrative": "Época persa: desde el edicto de Ciro (538 a. C.) hasta las misiones de Esdras y Nehemías en Jerusalén durante el siglo V a. C.",
+    "composition": "Original hebreo-arameo en época persa tardía o helenística temprana (s. IV–III a. C.); traducción griega (Esdras B) hacia el s. II–I a. C.",
+    "certainty": "discutida",
+    "note": "La cronología relativa entre las misiones de Esdras y Nehemías y la fecha exacta de la versión griega literal siguen abiertas en la investigación."
+  },
+  "canon": {
+    "judio": "Canónico en su original hebreo-arameo como un solo libro («Esdras») dentro de los Escritos (Ketuvim)",
+    "catolico": "Canónico, dividido en dos libros desde la Vulgata: Esdras (1 Esdras) y Nehemías (2 Esdras)",
+    "ortodoxo": "Canónico en las Iglesias ortodoxas como «2 Esdras» (Esdras B), junto a 1 Esdras (Esdras A)",
+    "protestante": "Canónico, dividido en los libros de Esdras y Nehemías"
+  },
+  "notice": "El «2 Esdras» del Codex Sinaiticus (Esdras B) es el Esdras–Nehemías griego, no el 2 Esdras apocalíptico (4 Ezra). Sus capítulos 1–10 corresponden a Esdras 1–10 (el códice solo conserva desde 9:9) y sus capítulos 11–23 corresponden a Nehemías 1–13. Como la NTV ya publica Esdras y Nehemías por separado, este libro no se traduce de nuevo en la columna de traducción de trabajo.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] El libro que la Septuaginta y el Codex Sinaiticus titulan «2 Esdras» (Esdras B) reúne en una sola obra de veintitrés capítulos los dos libros que las Biblias actuales separan como Esdras (caps. 1–10) y Nehemías (caps. 11–23). Combina narración histórica, memorias en primera persona de Esdras (caps. 7–9) y de Nehemías (caps. 11–17 y 22–23), cartas oficiales persas, censos de repatriados y grandes plegarias de confesión (caps. 9 y 19).\n\n[Estudio] Al pasar de Esdras 10 a Nehemías 1 (11:1), el manuscrito inserta el encabezamiento «Palabras de Nehemías, hijo de Jacalías», manteniendo la numeración corrida hasta el capítulo 23."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Texto] El relato completo abarca la restauración de Judá bajo el imperio persa aqueménida: el regreso bajo Ciro, la reconstrucción del Templo bajo Darío I y las misiones de Esdras y Nehemías bajo Artajerjes. En los capítulos que conserva el Sinaítico (9:9–23:31), la acción comienza en medio de la oración de Esdras ante los matrimonios mixtos (caps. 9–10) y sigue con la llegada de Nehemías para levantar la muralla (caps. 11–16), el censo (cap. 17), la lectura pública de la ley de Moisés y la renovación del pacto (caps. 18–20), la dedicación del muro (caps. 21–22) y las reformas finales de Nehemías (cap. 23).\n\n[Estudio] La traducción griega surgió hacia los siglos II–I a. C., cuando los lectores judeohelenísticos buscaron una versión completa del libro semítico frente a la versión griega más libre llamada 1 Esdras (Esdras A)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] En la tradición judía antigua (Talmud babilónico, Bava Batra 15a) Esdras y Nehemías formaban un solo libro. Los Padres que describen el canon hebreo —Melitón, Orígenes, Hilarión y Jerónimo— atestiguan esa misma unidad; Orígenes mencionó la división en dos partes y Jerónimo llamó «Segundo de Esdras» al libro de Nehemías.\n\n[Estudio] El original alterna el hebreo con dos tramos documentales en arameo (Esdras 4:8–6:18 y 7:12–26, en la parte hoy perdida del Sinaítico). Según R. Glenn Wooden (NETS), el griego de 2 Esdras destaca por su perfil extremadamente literal, mecánico y casi interlineal, que calca el orden y las formas del original semítico."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] En el tramo conservado por el códice sobresalen tres ejes: la supervivencia del remanente por la misericordia divina en medio de la servidumbre persa (9:9), la reconstrucción de las murallas de Jerusalén como resguardo de la comunidad (caps. 11–16) y la centralidad de la Torá leída públicamente en la plaza de la Puerta del Agua (cap. 18). La confesión levítica del capítulo 19 (Nehemías 9) recorre la historia desde la creación y Abrahán hasta el exilio para contrastar la fidelidad de Dios con la reincidencia humana.\n\n[Estudio] Al presentar sin corte Esdras 9–10 y la obra de Nehemías, el libro muestra que el Templo, el muro y la ley integran una misma restauración comunitaria."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] La edición crítica de referencia es la de Robert Hanhart en la serie de Gotinga (Esdrae liber II, 1993). Su texto griego refleja un modelo hebreo-arameo muy cercano al masorético.\n\nEn el Codex Sinaiticus, tras una pérdida de cuadernos que corta 1 Crónicas en 19:17, el folio siguiente retoma directamente en 2 Esdras 9:9 (Esdras 9:9), por lo que faltan los capítulos 1–8 y 9:1–8 (salto ya advertido por una nota marginal antigua). El códice conserva así 15 capítulos (caps. 9–23) y 454 versículos, sin incluir los versículos 13:7 (Nehemías 3:7) ni 17:69 (Nehemías 7:69)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Tanto el canon judío como los cánones cristianos reciben Esdras y Nehemías como Escritura canónica. La dificultad histórica está en los nombres: la Septuaginta llamó «1 Esdras» (Esdras A) a una compilación griega con el relato de los tres guardias de Darío y «2 Esdras» (Esdras B) al libro canónico de Esdras–Nehemías. Jerónimo, en la Vulgata, reservó «1 Esdras» para Esdras y «2 Esdras» para Nehemías, dejando como «3 Esdras» y «4 Esdras» los libros apócrifos.\n\n[Estudio] En las Biblias protestantes en inglés desde el siglo XVI, los canónicos se llamaron Ezra y Nehemiah y los dos del apéndice pasaron a llamarse 1 Esdras y 2 Esdras; por eso en inglés «2 Esdras» suele designar el apocalipsis de 4 Esdras y no el Esdras B del Sinaítico."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Usar la equivalencia de capítulos: en el Codex Sinaiticus, 2 Esdras 9–10 es Esdras 9–10 y 2 Esdras 11–23 es Nehemías 1–13 (basta restar diez al capítulo para obtener el de Nehemías).\n2. No buscar aquí las visiones apocalípticas de 4 Esdras: este texto es historia y memorias del período persa.\n3. Cotejar el griego desde 9:9 con Esdras y Nehemías en la NTV: aunque la división de libros difiere, corresponden al mismo texto bíblico.\n4. Fijarse en las transliteraciones griegas de términos hebreos (como «manaa» en 9:4 o «jattat» en 10:29), sello propio del traductor de Esdras B."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Por qué el título «2 Esdras» designa obras tan diferentes según la tradición?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "En la tradición griega (Septuaginta y Biblias ortodoxas), «2 Esdras» (Esdras B) es el libro que une Esdras y Nehemías; en la Vulgata latina hasta el siglo XX, «2 Esdras» era únicamente el libro de Nehemías."
+        },
+        {
+          "label": "Estudio",
+          "body": "En la tradición impresa inglesa (Ginebra, King James, NRSV) los libros canónicos se llaman Ezra y Nehemiah, y el título «2 Esdras» pasó a designar el apocalipsis judío de 4 Esdras (finales del s. I d. C., con sus adiciones cristianas 5 y 6 Esdras)."
+        }
+      ]
+    },
+    {
+      "question": "¿Formaban Esdras–Nehemías y los libros de las Crónicas una sola obra del mismo autor?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Durante los siglos XIX y XX predominó la hipótesis (Zunz, Movers, Torrey, recogida en la Jewish Encyclopedia y la Catholic Encyclopedia) de que un mismo «Cronista» redactó Crónicas y Esdras–Nehemías como una historia continua, apoyándose en el solapamiento entre 2 Crónicas 36:22–23 y Esdras 1:1–3."
+        },
+        {
+          "label": "Estudio",
+          "body": "Gran parte de la investigación reciente (como señala Wooden en NETS tras los estudios de Japhet y Williamson) distingue la teología, el vocabulario y el perfil de traducción griega de Esdras–Nehemías frente a los de Crónicas y los trata como obras de composición y traducción separadas."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "gottheil-1906-esdras",
+    "souvay-1909-esdras",
+    "wooden-nets-2esdras",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-20"
+}

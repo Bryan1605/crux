@@ -38,6 +38,50 @@
   margin: 0;
 }
 
+.exg__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.exg-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.45rem 0.95rem;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.exg-tool:hover,
+.exg-tool:focus-visible {
+  background: var(--panel-hover);
+  border-color: #d6b25e;
+}
+
+.exg-tool__glyph {
+  font-family: var(--font-greek, Georgia, serif);
+  font-size: 0.96rem;
+  color: #d6b25e;
+}
+
+.exg-tool--guide {
+  border-color: color-mix(in srgb, #d6b25e 38%, transparent);
+}
+
 .exg__notice {
   margin: 0 0 1rem;
   padding: 0.7rem 0.9rem;
@@ -146,7 +190,7 @@
 .exg[data-theme='sepia'] {
   --paper: #f4e9d6;
   --ink: #3a2f22;
-  --ink-soft: #7d6c53;
+  --ink-soft: #62513a;
   --rule: rgba(58, 47, 34, 0.2);
 }
 
@@ -382,6 +426,14 @@
 
 .exg-word .exg-ns {
   pointer-events: none;
+}
+
+.exg-word--plain {
+  cursor: text;
+}
+
+.exg-word--plain:hover {
+  background: transparent;
 }
 
 /* Marca del proyecto dentro de la transcripción: no es una letra griega. */

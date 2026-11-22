@@ -2,6 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { Link, useSearchParams } from 'react-router-dom';
 
 import { loadBiblia, searchBiblia } from '../data/biblia';
+import { portadaDe } from '../data/obras';
 import { bookGeometry, packBook, resolvePage } from '../lib/bookPages';
 import { assetUrl } from '../lib/assets';
 import { PERSONAJES } from '../data/personajes';
@@ -884,11 +885,15 @@ export default function Biblia() {
 
   /* -------------------------------- portada ------------------------------- */
 
-  const domeImages = book.parts.map((part, i) => ({
-    src: DOME_POOL[i % DOME_POOL.length],
-    alt: part.label,
-    value: part.id
-  }));
+  const domeImages = book.parts.map((part, i) => {
+    const info = partInfo(part.label);
+    const cover = portadaDe(info.num);
+    return {
+      src: cover?.src || DOME_POOL[i % DOME_POOL.length],
+      alt: cover?.alt || part.label,
+      value: part.id
+    };
+  });
 
   const reduced = prefersReduced();
 

@@ -1,0 +1,101 @@
+{
+  "id": "galatas",
+  "title": "Gálatas",
+  "abbr": "Gá",
+  "order": 48,
+  "testament": "NT",
+  "summary": "Carta fogosa de Pablo en seis capítulos ante la crisis de las iglesias de Galacia persuadidas de adoptar la circuncisión y la Ley mosaica para completar la fe en Cristo: defensa autobiográfica de su apostolado recibido por revelación (1–2), exposición ardiente de la justificación por la fe en la promesa de Abraham frente a la tutela temporal de la Ley (3–4) y libertad que obra por el amor y da el fruto del Espíritu (5–6). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "epístola polémica apologética",
+    "argumentación escriturística rabínico-alegórica",
+    "exhortación ética de la libertad"
+  ],
+  "language": "Griego koiné electrizante, urgente y sin fórmula inicial de acción de gracias",
+  "date": {
+    "narrative": "Poco después del encuentro de Pablo con los pilares de Jerusalén y su choque público con Pedro en Antioquía (2:1–14)",
+    "composition": "Debatida entre c. 48–49 d. C. (Galacia del Sur, antes de Hch 15) o c. 54–55 d. C. (Galacia del Norte, cercana a Romanos)",
+    "certainty": "probable",
+    "note": "Es junto con 1 Tesalonicenses la candidata más firme a ser la epístola más temprana del Nuevo Testamento."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Gálatas prescinde excepcionalmente del elogio y acción de gracias habitual tras el saludo para lanzar un asombro indignado en seis capítulos compactos: I. Defensa autobiográfica de la independencia divina del Evangelio predicado por Pablo, desde su vocación en Damasco hasta la aprobación en Jerusalén y el incidente de Antioquía con Pedro (caps. 1–2); II. Argumento teológico y bíblico sobre la experiencia del Espíritu y Abraham justificado por fe antes que existiera el Sinaí, más la alegoría de Sara y Agar (caps. 3–4); III. Llamado a defender la libertad frente a la esclavitud legal sin caer en libertinaje carnal, contrastando obras de la carne frente al fruto del Espíritu, sellado de puño y letra con «letras grandes» (caps. 5–6).\n\n[Estudio] Su estructura recuerda vivamente el discurso forense clásico de defensa."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Después que Pablo predicara a Cristo crucificado entre poblaciones gentiles de Asia Menor («debilidad de la carne», 4:13), misioneros rivales procedentes de Judea enseñaron en Galacia que la fe en el Mesías judío exigía integrarse plenamente al pueblo de Israel mediante la circuncisión y el calendario de la Torá. Para Pablo, ceder ante esa exigencia —quizá también motivada para gozar de la exención legal sinagogal frente al culto imperial romano (6:12)— equivale a declarar que «Cristo murió en vano» (2:21)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] Escrita directamente por Pablo sin mención de amanuense («¡Miren con qué grandes letras les escribo de mi propia mano!», 6:11) junto a «todos los hermanos que están conmigo» (1:2).\n\n[Estudio] Cornelius Aherne (Catholic Encyclopedia) expone las dos grandes hipótesis geográfico-cronológicas de la investigación paulina: los defensores de «Galacia del Sur» (ciudades romanas de Antioquía de Pisidia, Iconio, Listra y Derbe evangelizadas en Hechos 13–14, datando Gálatas en c. 48–49 d. C. antes del Concilio de Jerusalén) frente a quienes favorecen «Galacia del Norte» (c. 54–55 d. C., por afinidad temática estrecha con Romanos)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Gálatas es la carta magna de la libertad cristiana: nadie es justificado por obras de la ley, sino por la fe de/en Jesucristo (2:16), a quien el creyente queda unido en muerte y vida nueva («Con Cristo estoy juntamente crucificado, y ya no vivo yo, sino que Cristo vive en mí», 2:20). En Cristo quedan abolidas las barreras religiosas y sociales excluyentes: «Ya no hay judío ni griego, esclavo ni libre, hombre ni mujer; todos ustedes son uno en Cristo Jesús» (3:28). Esa libertad no autoriza el egoísmo sino el servicio mutuo movido por el fruto del Espíritu («amor, gozo, paz, paciencia…», 5:22).\n\n[Tradición] Constituyó la brújula doctrinal principal de Lutero en su comentario de 1535 («mi epístola querida»)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Atestiguada tempranamente en P46 (c. 200 d. C.), P51 y todos los grandes unciales con extraordinaria estabilidad textual; destacan variaciones menores como la lectura de «no cedimos ni por un instante» en 2:5 (ausente de pocos testigos occidentales pero firme en el Sinaiticus y P46) y el nombre del monte Sinaí en 4:25.\n\n[Texto] Tanto la NTV (6 capítulos, 149 vv.) como el Codex Sinaiticus (núm. 40; 6 capítulos, 149 vv.) concuerdan íntegros versículo a versículo."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Por la fuerza polémica de Gálatas 2:11–14 (reproche de Pablo a Pedro en Antioquía), Orígenes, Jerónimo y Agustín sostuvieron un famoso debate epistolar acerca de si la escena fue real o una escenificación pedagógica de ambos apóstoles; Agustín defendió la sinceridad de la corrección fraterna y la humildad de Pedro al aceptarla. Juan Crisóstomo dedicó un comentario continuo entero, y desde la Reforma protestante Gálatas 2:16 y 3:28 sostuvieron tanto la teología de la gracia como movimientos posteriores por la igualdad abolicionista y de dignidad humana."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Gálatas de un tirón captando la urgencia apasionada desde 1:6 («Estoy asombrado de que tan pronto se estén apartando…»).\n2. Seguir la línea temporal explícita de Pablo en 1:15–2:14 para reconstruir los primeros catorce años apostólicos independientes de su predicación.\n3. Distinguir la función histórica de la Ley como «ayo/tutor» temporal hasta la venida de Cristo (3:24–25) frente a la permanencia eterna de la promesa a Abraham (3:17).\n4. Comparar los dos listados éticos paralelos de 5:19–23 y la exhortación final de 6:1–10."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Se dirige la epístola a las iglesias de la provincia romana meridional (Iconio, Listra, Derbe) o a la región étnica de Galacia del Norte?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La hipótesis de Galacia del Sur (Ramsay, Bruce, Longenecker) destaca que Hechos 13–14 detalla fundaciones en esa provincia romana, donde Bernabé era conocido (Gá 2:13) y el silencio sobre el decreto de Hch 15 sugiere una fecha muy temprana (48–49 d. C.)."
+        },
+        {
+          "label": "Estudio",
+          "body": "La hipótesis de Galacia del Norte (Lightfoot, Martyn) observa el llamamiento étnico «¡oh gálatas!» (3:1) y la cercanía teológica estrechísima entre Gálatas y Romanos, situándola alrededor de 54–55 d. C."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo interpretar la expresión pistis Christou en 2:16 y 3:22: «fe en Cristo» o «fidelidad de Cristo»?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La traducción tradicional como genitivo objetivo («fe en Jesucristo») subraya que el creyente es justificado por depositar su confianza en Cristo y no por obras de la Ley (cfr. 2:16b «creímos en Cristo Jesús»)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Numerosos especialistas actuales (Hays, Wright) proponen el genitivo subjetivo («por la fidelidad misma de Jesucristo» hasta la cruz), acentuando el acto fiel de Jesús como fundamento objetivo antes que la fe humana."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-galatians",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

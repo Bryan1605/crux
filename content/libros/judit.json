@@ -1,0 +1,100 @@
+{
+  "id": "judit",
+  "title": "Judit",
+  "abbr": "Jdt",
+  "order": 17.2,
+  "testament": "AT",
+  "summary": "Relato en dieciséis capítulos sobre el asedio de Betulia por el general Holofernes y la liberación de la ciudad por mano de Judit, una viuda judía que entra en el campamento enemigo armada con su piedad, su sabiduría y su valor. Es deuterocanónico en el canon católico y canónico en las Iglesias ortodoxas; no figura en el canon judío ni en el protestante.",
+  "genre": [
+    "relato en prosa",
+    "oración y discurso teológico",
+    "himno de victoria y acción de gracias"
+  ],
+  "language": "Griego en la Septuaginta; la mayoría de los estudiosos postula un original semítico (probablemente hebreo) perdido en la Antigüedad",
+  "date": {
+    "narrative": "Año doce y dieciocho de «Nabucodonosor, rey de los asirios en Nínive», poco después del regreso del cautiverio y de la reconsagración del Templo (4:3; 5:18–19)",
+    "composition": "Finales del s. II o comienzos del s. I a. C. (época asmonea), antes de su primera cita conocida en 1 Clemente 55 (finales del s. I d. C.)",
+    "certainty": "probable",
+    "note": "El relato combina deliberadamente figuras de épocas distintas; las instituciones, la geografía y el trasfondo religioso sitúan la composición en Judea durante el período asmoneo."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Deuterocanónico (Hipona 393, Cartago 397, Trento 1546)",
+    "ortodoxo": "Deuterocanónico / leído en el canon de las Iglesias ortodoxas desde la Septuaginta",
+    "protestante": "No incluido; se edita entre los apócrifos"
+  },
+  "notice": "En esta web, Judit se lee en el griego del Codex Sinaiticus (16 capítulos, 327 versículos), junto a una traducción de trabajo en curso hecha desde ese griego (borrador). La NTV no incluye este libro.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "Judit es una narración en prosa de dieciséis capítulos dispuesta en dos mitades simétricas. La primera (caps. 1–7) expone la amenaza imperial: la campaña de Nabucodonosor contra Arfaxad de Media, la marcha punitiva de Holofernes hacia occidente, el discurso del amonita Ajior sobre la historia de Israel y el cerco de Betulia hasta agotarse el agua. La segunda (caps. 8–16) presenta a Judit, viuda piadosa de la tribu de Simeón, que reprende a los ancianos por poner plazo a Dios, ora en ceniza (cap. 9), baja al campamento asirio, decapita a Holofernes con su propia espada (cap. 13) y entona un salmo de acción de gracias (cap. 16).\n\n[Estudio] La Jewish Encyclopedia destaca su arquitectura dramática y el uso de la ironía en los diálogos entre Judit y Holofernes."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Texto] El primer versículo abre con una paradoja histórica célebre: sitúa los hechos bajo «Nabucodonosor, que reinó sobre los asirios en Nínive», mientras que en el capítulo 4 los habitantes de Judea acaban de regresar del cautiverio y de reconsagrar el Templo (4:3; 5:18–19). Nombres persas como Holofernes y Bagoas conviven así con un rey babilonio en Nínive y con una Judea gobernada por el sumo sacerdote y un consejo de ancianos.\n\n[Estudio] Para Toy y Torrey (Jewish Encyclopedia) y gran parte de la crítica moderna, esa fusión no es un descuido sino una señal literaria deliberada, mientras que el mundo real de composición es la Judea asmonea (finales del s. II o comienzos del s. I a. C.), con el recuerdo vivo de las campañas seléucidas."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] El libro es anónimo y su protagonista lleva un nombre representativo: «Judit» (Ioudith, en hebreo Yehudit) significa «la judía», imagen de la comunidad fiel frente al poder imperial que exige ser invocado como dios (3:8; 6:2).\n\n[Estudio] Aunque el texto más antiguo conservado es el griego de la Septuaginta, tanto Toy y Torrey como Cameron Boyd-Taylor (NETS) señalan que su sintaxis paratáctica y sus continuos hebraísmos apuntan a un original hebreo perdido en la Antigüedad; los relatos hebreos medievales conservados son adaptaciones secundarias. Estudios recientes subrayan también giros propios del griego bíblico alejandrino."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El núcleo teológico se articula en dos discursos: el del extranjero Ajior ante Holofernes (cap. 5) y el de Judit ante los ancianos de Betulia (cap. 8). Ajior advierte que Israel es invencible mientras no peque contra su Dios; Judit corrige a los magistrados enseñando que la fe no pone a Dios un plazo de cinco días, sino que espera su salvación sin claudicar ante la idolatría. En su oración (cap. 9) y en su cántico final (cap. 16), el Señor no depende del número ni de la caballería: es «Dios de los humildes, defensor de los débiles y salvador de los desesperados» (9:11) que quebranta las guerras por mano de una mujer (9:10; 13:15; 16:5).\n\n[Tradición] Tanto la tradición judía como la patrística vieron en Judit un modelo de oración, ayuno y fortaleza frente a la tiranía."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El griego se conserva en los grandes unciales —Vaticano, Alejandrino y Sinaítico— y fue editado críticamente por Robert Hanhart en Gotinga (Iudith, 1979). Como recuerda Hugh Pope (Catholic Encyclopedia), la Vulgata latina es bastante más breve: Jerónimo explica en su prefacio que la tradujo en «una sola velada» (unam lucubratiunculam) desde un texto arameo, vertiendo el sentido más que las palabras.\n\nEn el Codex Sinaiticus el libro tiene 16 capítulos y 327 versículos. El folio 38.8 del manuscrito está mutilado, lo que produce cuatro saltos de versículos (11:13→11:19, 12:3→12:5, 12:16→12:18 y 13:2→13:9); en esta web esas lagunas se anotan y no se rellenan."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque no entró en el canon hebreo, la primera cita externa aparece ya a finales del siglo I d. C. en la Primera Carta de Clemente a los Corintios (1 Clemente 55:4–5), que recuerda a «la bienaventurada Judit» exponiéndose al peligro por amor a su patria. Después la citan Clemente de Alejandría, Orígenes, Tertuliano, Ambrosio y Jerónimo. Figura en las listas canónicas de Hipona (393), Cartago (397) y Trento (1546), y se lee en el canon de las Iglesias ortodoxas. Lutero y los reformadores la situaron entre los apócrifos como obra edificante pero no canónica; en la tradición judía medieval su relato se vinculó a la fiesta de Janucá."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Atender a la simetría de las dos mitades: siete capítulos de avance imperial hasta Betulia y nueve de respuesta desde la casa de Judit hasta Jerusalén.\n2. No leer los anacronismos de 1:1 y 4:3 como simples errores: el relato condensa a Asiria, Babilonia y los imperios posteriores en una sola figura del poder que pretende suplantar a Dios.\n3. Contrastar la tesis de Ajior (cap. 5) con la corrección de Judit a los ancianos (cap. 8): la promesa divina no autoriza a poner a Dios a prueba con plazos.\n4. Recordar en los capítulos 11–13 que las ausencias de 11:14–18, 12:4, 12:17 y 13:3–8 en el Sinaítico provienen de la rotura física del folio 38.8."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Crónica histórica, núcleo histórico amplificado o relato parabólico?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La exégesis patrística y gran parte de la tradición católica antigua (reseñada por Hugh Pope en la Catholic Encyclopedia) defendieron el carácter histórico del episodio, proponiendo identificar a Nabucodonosor con Asurbanipal o con Artajerjes III Oco, o bien sosteniendo un núcleo histórico real en torno a una heroína llamada Judit."
+        },
+        {
+          "label": "Estudio",
+          "body": "Desde Lutero y la investigación histórico-crítica moderna (Toy y Torrey en la Jewish Encyclopedia, y numerosos exegetas contemporáneos católicos, protestantes y judíos), la fusión deliberada de Nabucodonosor, Nínive y el Segundo Templo muestra que el libro fue compuesto como una novela histórica o parábola teológica, no como crónica."
+        }
+      ]
+    },
+    {
+      "question": "¿Se escribió originalmente en hebreo o directamente en griego?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La posición mayoritaria (Hanhart, Moore, Toy y Torrey, recogida por Boyd-Taylor en NETS) sostiene que el griego de Judit traduce un original hebreo perdido del período asmoneo, debido a la abundancia de hebraísmos sintácticos y giros imposibles de explicar como griego nativo."
+        },
+        {
+          "label": "Estudio",
+          "body": "Una corriente minoritaria reciente (Engel, Schmitz, Corley) propone que el libro pudo componerse directamente en griego imitando deliberadamente el estilo bíblico de la Septuaginta, dado que cita o alude a pasajes según la forma griega de los Setenta."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "toy-torrey-1906-judith",
+    "pope-1910-judith",
+    "boyd-taylor-nets-judith",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-20"
+}

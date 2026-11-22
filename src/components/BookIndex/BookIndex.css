@@ -253,6 +253,12 @@
   gap: 1.6rem;
 }
 
+.toc-work__head.has-cover.has-cover--wide {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.15rem;
+}
+
 .toc-work__head-text {
   flex: 1 1 auto;
   min-width: 0;
@@ -261,7 +267,7 @@
 .toc-work__cover {
   flex: 0 0 auto;
   width: 184px;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   padding: 0;
   overflow: hidden;
   background: var(--panel);
@@ -271,6 +277,11 @@
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+}
+
+.toc-work__cover--wide {
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .toc-work__cover img {
@@ -425,6 +436,11 @@
   .toc-work__cover {
     width: 104px;
     border-radius: 10px;
+  }
+
+  .toc-work__cover.toc-work__cover--wide {
+    width: 100%;
+    border-radius: 12px;
   }
 
   .toc-work__inside {

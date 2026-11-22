@@ -1,0 +1,101 @@
+{
+  "id": "2-timoteo",
+  "title": "2 Timoteo",
+  "abbr": "2 Ti",
+  "order": 55,
+  "testament": "NT",
+  "summary": "Última carta atribuida a Pablo en cuatro capítulos, escrita desde una fría prisión romana en espera inminente de ejecución hacia su discípulo Timoteo: llamado ardiente a avivar el don recibido sin vergüenza de las cadenas, fidelidad a la enseñanza transmitida «a hombres fieles», certeza sobre la Escritura inspirada por Dios (3:16–17), encargo solemne de predicar «a tiempo y fuera de tiempo» y despedida inmortal («He peleado la buena batalla, he acabado la carrera, he guardado la fe», 4:7). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "testamento espiritual de despedida",
+    "epístola de exhortación martirial",
+    "instrucción sobre la transmisión apostólica"
+  ],
+  "language": "Griego koiné conmovedor y vívido de tono íntimo, más próximo al Pablo de cartas anteriores que 1 Ti/Tito",
+  "date": {
+    "narrative": "Pablo encadenado como malhechor en Roma tras su primera defensa («ya estoy a punto de ser sacrificado», 4:6, 16) antes del invierno",
+    "composition": "Debatida: poco antes de la muerte de Pablo bajo Nerón (c. 66–67 d. C.), o escrita en su nombre por un admirador en las décadas siguientes (c. 80–100 d. C.)",
+    "certainty": "discutida",
+    "note": "Incluso investigadores críticos que dudan de 1 Timoteo y Tito encuentran en los recuerdos íntimos de 2 Timoteo 1 y 4 huellas genuinas de notas personales paulinas."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Timoteo es un testamento afectivo ante la muerte inminente dispuesto en cuatro capítulos de intensa emoción personal: I. Recuerdo agradecido de Loida y Eunice, exhortación a reavivar el don sin espíritu de cobardía, vergüenza de casi toda Asia frente a la fidelidad de Onesíforo (cap. 1); II. Metáforas del soldado, el atleta y el labrador, consigna de transmitir lo oído a «hombres fieles», himno fiel de 2:11–13 y contraste del obrero aprobado (cap. 2); III. Crisis de los «últimos días», persecuciones sufridas en Antioquía/Iconio/Listra y la confesión clásica sobre «toda Escritura inspirada por Dios» (3:16–17); IV. Conjuro final a predicar la palabra y notas personales de despedida con la petición conmovedora de la capa olvidada en Troas y los rollos de pergamino antes del invierno (cap. 4).\n\n[Estudio] Su tono íntimo recuerda vivamente la epístola a Filipenses."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] A diferencia del arresto domiciliario abierto de Hechos 28, aquí Pablo yace aislado y tratado como criminal en Roma tras la persecución neroniana posterior al año 64 d. C.: Onesíforo tuvo que buscarlo diligentemente (1:17), Demas lo abandonó por amor al mundo presente y en su primera comparecencia «todos me desampararon» (4:10, 16). Timoteo, joven y algo tímido frente a errores que «corroen como gangrena» (como Himeneo y Fileto diciendo que la resurrección ya pasó, 2:17–18), recibe el relevo apostólico."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Unida siempre en la recepción a 1 Timoteo y Tito bajo autoría directa de Pablo en su segundo proceso romano, la autenticidad de 2 Timoteo se apoya especialmente en la profusión de nombres propios triviales sin interés apologético posterior (Lino, Pudente, Claudia, Carpo en Troas, la capa y los pergaminos).\n\n[Estudio] Como resume Cornelius Aherne (Catholic Encyclopedia) junto al debate crítico posterior, mientras muchos académicos mantienen un núcleo paulino genuino o la carta entera redactada hacia 66–67 d. C., otros críticos la asignan al mismo autor postpaulino de 1 Timoteo–Tito incorporando notas auténticas de despedida."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Aunque el mensajero esté encadenado, «la palabra de Dios no está presa» (2:9), porque descansa en el Evangelio de Cristo resucitado del linaje de David (2:8) y en la fidelidad inconmovible de Dios («Si fuéremos infieles, Él permanece fiel; Él no puede negarse a sí mismo», 2:13). Para guiar a la Iglesia sin nuevos apóstoles vivos, el texto deja dos anclas: la cadena fiel de discípulos que transmiten la enseñanza apostólica (2:2) y «toda Escritura inspirada por Dios (theopneustos) y útil para enseñar, redargüir, corregir e instruir en justicia» (3:16–17).\n\n[Tradición] Este versículo 3:16 fundamentó universalmente la teología bíblica de la inspiración."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Conservada completa en el Codex Sinaiticus (núm. 48) y el Codex Alejandrino (así como en Papiro Freer y comentarios muy antiguos, aunque falta el final de P46 y Vaticano B), presenta extraordinaria limpieza textual sin variantes que alteren el sentido central (más allá de ligeras oscilaciones en 2:19 «el nombre del Señor» vs «de Cristo» o 4:14 sobre Alejandro).\n\n[Texto] Tanto la NTV (4 capítulos, 83 vv.) como el Codex Sinaiticus (4 capítulos, 83 vv.) preservan el libro íntegro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Tanto el epílogo de 4:6–8 («He peleado la buena batalla… me está guardada la corona de justicia») como la definición de la Escritura en 3:16 («theopneustos») y la cadena transmisora de 2:2 pasaron a ser citas obligadas desde Clemente de Roma, Ignacio y Eusebio en su reconstrucción de la sucesión episcopal romana (mencionando a Lino en 4:21) y los mártires. En el diálogo cristiano contemporáneo sigue siendo el pasaje paradigmático sobre autoridad bíblica y perseverancia ministerial."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir el esquema de generaciones de fidelidad en la carta: Loida → Eunice → Timoteo (1:5) → «hombres fieles idóneos para enseñar también a otros» (2:2).\n2. Leer 3:10–17 junto a 4:1–5: el antídoto contra «comezón de oír» no es novedad brillante, sino constancia en las Escrituras conocidas desde la niñez y predicación paciente.\n3. Notar en 4:9–21 el lado profundamente humano del apóstol anciano que pide compañía antes del invierno, su manto y sus libros.\n4. Examinar 3:16–17 como lema bíblico sobre el fin práctico de la Escritura: formar al creyente «enteramente preparado para toda buena obra»."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo se interpreta gramaticalmente pasa graphe theopneustos en 2 Timoteo 3:16?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La traducción clásica («Toda la Escritura es inspirada por Dios y útil…») toma theopneustos («aliento-de-Dios») como predicado directo de toda Escritura canónica (refiriéndose primariamente al Antiguo Testamento heredado y progresivamente al canon neotestamentario)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Algunos gramáticos traducen «Toda escritura inspirada por Dios es también útil…», aunque la mayoría de comentaristas coincide en que para un maestro judío del s. I («las Sagradas Escrituras» de 3:15) la frase abarca íntegramente el corpus bíblico como obra del Espíritu."
+        }
+      ]
+    },
+    {
+      "question": "¿Escribió Pablo personalmente 2 Timoteo antes de morir o conserva un núcleo paulino editado tras su martirio?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Muchos estudiosos sostienen que la viveza incomparable de 4:9–21 (el manto en Troas, Marcos útil para el ministerio, Alejandro el calderero, Lino y Claudia) demuestra la pluma auténtica de Pablo hacia 66–67 d. C."
+        },
+        {
+          "label": "Estudio",
+          "body": "Quienes defienden la hipótesis del grupo unificado de Pastorales admiten a menudo que 2 Timoteo pudo incorporar billetes personales genuinos de Pablo dentro de una composición testamentaria de fin de siglo."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-pastorals",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

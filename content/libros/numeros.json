@@ -1,0 +1,100 @@
+{
+  "id": "numeros",
+  "title": "Números",
+  "abbr": "Nm",
+  "order": 4,
+  "testament": "AT",
+  "summary": "Cuarto libro de la Torá en treinta y seis capítulos que narra los censos en el Sinaí, la marcha por el desierto, la rebelión de los espías, los cuarenta años de travesía y los preparativos en las llanuras de Moab junto con los oráculos de Balaam. Protocanónico; el Codex Sinaiticus conserva doce capítulos.",
+  "genre": [
+    "crónica itinerante",
+    "compilación legal y censal",
+    "oráculos poéticos y bendición sacerdotal"
+  ],
+  "language": "Hebreo bíblico clásico (con poesía arcaica y prosa sacerdotal)",
+  "date": {
+    "narrative": "Casi cuarenta años de travesía desde el segundo año tras salir de Egipto hasta la víspera de cruzar el Jordán",
+    "composition": "Atribución mosaica tradicional frente a compilación de tradiciones narrativas y sacerdotales hasta el s. V a. C.",
+    "certainty": "discutida",
+    "note": "Combina piezas poéticas antiguas (bendición aarónica 6:24–26, cánticos del pozo y oráculos de Balaam 23–24) con listas censales y leyes de redacción sacerdotal."
+  },
+  "canon": {
+    "judio": "Tanaj (Torá — Bemidbar, «En el desierto»)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Arithmoi)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Números está completo en la NTV (36 capítulos, 1.221 versículos). Del Codex Sinaiticus sobreviven doce capítulos fragmentarios (5–7, 16–20 y 23–26; 216 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Números recibe su título latino-griego (Arithmoi / Numeri) por los dos censos militares y levíticos (caps. 1 y 26), aunque su nombre hebreo, Bemidbar («En el desierto»), refleja mejor su contenido mixto de relato de viaje y legislación. Se organiza geográficamente en tres etapas: preparación y organización del campamento en torno al Tabernáculo en el Sinaí (1:1–10:10); travesía marcada por quejas, maná, espías, Coré y la serpiente de bronce de Sinaí a Cades y Moab (10:11–21:35); y estancias en los llanos de Moab con Balaam, reparto territorial y ciudades de refugio (22–36).\n\n[Estudio] Alterna abruptamente leyes (votos, nazireato, vaca roja) con episodios de crisis comunitaria."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los oráculos de Balaam hallados en escritura aramea-transjordana en Deir Alla (s. VIII a. C.) ilustran la antigüedad y raigambre regional de tradiciones como la de Balaam hijo de Beor (caps. 22–24). A la vez, la organización concéntrica del campamento en torno al santuario (caps. 2–4) y el celo por la pureza campamental muestran cómo la comunidad sacerdotal del período exílico-posexílico proyectaba el orden sacro hacia toda la vida itinerante de Israel."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición sitúa en Moisés la redacción de la historia itinerante y la lista de campamentos de 33:2.\n\n[Estudio] Como recogen Hirsch, Seligsohn y Barton en la Jewish Encyclopedia y Anthony Maas en la Catholic Encyclopedia, Números es quizá el libro más heterogéneo del Pentateuco: amalgama estratos narrativos antiguos de las quejas en el desierto y poemas arcaicos (el canto del arca 10:35–36 y la cita del «Libro de las guerras de Yahvé» en 21:14) con extensas secciones jurídicas y genealógicas sacerdotales agregadas hasta el cierre de la Torá."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El desierto funciona como crisol de prueba entre la fidelidad incansable de Dios y la incredulidad de la primera generación salida de Egipto, que perece sin pisar Canaán (14:20–35). Dios protege a su pueblo aun desde los labios de un vidente extranjero como Balaam (23:19; 24:17: la estrella que saldrá de Jacob), y sostiene la vida comunitaria mediante su presencia móvil sobre el Tabernáculo y la bendición aarónica (6:24–26).\n\n[Tradición] Pablo advierte a los corintios con el ejemplo de las rebeliones del desierto (1 Co 10:5–11), y Juan 3:14 vincula la cruz a la serpiente de bronce de Nm 21."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] En Qumrán, el rollo 4QNum-b muestra un texto largo emparentado con la tradición del Pentateuco Samaritano que armoniza pasajes con Deuteronomio, mientras la Septuaginta mantiene un texto muy próximo al masorético salvo desplazamientos menores en capítulos 1 y 7. Destacan los amuletos de plata de Ketef Hinnom (Jerusalén, c. 600 a. C.) con la bendición sacerdotal de 6:24–26 como testimonio epigráfico bíblico más antiguo conocido.\n\n[Texto] La NTV ofrece los 36 capítulos completos (1.221 vv.); el Codex Sinaiticus conserva 12 capítulos (5–7, 16–20 y 23–26; 216 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Orígenes compuso veintiocho homilías célebres sobre Números leyendo el itinerario de las cuarenta y dos etapas (cap. 33) como ascenso espiritual del alma hacia la tierra prometida, línea seguida por Gregorio de Nisa y Agustín. En el judaísmo, Sifré Bemidbar analizó las leyes centrales y 24:17 alimentó la esperanza mesiánica (citado también en Qumrán y por Rabí Akiva en tiempos de Bar Kojba).\n\nLa bendición de 6:24–26 sigue viva hoy en las sinagogas y en innumerables liturgias cristianas."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir el relevo generacional: los censos de los capítulos 1 y 26 marcan la generación que cayó en el desierto y la nueva que entrará en Canaán.\n2. Leer la bendición sacerdotal (6:24–26) y los oráculos de Balaam (22–24) en los capítulos conservados del Codex Sinaiticus.\n3. Conectar Nm 13–14 y 21 con sus ecos explícitos en 1 Corintios 10, Hebreos 3–4 y Juan 3:14.\n4. Notar la función teológica del capítulo 35 sobre las ciudades de refugio para el homicida involuntario."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo explicar las elevadas cifras de los censos militares (más de seiscientos mil varones adultos) en los caps. 1 y 26?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Las lecturas literales mantienen que el número refleja el crecimiento prodigioso anunciado en Éxodo 1:7."
+        },
+        {
+          "label": "Estudio",
+          "body": "Diversos filólogos y historiadores señalan que el término hebreo elef («mil») designaba también una «unidad familiar / clan o escuadrón», o que las cifras responden a teología censal idealizada de época monárquica o sacerdotal."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el sentido original de la «estrella que saldrá de Jacob» en Números 24:17?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Históricamente muchos exegetas la vinculan en primer lugar con la realeza davídica que somete a Moab y Edom."
+        },
+        {
+          "label": "Tradición",
+          "body": "La Septuaginta, los rollos de Qumrán, el Tárgum y la tradición cristiana antigua la interpretaron directamente como profecía mesiánica (cfr. la estrella de Mateo 2 y Apocalipsis 22:16)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-numbers",
+    "ce-pentateuch",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "lamentaciones",
+  "title": "Lamentaciones",
+  "abbr": "Lm",
+  "order": 25,
+  "testament": "AT",
+  "summary": "Cinco poemas elegíacos de duelo tras la destrucción de Jerusalén y del Templo en el año 586 a. C.: cuatro acrósticos alfabéticos y una súplica final de veintidós versos ante las ruinas, el hambre y el silencio del Señor, sosteniendo al centro (cap. 3) la certeza de su compasión que se renueva cada mañana. Protocanónico; en el Sinaiticus perduran los caps. 1 y 2.",
+  "genre": [
+    "elegía comunitaria (qiná)",
+    "poema acróstico alfabético",
+    "lamentación litúrgica"
+  ],
+  "language": "Hebreo poético de ritmo cojo característico de duelo (metro qiná 3+2); griego septuagintal",
+  "date": {
+    "narrative": "Inmediatamente tras la destrucción de Jerusalén por Nabucodonosor en 586 a. C.",
+    "composition": "En Judá o en las ruinas del Templo entre el 586 y mediados del siglo VI a. C.",
+    "certainty": "probable",
+    "note": "El realismo crudo de los asedios y la ausencia de referencia al regreso o edicto de Ciro (538 a. C.) sitúan las elegías en los decenios siguientes al 586 a. C."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — Ejá, una de las Cinco Meguilot leída en Tishá BeAv)",
+    "catolico": "Antiguo Testamento (protocanónico; ubicado tras Jeremías)",
+    "ortodoxo": "Antiguo Testamento (Threnoi)",
+    "protestante": "Antiguo Testamento (tras Jeremías)"
+  },
+  "notice": "En esta web, Lamentaciones está completo en la NTV (5 capítulos, 154 versículos). Del Codex Sinaiticus solo sobreviven los dos primeros capítulos y un breve tramo inicial (caps. 1–2; 42 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Lamentaciones consta de cinco poemas independientes que lloran la caída de Sión tras 586 a. C. con una disciplina formal asombrosa: los capítulos 1, 2 y 4 tienen exactamente 22 estrofas siguiendo una por una las 22 letras del alefato hebreo; el capítulo 3 multiplica el acróstico a 66 versículos (tres versos por cada letra hebrea); el capítulo 5 abandona el orden alfabético conservando los 22 versículos en oración colectiva final.\n\n[Estudio] Salvo el quinto poema, emplean el metro fúnebre qiná (tres acentos seguidos de dos acentos truncados) que imprime al oído una cadencia de sollozo contenido."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Texto] Los versos retratan con realismo desgarrador las secuelas de los dieciocho meses de asedio babilónico en 587–586 a. C.: madres moribundas abrazando a sus niños en las calles, sacerdotes abatidos en el santuario profanado, reyes deportados, burla de los pueblos vecinos y un país sumido en hambruna bajo ocupación (caps. 2, 4 y 5).\n\n[Estudio] Como observa la literatura cuneiforme mesopotámica en los «Lamentos por la destrucción de Ur y Sumer», Jerusalén adoptó también la tradición oriental de cantar elegías ante santuarios arruinados."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Aunque el texto hebreo carece de título con autor, tanto la Septuaginta —que añade una nota introductoria explícita: «Y sucedió después de que Israel fue llevado cautivo… que Jeremías se sentó llorando»— como el Talmud (Bava Batra 15a) y la Vulgata atribuyeron los cinco poemas a Jeremías (cfr. también 2 Cr 35:25 sobre sus elegías por Josías).\n\n[Estudio] Hirsch, Löhr y Schechter (Jewish Encyclopedia) destacan la ausencia del nombre en hebreo, variaciones estilísticas entre los cinco poemas y la visión favorable al rey en 4:20 para proponer uno o varios poetas anónimos testigos de la ruina de Jerusalén."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] En medio del dolor sin consuelo fácil, Lamentaciones rechaza tanto el ateísmo como la autojustificación: «Justo es el Señor, pues yo me rebelé contra su palabra» (1:18). A la vez, protesta sin tapujos ante Dios por la desmesura del sufrimiento inocente de los niños sin cerrar los ojos en silencios piadosos. Justo en el centro exacto del libro (3:21–33) irrumpe la confesión luminosa: «Las misericordias del Señor jamás terminan… grande es tu fidelidad», antes de terminar en pregunta abierta: «Restáuranos a ti, oh Señor… ¿o es que nos has desechado por completo?» (5:21–22).\n\n[Tradición] Este cierre inconcluso alimentó siglos de oración penitencial comunitaria."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Cuatro manuscritos fragmentarios de Qumrán (especialmente 4QLam) testimonian variaciones tempranas sobre el poema 1; en el texto masorético, los capítulos 2, 3 y 4 invierten ligeramente el orden alfabético tradicional poniendo la letra pe antes que ayin. El texto griego de los grandes unciales conserva el prólogo tradicional que asocia el libro a Jeremías.\n\n[Texto] Aquí la NTV ofrece los 5 capítulos completos (154 vv.), mientras en el Codex Sinaiticus (núm. 16) perduran únicamente los capítulos 1 y 2 (42 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En el judaísmo, Lamentaciones (Ejá, «¡Cómo!» —primera palabra de la elegía—) es el corazón litúrgico del día de ayuno nacional de Tishá BeAv (noveno de Av), que conmemora la caída de ambos Templos. En la tradición cristiana latina, los Oficios de Tinieblas de Semana Santa cantaron polifónicamente las estrofas alfabéticas de Lamentaciones (Tallis, Victoria, Palestrina, Couperin) aplicando el lamento de la viuda Sión a la pasión y sepultura de Cristo.\n\nPara la tradición hebrea se repite el v. 5:21 tras leer 5:22 para no cerrar nunca una lectura sagrada con nota de rechazo."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Notar el orden alfabético «de la A a la Z» como forma de abrazar el sufrimiento entero cuando faltan palabras.\n2. Observar la variación de voces: una ciudad personificada como viuda abandonada (caps. 1–2), un varón afligido que encuentra esperanza (cap. 3) y el «nosotros» comunitario final (cap. 5).\n3. Leer 3:21–39 en el centro geométrico como eje que sostiene el resto del duelo.\n4. Comparar caps. 1–2 entre NTV y Codex Sinaiticus y notar la nota inicial griega atribuyéndolo a Jeremías."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue escrito Lamentaciones por el profeta Jeremías o por poetas anónimos tras la destrucción de 586 a. C.?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La Septuaginta, la Vulgata y gran parte de la patrística lo atribuyen a Jeremías por afinidades de vocabulario dolorido (cfr. Jer 8–9 y 14) y por ser el profeta testigo directo de la ruina."
+        },
+        {
+          "label": "Estudio",
+          "body": "La crítica hebrea y bíblica actual señala la ausencia de atribución en el texto hebreo original, la ubicación del libro entre los Escritos (Ketuvim) y no tras Jeremías en el Tanaj, y tensiones teológicas (por ejemplo 4:20 respecto al rey Sedequías o 5:7 respecto a las culpas paternas) más propias de otros autores contemporáneos."
+        }
+      ]
+    },
+    {
+      "question": "¿Componen los cinco poemas un diseño unificado de un solo autor o una antología litúrgica posterior?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Algunos estudiosos ven diferencias métricas y de inversión alfabética (pe/ayin solo en 2–4 frente a 1) indicadoras de al menos dos o tres autores reunidos para los ayunos exílicos (Zac 7:3)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros análisis literarios (Provans, Dobbs-Allsopp) muestran una progresión dramática coherente que culmina al centro en 3:21–33 y abre a la comunidad entera en el cap. 5."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-lamentations",
+    "ce-jeremias",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

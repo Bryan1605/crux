@@ -1,0 +1,100 @@
+{
+  "id": "2-tesalonicenses",
+  "title": "2 Tesalonicenses",
+  "abbr": "2 Ts",
+  "order": 53,
+  "testament": "NT",
+  "summary": "Breve epístola de tres capítulos dirigida a Tesalónica poco después de la primera ante rumores alarmistas o una supuesta carta apócrifa que afirmaba que «el Día del Señor ya ha llegado»: confirma la justicia final en la venida de Cristo, expone señales previas con la misteriosa figura del «hombre de pecado» y «lo que lo detiene» (cap. 2), y exhorta a no vivir ociosos por fanatismo apocalíptico («si alguno no quiere trabajar, tampoco coma», 3:10). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "carta escatológica correctiva",
+    "instrucción apocalíptica simbólica",
+    "exhortación disciplinaria laboral"
+  ],
+  "language": "Griego koiné solemne y litúrgico en el cap. 1, enigmático y condensado en el cap. 2",
+  "date": {
+    "narrative": "Permaneciendo juntos aún Pablo, Silvano y Timoteo en Corinto ante noticias persistentes de Tesalónica (1:1)",
+    "composition": "Debatida: poco después de 1 Tesalonicenses en c. 51–52 d. C., o carta deutero-paulina de fines del siglo I d. C.",
+    "certainty": "discutida",
+    "note": "Quienes mantienen su autenticidad la fechan meses después de 1 Ts; quienes la creen posterior resaltan el cambio de tono sobre las señales previas y la advertencia contra cartas falsificadas en 2:2 y 3:17."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Tesalonicenses mantiene exactamente el esquema ternario de una carta pastoral breve de tres capítulos con tres tonos bien diferenciados: I. Saludo, elogio de la perseverancia en persecuciones severas y cuadro apocalíptico solemne de la retribución justa cuando Cristo aparezca con sus ángeles (cap. 1); II. Núcleo profético-correctivo contra la agitación de que «el Día del Señor ya está aquí», explicando que antes ha de venir la apostasía y revelarse «el hombre de iniquidad» frenado ahora por misterioso «detenedor» (to katechon / ho katechon, cap. 2); III. Súplica de oración y firma autógrafa acompañada de regla disciplinaria severa contra ociosos entremetidos (cap. 3).\n\n[Estudio] Es el escrito más enigmático de la escatología paulina por aludir a enseñanzas orales previas («¿No se acuerdan…?», 2:5)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] La comunidad macedónica seguía sufriendo tribulación intensa (1:4–7), pero había surgido además un fervor desbordado provocado quizá por supuestas revelaciones proféticas o una carta falsamente atribuida a Pablo (2:2) proclamando que el Día definitivo ya había irrumpido. Como consecuencia práctica, algunos creyentes abandonaban sus oficios diarios convirtiéndose en una carga ociosa que vivía de las raciones comunitarias (3:6–12)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Citada ya muy temprano por Policarpo, el Fragmento Muratoriano, Ireneo y Tertuliano bajo autoría indiscutida de Pablo junto a Silvano y Timoteo —y sellada expresamente con firma personal autógrafa para autenticarla frente a falsificaciones («Esta es mi señal en toda carta», 3:17).\n\n[Estudio] Walter Drum (Catholic Encyclopedia) defiende la composición directa de Pablo hacia el 51–52 d. C., mientras parte de la crítica moderna cuestiona la autenticidad señalando paralelismos literales cercanos con 1 Tesalonicenses y una aparente divergencia escatológica entre el Día inesperado («ladrón», 1 Ts 5:2) y la lista de señales previas (2 Ts 2:3–8)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La carta equilibra dos extremos peligrosos en la esperanza cristiana: frente a la desesperación en el sufrimiento, asegura la justicia definitiva del Señor («dar reposo a los atribulados», 1:7) y que el mal supremo —por más prodigios mentirosos y pretensión divina en el templo de Dios que despliegue (2:4, eco de Daniel 11:36)— será deshecho con «el soplo de su boca» por Jesús (2:8). Frente a la histeria apocalíptica paralizante, exige discernimiento sereno, apego a «las tradiciones enseñadas de palabra o por carta» (2:15) y responsabilidad laboral cotidiana («trabajen sosegadamente y coman su propio pan», 3:12).\n\n[Tradición] Este versículo 3:10 fundamentó la dignidad del trabajo manual en el monacato antiguo (Regla de San Benito) y la ética moderna."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Presente en P30 y los grandes códices unciales (Vaticano, Alejandrino y Codex Sinaiticus núm. 45), su variante textual más destacada ocurre en 2:3 entre «hombre de pecado» (hamartias en Bizantino) frente a «hombre de iniquidad / anarquía» (anomias en el Sinaiticus y Vaticano), lectura hoy ampliamente preferida; también 2:13 oscila entre «primicias» (aparchén) o «desde el principio» (ap’ arches, lectura del Sinaiticus).\n\n[Texto] Tanto la NTV (3 capítulos, 47 vv.) como el Codex Sinaiticus (3 capítulos, 47 vv.) ofrecen el texto íntegro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] El enigma del «hombre de iniquidad» y del katechon («lo que lo detiene», 2:6–7) fascinó durante siglos a los Padres: Tertuliano, Juan Crisóstomo y Agustín (Ciudad de Dios 20:19) identificaron mayoritariamente al «obstáculo» con la estabilidad jurídica del Imperio romano antes de manifestarse el Anticristo final. Por su parte, 2 Tesalonicenses 3:10 («el que no quiera trabajar que no coma») rigió las comunidades monásticas y la ética laboral cristiana de todas las confesiones."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Recordar al leer el capítulo 2 que Pablo apela a explicaciones orales previas conocidas por los lectores («¿No recuerdan que les decía esto?», 2:5): de ahí que nuestra lectura moderna conserve enigmas deliberados.\n2. Leer juntos 1 Tesalonicenses y 2 Tesalonicenses para equilibrar la vigilancia gozosa ante un regreso imprevisto con el rechazo total de la ociosidad apocalíptica.\n3. Observar la regla de oro pastoral de 2:1–2: ante anuncios alarmistas del fin ya cumplido, no perder pronto el equilibrio ni alarmarse.\n4. Comparar «hombre de iniquidad / pecado» en 2:3 entre el Sinaiticus y la NTV."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿A quién o qué designa to katechon / ho katechon («lo que / quien lo detiene») en 2:6–7?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Desde Tertuliano y Crisóstomo hasta gran parte de exégesis clásicas, «lo que detiene» es el orden jurídico político del Imperio romano (o el orden civil general) cuya caída daría paso al caos del Anticristo; otros Padres vieron la predicación universal previa del Evangelio o al Espíritu Santo."
+        },
+        {
+          "label": "Estudio",
+          "body": "Agustín confesó honradamente ignorar el referente («Confieso que ignoro totalmente lo que quiso decir»), mientras muchos estudiosos modernos piensan en un poder angélico cósmico (cfr. Miguel en Dn 12 / Ap 20) o el plan soberano de Dios que marca la hora."
+        }
+      ]
+    },
+    {
+      "question": "¿Escribió Pablo 2 Tesalonicenses poco después de 1 Tesalonicenses o es obra posterior?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Muchos investigadores (Morris, Wanamaker, Drum) mantienen la autoría directa de Pablo apenas meses tras 1 Tesalonicenses en Corinto: 2 Ts aclara malos entendidos específicos de 1 Ts y reproduce las preocupaciones urgentes reales de la misma comunidad."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros críticos (Trilling, Bailey) sugieren redacción deutero-paulina posterior imitando la estructura de 1 Tesalonicenses para responder a nuevos falsos maestros que invocaban cartas de Pablo ya fallecido."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-thessalonians",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

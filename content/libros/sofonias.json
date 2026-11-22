@@ -1,0 +1,101 @@
+{
+  "id": "sofonias",
+  "title": "Sofonías",
+  "abbr": "Sof",
+  "order": 36,
+  "testament": "AT",
+  "summary": "Tres capítulos de predicación profética bajo el rey Josías en Judá (c. 640–622 a. C.): anuncio cósmico y nacional del «Día de la ira del Señor» contra idolatrías y líderes corruptos de Jerusalén y las naciones vecinas, purificación de los pueblos con un «labio puro» y salvación final del resto humilde sobre el que Dios canta con júbilo (3:17). Protocanónico; completo en NTV y Codex Sinaiticus.",
+  "genre": [
+    "oráculo escatológico del Día del Señor",
+    "invectiva contra idolatrías",
+    "cántico mesiánico de alegría divina"
+  ],
+  "language": "Hebreo bíblico conciso y solemne con resonancias del Génesis e Isaías",
+  "date": {
+    "narrative": "Reinados de Josías hijo de Amón en Judá (1:1, c. 640–609 a. C.)",
+    "composition": "Predicación en Jerusalén previa o contemporánea a la gran reforma de Josías (c. 630–622 a. C.), con actualización menor posible en el cierre",
+    "certainty": "probable",
+    "note": "Denuncia cultos asirios solares y sincretistas aún arraigados en Jerusalén (1:4–6) y anuncia la caída aún futura de Nínive (2:13, ocurrida en 612 a. C.)."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — noveno de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Sophonias)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Sofonías sigue el esquema clásico en tres tiempos que organiza a varios profetas: I. Juicio universal cósmico (evocando una «des-creación» inversa a Génesis) enfocado inmediatamente sobre el sincretismo religioso, los príncipes, comerciantes e indiferentes de Jerusalén durante el inminente «Día grande del Señor» (cap. 1); II. Exhortación breve a buscar humildad y oráculos contra Filistea, Moab, Amón, Cus y Asiria (cap. 2); III. Acusación directa a la ciudad rebelde (3:1–7) seguida súbitamente por el giro de purificación universal de las naciones («daré a los pueblos labios puros», 3:9) y la promesa al resto humilde donde Dios mismo danza y canta sobre Sión (3:14–20).\n\n[Estudio] Michael Faulhaber (Catholic Encyclopedia) resalta cómo en apenas tres capítulos recorre todo el drama desde la ira hasta el regocijo tierno."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Con una genealogía excepcional de cuatro generaciones hasta un antepasado llamado Ezequías (1:1, posiblemente el rey), Sofonías ejerció al principio del reinado de Josías tras medio siglo de sincretismo asirio bajo Manasés y Amón: altares a Baal, sacerdotes idolátricos (kemarim), adoración de astros en las azoteas y juramentos divididos entre el Señor y Milcom (1:4–5). Su denuncia de élites que pensaban «El Señor no hará bien ni hará mal» (1:12) ayudó probablemente a preparar el clima espiritual para la reforma deuteronómica del 622 a. C."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atribuido a Sofonías hijo de Cusí.\n\n[Estudio] Hirsch e Ira Maurice Price (Jewish Encyclopedia) notan la firme autenticidad de la mayor parte de los caps. 1–2 y 3:1–8 dentro de los años c. 630–622 a. C., mientras varios comentaristas debaten si los versos finales de retorno de dispersión (3:14–20) reflejan la esperanza de discípulos durante el exilio babilónico integrando el libro al conjunto de los Doce."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Sofonías aporta dos conceptos decisivos a la teología bíblica: en primer lugar, el «Día del Señor» (1:14–18), día de tinieblas y trompeta frente al cual «ni su plata ni su oro podrán librarlos», deshaciendo cualquier falsa seguridad por pertenecer al templo físico o al país; en segundo lugar, el perfil espiritual del «resto humilde y pobre» (anawim, 2:3; 3:12–13) que no confía en el poder sino en el nombre del Señor, preludio directo de las bienaventuranzas evangélicas.\n\n[Estudio] Su visión de todas las naciones invocando a Dios con «labios puros» (3:9) responde a la dispersión de Babel en Génesis 11."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Testimoniado tempranamente en los rollos de los Doce de Qumrán y Wadi Murabba’at y en el texto griego antiguo (Septuaginta), Sofonías no presenta divergencias estructurales importantes entre el hebreo y el griego.\n\n[Texto] Tanto la NTV (3 capítulos, 53 vv.) como el Codex Sinaiticus (núm. 22; 3 capítulos, 53 vv.) lo conservan completo y con numeración exacta."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] A través de la Vulgata latina de Sofonías 1:15 («Dies irae, dies illa, dies tribulationis et angustiae…»), el profeta dio apertura y médula al célebre himno medieval Dies Irae de la liturgia de difuntos (musicado por Mozart, Verdi y tantos compositores). Al mismo tiempo, la invitación gozosa de 3:14–17 («¡Grita de alegría, hija de Sión… el Señor tu Dios está en medio de ti!») resonó directamente en el saludo angélico a María en Lucas 1:28 («¡Alégrate… el Señor está contigo!»)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Comparar 1:2–3 («consumiré todo sobre la faz de la tierra») con Génesis 1 y 6–8: la idolatría amenaza con revertir la creación entera.\n2. Detenerse en 1:12 para reconocer la idolatría silenciosa del escepticismo práctico («El Señor no hace ni bien ni mal»).\n3. Observar el retrato hermoso de los humildes (anawim) en 2:3 y 3:12–13 frente a los príncipes «leones rugientes» de 3:3.\n4. Leer 3:14–17 notando cómo el Dios que juzga con fuego en el cap. 1 calla ahora de amor y canta sobre los rescatados."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Qué enemigo histórico amenazante precipitó la visión de juicio de Sofonías 1–2 en tiempos de Josías?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Comentaristas más antiguos (recogidos en la Jewish Encyclopedia y Catholic Encyclopedia) siguieron la crónica de Heródoto sobre incursiones escitas hacia el 625 a. C. en las costas filisteas."
+        },
+        {
+          "label": "Estudio",
+          "body": "Historiadores recientes dudan de una gran invasión escita hasta Palestina y leen el cuadro del cap. 1 como teofanía profética tradicional del Día del Señor ante el vacío de poder y el ascenso caldeo."
+        }
+      ]
+    },
+    {
+      "question": "¿Pertenecen 3:9–10 y 3:14–20 al ministerio preexílico de Sofonías?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica identifica referencias a la dispersión más allá de Cus (3:10) y reunión de cautivos (3:18–20) como ampliaciones literarias exílicas o posexílicas."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros exegetas señalan que ya existían comunidades israelitas dispersas tras el 722 a. C. (en Asiria y Egipto) y que el giro abrupto juicio→salvación pertenece al patrón clásico profético de Sofonías."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-zephaniah",
+    "ce-sophonias",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

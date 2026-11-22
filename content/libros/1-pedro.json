@@ -1,0 +1,101 @@
+{
+  "id": "1-pedro",
+  "title": "1 Pedro",
+  "abbr": "1 P",
+  "order": 60,
+  "testament": "NT",
+  "summary": "Carta circular consoladora de Simón Pedro en cinco capítulos desde «Babilonia» (Roma) por mano de Silvano a las iglesias de Asia Menor sometidas a difamación y hostilidad social: celebra la «esperanza viva» en la herencia incorruptible y la condición real sacerdotal del pueblo de Dios (2:9–10), llama a responder con bien y mansedumbre siguiendo las huellas de Cristo Siervo paciente (2:21–25) y exhorta a ancianos y jóvenes ante el «león rugiente» de la prueba. Canónica; completa en NTV y Codex.",
+  "genre": [
+    "epístola encíclica de consuelo y bautismo",
+    "catequesis doméstica y cívica",
+    "exhortación ante el sufrimiento"
+  ],
+  "language": "Griego koiné literario, culto y rico en alusiones a la Septuaginta (dictado por medio de Silvano, 5:12)",
+  "date": {
+    "narrative": "Enviada desde «la elegida que está en Babilonia [Roma]» junto a «mi hijo Marcos» (5:12–13) hacia provincias del norte de Asia Menor",
+    "composition": "Debatida: hacia 62–65 d. C. bajo el principio de hostilidad neroniana antes o cerca de la muerte de Pedro, o c. 80–95 d. C. bajo Domiciano",
+    "certainty": "probable",
+    "note": "Su recepción externa universal temprana (conocida ya por 1 Clemente, Policarpo y Papías en el Asia Menor al que fue dirigida) es de las más sólidas de las Católicas."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 1 Pedro combina una gran meditación bautismal de esperanza con consejos prácticos para creyentes minoritarios vistos con recelo por sus vecinos paganos en cinco capítulos armoniosos: I. Bendición por el nuevo nacimiento a una «esperanza viva» y la redención no con oro sino con sangre preciosa del Cordero (1:1–2:10, culminando en el himno eclesial «linaje escogido, real sacerdocio, nación santa»); II. Conducta ejemplar en la sociedad pagana como peregrinos ante autoridades, amos y cónyuges mirando el ejemplo silencioso de Cristo según Isaías 53 (2:11–3:17); III. Cristo anunciado a los espíritus y el bautismo que salva (3:18–4:11); IV. Regocijo al compartir el «nombre de cristiano» en la prueba de fuego y encargo final a los ancianos pastores (4:12–5:14).\n\n[Estudio] Cita extensamente Isaías 53, Salmo 34 y Proverbios."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Dirigida a cinco vastas provincias de Anatolia (el Ponto, Galacia, Capadocia, Asia y Bitinia —la misma región norteña donde décadas más tarde el gobernador Plinio el Joven escribiría a Trajano en 112 d. C. acerca de los procesos judiciales contra cristianos solo «por el nombre», cfr. 4:16—), la carta refleja a creyentes principalmente ex-gentiles («su vana manera de vivir heredada de sus padres», 1:18) calumniados en la vida vecinal cotidiana por negarse a participar en cultos cívicos y banquetes disolutos (4:3–4)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Citada temprana e indiscutiblemente por Policarpo (c. 110–130 d. C.), Papías, Ireneo y Clemente de Alejandría, su autoría petrina es explicada tradicionalmente mediante la nota explícita de 5:12 («Por conducto de Silvano… les he escrito brevemente»), explicando la elegancia del griego por la colaboración redaccional de Silvano/Silas (compañero antiguo también de Pablo en 1 Ts 1:1).\n\n[Estudio] Achille Vander Heeren (Catholic Encyclopedia) defiende esa síntesis, mientras parte de la crítica moderna sitúa 1 Pedro en un círculo petrino-paulino romano de las décadas de 70–90 d. C."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El corazón teológico traslada todos los privilegios del Israel del Sinaí (Éx 19:6; Os 2:23) a la Iglesia multiétnica de «extranjeros y peregrinos»: edificados como «piedras vivas» sobre Cristo piedra angular rechazada, ofrecen sacrificios espirituales como «real sacerdocio» (2:4–10). Cuando llega la injusticia, no responden con insulto sino siguiendo las pisadas del Inocente que cargó nuestros pecados en el madero para que sanáramos por sus heridas (2:21–25), estando siempre «preparados para presentar defensa (apologia) con mansedumbre y reverencia a todo el que les demande razón de la esperanza» (3:15).\n\n[Tradición] Este versículo 3:15 dio su nombre y norma ética a toda la apologética cristiana."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Testimoniada espectacularmente en el papiro completo P72 (Papiro Bodmer VII–VIII, siglos III–IV, con un texto de extraordinaria calidad aunque notas coptas marginales) y en el Codex Sinaiticus (núm. 53) y el Vaticanus con mínima variación textual relevante.\n\n[Texto] Tanto la NTV (5 capítulos, 105 vv.) como el Codex Sinaiticus (5 capítulos, 105 vv.) presentan el texto íntegro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Al haber sufrido persecuciones desde el primer siglo sin rechazo canónico alguno (Eusebio la clasifica entre los homologoumena indiscutibles), 1 Pedro alimentó la espiritualidad del martirio, la teología del «sacerdocio común de todos los fieles» (2:9, capital tanto en la tradición patrística como en Lutero y el Concilio Vaticano II) y los debates teológicos sobre el «descenso a los infiernos» (3:19–20; 4:6) ya recogidos en el Credo de los Apóstoles."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer 2:4–10 con Éxodo 19:6 y Salmo 118:22 al lado para apreciar cómo la iglesia gentil-judía se comprende como casa espiritual y nación santa.\n2. Seguir el código de conducta civil y familiar (2:13–3:12) recordando la situación vulnerable de una minoría calumniada bajo Roma.\n3. Observar la mención temprana del título «cristiano» en 4:16 (solo usado tres veces en el NT: Hch 11:26; 26:28; 1 P 4:16).\n4. Recordar al leer 5:13 que «Babilonia» es el nombre simbólico temprano para Roma antes de Apocalipsis 17–18."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Qué significa la difícil afirmación de que Cristo «fue y predicó a los espíritus encarcelados» en 1 Pedro 3:19–20?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La lectura patrística mayoritaria (desde Clemente de Alejandría, Orígenes e Ireneo) entendió que entre su muerte y resurrección Cristo descendió al Hades/Seol proclamando liberación a los justos o muertos antiguos antes del Evangelio (cfr. 4:6)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Agustín pensó más bien en Cristo predicando por su Espíritu en tiempos de Noé; numerosos exegetas modernos (siguiendo 1 Enoc) entienden una proclamación triunfal del Cristo resucitado/ascendido sobre ángeles caídos del diluvio («espíritus» en Gn 6)."
+        }
+      ]
+    },
+    {
+      "question": "¿Procede el libro directamente de Simón Pedro a través de Silvano o de un círculo petrino romano posterior?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "El testimonio unánime desde Policarpo (quien la cita sin cesar en su carta a Filipenses en el mismo siglo II temprano) y la atribución explícita a un amanuense llamado Silvano (5:12) explican naturalmente la calidad del griego bajo Pedro hacia 62–64 d. C."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores (Achtemeier, Elliott) consideran las alusiones a «Babilonia» (pos-70 d. C.), las afinidades con el lenguaje paulino y el griego helenístico como señales de un escrito pseudónimo compuesto en Roma c. 75–90 d. C."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-peter",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

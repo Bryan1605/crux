@@ -1,0 +1,100 @@
+{
+  "id": "2-reyes",
+  "title": "2 Reyes",
+  "abbr": "2 R",
+  "order": 12,
+  "testament": "AT",
+  "summary": "Continuación de Reyes en veinticinco capítulos: ascensión de Elías al cielo y milagros de Eliseo, caída del Reino del Norte ante Asiria (722 a. C.), reforma centralizadora de Ezequías y Josías en Judá, destrucción de Jerusalén por Babilonia (586 a. C.) y amnistía de Joaquín en el exilio. Protocanónico; ausente del Sinaiticus.",
+  "genre": [
+    "anales dinásticos paralelos",
+    "ciclo profético de Eliseo",
+    "crónica trágica del exilio"
+  ],
+  "language": "Hebreo bíblico deuteronomista con extractos de crónicas reales",
+  "date": {
+    "narrative": "Desde el reinado de Ocozías y la ascensión de Elías (c. 853 a. C.) hasta la liberación de Joaquín en Babilonia (561 a. C.)",
+    "composition": "Edición final en Babilonia o Palestina poco después del 561 a. C. (última fecha fechada del libro en 25:27)",
+    "certainty": "segura",
+    "note": "El dato final del año 37 del cautiverio de Joaquín (561 a. C.) fija el terminus a quo más firme de la compilación final."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — unido a 1 Reyes)",
+    "catolico": "Antiguo Testamento (protocanónico; tradicionalmente 4 Reyes en Vulgata)",
+    "ortodoxo": "Antiguo Testamento (4 Basileion / 4 Reinos)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, 2 Reyes está completo en la NTV (25 capítulos, 719 versículos). No perduran folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Reyes conduce en veinticinco capítulos el destino de los dos reinos desde su momento de esplendor profético hasta el colapso total. Comienza con el relevo de Elías a Eliseo y sus múltiples señales de misericordia y poder (Naamán, la sunamita, caps. 1–8), sigue la revuelta sangrienta de Jehú contra los omridas y el paralelo alternado de reyes hasta la deportación de Samaria por Asiria (caps. 9–17), y se concentra finalmente en el Reino de Judá: liberación prodigiosa bajo Ezequías e Isaías (caps. 18–20), apostasía de Manasés, reforma de Josías tras hallar el «libro de la Ley» (caps. 22–23) y los tres asedios babilonios culminados en 586 a. C. (caps. 24–25).\n\n[Estudio] Se cierra con una sobria nota de gracia abierta: Joaquín sentado a la mesa del rey de Babilonia."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Pocos libros del Antiguo Testamento gozan de tan abundante corroboración en inscripciones extranjeras contemporáneas: el Obelisco Negro de Salmanasar III representa a Jehú tributario; los anales de Tiglat-pileser III, Sargón II (toma de Samaria, 722 a. C.) y Senaquerib (prisma de Taylor sobre el cerco de Jerusalén de 701 a. C.) nombran reyes y campañas narradas aquí, y las Crónicas Babilónicas de Nabucodonosor II documentan la captura de Jerusalén del 597 a. C. (corroborada también por las cartas de Laquis y raciones de Joaquín en Babilonia)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atribuido tradicionalmente al entorno profético de Jeremías —cuyo cap. 52 reproduce casi textualmente 2 Reyes 24:18–25:30—.\n\n[Estudio] Los redactores deuteronomistas integraron antiguas tradiciones de los discípulos proféticos de Eliseo (caps. 2–13) junto a extractos del Archivo Real de Jerusalén (Ezequías, Josías) y añadieron extensas homilías teológicas clave —especialmente la meditación sobre las causas de la caída de Samaria en el capítulo 17 y la condena del reinado de Manasés en el 21— para dar sentido a la catástrofe del exilio."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Frente al desconcierto de un pueblo exiliado que podría pensar que Marduk venció a Yahvé, 2 Reyes responde que el desastre no prueba debilidad divina sino fidelidad justa a las advertencias de la alianza repetidas «por medio de todos sus siervos los profetas» (17:13). Ni siquiera el Templo físico garantiza inmunidad si reina la injusticia y el sincretismo. Sin embargo, los gestos de humildad (Josías en 22:19), la curación del extranjero Naamán (cap. 5) y la subsistencia de Joaquín (25:27–30) mantienen abierta la promesa davídica.\n\n[Tradición] El Evangelio de Lucas alude directamente a Naamán el sirio como anticipo de la salvación abierta a los gentiles (Lc 4:27)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] La sección griega 4 Reinos de la Septuaginta muestra en varios tramos la revisión temprana llamada kaige, que acerca el griego literalmente al Texto Masorético, mientras las copias antioquenas (lucianicas) preservan lecturas griegas antiguas valiosas para reconstruir el texto hebreo previo (cfr. variantes respecto al paralelo de Isaías 36–39 en 2 R 18–20).\n\n[Texto] Aquí está completo en la NTV (25 capítulos, 719 vv.); no perdura en el Codex Sinaiticus."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] La traslación de Elías en carro de fuego (2:11), el gesto de Naamán en el Jordán (cap. 5) y el descubrimiento del rollo de la Ley (cap. 22) marcaron tanto la hagiografía rabínica como las catequesis bautismales patrísticas (Ambrosio, Cirilo de Jerusalén y Basilio leyeron el baño de Naamán como figura del bautismo).\n\nJesús en Lucas 4:25–27 une a la viuda de Elías y a Naamán de Eliseo para mostrar la libertad universal de la gracia divina."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer 2 R 17:7–23 como la clave interpretativa del autor sobre el destino trágico del Reino del Norte.\n2. Contrastar las dos grandes reformas de Judá: Ezequías (18–20, liberado de Asiria) y Josías (22–23, quien pese a su rectitud muere en Meguido).\n3. Observar el paralelo literal de 2 R 18–20 con Isaías 36–39 y de 2 R 24:18–25:30 con Jeremías 52.\n4. Atender a los cuatro versículos finales (25:27–30): un destello sutil de esperanza davídica en medio del exilio."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Concluye 2 Reyes 25:27–30 con esperanza mesiánica o con resignación ante el fin del Estado?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Martin Noth interpretó la liberación de Joaquín como un mero apéndice fáctico sin ilusión de restauración dinástica, cerrando la historia en tono de juicio cumplido."
+        },
+        {
+          "label": "Estudio",
+          "body": "Gerhard von Rad y otros comentadores ven en esa amnistía deliberada —colocada donde la promesa a David podría parecer rota— un signo discreto de que la casa de David no ha sido abandonada para siempre."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo se relacionan el relato bíblico del cerco de Senaquerib (2 R 18–19) y el Prisma asirio de Taylor?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Ambos testimonios coinciden en la fecha (701 a. C.), el tributo pagado por Ezequías y el hecho llamativo de que el rey asirio —contrariamente a su costumbre tras tomar Laquis— no conquistó Jerusalén."
+        },
+        {
+          "label": "Estudio",
+          "body": "Mientras Senaquerib presenta su retirada tras cobrar tributo como éxito estratégico, los narradores bíblicos conservan el recuerdo de una plaga nocturna mortal que forzó la retirada asiria."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-kings",
+    "ce-kings-3-4",
+    "tyndale-ntv-2009",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

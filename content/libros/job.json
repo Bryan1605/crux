@@ -1,0 +1,101 @@
+{
+  "id": "job",
+  "title": "Job",
+  "abbr": "Job",
+  "order": 18,
+  "testament": "AT",
+  "summary": "Poema sapiencial y relato en prosa de cuarenta y dos capítulos sobre el sufrimiento inocente del justo Job, sus largos debates filosófico-teológicos con tres amigos y Eliú y la revelación final de Dios desde el torbellino sobre los misterios de la creación. Protocanónico; completo en NTV y Codex Sinaiticus.",
+  "genre": [
+    "diálogo sapiencial poético",
+    "teodicea y lamento",
+    "relato marco en prosa arcaica"
+  ],
+  "language": "Hebreo poético de notable densidad léxica y arameísmos o sabor dialectal edomita/transjordano",
+  "date": {
+    "narrative": "Época patriarcal estilizada en la tierra extranjera de Uz (norte de Arabia o Edom)",
+    "composition": "Debatida: entre el siglo VII a. C. y el período exílico o persa temprano (siglos VI–IV a. C.)",
+    "certainty": "discutida",
+    "note": "Combina una leyenda popular muy antigua (prólogo y epílogo en prosa) con un ciclo de discursos poéticos elaborados probablemente en torno al exilio o poco después."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — entre los tres libros poéticos Sifré Emet con Salmos y Proverbios)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Job articula prosa folclórica arcaica con una de las cumbres poéticas de la literatura universal en cuarenta y dos capítulos. Un prólogo en prosa celeste y terrestre presenta la apuesta del adversario (ha-satán) y la ruina total de Job (caps. 1–2); irrumpe entonces un largo debate poético: el grito de Job maldiciendo su día (cap. 3), tres ciclos dialogados con Elifaz, Bildad y Zofar (caps. 4–27), el himno sobre la inaccesibilidad de la sabiduría (cap. 28), la protesta final de inocencia de Job (29–31), los cuatro discursos del joven Eliú (32–37), los dos discursos de Yahvé desde el torbellino (38–41) y un epílogo en prosa de arrepentimiento, intercesión y restitución (42:7–17).\n\n[Estudio] Joseph Hontheim (Catholic Encyclopedia) subraya la arquitectura dramática única de esta teodicea bíblica."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Situado intencionadamente fuera de la tierra y del culto de Israel —en Uz, tierra de los hijos de oriente, sin mención del Sinaí ni del Templo—, el libro entra en diálogo crítico con los poemas mesopotámicos del «justo sufriente» (Ludlul bel nemeqi y la Teodicea babilónica) y cuestiona la ortodoxia sapiencial simplista que ligaba mecánicamente prosperidad y virtud frente a sufrimiento y culpa secreta.\n\nPara una comunidad que atravesaba la crisis del exilio (siglos VI–V a. C.), el libro ofrecía lenguaje honesto para el clamor ante el silencio aparente de Dios."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] El Talmud (Bava Batra 14b–15a) transmite opiniones diversas: Moisés en Madián o sabios anónimos de distintas épocas, hasta preguntarse incluso si Job fue una figura parabólica.\n\n[Estudio] Seligsohn, Hirsch y Siegfried (Jewish Encyclopedia) muestran cómo la crítica distingue el relato tradicional en prosa (que quizá circulaba ya oralmente, cfr. Ez 14:14 sobre Job junto a Noé y Daniel) del gran poeta anónimo que compuso el núcleo dialogado, así como posibles adiciones posteriores: el poema sobre la sabiduría del cap. 28 y la intervención de Eliú (caps. 32–37), ausente del prólogo y del veredicto final."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Job demuele la teología rígida de los amigos, quienes acaban calumniando a un inocente para proteger su sistema de retribución automática. Aunque Dios no ofrece desde el torbellino una explicación especulativa del origen del mal, desmonta el antropocentrismo del hombre enseñando que el cosmos —Behemot, Leviatán, la lluvia en el desierto deshabitado— obedece a una sabiduría libre más vasta que el cálculo humano. Al final, Dios aprueba la honesta rebeldía orante de Job frente a la falsa piedad de sus defensores (42:7).\n\n[Tradición] Santiago 5:11 recuerda «la paciencia/perseverancia de Job», y la traducción griega añade su esperanza en la resurrección en 19:25–27 y 42:17."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El hebreo de Job es célebre por sus palabras únicas (hapax) y pasajes difíciles. En la tradición griega antigua (LXX Old Greek), el libro era originalmente alrededor de un sexto más breve que el Texto Masorético —particularmente en los discursos de Eliú y de Yahvé—; como documenta Claude Cox (NETS), Orígenes rellenó posteriormente las lagunas de la Septuaginta desde Teodoción marcándolas con asteriscos, muchos de los cuales entraron en los manuscritos posteriores como el Codex Sinaiticus (núm. 32).\n\n[Texto] Tanto la NTV (42 caps., 1.070 vv.) como el Sinaiticus (42 caps., 1.069 vv.) ofrecen el libro completo."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En el judaísmo helenístico circuló el Testamento de Job; los Padres griegos y latinos dedicaron obras monumentales al libro, destacando las Moralia in Iob de Gregorio Magno y los comentarios de Juan Crisóstomo y Tomás de Aquino, quienes vieron en Job sufriente una figura anticipada de Cristo y del misterio de la gracia gratuita.\n\nEn el mundo moderno, desde Kierkegaard hasta Jung y Ricoeur, Job permanece como texto capital sobre la fe sin garantías utilitarias y la dignidad de la lamentación."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Notar la paradoja entre el Job resignado del prólogo (1:21; 2:10) y el Job apasionadamente querellante del poema (caps. 3–31): ambos son validados por Dios en 42:7.\n2. Seguir la frustración del tercer ciclo de discursos (caps. 22–27), cuyo desorden textual sugiere que los argumentos de los amigos se quedan sin aliento.\n3. Observar cómo Dios responde preguntas morales llevando a Job a contemplar estrellas, cabras monteses y monstruos cósmicos (38–41).\n4. Confrontar pasajes breves en griego del Sinaítico con la NTV para notar dónde Orígenes o Teodoción completaron el texto antiguo."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Qué significa exactamente la célebre exclamación de Job 19:25–26 sobre su «Redentor» (goel)?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Jerónimo (Vulgata) y gran parte de la teología cristiana leyeron «yo sé que mi Redentor vive… y en mi carne veré a Dios» como profecía clara de la resurrección corporal final."
+        },
+        {
+          "label": "Estudio",
+          "body": "Filólogos modernos (observando la ambigüedad sintáctica del hebreo «desde/sin mi carne») interpretan que Job espera un testigo o garante divino que vindique su inocencia aún en vida o tras la muerte antes de resolverse en la teofanía del cap. 42."
+        }
+      ]
+    },
+    {
+      "question": "¿Formaron los discursos de Eliú (caps. 32–37) parte del diseño original o fueron insertados por un lector crítico posterior?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de comentaristas considera 32–37 una interpolación sapiencial ulterior porque Eliú no aparece ni en el prólogo ni en el epílogo y anticipa parcialmente argumentos del discurso divino."
+        },
+        {
+          "label": "Estudio",
+          "body": "Algunos estudiosos literarios (Habel, Janzen) defienden que Eliú cumple un rol dramático deliberado de transición juvenil pomposa antes de la voz auténtica de Yahvé."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-job",
+    "ce-job",
+    "cox-nets-iob",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

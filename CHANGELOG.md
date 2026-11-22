@@ -11,19 +11,37 @@ versión `0.12.0` sigue reservada para el módulo de hebreo.
 
 ### Añadido
 
-- **Piloto bíblico de Tobit**: traducción de trabajo completa desde el Codex Sinaiticus
-  (14 capítulos, 232 versículos, licencia CC BY-NC-SA 3.0 en borrador), ficha
-  introductoria (`content/libros/tobit.json`), registro de fuentes verificadas
-  (`content/libros/fuentes.json`), índice `/biblia/libros`, panel lateral en `/exegesis`
-  y `/biblia/ntv`, y comprobaciones `qa:trad` y `qa:libros`.
-- **`/apologetica/shincheonji`**: 100 preguntas organizadas en 10 bloques con el texto
-  griego del Codex Sinaiticus frente a la NTV, frases clave resaltadas en ambos testigos
-  (`shincheonji-claves.json`) y pestaña «¿Qué cree Shincheonji?» con 35 citas literales de
-  *The Creation of Heaven and Earth* verificables mediante `npm run check:lee` y
-  `npm run qa:shincheonji`.
+- **Proyecto bíblico — 73/73 fichas de libros, Judit completo y pasajes especiales**:
+  - **73 fichas introductorias** (`/biblia/libros/:id`, `content/libros/*.json`, todas en
+    `borrador` con 600–834 palabras): completadas las 70 fichas restantes (4 solo-Codex —
+    `1-macabeos`, `4-macabeos`, `sabiduria`, `siracida`—, 39 AT NTV y 27 NT NTV) junto a
+    `tobit`, `2-esdras` y `judit`; ampliado `content/libros/fuentes.json` de 11 a **128 fuentes
+    verificadas**, añadido filtro «Solo en el Codex» en `/biblia/libros` y ampliado el build
+    a **287 rutas prerenderizadas** (**286** URLs en `sitemap.xml`).
+  - **Traducción de trabajo completa de Tobit y Judit más Salmo 151 y Joel 4 LXX**
+    (`src/assets/texts/trad/` → `public/textos/exegesis/trad/`, 587 versículos en `borrador`,
+    licencia CC BY-NC-SA 3.0): Tobit (14 caps., 232 vv.), Judit completo (16 caps., 327 vv.,
+    conservando las lagunas del folio 38.8 sin rellenar), Salmo 151 (cap. 151, 7 vv.) y Joel 4
+    LXX (cap. 4, 21 vv.), con tablas de revisión en `docs/proyecto-biblico/revision/`,
+    adaptación de `build-trad.mjs`, `qa-trad.mjs`, `Exegesis.jsx` y `LibroFicha.jsx`,
+    panel lateral en `/exegesis` y `/biblia/ntv` y comprobaciones `qa:trad` (58/58) y
+    `qa:libros` (315/315).
+- **Fascículos de apologética («Preguntas con la Biblia»)**:
+  - **`/apologetica/shincheonji`** (Fascículo I): 100 preguntas organizadas en 10 bloques con
+    el texto griego del Codex Sinaiticus frente a la NTV, frases clave resaltadas en ambos
+    testigos (`shincheonji-claves.json`) y pestaña «¿Qué cree Shincheonji?» con 35 citas
+    literales de *The Creation of Heaven and Earth* verificables mediante `npm run check:lee` y
+    `npm run qa:shincheonji`.
+  - **`/apologetica/adventismo`** (Fascículo II): 50 preguntas en 6 bloques (Codex × NTV con
+    palabras clave resaltadas en `adventismo-claves.json`).
+  - **`/apologetica/dispensacionalismo`** (Fascículo IV): 50 preguntas en 6 bloques (Codex × NTV
+    con palabras clave resaltadas en `dispensacionalismo-claves.json`) y pestaña «¿Qué enseña el
+    dispensacionalismo?» con 24 citas textuales y páginas de J. Dwight Pentecost (*Eventos del
+    Porvenir*), verificables con `npm run qa:apologetica`.
+  - Guía operativa para futuros fascículos en `docs/apologetica/FASCICULOS.md`.
 - **Sección «Preguntas con la Biblia» en portada** (`/`): tablero oscuro de 6 tarjetas
-  (Shincheonji disponible y cuatro exámenes doctrinales próximos junto a la tarjeta «MÉTODO
-  CRUX») y enlaces en menú y pie.
+  (Shincheonji, Adventismo y Dispensacionalismo disponibles; dos exámenes doctrinales próximos
+  junto a la tarjeta «MÉTODO CRUX») y enlaces en menú y pie.
 - **Portada por obra en `/biblia` (Fase I del rediseño)**: `content/obras-patristica.json`,
   `src/data/obras.js`, generación a 600 px en `optimize-images.mjs`, validación en
   `validate-content.mjs` y `vite.config.js`, y primera ilustración en la Parte 1.3

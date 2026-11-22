@@ -6,11 +6,12 @@
  *   - MorphGNT (CC BY-SA 3.0; solo se usan lema y morfología, no el texto SBLGNT)
  *
  * El Codex escribe sin acentos, con sigma lunada (ϲ) y con abreviaturas
- * sobrelineadas. El mapa `NS_MAP` solo contiene *nomina sacra* verificados en el
- * propio códice; las abreviaturas no sagradas (ἐν, ἤ, ᾧ, ὁ, περί…) las resuelve
- * la alineación por contexto. `ιβ` (12) va aparte para no marcarlo como sacro.
+ * sobrelineadas. El mapa `NS_MAP` solo contiene *nomina sacra* contraídos y
+ * verificados en el propio códice; las abreviaturas no sagradas (`ιβ`, etc.) van
+ * en `ABBR_MAP` y las sobrelíneas de fin de línea se resuelven por contexto.
  */
 import { foldGreek, greekWords } from '../src/lib/greek.js';
+import { decodeVerseLemmas, greekSortKey as sharedGreekSortKey } from '../src/lib/lexicon.js';
 
 /* ========================================================================== */
 /* TBESG                                                                      */
@@ -87,8 +88,10 @@ export function posEs(posRaw, fallback = '') {
   if (raw.startsWith('D')) return 'pronombre demostrativo';
   if (raw.startsWith('R')) return 'pronombre relativo';
   if (raw.startsWith('INJ')) return 'interjección';
+  if (raw.startsWith('X')) return 'pronombre indefinido';
   if (raw.startsWith('I')) return 'pronombre interrogativo';
   if (raw.startsWith('ADV')) return 'adverbio';
+  if (raw.startsWith('A-NUI')) return 'numeral';
   if (raw.startsWith('A')) return raw.includes('/') ? 'adjetivo/adverbio' : 'adjetivo';
   if (raw.startsWith('V')) return 'verbo';
   if (raw.startsWith('K')) return 'pronombre relativo';
@@ -117,14 +120,20 @@ export function posEs(posRaw, fallback = '') {
   return fallback;
 }
 
-/** Corrige la transcripción de TBESG para las aspiradas iniciales. */
-export function cleanTranslit(value) {
-  return String(value || '')
+/** Corrige la transcripción de TBESG para aspiradas iniciales y rho inicial. */
+export function cleanTranslit(value, lemma = '') {
+  let out = String(value || '')
     .replace(/^oh/, 'ho')
+    .replace(/^ōh/, 'hō')
     .replace(/^uh/, 'hu')
     .replace(/^eh/, 'he')
+    .replace(/^ēh/, 'hē')
     .replace(/^ih/, 'hi')
     .replace(/^ah/, 'ha');
+  if (/^[ῥῬ]/.test(String(lemma || '')) && /^r(?!h)/i.test(out)) {
+    out = out[0] + 'h' + out.slice(1);
+  }
+  return out;
 }
 
 /**
@@ -239,35 +248,110 @@ function bestTbesg(list, pos) {
 }
 
 /**
+ * Variantes ortográficas MorphGNT ↔ TBESG verificadas en `tbesg.txt`.
+ * Evita que formas como Καφαρναούμ, ἔνατος o κρεμάννυμι queden sin Strong.
+ */
+const TBESG_LEMMA_ALIASES = new Map(
+  Object.entries({
+    Καφαρναούμ: 'G2584',
+    ἔνατος: 'G1766',
+    κρεμάννυμι: 'G2910',
+    ἐραυνάω: 'G2045',
+    εἴωθα: 'G1486',
+    μήγε: 'G1490',
+    μαμωνᾶς: 'G3126',
+    λεγιών: 'G3003',
+    θά: 'G3134',
+    οἶμαι: 'G3633',
+    ἡττάομαι: 'G2274',
+    Βόες: 'G1003',
+    Ἀχίμ: 'G0885',
+    Νέα: 'G3501',
+    λεμά: 'G2982',
+    Ἰάϊρος: 'G2383',
+    χρεοφειλέτης: 'G5533',
+    Ἄρειος: 'G0697',
+    σύμφορον: 'G4851',
+    λογεία: 'G3048',
+    ἔοικα: 'G1503',
+    ἅλα: 'G0217',
+    στασιαστής: 'G4955',
+    Ἐλμαδάμ: 'G1678',
+    Ἰωρίμ: 'G2497',
+    Μεννά: 'G3104',
+    Σερούχ: 'G4562',
+    ὑπερεκχύννομαι: 'G5240',
+    δανιστής: 'G1157',
+    παρακαθέζομαι: 'G3869',
+    κίχρημι: 'G5531',
+    συκομορέα: 'G4809',
+    ἐκκρέμαμαι: 'G1582',
+    ἄραφος: 'G0729',
+    λακάω: 'G2997',
+    σφυδρόν: 'G4974',
+    Ἑμμώρ: 'G1697',
+    ἐνέος: 'G1769',
+    εὐρακύλων: 'G2148',
+    αὔξω: 'G0837',
+    ἀλυπότερος: 'G0253',
+    λῆμψις: 'G3028',
+    καυστηριάζω: 'G2743',
+    ἀνέλεος: 'G0415',
+    πρόϊμος: 'G4406',
+    ἀπογίνομαι: 'G0581',
+    Ἰσσαχάρ: 'G2466',
+    σιρικός: 'G4596',
+    κιννάμωμον: 'G2792',
+    ῥέδη: 'G4480',
+    ἐνδώμησις: 'G1739',
+    μέλει: 'G3199',
+    ἀνάγαιον: 'G0508',
+    Στοϊκός: 'G4770',
+    ἔννυχα: 'G1773',
+    Ἰτουραῖος: 'G2484',
+    μαράνα: 'G3134',
+    μασάομαι: 'G3145',
+    ἀφθορία: 'G0090'
+  }).map(([k, v]) => [k.normalize('NFC'), v])
+);
+
+/**
  * Elige la entrada TBESG más probable para un lema y una categoría MorphGNT.
  * Prioriza la numeración Strong original (1–5624), sin sufijo y con glosa.
- * Prueba variantes activa/media (`πορεύομαι` → `πορεύω`) y, si falla, busca
- * por prefijo con distancia mínima (nombres como `Μαριάμ` → `Μαρία`).
+ * Comprueba alias ortográficos verificados, coincidencia exacta (con acento),
+ * variantes activa/media (`πορεύομαι` → `πορεύω`) y, como último recurso,
+ * distancia por prefijo evitando mezclar categorías si existe empate.
  */
 export function pickTbesg(lemma, pos = '', index) {
   if (!index) return null;
-  const cacheKey = `${String(lemma || '').normalize('NFC')}|${pos}`;
+  const normLemma = String(lemma || '').normalize('NFC');
+  const cacheKey = `${normLemma}|${pos}`;
   if (index.cache?.has(cacheKey)) return index.cache.get(cacheKey);
   let found = null;
-  const exact = index.byLemmaExact?.get(String(lemma || '').normalize('NFC'));
+  const aliasStrong = TBESG_LEMMA_ALIASES.get(normLemma);
+  if (aliasStrong) found = pickTbesgByStrong(aliasStrong, index, normLemma, pos);
+  const exact = !found && index.byLemmaExact?.get(normLemma);
   if (exact?.length) found = bestTbesg(exact, pos);
   if (!found) {
-    for (const variant of lemmaVariants(lemma)) {
+    for (const variant of lemmaVariants(normLemma)) {
       const list = index.byLemma.get(variant);
       if (list?.length) {
-        found = bestTbesg(list, pos);
+        const samePos = pos ? list.filter(e => e.pos === pos) : list;
+        found = bestTbesg(samePos.length ? samePos : list, pos);
         break;
       }
     }
   }
   if (!found) {
-    const folded = foldGreek(lemma);
+    const folded = foldGreek(normLemma);
     if (folded.length >= 4) {
       const candidates = index.byPrefix.get(folded.slice(0, 4)) || [];
       let best = null;
       let bestDistance = 99;
       for (const entry of candidates) {
         const distance = levenshtein(folded, foldGreek(entry.lemma));
+        if (distance > 2) continue;
+        if (distance === 2 && pos && entry.pos && entry.pos !== pos) continue;
         if (distance < bestDistance) {
           bestDistance = distance;
           best = entry;
@@ -286,10 +370,16 @@ export function pickTbesg(lemma, pos = '', index) {
   return found;
 }
 
-/** Entrada TBESG por número Strong (completo o base). */
-export function pickTbesgByStrong(strong, index) {
+/** Entrada TBESG por número Strong (completo o base), priorizando lema y POS. */
+export function pickTbesgByStrong(strong, index, lemma = '', pos = '') {
   const list = index?.byStrong?.get(String(strong || '').trim()) || [];
-  return list[0] || null;
+  if (!list.length) return null;
+  if (lemma) {
+    const norm = lemma.normalize('NFC');
+    const exactLemma = list.filter(e => e.lemma.normalize('NFC') === norm);
+    if (exactLemma.length) return bestTbesg(exactLemma, pos);
+  }
+  return bestTbesg(list, pos);
 }
 
 /* ========================================================================== */
@@ -329,6 +419,11 @@ export function parseMorphGnt(raw) {
 /* Nomina sacra verificados en el Codex                                       */
 /* ========================================================================== */
 
+/**
+ * Contracciones verificadas de *nomina sacra* en el Codex Sinaiticus.
+ * No incluye formas plenas sin contraer (`θεοϲ`, `ουρανω`, `ανθρωπω`…) para no
+ * clasificar por error abreviaturas de `-ν` final de línea (`ουραν‹ω›`).
+ */
 const NS_ROWS = [
   // θεός
   ['θσ', 'θεός', 'θεός'],
@@ -336,50 +431,26 @@ const NS_ROWS = [
   ['θω', 'θεῷ', 'θεός'],
   ['θν', 'θεόν', 'θεός'],
   ['θε', 'θεέ', 'θεός'],
-  ['θεοσ', 'θεός', 'θεός'],
-  ['θεου', 'θεοῦ', 'θεός'],
-  ['θεω', 'θεῷ', 'θεός'],
-  ['θεον', 'θεόν', 'θεός'],
-  ['θεε', 'θεέ', 'θεός'],
   // κύριος
   ['κσ', 'κύριος', 'κύριος'],
   ['κυ', 'κυρίου', 'κύριος'],
   ['κω', 'κυρίῳ', 'κύριος'],
   ['κν', 'κύριον', 'κύριος'],
   ['κε', 'κύριε', 'κύριος'],
-  ['κυριοσ', 'κύριος', 'κύριος'],
-  ['κυριου', 'κυρίου', 'κύριος'],
-  ['κυριω', 'κυρίῳ', 'κύριος'],
-  ['κυριον', 'κύριον', 'κύριος'],
-  ['κυριε', 'κύριε', 'κύριος'],
   // Ἰησοῦς
   ['ισ', 'Ἰησοῦς', 'Ἰησοῦς'],
   ['ιυ', 'Ἰησοῦ', 'Ἰησοῦς'],
   ['ιν', 'Ἰησοῦν', 'Ἰησοῦς'],
-  ['ιησουσ', 'Ἰησοῦς', 'Ἰησοῦς'],
-  ['ιησου', 'Ἰησοῦ', 'Ἰησοῦς'],
-  ['ιησουν', 'Ἰησοῦν', 'Ἰησοῦς'],
   // Χριστός
   ['χσ', 'Χριστός', 'Χριστός'],
   ['χυ', 'Χριστοῦ', 'Χριστός'],
   ['χω', 'Χριστῷ', 'Χριστός'],
   ['χν', 'Χριστόν', 'Χριστός'],
-  ['χριστοσ', 'Χριστός', 'Χριστός'],
-  ['χριστου', 'Χριστοῦ', 'Χριστός'],
-  ['χριστω', 'Χριστῷ', 'Χριστός'],
-  ['χριστον', 'Χριστόν', 'Χριστός'],
   // πνεῦμα
   ['πνα', 'πνεῦμα', 'πνεῦμα'],
   ['πνσ', 'πνεύματος', 'πνεῦμα'],
   ['πνι', 'πνεύματι', 'πνεῦμα'],
   ['πν', 'πνεῦμα', 'πνεῦμα'],
-  ['πνευμα', 'πνεῦμα', 'πνεῦμα'],
-  ['πνευματοσ', 'πνεύματος', 'πνεῦμα'],
-  ['πνευματι', 'πνεύματι', 'πνεῦμα'],
-  ['πνευματα', 'πνεύματα', 'πνεῦμα'],
-  ['πνευματων', 'πνευμάτων', 'πνεῦμα'],
-  ['πνευμασιν', 'πνεύμασιν', 'πνεῦμα'],
-  ['πνευμασι', 'πνεύμασι', 'πνεῦμα'],
   ['πνατα', 'πνεύματα', 'πνεῦμα'],
   ['πνατων', 'πνευμάτων', 'πνεῦμα'],
   ['πνασιν', 'πνεύμασιν', 'πνεῦμα'],
@@ -390,10 +461,8 @@ const NS_ROWS = [
   ['υυ', 'υἱοῦ', 'υἱός'],
   ['υω', 'υἱῷ', 'υἱός'],
   ['υν', 'υἱόν', 'υἱός'],
-  ['υιοσ', 'υἱός', 'υἱός'],
-  ['υιου', 'υἱοῦ', 'υἱός'],
-  ['υιω', 'υἱῷ', 'υἱός'],
-  ['υιον', 'υἱόν', 'υἱός'],
+  ['υοι', 'υἱοί', 'υἱός'],
+  ['υων', 'υἱῶν', 'υἱός'],
   // ἄνθρωπος
   ['ανοσ', 'ἄνθρωπος', 'ἄνθρωπος'],
   ['ανου', 'ἀνθρώπου', 'ἄνθρωπος'],
@@ -402,32 +471,20 @@ const NS_ROWS = [
   ['ανοι', 'ἄνθρωποι', 'ἄνθρωπος'],
   ['ανων', 'ἀνθρώπων', 'ἄνθρωπος'],
   ['ανουσ', 'ἀνθρώπους', 'ἄνθρωπος'],
-  ['ανθρωποσ', 'ἄνθρωπος', 'ἄνθρωπος'],
-  ['ανθρωπου', 'ἀνθρώπου', 'ἄνθρωπος'],
-  ['ανθρωπω', 'ἀνθρώπῳ', 'ἄνθρωπος'],
-  ['ανθρωπον', 'ἄνθρωπον', 'ἄνθρωπος'],
-  ['ανθρωποι', 'ἄνθρωποι', 'ἄνθρωπος'],
-  ['ανθρωπων', 'ἀνθρώπων', 'ἄνθρωπος'],
-  ['ανθρωπουσ', 'ἀνθρώπους', 'ἄνθρωπος'],
   // μήτηρ
   ['μηρ', 'μήτηρ', 'μήτηρ'],
   ['μρα', 'μητέρα', 'μήτηρ'],
   ['μρσ', 'μητρός', 'μήτηρ'],
-  ['μητηρ', 'μήτηρ', 'μήτηρ'],
-  ['μητερα', 'μητέρα', 'μήτηρ'],
-  ['μητροσ', 'μητρός', 'μήτηρ'],
+  ['μρι', 'μητρί', 'μήτηρ'],
   // Δαυίδ
   ['δαδ', 'Δαυίδ', 'Δαυίδ'],
-  ['δαυιδ', 'Δαυίδ', 'Δαυίδ'],
   // Ἰσραήλ
   ['ιηλ', 'Ἰσραήλ', 'Ἰσραήλ'],
   ['ισλ', 'Ἰσραήλ', 'Ἰσραήλ'],
-  ['ισραηλ', 'Ἰσραήλ', 'Ἰσραήλ'],
   // Ἰερουσαλήμ
   ['ιηλμ', 'Ἰερουσαλήμ', 'Ἰερουσαλήμ'],
   ['ηλμ', 'Ἰερουσαλήμ', 'Ἰερουσαλήμ'],
   ['λημ', 'Ἰερουσαλήμ', 'Ἰερουσαλήμ'],
-  ['ιερουσαλημ', 'Ἰερουσαλήμ', 'Ἰερουσαλήμ'],
   // οὐρανός
   ['ουνοσ', 'οὐρανός', 'οὐρανός'],
   ['ουνου', 'οὐρανοῦ', 'οὐρανός'],
@@ -435,21 +492,39 @@ const NS_ROWS = [
   ['ουνον', 'οὐρανόν', 'οὐρανός'],
   ['ουνων', 'οὐρανῶν', 'οὐρανός'],
   ['ουνουσ', 'οὐρανούς', 'οὐρανός'],
-  ['ουρανοσ', 'οὐρανός', 'οὐρανός'],
-  ['ουρανου', 'οὐρανοῦ', 'οὐρανός'],
-  ['ουρανω', 'οὐρανῷ', 'οὐρανός'],
-  ['ουρανον', 'οὐρανόν', 'οὐρανός'],
-  ['ουρανων', 'οὐρανῶν', 'οὐρανός'],
-  ['ουρανουσ', 'οὐρανούς', 'οὐρανός'],
+  ['ουνοι', 'οὐρανοί', 'οὐρανός'],
+  ['ουνοισ', 'οὐρανοῖς', 'οὐρανός'],
   // πατήρ (¡πρσ es πατρός, no πρός!)
   ['πρσ', 'πατρός', 'πατήρ'],
   ['πρι', 'πατρί', 'πατήρ'],
   ['πρα', 'πατέρα', 'πατήρ'],
   ['πηρ', 'πατήρ', 'πατήρ'],
-  ['πατηρ', 'πατήρ', 'πατήρ'],
-  ['πατροσ', 'πατρός', 'πατήρ'],
-  ['πατρι', 'πατρί', 'πατήρ'],
-  ['πατερα', 'πατέρα', 'πατήρ']
+  ['πρεσ', 'πατέρες', 'πατήρ'],
+  ['πρων', 'πατέρων', 'πατήρ'],
+  // σωτήρ
+  ['σηρ', 'σωτήρ', 'σωτήρ'],
+  ['σρσ', 'σωτῆρος', 'σωτήρ'],
+  ['σρι', 'σωτῆρι', 'σωτήρ'],
+  ['σρα', 'σωτῆρα', 'σωτήρ'],
+  // σταυρός / σταυρόω
+  ['στσ', 'σταυρός', 'σταυρός'],
+  ['στου', 'σταυροῦ', 'σταυρός'],
+  ['στω', 'σταυρῷ', 'σταυρός'],
+  ['στον', 'σταυρόν', 'σταυρός'],
+  ['στροσ', 'σταυροῦ', 'σταυρός'],
+  ['στρω', 'σταυρῷ', 'σταυρός'],
+  ['στρθη', 'σταυρωθῇ', 'σταυρόω']
+];
+
+/** Formas sagradas plenas: solo cuentan como NS si TODA la palabra va sobrelineada. */
+const FULL_NS_ROWS = [
+  ['θεοσ', 'θεός', 'θεός'],
+  ['κυριοσ', 'κύριος', 'κύριος'],
+  ['ιησουσ', 'Ἰησοῦς', 'Ἰησοῦς'],
+  ['χριστοσ', 'Χριστός', 'Χριστός'],
+  ['πνευμα', 'πνεῦμα', 'πνεῦμα'],
+  ['ισραηλ', 'Ἰσραήλ', 'Ἰσραήλ'],
+  ['ιερουσαλημ', 'Ἰερουσαλήμ', 'Ἰερουσαλήμ']
 ];
 
 /** Abreviaturas no sagradas que la alineación no puede resolver por forma. */
@@ -457,6 +532,10 @@ const ABBR_ROWS = [['ιβ', 'δώδεκα', 'δώδεκα']];
 
 export const NS_MAP = new Map(
   NS_ROWS.map(([key, form, lemma]) => [foldGreek(key), { form, lemma, ns: true }])
+);
+
+const FULL_NS_MAP = new Map(
+  FULL_NS_ROWS.map(([key, form, lemma]) => [foldGreek(key), { form, lemma, ns: true }])
 );
 
 export const ABBR_MAP = new Map(
@@ -467,7 +546,7 @@ export const ABBR_MAP = new Map(
 export function abbreviationForWord(word) {
   if (!word || !Array.isArray(word.ns) || word.ns.length === 0) return null;
   const key = foldGreek(word.plain);
-  return NS_MAP.get(key) || ABBR_MAP.get(key) || null;
+  return NS_MAP.get(key) || (word.wholeNs ? FULL_NS_MAP.get(key) : null) || ABBR_MAP.get(key) || null;
 }
 
 /** Prepara una palabra del Codex con su forma de comparación y su abreviatura. */
@@ -492,6 +571,15 @@ export const prepareCodexWords = words => words.map(prepareCodexWord);
  * MorphGNT (crasis deshechas, artículos, partículas): la forma ya aparece en
  * otro lugar del corpus.
  */
+/** Pliegue fonético koiné para capturar itacismos al inicio o interior de palabra. */
+function itacismFold(value) {
+  return foldGreek(value)
+    .replace(/ει|οι|η|υ/g, 'ι')
+    .replace(/αι/g, 'ε')
+    .replace(/ω/g, 'ο')
+    .replace(/(.)\1+/g, '$1');
+}
+
 export function indexMorphForms(verseMaps) {
   const forms = new Map();
   const maps = Array.isArray(verseMaps) ? verseMaps : [verseMaps];
@@ -523,24 +611,35 @@ export function indexMorphForms(verseMaps) {
     );
   }
   const byPrefix = new Map();
+  const byPhonetic = new Map();
   for (const form of best.keys()) {
     const prefix = form.slice(0, 2);
     if (!byPrefix.has(prefix)) byPrefix.set(prefix, []);
     byPrefix.get(prefix).push(form);
+
+    const phon = itacismFold(form).slice(0, 2);
+    if (phon.length >= 2) {
+      if (!byPhonetic.has(phon)) byPhonetic.set(phon, []);
+      byPhonetic.get(phon).push(form);
+    }
   }
   best.byPrefix = byPrefix;
+  best.byPhonetic = byPhonetic;
   return best;
 }
 
-/** Busca una forma parecida (itacismos y variantes ortográficas del Codex). */
+/** Busca una forma parecida (itacismos iniciales y variantes ortográficas del Codex). */
 function fuzzyForm(formIndex, key) {
   if (!key || key.length < 2 || !formIndex.byPrefix) return null;
-  const candidates = formIndex.byPrefix.get(key.slice(0, 2)) || [];
   const maxDistance = key.length <= 5 ? 1 : key.length <= 9 ? 2 : 3;
+  const prefixCands = formIndex.byPrefix.get(key.slice(0, 2)) || [];
+  const phonKey = itacismFold(key);
+  const phonCands = formIndex.byPhonetic?.get(phonKey.slice(0, 2)) || [];
+  const candidates = phonCands.length ? [...new Set([...prefixCands, ...phonCands])] : prefixCands;
   let best = null;
   let bestDistance = maxDistance + 1;
   for (const form of candidates) {
-    const distance = levenshtein(key, form);
+    const distance = Math.min(levenshtein(key, form), levenshtein(phonKey, itacismFold(form)));
     if (distance < bestDistance) {
       bestDistance = distance;
       best = form;
@@ -687,23 +786,19 @@ export function mapVerse(codexWords, morphWords, tbesgIndex, formIndex) {
     const plain = foldGreek(cw.plain);
     let best = -1;
     let bestScore = 0;
+    const NUMERAL_LEMMA = { β: 'δυο', γ: 'τρεισ', ζ: 'επτα' };
     if (cw.ns.length > 0 && plain.length === 1) {
       for (let j = from; j <= to; j += 1) {
         if (used.has(j)) continue;
-        if (foldGreek(morphWords[j].word).startsWith(plain)) {
+        if (
+          foldGreek(morphWords[j].word).startsWith(plain) ||
+          (NUMERAL_LEMMA[plain] && foldGreek(morphWords[j].lemma) === NUMERAL_LEMMA[plain])
+        ) {
           best = j;
+          bestScore = 1;
           break;
         }
       }
-      if (best < 0) {
-        for (let j = from; j <= to; j += 1) {
-          if (!used.has(j)) {
-            best = j;
-            break;
-          }
-        }
-      }
-      bestScore = 1;
     } else {
       for (let j = from; j <= to; j += 1) {
         if (used.has(j)) continue;
@@ -736,78 +831,121 @@ export function mapVerse(codexWords, morphWords, tbesgIndex, formIndex) {
 /* Estadísticas y orden griego                                                */
 /* ========================================================================== */
 
-/** Frecuencias, POS y formas de todos los lemas del códice. */
+const KEEP_SINGLE_FORMS = new Set(['β', 'γ', 'ζ', 'ι', 'ιβ']);
+
+function cleanFormsForEntry(formsMap, canonicalLemma) {
+  const lemmaFoldedLen = foldGreek(canonicalLemma).length;
+  const entries = [...formsMap.entries()].sort((a, b) => b[1] - a[1]);
+  const multiFreqCount = entries.filter(([, count]) => count >= 2).length;
+  return entries
+    .filter(([form, count]) => {
+      const f = foldGreek(form);
+      if (!f) return false;
+      if (f.length === 1 && lemmaFoldedLen >= 2 && !KEEP_SINGLE_FORMS.has(f)) return false;
+      if (count === 1 && multiFreqCount >= 4 && !NS_MAP.has(f)) return false;
+      return true;
+    })
+    .slice(0, 8)
+    .map(([form, count]) => ({ form, count }));
+}
+
+/** Frecuencias, POS, citas representativas y formas de todos los lemas (clave Strong). */
 export function collectStats(bookData) {
-  const byLemma = new Map();
+  const byEntry = new Map();
   let tokens = 0;
   let mapped = 0;
   let ns = 0;
   let withStrong = 0;
 
   for (const { codex, map } of bookData) {
+    const bookId = map.book || codex.id;
     for (const chapter of codex.chapters) {
       for (const verse of chapter.verses) {
         const words = greekWords(verse.grc);
-        const entries = map.verses[`${chapter.num}:${verse.n}`] || [];
+        const decoded = decodeVerseLemmas(map, chapter.num, verse.n);
         for (let i = 0; i < words.length; i += 1) {
           tokens += 1;
-          const entry = entries[i];
-          if (!entry) continue;
+          const morphemes = decoded[i] || [];
+          if (!morphemes.length) continue;
           mapped += 1;
-          if (entry[3]) ns += 1;
-          if (entry[1]) withStrong += 1;
-          const key = foldGreek(entry[0]);
-          if (!key) continue;
-          if (!byLemma.has(key)) {
-            byLemma.set(key, {
-              lemma: entry[0],
-              strong: entry[1] || null,
-              count: 0,
-              ns: 0,
-              pos: new Map(),
-              forms: new Map()
-            });
+          for (const morph of morphemes) {
+            if (morph.ns) ns += 1;
+            if (morph.strong) withStrong += 1;
+            const key = morph.strong || `lemma:${String(morph.lemma || '').normalize('NFC')}`;
+            if (!key || key === 'lemma:') continue;
+            if (!byEntry.has(key)) {
+              byEntry.set(key, {
+                lemma: morph.lemma,
+                lemmaCounts: new Map(),
+                strong: morph.strong || null,
+                count: 0,
+                ns: 0,
+                pos: new Map(),
+                forms: new Map(),
+                refs: [],
+                refBooks: new Set()
+              });
+            }
+            const item = byEntry.get(key);
+            item.count += 1;
+            if (morph.lemma) {
+              item.lemmaCounts.set(morph.lemma, (item.lemmaCounts.get(morph.lemma) || 0) + 1);
+            }
+            if (morph.ns) item.ns += 1;
+            if (morph.pos) item.pos.set(morph.pos, (item.pos.get(morph.pos) || 0) + 1);
+            const form = words[i].plain;
+            item.forms.set(form, (item.forms.get(form) || 0) + 1);
+
+            if (item.refs.length < 5) {
+              if (!item.refBooks.has(bookId)) {
+                item.refBooks.add(bookId);
+                item.refs.push([bookId, chapter.num, verse.n]);
+              }
+            }
+            if (item.refs.length < 5 && !item.fallbackRefs) {
+              item.fallbackRefs = [];
+            }
+            if (
+              item.fallbackRefs &&
+              item.fallbackRefs.length < 5 &&
+              !item.refs.some(([b, c, v]) => b === bookId && c === chapter.num && v === verse.n) &&
+              !item.fallbackRefs.some(([b, c, v]) => b === bookId && c === chapter.num && v === verse.n)
+            ) {
+              item.fallbackRefs.push([bookId, chapter.num, verse.n]);
+            }
           }
-          const item = byLemma.get(key);
-          item.count += 1;
-          if (entry[3]) item.ns += 1;
-          if (!item.strong && entry[1]) item.strong = entry[1];
-          if (entry[4]) item.pos.set(entry[4], (item.pos.get(entry[4]) || 0) + 1);
-          const form = words[i].plain;
-          item.forms.set(form, (item.forms.get(form) || 0) + 1);
         }
       }
     }
   }
-  return { byLemma, tokens, mapped, ns, withStrong };
+  return { byEntry, byLemma: byEntry, tokens, mapped, ns, withStrong };
 }
 
-/** Los lemas más frecuentes, con POS dominante y formas principales. */
-export function topLemmas(stats, limit = 250) {
-  return [...stats.byLemma.values()]
-    .sort((a, b) => b.count - a.count || foldGreek(a.lemma).localeCompare(foldGreek(b.lemma)))
-    .slice(0, limit)
-    .map(item => ({
-      lemma: item.lemma,
-      strong: item.strong,
-      count: item.count,
-      ns: item.ns,
-      pos: [...item.pos.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || '',
-      forms: [...item.forms.entries()]
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 8)
-        .map(([form, count]) => ({ form, count }))
-    }));
-}
-
-const GREEK_ORDER = 'αβγδεζηθικλμνξοπρστυφχψω';
-
-/** Clave de ordenación alfabética griega (ignora acentos y sigma final). */
-export function greekSortKey(value) {
-  return [...foldGreek(value)]
-    .map(ch => {
-      const index = GREEK_ORDER.indexOf(ch);
-      return String(index < 0 ? 99 : index).padStart(2, '0');
+/** Los lemas más frecuentes (o todos si `limit = Infinity`), con POS, citas y formas limpias. */
+export function topLemmas(stats, limit = Infinity) {
+  const source = stats.byEntry || stats.byLemma;
+  return [...source.values()]
+    .map(item => {
+      const canonicalLemma =
+        [...(item.lemmaCounts?.entries() || [])].sort((a, b) => b[1] - a[1])[0]?.[0] || item.lemma;
+      const refs = [...item.refs];
+      for (const extra of item.fallbackRefs || []) {
+        if (refs.length >= 5) break;
+        refs.push(extra);
+      }
+      return {
+        lemma: canonicalLemma,
+        strong: item.strong,
+        count: item.count,
+        ns: item.ns,
+        pos: [...item.pos.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] || '',
+        forms: cleanFormsForEntry(item.forms, canonicalLemma),
+        refs
+      };
     })
-    .join('');
+    .sort((a, b) => b.count - a.count || foldGreek(a.lemma).localeCompare(foldGreek(b.lemma)))
+    .slice(0, limit);
 }
+
+/** Clave de ordenación alfabética griega (reexportada del núcleo compartido). */
+export const greekSortKey = sharedGreekSortKey;

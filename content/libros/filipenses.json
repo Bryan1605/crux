@@ -1,0 +1,100 @@
+{
+  "id": "filipenses",
+  "title": "Filipenses",
+  "abbr": "Fil",
+  "order": 50,
+  "testament": "NT",
+  "summary": "Carta afectuosa de Pablo y Timoteo en cuatro capítulos desde prisión hacia la primera comunidad fundada en Europa (Filipos de Macedonia): gratitud por su generosa ayuda económica, serenidad ante la posible muerte o liberación («Para mí el vivir es Cristo y el morir ganancia»), el gran himno cristológico de la kénosis o anonadamiento humilde (2:5–11), renuncia a todo mérito propio por conocer a Cristo (cap. 3) y llamado reiterado al gozo y la paz («¡Regocíjense siempre en el Señor!», 4:4). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "carta de amistad y gratitud",
+    "himno cristológico temprano (2:6–11)",
+    "exhortación al gozo en la prueba"
+  ],
+  "language": "Griego koiné cálido, emotivo y cercano al género epistolar helenístico de amistad y consuelo",
+  "date": {
+    "narrative": "Pablo preso enfrentando sentencia imperial («todo el pretorio», 1:13; «los de la casa del César», 4:22) acompañado por Timoteo y Epafrodito",
+    "composition": "Debatida: prisión en Roma (c. 61–62 d. C.) o cautiverio previo en Éfeso (c. 54–55 d. C.) / Cesarea (58–60 d. C.)",
+    "certainty": "probable",
+    "note": "Su autenticidad paulina es unánime; el lugar exacto del cautiverio oscila hoy entre Roma (visión clásica) y Éfeso por la cercanía geográfica de cuatro viajes entre Pablo y Filipos."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Filipenses es la carta más cálida y desprovista de reproches ásperos de todo el epistolario paulino. En cuatro capítulos compactos combina gratitud, noticias misioneras, himno dogmático y ternura pastoral: I. Acción de gracias, reporte optimista desde la cárcel donde las cadenas propagan el Evangelio y dilema interior entre partir con Cristo o seguir sirviéndolos (1); II. Llamado a la unidad humilde sustentado en el himno del anonadamiento y exaltación de Cristo Jesús (2:1–18), más recomendaciones de Timoteo y Epafrodito (2:19–30); III. Alerta abrupta contra opositores legalistas junto a la autobiografía de Pablo contando todo por pérdida ante Cristo (cap. 3); IV. Reconciliación concreta de Evodia y Síntique, «regocíjense siempre», paz que sobrepasa todo entendimiento y gratitud explícita por la ofrenda enviada (cap. 4).\n\n[Estudio] Reproduciría con maestría el molde grecorromano de la carta de amistad y alianza (koinonia)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Colonia militar romana orgullosa de su ciudadanía itálica («colonia» en Hch 16:12; «nuestra ciudadanía está en los cielos» en 3:20), Filipos fue hacia el 49–50 d. C. la primera ciudad europea en recibir el anuncio de Pablo (Lidia, el carcelero). Años después fue la única congregación de la que Pablo aceptó repetidamente sostén financiero, enviándole ahora por medio de Epafrodito ayuda material en prisión —donde Epafrodito enfermó casi de muerte (2:25–30).\n\nFrente a presiones cívicas paganas y rivalidades internas menores, Pablo consolida la alegría comunitaria."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] Escrita por Pablo junto con Timoteo (1:1).\n\n[Estudio] Como señala Achille Vander Heeren (Catholic Encyclopedia), aunque el giro súbito al inicio del capítulo 3 («¡Cuídense de los perros…!» después de despedirse aparentemente en 3:1) ha llevado a muchos críticos a sospechar si nuestros manuscritos reunieron dos o tres billetes breves de Pablo a Filipos (una nota de gracias en 4:10–20, la carta principal de 1–2 y una advertencia polémica en 3:2–4:1), no existe rastro de manuscritos separados y la unidad retórica del libro entero defiende hoy también la lectura continua."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El centro incandescente de la carta es el «Carmen Christi» (2:6–11): aquel que existía en «forma de Dios» no consideró el ser igual a Dios algo a qué aferrarse (harpagmos), sino que «se vació a sí mismo» (heauton ekenosen) tomando forma de siervo hasta «muerte de cruz», por lo cual Dios lo exaltó otorgándole el Nombre sobre todo nombre («¡Jesucristo es Señor!» citando Is 45:23). Esa entrega humilde fundamenta tanto la paz entre hermanas peleadas (Evodia y Síntique) como la paradoja gozosa de Pablo: «Todo lo puedo en Cristo que me fortalece» (4:13, dicho explícitamente sobre saber vivir en escasez y abundancia).\n\n[Tradición] Fue uno de los pilares de la cristología trinitaria patrística y la teología kenótica."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Conservada ya íntegra en P46 (c. 200 d. C.), P16 y en los unciales del siglo IV con enorme pureza textual y muy pocas variantes doctrinales relevantes (salvo diferencias menores en 1:14, 2:1 o 3:16).\n\n[Texto] La NTV (4 capítulos, 104 vv.) y el Codex Sinaiticus (núm. 42; 4 capítulos, 104 vv.) concuerdan exactamente verso a verso."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Policarpo de Esmirna —escribiendo a los mismos filipenses hacia 110–130 d. C.— recuerda ya explícitamente la carta (o «cartas», plural en Policarpo Fil 3:2) que el bienaventurado Pablo les escribió. Tanto el himno de 2:6–11 en el combate contra docetismo y arrianismo como 4:4–8 («en todo lo verdadero, honorable, justo… piensen en estas cosas») marcaron la espiritualidad y la piedad cristiana en todas las épocas."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Contar la frecuencia de «gozo / regocijarse» y «mente/sentir» (phronein): la carta enseña que el gozo cristiano nace de una manera de pensar moldeada por Cristo (2:5; 4:4–8).\n2. Leer el himno de 2:6–11 en voz alta como alabanza cantada y no solo como tratado abstracto: sirve como ejemplo práctico para vencer el egoísmo (2:3–4).\n3. Entender 4:13 («Todo lo puedo…») dentro de 4:11–12: fortaleza espiritual para estar contento tanto en hambre como en abundancia.\n4. Observar el uso del término ciudadano («ciudadanía celestial», 3:20) dirigido a habitantes de una colonia romana."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Desde dónde escribió Pablo Filipenses: Roma (61–62 d. C.), Cesarea (58–60) o Éfeso (54–55)?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La postura tradicional clásica (defendida en la Catholic Encyclopedia y por muchos exegetas) sitúa la carta en Roma al final de Hechos 28 por las menciones al «pretorio» y «la casa del César» (1:13; 4:22) y la expectativa cercana de sentencia capital o liberación."
+        },
+        {
+          "label": "Estudio",
+          "body": "Numerosos críticos modernos prefieren una prisión no narrada en Éfeso (cfr. 1 Co 15:32; 2 Co 1:8), explicando la facilidad de múltiples viajes de mensajeros entre Éfeso y Filipos (a unos diez días frente a meses desde Roma) y la cercanía temática con 1 Corintios y Gálatas."
+        }
+      ]
+    },
+    {
+      "question": "¿Es 2:6–11 un himno cristiano anterior citado por Pablo o compuesto por el propio apóstol?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Desde Ernst Lohmeyer (1928), muchos estudiosos identifican un himno rítmico prepaulino (quizá arameo o griego litúrgico, por vocabulario raro en Pablo como harpagmos o ekenosen y ausencia de alusión a la resurrección explícita frente a exaltación directa) adoptado por Pablo en 2:5."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros comentaristas argumentan que Pablo mismo compuso esta pieza poética —como hizo en 1 Co 13 o Ro 8:31–39— ajustándola exactamente al argumento ético del capítulo."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-philippians",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

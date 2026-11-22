@@ -82,10 +82,54 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 112px;
+  font-size: clamp(4.2rem, 8vw, 6.4rem);
   line-height: 1;
   white-space: nowrap;
-  color: rgba(201, 169, 106, 0.22);
+  color: rgba(201, 169, 106, 0.24);
+}
+
+.study-card__mark--long {
+  font-size: clamp(2.8rem, 5.5vw, 4.3rem);
+}
+
+/* Variante editorial para libros de la Biblia (portada predeterminada hasta añadir ilustraciones). */
+.study-card--libro .study-card__media {
+  background:
+    radial-gradient(ellipse 72% 76% at 50% 48%, rgba(201, 169, 106, 0.12), transparent 70%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 0 1px,
+      transparent 1px 16px
+    ),
+    #0d0d10;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.study-card--libro .study-card__mark {
+  color: rgba(201, 169, 106, 0.42);
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
+}
+
+.study-card--libro .study-card__stats {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 0.95fr) minmax(0, 1.35fr);
+}
+
+.study-card--libro .study-card__stats dd {
+  font-size: 15px;
+}
+
+.study-card--codex .study-card__link {
+  border-color: rgba(201, 169, 106, 0.28);
+}
+
+.study-card--codex:hover .study-card__link {
+  border-color: rgba(201, 169, 106, 0.54);
+}
+
+.study-card--codex .study-card__badge {
+  border-color: rgba(201, 169, 106, 0.38);
+  color: #e2c892;
 }
 
 .study-card__badge {

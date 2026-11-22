@@ -1,0 +1,101 @@
+{
+  "id": "hageo",
+  "title": "Hageo",
+  "abbr": "Hag",
+  "order": 37,
+  "testament": "AT",
+  "summary": "Breve libro profético posexílico en dos capítulos que conserva cuatro oráculos fechados con precisión entre agosto y diciembre del año 520 a. C. (año segundo de Darío I): llama al gobernador Zorobabel, al sumo sacerdote Josué y al resto repatriado a reanudar la reconstrucción del Templo paralizada durante dieciséis años, prometiendo la presencia actual del Espíritu y una gloria futura mayor que la de Salomón. Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "oráculos fechados en prosa narrativa",
+    "diálogo de pureza sacerdotal",
+    "promesa dinástica y cultual"
+  ],
+  "language": "Hebreo posexílico tardío directo y sobrio en tercera persona",
+  "date": {
+    "narrative": "Exactamente de agosto a diciembre del año segundo de Darío I (520 a. C., citado cuatro veces con mes y día)",
+    "composition": "Poco después del 520 a. C. en Jerusalén (entre 520 y 515 a. C., antes o junto a la dedicación del Segundo Templo)",
+    "certainty": "segura",
+    "note": "Sus cuatro dataciones exactas en 1:1; 2:1; 2:10 y 2:20 concuerdan plenamente con Esdras 5:1–2 y 6:14."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — décimo de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico; Aggeo en Vulgata)",
+    "ortodoxo": "Antiguo Testamento (Aggaios)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Hageo recoge en treinta y ocho versículos redactados en tercera persona cuatro mensajes precisos pronunciados en un lapso de apenas cuatro meses en el 520 a. C.: I. Reproche directo porque el pueblo habita «casas artesonadas» mientras la Casa de Dios yace en ruinas en medio de sequías económicas, logrando obediencia inmediata veinticuatro días después (cap. 1); II. Consuelo a quienes lloraban comparando los cimientos humildes con el esplendor salomónico («la gloria postrera será mayor», 2:1–9); III. Consulta jurídica a los sacerdotes sobre contagio ritual aplicado al trabajo presente (2:10–19); IV. Elección de Zorobabel como «anillo de sellar» al sacudirse las naciones (2:20–23).\n\n[Estudio] Es el único libro profético estructurado como acta fechada casi al día."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Tras regresar de Babilonia bajo el edicto de Ciro (538 a. C.) y alzar el altar, la pequeña comunidad de Yehud sucumbió ante malas cosechas, oposición samaritana y pobreza posbabilónica (Esdras 4), postergando la reconstrucción del Templo durante dieciséis años con el pretexto de «no ha llegado aún el tiempo» (1:2). La subida al trono del rey persa Darío I en el 522 a. C. tras convulsiones imperiales descritas en la inscripción trilingüe de Behistún sacudió el Mediterráneo oriental, marco en que Hageo y su contemporáneo Zacarías impulsaron la finalización del Segundo Templo en 515 a. C."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atribuido al profeta Hageo («festivo»), mencionado expresamente junto a Zacarías en Esdras 5:1 y 6:14.\n\n[Estudio] Como observa Emil Hirsch (Jewish Encyclopedia) y Francis Gigot (Catholic Encyclopedia), el hecho de hablar siempre de Hageo en tercera persona («vino palabra del Señor por medio del profeta Hageo») sugiere que sus cuatro mensajes —con sus exactas fechas babilónico-persas y el recuento de la respuesta comunitaria en 1:12–15— fueron editados pronto por un cronista o discípulo del santuario entre 520 y 515 a. C."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Hageo demuestra que el realismo teológico pasa por decisiones concretas: reordenar las prioridades comunitarias en torno a la presencia de Dios. Frente al desánimo ante una obra pobre y pequeña comparada con el pasado («¿no es como nada a vuestros ojos?», 2:3), el profeta responde con tres pilares: la presencia perpetua de Dios y su Espíritu pactada en el Éxodo («¡Cobren ánimo… porque yo estoy con ustedes!», 2:4–5), el señorío económico universal («Mía es la plata y mío es el oro», 2:8) y la promesa de un Templo donde Dios «dará paz» cuando todas las naciones acudan.\n\n[Tradición] Hebreos 12:26 cita Hageo 2:6 («una vez más haré temblar los cielos y la tierra») aplicándolo a la consumación del Reino inconmovible."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitido con notable integridad entre el hebreo masorético (testimoniado en Wadi Murabba’at) y la Septuaginta, presenta sin embargo un pasaje célebre por su variante de lectura en 2:7: donde el texto hebreo dice plural «vendrán las cosas preciosas (jemdat, riquezas/deseado) de todas las naciones», la traducción latina de Jerónimo en la Vulgata vertió singular («el Deseado de todas las naciones») influyendo en siglos de himnología navideña cristiana, mientras la LXX incluye dos expansiones breves de consuelo en 2:9 y 2:14.\n\n[Texto] Tanto la NTV (2 caps., 38 vv.) como el Codex Sinaiticus (núm. 23; 2 caps., 38 vv.) ofrecen íntegro el libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Además de ser recordado en Esdras 5–6 y Sirácida 49:11 sobre Zorobabel como «anillo de sellar», Hageo 2:6–9 pasó al corazón de Hebreos 12:26–28 y de la liturgia cristiana de Adviento («el Deseado de todas las naciones», cfr. El Mesías de Händel). En el judaísmo, la tradición rabínica atribuyó a Hageo, Zacarías y Malaquías el cierre de la profecía en Israel y participación en la Gran Asamblea."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Hageo paralelo a Esdras 4:24–6:15 y Zacarías 1–8 para entender el empuje exacto entre 520 y 515 a. C.\n2. Notar los cuatro días fechados en la estructura: 29 agosto (1:1), 17 octubre (2:1) y 18 diciembre de 520 a. C. (2:10, 20).\n3. Prestar atención a la consulta cultual de 2:11–14: lo impuro contamina más rápido que lo puro, exigiendo renovación real del corazón y las manos.\n4. Comparar Hag 2:6–9 en NTV, Codex Sinaiticus y Hebreos 12:26."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿A qué alude «vendrá el deseado / las riquezas de todas las naciones» en Hageo 2:7?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Gramaticalmente el hebreo jemdat es sustantivo colectivo singular con verbo en plural («vendrán los tesoros / cosas preciosas de todas las naciones»), en paralelismo directo con 2:8 («mía es la plata y mío es el oro») describiendo tributos para adornar el Segundo Templo."
+        },
+        {
+          "label": "Tradición",
+          "body": "La tradición cristiana apoyada en la Vulgata (et veniet desideratus cunctis gentibus) lo leyó en clave cristológica directa como profecía del Mesías hacia quien convergen todos los pueblos."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué ocurrió con la promesa sobre Zorobabel como «anillo de sellar» (2:23)?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Muchos historiadores señalan que en medio de las rebeliones de 522–520 a. C. Hageo esperaba una restauración política inmediata de la casa de David en Zorobabel (nieto de Joaquín), quien desapareció pronto de la historia bajo el firme imperio de Darío."
+        },
+        {
+          "label": "Tradición",
+          "body": "La lectura teológica posterior conservó 2:23 como revocación simbólica del rechazo pronunciado sobre Joaquín en Jeremías 22:24, transfiriendo la esperanza davídica desde Zorobabel (en Mateo 1 y Lucas 3) hacia el Mesías futuro."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-haggai",
+    "ce-aggeus",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

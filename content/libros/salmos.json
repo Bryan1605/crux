@@ -1,0 +1,101 @@
+{
+  "id": "salmos",
+  "title": "Salmos",
+  "abbr": "Sal",
+  "order": 19,
+  "testament": "AT",
+  "summary": "Himnario y libro de oraciones de Israel en ciento cincuenta composiciones hebreas (más el Salmo 151 en la Septuaginta y el Codex Sinaiticus), dividido en cinco libros de himnos, súplicas individuales y colectivas, acción de gracias y salmos reales y sapienciales. Protocanónico en 1–150; el Salmo 151 cuenta con traducción de trabajo en Crux.",
+  "genre": [
+    "poesía lírica hebrea",
+    "himnos y lamentaciones litúrgicas",
+    "salmos reales y sapienciales"
+  ],
+  "language": "Hebreo poético de diversas épocas (siglos X–II a. C.); griego septuagintal (Psalmoi, con numeración desplazada)",
+  "date": {
+    "narrative": "Atribuciones tradicionales mayoritariamente a David («de David» en 73 títulos), los hijos de Coré, Asaf, Salomón y Moisés",
+    "composition": "Colección progresiva desde composiciones monárquicas tempranas (s. X–VII a. C.) hasta su edición final en cinco libros tras el exilio (c. s. IV–II a. C.)",
+    "certainty": "probable",
+    "note": "Los rollos de Salmos de Qumrán muestran variaciones aún fluidas en el orden de los dos últimos libros hasta el s. I d. C."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — Tehillim, primer libro de los Escritos, 150 salmos)",
+    "catolico": "Antiguo Testamento (protocanónico, 150 salmos; numeración tradicional Vulgata/LXX)",
+    "ortodoxo": "Antiguo Testamento (incluye habitualmente el Salmo 151 en el Salterio griego)",
+    "protestante": "Antiguo Testamento (150 salmos; el Salmo 151 se considera apócrifo)"
+  },
+  "notice": "Atención a la numeración y al Salmo 151: entre los salmos 9 y 147 el griego del Codex Sinaiticus (151 capítulos, 2.531 versículos) sigue la numeración de la Septuaginta —un número por debajo de la NTV (150 capítulos, 2.461 versículos) al unir 9–10 y 114–115 y dividir 116 y 147—, e incluye los títulos litúrgicos como versículo 1. Además, el Salmo 151 solo figura en el Codex y cuenta en Crux con traducción de trabajo propia.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] El Salterio compila en ciento cincuenta piezas (más el Salmo 151 griego sobre el ungimiento de David y Goliat) casi todo el espectro de la oración humana ante Dios, editado a semejanza de la Torá en cinco libros señalados por doxologías finales (1–41; 42–72; 73–89; 90–106; 107–150).\n\n[Estudio] Hermann Gunkel clasificó sus formas principales vinculadas a la liturgia del Templo: himnos de alabanza cósmica e histórica (8, 19, 104, 150), súplicas individuales en crisis (22, 51, 130) y colectivas tras derrotas (44, 74, 137), acciones de gracias (30, 116), cantos reales y mesiánicos (2, 72, 110) y salmos sapienciales de Torá (1, 19, 119). Su recurso formal básico es el paralelismo semántico hebreo."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Nacidos primero en los santuarios y la corte de Jerusalén y enriquecidos tras la caída de la monarquía por cantores levitas en el destierro y el Segundo Templo (Asaf, hijos de Coré, cantos graduales de peregrinación 120–134), los salmos transformaron antiguos motivos hímnicos siro-cananeos (cfr. Sal 29 y literatura ugarítica) en monoteísmo radical.\n\n[Tradición] En la época de Jesús, el Salterio constituía ya tanto el libro de oraciones cotidiano de sinagogas y peregrinos (Hallel 113–118) como cantera profética fundamental."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Aunque setenta y tres salmos llevan en su encabezado hebreo el título le-David (y aún más en la Septuaginta, incluyendo el Salmo 151), la nota de 72:20 («Aquí terminan las oraciones de David») y la variedad de autores nombrados (Moisés en Sal 90, Asaf, Coré, Hemán, Etán, Salomón) muestran que el Salterio es obra coral de muchos siglos.\n\n[Estudio] Emil Hirsch (Jewish Encyclopedia) y Walter Drum (Catholic Encyclopedia) explican cómo colecciones previas (Salmos davídicos, Salterio elohísta 42–83, cantos de ascenso) se fusionaron progresivamente en un libro meditativo estructurado por el Salmo 1 como pórtico y los cinco «aleluyas» de 146–150 como clímax."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El Salterio abarca la fe sin censura emocional: confiesa que «el Señor reina» como Creador y Juez justo (Sal 93–99) incluso cuando la historia desmiente sus promesas y el orante clama «¿Hasta cuándo?» o «Dios mío, Dios mío, ¿por qué me has abandonado?» (22:1). La oración de la alianza descansa en el jesed —amor leal que perdura para siempre (136)— e integra la súplica angustiosa, la imprecación cruda contra la opresión en manos de Dios y el júbilo sin palabras de toda criatura viviente (150:6).\n\n[Tradición] Es el libro más citado por Jesús y los apóstoles en todo el Nuevo Testamento (Sal 2, 8, 16, 22, 110, 118)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] En Qumrán aparecieron más manuscritos de Salmos (39 rollos) que de ningún otro libro bíblico; el gran rollo 11QPsa confirma también la existencia hebrea antigua del Salmo 151 (originalmente dos breves poemas fusionados en griego). La Septuaginta —traducida en NETS por Albert Pietersma— modifica la numeración entre los salmos 9 y 147 respecto al Masorético y cuenta cada título musical como v. 1.\n\n[Texto] Aquí conviven los 150 capítulos de la NTV (2.461 vv.) con los 151 salmos completos del Codex Sinaiticus (núm. 26; 2.531 vv.), más la traducción de trabajo propia del Salmo 151."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Tanto el judaísmo rabínico como las Iglesias cristianas hicieron del Salterio el corazón de su oración diaria: el Oficio de las Horas monástico (Basilio, Benito, Atanasio en su Carta a Marcelino) recorre los 150 salmos cada semana o mes, y los Padres de la Iglesia —Agustín en sus Enarrationes in Psalmos, Jerónimo, Teodoreto— leyeron en ellos la voz de Cristo («el Cristo total», cabeza y cuerpo).\n\nEl Salmo 23, 51, 91 y 139 trascienden además cualquier frontera confesional."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer el Salmo 1 y el 2 juntos como doble introducción programática: camino de la Torá y reino del Ungido frente a las naciones.\n2. Recordar el desfase numérico entre NTV (hebreo) y Codex (griego LXX) entre los salmos 10 y 147 (p. ej. Sal 23 NTV = Sal 22 LXX; Sal 51 NTV = Sal 50 LXX).\n3. Observar la secuencia emocional interna de muchos lamentos: del clamor desesperado a la súbita confianza final.\n4. Abrir en Exégesis el Salmo 151 para leer el original del Codex Sinaiticus junto a la traducción de trabajo y sus variantes manuscritas."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Pertenecen los títulos históricos («cuando huyó de Absalón…») al poema original o a la reflexión editorial posterior?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Exégesis clásicas consideran los encabezados hebreos parte antigua inspirada que ancla históricamente las oraciones en la vida concreta de David."
+        },
+        {
+          "label": "Estudio",
+          "body": "La investigación moderna observa que la Septuaginta multiplica estos títulos aún más y varios términos tardíos reflejan meditación canónica que vinculó salmos litúrgicos anónimos a episodios de 1–2 Samuel."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál es el origen lingüístico del Salmo 151 transmitido en el Codex Sinaiticus?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Desde el hallazgo del rollo 11QPsa en Qumrán en 1956, está demostrado que el Salmo 151 griego proviene de una composición hebrea antigua compuesta en realidad por dos salmos distintos (151A y 151B) fusionados y abreviados por el traductor de la Septuaginta."
+        },
+        {
+          "label": "Tradición",
+          "body": "En el canon occidental (Trento) y hebreo se mantuvo el número cerrado de 150 salmos, mientras la tradición griega y ortodoxa incluyó el 151 como apéndice venerado fuera del conteo tradicional o al cierre del Salterio."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-psalms",
+    "ce-psalms",
+    "pietersma-nets-psalms",
+    "ccel-early-fathers",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

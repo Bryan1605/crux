@@ -1,0 +1,101 @@
+{
+  "id": "siracida",
+  "title": "Sirácida",
+  "abbr": "Sir",
+  "order": 22.2,
+  "testament": "AT",
+  "summary": "Extensa colección sapiencial en cincuenta y un capítulos redactada originalmente en hebreo en Jerusalén por Jesús ben Sirá hacia el 180 a. C. y traducida al griego en Egipto por su nieto después del 132 a. C. Deuterocanónico católico y ortodoxo; admirado pero no canónico en el judaísmo y protestantismo.",
+  "genre": [
+    "colección de proverbios",
+    "enseñanza sapiencial",
+    "himno eulogético histórico"
+  ],
+  "language": "Hebreo original parcialmente recobrado (Qumrán, Masada y Guenizá de El Cairo); texto completo en el griego de su nieto",
+  "date": {
+    "narrative": "Enseñanzas de Jesús, hijo de Eleazar ben Sirá en Jerusalén antes de la crisis antioquena",
+    "composition": "Original hebreo c. 190–175 a. C.; prólogo y traducción griega en Egipto después de 132 a. C.",
+    "certainty": "segura",
+    "note": "El elogio del sumo sacerdote Simón II (50:1–21) y el año 38 de Evergetes (132 a. C.) citado en el prólogo proporcionan dos anclas cronológicas sólidas."
+  },
+  "canon": {
+    "judio": "No incluido (aunque citado a veces en la literatura talmúdica como libro exterior apreciado)",
+    "catolico": "Deuterocanónico (Hipona 393, Cartago 397, Trento 1546, bajo el título latino Eclesiástico)",
+    "ortodoxo": "Antiguo Testamento (Anagignoskomena; Sabiduría de Sirá)",
+    "protestante": "No incluido; se edita entre los apócrifos"
+  },
+  "notice": "En esta web, Sirácida se lee íntegro en el griego del Codex Sinaiticus (51 capítulos, 1.364 versículos, con el prólogo del nieto). La NTV no lo incluye.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Sirácida (o Eclesiástico) es el libro sapiencial más extenso heredado de la Antigüedad judía: cincuenta y un capítulos de proverbios en dísticos paralelos, poemas sobre la Sabiduría (1:1–10; 24), consejos domésticos, éticos y sociales, oraciones (22:27–23:6; 36), contemplación de la naturaleza (42:15–43:33) y un célebre «Elogio de los antepasados» de Enoc a Simón II (44–50), coronado por un acróstico final (51:13–30).\n\n[Estudio] Su nieto antepuso en Egipto un prólogo personal de gran valor historiográfico donde por primera vez aparece formulada la triple división de las Escrituras: la Ley, los Profetas y los demás libros."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Ben Sirá ejerció como escriba y maestro sabio (sofer) en Jerusalén poco antes del conflicto macabeo, bajo la transición del dominio ptolemaico al seléucida (c. 190–175 a. C.), cuando el pensamiento helenístico comenzaba a seducir a la élite sacerdotal y ciudadana.\n\nSu nieto tradujo la obra medio siglo más tarde en Egipto bajo Ptolomeo VII Evergetes II (llegado allí en el año 132 a. C.) para la diáspora judeohelenística que conservaba el fervor por la Torá en lengua griega."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] Es el único libro sapiencial del Antiguo Testamento griego o hebreo que identifica expresamente a su autor: Jesús, hijo de Eleazar, hijo de Sirá, de Jerusalén (50:27 en griego).\n\n[Estudio] Como exponen Toy y Lévi (Jewish Encyclopedia) y Benjamin Wright (NETS), la composición conoció dos grandes estratos textuales: el texto hebreo original del abuelo (Griego I en la versión del nieto, base de los unciales) y expansiones hebreas y griegas posteriores (Griego II), que introducen referencias más marcadas a la vida futura y la piedad interior."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El principio rector de Ben Sirá equipara directamente la Sabiduría divina con «el libro de la Alianza del Dios Altísimo, la Ley que ordenó Moisés» (24:23). Temer al Señor funda la sabiduría, el honor a los padres, el servicio cultual sincero, la limosna que repara, la amistad probada y la confianza providencial en que Dios hace «dobles todas las cosas, una frente a otra» (33:15; 42:24).\n\n[Estudio] Conserva aún la visión hebrea antigua sobre la retribución en la vida presente y en la memoria del nombre (41:11–13), sin desarrollar todavía la resurrección apocalíptica posterior."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Perdido el texto hebreo durante siglos salvo citas dispersas del Talmud y Jerónimo, desde 1896 los hallazgos de la Guenizá de El Cairo, Qumrán (2Q18, 11Q5) y un papiro-pergamino de Masada (c. 70 d. C.) han recuperado cerca de dos tercios del hebreo original. En griego, todos los manuscritos antiguos invierten por accidente de folios los bloques 30:25–33:13 y 33:13–36:16; Ziegler los reordenó según el orden hebreo y latino.\n\n[Texto] El Codex Sinaiticus (libro 31) preserva los 51 capítulos y 1.364 versículos íntegros en griego."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque los rabinos debatieron y excluyeron Ben Sirá de los escritos canónicos (Tosefta Yadayim 2:13), continuaron citándolo con respeto e incluso con fórmulas escriturales en el Talmud y el Midrás. En la Iglesia latina recibió el nombre de Ecclesiasticus por su amplio uso catequético y litúrgico entre los catecúmenos.\n\nLo acogieron Hipona, Cartago y Trento; en el ámbito griego forma parte del Antiguo Testamento de la Septuaginta; Lutero y los reformadores lo tradujeron como lectura ética provechosa fuera del canon."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Empezar leyendo el prólogo del nieto para entender la formación temprana del canon tripartito y la conciencia de los límites de toda traducción.\n2. Seguir el himno central de Sabiduría 24, donde la Sabiduría peregrina hasta fijar su morada en Sión como la Torá.\n3. Tener presente la inversión de capítulos 30:25–36:16 propia de la familia textual griega que comparte el Sinaítico.\n4. Leer el «Elogio de los padres» (caps. 44–50) como una historia teológica de Israel desde la óptica sacerdotal pre-macabea."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Representan los manuscritos de la Guenizá un original hebreo sustancial o una retrotraducción tardía?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Tras los descubrimientos de Masada (siglo I d. C.) y Qumrán (siglo I a. C.), el consenso académico confirma que los fragmentos de la Guenizá conservan fundamentalmente el texto hebreo auténtico antiguo de Ben Sirá, aunque con variantes de copia medievales."
+        },
+        {
+          "label": "Estudio",
+          "body": "Las discusiones anteriores al hallazgo de Masada (cuando autores como Margoliouth defendían una retrotraducción medieval desde el siríaco o persa) quedaron superadas para la base textual, si bien persisten debates sobre versos puntuales glosados."
+        }
+      ]
+    },
+    {
+      "question": "¿Por qué quedó fuera del canon rabínico pese a su popularidad entre los sabios del Talmud?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La tradición talmúdica fijó el fin de la profecía en época persa y atribuyó Ben Sirá a un autor conocido posterior, posterior al período clásico de Esdras."
+        },
+        {
+          "label": "Estudio",
+          "body": "La crítica histórica añade que el libro circulaba abiertamente con firma autoral reciente (c. 180 a. C.) y contenía críticas al silencio sobre la resurrección que incomodaban a ciertas escuelas fariseas, aunque siguió transmitiéndose ampliamente."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "toy-levi-1906-sirach",
+    "gigot-1909-ecclesiasticus",
+    "wright-nets-sirach",
+    "csp-codex-sinaiticus",
+    "je-bible-canon"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

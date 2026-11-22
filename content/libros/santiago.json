@@ -1,0 +1,101 @@
+{
+  "id": "santiago",
+  "title": "Santiago",
+  "abbr": "Stg",
+  "order": 59,
+  "testament": "NT",
+  "summary": "Primera de las siete Epístolas Católicas en cinco capítulos dirigida «a las doce tribus que están en la dispersión»: tratado de sabiduría práctica judío-cristiana próximo al Sermón del Monte sobre alegría en las pruebas, escucha y práctica de la «ley perfecta de la libertad», rechazo de la acepción de personas entre ricos y pobres, coherencia indispensable entre fe y obras (cap. 2), dominio de la lengua, sabiduría humilde y oración por los enfermos. Canónica; completa en NTV y Codex.",
+  "genre": [
+    "parénesis sapiencial epistolar (protréptico)",
+    "diatriba ética (fe y obras, lengua, riqueza)",
+    "carta encíclica a la diáspora"
+  ],
+  "language": "Griego koiné vivo y sumamente elegante con aliteraciones, imágenes naturales y fuerte aliento de sabiduría hebrea",
+  "date": {
+    "narrative": "Enviada por «Santiago, siervo de Dios y del Señor Jesucristo» antes del desarrollo tardío de estructuras jerárquicas complejas («asamblea / sinagoga», 2:2)",
+    "composition": "Debatida: entre las décadas tempranas (c. 45–62 d. C., antes del martirio de Santiago hermano del Señor en 62 d. C.) y c. 75–95 d. C.",
+    "certainty": "discutida",
+    "note": "Mantiene todavía el término «sinagoga» para la reunión cristiana (2:2) y carece de referencias a la controversia gentil ni a la caída de Jerusalén."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento (encabeza las Epístolas Católicas)",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Santiago adopta el molde de la carta encíclica sapiencial judía dirigida a la diáspora («a las doce tribus», 1:1), encadenando sentencias breves, metáforas de la naturaleza —ola del mar, flor seca, espejo, freno de caballo, timón, fuente salada/dulce, lluvia temprana y tardía— e interpelaciones directas en cinco capítulos intensos: prueba y sabiduría pedida con fe (1:1–18), oidores y hacedores de la Palabra (1:19–27), condena al favoritismo con ricos frente a pobres (2:1–13), el célebre argumento de fe muerta sin obras (2:14–26), poder devastador de la lengua y dos sabidurías (3), raíces de conflictos y presunción comercial (4), juicio contra terratenientes defraudadores y oración paciente por los enfermos (5).\n\n[Estudio] Tiene más de cincuenta imperativos en apenas ciento ocho versículos."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Refleja comunidades cristianas tempranas de fuerte impronta judía (en Palestina, Siria o la diáspora mediterránea), golpeadas por desigualdades económicas agudas entre jornaleros explotados por latifundistas ricos (5:1–6) y patronos vanidosos sentados en lugares preferentes de la «sinagoga» cristiana (2:2–6). A la vez combate distorsiones intelectuales de una supuesta fe meramente verbal («tú crees que Dios es uno; bien haces, también los demonios creen y tiemblan», 2:19)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Orígenes, Eusebio y Jerónimo atribuyeron el escrito a Santiago «el hermano del Señor» (cfr. Gá 1:19; Hch 15:13), líder reverenciado de la iglesia de Jerusalén martirizado según Josefo en el año 62 d. C.\n\n[Estudio] Achille Camerlynck (Catholic Encyclopedia) expone los argumentos en pro (ambiente galileo/palestino de higos, olivos, vientos calientes, ausencia del tema de la circuncisión y ecos independientes de los dichos de Jesús sin depender literalmente de los Evangelios escritos) frente a críticos modernos que postulan seudonimia de finales del s. I d. C. citando su excelente griego helenístico y el diálogo aparente con consignas paulinas mal entendidas."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La teología de Santiago es ética vivida ante Dios Padre que no tienta al mal sino da todo don perfecto sin variación (1:13–18). Define la «religión pura y sin mácula» como servicio a huérfanos y viudas y limpieza frente al mundo (1:27), y sostiene en el capítulo 2 que una fe sin obras de compasión concreta ante el hermano desnudo y hambriento es cadáver estéril («¿Puede esa fe salvarlo?… El hombre es justificado por obras y no solamente por fe», 2:14, 24), citando a Abraham y Rahab. La paz brota de la sabiduría humilde de arriba y la oración ferviente del justo (3:17–18; 5:16).\n\n[Tradición] La oración y unción por los enfermos de 5:14–15 sustentó la unción pastoral cristiana de enfermos."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Testimoniada tempranamente en los papiros P20, P23 y P100 (siglo III) e íntegra en los grandes unciales del siglo IV —encabezando en el Codex Sinaiticus (núm. 52), el Vaticano y las Biblias orientales las Epístolas Católicas inmediatamente tras Hechos—, se transmitió con notable estabilidad salvo variaciones menores como «espíritu que hizo habitar» en 4:5.\n\n[Texto] Tanto la NTV (5 capítulos, 108 vv.) como el Codex Sinaiticus (5 capítulos, 108 vv.) presentan completo el libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Por figurar entre los escritos debatidos (antilegomena) en algunas listas antiguas antes de imponerse en todo Oriente y Occidente en el siglo IV (Atanasio, Jerónimo, Hipona y Cartago), y más tarde por el aparente choque de 2:24 con Romanos 3:28, Martín Lutero la calificó en 1522 en tono polémico como «epístola de paja» frente a Juan/Romanos (sin excluirla de su Biblia y reconociendo su ética buena). Desde Agustín («Pablo habla de obras anteriores a la fe; Santiago de obras que nacen de la fe viva») hasta hoy, la mayoría de confesiones lee a Pablo y Santiago como polos complementarios."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Santiago junto al Sermón del Monte (Mt 5–7): conserva docenas de ecos directos de las enseñanzas de Jesús sobre pobres, juramentos (5:12), paz y obras sin mencionar el nombre de Mateo.\n2. En 2:14–26, notar qué tipo de «fe» ataca Santiago: una confesión ortodoxa vacía («tienes fe… ve en paz, caliéntense y sáciense» sin dar abrigo) que incluso «los demonios creen» (2:19).\n3. Meditar el capítulo 3 sobre el poder creador y destructor de la palabra humana.\n4. Observar el lugar en el Sinaiticus (núm. 52): allí encabeza las siete Epístolas Generales tras Hechos."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Contradice Santiago 2:24 a Pablo en Romanos 3:28 sobre la justificación por la fe?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Desde Agustín hasta el consenso teológico ecuménico moderno (Declaración Conjunta de 1999 y exegetas católicos y protestantes), ambos responden a problemas opuestos con términos distintos: Pablo refuta ganar salvación mediante «obras de la Ley» antes de la fe; Santiago refuta una fe meramente intelectual estéril demostrando con Gn 22 que la fe viva «se perfecciona con las obras» (2:22)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Historiadores críticos sugieren sin embargo que Santiago conocía consignas simplificadas antinomistas derivadas de círculos paulinos («fe sin obras») y replicó conscientemente con el mismo ejemplo de Abraham para restaurar el equilibrio ético."
+        }
+      ]
+    },
+    {
+      "question": "¿Escribió la carta el propio Santiago de Jerusalén antes de 62 d. C. o un maestro judeocristiano posterior?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Defensores de la autoría de Santiago (Bauckham, Moo, Camerlynck) señalan que el autor jamás invoca título de hermano del Señor ni recuerda la guerra del 70 d. C., y sus tradiciones de Jesús son pre-sinópticas."
+        },
+        {
+          "label": "Estudio",
+          "body": "Críticos escépticos objetan que el griego refinado con citas de la Septuaginta e influencia retórica estoica (y la ausencia total del problema ley ceremonial/gentiles tan candente en Galacia) apunta a una obra pseudónima helenista de finales del s. I."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-james",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

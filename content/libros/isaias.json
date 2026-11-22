@@ -1,0 +1,101 @@
+{
+  "id": "isaias",
+  "title": "Isaías",
+  "abbr": "Is",
+  "order": 23,
+  "testament": "AT",
+  "summary": "Libro profético monumental de sesenta y seis capítulos asociado al profeta Isaías de Jerusalén (siglo VIII a. C.): oráculos de juicio y promesa davídica del Emmanuel ante las crisis asirias (1–39), cantos de consolación en el regreso de Babilonia y los cuatro cánticos del Siervo sufriente (40–55), y anuncios escatológicos de Sión renovada y nuevos cielos y tierra (56–66). Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "oráculo profético en poesía elevada",
+    "narrativa histórica palaciega (36–39)",
+    "cántico del Siervo y apocalipsis cósmico"
+  ],
+  "language": "Hebreo profético de altísima elocuencia poética; traducción griega interpretativa libre en la Septuaginta",
+  "date": {
+    "narrative": "Ministerio de Isaías hijo de Amoz bajo Uzías, Jotam, Acaz y Ezequías (c. 740–700 a. C.); caps. 40–66 miran hacia Ciro y el retorno de Babilonia (s. VI a. C.)",
+    "composition": "Debatida: unidad autoral isaánica tradicional frente a formación en dos o tres grandes etapas proféticas (s. VIII al VI–V a. C.)",
+    "certainty": "discutida",
+    "note": "Ya hacia el 180 a. C., Jesús ben Sirá (Sirácida 48:22–25) y el gran rollo completo 1QIsaa de Qumrán testimonian el libro consolidado íntegro en 66 capítulos."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — Profetas Posteriores, primero de los tres profetas mayores)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Esaias)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Isaías reúne sesenta y seis capítulos en tres grandes bloques temáticos marcados por el giro histórico de los capítulos 36–39 (el paso del enemigo asirio al anuncio babilónico). Los capítulos 1–39 contienen oráculos de denuncia social e idolátrica contra Judá e Israel (visión del trono de 6:1–8; ciclo del Emmanuel en 7–12), juicios contra las naciones (13–23), el pequeño apocalipsis (24–27) y el relato histórico paralelo a 2 Reyes (36–39). Los capítulos 40–55 proclaman el retorno consolado desde Babilonia nombrando a Ciro (44:28–45:1) y entonan los cuatro cánticos del Siervo del Señor (42, 49, 50, 52:13–53:12). Los capítulos 56–66 abren la casa de oración a extranjeros y culminan en «cielos nuevos y tierra nueva» (65:17; 66:22).\n\n[Estudio] Sobresale por su riqueza metafórica, su ritmo solemne y su profundidad teológica."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] La primera mitad responde a la expansión brutal del Imperio neoasirio en el siglo VIII a. C.: la guerra siro-efraimita contra Acaz (734 a. C.), la caída de Samaria (722 a. C.) y la invasión de Senaquerib hasta las puertas de Jerusalén (701 a. C.), donde Isaías aconseja fe sin alianzas con Egipto.\n\nLos capítulos 40–66 suponen en cambio Jerusalén arruinada por Babilonia, la irrupción victoriosa del rey persa Ciro (539 a. C.) y los desafíos religiosos de la reconstrucción posexílica en Judá."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Tanto Sirácida 48:22–25 como el Nuevo Testamento y la tradición patrística citan todo el libro bajo el nombre único de Isaías, considerando profecía anticipada el nombramiento de Ciro.\n\n[Estudio] Desde Ibn Ezra en la Edad Media y la crítica moderna desde Döderlein, Eichhorn y Bernhard Duhm (recogida por Hirsch y Cheyne en la Jewish Encyclopedia y analizada por Souvay en la Catholic Encyclopedia), se distinguen ampliamente un «Proto-Isaías» histórico del s. VIII (1–39), un «Deutero-Isaías» del final del exilio babilónico (40–55) y un «Trito-Isaías» de la Judea posexílica (56–66) dentro de una misma escuela profética."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El título predilecto de Dios en todo el libro es «el Santo de Israel»: una santidad tres veces alabada (6:3) que consume la injusticia ritualista sin misericordia hacia huérfanos y viudas (cap. 1; 58), abate todo orgullo humano y promete la fidelidad gratuita del Creador único frente a los ídolos impotentes de Babilonia (40–48). Su cumbre redentora llega con el Siervo inocente de 52:13–53:12, que carga nuestros dolores y justifica a muchos mediante su entrega.\n\n[Tradición] Isaías ha sido llamado «el quinto evangelio» por su presencia decisiva en Mateo (1:23; 4:15), Lucas (4:18), Pablo (Ro 10; 15) y 1 Pedro 2."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El Gran Rollo de Isaías de Qumrán (1QIsaa, c. 125 a. C.), preservado íntegro con los sesenta y seis capítulos unidos, probó la extraordinaria estabilidad del texto hebreo masorético a lo largo de mil años. La traducción griega antigua —analizada por Moisés Silva (NETS)— parafrasea y actualiza libremente varios oráculos para la diáspora alejandrina y presenta célebres lecturas como parthenos («virgen») en 7:14.\n\n[Texto] Tanto la NTV (66 caps., 1.292 vv.) como el Codex Sinaiticus (núm. 14; 66 caps., 1.289 vv.) conservan completo el libro entero."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Es el libro profético más citado del Nuevo Testamento (más de sesenta citas directas y centenares de alusiones: 7:14 en la anunciación, 9:6 en Galilea, 40:3 en el Bautista, 61:1 en la sinagoga de Nazaret y 53:7–8 en la catequesis pascual del eunuco en Hch 8). Los Padres griegos y latinos (Justino, Eusebio, Jerónimo, Cirilo de Alejandría) le dedicaron comentarios extensos, y el diálogo entre judíos y cristianos sobre Isaías 7:14 e Isaías 53 ha marcado dos milenios de historia exegética."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer 1–39 en clave histórica del siglo VIII (Asiria), 40–55 ante el ocaso de Babilonia (Ciro) y 56–66 en la reconstrucción difícil de Sión.\n2. Seguir el estribillo en tres tiempos: «¡Ay! —juicio— … pero quedará un resto fiel».\n3. Leer los cuatro cantos del Siervo (42:1–4; 49:1–6; 50:4–9; 52:13–53:12) preguntando primero por su eco en Israel y su lectura cristiana en la Pasión.\n4. Comparar versículos emblemáticos (como 7:14; 9:6; 40:3) entre la NTV y el griego del Codex Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Procede el libro entero de Isaías del siglo VIII a. C. o de múltiples autores de épocas distintas integrados en su nombre?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Exégesis conservadoras defienden la autoría única de Isaías hijo de Amoz: el estilo elevado unitario, el título «Santo de Israel» en todo el libro y la posibilidad de profecía predictiva sobre Ciro y el exilio bastan para explicar caps. 40–66."
+        },
+        {
+          "label": "Estudio",
+          "body": "El consenso histórico-crítico mayoritario observa que 40–66 ya da por ocurrido el exilio y presenta a Ciro como evento contemporáneo («yo lo he despertado», 45:13), reflejando discípulos proféticos de Isaías del s. VI–V a. C."
+        }
+      ]
+    },
+    {
+      "question": "¿Quién es el Siervo sufriente de Isaías 52:13–53:12 en su contexto original?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La exégesis cristiana y pasajes del Tárgum antiguo leen a una figura mesiánica individual cuyo sufrimiento vicario expía el pecado de Israel y de las naciones (Hch 8:32–35; 1 P 2:22–25)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Gran parte de la crítica judía medieval (Rashi) y moderna lo relaciona con el propio Israel fiel o un profeta individual dentro del grupo, dada la identificación expresa de «tú eres mi siervo, Israel» en 49:3."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-isaiah",
+    "ce-isaias",
+    "silva-nets-esaias",
+    "ce-prophecy",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

@@ -1,0 +1,101 @@
+{
+  "id": "2-pedro",
+  "title": "2 Pedro",
+  "abbr": "2 P",
+  "order": 61,
+  "testament": "NT",
+  "summary": "Carta testamentaria breve en tres capítulos bajo el nombre de Simón Pedro ante la inminencia de su muerte y la amenaza de falsos maestros que niegan el regreso de Cristo («¿Dónde está la promesa de su venida?»): recuerda la gloria presenciada en la Transfiguración como fundamento de la «palabra profética más segura», advierte contra burladores citando casi todo Judas (cap. 2), explica la demora divina como paciencia («un día es como mil años») y espera «cielos nuevos y tierra nueva». Canónica; completa en NTV y Codex.",
+  "genre": [
+    "testamento apostólico de despedida",
+    "polémica contra escépticos y falsos doctores",
+    "instrucción escatológica"
+  ],
+  "language": "Griego koiné retórico de sabor helenístico elevado y vocablos poco frecuentes en el resto del NT",
+  "date": {
+    "narrative": "Simón Pedro en la ancianidad consciente de que «pronto debo dejar mi morada» según Cristo le anunció (1:14, eco de Jn 21:18)",
+    "composition": "Debatida: testamento real de Pedro (c. 64–68 d. C.) o el escrito más tardío del Nuevo Testamento (c. 100–130 d. C.) bajo la escuela petrina",
+    "certainty": "discutida",
+    "note": "Su mención de una colección ya existente de «todas sus cartas» de Pablo equiparadas a «las demás Escrituras» (3:15–16) y su uso literario de Judas constituyen puntos clave del debate."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento (confirmada tras debate antiguo en los sínodos del s. IV)",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Pedro comparte el género de testamento apostólico de despedida (como 2 Timoteo) en tres capítulos vibrantes: I. Saludo de «Simón Pedro, siervo y apóstol» proclamando el llamamiento a ser «participantes de la naturaleza divina», escalera de siete virtudes y doble testimonio de la Transfiguración en el «monte santo» junto a la profecía escritural inspirada por el Espíritu Santo (cap. 1); II. Denuncia vehemente de falsos maestros libertinos que prometen libertad siendo esclavos de la corrupción, recogiendo ejemplos paralelos a Judas (cap. 2); III. Respuesta a la burla por el retraso de la Parusía, disolución cósmica por fuego, promesa de cielos nuevos y tierra nueva, y elogio de «nuestro amado hermano Pablo» (cap. 3).\n\n[Estudio] Destaca la transición léxica radical respecto a 1 Pedro."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Al paso de la primera generación de apóstoles («desde que durmieron los padres», 3:4), creyentes fatigados por la espera y maestros libertinos que confundían la gracia paulina con licencia moral (3:16) ridiculizaban el anuncio cristiano del Juicio final aduciendo que la naturaleza sigue inmutable desde la Creación. La carta responde reafirmando el juicio histórico (el Diluvio), la paciencia misericordiosa de Dios ante el tiempo y la exigencia de vivir en santidad mientras llega el Día."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Orígenes fue el primer padre en citar 2 Pedro por nombre hacia 240 d. C. señalando ya abiertamente dudas antiguas, mientras Eusebio la clasificó entre los libros discutidos (antilegomena) antes de consolidarse en el canon de Atanasio, Jerónimo y Cartago (397).\n\n[Estudio] Achille Vander Heeren (Catholic Encyclopedia) expone las dificultades históricas y estilísticas comparadas con 1 Pedro (atribuidas tradicionalmente a un secretario diferente al de 1 P), mientras la gran mayoría de la crítica moderna estima 2 Pedro una composición testamentaria seudónima de finales del siglo I o comienzos del II d. C. escrita en homenaje fiel a Pedro incorporando casi íntegramente el contenido de la Carta de Judas en el cap. 2."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] 2 Pedro formula tres convicciones teológicas memorables: primero, la meta sublime de la gracia en 1:4 al hacernos «participantes de la naturaleza divina» huyendo de la corrupción; segundo, el origen pneumatológico de la profecía bíblica («nunca fue traída por voluntad humana, sino que los santos hombres hablaron siendo llevados por el Espíritu Santo», 1:21); y tercero, la lectura redentora del retraso del fin como misericordia («El Señor no retarda su promesa… sino que es paciente con nosotros, no queriendo que ninguno perezca», 3:9) culminada en un mundo renovado donde «habita la justicia» (3:13).\n\n[Tradición] 1:4 («participantes de la naturaleza divina») devino fundamento escriturístico central de la doctrina patrística griega de la deificación (theosis)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitida íntegra en el papiro temprano P72 (s. III–IV) junto con 1 Pedro y Judas, así como en el Codex Sinaiticus (núm. 54) y el Vaticanus. Presenta una variante famosa en 3:10 respecto a la purificación final de la tierra y sus obras: donde copias posteriores leen «serán quemadas» (katakaesetai), los testigos más antiguos (incluidos el Codex Sinaiticus, P72 y Vaticanus) leen sorprendentemente «serán descubiertas / puestas al desnudo ante el juicio» (heurethesetai).\n\n[Texto] Aquí la NTV (3 capítulos, 61 vv.) y el Codex Sinaiticus (3 capítulos, 61 vv.) ofrecen completo el texto."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque ausente de la Peshitta siríaca antigua y debatida en el siglo III y nuevamente por Erasmo y Calvino en el siglo XVI por su estilo diferente al de 1 Pedro, su lectura triunfó en todas las tradiciones cristianas tras los concilios del siglo IV. Además de fundamentar la doctrina oriental de la theosis en Atanasio y Cirilo de Alejandría, 2 Pedro 3:8 («un día es como mil años») sirvió a Justino e Ireneo para interpretar el tiempo divino en la creación y la espera escatológica."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Comparar directamente 2 Pedro 2 con toda la Carta de Judas (vv. 4–18): observar cómo 2 Pedro omite las citas explícitas a libros apócrifos como 1 Enoc y Asunción de Moisés presentes en Judas.\n2. Leer 1:16–21: el relato ocular de la Transfiguración confirma las Escrituras proféticas previas sin sustituirlas.\n3. Meditar 3:8–13 como antídoto bíblico contra la ansiedad sobre fechas del fin: el «retraso» es paciencia para arrepentimiento.\n4. Examinar 3:10 en la NTV y en el Codex Sinaiticus («descubiertas/halladas» frente a «quemadas»)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue escrita directamente por Simón Pedro (via un secretario) o es un testamento seudónimo tardío?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Quienes defienden la autenticidad directa señalan las afirmaciones explícitas de 1:1 («Simón Pedro»), 1:16–18 (testigo en el monte santo) y 3:1 («esta es la segunda carta que les escribo»), explicando el griego distinto por haber cambiado de amanuense tras Silvano."
+        },
+        {
+          "label": "Estudio",
+          "body": "La amplísima mayoría crítica sostiene seudonimia noble de comienzos del s. II (c. 100–125 d. C.) por: su uso literal de Judas, su alusión a las epístolas paulinas ya compiladas como «Escrituras» (3:16), la alusión a la muerte pasada de «los padres» (3:4), la ausencia de citas antes del s. III y un griego filosófico helenístico ajeno a 1 Pedro."
+        }
+      ]
+    },
+    {
+      "question": "¿Significa 2 Pedro 3:10–13 aniquilación total del universo físico o purificación renovadora de esta creación?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Basándose en el paralelo explícito con el Diluvio (3:6–7) y en la lectura más antigua heurethesetai («serán puestas al descubierto / juzgadas») preservada en el Codex Sinaiticus, la mayoría de exegetas actuales ve fuego purificador del juicio que renueva el cielo y la tierra para que «habite la justicia» (3:13)."
+        },
+        {
+          "label": "Tradición",
+          "body": "Lecturas que siguen la variante «serán quemadas» interpretan una consumación catastrófica más radical del orden cósmico presente antes de instaurarse la creación nueva."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-peter",
+    "ce-canon-nt",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

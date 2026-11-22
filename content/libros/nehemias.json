@@ -1,0 +1,101 @@
+{
+  "id": "nehemias",
+  "title": "Nehemías",
+  "abbr": "Neh",
+  "order": 16,
+  "testament": "AT",
+  "summary": "Trece capítulos que recogen las memorias personales de Nehemías, copero judío en Susa nombrado gobernador persa de Judea (445 a. C.), la reconstrucción de los muros de Jerusalén pese a acosos vecinos, la lectura solemne de la Torá por Esdras y las reformas sociales y sabáticas. Protocanónico; en el Sinaiticus corresponde a 2 Esdras caps. 11–23.",
+  "genre": [
+    "memorias autobiográficas",
+    "crónica de reconstrucción urbana",
+    "liturgia de renovación del pacto"
+  ],
+  "language": "Hebreo bíblico tardío (posexílico)",
+  "date": {
+    "narrative": "De 445 a. C. (año veinte de Artajerjes I) hasta el regreso de Nehemías hacia 433–424 a. C.",
+    "composition": "Basado en las «Memorias de Nehemías» auténticas del siglo V a. C., integrado con Esdras hacia los siglos IV–III a. C.",
+    "certainty": "probable",
+    "note": "Las secciones en primera persona («Palabras de Nehemías», caps. 1–7 y parte de 12–13) figuran entre los escritos memorialísticos más directos del mundo antiguo."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — unido en un solo volumen con Esdras)",
+    "catolico": "Antiguo Testamento (protocanónico; tradicionalmente 2 Esdras en Vulgata)",
+    "ortodoxo": "Antiguo Testamento (incluido en 2 Esdras LXX caps. 11–23)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Nehemías está completo en la NTV (13 capítulos, 406 versículos). En el Codex Sinaiticus se conserva íntegro dentro del libro unido de 2 Esdras, donde corresponde a los capítulos 11–23; consulte 2 Esdras para el texto griego.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Nehemías une las vívidas memorias de un estadista judío en primera persona con actas comunitarias litúrgicas en trece capítulos dispuestos en dos grandes mitades: I. La reedificación de las murallas de Jerusalén en cincuenta y dos días —desde la oración en Susa hasta el trabajo armado con espada y llana ante Sanbalat y Tobías— más la reforma económica contra la usura (caps. 1–7); II. La gran asamblea de la Ley presidida por Esdras, la confesión histórica del cap. 9, el pacto sellado (cap. 10), la dedicación de los muros (cap. 12) y reformas finales sabáticas y cultuales (caps. 8–13).\n\n[Estudio] Destacan las breves plegarias jaculatorias («Acuérdate de mí, Dios mío, para bien») insertadas en medio de la acción política."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los adversarios nombrados en el relato hallan eco extrabíblico sorprendente: Sanbalat es mencionado en los papiros de Elefantina (407 a. C.) como gobernador de Samaria; Guesem el árabe aparece en inscripciones de Qedar del norte de Arabia y Dedán; y el nombre amonita de la familia de los Tobías perduró en Irak al-Amir en Transjordania.\n\nAl fortificar Jerusalén y reasentar en ella a un décimo de la población (cap. 11), Nehemías sacó a Judea de la postración defensiva en que yacía desde 586 a. C."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Estudio] Hirsch y Margoliouth (Jewish Encyclopedia) muestran que la base de los caps. 1:1–7:5 y 12:31–13:31 proviene de memorias escritas de puño o círculo inmediato de Nehemías poco después de su segundo mandato (c. 432 a. C.), redactadas en tono de apología ante Dios («Acuérdate de mí»). El compilador unió este material al episodio litúrgico de Esdras leyendo la Ley (caps. 8–10) y listas censales (caps. 7 y 11–12) al componer la obra unitaria Esdras–Nehemías."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Nehemías enlaza íntimamente la piedad personal, la solidaridad social y la Palabra pública: el ayuno sin justicia fracasa cuando los nobles esclavizan por deudas a sus propios hermanos judíos (cap. 5: «¿No deberían andar en el temor de nuestro Dios?»), obligando a condonar intereses y tierras. A su vez, el capítulo 8 inaugura la centralidad hermenéutica de la Escritura explicada «con claridad, poniendo sentido» ante hombres, mujeres y jóvenes en la plaza pública, mientras el capítulo 9 resume la historia bíblica entera como paciencia gratuita frente a reiteradas caídas.\n\n[Tradición] Frases como «el gozo del Señor es nuestra fuerza» (8:10) nutrieron la espiritualidad comunitaria posterior."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] La Septuaginta conserva Esdras y Nehemías reunidos como un único libro (2 Esdras = caps. 1–23), donde los capítulos 11–23 corresponden exactamente a Nehemías 1–13. Los folios del Codex Sinaiticus (núm. 8) preservan completo todo el tramo de Nehemías dentro de esa numeración continua (2 Esdras 11–23).\n\n[Texto] Aquí puede leerse completo en la NTV (13 capítulos, 406 vv.), y confrontarse con el griego del Sinaiticus abriendo 2 Esdras caps. 11–23 (véase la equivalencia exacta cap. + 10)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Ben Sirá (Sirácida 49:13) exalta expresamente la memoria de Nehemías que levantó «las murallas derribadas» y dejó en silencio a Esdras; más tarde, 2 Macabeos 1–2 desarrolla leyendas sobre la fundación de la biblioteca y el fuego sagrado por Nehemías. En el cristianismo, Beda el Venerable compuso un influyente comentario alegórico viendo en la restauración nocturna de las murallas y sus puertas la reconstrucción espiritual de la Iglesia.\n\nLa lectura comentada de Neh 8 sirve aún de modelo histórico para la predicación expositiva."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir la dualidad de liderazgo: Nehemías el gobernador laico y organizador práctico (caps. 1–7; 13) frente a Esdras el sacerdote-escriba que interpreta la Ley (caps. 8–10).\n2. Leer el capítulo 5 con atención: la reconstrucción exterior pierde legitimidad si se explota económicamente al hermano pobre.\n3. Recorrer la gran oración penitencial de Nehemías 9:6–37 como compendio creyente desde la Creación hasta el período persa.\n4. Al contrastar en el Codex Sinaiticus, sumar 10 al capítulo de Nehemías (p. ej. Neh 1 = 2 Esd 11)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Pertenecía Nehemías 8 originalmente al relato de Esdras o formó parte siempre de esta sección?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Gran parte de la crítica observa que Nehemías 8 prosigue la narración de Esdras 7–10 (Esdras domina la escena, con escasa mención de Nehemías en 8:9 que falta en 1 Esdras griego) y habría sido reubicado aquí por el compilador."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros exegetas mantienen la secuencia textual actual de fiestas de Tishrí (otoño posterior a finalizar la muralla en Elul), señalando la presencia conjunta de Nehemías el gobernador y Esdras."
+        }
+      ]
+    },
+    {
+      "question": "¿Cuál era el alcance físico de la muralla reconstruida en cincuenta y dos días?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Excavaciones en la Ciudad de David (Kenyon, Mazar, Finkelstein) indican que la Jerusalén persa de Nehemías era un recinto modesto ceñido principalmente a la colina oriental y el monte del Templo, haciendo viable restaurar o reutilizar tramos de la antigua muralla en cincuenta y dos días."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros arqueólogos debaten la traza exacta de la «muralla ancha» y si abarcó sectores de la colina occidental ya desde época persa."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-nehemiah",
+    "souvay-1909-esdras",
+    "wooden-nets-2esdras",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

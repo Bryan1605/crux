@@ -1,0 +1,101 @@
+{
+  "id": "jeremias",
+  "title": "Jeremías",
+  "abbr": "Jer",
+  "order": 24,
+  "testament": "AT",
+  "summary": "Cincuenta y dos capítulos de oráculos, confesiones personales, acciones simbólicas y relatos biográficos del profeta Jeremías de Anatot durante las últimas cuatro décadas del Reino de Judá hasta la caída de Jerusalén (586 a. C.) y la huida a Egipto. Protocanónico; completo en NTV y Codex Sinaiticus con profunda diferencia textual y de orden entre ambos.",
+  "genre": [
+    "oráculo profético de juicio",
+    "confesión lírica personal",
+    "biografía profética en prosa (Baruc)"
+  ],
+  "language": "Hebreo bíblico clásico y prosa deuteronómica; el griego antiguo refleja una edición hebrea más breve y reordenada",
+  "date": {
+    "narrative": "Desde el año trece de Josías (627 a. C.) hasta después de la destrucción de Jerusalén (586 a. C.) y amnistía de 561 a. C.",
+    "composition": "Núcleo dictado a Baruc en 605–604 a. C. (cap. 36) ampliado durante y poco después del exilio en el siglo VI a. C.",
+    "certainty": "probable",
+    "note": "Es el libro profético que más explícitamente narra su propia puesta por escrito y reescritura en dos rollos sucesivos (cap. 36)."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — Profetas Posteriores, segundo libro tras Isaías)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Ieremias)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "Atención textual y de orden: tanto la NTV (52 capítulos, 1.364 versículos) como el Codex Sinaiticus (52 capítulos, 1.297 versículos) tienen completo el libro, pero el texto griego del Codex es aproximadamente una séptima parte más breve que el hebreo masorético y coloca los Oráculos contra las Naciones en mitad del libro (desde 25:14) en vez del final (caps. 46–51 en NTV), desplazando capítulos y versículos.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Jeremías —el libro más extenso por palabras de la Biblia hebrea— entrelaza poesía apasionada y crónica en prosa a lo largo de cincuenta y dos capítulos: I. Llamado y oráculos poéticos tempranos con los sermones del Templo y las «Confesiones» íntimas del profeta angustiado (1–25); II. Relatos de conflictos con falsos profetas, carta a los exiliados (cap. 29), promesa del Nuevo Pacto (30–33) y persecuciones durante el asedio hasta el fin de Jerusalén (26–45); III. Oráculos contra Egipto, Babilonia y las naciones vecinas (46–51 en hebreo) más apéndice histórico idéntico a 2 Reyes 25 (cap. 52).\n\n[Estudio] Ningún otro profeta deja traslucir tan hondamente sus crisis personales como Jeremías en caps. 11–20."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] El ministerio de Jeremías abarca el vértigo geopolítico de la caída asiria (Nínive, 612 a. C.), la muerte de Josías en Meguido (609 a. C.), la batalla de Carquemis (605 a. C.) y las deportaciones babilónicas de Nabucodonosor (597 y 586 a. C.). Mientras el partido palaciego confiaba en Egipto y repetía «¡Templo del Señor!» (7:4) como talismán indestructible, Jeremías predicó la sumisión impopular a Babilonia como instrumento de juicio divino.\n\nLas excavaciones de Laquis (cartas escritas justo antes del 586 a. C.) y sellos con nombres como «Baruc hijo de Nerías» y «Jucal hijo de Selemías» iluminan vivamente ese mismo círculo de escribas de Jerusalén."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] El capítulo 36 narra cómo en el 605 a. C. Jeremías dictó veintitrés años de oráculos a su secretario Baruc, rollo que el rey Joacim quemó en el brasero y hubo de reescribirse ampliado «con muchas otras palabras semejantes» (36:32).\n\n[Estudio] Hirsch y Ryssel (Jewish Encyclopedia) y Michael Faulhaber (Catholic Encyclopedia) distinguen tres tipos literarios principales: los oráculos poéticos del propio Jeremías, los discursos en prosa de acusado estilo deuteronomista (esp. caps. 7, 11, 21) y las memorias biográficas sobre el profeta redactadas probablemente por Baruc (caps. 26–45)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Jeremías denuncia el culto vacío divorciado de la justicia («¿Robarán, matarán… y vendrán luego a pararse ante mí en esta casa?», 7:9–10) y sostiene que incluso los exiliados en Babilonia deben buscar el bienestar de la ciudad donde están cautivos y esperar setenta años (29:7–10). Cuando toda institución fracasa, el capítulo 31 anuncia la cumbre del libro: Dios establecerá un «nuevo pacto» (berit jadashá, 31:31–34) no grabado ya en piedra sino en el corazón, acompañado por el perdón definitivo de la culpa.\n\n[Tradición] Jesús toma esta expresión en la Última Cena («mi sangre del nuevo pacto»), y Hebreos 8 cita íntegramente Jeremías 31:31–34."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Jeremías ofrece la divergencia textual más célebre entre el Texto Masorético y la Septuaginta: el texto griego carece de unas tres mil palabras presentes en el hebreo (aproximadamente una séptima parte menos) y sitúa los Oráculos a las Naciones tras 25:13 en distinto orden. Los rollos 4QJerb y 4QJerd de Qumrán confirmaron la existencia real en hebreo de esa recensión más corta usada por la LXX, probando que circularon dos ediciones hebreas válidas.\n\n[Texto] La NTV traduce el texto masorético (52 caps., 1.364 vv.); el Codex Sinaiticus (núm. 15) conserva el texto griego breve (52 caps., 1.297 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Tanto Mateo (2:18 sobre Raquel llorando, 21:13 «cueva de ladrones») como Pablo (1 Co 1:31; 2 Co 3 sobre el nuevo pacto), Hebreos 8 y Apocalipsis 18 (oráculo de Babilonia caída de Jer 50–51) beben intensamente de Jeremías. En la tradición judía posterior, 2 Macabeos 2 y 15 pintan a Jeremías escondiendo el arca e intercediendo por el pueblo desde el cielo, y Orígenes y Jerónimo comentaron profundamente sus confesiones como espejo de la fidelidad incomprendida."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. No buscar orden cronológico lineal en Jeremías: los capítulos alternan épocas de Josías, Joacim y Sedequías agrupadas por temas.\n2. Leer las «Confesiones» (11:18–12:6; 15:10–21; 17:14–18; 18:18–23; 20:7–18) para escuchar el debate humano más íntimo de un profeta con Dios.\n3. Detenerse en los caps. 30–33 («el libro de la consolación») como centro de esperanza en medio del colapso nacional.\n4. Al comparar con el Codex Sinaiticus después del cap. 25, recordar el desplazamiento griego de los Oráculos contra las Naciones."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Qué edición representa la forma más antigua del libro: la corta de la Septuaginta/4QJerb o la larga del Texto Masorético?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de críticos textuales actuales (Janzen, Tov, Pietersma y Saunders en NETS) concluye que 4QJerb y la Septuaginta conservan una edición hebrea temprana anterior a amplias expansiones explicativas y dobletes del Texto Masorético."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros investigadores sostienen que ambos textos reflejan ediciones antiguas paralelas igualmente autoritativas en sus comunidades, y algunos aún defienden la prioridad de los pasajes masoréticos abreviados posteriormente."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo se relacionan los discursos en prosa deuteronomista (caps. 7, 11, etc.) con el profeta histórico?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Sigmund Mowinckel y autores posteriores atribuyeron esos sermones en prosa a editores deuteronomistas del exilio que reescribieron los temas de Jeremías tras 586 a. C."
+        },
+        {
+          "label": "Estudio",
+          "body": "Exegetas como Bright y Holladay argumentan que esa retórica pertenecía ya al vocabulario común de Judea alrededor del 600 a. C. compartido por el propio Jeremías y Baruc."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-jeremiah",
+    "ce-jeremias",
+    "pietersma-saunders-nets-ieremias",
+    "ce-septuagint",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

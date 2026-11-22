@@ -6,7 +6,7 @@
     "concilio": 8,
     "herejia": 9,
     "video": 1,
-    "libro": 1,
+    "libro": 73,
     "apologetica": 3
   },
   "items": [
@@ -2931,6 +2931,1001 @@
     },
     {
       "tipo": "libro",
+      "id": "1-corintios",
+      "href": "/biblia/libros/1-corintios",
+      "title": "1 Corintios",
+      "sub": "Nuevo Testamento · 1 Co",
+      "desc": "Carta pastoral de Pablo en dieciséis capítulos enviada desde Éfeso hacia el año 54–55 d. C. a la turbulenta iglesia de Corinto: responde punto por punto a informes de divisiones partidarias, litigios e inmoralidad, matrimonio, carne sacrificada a ídolos, orden en la Cena del Señor, dones del Espíritu coronados en el himno al amor (cap. 13) y la defensa histórica de la resurrección corporal (cap. 15). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "epístola pastoral responsiva",
+        "teología de la cruz y eclesialidad",
+        "himno parenético (cap. 13) y credo temprano (cap. 15)"
+      ],
+      "fold": "1 corintios 1 co nt nuevo testamento carta pastoral de pablo en dieciseis capitulos enviada desde efeso hacia el ano 54–55 d. c. a la turbulenta iglesia de corinto: responde punto por punto a informes de divisiones partidarias, litigios e inmoralidad, matrimonio, carne sacrificada a idolos, orden en la cena del senor, dones del espiritu coronados en el himno al amor (cap. 13) y la defensa historica de la resurreccion corporal (cap. 15). canonica; completa en ntv y codex. griego koine directo, ironico, emotivo y sumamente rico en vocabulario urbano grecorromano estancia prolongada de pablo en efeso durante su tercer viaje misionero (c. 53–55 d. c.) primavera de c. 54 o 55 d. c. desde efeso (16:8) epistola pastoral responsiva teologia de la cruz y eclesialidad himno parenetico (cap. 13) y credo temprano (cap. 15) no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como conciliar la norma de 1 corintios 14:34–35 («que las mujeres guarden silencio») con 11:5 donde las mujeres oran y profetizan en publico? ¿alcanza 1 corintios 15 un cuerpo futuro enteramente espiritual o una transformacion fisica del cuerpo mortal?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-cronicas",
+      "href": "/biblia/libros/1-cronicas",
+      "title": "1 Crónicas",
+      "sub": "Antiguo Testamento · 1 Cr",
+      "desc": "Primera parte de la obra del Cronista (1 Paralipómenos en la Septuaginta), en veintinueve capítulos: genealogías desde Adán hasta las doce tribus (caps. 1–9) y relectura sacerdotal-litúrgica del reinado de David centrada en el arca, los cantores levíticos y los preparativos del Templo (caps. 10–29). Protocanónico; en el Codex Sinaiticus solo sobreviven los caps. 9–11.",
+      "tags": [
+        "genealogía universal y tribal",
+        "historiografía teológica posexílica",
+        "ordenanza litúrgica levítica"
+      ],
+      "fold": "1 cronicas 1 cr at antiguo testamento primera parte de la obra del cronista (1 paralipomenos en la septuaginta), en veintinueve capitulos: genealogias desde adan hasta las doce tribus (caps. 1–9) y relectura sacerdotal-liturgica del reinado de david centrada en el arca, los cantores leviticos y los preparativos del templo (caps. 10–29). protocanonico; en el codex sinaiticus solo sobreviven los caps. 9–11. hebreo biblico tardio (posexilico, con aramaismos e influencias persas) desde adan hasta la muerte de david (caps. 1–9 condensan milenios; 10–29 cubren c. 1010–970 a. c.) periodo persa tardio o inicios del helenistico (c. 400–300 a. c.) en esta web, 1 cronicas esta completo en la ntv (29 capitulos, 942 versiculos). del codex sinaiticus solo sobreviven fragmentos de los capitulos 9–11 (54 versiculos). genealogia universal y tribal historiografia teologica posexilica ordenanza liturgica levitica tanaj (ketuvim — libro final del canon hebreo, unido a 2 cronicas) antiguo testamento (protocanonico; paralipomenos) antiguo testamento (1 paraleipomenon) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿comparten cronicas y esdras–nehemias el mismo autor («el cronista»)? ¿son fiables las fuentes extrabiblicas que cita cronicas fuera de samuel–reyes?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-juan",
+      "href": "/biblia/libros/1-juan",
+      "title": "1 Juan",
+      "sub": "Nuevo Testamento · 1 Jn",
+      "desc": "Tratado o carta circular joánica en cinco capítulos orientada a asegurar el gozo y la certeza eterna de creyentes turbados por una ruptura cismática («salieron de nosotros, pero no eran de nosotros»): afirma la encarnación real tangible del Verbo frente al docetismo naciente y enlaza en espiral tres pruebas inseparables de comunión con Dios: andar en la luz confesando el pecado, guardar el mandamiento del amor fraterno («Dios es amor», 4:8, 16) y confesar a Jesucristo venido en carne. Canónica; completa en NTV y Codex sin el Comma Johanneum.",
+      "tags": [
+        "homilía epistolar circular",
+        "meditación en espiral (luz, amor, fe)",
+        "polémica antidoceta"
+      ],
+      "fold": "1 juan 1 jn nt nuevo testamento tratado o carta circular joanica en cinco capitulos orientada a asegurar el gozo y la certeza eterna de creyentes turbados por una ruptura cismatica («salieron de nosotros, pero no eran de nosotros»): afirma la encarnacion real tangible del verbo frente al docetismo naciente y enlaza en espiral tres pruebas inseparables de comunion con dios: andar en la luz confesando el pecado, guardar el mandamiento del amor fraterno («dios es amor», 4:8, 16) y confesar a jesucristo venido en carne. canonica; completa en ntv y codex sin el comma johanneum. griego koine sencillo, poetico, antitetico y ritmico en absoluta sintonia con el cuarto evangelio crisis dentro de la comunidad joanica tras la partida de un grupo cismatico (2:18–19; 4:1–6) finales del siglo i d. c. (c. 90–100 d. c., en el entorno de efeso proximo al evangelio de juan) nota textual clasica en 1 juan 5:7–8: el codex sinaiticus (num. 55, 5 capitulos, 105 versiculos) —junto con absolutamente todos los manuscritos griegos antiguos anteriores al siglo xiv y la ntv moderna— omite las palabras trinitarias anadidas posteriormente en manuscritos latinos conocidas como el comma johanneum («en el cielo: el padre, el verbo y el espiritu santo; y estos tres son uno. y tres son los que dan testimonio en la tierra»). homilia epistolar circular meditacion en espiral (luz, amor, fe) polemica antidoceta no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como armonizar 1 juan 1:8 («si decimos que no tenemos pecado, nos enganamos») con 3:6 y 3:9 («todo el que permanece en el no peca / no puede pecar»)? ¿como explicar el pasaje trinitario conocido como comma johanneum (5:7–8)?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-macabeos",
+      "href": "/biblia/libros/1-macabeos",
+      "title": "1 Macabeos",
+      "sub": "Antiguo Testamento · 1 Mac",
+      "desc": "Crónica histórica en dieciséis capítulos sobre la revuelta judía encabezada por Matatías y sus hijos contra Antíoco IV Epífanes, la purificación del Templo y el ascenso de la dinastía asmonea. Deuterocanónico para católicos y ortodoxos; fuera del canon hebreo y protestante.",
+      "tags": [
+        "crónica histórica",
+        "historiografía dinástica",
+        "elegía e himno inserto"
+      ],
+      "fold": "1 macabeos 1 mac at antiguo testamento cronica historica en dieciseis capitulos sobre la revuelta judia encabezada por matatias y sus hijos contra antioco iv epifanes, la purificacion del templo y el ascenso de la dinastia asmonea. deuterocanonico para catolicos y ortodoxos; fuera del canon hebreo y protestante. griego en la septuaginta; consenso mayoritario sobre un original hebreo perdido en la antiguedad anos 175–134 a. c. (137–177 de la era seleucida), desde antioco iv hasta el asesinato de simon macabeo entre 134 a. c. y la conquista romana de pompeyo (63 a. c.), probablemente c. 100 a. c. en esta web, 1 macabeos se conserva completo en el griego del codex sinaiticus (16 capitulos, 924 versiculos). la ntv no incluye este libro. cronica historica historiografia dinastica elegia e himno inserto no incluido deuterocanonico (hipona 393, cartago 397, trento 1546) antiguo testamento (anagignoskomena; leido en la tradicion de la septuaginta) no incluido; se edita entre los apocrifos genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿son autenticos los documentos diplomaticos y cartas reales intercalados en el relato? ¿que valor tiene la omision de 1 macabeos en el codex vaticanus frente a su presencia en el sinaiticus?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-pedro",
+      "href": "/biblia/libros/1-pedro",
+      "title": "1 Pedro",
+      "sub": "Nuevo Testamento · 1 P",
+      "desc": "Carta circular consoladora de Simón Pedro en cinco capítulos desde «Babilonia» (Roma) por mano de Silvano a las iglesias de Asia Menor sometidas a difamación y hostilidad social: celebra la «esperanza viva» en la herencia incorruptible y la condición real sacerdotal del pueblo de Dios (2:9–10), llama a responder con bien y mansedumbre siguiendo las huellas de Cristo Siervo paciente (2:21–25) y exhorta a ancianos y jóvenes ante el «león rugiente» de la prueba. Canónica; completa en NTV y Codex.",
+      "tags": [
+        "epístola encíclica de consuelo y bautismo",
+        "catequesis doméstica y cívica",
+        "exhortación ante el sufrimiento"
+      ],
+      "fold": "1 pedro 1 p nt nuevo testamento carta circular consoladora de simon pedro en cinco capitulos desde «babilonia» (roma) por mano de silvano a las iglesias de asia menor sometidas a difamacion y hostilidad social: celebra la «esperanza viva» en la herencia incorruptible y la condicion real sacerdotal del pueblo de dios (2:9–10), llama a responder con bien y mansedumbre siguiendo las huellas de cristo siervo paciente (2:21–25) y exhorta a ancianos y jovenes ante el «leon rugiente» de la prueba. canonica; completa en ntv y codex. griego koine literario, culto y rico en alusiones a la septuaginta (dictado por medio de silvano, 5:12) enviada desde «la elegida que esta en babilonia [roma]» junto a «mi hijo marcos» (5:12–13) hacia provincias del norte de asia menor debatida: hacia 62–65 d. c. bajo el principio de hostilidad neroniana antes o cerca de la muerte de pedro, o c. 80–95 d. c. bajo domiciano epistola enciclica de consuelo y bautismo catequesis domestica y civica exhortacion ante el sufrimiento no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿que significa la dificil afirmacion de que cristo «fue y predico a los espiritus encarcelados» en 1 pedro 3:19–20? ¿procede el libro directamente de simon pedro a traves de silvano o de un circulo petrino romano posterior?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-reyes",
+      "href": "/biblia/libros/1-reyes",
+      "title": "1 Reyes",
+      "sub": "Antiguo Testamento · 1 R",
+      "desc": "Primera parte del libro unitario de Reyes (3 Reinos en la Septuaginta), en veintidós capítulos: coronación, sabiduría y Templo de Salomón, cisma de los dos reinos tras Roboam y Jeroboam, y el ministerio profético de Elías contra el culto baalista bajo Acab. Protocanónico; ausente en el Sinaiticus.",
+      "tags": [
+        "crónica dinástica real",
+        "relato de edificación cultual",
+        "ciclo hagiográfico profético (Elías)"
+      ],
+      "fold": "1 reyes 1 r at antiguo testamento primera parte del libro unitario de reyes (3 reinos en la septuaginta), en veintidos capitulos: coronacion, sabiduria y templo de salomon, cisma de los dos reinos tras roboam y jeroboam, y el ministerio profetico de elias contra el culto baalista bajo acab. protocanonico; ausente en el sinaiticus. hebreo biblico deuteronomista con fuentes analisticas antiguas desde los ultimos dias de david hasta ocozias de israel y josafat de juda (c. 970–853 a. c.) edicion deuteronomista apoyada en cronicas reales, completada tras el 560 a. c. en el exilio en esta web, 1 reyes se lee completo en la ntv (22 capitulos, 816 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. cronica dinastica real relato de edificacion cultual ciclo hagiografico profetico (elias) tanaj (nevi’im — unido a 2 reyes) antiguo testamento (protocanonico; tradicionalmente 3 reyes en vulgata) antiguo testamento (3 basileion / 3 reinos) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿se redacto el libro de reyes en dos ediciones (preexilica bajo josias y definitiva en el exilio) o de una vez tras 560 a. c.? ¿como explicar las discrepancias cronologicas entre los anos de reinado de israel y juda?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-samuel",
+      "href": "/biblia/libros/1-samuel",
+      "title": "1 Samuel",
+      "sub": "Antiguo Testamento · 1 S",
+      "desc": "Primera parte de la obra unitaria hebrea de Samuel (1 Reinos en la Septuaginta), en treinta y un capítulos: nacimiento y ministerio profético-judicial de Samuel, exigencia popular de un rey, reinado trágico de Saúl y ascenso y huida de David hasta la muerte de Saúl en Gilboa. Protocanónico; sin folios conservados en el Sinaiticus.",
+      "tags": [
+        "historiografía profético-cortesana",
+        "relatos vocacionales",
+        "elegía e himno (Cántico de Ana)"
+      ],
+      "fold": "1 samuel 1 s at antiguo testamento primera parte de la obra unitaria hebrea de samuel (1 reinos en la septuaginta), en treinta y un capitulos: nacimiento y ministerio profetico-judicial de samuel, exigencia popular de un rey, reinado tragico de saul y ascenso y huida de david hasta la muerte de saul en gilboa. protocanonico; sin folios conservados en el sinaiticus. hebreo biblico narrativo clasico (con variantes importantes en qumran y la septuaginta) transicion de los ultimos jueces a los reinados de saul y david (finales del s. xi a. c.) fuentes cortesanas y profeticas tempranas compiladas en la historia deuteronomista (c. siglos vii–vi a. c.) en esta web, 1 samuel esta completo en la ntv (31 capitulos, 810 versiculos). no se conserva ningun folio de 1–4 reinos en el codex sinaiticus actual. historiografia profetico-cortesana relatos vocacionales elegia e himno (cantico de ana) tanaj (nevi’im — profetas anteriores; unido a 2 samuel) antiguo testamento (protocanonico; 1 samuel / tradicionalmente 1 reyes en vulgata) antiguo testamento (1 basileion / 1 reinos) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿cual version del duelo de david y goliat (caps. 17–18) es anterior: el texto breve de la septuaginta b o el largo del texto masoretico? ¿contienen los libros de samuel fuentes favorables y contrarias a la monarquia originalmente independientes?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-tesalonicenses",
+      "href": "/biblia/libros/1-tesalonicenses",
+      "title": "1 Tesalonicenses",
+      "sub": "Nuevo Testamento · 1 Ts",
+      "desc": "Probablemente el escrito más antiguo conservado del Nuevo Testamento (c. 50–51 d. C.): cinco capítulos enviados desde Corinto por Pablo, Silvano y Timoteo a los recién convertidos de Tesalónica, celebrando su fe ejemplar pese a la persecución, defendiendo la sinceridad paternal de los misioneros, exhortando a la pureza sexual y al trabajo honrado, y consolando por los creyentes ya fallecidos ante el regreso del Señor (4:13–5:11). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta pastoral de consuelo y aliento",
+        "recuerdo misionero epistolar",
+        "instrucción escatológica"
+      ],
+      "fold": "1 tesalonicenses 1 ts nt nuevo testamento probablemente el escrito mas antiguo conservado del nuevo testamento (c. 50–51 d. c.): cinco capitulos enviados desde corinto por pablo, silvano y timoteo a los recien convertidos de tesalonica, celebrando su fe ejemplar pese a la persecucion, defendiendo la sinceridad paternal de los misioneros, exhortando a la pureza sexual y al trabajo honrado, y consolando por los creyentes ya fallecidos ante el regreso del senor (4:13–5:11). canonica; completa en ntv y codex. griego koine sencillo, afectuoso y directo de tono conversacional poco despues del regreso de timoteo desde tesalonica con buenas noticias hasta pablo en corinto (c. 50–51 d. c.) anos 50–51 d. c. desde corinto (casi veinte anos despues de la resurreccion de jesus) carta pastoral de consuelo y aliento recuerdo misionero epistolar instruccion escatologica no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿describe 1 tesalonicenses 4:16–17 una salida definitiva de la tierra («rapto» antes de una tribulacion) o la escolta triunfal del rey que regresa? ¿como interpretar la severa invectiva contra «los judios que mataron al senor jesus» en 2:14–16?"
+    },
+    {
+      "tipo": "libro",
+      "id": "1-timoteo",
+      "href": "/biblia/libros/1-timoteo",
+      "title": "1 Timoteo",
+      "sub": "Nuevo Testamento · 1 Ti",
+      "desc": "Primera de las tres Epístolas Pastorales en seis capítulos, dirigida por Pablo a su joven colaborador Timoteo encargado de la iglesia de Éfeso: combate especulaciones genealógicas falsas, organiza la oración pública por toda autoridad, fija los requisitos morales de obispos/ancianos y diáconos, protege la «sana doctrina» y orienta el cuidado de viudas, ancianos y ricos en piedad genuina. Canónica; completa en NTV y Codex Sinaiticus.",
+      "tags": [
+        "epístola pastoral eclesiástica (mandata principis)",
+        "catálogo de virtudes y ministerios",
+        "polémica contra falsos maestros"
+      ],
+      "fold": "1 timoteo 1 ti nt nuevo testamento primera de las tres epistolas pastorales en seis capitulos, dirigida por pablo a su joven colaborador timoteo encargado de la iglesia de efeso: combate especulaciones genealogicas falsas, organiza la oracion publica por toda autoridad, fija los requisitos morales de obispos/ancianos y diaconos, protege la «sana doctrina» y orienta el cuidado de viudas, ancianos y ricos en piedad genuina. canonica; completa en ntv y codex sinaiticus. griego koine helenistico de lexico etico-civico elevado («piedad», «sana ensenanza», «epifania») pablo tras partir hacia macedonia dejando a timoteo en efeso para frenar doctrinas extranas (1:3) debatida: por pablo hacia 63–65 d. c. tras ser liberado en roma, o escrita en su nombre por un discipulo suyo c. 90–110 d. c. epistola pastoral eclesiastica (mandata principis) catalogo de virtudes y ministerios polemica contra falsos maestros no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue redactada 1 timoteo personalmente por pablo o por un discipulo posterior dentro de su tradicion? ¿es 1 timoteo 2:11–15 una regla eclesial permanente o una medida coyuntural frente a ensenanzas enganosas en efeso?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-corintios",
+      "href": "/biblia/libros/2-corintios",
+      "title": "2 Corintios",
+      "sub": "Nuevo Testamento · 2 Co",
+      "desc": "La carta más personal, emotiva y autobiográfica de Pablo en trece capítulos (escrita hacia 55–56 d. C. desde Macedonia): consuelo en la aflicción extrema, gloria del ministerio del Espíritu frente a la letra que mata («llevamos este tesoro en vasos de barro», 4:7), llamado a la reconciliación (cap. 5), exhortación a la colecta generosa (8–9) y defensa irónica de sus debilidades apostólicas y el «aguijón en la carne» (10–13). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta de reconciliación apostólica",
+        "apología autobiográfica irónica («discurso del necio»)",
+        "exhortación a la colecta"
+      ],
+      "fold": "2 corintios 2 co nt nuevo testamento la carta mas personal, emotiva y autobiografica de pablo en trece capitulos (escrita hacia 55–56 d. c. desde macedonia): consuelo en la afliccion extrema, gloria del ministerio del espiritu frente a la letra que mata («llevamos este tesoro en vasos de barro», 4:7), llamado a la reconciliacion (cap. 5), exhortacion a la colecta generosa (8–9) y defensa ironica de sus debilidades apostolicas y el «aguijon en la carne» (10–13). canonica; completa en ntv y codex. griego koine vehemente, abrupto y apasionado que pasa de la ternura al sarcasmo dolido tras abandonar efeso hacia troas y macedonia esperando noticias de tito desde corinto (c. 55–56 d. c.) otono de c. 55 o 56 d. c. desde macedonia carta de reconciliacion apostolica apologia autobiografica ironica («discurso del necio») exhortacion a la colecta no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue escrita 2 corintios como una sola carta o compilada a partir de varias cartas paulinas a corinto? ¿que era el «aguijon en la carne» que atormentaba a pablo en 12:7?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-cronicas",
+      "href": "/biblia/libros/2-cronicas",
+      "title": "2 Crónicas",
+      "sub": "Antiguo Testamento · 2 Cr",
+      "desc": "Segunda parte de Crónicas en treinta y seis capítulos: el reinado unificado de Salomón y la consagración del Templo (caps. 1–9), seguido exclusivamente por la historia de los reyes de Judá hasta el incendio babilónico y el decreto de regreso de Ciro (caps. 10–36). Protocanónico; ausente del Sinaiticus.",
+      "tags": [
+        "crónica teológica de Judá",
+        "oración y reforma litúrgica",
+        "compendio histórico sapiencial"
+      ],
+      "fold": "2 cronicas 2 cr at antiguo testamento segunda parte de cronicas en treinta y seis capitulos: el reinado unificado de salomon y la consagracion del templo (caps. 1–9), seguido exclusivamente por la historia de los reyes de juda hasta el incendio babilonico y el decreto de regreso de ciro (caps. 10–36). protocanonico; ausente del sinaiticus. hebreo biblico tardio (posexilico) desde salomon (c. 970 a. c.) hasta el edicto persa de ciro en 538 a. c. periodo persa tardio o inicios del helenistico (c. siglo iv a. c.) en esta web, 2 cronicas se lee completo en la ntv (36 capitulos, 822 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. cronica teologica de juda oracion y reforma liturgica compendio historico sapiencial tanaj (ketuvim — libro final de la biblia hebrea, unido a 1 cronicas) antiguo testamento (protocanonico; 2 paralipomenos) antiguo testamento (2 paraleipomenon) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como interpretar la doctrina de retribucion inmediata propia de cronicas frente al sufrimiento del justo en job o josias? ¿posee base historica el arrepentimiento y cautiverio de manases en babilonia (2 cr 33:11–13), ausente en 2 reyes 21?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-esdras",
+      "href": "/biblia/libros/2-esdras",
+      "title": "2 Esdras",
+      "sub": "Antiguo Testamento · 2 Esd",
+      "desc": "Bajo el título «2 Esdras» (Esdras B de la Septuaginta), el Codex Sinaiticus transmite en un solo libro continuo la versión griega de los libros canónicos de Esdras y Nehemías. En el códice se perdieron los primeros ocho capítulos y el comienzo del noveno: el texto conservado empieza en 9:9 (Esdras 9:9) y llega hasta el capítulo 23 (Nehemías 13). No debe confundirse con el apocalipsis judío llamado «2 Esdras» o «4 Esdras» en los apócrifos latinos e ingleses.",
+      "tags": [
+        "narración histórica",
+        "memorias en primera persona",
+        "listas genealógicas y documentos oficiales",
+        "oración penitencial"
+      ],
+      "fold": "2 esdras 2 esd at antiguo testamento bajo el titulo «2 esdras» (esdras b de la septuaginta), el codex sinaiticus transmite en un solo libro continuo la version griega de los libros canonicos de esdras y nehemias. en el codice se perdieron los primeros ocho capitulos y el comienzo del noveno: el texto conservado empieza en 9:9 (esdras 9:9) y llega hasta el capitulo 23 (nehemias 13). no debe confundirse con el apocalipsis judio llamado «2 esdras» o «4 esdras» en los apocrifos latinos e ingleses. griego de la septuaginta (traduccion muy literal desde el texto hebreo y arameo de esdras y nehemias) epoca persa: desde el edicto de ciro (538 a. c.) hasta las misiones de esdras y nehemias en jerusalen durante el siglo v a. c. original hebreo-arameo en epoca persa tardia o helenistica temprana (s. iv–iii a. c.); traduccion griega (esdras b) hacia el s. ii–i a. c. el «2 esdras» del codex sinaiticus (esdras b) es el esdras–nehemias griego, no el 2 esdras apocaliptico (4 ezra). sus capitulos 1–10 corresponden a esdras 1–10 (el codice solo conserva desde 9:9) y sus capitulos 11–23 corresponden a nehemias 1–13. como la ntv ya publica esdras y nehemias por separado, este libro no se traduce de nuevo en la columna de traduccion de trabajo. narracion historica memorias en primera persona listas genealogicas y documentos oficiales oracion penitencial canonico en su original hebreo-arameo como un solo libro («esdras») dentro de los escritos (ketuvim) canonico, dividido en dos libros desde la vulgata: esdras (1 esdras) y nehemias (2 esdras) canonico en las iglesias ortodoxas como «2 esdras» (esdras b), junto a 1 esdras (esdras a) canonico, dividido en los libros de esdras y nehemias genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿por que el titulo «2 esdras» designa obras tan diferentes segun la tradicion? ¿formaban esdras–nehemias y los libros de las cronicas una sola obra del mismo autor?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-juan",
+      "href": "/biblia/libros/2-juan",
+      "title": "2 Juan",
+      "sub": "Nuevo Testamento · 2 Jn",
+      "desc": "Carta brevísima de trece versículos enviada por «el Anciano» a una iglesia local personificada como «la señora elegida y sus hijos»: celebra a quienes caminan en la verdad, resume el mandato recibido «desde el principio» en amarse unos a otros guardando sus mandamientos y advierte tajantemente contra maestros itinerantes que no confiesan a Jesucristo venido en carne para no acogerlos ni apoyarlos en su obra falsa. Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta apostólica breve en papiro",
+        "exhortación de discernimiento comunitario",
+        "advertencia sobre hospitalidad"
+      ],
+      "fold": "2 juan 2 jn nt nuevo testamento carta brevisima de trece versiculos enviada por «el anciano» a una iglesia local personificada como «la senora elegida y sus hijos»: celebra a quienes caminan en la verdad, resume el mandato recibido «desde el principio» en amarse unos a otros guardando sus mandamientos y advierte tajantemente contra maestros itinerantes que no confiesan a jesucristo venido en carne para no acogerlos ni apoyarlos en su obra falsa. canonica; completa en ntv y codex. griego koine epistolar directo identico al estilo y vocabulario de 1 y 3 juan el «anciano» proyecta visitar personalmente pronto la congregacion vecina tras enviar este breve aviso (v. 12) finales del siglo i d. c. (c. 90–100 d. c., en el entorno de asia menor / efeso) carta apostolica breve en papiro exhortacion de discernimiento comunitario advertencia sobre hospitalidad no incluido nuevo testamento (consolidada en el canon en el s. iv tras vacilacion inicial en algunas regiones) nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿a quien designa «la senora elegida y sus hijos» en el versiculo 1? ¿quien es «el anciano» (ho presbyteros) que firma 2 y 3 juan?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-pedro",
+      "href": "/biblia/libros/2-pedro",
+      "title": "2 Pedro",
+      "sub": "Nuevo Testamento · 2 P",
+      "desc": "Carta testamentaria breve en tres capítulos bajo el nombre de Simón Pedro ante la inminencia de su muerte y la amenaza de falsos maestros que niegan el regreso de Cristo («¿Dónde está la promesa de su venida?»): recuerda la gloria presenciada en la Transfiguración como fundamento de la «palabra profética más segura», advierte contra burladores citando casi todo Judas (cap. 2), explica la demora divina como paciencia («un día es como mil años») y espera «cielos nuevos y tierra nueva». Canónica; completa en NTV y Codex.",
+      "tags": [
+        "testamento apostólico de despedida",
+        "polémica contra escépticos y falsos doctores",
+        "instrucción escatológica"
+      ],
+      "fold": "2 pedro 2 p nt nuevo testamento carta testamentaria breve en tres capitulos bajo el nombre de simon pedro ante la inminencia de su muerte y la amenaza de falsos maestros que niegan el regreso de cristo («¿donde esta la promesa de su venida?»): recuerda la gloria presenciada en la transfiguracion como fundamento de la «palabra profetica mas segura», advierte contra burladores citando casi todo judas (cap. 2), explica la demora divina como paciencia («un dia es como mil anos») y espera «cielos nuevos y tierra nueva». canonica; completa en ntv y codex. griego koine retorico de sabor helenistico elevado y vocablos poco frecuentes en el resto del nt simon pedro en la ancianidad consciente de que «pronto debo dejar mi morada» segun cristo le anuncio (1:14, eco de jn 21:18) debatida: testamento real de pedro (c. 64–68 d. c.) o el escrito mas tardio del nuevo testamento (c. 100–130 d. c.) bajo la escuela petrina testamento apostolico de despedida polemica contra escepticos y falsos doctores instruccion escatologica no incluido nuevo testamento (confirmada tras debate antiguo en los sinodos del s. iv) nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue escrita directamente por simon pedro (via un secretario) o es un testamento seudonimo tardio? ¿significa 2 pedro 3:10–13 aniquilacion total del universo fisico o purificacion renovadora de esta creacion?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-reyes",
+      "href": "/biblia/libros/2-reyes",
+      "title": "2 Reyes",
+      "sub": "Antiguo Testamento · 2 R",
+      "desc": "Continuación de Reyes en veinticinco capítulos: ascensión de Elías al cielo y milagros de Eliseo, caída del Reino del Norte ante Asiria (722 a. C.), reforma centralizadora de Ezequías y Josías en Judá, destrucción de Jerusalén por Babilonia (586 a. C.) y amnistía de Joaquín en el exilio. Protocanónico; ausente del Sinaiticus.",
+      "tags": [
+        "anales dinásticos paralelos",
+        "ciclo profético de Eliseo",
+        "crónica trágica del exilio"
+      ],
+      "fold": "2 reyes 2 r at antiguo testamento continuacion de reyes en veinticinco capitulos: ascension de elias al cielo y milagros de eliseo, caida del reino del norte ante asiria (722 a. c.), reforma centralizadora de ezequias y josias en juda, destruccion de jerusalen por babilonia (586 a. c.) y amnistia de joaquin en el exilio. protocanonico; ausente del sinaiticus. hebreo biblico deuteronomista con extractos de cronicas reales desde el reinado de ocozias y la ascension de elias (c. 853 a. c.) hasta la liberacion de joaquin en babilonia (561 a. c.) edicion final en babilonia o palestina poco despues del 561 a. c. (ultima fecha fechada del libro en 25:27) en esta web, 2 reyes esta completo en la ntv (25 capitulos, 719 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. anales dinasticos paralelos ciclo profetico de eliseo cronica tragica del exilio tanaj (nevi’im — unido a 1 reyes) antiguo testamento (protocanonico; tradicionalmente 4 reyes en vulgata) antiguo testamento (4 basileion / 4 reinos) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿concluye 2 reyes 25:27–30 con esperanza mesianica o con resignacion ante el fin del estado? ¿como se relacionan el relato biblico del cerco de senaquerib (2 r 18–19) y el prisma asirio de taylor?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-samuel",
+      "href": "/biblia/libros/2-samuel",
+      "title": "2 Samuel",
+      "sub": "Antiguo Testamento · 2 S",
+      "desc": "Segunda parte del libro de Samuel en veinticuatro capítulos: reinado completo de David en Hebrón y en la conquistada Jerusalén, traslado del arca, el pacto dinástico perpetuo de 2 Samuel 7, el pecado con Betsabé y Urías, la rebelión de Absalón y cuatro capítulos apéndice. Protocanónico; ausente en el Sinaiticus.",
+      "tags": [
+        "historia de sucesión dinástica",
+        "oráculo mesiánico-dinástico",
+        "poesía elegíaca y salmo real"
+      ],
+      "fold": "2 samuel 2 s at antiguo testamento segunda parte del libro de samuel en veinticuatro capitulos: reinado completo de david en hebron y en la conquistada jerusalen, traslado del arca, el pacto dinastico perpetuo de 2 samuel 7, el pecado con betsabe y urias, la rebelion de absalon y cuatro capitulos apendice. protocanonico; ausente en el sinaiticus. hebreo biblico narrativo clasico (incluye poesia cortesana y elegias tempranas) cuarenta anos del reinado de david (c. 1010–970 a. c.) nucleo cortesano antiguo («historia de la sucesion al trono», caps. 9–20) editado en la historia deuteronomista en esta web, 2 samuel se lee completo en la ntv (24 capitulos, 695 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. historia de sucesion dinastica oraculo mesianico-dinastico poesia elegiaca y salmo real tanaj (nevi’im — unido a 1 samuel) antiguo testamento (protocanonico; tradicionalmente 2 reyes en vulgata) antiguo testamento (2 basileion / 2 reinos) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue compuesta la «historia de la sucesion» (2 s 9–20; 1 r 1–2) como apologia salomonica o como critica velada a la corona? ¿como valora la arqueologia la escala del reino unificado de david y salomon?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-tesalonicenses",
+      "href": "/biblia/libros/2-tesalonicenses",
+      "title": "2 Tesalonicenses",
+      "sub": "Nuevo Testamento · 2 Ts",
+      "desc": "Breve epístola de tres capítulos dirigida a Tesalónica poco después de la primera ante rumores alarmistas o una supuesta carta apócrifa que afirmaba que «el Día del Señor ya ha llegado»: confirma la justicia final en la venida de Cristo, expone señales previas con la misteriosa figura del «hombre de pecado» y «lo que lo detiene» (cap. 2), y exhorta a no vivir ociosos por fanatismo apocalíptico («si alguno no quiere trabajar, tampoco coma», 3:10). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta escatológica correctiva",
+        "instrucción apocalíptica simbólica",
+        "exhortación disciplinaria laboral"
+      ],
+      "fold": "2 tesalonicenses 2 ts nt nuevo testamento breve epistola de tres capitulos dirigida a tesalonica poco despues de la primera ante rumores alarmistas o una supuesta carta apocrifa que afirmaba que «el dia del senor ya ha llegado»: confirma la justicia final en la venida de cristo, expone senales previas con la misteriosa figura del «hombre de pecado» y «lo que lo detiene» (cap. 2), y exhorta a no vivir ociosos por fanatismo apocaliptico («si alguno no quiere trabajar, tampoco coma», 3:10). canonica; completa en ntv y codex. griego koine solemne y liturgico en el cap. 1, enigmatico y condensado en el cap. 2 permaneciendo juntos aun pablo, silvano y timoteo en corinto ante noticias persistentes de tesalonica (1:1) debatida: poco despues de 1 tesalonicenses en c. 51–52 d. c., o carta deutero-paulina de fines del siglo i d. c. carta escatologica correctiva instruccion apocaliptica simbolica exhortacion disciplinaria laboral no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿a quien o que designa to katechon / ho katechon («lo que / quien lo detiene») en 2:6–7? ¿escribio pablo 2 tesalonicenses poco despues de 1 tesalonicenses o es obra posterior?"
+    },
+    {
+      "tipo": "libro",
+      "id": "2-timoteo",
+      "href": "/biblia/libros/2-timoteo",
+      "title": "2 Timoteo",
+      "sub": "Nuevo Testamento · 2 Ti",
+      "desc": "Última carta atribuida a Pablo en cuatro capítulos, escrita desde una fría prisión romana en espera inminente de ejecución hacia su discípulo Timoteo: llamado ardiente a avivar el don recibido sin vergüenza de las cadenas, fidelidad a la enseñanza transmitida «a hombres fieles», certeza sobre la Escritura inspirada por Dios (3:16–17), encargo solemne de predicar «a tiempo y fuera de tiempo» y despedida inmortal («He peleado la buena batalla, he acabado la carrera, he guardado la fe», 4:7). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "testamento espiritual de despedida",
+        "epístola de exhortación martirial",
+        "instrucción sobre la transmisión apostólica"
+      ],
+      "fold": "2 timoteo 2 ti nt nuevo testamento ultima carta atribuida a pablo en cuatro capitulos, escrita desde una fria prision romana en espera inminente de ejecucion hacia su discipulo timoteo: llamado ardiente a avivar el don recibido sin verguenza de las cadenas, fidelidad a la ensenanza transmitida «a hombres fieles», certeza sobre la escritura inspirada por dios (3:16–17), encargo solemne de predicar «a tiempo y fuera de tiempo» y despedida inmortal («he peleado la buena batalla, he acabado la carrera, he guardado la fe», 4:7). canonica; completa en ntv y codex. griego koine conmovedor y vivido de tono intimo, mas proximo al pablo de cartas anteriores que 1 ti/tito pablo encadenado como malhechor en roma tras su primera defensa («ya estoy a punto de ser sacrificado», 4:6, 16) antes del invierno debatida: poco antes de la muerte de pablo bajo neron (c. 66–67 d. c.), o escrita en su nombre por un admirador en las decadas siguientes (c. 80–100 d. c.) testamento espiritual de despedida epistola de exhortacion martirial instruccion sobre la transmision apostolica no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como se interpreta gramaticalmente pasa graphe theopneustos en 2 timoteo 3:16? ¿escribio pablo personalmente 2 timoteo antes de morir o conserva un nucleo paulino editado tras su martirio?"
+    },
+    {
+      "tipo": "libro",
+      "id": "3-juan",
+      "href": "/biblia/libros/3-juan",
+      "title": "3 Juan",
+      "sub": "Nuevo Testamento · 3 Jn",
+      "desc": "El libro más breve del Nuevo Testamento en extensión de palabras (apenas quince versículos en un capítulo): billete personal del Anciano dirigido a su amado amigo Gayo elogiando su hospitalidad generosa con predicadores itinerantes, denunciando el autoritarismo egoísta del dirigente local Diótrefes que expulsa hermanos y rechaza la carta enviada a la iglesia, y recomendando al fiel Demetrio. Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta personal de elogio y recomendación",
+        "conflicto de autoridad local en iglesia doméstica",
+        "billete en papiro"
+      ],
+      "fold": "3 juan 3 jn nt nuevo testamento el libro mas breve del nuevo testamento en extension de palabras (apenas quince versiculos en un capitulo): billete personal del anciano dirigido a su amado amigo gayo elogiando su hospitalidad generosa con predicadores itinerantes, denunciando el autoritarismo egoista del dirigente local diotrefes que expulsa hermanos y rechaza la carta enviada a la iglesia, y recomendando al fiel demetrio. canonica; completa en ntv y codex. griego koine epistolar coloquial identico al molde grecorromano de correspondencia privada inmediatamente contemporanea o poco posterior a 2 juan ante conflicto jurisdiccional en una iglesia vecina finales del siglo i d. c. (c. 90–100 d. c., en asia menor) carta personal de elogio y recomendacion conflicto de autoridad local en iglesia domestica billete en papiro no incluido nuevo testamento (integrada junto a 2 juan en el canon del siglo iv) nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿que motivaba la ruptura abierta de diotrefes frente al anciano? ¿se escribieron 2 y 3 juan para la misma congregacion o para iglesias diferentes?"
+    },
+    {
+      "tipo": "libro",
+      "id": "4-macabeos",
+      "href": "/biblia/libros/4-macabeos",
+      "title": "4 Macabeos",
+      "sub": "Antiguo Testamento · 4 Mac",
+      "desc": "Discurso filosófico y encomio en dieciocho capítulos sobre el dominio de la razón piadosa sobre las pasiones, ilustrado con el martirio de Eleazar y los siete hermanos con su madre. Conservado en el Codex Sinaiticus como apéndice griego; fuera del canon occidental y judío.",
+      "tags": [
+        "discurso filosófico",
+        "diatriba helenística",
+        "encomio martirial"
+      ],
+      "fold": "4 macabeos 4 mac at antiguo testamento discurso filosofico y encomio en dieciocho capitulos sobre el dominio de la razon piadosa sobre las pasiones, ilustrado con el martirio de eleazar y los siete hermanos con su madre. conservado en el codex sinaiticus como apendice griego; fuera del canon occidental y judio. griego koine retorico original, influido por la filosofia estoica y platonica el martirio de eleazar y los siete hermanos bajo antioco iv epifanes (c. 167 a. c.) siglo i d. c. (entre c. 20 d. c. y la revuelta judia o comienzos del s. ii) en esta web, 4 macabeos se lee completo en el griego del codex sinaiticus (18 capitulos, 479 versiculos). la ntv no lo incluye y permanece fuera del canon hebreo, catolico y protestante. discurso filosofico diatriba helenistica encomio martirial no incluido no incluido en el canon (trento 1546 excluye 3 y 4 macabeos) apendice en las biblias griegas (no figura entre los anagignoskomena canonicos centrales) no incluido; tratado como escrito pseudoepigrafico o apocrifo judio helenistico genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue compuesto originalmente como discurso conmemorativo leido ante una sinagoga o como tratado literario de lectura privada? ¿pertenece al periodo anterior al 70 d. c. o a la generacion posterior a la caida del templo?"
+    },
+    {
+      "tipo": "libro",
+      "id": "abdias",
+      "href": "/biblia/libros/abdias",
+      "title": "Abdías",
+      "sub": "Antiguo Testamento · Abd",
+      "desc": "El libro más breve del Antiguo Testamento en un único capítulo de veintiún versículos: oráculo de juicio contra Edom por su soberbia montañosa y su complicidad cruel tras la caída de Jerusalén, culminando en el anuncio del Día del Señor sobre todas las naciones y el reino definitivo de Yahvé en Sión. Protocanónico; completo en NTV y Codex Sinaiticus.",
+      "tags": [
+        "oráculo contra las naciones",
+        "profecía del Día del Señor",
+        "elegía teopolítica breve"
+      ],
+      "fold": "abdias abd at antiguo testamento el libro mas breve del antiguo testamento en un unico capitulo de veintiun versiculos: oraculo de juicio contra edom por su soberbia montanosa y su complicidad cruel tras la caida de jerusalen, culminando en el anuncio del dia del senor sobre todas las naciones y el reino definitivo de yahve en sion. protocanonico; completo en ntv y codex sinaiticus. hebreo profetico denso y elocuente en paralelismos breves saqueo de jerusalen y traicion de los edomitas capturando a los fugitivos judios siglo vi a. c. (poco despues de la caida de jerusalen ante babilonia en 586 a. c.) oraculo contra las naciones profecia del dia del senor elegia teopolitica breve tanaj (nevi’im — cuarto de los doce) antiguo testamento (protocanonico) antiguo testamento (abdiou, quinto en orden griego) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿quien cito a quien entre abdias 1–9 y jeremias 49:7–16? ¿alude el v. 11 al saqueo babilonico de 586 a. c. o a una invasion anterior bajo joram (2 cr 21)?"
+    },
+    {
+      "tipo": "libro",
+      "id": "amos",
+      "href": "/biblia/libros/amos",
+      "title": "Amós",
+      "sub": "Antiguo Testamento · Am",
+      "desc": "Nueve capítulos del profeta ganadero de Tecoa (Judá) enviado al santuario real norteño de Betel hacia el 760 a. C.: oráculos en cadena contra seis naciones vecinas antes de acusar la opresión económica y el culto hipócrita de Israel, cinco visiones de juicio y promesa final de restauración de la casa de David. Protocanónico; ausente del Sinaiticus conservado.",
+      "tags": [
+        "oráculo profético de justicia social",
+        "oráculos contra las naciones",
+        "relato de cinco visiones simbólicas"
+      ],
+      "fold": "amos am at antiguo testamento nueve capitulos del profeta ganadero de tecoa (juda) enviado al santuario real norteno de betel hacia el 760 a. c.: oraculos en cadena contra seis naciones vecinas antes de acusar la opresion economica y el culto hipocrita de israel, cinco visiones de juicio y promesa final de restauracion de la casa de david. protocanonico; ausente del sinaiticus conservado. hebreo biblico vigoroso, rustico y punzante de gran maestria retorica reinados contemporaneos de uzias en juda y jeroboam ii en israel (c. 760–750 a. c.), dos anos antes del terremoto predicacion original de amos en el s. viii a. c. recogida pronto por escrito con actualizacion davidica final posible durante o tras el exilio en esta web, amos esta completo en la ntv (9 capitulos, 146 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. oraculo profetico de justicia social oraculos contra las naciones relato de cinco visiones simbolicas tanaj (nevi’im — tercero de los doce) antiguo testamento (protocanonico) antiguo testamento (segundo tras oseas en orden griego) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿pertenecen los versiculos de restauracion final (9:11–15) al propio amos o a un editor posexilico de juda? ¿condena amos 5:21–25 el culto sacrificial en si mismo o su divorcio de la justicia?"
+    },
+    {
+      "tipo": "libro",
+      "id": "apocalipsis",
+      "href": "/biblia/libros/apocalipsis",
+      "title": "Apocalipsis",
+      "sub": "Nuevo Testamento · Ap",
+      "desc": "Último libro de la Biblia cristiana en veintidós capítulos: revelación profética y apocalíptica recibida por Juan en la isla de Patmos para consolar y despertar a siete iglesias de Asia Menor bajo presión imperial. Despliega el culto celeste en torno al Cordero inmolado, tres ciclos septenarios de sellos, trompetas y copas, la victoria cósmica sobre el dragón, la bestia y Babilonia, y la visión culminante de los nuevos cielos, la Nueva Jerusalén y «¡Ven, Señor Jesús!». Canónico; completo en NTV y Codex Sinaiticus.",
+      "tags": [
+        "apocalipsis profético-epistolar",
+        "liturgia celeste en visiones simbólicas",
+        "profecía crítica contra el imperio"
+      ],
+      "fold": "apocalipsis ap nt nuevo testamento ultimo libro de la biblia cristiana en veintidos capitulos: revelacion profetica y apocaliptica recibida por juan en la isla de patmos para consolar y despertar a siete iglesias de asia menor bajo presion imperial. despliega el culto celeste en torno al cordero inmolado, tres ciclos septenarios de sellos, trompetas y copas, la victoria cosmica sobre el dragon, la bestia y babilonia, y la vision culminante de los nuevos cielos, la nueva jerusalen y «¡ven, senor jesus!». canonico; completo en ntv y codex sinaiticus. griego koine expresivo cargado de semitismos voluntarios y gramatica solemne arcaizante (solecismos profeticos) juan desterrado en la isla de patmos en el mar egeo «por causa de la palabra de dios y el testimonio de jesus» (1:9) tradicion temprana dominante hacia el final del reinado de domiciano (c. 95–96 d. c.), frente a hipotesis minoritaria de epoca neroniana-pre-70 (c. 68–69 d. c.) apocalipsis profetico-epistolar liturgia celeste en visiones simbolicas profecia critica contra el imperio no incluido nuevo testamento nuevo testamento (ultimo en recibirse en el leccionario liturgico oriental, aunque canonico) nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿cual es el sentido de los «mil anos» de apocalipsis 20:1–10 en la escatologia cristiana? ¿como deben leerse los simbolos de apocalipsis 4–19: preterista (siglo i), historicista, futurista o idealista?"
+    },
+    {
+      "tipo": "libro",
+      "id": "cantares",
+      "href": "/biblia/libros/cantares",
+      "title": "Cantar de los Cantares",
+      "sub": "Antiguo Testamento · Cnt",
+      "desc": "Poema lírico de amor mutuo en ocho capítulos entre la Sulamita y su amado entre viñas, huertos y calles de Jerusalén. Célebre por celebrar el deseo y la fidelidad humana sin mención explícita de Dios (salvo la «llama de Yah» en 8:6), y leído a la vez alegóricamente sobre el amor entre Dios e Israel o Cristo y la Iglesia. Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "poesía lírica amorosa",
+        "ciclo de cantos nupciales",
+        "alegoría mística en la recepción"
+      ],
+      "fold": "cantar de los cantares cnt at antiguo testamento poema lirico de amor mutuo en ocho capitulos entre la sulamita y su amado entre vinas, huertos y calles de jerusalen. celebre por celebrar el deseo y la fidelidad humana sin mencion explicita de dios (salvo la «llama de yah» en 8:6), y leido a la vez alegoricamente sobre el amor entre dios e israel o cristo y la iglesia. protocanonico; completo en ntv y codex. hebreo poetico exuberante y sensorial con terminos dialectales nortenos y prestamos persas y posiblemente griegos (3:9) cantos atribuidos en el titulo al rey salomon (1:1) debatida: tradiciones poeticas antiguas recopiladas o editadas en el periodo persa o helenistico (siglos v–iii a. c.) poesia lirica amorosa ciclo de cantos nupciales alegoria mistica en la recepcion tanaj (ketuvim — primero o principal de las cinco meguilot, leido en pesaj) antiguo testamento (protocanonico) antiguo testamento (asma asmaton) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como debe interpretarse primariamente el cantar: literal-nupcial, dramatico o alegorico? ¿es un ciclo suelto de poemas amorosos o un drama con trama entre la sulamita, un pastor y salomon?"
+    },
+    {
+      "tipo": "libro",
+      "id": "colosenses",
+      "href": "/biblia/libros/colosenses",
+      "title": "Colosenses",
+      "sub": "Nuevo Testamento · Col",
+      "desc": "Carta en cuatro capítulos desde cautiverio a la iglesia de Colosas en el valle del Lico (fundada por Epafras sin que Pablo la hubiera visitado personalmente): exalta la supremacía absoluta de Cristo como «imagen del Dios invisible» y cabeza creadora y reconciliadora del universo (1:15–20) frente a filosofías ascéticas, culto a ángeles y rudimentos cósmicos, y exhorta a buscar las cosas de arriba revistiéndose de compasión y gratitud. Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta apostólica cristológica",
+        "himno cósmico (1:15–20)",
+        "polémica contra sincretismo y código doméstico"
+      ],
+      "fold": "colosenses col nt nuevo testamento carta en cuatro capitulos desde cautiverio a la iglesia de colosas en el valle del lico (fundada por epafras sin que pablo la hubiera visitado personalmente): exalta la supremacia absoluta de cristo como «imagen del dios invisible» y cabeza creadora y reconciliadora del universo (1:15–20) frente a filosofias asceticas, culto a angeles y rudimentos cosmicos, y exhorta a buscar las cosas de arriba revistiendose de compasion y gratitud. canonica; completa en ntv y codex. griego koine denso, rico en vocabulario filosofico-cosmico («plenitud / pleroma», «misterio», «sabiduria») escrita por pablo y timoteo desde prision junto con aristarco, marcos, lucas, demas y epafras, enviada por tiquico y onesimo (cap. 4) debatida: por pablo en cautiverio romano (c. 60–62 d. c.) o redactada poco despues por un colaborador cercano (c. 65–75 d. c.) carta apostolica cristologica himno cosmico (1:15–20) polemica contra sincretismo y codigo domestico no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue redactada por el propio pablo (o con timoteo) en prision o por un discipulo suyo tras su muerte? ¿como entender el titulo «primogenito (prototokos) de toda creacion» en 1:15?"
+    },
+    {
+      "tipo": "libro",
+      "id": "daniel",
+      "href": "/biblia/libros/daniel",
+      "title": "Daniel",
+      "sub": "Antiguo Testamento · Dn",
+      "desc": "Libro bilingüe (hebreo y arameo) en doce capítulos: seis relatos de fidelidad en la corte babilónica y persa (caps. 1–6: dieta, estatua imperial, horno ardiente, escritura en la pared y foso de los leones) y cuatro grandes visiones apocalípticas sobre la sucesión de imperios, «uno como hijo de hombre», las setenta semanas y la resurrección final (caps. 7–12). Protocanónico en sus doce capítulos; sus tres adiciones griegas son deuterocanónicas.",
+      "tags": [
+        "relato cortesano de diáspora",
+        "literatura apocalíptica simbólica",
+        "visión escatológica de la historia"
+      ],
+      "fold": "daniel dn at antiguo testamento libro bilingue (hebreo y arameo) en doce capitulos: seis relatos de fidelidad en la corte babilonica y persa (caps. 1–6: dieta, estatua imperial, horno ardiente, escritura en la pared y foso de los leones) y cuatro grandes visiones apocalipticas sobre la sucesion de imperios, «uno como hijo de hombre», las setenta semanas y la resurreccion final (caps. 7–12). protocanonico en sus doce capitulos; sus tres adiciones griegas son deuterocanonicas. trilingue segun tradicion: hebreo (1:1–2:4a y caps. 8–12), arameo (2:4b–7:28) y griego en adiciones deuterocanonicas desde el ano 605 a. c. en babilonia hasta el ano tercero de ciro el persa (c. 536 a. c.) debatida: redaccion exilica del siglo vi a. c. frente a compilacion definitiva bajo la crisis de antioco iv epifanes (c. 167–164 a. c.) en esta web, daniel se lee en los 12 capitulos hebreo-arameos de la ntv (357 versiculos); no sobrevive en los folios conservados del codex sinaiticus. los pasajes griegos adicionales de susana, bel y el dragon y el cantico de los tres jovenes pertenecen a la tradicion deuterocanonica. relato cortesano de diaspora literatura apocaliptica simbolica vision escatologica de la historia tanaj (ketuvim — ubicado entre los escritos y no entre los profetas en la biblia hebrea) antiguo testamento (protocanonico caps. 1–12; deuterocanonico en oracion de azarias / cantico, susana y bel) antiguo testamento (incluye las secciones griegas) antiguo testamento (solo los 12 capitulos hebreo-arameos; las adiciones griegas se editan entre los apocrifos) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue escrito en el siglo vi a. c. en babilonia o compilado en su forma final hacia el 165 a. c. en judea? ¿como interpretar el «uno como hijo de hombre» (7:13) y las «setenta semanas» (9:24–27)?"
+    },
+    {
+      "tipo": "libro",
+      "id": "deuteronomio",
+      "href": "/biblia/libros/deuteronomio",
+      "title": "Deuteronomio",
+      "sub": "Antiguo Testamento · Dt",
+      "desc": "Quinto y último libro de la Torá en treinta y cuatro capítulos: tres grandes discursos de despedida de Moisés en Moab antes de cruzar el Jordán, repetición del Decálogo, el Shemá, un código centralizado de leyes y el cántico y muerte de Moisés. Protocanónico; en el Codex Sinaiticus sobreviven cinco capítulos.",
+      "tags": [
+        "discursos parenéticos de despedida",
+        "tratado de alianza (vasallaje)",
+        "código jurídico e himno final"
+      ],
+      "fold": "deuteronomio dt at antiguo testamento quinto y ultimo libro de la tora en treinta y cuatro capitulos: tres grandes discursos de despedida de moises en moab antes de cruzar el jordan, repeticion del decalogo, el shema, un codigo centralizado de leyes y el cantico y muerte de moises. protocanonico; en el codex sinaiticus sobreviven cinco capitulos. hebreo biblico retorico-deuteronomico clasico; griego septuagintal (deuteronomion) undecimo mes del ano cuarenta tras el exodo, en las llanuras de moab frente a jerico discursos mosaicos segun la tradicion; redaccion del nucleo juridico vinculada por la critica a la reforma de josias (622 a. c.) y adicion exilica en esta web, deuteronomio esta completo en la ntv (34 capitulos, 959 versiculos). del codex sinaiticus solo sobreviven cinco capitulos (3–4 y 28–30; 87 versiculos). discursos pareneticos de despedida tratado de alianza (vasallaje) codigo juridico e himno final tanaj (tora — devarim, «palabras») antiguo testamento (protocanonico) antiguo testamento antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿era deuteronomio el «libro de la ley» descubierto en el templo bajo josias en 622 a. c.? ¿como entender el mandato de destruccion completa (jerem) de las poblaciones cananeas en dt 7 y 20?"
+    },
+    {
+      "tipo": "libro",
+      "id": "eclesiastes",
+      "href": "/biblia/libros/eclesiastes",
+      "title": "Eclesiastés",
+      "sub": "Antiguo Testamento · Ec",
+      "desc": "Doce capítulos de reflexión filosófica y existencial atribuidos literariamente a Qohélet («el Predicador», hijo de David en Jerusalén) sobre lo fugaz y vano (hevel) del afán humano bajo el sol, los límites de la sabiduría, la brevedad de la vida y el llamado final a temer a Dios y gozar humildemente cada día. Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "diatriba sapiencial reflexiva",
+        "confesión filosófica en primera persona",
+        "antología de proverbios breves"
+      ],
+      "fold": "eclesiastes ec at antiguo testamento doce capitulos de reflexion filosofica y existencial atribuidos literariamente a qohelet («el predicador», hijo de david en jerusalen) sobre lo fugaz y vano (hevel) del afan humano bajo el sol, los limites de la sabiduria, la brevedad de la vida y el llamado final a temer a dios y gozar humildemente cada dia. protocanonico; completo en ntv y codex. hebreo biblico tardio con marcados arameismos y giros proto-misnaicos (y dos prestamos persas) reflexiones en boca de un rey sabio («hijo de david») en jerusalen evocando la gloria salomonica periodo persa tardio o helenistico temprano (siglos iv–iii a. c.) diatriba sapiencial reflexiva confesion filosofica en primera persona antologia de proverbios breves tanaj (ketuvim — quinta o cuarta de las cinco meguilot, leida en sukot) antiguo testamento (protocanonico) antiguo testamento (ekklesiastes) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue el epilogo de 12:9–14 escrito por el propio autor o anadido por editores posteriores para suavizar el libro? ¿es eclesiastes un libro pesimista o una apologia realista de la alegria bajo la finitud?"
+    },
+    {
+      "tipo": "libro",
+      "id": "efesios",
+      "href": "/biblia/libros/efesios",
+      "title": "Efesios",
+      "sub": "Nuevo Testamento · Ef",
+      "desc": "Carta circular en seis capítulos sobre el propósito eterno de Dios de reunir en Cristo todas las cosas del cielo y la tierra: abre con una eulogía trinitaria (1:3–14), proclama la salvación por gracia y la reconciliación de judíos y gentiles (caps. 2–3), exhorta a la unidad eclesial (4), ilumina la vida familiar bajo el amor de Cristo (5) y concluye con la armadura espiritual (6). Canónica; completa en NTV y Codex con omisión en 1:1.",
+      "tags": [
+        "carta litúrgico-circular",
+        "eulogía y oración apostólica",
+        "código doméstico y exhortación espiritual"
+      ],
+      "fold": "efesios ef nt nuevo testamento carta circular en seis capitulos sobre el proposito eterno de dios de reunir en cristo todas las cosas del cielo y la tierra: abre con una eulogia trinitaria (1:3–14), proclama la salvacion por gracia y la reconciliacion de judios y gentiles (caps. 2–3), exhorta a la unidad eclesial (4), ilumina la vida familiar bajo el amor de cristo (5) y concluye con la armadura espiritual (6). canonica; completa en ntv y codex con omision en 1:1. griego koine majestuoso y solemne de frases subordinadas larguisimas (eulogia de 1:3–14 en una sola oracion griega) escrita por pablo «prisionero de cristo jesus» (3:1; 4:1) enviada por medio de tiquico (6:21) debatida: durante el cautiverio de pablo en roma hacia 60–62 d. c., o redaccion paulina tardia por discipulos en asia menor hacia 80–90 d. c. detalle manuscrito notable en efesios 1:1: tanto el codex sinaiticus (num. 41, 6 capitulos, 155 versiculos) en su escritura original (*), como el papiro p46 y el codex vaticanus, omiten las palabras «en efeso» («a los santos que estan [en efeso] y fieles en cristo jesus»), apoyando que circulo originalmente como carta enciclica antes de recibir el titulo asociado a efeso. carta liturgico-circular eulogia y oracion apostolica codigo domestico y exhortacion espiritual no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue compuesta efesios directamente por pablo hacia 60–62 d. c. o por un discipulo de su escuela decadas despues? ¿por que falta «en efeso» en 1:1 en los manuscritos mas antiguos?"
+    },
+    {
+      "tipo": "libro",
+      "id": "esdras",
+      "href": "/biblia/libros/esdras",
+      "title": "Esdras",
+      "sub": "Antiguo Testamento · Esd",
+      "desc": "Diez capítulos sobre el regreso del exilio babilónico bajo el decreto de Ciro, la reconstrucción del altar y del Segundo Templo pese a la oposición regional (caps. 1–6) y la misión posterior de Esdras el escriba para restaurar la observancia de la Ley y disolver matrimonios mixtos (caps. 7–10). Protocanónico; en el Codex Sinaiticus corresponde al inicio de 2 Esdras.",
+      "tags": [
+        "compilación documental oficial",
+        "memorias en primera persona",
+        "crónica de restauración cultual"
+      ],
+      "fold": "esdras esd at antiguo testamento diez capitulos sobre el regreso del exilio babilonico bajo el decreto de ciro, la reconstruccion del altar y del segundo templo pese a la oposicion regional (caps. 1–6) y la mision posterior de esdras el escriba para restaurar la observancia de la ley y disolver matrimonios mixtos (caps. 7–10). protocanonico; en el codex sinaiticus corresponde al inicio de 2 esdras. bilingue: hebreo biblico tardio y amplias secciones en arameo imperial (4:8–6:18; 7:12–26) desde el edicto de ciro (538 a. c.) y la dedicacion del templo (515 a. c.) hasta la mision de esdras (c. 458 o 398 a. c.) siglos iv–iii a. c., a partir de documentos oficiales persas y memorias del siglo v a. c. en esta web, esdras esta completo en la ntv (10 capitulos, 280 versiculos). el codex sinaiticus unia esdras y nehemias bajo el libro de 2 esdras, pero solo conserva desde 2 esdras 9:9 (correspondiente a capitulos finales de esdras en adelante); consulte la ficha de 2 esdras para el texto griego. compilacion documental oficial memorias en primera persona cronica de restauracion cultual tanaj (ketuvim — unido tradicionalmente a nehemias como un solo libro) antiguo testamento (protocanonico; 1 esdras en vulgata) antiguo testamento (incluido en 2 esdras lxx caps. 1–10) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿llego esdras antes que nehemias (458 a. c., ano 7 de artajerjes i) o despues (398 a. c., bajo artajerjes ii)? ¿como evaluar historicamente los edictos reales persas redactados en favor del templo?"
+    },
+    {
+      "tipo": "libro",
+      "id": "ester",
+      "href": "/biblia/libros/ester",
+      "title": "Ester",
+      "sub": "Antiguo Testamento · Est",
+      "desc": "Relato cortesano en diez capítulos ubicado en Susa bajo el rey persa Asuero (Jerjes I): la reina judía Ester y su primo Mardoqueo desbaratan mediante audacia e inversión de suertes el decreto genocida de Amán, dando origen a la fiesta de Purim. Protocanónico en sus diez capítulos hebreos; los capítulos adicionales griegos son deuterocanónicos.",
+      "tags": [
+        "novela cortesana de diáspora",
+        "relato etiológico festivo (Purim)",
+        "literatura de inversión irónica"
+      ],
+      "fold": "ester est at antiguo testamento relato cortesano en diez capitulos ubicado en susa bajo el rey persa asuero (jerjes i): la reina judia ester y su primo mardoqueo desbaratan mediante audacia e inversion de suertes el decreto genocida de aman, dando origen a la fiesta de purim. protocanonico en sus diez capitulos hebreos; los capitulos adicionales griegos son deuterocanonicos. hebreo biblico tardio (texto breve protocanonico); seis extensas adiciones en griego septuagintal reinado de asuero (jerjes i, 486–465 a. c.) en la capital elamita de susa periodo persa tardio o helenistico (siglos iv–ii a. c.); traducciones/adiciones griegas hacia c. 114–78 a. c. en esta web, la ntv ofrece los 10 capitulos hebreos (167 versiculos), mientras el codex sinaiticus transmite la forma griega de la septuaginta en 10 capitulos (164 versiculos en su particion, incorporando las amplias secciones griegas adicionales de suenos, decretos y oraciones que cambian el contenido por capitulo). novela cortesana de diaspora relato etiologico festivo (purim) literatura de inversion ironica tanaj (ketuvim — la «meguila» por excelencia entre las cinco meguilot, leida en purim; solo el texto hebreo sin las adiciones griegas) antiguo testamento (protocanonico caps. 1–10:3; deuterocanonico en las seis secciones griegas a–f) antiguo testamento (version griega con las secciones adicionales) antiguo testamento (solo los 10 capitulos hebreos; las adiciones griegas se editan entre los apocrifos) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿por que omite por completo el nombre de dios el libro hebreo de ester? ¿como se relacionan el texto masoretico y las adiciones griegas de la septuaginta?"
+    },
+    {
+      "tipo": "libro",
+      "id": "exodo",
+      "href": "/biblia/libros/exodo",
+      "title": "Éxodo",
+      "sub": "Antiguo Testamento · Éx",
+      "desc": "Segundo libro de la Torá en cuarenta capítulos: la opresión en Egipto, el llamado de Moisés, las plagas, la Pascua, el paso del mar, la alianza y el Decálogo en el Sinaí y la construcción del Tabernáculo. Protocanónico en todos los cánones; ausente de los folios conservados del Codex Sinaiticus.",
+      "tags": [
+        "epopeya de liberación",
+        "código jurídico-cúltico",
+        "itinerario e himno litúrgico"
+      ],
+      "fold": "exodo ex at antiguo testamento segundo libro de la tora en cuarenta capitulos: la opresion en egipto, el llamado de moises, las plagas, la pascua, el paso del mar, la alianza y el decalogo en el sinai y la construccion del tabernaculo. protocanonico en todos los canones; ausente de los folios conservados del codex sinaiticus. hebreo biblico clasico (con prestamo egipcio en nombres y terminos cultuales) salida de egipto y estancia de un ano junto al monte sinai (discutida tradicionalmente en torno al s. xv o s. xiii a. c.) redaccion mosaica tradicional frente a sintesis progresiva de tradiciones completada en el periodo exilico-posexilico en esta web, exodo se lee completo en la ntv (40 capitulos, 1.213 versiculos). no sobreviven folios de este libro en el codex sinaiticus conservado. epopeya de liberacion codigo juridico-cultico itinerario e himno liturgico tanaj (tora — šemot, segundo libro de la ley) antiguo testamento (protocanonico) antiguo testamento antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como interpretar historicamente las cifras y el marco cronologico del exodo? ¿que version representa la forma mas temprana de exodo 35–40?"
+    },
+    {
+      "tipo": "libro",
+      "id": "ezequiel",
+      "href": "/biblia/libros/ezequiel",
+      "title": "Ezequiel",
+      "sub": "Antiguo Testamento · Ez",
+      "desc": "Cuarenta y ocho capítulos del sacerdote y profeta deportado Ezequiel en Babilonia (593–571 a. C.): visiones cósmicas del trono carroza (merkabá), signos teatrales del asedio de Jerusalén, huida de la gloria de Yahvé del Templo profanado, promesa del corazón nuevo y el valle de huesos secos (36–37) y visión arquitectónica del Templo restaurado (40–48). Protocanónico; ausente del Sinaiticus.",
+      "tags": [
+        "visión extática y apocalíptica temprana",
+        "acción profética simbólica",
+        "programa arquitectónico-cultual"
+      ],
+      "fold": "ezequiel ez at antiguo testamento cuarenta y ocho capitulos del sacerdote y profeta deportado ezequiel en babilonia (593–571 a. c.): visiones cosmicas del trono carroza (merkaba), signos teatrales del asedio de jerusalen, huida de la gloria de yahve del templo profanado, promesa del corazon nuevo y el valle de huesos secos (36–37) y vision arquitectonica del templo restaurado (40–48). protocanonico; ausente del sinaiticus. hebreo biblico sacerdotal tardio de epoca exilica con vocabulario tecnico acadio-babilonico fechas precisas desde el quinto ano del exilio de joaquin (593 a. c.) hasta el ano veintisiete (571 a. c.) junto al canal quebar en babilonia oraculos y visiones de ezequiel en babilonia editados por el o su escuela durante el siglo vi a. c. en esta web, ezequiel esta completo en la ntv (48 capitulos, 1.273 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. vision extatica y apocaliptica temprana accion profetica simbolica programa arquitectonico-cultual tanaj (nevi’im — profetas posteriores, tercero tras isaias y jeremias) antiguo testamento (protocanonico) antiguo testamento (iezekiel) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿refleja el orden y brevedad del papiro 967 en los caps. 36–39 una etapa textual mas temprana que el masoretico? ¿describe ezequiel 40–48 un proyecto historico de templo para el retorno persa o una vision simbolica escatologica?"
+    },
+    {
+      "tipo": "libro",
+      "id": "filemon",
+      "href": "/biblia/libros/filemon",
+      "title": "Filemón",
+      "sub": "Nuevo Testamento · Flm",
+      "desc": "Billete personal de Pablo de apenas veinticinco versículos dirigido a Filemón (cristiano acomodado en cuya casa se reúne la iglesia, probablemente en Colosas) intercediendo por Onésimo, esclavo fugitivo que ha llegado a la fe junto a Pablo en prisión y regresa ahora «no ya como esclavo, sino… como hermano amado» tanto en la carne como en el Señor. Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta personal de intercesión (commendatio)",
+        "diplomacia pastoral retórica",
+        "petición fraterna epistolar"
+      ],
+      "fold": "filemon flm nt nuevo testamento billete personal de pablo de apenas veinticinco versiculos dirigido a filemon (cristiano acomodado en cuya casa se reune la iglesia, probablemente en colosas) intercediendo por onesimo, esclavo fugitivo que ha llegado a la fe junto a pablo en prision y regresa ahora «no ya como esclavo, sino… como hermano amado» tanto en la carne como en el senor. canonica; completa en ntv y codex. griego koine sumamente delicado, ironico y afectuoso (juegos de palabras con onesimo = «util») pablo preso como «anciano y prisionero de cristo jesus» (v. 9) junto a timoteo, epafras, marcos, aristarco, demas y lucas simultanea a colosenses (c. 60–62 d. c. desde roma, o c. 54–55 d. c. desde efeso) carta personal de intercesion (commendatio) diplomacia pastoral retorica peticion fraterna epistolar no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿pide pablo en filemon explicitamente la libertad juridica (manumision) de onesimo o solo trato fraterno benigno? ¿escribio pablo filemon desde roma (c. 61 d. c.) o desde efeso (c. 54–55 d. c.)?"
+    },
+    {
+      "tipo": "libro",
+      "id": "filipenses",
+      "href": "/biblia/libros/filipenses",
+      "title": "Filipenses",
+      "sub": "Nuevo Testamento · Fil",
+      "desc": "Carta afectuosa de Pablo y Timoteo en cuatro capítulos desde prisión hacia la primera comunidad fundada en Europa (Filipos de Macedonia): gratitud por su generosa ayuda económica, serenidad ante la posible muerte o liberación («Para mí el vivir es Cristo y el morir ganancia»), el gran himno cristológico de la kénosis o anonadamiento humilde (2:5–11), renuncia a todo mérito propio por conocer a Cristo (cap. 3) y llamado reiterado al gozo y la paz («¡Regocíjense siempre en el Señor!», 4:4). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "carta de amistad y gratitud",
+        "himno cristológico temprano (2:6–11)",
+        "exhortación al gozo en la prueba"
+      ],
+      "fold": "filipenses fil nt nuevo testamento carta afectuosa de pablo y timoteo en cuatro capitulos desde prision hacia la primera comunidad fundada en europa (filipos de macedonia): gratitud por su generosa ayuda economica, serenidad ante la posible muerte o liberacion («para mi el vivir es cristo y el morir ganancia»), el gran himno cristologico de la kenosis o anonadamiento humilde (2:5–11), renuncia a todo merito propio por conocer a cristo (cap. 3) y llamado reiterado al gozo y la paz («¡regocijense siempre en el senor!», 4:4). canonica; completa en ntv y codex. griego koine calido, emotivo y cercano al genero epistolar helenistico de amistad y consuelo pablo preso enfrentando sentencia imperial («todo el pretorio», 1:13; «los de la casa del cesar», 4:22) acompanado por timoteo y epafrodito debatida: prision en roma (c. 61–62 d. c.) o cautiverio previo en efeso (c. 54–55 d. c.) / cesarea (58–60 d. c.) carta de amistad y gratitud himno cristologico temprano (2:6–11) exhortacion al gozo en la prueba no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿desde donde escribio pablo filipenses: roma (61–62 d. c.), cesarea (58–60) o efeso (54–55)? ¿es 2:6–11 un himno cristiano anterior citado por pablo o compuesto por el propio apostol?"
+    },
+    {
+      "tipo": "libro",
+      "id": "galatas",
+      "href": "/biblia/libros/galatas",
+      "title": "Gálatas",
+      "sub": "Nuevo Testamento · Gá",
+      "desc": "Carta fogosa de Pablo en seis capítulos ante la crisis de las iglesias de Galacia persuadidas de adoptar la circuncisión y la Ley mosaica para completar la fe en Cristo: defensa autobiográfica de su apostolado recibido por revelación (1–2), exposición ardiente de la justificación por la fe en la promesa de Abraham frente a la tutela temporal de la Ley (3–4) y libertad que obra por el amor y da el fruto del Espíritu (5–6). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "epístola polémica apologética",
+        "argumentación escriturística rabínico-alegórica",
+        "exhortación ética de la libertad"
+      ],
+      "fold": "galatas ga nt nuevo testamento carta fogosa de pablo en seis capitulos ante la crisis de las iglesias de galacia persuadidas de adoptar la circuncision y la ley mosaica para completar la fe en cristo: defensa autobiografica de su apostolado recibido por revelacion (1–2), exposicion ardiente de la justificacion por la fe en la promesa de abraham frente a la tutela temporal de la ley (3–4) y libertad que obra por el amor y da el fruto del espiritu (5–6). canonica; completa en ntv y codex. griego koine electrizante, urgente y sin formula inicial de accion de gracias poco despues del encuentro de pablo con los pilares de jerusalen y su choque publico con pedro en antioquia (2:1–14) debatida entre c. 48–49 d. c. (galacia del sur, antes de hch 15) o c. 54–55 d. c. (galacia del norte, cercana a romanos) epistola polemica apologetica argumentacion escrituristica rabinico-alegorica exhortacion etica de la libertad no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿se dirige la epistola a las iglesias de la provincia romana meridional (iconio, listra, derbe) o a la region etnica de galacia del norte? ¿como interpretar la expresion pistis christou en 2:16 y 3:22: «fe en cristo» o «fidelidad de cristo»?"
+    },
+    {
+      "tipo": "libro",
+      "id": "genesis",
+      "href": "/biblia/libros/genesis",
+      "title": "Génesis",
+      "sub": "Antiguo Testamento · Gn",
+      "desc": "Primer libro de la Torá y de toda la Biblia: cincuenta capítulos que enlazan la historia primordial de la creación, la caída, el diluvio y Babel (caps. 1–11) con los relatos patriarcales de Abraham, Isaac, Jacob y José hasta el descenso a Egipto (caps. 12–50). Protocanónico en todos los cánones bíblicos.",
+      "tags": [
+        "narrativa teológica primordial",
+        "ciclo patriarcal",
+        "genealogía toledot y poesía antigua"
+      ],
+      "fold": "genesis gn at antiguo testamento primer libro de la tora y de toda la biblia: cincuenta capitulos que enlazan la historia primordial de la creacion, la caida, el diluvio y babel (caps. 1–11) con los relatos patriarcales de abraham, isaac, jacob y jose hasta el descenso a egipto (caps. 12–50). protocanonico en todos los canones biblicos. hebreo biblico clasico; traduccion temprana al griego alejandrino (lxx, s. iii a. c.) desde los origenes cosmicos hasta la muerte de jose en egipto (segunda mitad del ii milenio a. c. en el marco narrativo) debatida: redaccion mosaica tradicional frente a compilacion de tradiciones escritas entre los siglos x y v a. c. en esta web, genesis esta completo en la ntv (50 capitulos, 1.533 versiculos). del codex sinaiticus solo sobreviven fragmentos de los capitulos 21–24 (73 versiculos) tras la perdida casi total de los cuadernos iniciales del pentateuco. narrativa teologica primordial ciclo patriarcal genealogia toledot y poesia antigua tanaj (tora — berešit, primero de los cinco libros de moises) antiguo testamento (protocanonico) antiguo testamento (primero del pentateuco griego) antiguo testamento (primero del pentateuco) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como se formo el texto actual del libro de genesis? ¿que genero literario debe aplicarse a los capitulos 1–11?"
+    },
+    {
+      "tipo": "libro",
+      "id": "habacuc",
+      "href": "/biblia/libros/habacuc",
+      "title": "Habacuc",
+      "sub": "Antiguo Testamento · Hab",
+      "desc": "Tres capítulos de diálogo franco entre el profeta Habacuc y Dios ante la impunidad interna en Judá y el ascenso violento de los caldeos (babilonios) hacia 605 a. C.: cinco ayes contra la rapacidad imperial, la respuesta central de que «el justo vivirá por su fe/fidelidad» (2:4) y un salmo teofánico conclusivo de confianza incondicional aunque fallen higuera y rebaño (3:17–19). Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "diálogo profético de queja (teodicea)",
+        "serie de cinco «¡Ayes!»",
+        "oración teofánica litúrgica (cap. 3)"
+      ],
+      "fold": "habacuc hab at antiguo testamento tres capitulos de dialogo franco entre el profeta habacuc y dios ante la impunidad interna en juda y el ascenso violento de los caldeos (babilonios) hacia 605 a. c.: cinco ayes contra la rapacidad imperial, la respuesta central de que «el justo vivira por su fe/fidelidad» (2:4) y un salmo teofanico conclusivo de confianza incondicional aunque fallen higuera y rebano (3:17–19). protocanonico; completo en ntv y codex. hebreo poetico clasico de tono elevado (con indicaciones musicales liturgicas sela / shigionot en cap. 3) finales del siglo vii a. c. (c. 608–598 a. c., entre el ocaso asirio y la irrupcion de babilonia bajo nabucodonosor) finales de la monarquia de juda (c. 605 a. c.), integrando o recogiendo tradiciones salmodicas en el cap. 3 dialogo profetico de queja (teodicea) serie de cinco «¡ayes!» oracion teofanica liturgica (cap. 3) tanaj (nevi’im — octavo de los doce) antiguo testamento (protocanonico) antiguo testamento (ambakoum, octavo en orden griego) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿quienes son los «impios» iniciales de 1:2–4: opresores internos en juda, asirios o babilonios? ¿como se relaciona el hebreo emuna («fidelidad/fe») de 2:4 con su interpretacion paulina?"
+    },
+    {
+      "tipo": "libro",
+      "id": "hageo",
+      "href": "/biblia/libros/hageo",
+      "title": "Hageo",
+      "sub": "Antiguo Testamento · Hag",
+      "desc": "Breve libro profético posexílico en dos capítulos que conserva cuatro oráculos fechados con precisión entre agosto y diciembre del año 520 a. C. (año segundo de Darío I): llama al gobernador Zorobabel, al sumo sacerdote Josué y al resto repatriado a reanudar la reconstrucción del Templo paralizada durante dieciséis años, prometiendo la presencia actual del Espíritu y una gloria futura mayor que la de Salomón. Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "oráculos fechados en prosa narrativa",
+        "diálogo de pureza sacerdotal",
+        "promesa dinástica y cultual"
+      ],
+      "fold": "hageo hag at antiguo testamento breve libro profetico posexilico en dos capitulos que conserva cuatro oraculos fechados con precision entre agosto y diciembre del ano 520 a. c. (ano segundo de dario i): llama al gobernador zorobabel, al sumo sacerdote josue y al resto repatriado a reanudar la reconstruccion del templo paralizada durante dieciseis anos, prometiendo la presencia actual del espiritu y una gloria futura mayor que la de salomon. protocanonico; completo en ntv y codex. hebreo posexilico tardio directo y sobrio en tercera persona exactamente de agosto a diciembre del ano segundo de dario i (520 a. c., citado cuatro veces con mes y dia) poco despues del 520 a. c. en jerusalen (entre 520 y 515 a. c., antes o junto a la dedicacion del segundo templo) oraculos fechados en prosa narrativa dialogo de pureza sacerdotal promesa dinastica y cultual tanaj (nevi’im — decimo de los doce) antiguo testamento (protocanonico; aggeo en vulgata) antiguo testamento (aggaios) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿a que alude «vendra el deseado / las riquezas de todas las naciones» en hageo 2:7? ¿que ocurrio con la promesa sobre zorobabel como «anillo de sellar» (2:23)?"
+    },
+    {
+      "tipo": "libro",
+      "id": "hebreos",
+      "href": "/biblia/libros/hebreos",
+      "title": "Hebreos",
+      "sub": "Nuevo Testamento · He",
+      "desc": "Sermón teológico escrito enviado como epístola en trece capítulos por un autor culto anónimo del siglo I: proclama la supremacía definitiva del Hijo sobre profetas, ángeles, Moisés y el sacerdocio levítico según el orden de Melquisedec, interpretando la muerte de Cristo como el sacrificio único que abre el Lugar Santísimo celestial y culmina en la nube de testigos de la fe (cap. 11). Canónica; colocada tras 2 Tesalonicenses en el Codex Sinaiticus.",
+      "tags": [
+        "homilía exhortativa escrita («palabra de exhortación», 13:22)",
+        "exégesis tipológica del Antiguo Testamento",
+        "protréptico ante la apostasía"
+      ],
+      "fold": "hebreos he nt nuevo testamento sermon teologico escrito enviado como epistola en trece capitulos por un autor culto anonimo del siglo i: proclama la supremacia definitiva del hijo sobre profetas, angeles, moises y el sacerdocio levitico segun el orden de melquisedec, interpretando la muerte de cristo como el sacrificio unico que abre el lugar santisimo celestial y culmina en la nube de testigos de la fe (cap. 11). canonica; colocada tras 2 tesalonicenses en el codex sinaiticus. el griego koine mas elegante, ritmico, periodico y retoricamente culto de todo el nuevo testamento comunidad cristiana de segunda generacion (2:3) que ya sufrio prisiones y despojo de bienes (10:32–34) y encara tentacion de abandono debatida: principalmente antes de la caida del templo en 70 d. c. (c. 64–69 d. c.), o antes de 95 d. c. (citada ya por clemente de roma) ubicacion distinta en los manuscritos: mientras las biblias modernas situan hebreos detras de filemon antes de santiago, el codex sinaiticus (num. 46) la coloca en medio del corpus paulino inmediatamente despues de 2 tesalonicenses y antes de 1 timoteo, en consonancia con la antigua tradicion oriental alejandrina. homilia exhortativa escrita («palabra de exhortacion», 13:22) exegesis tipologica del antiguo testamento protreptico ante la apostasia no incluido nuevo testamento (confirmada por la tradicion alejandrina y sinodos occidentales del s. iv) nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿quien redacto la epistola a los hebreos? ¿que ensena hebreos 6:4–6 y 10:26 sobre la imposibilidad de un «segundo arrepentimiento»?"
+    },
+    {
+      "tipo": "libro",
+      "id": "hechos",
+      "href": "/biblia/libros/hechos",
+      "title": "Hechos",
+      "sub": "Nuevo Testamento · Hch",
+      "desc": "Segundo tomo de la obra de Lucas en veintiocho capítulos y puente histórico único entre los Evangelios y las epístolas: narra la Ascensión, Pentecostés, la vida de la iglesia primitiva en Jerusalén, el martirio de Esteban, la apertura a Samaria y al centurión Cornelio, el Concilio de Jerusalén (cap. 15) y los tres viajes misioneros de Pablo hasta llegar encadenado a Roma predicando sin estorbo. Canónico; completo en NTV y Codex.",
+      "tags": [
+        "historiografía apostólica lucana",
+        "discursos misioneros y apologéticos",
+        "crónica de viajes («secciones nosotros»)"
+      ],
+      "fold": "hechos hch nt nuevo testamento segundo tomo de la obra de lucas en veintiocho capitulos y puente historico unico entre los evangelios y las epistolas: narra la ascension, pentecostes, la vida de la iglesia primitiva en jerusalen, el martirio de esteban, la apertura a samaria y al centurion cornelio, el concilio de jerusalen (cap. 15) y los tres viajes misioneros de pablo hasta llegar encadenado a roma predicando sin estorbo. canonico; completo en ntv y codex. griego koine versatil, desde tono biblico semitico en judea hasta estilo helenistico culto en los viajes maritimos (cap. 27) desde la ascension en jerusalen (c. 30–33 d. c.) hasta los dos anos de arresto domiciliario de pablo en roma (c. 60–62 d. c.) debatida: hacia 62–64 d. c. (al cierre inmediato del relato) o hacia 80–90 d. c. en paralelo con el evangelio de lucas historiografia apostolica lucana discursos misioneros y apologeticos cronica de viajes («secciones nosotros») no incluido nuevo testamento nuevo testamento (praxis apostolon) nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como armonizar el relato de hechos 15 sobre el concilio de jerusalen con galatas 2? ¿por que existe una diferencia tan marcada entre el texto alejandrino (codex sinaiticus) y el occidental (codex bezae) en hechos?"
+    },
+    {
+      "tipo": "libro",
+      "id": "isaias",
+      "href": "/biblia/libros/isaias",
+      "title": "Isaías",
+      "sub": "Antiguo Testamento · Is",
+      "desc": "Libro profético monumental de sesenta y seis capítulos asociado al profeta Isaías de Jerusalén (siglo VIII a. C.): oráculos de juicio y promesa davídica del Emmanuel ante las crisis asirias (1–39), cantos de consolación en el regreso de Babilonia y los cuatro cánticos del Siervo sufriente (40–55), y anuncios escatológicos de Sión renovada y nuevos cielos y tierra (56–66). Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "oráculo profético en poesía elevada",
+        "narrativa histórica palaciega (36–39)",
+        "cántico del Siervo y apocalipsis cósmico"
+      ],
+      "fold": "isaias is at antiguo testamento libro profetico monumental de sesenta y seis capitulos asociado al profeta isaias de jerusalen (siglo viii a. c.): oraculos de juicio y promesa davidica del emmanuel ante las crisis asirias (1–39), cantos de consolacion en el regreso de babilonia y los cuatro canticos del siervo sufriente (40–55), y anuncios escatologicos de sion renovada y nuevos cielos y tierra (56–66). protocanonico; completo en ntv y codex. hebreo profetico de altisima elocuencia poetica; traduccion griega interpretativa libre en la septuaginta ministerio de isaias hijo de amoz bajo uzias, jotam, acaz y ezequias (c. 740–700 a. c.); caps. 40–66 miran hacia ciro y el retorno de babilonia (s. vi a. c.) debatida: unidad autoral isaanica tradicional frente a formacion en dos o tres grandes etapas profeticas (s. viii al vi–v a. c.) oraculo profetico en poesia elevada narrativa historica palaciega (36–39) cantico del siervo y apocalipsis cosmico tanaj (nevi’im — profetas posteriores, primero de los tres profetas mayores) antiguo testamento (protocanonico) antiguo testamento (esaias) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿procede el libro entero de isaias del siglo viii a. c. o de multiples autores de epocas distintas integrados en su nombre? ¿quien es el siervo sufriente de isaias 52:13–53:12 en su contexto original?"
+    },
+    {
+      "tipo": "libro",
+      "id": "jeremias",
+      "href": "/biblia/libros/jeremias",
+      "title": "Jeremías",
+      "sub": "Antiguo Testamento · Jer",
+      "desc": "Cincuenta y dos capítulos de oráculos, confesiones personales, acciones simbólicas y relatos biográficos del profeta Jeremías de Anatot durante las últimas cuatro décadas del Reino de Judá hasta la caída de Jerusalén (586 a. C.) y la huida a Egipto. Protocanónico; completo en NTV y Codex Sinaiticus con profunda diferencia textual y de orden entre ambos.",
+      "tags": [
+        "oráculo profético de juicio",
+        "confesión lírica personal",
+        "biografía profética en prosa (Baruc)"
+      ],
+      "fold": "jeremias jer at antiguo testamento cincuenta y dos capitulos de oraculos, confesiones personales, acciones simbolicas y relatos biograficos del profeta jeremias de anatot durante las ultimas cuatro decadas del reino de juda hasta la caida de jerusalen (586 a. c.) y la huida a egipto. protocanonico; completo en ntv y codex sinaiticus con profunda diferencia textual y de orden entre ambos. hebreo biblico clasico y prosa deuteronomica; el griego antiguo refleja una edicion hebrea mas breve y reordenada desde el ano trece de josias (627 a. c.) hasta despues de la destruccion de jerusalen (586 a. c.) y amnistia de 561 a. c. nucleo dictado a baruc en 605–604 a. c. (cap. 36) ampliado durante y poco despues del exilio en el siglo vi a. c. atencion textual y de orden: tanto la ntv (52 capitulos, 1.364 versiculos) como el codex sinaiticus (52 capitulos, 1.297 versiculos) tienen completo el libro, pero el texto griego del codex es aproximadamente una septima parte mas breve que el hebreo masoretico y coloca los oraculos contra las naciones en mitad del libro (desde 25:14) en vez del final (caps. 46–51 en ntv), desplazando capitulos y versiculos. oraculo profetico de juicio confesion lirica personal biografia profetica en prosa (baruc) tanaj (nevi’im — profetas posteriores, segundo libro tras isaias) antiguo testamento (protocanonico) antiguo testamento (ieremias) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿que edicion representa la forma mas antigua del libro: la corta de la septuaginta/4qjerb o la larga del texto masoretico? ¿como se relacionan los discursos en prosa deuteronomista (caps. 7, 11, etc.) con el profeta historico?"
+    },
+    {
+      "tipo": "libro",
+      "id": "job",
+      "href": "/biblia/libros/job",
+      "title": "Job",
+      "sub": "Antiguo Testamento · Job",
+      "desc": "Poema sapiencial y relato en prosa de cuarenta y dos capítulos sobre el sufrimiento inocente del justo Job, sus largos debates filosófico-teológicos con tres amigos y Eliú y la revelación final de Dios desde el torbellino sobre los misterios de la creación. Protocanónico; completo en NTV y Codex Sinaiticus.",
+      "tags": [
+        "diálogo sapiencial poético",
+        "teodicea y lamento",
+        "relato marco en prosa arcaica"
+      ],
+      "fold": "job job at antiguo testamento poema sapiencial y relato en prosa de cuarenta y dos capitulos sobre el sufrimiento inocente del justo job, sus largos debates filosofico-teologicos con tres amigos y eliu y la revelacion final de dios desde el torbellino sobre los misterios de la creacion. protocanonico; completo en ntv y codex sinaiticus. hebreo poetico de notable densidad lexica y arameismos o sabor dialectal edomita/transjordano epoca patriarcal estilizada en la tierra extranjera de uz (norte de arabia o edom) debatida: entre el siglo vii a. c. y el periodo exilico o persa temprano (siglos vi–iv a. c.) dialogo sapiencial poetico teodicea y lamento relato marco en prosa arcaica tanaj (ketuvim — entre los tres libros poeticos sifre emet con salmos y proverbios) antiguo testamento (protocanonico) antiguo testamento antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿que significa exactamente la celebre exclamacion de job 19:25–26 sobre su «redentor» (goel)? ¿formaron los discursos de eliu (caps. 32–37) parte del diseno original o fueron insertados por un lector critico posterior?"
+    },
+    {
+      "tipo": "libro",
+      "id": "joel",
+      "href": "/biblia/libros/joel",
+      "title": "Joel",
+      "sub": "Antiguo Testamento · Jl",
+      "desc": "Segundo de los Doce en la Biblia hebrea (cuarto en la Septuaginta): tres capítulos en la NTV (cuatro en el Codex Sinaiticus) sobre una devastadora plaga de langostas y sequía en Judá convertida en signo del Día inminente del Señor, llamado al ayuno del corazón, derramamiento universal del Espíritu y juicio final en el valle de Josafat. Protocanónico; el capítulo 4 griego tiene traducción de trabajo en Crux.",
+      "tags": [
+        "oráculo litúrgico de súplica nacional",
+        "profecía del Día del Señor",
+        "anuncio escatológico-apocalíptico"
+      ],
+      "fold": "joel jl at antiguo testamento segundo de los doce en la biblia hebrea (cuarto en la septuaginta): tres capitulos en la ntv (cuatro en el codex sinaiticus) sobre una devastadora plaga de langostas y sequia en juda convertida en signo del dia inminente del senor, llamado al ayuno del corazon, derramamiento universal del espiritu y juicio final en el valle de josafat. protocanonico; el capitulo 4 griego tiene traduccion de trabajo en crux. hebreo biblico lirico y fluido con numerosas citas e inversiones de otros profetas crisis agricola y liturgica en juda tras una plaga sucesiva de cuatro etapas de langostas muy debatida: monarquia temprana (siglo ix a. c.) frente a periodo posexilico persa (siglos v–iv a. c.) atencion a la numeracion: ambos testigos suman exactamente 73 versiculos, pero la ntv sigue la division inglesa-masoretica en 3 capitulos (unificando joel 2:28–32), mientras el codex sinaiticus (num. 17) y la septuaginta lo dividen en 4 capitulos: joel 3 lxx corresponde a ntv 2:28–32, y joel 4 lxx (con traduccion de trabajo en crux) equivale a ntv capitulo 3. oraculo liturgico de suplica nacional profecia del dia del senor anuncio escatologico-apocaliptico tanaj (nevi’im — segundo del libro de los doce; dividido en 4 capitulos en ediciones modernas o 3 segun tradicion) antiguo testamento (protocanonico; dividido en 3 o 4 capitulos) antiguo testamento (cuarto de los doce en la septuaginta, 4 capitulos) antiguo testamento (3 capitulos en ntv y biblias inglesas/espanolas clasicas) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿cuando se compuso el libro de joel: en epoca monarquica preexilica o en el periodo persa posexilico? ¿las langostas de joel 1–2 designan una plaga real de insectos, un ejercito metaforico o ambos planos progresivamente?"
+    },
+    {
+      "tipo": "libro",
+      "id": "jonas",
+      "href": "/biblia/libros/jonas",
+      "title": "Jonás",
+      "sub": "Antiguo Testamento · Jon",
+      "desc": "Relato narrativo único entre los Profetas Menores en cuatro capítulos: el profeta hebreo Jonás huye en barco hacia Tarsis para evitar predicar a Nínive, es arrojado al mar y rescatado por un gran pez tras orar un salmo desde el abismo (cap. 2), proclama un mensaje mínimo que convierte a toda la capital asiria y discute con Dios bajo una planta sobre su compasión hacia paganos y animales. Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "parábola narrativa profética",
+        "cuento didáctico irónico",
+        "salmo de acción de gracias inserto (cap. 2)"
+      ],
+      "fold": "jonas jon at antiguo testamento relato narrativo unico entre los profetas menores en cuatro capitulos: el profeta hebreo jonas huye en barco hacia tarsis para evitar predicar a ninive, es arrojado al mar y rescatado por un gran pez tras orar un salmo desde el abismo (cap. 2), proclama un mensaje minimo que convierte a toda la capital asiria y discute con dios bajo una planta sobre su compasion hacia paganos y animales. protocanonico; completo en ntv y codex. hebreo biblico narrativo con varios arameismos posexilicos alude al profeta del s. viii a. c. «jonas hijo de amitai» mencionado en 2 reyes 14:25 bajo jeroboam ii periodo persa tardio o helenistico temprano (siglos v–iii a. c.) parabola narrativa profetica cuento didactico ironico salmo de accion de gracias inserto (cap. 2) tanaj (nevi’im — quinto de los doce; haftarah central de yom kipur) antiguo testamento (protocanonico) antiguo testamento (ionas, sexto de los doce) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿debe leerse jonas como cronica historica literal o como parabola profetica didactica? ¿es el salmo de jonas 2:2–9 una pieza original del narrador o un himno previo insertado despues?"
+    },
+    {
+      "tipo": "libro",
+      "id": "josue",
+      "href": "/biblia/libros/josue",
+      "title": "Josué",
+      "sub": "Antiguo Testamento · Jos",
+      "desc": "Primer libro de los Profetas Anteriores en veinticuatro capítulos: el cruce del Jordán bajo Josué hijo de Nun, la toma de Jericó y Hai, las campañas en el sur y norte de Canaán, el reparto tribal y la asamblea renovadora de la alianza en Siquem. Protocanónico; en el Codex Sinaiticus sobreviven los capítulos 12–14.",
+      "tags": [
+        "narrativa teológica de conquista",
+        "catálogo geográfico-tribal",
+        "asamblea de renovación del pacto"
+      ],
+      "fold": "josue jos at antiguo testamento primer libro de los profetas anteriores en veinticuatro capitulos: el cruce del jordan bajo josue hijo de nun, la toma de jerico y hai, las campanas en el sur y norte de canaan, el reparto tribal y la asamblea renovadora de la alianza en siquem. protocanonico; en el codex sinaiticus sobreviven los capitulos 12–14. hebreo biblico clasico deuteronomista; griego septuagintal (iesous) transicion tras la muerte de moises hasta la sepultura de josue en timnat-sera (edad del bronce tardio / inicios del hierro i) debatida: tradiciones locales antiguas compiladas en el marco de la historia deuteronomista (siglos vii–vi a. c.) en esta web, josue esta completo en la ntv (24 capitulos, 658 versiculos). del codex sinaiticus solo sobreviven fragmentos de los capitulos 12–14 (55 versiculos). narrativa teologica de conquista catalogo geografico-tribal asamblea de renovacion del pacto tanaj (nevi’im — profetas anteriores, primer libro) antiguo testamento (protocanonico) antiguo testamento antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como armonizar el relato de conquista rapida en josue 1–12 con la ocupacion incompleta y la arqueologia del hierro i? ¿existio una edicion literaria premasoretica reflejada por la septuaginta y qumran?"
+    },
+    {
+      "tipo": "libro",
+      "id": "juan",
+      "href": "/biblia/libros/juan",
+      "title": "Juan",
+      "sub": "Nuevo Testamento · Jn",
+      "desc": "Cuarto Evangelio en veintiún capítulos de incomparable hondura teológica y contemplativa: abre en la eternidad del Logos hecho carne (1:1–18), estructura siete signos públicos frente a fiestas judías («Libro de los Signos», 2–12), recoge los discursos íntimos de despedida y la oración sacerdotal en el cenáculo (13–17) y concluye en la hora gloriosa de la cruz, resurrección y encargo junto al lago (18–21). Canónico; completo en NTV y Codex Sinaiticus salvo 7:53–8:11.",
+      "tags": [
+        "evangelio teológico contemplativo",
+        "relatos de señales y discursos revelatorios",
+        "diálogos de hierro irónico"
+      ],
+      "fold": "juan jn nt nuevo testamento cuarto evangelio en veintiun capitulos de incomparable hondura teologica y contemplativa: abre en la eternidad del logos hecho carne (1:1–18), estructura siete signos publicos frente a fiestas judias («libro de los signos», 2–12), recoge los discursos intimos de despedida y la oracion sacerdotal en el cenaculo (13–17) y concluye en la hora gloriosa de la cruz, resurreccion y encargo junto al lago (18–21). canonico; completo en ntv y codex sinaiticus salvo 7:53–8:11. griego koine sencillo de vocabulario elemental repetido en espiral simbolica profunda («luz», «vida», «permanecer», «verdad») varios viajes a jerusalen durante tres pascuas sucesivas desde el jordan hasta la pasion y galilea (c. 28–30/33 d. c.) finales del siglo i d. c. (c. 90–100 d. c., efeso en asia menor segun tradicion antigua) nota textual destacada en juan 7:53–8:11: el codex sinaiticus (num. 36, 21 capitulos, 866 versiculos) —junto con los papiros p66 y p75 y el codex vaticanus— omite por completo la pericopa de la mujer adultera (7:53–8:11) y el v. 5:4, que si aparecen entre corchetes o notas en la ntv (878 versiculos). evangelio teologico contemplativo relatos de senales y discursos revelatorios dialogos de hierro ironico no incluido nuevo testamento (incluida la pericopa de la adultera 7:53–8:11 en el canon recibido) nuevo testamento nuevo testamento (con nota critica habitual en 7:53–8:11) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿escribio directamente el apostol juan hijo de zebedeo o un circulo de discipulos sobre su testimonio? ¿como se relacionan la historia de juan y los evangelios sinopticos (especialmente la fecha de la pasion)?"
+    },
+    {
+      "tipo": "libro",
+      "id": "judas",
+      "href": "/biblia/libros/judas",
+      "title": "Judas",
+      "sub": "Nuevo Testamento · Jud",
+      "desc": "Epístola encíclica vigorosa de veinticinco versículos escrita por «Judas, siervo de Jesucristo y hermano de Santiago»: planeando escribir sobre nuestra «común salvación», cambia bruscamente ante la infiltración de falsos maestros inmorales que convierten la gracia en libertinaje y niegan al único Señor; los desenmascara mediante tríadas memorables del Antiguo Testamento y tradiciones judías (1 Enoc 1:9 y Asunción de Moisés) y cierra con la doxología más gloriosa del Nuevo Testamento (vv. 24–25). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "epístola encíclica polémica",
+        "midrás tipológico en tríadas",
+        "doxología litúrgica final"
+      ],
+      "fold": "judas jud nt nuevo testamento epistola enciclica vigorosa de veinticinco versiculos escrita por «judas, siervo de jesucristo y hermano de santiago»: planeando escribir sobre nuestra «comun salvacion», cambia bruscamente ante la infiltracion de falsos maestros inmorales que convierten la gracia en libertinaje y niegan al unico senor; los desenmascara mediante triadas memorables del antiguo testamento y tradiciones judias (1 enoc 1:9 y asuncion de moises) y cierra con la doxologia mas gloriosa del nuevo testamento (vv. 24–25). canonica; completa en ntv y codex. griego koine energico, culto y denso con fuerte trasfondo apocaliptico palestino judas «hermano de santiago» exhortando a «contender ardientemente por la fe que ha sido una vez dada a los santos» (v. 3) debatida: por judas hermano del senor (c. 60–80 d. c.) o por un maestro judeocristiano de su circulo hacia fines del siglo i d. c. epistola enciclica polemica midras tipologico en triadas doxologia liturgica final no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿implica citar 1 enoc 1:9 (vv. 14–15) y la asuncion de moises (v. 9) que judas consideraba canonicos esos libros? ¿utilizo 2 pedro a judas, o viceversa?"
+    },
+    {
+      "tipo": "libro",
+      "id": "judit",
+      "href": "/biblia/libros/judit",
+      "title": "Judit",
+      "sub": "Antiguo Testamento · Jdt",
+      "desc": "Relato en dieciséis capítulos sobre el asedio de Betulia por el general Holofernes y la liberación de la ciudad por mano de Judit, una viuda judía que entra en el campamento enemigo armada con su piedad, su sabiduría y su valor. Es deuterocanónico en el canon católico y canónico en las Iglesias ortodoxas; no figura en el canon judío ni en el protestante.",
+      "tags": [
+        "relato en prosa",
+        "oración y discurso teológico",
+        "himno de victoria y acción de gracias"
+      ],
+      "fold": "judit jdt at antiguo testamento relato en dieciseis capitulos sobre el asedio de betulia por el general holofernes y la liberacion de la ciudad por mano de judit, una viuda judia que entra en el campamento enemigo armada con su piedad, su sabiduria y su valor. es deuterocanonico en el canon catolico y canonico en las iglesias ortodoxas; no figura en el canon judio ni en el protestante. griego en la septuaginta; la mayoria de los estudiosos postula un original semitico (probablemente hebreo) perdido en la antiguedad ano doce y dieciocho de «nabucodonosor, rey de los asirios en ninive», poco despues del regreso del cautiverio y de la reconsagracion del templo (4:3; 5:18–19) finales del s. ii o comienzos del s. i a. c. (epoca asmonea), antes de su primera cita conocida en 1 clemente 55 (finales del s. i d. c.) en esta web, judit se lee en el griego del codex sinaiticus (16 capitulos, 327 versiculos), junto a una traduccion de trabajo en curso hecha desde ese griego (borrador). la ntv no incluye este libro. relato en prosa oracion y discurso teologico himno de victoria y accion de gracias no incluido deuterocanonico (hipona 393, cartago 397, trento 1546) deuterocanonico / leido en el canon de las iglesias ortodoxas desde la septuaginta no incluido; se edita entre los apocrifos genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿cronica historica, nucleo historico amplificado o relato parabolico? ¿se escribio originalmente en hebreo o directamente en griego?"
+    },
+    {
+      "tipo": "libro",
+      "id": "jueces",
+      "href": "/biblia/libros/jueces",
+      "title": "Jueces",
+      "sub": "Antiguo Testamento · Jue",
+      "desc": "Séptimo libro bíblico en veintiún capítulos sobre el período premonárquico entre la muerte de Josué y Samuel: ciclos repetidos de apostasía, opresión, clamor y rescate mediante líderes carismáticos como Débora, Gedeón, Jefté y Sansón, cerrados con la anarquía de los últimos capítulos. Protocanónico; en el Sinaiticus sobreviven nueve capítulos.",
+      "tags": [
+        "saga heroica tribal",
+        "ciclo historiográfico deuteronomista",
+        "oda arcaica (Cántico de Débora)"
+      ],
+      "fold": "jueces jue at antiguo testamento septimo libro biblico en veintiun capitulos sobre el periodo premonarquico entre la muerte de josue y samuel: ciclos repetidos de apostasia, opresion, clamor y rescate mediante lideres carismaticos como debora, gedeon, jefte y sanson, cerrados con la anarquia de los ultimos capitulos. protocanonico; en el sinaiticus sobreviven nueve capitulos. hebreo biblico clasico (con poesia nortena arcaica en el cap. 5) epoca premonarquica de las tribus en canaan (c. siglos xii–xi a. c.) tradiciones heroicas tribales editadas dentro de la historia deuteronomista (c. siglos vii–vi a. c.) en esta web, jueces esta completo en la ntv (21 capitulos, 618 versiculos). del codex sinaiticus perduran nueve capitulos fragmentarios (2 y 4–11; 228 versiculos). saga heroica tribal ciclo historiografico deuteronomista oda arcaica (cantico de debora) tanaj (nevi’im — profetas anteriores, segundo libro) antiguo testamento (protocanonico) antiguo testamento (kritai) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como interpretar la cronologia total de los jueces (mas de 400 anos frente a 1 reyes 6:1)? ¿implica jueces 11 que jefte sacrifico literalmente a su hija o la consagro en retiro perpetuo?"
+    },
+    {
+      "tipo": "libro",
+      "id": "lamentaciones",
+      "href": "/biblia/libros/lamentaciones",
+      "title": "Lamentaciones",
+      "sub": "Antiguo Testamento · Lm",
+      "desc": "Cinco poemas elegíacos de duelo tras la destrucción de Jerusalén y del Templo en el año 586 a. C.: cuatro acrósticos alfabéticos y una súplica final de veintidós versos ante las ruinas, el hambre y el silencio del Señor, sosteniendo al centro (cap. 3) la certeza de su compasión que se renueva cada mañana. Protocanónico; en el Sinaiticus perduran los caps. 1 y 2.",
+      "tags": [
+        "elegía comunitaria (qiná)",
+        "poema acróstico alfabético",
+        "lamentación litúrgica"
+      ],
+      "fold": "lamentaciones lm at antiguo testamento cinco poemas elegiacos de duelo tras la destruccion de jerusalen y del templo en el ano 586 a. c.: cuatro acrosticos alfabeticos y una suplica final de veintidos versos ante las ruinas, el hambre y el silencio del senor, sosteniendo al centro (cap. 3) la certeza de su compasion que se renueva cada manana. protocanonico; en el sinaiticus perduran los caps. 1 y 2. hebreo poetico de ritmo cojo caracteristico de duelo (metro qina 3+2); griego septuagintal inmediatamente tras la destruccion de jerusalen por nabucodonosor en 586 a. c. en juda o en las ruinas del templo entre el 586 y mediados del siglo vi a. c. en esta web, lamentaciones esta completo en la ntv (5 capitulos, 154 versiculos). del codex sinaiticus solo sobreviven los dos primeros capitulos y un breve tramo inicial (caps. 1–2; 42 versiculos). elegia comunitaria (qina) poema acrostico alfabetico lamentacion liturgica tanaj (ketuvim — eja, una de las cinco meguilot leida en tisha beav) antiguo testamento (protocanonico; ubicado tras jeremias) antiguo testamento (threnoi) antiguo testamento (tras jeremias) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue escrito lamentaciones por el profeta jeremias o por poetas anonimos tras la destruccion de 586 a. c.? ¿componen los cinco poemas un diseno unificado de un solo autor o una antologia liturgica posterior?"
+    },
+    {
+      "tipo": "libro",
+      "id": "levitico",
+      "href": "/biblia/libros/levitico",
+      "title": "Levítico",
+      "sub": "Antiguo Testamento · Lv",
+      "desc": "Tercer libro del Pentateuco en veintisiete capítulos dedicado al culto sacrificial, la consagración sacerdotal de Aarón, la pureza ritual y el Código de Santidad culminado en «amarás a tu prójimo como a ti mismo». Protocanónico; en el Codex Sinaiticus solo sobreviven los capítulos 20–22.",
+      "tags": [
+        "manual litúrgico-sacrificial",
+        "código de santidad ética",
+        "narrativa cultual breve"
+      ],
+      "fold": "levitico lv at antiguo testamento tercer libro del pentateuco en veintisiete capitulos dedicado al culto sacrificial, la consagracion sacerdotal de aaron, la pureza ritual y el codigo de santidad culminado en «amaras a tu projimo como a ti mismo». protocanonico; en el codex sinaiticus solo sobreviven los capitulos 20–22. hebreo biblico sacerdotal clasico; griego septuagintal (leuitikon) instrucciones dictadas a moises en la tienda de reunion al pie del monte sinai antes de partir debatida: tradiciones culticas tempranas del santuario sistematizadas en la redaccion sacerdotal exilica o posexilica (c. s. vi–v a. c.) en esta web, levitico esta completo en la ntv (27 capitulos, 859 versiculos). del codex sinaiticus solo se conservan tres capitulos (20–22, 55 versiculos). manual liturgico-sacrificial codigo de santidad etica narrativa cultual breve tanaj (tora — vayikra; libro central de la ley y primer texto en la ensenanza tradicional infantil) antiguo testamento (protocanonico) antiguo testamento antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue redactado el codigo sacerdotal antes o despues del exilio de babilonia? ¿caducaron integramente sus leyes culticas o mantienen vigencia permanente sus principios eticos?"
+    },
+    {
+      "tipo": "libro",
+      "id": "lucas",
+      "href": "/biblia/libros/lucas",
+      "title": "Lucas",
+      "sub": "Nuevo Testamento · Lc",
+      "desc": "Primer tomo de la obra doble lucana (junto con Hechos de los Apóstoles) en veinticuatro capítulos: Evangelio del médico helenista dedicado al «excelentísimo Teófilo» tras investigar diligentemente con testigos oculares, célebre por los cánticos de la infancia, las parábolas exclusivas del Buen Samaritano y el Hijo Pródigo, la oración, los pobres, las mujeres y el camino de Emaús. Canónico; completo en NTV y Codex.",
+      "tags": [
+        "historiografía helenística en dos tomos",
+        "evangelio sinóptico",
+        "himnos de infancia y parábolas de misericordia"
+      ],
+      "fold": "lucas lc nt nuevo testamento primer tomo de la obra doble lucana (junto con hechos de los apostoles) en veinticuatro capitulos: evangelio del medico helenista dedicado al «excelentisimo teofilo» tras investigar diligentemente con testigos oculares, celebre por los canticos de la infancia, las parabolas exclusivas del buen samaritano y el hijo prodigo, la oracion, los pobres, las mujeres y el camino de emaus. canonico; completo en ntv y codex. griego koine elegante de prologo clasico (1:1–4) y sabor biblico septuagintal (1:5–2:52) desde los anuncios a zacarias y maria hasta la ascension cerca de betania (c. 6 a. c.–30/33 d. c.) debatida: entre c. 60–62 d. c. (antes de la muerte de pablo al fin de hechos) y c. 80–85 d. c. tras el 70 d. c. historiografia helenistica en dos tomos evangelio sinoptico himnos de infancia y parabolas de misericordia no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿el autor es el medico lucas mencionado por pablo o un escritor cristiano anonimo de la segunda generacion? ¿pertenecian originalmente lucas 22:43–44 y 23:34a al texto autografo lucano?"
+    },
+    {
+      "tipo": "libro",
+      "id": "malaquias",
+      "href": "/biblia/libros/malaquias",
+      "title": "Malaquías",
+      "sub": "Antiguo Testamento · Mal",
+      "desc": "Último libro de los Doce y cierre tradicional del Antiguo Testamento cristiano: cuatro capítulos en la NTV (tres capítulos en el Codex Sinaiticus) con seis disputas dialógicas entre Dios y el pueblo incrédulo en la Judea persa del siglo V a. C. sobre culto descuidado, infidelidad conyugal, diezmos y justicia, culminando en el anuncio del mensajero preparador y el regreso de Elías antes del Día del Señor. Protocanónico; completo en ambos testigos.",
+      "tags": [
+        "disputa profética dialogada (diatriba)",
+        "exhortación sacerdotal-ética",
+        "oráculo escatológico final"
+      ],
+      "fold": "malaquias mal at antiguo testamento ultimo libro de los doce y cierre tradicional del antiguo testamento cristiano: cuatro capitulos en la ntv (tres capitulos en el codex sinaiticus) con seis disputas dialogicas entre dios y el pueblo incredulo en la judea persa del siglo v a. c. sobre culto descuidado, infidelidad conyugal, diezmos y justicia, culminando en el anuncio del mensajero preparador y el regreso de elias antes del dia del senor. protocanonico; completo en ambos testigos. hebreo biblico posexilico tardio directo en formato de pregunta y objecion comunidad del segundo templo ya funcionando bajo un «gobernador» persa (1:8), con abusos paralelos a nehemias 13 mediados del siglo v a. c. (c. 460–430 a. c., poco antes o contemporaneo a esdras y nehemias) atencion a la numeracion final: ambos testigos preservan exactamente los 55 versiculos completos, pero la ntv los reparte en 4 capitulos (separando los ultimos seis versiculos en el capitulo 4), mientras el codex sinaiticus (num. 25) y la septuaginta los mantienen unidos en el capitulo 3 (3:19–24 = ntv 4:1–6) e invierten ademas los vv. 3:22 y 3:24 respecto al hebreo. disputa profetica dialogada (diatriba) exhortacion sacerdotal-etica oraculo escatologico final tanaj (nevi’im — cierre de los doce profetas y fin de la seccion profetica en el canon hebreo) antiguo testamento (protocanonico; ultimo libro del at en las biblias occidentales) antiguo testamento (malachias) antiguo testamento (cierre de los profetas y del at) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿que significa la «ofrenda pura» ofrecida entre las naciones en malaquias 1:11? ¿fue «malaquias» el nombre propio del profeta o un titulo editorial derivado de 3:1?"
+    },
+    {
+      "tipo": "libro",
+      "id": "marcos",
+      "href": "/biblia/libros/marcos",
+      "title": "Marcos",
+      "sub": "Nuevo Testamento · Mc",
+      "desc": "Evangelio más breve y antiguo del Nuevo Testamento en dieciséis capítulos, de ritmo trepidante («enseguida») y crudo realismo humano: ministerio galileo de Jesús con exorcismos y curaciones, el vuelco de Cesarea de Filipo hacia la cruz, la confesión del centurión al pie del madero y el sepulcro vacío con el final corto en 16:8 en los manuscritos más antiguos. Canónico; completo en NTV y Codex Sinaiticus con divergencia clave en 16:9–20.",
+      "tags": [
+        "evangelio narrativo de acción",
+        "narración de la Pasión con prólogo extenso",
+        "kerygma apostólico biográfico"
+      ],
+      "fold": "marcos mc nt nuevo testamento evangelio mas breve y antiguo del nuevo testamento en dieciseis capitulos, de ritmo trepidante («enseguida») y crudo realismo humano: ministerio galileo de jesus con exorcismos y curaciones, el vuelco de cesarea de filipo hacia la cruz, la confesion del centurion al pie del madero y el sepulcro vacio con el final corto en 16:8 en los manuscritos mas antiguos. canonico; completo en ntv y codex sinaiticus con divergencia clave en 16:9–20. griego koine directo, vivido y coloquial con frecuentes latinismos y explicaciones de terminos arameos desde el bautismo en el jordan hasta el sepulcro vacio en jerusalen (c. 28–30/33 d. c.) entre c. 65 y 73 d. c. (en torno al martirio de pedro en roma o la guerra judeo-romana del 70 d. c.) nota critica fundamental en marcos 16: el codex sinaiticus (num. 34, 16 capitulos, 661 versiculos) —al igual que el codex vaticanus— termina abruptamente el evangelio en 16:8 («porque tenian miedo»), omitiendo los doce versiculos finales 16:9–20 que si trae la ntv (673 versiculos) entre corchetes o notas criticas. evangelio narrativo de accion narracion de la pasion con prologo extenso kerygma apostolico biografico no incluido nuevo testamento (con final largo 16:9–20 recibido en el uso canonico tradicional) nuevo testamento nuevo testamento (con nota critica habitual sobre 16:9–20) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue 16:8 el final intencionado por el autor de marcos, o se perdio una hoja final original luego reemplazada por 16:9–20? ¿es marcos la fuente cronologica anterior usada por mateo y lucas?"
+    },
+    {
+      "tipo": "libro",
+      "id": "mateo",
+      "href": "/biblia/libros/mateo",
+      "title": "Mateo",
+      "sub": "Nuevo Testamento · Mt",
+      "desc": "Primer libro del Nuevo Testamento en veintiocho capítulos: Evangelio catequético y eclesial que presenta a Jesús de Nazaret como Mesías rey hijo de David y Abraham, cumplimiento de las Escrituras de Israel y nuevo maestro cuya palabra articula cinco grandes discursos culminados en el Sermón del Monte y la Gran Comisión. Canónico en todas las Iglesias; completo en NTV y Codex Sinaiticus.",
+      "tags": [
+        "evangelio sinóptico (bíos teológico)",
+        "cinco discursos catequéticos alternados con narrativa",
+        "exégesis de cumplimiento"
+      ],
+      "fold": "mateo mt nt nuevo testamento primer libro del nuevo testamento en veintiocho capitulos: evangelio catequetico y eclesial que presenta a jesus de nazaret como mesias rey hijo de david y abraham, cumplimiento de las escrituras de israel y nuevo maestro cuya palabra articula cinco grandes discursos culminados en el sermon del monte y la gran comision. canonico en todas las iglesias; completo en ntv y codex sinaiticus. griego koine ordenado y semitizante (tradicion antigua de papias sobre logia hebreos o arameos) genealogia e infancia en judea/egipto, ministerio en galilea y pasion y resurreccion en jerusalen (c. 4 a. c.–30/33 d. c.) tradicion apostolica temprana; consenso critico mayoritario entre 70 y 90 d. c. (antioquia de siria o ambito siro-palestino) evangelio sinoptico (bios teologico) cinco discursos catequeticos alternados con narrativa exegesis de cumplimiento no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿escribio el apostol mateo originalmente en hebreo/arameo o el evangelio canonico griego nacio directamente en griego sobre marcos y dichos comunes? ¿el sermon del monte (caps. 5–7) es un ideal escatologico inalcanzable, una etica provisional o norma concreta para el discipulo?"
+    },
+    {
+      "tipo": "libro",
+      "id": "miqueas",
+      "href": "/biblia/libros/miqueas",
+      "title": "Miqueas",
+      "sub": "Antiguo Testamento · Miq",
+      "desc": "Siete capítulos del profeta rural de Moreset en Judá, contemporáneo de Isaías hacia fines del siglo VIII a. C.: alterna tres ciclos de denuncia mordaz contra la avaricia inmobiliaria y profetas venales con oráculos luminosos de Sión como centro de paz mundial, el origen davídico del gobernante en Belén y la síntesis ética suprema de 6:8. Protocanónico; ausente del Sinaiticus conservado.",
+      "tags": [
+        "pleito profético (riv)",
+        "oráculo de denuncia social",
+        "promesa mesiánica y liturgia final"
+      ],
+      "fold": "miqueas miq at antiguo testamento siete capitulos del profeta rural de moreset en juda, contemporaneo de isaias hacia fines del siglo viii a. c.: alterna tres ciclos de denuncia mordaz contra la avaricia inmobiliaria y profetas venales con oraculos luminosos de sion como centro de paz mundial, el origen davidico del gobernante en belen y la sintesis etica suprema de 6:8. protocanonico; ausente del sinaiticus conservado. hebreo poetico punzante rico en juegos de palabras toponimicos (cap. 1) reinados de jotam, acaz y ezequias de juda (c. 740–695 a. c.), ante la caida de samaria y la invasion de senaquerib nucleo profetico autentico de miqueas en caps. 1–3 y parte de 6, completado durante o tras el exilio en el libro de siete capitulos en esta web, miqueas se lee completo en la ntv (7 capitulos, 105 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. pleito profetico (riv) oraculo de denuncia social promesa mesianica y liturgia final tanaj (nevi’im — sexto de los doce) antiguo testamento (protocanonico) antiguo testamento (micheas, tercero tras amos en orden griego) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como se explica el pasaje paralelo entre miqueas 4:1–3 e isaias 2:2–4? ¿pertenecen los capitulos 4–5 y 7:8–20 al miqueas del siglo viii o a editores exilicos y posexilicos?"
+    },
+    {
+      "tipo": "libro",
+      "id": "nahum",
+      "href": "/biblia/libros/nahum",
+      "title": "Nahum",
+      "sub": "Antiguo Testamento · Nah",
+      "desc": "Tres capítulos de poesía bélica y teofánica de Nahum de Elcós celebrando la justicia divina ante la caída inminente de la capital asiria de Nínive (612 a. C.): abre con un salmo acróstico parcial sobre Dios como refugio y juez soberano, describe con vívido realismo cinematográfico el asedio de la ciudad y entona un canto fúnebre por el fin de su tiranía. Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "himno teofánico acróstico truncado",
+        "oráculo contra Nínive",
+        "poema lírico de asedio y sátira"
+      ],
+      "fold": "nahum nah at antiguo testamento tres capitulos de poesia belica y teofanica de nahum de elcos celebrando la justicia divina ante la caida inminente de la capital asiria de ninive (612 a. c.): abre con un salmo acrostico parcial sobre dios como refugio y juez soberano, describe con vivido realismo cinematografico el asedio de la ciudad y entona un canto funebre por el fin de su tirania. protocanonico; completo en ntv y codex. hebreo poetico de excepcional brillantez visual e impetuosidad ritmica entre el saqueo asirio de tebas/no-amon en egipto (663 a. c., citado como pasado en 3:8) y la destruccion de ninive en 612 a. c. probablemente poco antes de 612 a. c. (entre 626 y 612 a. c., epoca de josias) himno teofanico acrostico truncado oraculo contra ninive poema lirico de asedio y satira tanaj (nevi’im — septimo de los doce) antiguo testamento (protocanonico) antiguo testamento (naoum, septimo tambien en griego) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue el acrostico truncado del capitulo 1 compuesto por nahum o anadido despues como prologo liturgico? ¿debe interpretarse nahum como profecia previa al 612 a. c. o como himno de triunfo compuesto inmediatamente despues?"
+    },
+    {
+      "tipo": "libro",
+      "id": "nehemias",
+      "href": "/biblia/libros/nehemias",
+      "title": "Nehemías",
+      "sub": "Antiguo Testamento · Neh",
+      "desc": "Trece capítulos que recogen las memorias personales de Nehemías, copero judío en Susa nombrado gobernador persa de Judea (445 a. C.), la reconstrucción de los muros de Jerusalén pese a acosos vecinos, la lectura solemne de la Torá por Esdras y las reformas sociales y sabáticas. Protocanónico; en el Sinaiticus corresponde a 2 Esdras caps. 11–23.",
+      "tags": [
+        "memorias autobiográficas",
+        "crónica de reconstrucción urbana",
+        "liturgia de renovación del pacto"
+      ],
+      "fold": "nehemias neh at antiguo testamento trece capitulos que recogen las memorias personales de nehemias, copero judio en susa nombrado gobernador persa de judea (445 a. c.), la reconstruccion de los muros de jerusalen pese a acosos vecinos, la lectura solemne de la tora por esdras y las reformas sociales y sabaticas. protocanonico; en el sinaiticus corresponde a 2 esdras caps. 11–23. hebreo biblico tardio (posexilico) de 445 a. c. (ano veinte de artajerjes i) hasta el regreso de nehemias hacia 433–424 a. c. basado en las «memorias de nehemias» autenticas del siglo v a. c., integrado con esdras hacia los siglos iv–iii a. c. en esta web, nehemias esta completo en la ntv (13 capitulos, 406 versiculos). en el codex sinaiticus se conserva integro dentro del libro unido de 2 esdras, donde corresponde a los capitulos 11–23; consulte 2 esdras para el texto griego. memorias autobiograficas cronica de reconstruccion urbana liturgia de renovacion del pacto tanaj (ketuvim — unido en un solo volumen con esdras) antiguo testamento (protocanonico; tradicionalmente 2 esdras en vulgata) antiguo testamento (incluido en 2 esdras lxx caps. 11–23) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿pertenecia nehemias 8 originalmente al relato de esdras o formo parte siempre de esta seccion? ¿cual era el alcance fisico de la muralla reconstruida en cincuenta y dos dias?"
+    },
+    {
+      "tipo": "libro",
+      "id": "numeros",
+      "href": "/biblia/libros/numeros",
+      "title": "Números",
+      "sub": "Antiguo Testamento · Nm",
+      "desc": "Cuarto libro de la Torá en treinta y seis capítulos que narra los censos en el Sinaí, la marcha por el desierto, la rebelión de los espías, los cuarenta años de travesía y los preparativos en las llanuras de Moab junto con los oráculos de Balaam. Protocanónico; el Codex Sinaiticus conserva doce capítulos.",
+      "tags": [
+        "crónica itinerante",
+        "compilación legal y censal",
+        "oráculos poéticos y bendición sacerdotal"
+      ],
+      "fold": "numeros nm at antiguo testamento cuarto libro de la tora en treinta y seis capitulos que narra los censos en el sinai, la marcha por el desierto, la rebelion de los espias, los cuarenta anos de travesia y los preparativos en las llanuras de moab junto con los oraculos de balaam. protocanonico; el codex sinaiticus conserva doce capitulos. hebreo biblico clasico (con poesia arcaica y prosa sacerdotal) casi cuarenta anos de travesia desde el segundo ano tras salir de egipto hasta la vispera de cruzar el jordan atribucion mosaica tradicional frente a compilacion de tradiciones narrativas y sacerdotales hasta el s. v a. c. en esta web, numeros esta completo en la ntv (36 capitulos, 1.221 versiculos). del codex sinaiticus sobreviven doce capitulos fragmentarios (5–7, 16–20 y 23–26; 216 versiculos). cronica itinerante compilacion legal y censal oraculos poeticos y bendicion sacerdotal tanaj (tora — bemidbar, «en el desierto») antiguo testamento (protocanonico) antiguo testamento (arithmoi) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como explicar las elevadas cifras de los censos militares (mas de seiscientos mil varones adultos) en los caps. 1 y 26? ¿cual es el sentido original de la «estrella que saldra de jacob» en numeros 24:17?"
+    },
+    {
+      "tipo": "libro",
+      "id": "oseas",
+      "href": "/biblia/libros/oseas",
+      "title": "Oseas",
+      "sub": "Antiguo Testamento · Os",
+      "desc": "Primero de los Doce Profetas Menores en catorce capítulos: profecía ejercida en el Reino del Norte (Israel/Efraín) en las últimas décadas antes de la caída de Samaria (722 a. C.), expresando la ruptura y misericordia de la alianza mediante la metáfora nupcial del matrimonio de Oseas con Gómer. Protocanónico; ausente del Codex Sinaiticus conservado.",
+      "tags": [
+        "profecía poética de alianza",
+        "acción simbólica conyugal",
+        "pleito judicial divino (riv)"
+      ],
+      "fold": "oseas os at antiguo testamento primero de los doce profetas menores en catorce capitulos: profecia ejercida en el reino del norte (israel/efrain) en las ultimas decadas antes de la caida de samaria (722 a. c.), expresando la ruptura y misericordia de la alianza mediante la metafora nupcial del matrimonio de oseas con gomer. protocanonico; ausente del codex sinaiticus conservado. hebreo norteno israelita (efraimita), conciso, metaforico y textualmente complejo reinados de jeroboam ii hasta oseas de israel (c. 755–724 a. c.) oraculos orales de oseas hijo de beeri en el norte (s. viii a. c.), transmitidos y editados luego en juda en esta web, oseas se lee completo en la ntv (14 capitulos, 197 versiculos). no perduran folios de este libro en el codex sinaiticus conservado. profecia poetica de alianza accion simbolica conyugal pleito judicial divino (riv) tanaj (nevi’im — primero del libro de los doce) antiguo testamento (protocanonico) antiguo testamento (osee; primero de los doce en orden griego) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿el matrimonio de oseas con gomer «mujer de fornicaciones» (1:2; 3:1) fue real, retrospectivo o simbolico? ¿como interpretar la relacion entre los capitulos 1 y 3?"
+    },
+    {
+      "tipo": "libro",
+      "id": "proverbios",
+      "href": "/biblia/libros/proverbios",
+      "title": "Proverbios",
+      "sub": "Antiguo Testamento · Pr",
+      "desc": "Antología sapiencial hebrea en treinta y un capítulos atribuida principalmente a Salomón junto con dichos de «los sabios», Agur y la madre de Lemuel: abre con discursos de invitación entre la Sabiduría y la Necedad (1–9), sigue con centenares de máximas prácticas sobre rectitud, palabra, familia y justicia (10–29) y cierra con el acróstico de la mujer ejemplar (31). Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "colección de sentencias (mashal)",
+        "poesía didáctica paterno-filial",
+        "poema acróstico alfabético"
+      ],
+      "fold": "proverbios pr at antiguo testamento antologia sapiencial hebrea en treinta y un capitulos atribuida principalmente a salomon junto con dichos de «los sabios», agur y la madre de lemuel: abre con discursos de invitacion entre la sabiduria y la necedad (1–9), sigue con centenares de maximas practicas sobre rectitud, palabra, familia y justicia (10–29) y cierra con el acrostico de la mujer ejemplar (31). protocanonico; completo en ntv y codex. hebreo sapiencial conciso en disticos paralelos; version griega libre y reordenada en la septuaginta ensenanzas recopiladas bajo el patrocinio del rey salomon y los escribas del rey ezequias (25:1) material preexilico monarquico (caps. 10–29) enmarcado por discursos teologicos posexilicos (caps. 1–9) hacia los siglos v–iv a. c. aunque proverbios esta completo en ambos testigos (ntv: 31 capitulos, 915 versiculos; codex sinaiticus: 31 capitulos, 893 versiculos), la septuaginta reordena profundamente las colecciones a partir de 24:23 y anade proverbios griegos propios o suprime versiculos respecto al hebreo. coleccion de sentencias (mashal) poesia didactica paterno-filial poema acrostico alfabetico tanaj (ketuvim — mishle, segundo libro tras salmos) antiguo testamento (protocanonico) antiguo testamento (paroimiai) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿como interpretar el verbo qana («adquirio / creo / engendro») sobre la sabiduria en proverbios 8:22? ¿obedecio la reordenacion de los capitulos 24–31 en la septuaginta a un rollo hebreo distinto o al criterio del traductor?"
+    },
+    {
+      "tipo": "libro",
+      "id": "romanos",
+      "href": "/biblia/libros/romanos",
+      "title": "Romanos",
+      "sub": "Nuevo Testamento · Ro",
+      "desc": "Carta magistral de Pablo de Tarso en dieciséis capítulos dictada desde Corinto hacia el año 57 d. C. a las iglesias de Roma que aún no había visitado: exposición teológica sistemática del Evangelio como poder de Dios para salvación por la fe tanto de judíos como de griegos, justificación, vida en el Espíritu (cap. 8), misterio de Israel (9–11) y ética práctica del amor y unidad comunitaria (12–16). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "epístola-tratado teológico",
+        "diatriba dialógica retórica",
+        "carta apostólica de presentación y recomendación"
+      ],
+      "fold": "romanos ro nt nuevo testamento carta magistral de pablo de tarso en dieciseis capitulos dictada desde corinto hacia el ano 57 d. c. a las iglesias de roma que aun no habia visitado: exposicion teologica sistematica del evangelio como poder de dios para salvacion por la fe tanto de judios como de griegos, justificacion, vida en el espiritu (cap. 8), misterio de israel (9–11) y etica practica del amor y unidad comunitaria (12–16). canonica; completa en ntv y codex. griego koine denso, argumentativo y vigoroso dictado por medio de tercio (16:22) finales del tercer viaje misionero de pablo en corinto, antes de llevar la colecta a jerusalen (c. 56–58 d. c.) invierno del 56/57 o primavera del 57 d. c. desde corinto/cencreas epistola-tratado teologico diatriba dialogica retorica carta apostolica de presentacion y recomendacion no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿a quien representa el «yo» torturado que dice «el bien que quiero no hago» en romanos 7:7–25? ¿como entiende la investigacion actual el enfasis de «obras de la ley» frente a la «fe de/en cristo»?"
+    },
+    {
+      "tipo": "libro",
+      "id": "rut",
+      "href": "/biblia/libros/rut",
+      "title": "Rut",
+      "sub": "Antiguo Testamento · Rt",
+      "desc": "Breve relato idílico en cuatro capítulos ambientado en los días de los jueces: Noemí regresa empobrecida de Moab a Belén junto a su nuera moabita Rut, quien ejerce la piedad fiel (jesed) y es redimida mediante Booz según la ley del pariente redentor, dando origen al linaje de David. Protocanónico; no sobrevive en el Codex Sinaiticus.",
+      "tags": [
+        "novela corta pastoral",
+        "narración sapiencial-jurídica",
+        "genealogía davídica"
+      ],
+      "fold": "rut rt at antiguo testamento breve relato idilico en cuatro capitulos ambientado en los dias de los jueces: noemi regresa empobrecida de moab a belen junto a su nuera moabita rut, quien ejerce la piedad fiel (jesed) y es redimida mediante booz segun la ley del pariente redentor, dando origen al linaje de david. protocanonico; no sobrevive en el codex sinaiticus. hebreo biblico elegante y arcaizante de prosa dialogada epoca de los jueces, generaciones inmediatamente anteriores al rey david debatida: periodo monarquico temprano frente a composicion posexilica persa (siglos v–iv a. c.) en esta web, rut esta completo en la ntv (4 capitulos, 85 versiculos). no sobreviven folios de este libro en el codex sinaiticus conservado. novela corta pastoral narracion sapiencial-juridica genealogia davidica tanaj (ketuvim — primera de las cinco meguilot, leida en shavuot) antiguo testamento (protocanonico; ubicado tras jueces) antiguo testamento (tras jueces) antiguo testamento (tras jueces) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue escrito como apologia monarquica temprana o como replica posexilica al exclusivismo nacional? ¿pertenece originalmente la genealogia de 4:18–22 al autor o es un anadido editorial?"
+    },
+    {
+      "tipo": "libro",
+      "id": "sabiduria",
+      "href": "/biblia/libros/sabiduria",
+      "title": "Sabiduría",
+      "sub": "Antiguo Testamento · Sab",
+      "desc": "Obra sapiencial alejandrina en diecinueve capítulos escrita en griego bajo el nombre literario de Salomón sobre la justicia, la inmortalidad del justo, el elogio de la Sabiduría divina y el éxodo de Israel. Deuterocanónico católico y ortodoxo; fuera del canon hebreo y protestante.",
+      "tags": [
+        "literatura sapiencial",
+        "protréptico filosófico",
+        "midrás sobre el Éxodo"
+      ],
+      "fold": "sabiduria sab at antiguo testamento obra sapiencial alejandrina en diecinueve capitulos escrita en griego bajo el nombre literario de salomon sobre la justicia, la inmortalidad del justo, el elogio de la sabiduria divina y el exodo de israel. deuterocanonico catolico y ortodoxo; fuera del canon hebreo y protestante. griego helenistico literario original, con asonancias poeticas y vocabulario filosofico alejandrino alocucion atribuida ficticiamente al rey salomon dirigida a los gobernantes de la tierra finales del siglo i a. c. o comienzos del i d. c. (alejandria, entre el 30 a. c. y el 40 d. c.) en esta web, sabiduria se lee completo en el griego del codex sinaiticus (19 capitulos, 435 versiculos). la ntv no incluye este libro. literatura sapiencial protreptico filosofico midras sobre el exodo no incluido deuterocanonico (hipona 393, cartago 397, trento 1546) antiguo testamento (anagignoskomena; incluido en los unciales de la septuaginta) no incluido; se edita entre los apocrifos genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿fue escrito por un solo autor alejandrino o mediante la fusion de fuentes diversas? ¿alude el justo perseguido de sabiduria 2 al siervo de isaias o representa al justo colectivo en conflicto bajo roma?"
+    },
+    {
+      "tipo": "libro",
+      "id": "salmos",
+      "href": "/biblia/libros/salmos",
+      "title": "Salmos",
+      "sub": "Antiguo Testamento · Sal",
+      "desc": "Himnario y libro de oraciones de Israel en ciento cincuenta composiciones hebreas (más el Salmo 151 en la Septuaginta y el Codex Sinaiticus), dividido en cinco libros de himnos, súplicas individuales y colectivas, acción de gracias y salmos reales y sapienciales. Protocanónico en 1–150; el Salmo 151 cuenta con traducción de trabajo en Crux.",
+      "tags": [
+        "poesía lírica hebrea",
+        "himnos y lamentaciones litúrgicas",
+        "salmos reales y sapienciales"
+      ],
+      "fold": "salmos sal at antiguo testamento himnario y libro de oraciones de israel en ciento cincuenta composiciones hebreas (mas el salmo 151 en la septuaginta y el codex sinaiticus), dividido en cinco libros de himnos, suplicas individuales y colectivas, accion de gracias y salmos reales y sapienciales. protocanonico en 1–150; el salmo 151 cuenta con traduccion de trabajo en crux. hebreo poetico de diversas epocas (siglos x–ii a. c.); griego septuagintal (psalmoi, con numeracion desplazada) atribuciones tradicionales mayoritariamente a david («de david» en 73 titulos), los hijos de core, asaf, salomon y moises coleccion progresiva desde composiciones monarquicas tempranas (s. x–vii a. c.) hasta su edicion final en cinco libros tras el exilio (c. s. iv–ii a. c.) atencion a la numeracion y al salmo 151: entre los salmos 9 y 147 el griego del codex sinaiticus (151 capitulos, 2.531 versiculos) sigue la numeracion de la septuaginta —un numero por debajo de la ntv (150 capitulos, 2.461 versiculos) al unir 9–10 y 114–115 y dividir 116 y 147—, e incluye los titulos liturgicos como versiculo 1. ademas, el salmo 151 solo figura en el codex y cuenta en crux con traduccion de trabajo propia. poesia lirica hebrea himnos y lamentaciones liturgicas salmos reales y sapienciales tanaj (ketuvim — tehillim, primer libro de los escritos, 150 salmos) antiguo testamento (protocanonico, 150 salmos; numeracion tradicional vulgata/lxx) antiguo testamento (incluye habitualmente el salmo 151 en el salterio griego) antiguo testamento (150 salmos; el salmo 151 se considera apocrifo) genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿pertenecen los titulos historicos («cuando huyo de absalon…») al poema original o a la reflexion editorial posterior? ¿cual es el origen linguistico del salmo 151 transmitido en el codex sinaiticus?"
+    },
+    {
+      "tipo": "libro",
+      "id": "santiago",
+      "href": "/biblia/libros/santiago",
+      "title": "Santiago",
+      "sub": "Nuevo Testamento · Stg",
+      "desc": "Primera de las siete Epístolas Católicas en cinco capítulos dirigida «a las doce tribus que están en la dispersión»: tratado de sabiduría práctica judío-cristiana próximo al Sermón del Monte sobre alegría en las pruebas, escucha y práctica de la «ley perfecta de la libertad», rechazo de la acepción de personas entre ricos y pobres, coherencia indispensable entre fe y obras (cap. 2), dominio de la lengua, sabiduría humilde y oración por los enfermos. Canónica; completa en NTV y Codex.",
+      "tags": [
+        "parénesis sapiencial epistolar (protréptico)",
+        "diatriba ética (fe y obras, lengua, riqueza)",
+        "carta encíclica a la diáspora"
+      ],
+      "fold": "santiago stg nt nuevo testamento primera de las siete epistolas catolicas en cinco capitulos dirigida «a las doce tribus que estan en la dispersion»: tratado de sabiduria practica judio-cristiana proximo al sermon del monte sobre alegria en las pruebas, escucha y practica de la «ley perfecta de la libertad», rechazo de la acepcion de personas entre ricos y pobres, coherencia indispensable entre fe y obras (cap. 2), dominio de la lengua, sabiduria humilde y oracion por los enfermos. canonica; completa en ntv y codex. griego koine vivo y sumamente elegante con aliteraciones, imagenes naturales y fuerte aliento de sabiduria hebrea enviada por «santiago, siervo de dios y del senor jesucristo» antes del desarrollo tardio de estructuras jerarquicas complejas («asamblea / sinagoga», 2:2) debatida: entre las decadas tempranas (c. 45–62 d. c., antes del martirio de santiago hermano del senor en 62 d. c.) y c. 75–95 d. c. parenesis sapiencial epistolar (protreptico) diatriba etica (fe y obras, lengua, riqueza) carta enciclica a la diaspora no incluido nuevo testamento nuevo testamento (encabeza las epistolas catolicas) nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿contradice santiago 2:24 a pablo en romanos 3:28 sobre la justificacion por la fe? ¿escribio la carta el propio santiago de jerusalen antes de 62 d. c. o un maestro judeocristiano posterior?"
+    },
+    {
+      "tipo": "libro",
+      "id": "siracida",
+      "href": "/biblia/libros/siracida",
+      "title": "Sirácida",
+      "sub": "Antiguo Testamento · Sir",
+      "desc": "Extensa colección sapiencial en cincuenta y un capítulos redactada originalmente en hebreo en Jerusalén por Jesús ben Sirá hacia el 180 a. C. y traducida al griego en Egipto por su nieto después del 132 a. C. Deuterocanónico católico y ortodoxo; admirado pero no canónico en el judaísmo y protestantismo.",
+      "tags": [
+        "colección de proverbios",
+        "enseñanza sapiencial",
+        "himno eulogético histórico"
+      ],
+      "fold": "siracida sir at antiguo testamento extensa coleccion sapiencial en cincuenta y un capitulos redactada originalmente en hebreo en jerusalen por jesus ben sira hacia el 180 a. c. y traducida al griego en egipto por su nieto despues del 132 a. c. deuterocanonico catolico y ortodoxo; admirado pero no canonico en el judaismo y protestantismo. hebreo original parcialmente recobrado (qumran, masada y gueniza de el cairo); texto completo en el griego de su nieto ensenanzas de jesus, hijo de eleazar ben sira en jerusalen antes de la crisis antioquena original hebreo c. 190–175 a. c.; prologo y traduccion griega en egipto despues de 132 a. c. en esta web, siracida se lee integro en el griego del codex sinaiticus (51 capitulos, 1.364 versiculos, con el prologo del nieto). la ntv no lo incluye. coleccion de proverbios ensenanza sapiencial himno eulogetico historico no incluido (aunque citado a veces en la literatura talmudica como libro exterior apreciado) deuterocanonico (hipona 393, cartago 397, trento 1546, bajo el titulo latino eclesiastico) antiguo testamento (anagignoskomena; sabiduria de sira) no incluido; se edita entre los apocrifos genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿representan los manuscritos de la gueniza un original hebreo sustancial o una retrotraduccion tardia? ¿por que quedo fuera del canon rabinico pese a su popularidad entre los sabios del talmud?"
+    },
+    {
+      "tipo": "libro",
+      "id": "sofonias",
+      "href": "/biblia/libros/sofonias",
+      "title": "Sofonías",
+      "sub": "Antiguo Testamento · Sof",
+      "desc": "Tres capítulos de predicación profética bajo el rey Josías en Judá (c. 640–622 a. C.): anuncio cósmico y nacional del «Día de la ira del Señor» contra idolatrías y líderes corruptos de Jerusalén y las naciones vecinas, purificación de los pueblos con un «labio puro» y salvación final del resto humilde sobre el que Dios canta con júbilo (3:17). Protocanónico; completo en NTV y Codex Sinaiticus.",
+      "tags": [
+        "oráculo escatológico del Día del Señor",
+        "invectiva contra idolatrías",
+        "cántico mesiánico de alegría divina"
+      ],
+      "fold": "sofonias sof at antiguo testamento tres capitulos de predicacion profetica bajo el rey josias en juda (c. 640–622 a. c.): anuncio cosmico y nacional del «dia de la ira del senor» contra idolatrias y lideres corruptos de jerusalen y las naciones vecinas, purificacion de los pueblos con un «labio puro» y salvacion final del resto humilde sobre el que dios canta con jubilo (3:17). protocanonico; completo en ntv y codex sinaiticus. hebreo biblico conciso y solemne con resonancias del genesis e isaias reinados de josias hijo de amon en juda (1:1, c. 640–609 a. c.) predicacion en jerusalen previa o contemporanea a la gran reforma de josias (c. 630–622 a. c.), con actualizacion menor posible en el cierre oraculo escatologico del dia del senor invectiva contra idolatrias cantico mesianico de alegria divina tanaj (nevi’im — noveno de los doce) antiguo testamento (protocanonico) antiguo testamento (sophonias) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿que enemigo historico amenazante precipito la vision de juicio de sofonias 1–2 en tiempos de josias? ¿pertenecen 3:9–10 y 3:14–20 al ministerio preexilico de sofonias?"
+    },
+    {
+      "tipo": "libro",
+      "id": "tito",
+      "href": "/biblia/libros/tito",
+      "title": "Tito",
+      "sub": "Nuevo Testamento · Tit",
+      "desc": "Tercera epístola pastoral en tres capítulos dirigida a Tito, colaborador gentil de Pablo dejado en la isla de Creta para consolidar comunidades nacientes: nombrar ancianos irreprochables en cada ciudad, frenar enseñanzas judaizantes interesadas citando incluso al poeta cretense Epiménides, fomentar virtudes cívicas en todas las edades y anclar la ética comunitaria en la doble epifanía salvadora de la gracia de Dios (2:11–14; 3:4–7). Canónica; completa en NTV y Codex.",
+      "tags": [
+        "epístola pastoral organizativa",
+        "código doméstico cívico-eclesial",
+        "resumen doctrinal confesional (2:11–14; 3:4–7)"
+      ],
+      "fold": "tito tit nt nuevo testamento tercera epistola pastoral en tres capitulos dirigida a tito, colaborador gentil de pablo dejado en la isla de creta para consolidar comunidades nacientes: nombrar ancianos irreprochables en cada ciudad, frenar ensenanzas judaizantes interesadas citando incluso al poeta cretense epimenides, fomentar virtudes civicas en todas las edades y anclar la etica comunitaria en la doble epifania salvadora de la gracia de dios (2:11–14; 3:4–7). canonica; completa en ntv y codex. griego koine sobrio, doctrinal y civico con vocabulario de epifania, piedad y buenas obras tras una mision en creta, pablo pide a tito reunirse con el para invernar en nicopolis (3:12) debatida: entre 63–65 d. c. por pablo tras la primera liberacion romana, o c. 85–100 d. c. dentro del corpus pastoral epistola pastoral organizativa codigo domestico civico-eclesial resumen doctrinal confesional (2:11–14; 3:4–7) no incluido nuevo testamento nuevo testamento nuevo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿aplica la formula gramatical «nuestro gran dios y salvador jesucristo» en 2:13 ambos titulos directamente a jesus? ¿refleja tito 1:5–9 ya el episcopado monarquico del siglo ii o una etapa colegial temprana?"
+    },
+    {
+      "tipo": "libro",
       "id": "tobit",
       "href": "/biblia/libros/tobit",
       "title": "Tobit",
@@ -2942,6 +3937,20 @@
         "instrucción sapiencial"
       ],
       "fold": "tobit tob at antiguo testamento relato de una familia israelita deportada a ninive: tobit, ciego por un accidente, y sara, en ecbatana, piden morir el mismo dia, y dios envia al angel rafael a curar a los dos. es deuterocanonico en el canon catolico y la iglesia griega lo lee desde antiguo; no esta en el canon judio ni en el protestante. griego en sus dos formas principales; original semitico (arameo o hebreo) segun los fragmentos de qumran epoca asiria: deportacion de neftali bajo salmanasar, senaquerib y asaradon, hasta la caida de ninive antes de c. 100 a. c. (copias de qumran); la jewish encyclopedia proponia 200–50 a. c. en esta web, tobit se lee en el griego del codex sinaiticus, que transmite la forma larga del libro (gii), junto a una traduccion de trabajo hecha desde ese griego (borrador). la ntv no incluye este libro. relato (narracion en prosa) oracion e himno instruccion sapiencial no incluido deuterocanonico (hipona 393, cartago 397, trento 1546) leido en la iglesia griega desde antiguo (texto corto, gi) no incluido; se edita entre los apocrifos genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿historia o relato edificante? ¿cual de las dos formas griegas es la mas antigua?"
+    },
+    {
+      "tipo": "libro",
+      "id": "zacarias",
+      "href": "/biblia/libros/zacarias",
+      "title": "Zacarías",
+      "sub": "Antiguo Testamento · Zac",
+      "desc": "El libro más extenso de los Profetas Menores en catorce capítulos divididos claramente en dos grandes mitades: I. Ocho visiones nocturnas de reconstrucción en el 520–518 a. C. con Josué, Zorobabel y las promesas sobre el Templo («No con ejército ni con fuerza, sino con mi Espíritu», caps. 1–8); II. Oráculos escatológicos sobre el rey humilde montado en un asno, las treinta piezas de plata, el «traspasado» y el Día final del Señor (caps. 9–14). Protocanónico; completo en NTV y Codex.",
+      "tags": [
+        "proto-apocalíptica visionaria",
+        "homilía ética posexílica",
+        "oráculo escatológico-mesiánico (caps. 9–14)"
+      ],
+      "fold": "zacarias zac at antiguo testamento el libro mas extenso de los profetas menores en catorce capitulos divididos claramente en dos grandes mitades: i. ocho visiones nocturnas de reconstruccion en el 520–518 a. c. con josue, zorobabel y las promesas sobre el templo («no con ejercito ni con fuerza, sino con mi espiritu», caps. 1–8); ii. oraculos escatologicos sobre el rey humilde montado en un asno, las treinta piezas de plata, el «traspasado» y el dia final del senor (caps. 9–14). protocanonico; completo en ntv y codex. hebreo posexilico en prosa y visiones simbolicas (1–8); poesia profetica densa en los dos «oraculos» finales (9–14) comienza en octubre/noviembre del 520 a. c. (octavo mes de dario i) hasta diciembre del 518 a. c. en caps. 1–8 caps. 1–8 datados solidamente en 520–518 a. c.; autoria y fecha de caps. 9–14 muy debatidas entre escuela tardia (siglos v–iii a. c.) o vejez del profeta proto-apocaliptica visionaria homilia etica posexilica oraculo escatologico-mesianico (caps. 9–14) tanaj (nevi’im — undecimo de los doce) antiguo testamento (protocanonico) antiguo testamento (zacharias) antiguo testamento genero y forma contexto historico composicion y autoria mensaje y teologia texto y transmision recepcion e historia de la lectura claves de lectura ¿proceden los capitulos 9–14 del propio zacarias del siglo vi o de autores anonimos posteriores? ¿por que mateo 27:9 atribuye a «jeremias» la cita de las treinta monedas de plata tomada de zacarias 11:12–13?"
     },
     {
       "tipo": "apologetica",

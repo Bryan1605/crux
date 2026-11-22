@@ -1,0 +1,101 @@
+{
+  "id": "1-macabeos",
+  "title": "1 Macabeos",
+  "abbr": "1 Mac",
+  "order": 17.3,
+  "testament": "AT",
+  "summary": "Crónica histórica en dieciséis capítulos sobre la revuelta judía encabezada por Matatías y sus hijos contra Antíoco IV Epífanes, la purificación del Templo y el ascenso de la dinastía asmonea. Deuterocanónico para católicos y ortodoxos; fuera del canon hebreo y protestante.",
+  "genre": [
+    "crónica histórica",
+    "historiografía dinástica",
+    "elegía e himno inserto"
+  ],
+  "language": "Griego en la Septuaginta; consenso mayoritario sobre un original hebreo perdido en la Antigüedad",
+  "date": {
+    "narrative": "Años 175–134 a. C. (137–177 de la era seléucida), desde Antíoco IV hasta el asesinato de Simón Macabeo",
+    "composition": "Entre 134 a. C. y la conquista romana de Pompeyo (63 a. C.), probablemente c. 100 a. C.",
+    "certainty": "probable",
+    "note": "El cierre del libro presupone el gobierno de Juan Hircano (16:23–24), pero desconoce la intervención romana en Judea del año 63 a. C."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Deuterocanónico (Hipona 393, Cartago 397, Trento 1546)",
+    "ortodoxo": "Antiguo Testamento (Anagignoskomena; leído en la tradición de la Septuaginta)",
+    "protestante": "No incluido; se edita entre los apócrifos"
+  },
+  "notice": "En esta web, 1 Macabeos se conserva completo en el griego del Codex Sinaiticus (16 capítulos, 924 versículos). La NTV no incluye este libro.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 1 Macabeos es una narración historiográfica continua de dieciséis capítulos que enlaza el estilo de los libros de Samuel y Reyes con crónicas diplomáticas helenísticas (tratados con Roma y Esparta, decretos honoríficos y fechas por era seléucida). Su arquitectura sigue sucesivamente el levantamiento de Matatías (caps. 1–2), las campañas y reconsagración del Templo bajo Judas Macabeo (caps. 3–9), el principado y sumo sacerdocio de Jonatán (caps. 9–12) y la consolidación estatal de Simón (caps. 13–16).\n\n[Estudio] George Zervos (NETS) y la Jewish Encyclopedia destacan la inserción de siete poemas o lamentos en versos paralelos dentro de una prosa hebraizante sobria."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Texto] El relato parte de la fragmentación del imperio de Alejandro Magno y sitúa la crisis bajo Antíoco IV Epífanes (175 a. C.), cuando sectores helenizantes de Jerusalén erigen un gimnasio y el rey prohíbe los sacrificios, la circuncisión y la Ley, profanando el altar en diciembre del 167 a. C. («la abominación desoladora», 1:54).\n\n[Estudio] La narración se concentra en la resistencia armada desde Modín hasta la obtención de inmunidad fiscal y la expulsión de la guarnición de la Acra, reflejando los intereses políticos del Estado asmoneo naciente y su alianza diplomática temprana con Roma (cap. 8)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] El autor es anónimo y conoce con precisión la topografía de Judea, las fiestas del calendario judío y los anales oficiales del sumo sacerdote Juan Hircano citados al cierre (16:23–24).\n\n[Estudio] Aunque el texto sobrevive en griego, Flavio Josefo y Orígenes conocieron indicios de su lengua semítica (Orígenes transmite el título hebreo Sarbeth Sabanaiel), y tanto la crítica de Toy y Barton en la Jewish Encyclopedia como los análisis sintácticos modernos concluyen que fue redactado originalmente en hebreo hacia finales del siglo II o comienzos del I a. C., entre la muerte de Simón (134 a. C.) y la llegada de Pompeyo (63 a. C.)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] A diferencia de 2 Macabeos, el libro no relata apariciones angélicas ni milagros directos ni menciona el término «Dios» de manera explícita en la mayor parte de la narración, prefiriendo circunloquios reverentes como «el Cielo» (3:18; 4:10) o «el que dirige». La victoria surge del celo por la Ley de los padres, la oración previa al combate y la fidelidad hasta la muerte.\n\n[Estudio] Los autores explican la legitimación teopolítica de los asmoneos como instrumentos «por cuyas manos fue dada salvación a Israel» (5:62), mientras la época aguarda aún «un profeta fiel» (4:46; 14:41)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El texto griego antiguo se transmite principalmente en los grandes unciales Sinaítico (código 12 en su orden interno), Alejandrino y Veneciano (el Vaticano lo omite), y sirvió de base a la Vetus Latina recogida en la Vulgata de Jerónimo (quien declaró haber visto aún el texto hebreo). Las transcripciones modernas siguen la edición crítica de Gotinga de Werner Kappler.\n\n[Texto] En esta plataforma digital puede leerse íntegro en el griego del Codex Sinaiticus con sus 16 capítulos y 924 versículos transcritos y anotados. No forma parte del canon de la Nueva Traducción Viviente ni cuenta todavía con traducción de trabajo."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque 1 Macabeos quedó fuera de las veinticuatro Escrituras del Tanaj rabínico, la fiesta de Janucá —que conmemora la purificación del Templo en el año 164 a. C. (cap. 4)— conservó su memoria viva, y Flavio Josefo lo usó como fuente principal en Antigüedades XII–XIII. Clemente de Alejandría, Tertuliano, Orígenes, Cipriano y Agustín lo citaron ampliamente.\n\nLos sínodos norteafricanos de Hipona (393) y Cartago (397) y el Concilio de Trento (1546) lo confirmaron como canónico; la Reforma protestante lo situó entre los libros apócrifos útiles para la lectura histórica."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Distinguir 1 Macabeos (crónica hebrea centrada en la dinastía asmonea durante cuarenta años) de 2 Macabeos (epitome teológico centrado en Judas y el martirio).\n2. Observar la presencia de tratados y cartas reales (caps. 8, 10, 12 y 14) y leer su retórica diplomática junto al marco narrativo.\n3. Notar cómo el autor evita pronunciar el nombre divino y atribuye el giro militar al celo por la alianza.\n4. Comparar la esperanza abierta por la falta de profeta (4:46; 14:41) con el clima mesiánico del judaísmo tardío del Segundo Templo."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Son auténticos los documentos diplomáticos y cartas reales intercalados en el relato?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Gran parte de la historiografía moderna considera genuino el núcleo de los tratados con Roma (cap. 8) y decretos seléucidas tardíos, redactados con fórmulas cancillerescas helenísticas reales aunque adaptados por el cronista."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros historiadores (como subrayó la Jewish Encyclopedia respecto a la correspondencia con Esparta de 12:19–23 y ciertas cartas seléucidas) juzgan varias piezas como composiciones editoriales destinadas a realzar el prestigio internacional de los hermanos macabeos."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué valor tiene la omisión de 1 Macabeos en el Codex Vaticanus frente a su presencia en el Sinaiticus?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Florentine Bechtel (Catholic Encyclopedia) observa que las listas sinodales y padres griegos y latinos antiguos fluctuaron menos en el uso práctico que en la nomenclatura, aceptando 1–2 Macabeos por su testimonio martirial e histórico."
+        },
+        {
+          "label": "Estudio",
+          "body": "La crítica textual señala que las grandes biblias unciales del siglo IV reflejan colecciones distintas: el Vaticano conserva una selección más próxima al canon hebreo más algunos deuterocanónicos, mientras el Sinaítico incorpora 1 y 4 Macabeos."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "toy-barton-1906-maccabees",
+    "bechtel-1910-machabees",
+    "zervos-nets-1makk",
+    "ce-septuagint",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

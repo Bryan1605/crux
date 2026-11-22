@@ -1,0 +1,104 @@
+{
+  "id": "exodo",
+  "title": "Éxodo",
+  "abbr": "Éx",
+  "order": 2,
+  "testament": "AT",
+  "summary": "Segundo libro de la Torá en cuarenta capítulos: la opresión en Egipto, el llamado de Moisés, las plagas, la Pascua, el paso del mar, la alianza y el Decálogo en el Sinaí y la construcción del Tabernáculo. Protocanónico en todos los cánones; ausente de los folios conservados del Codex Sinaiticus.",
+  "genre": [
+    "epopeya de liberación",
+    "código jurídico-cúltico",
+    "itinerario e himno litúrgico"
+  ],
+  "language": "Hebreo bíblico clásico (con préstamo egipcio en nombres y términos cultuales)",
+  "date": {
+    "narrative": "Salida de Egipto y estancia de un año junto al monte Sinaí (discutida tradicionalmente en torno al s. XV o s. XIII a. C.)",
+    "composition": "Redacción mosaica tradicional frente a síntesis progresiva de tradiciones completada en el período exílico-posexílico",
+    "certainty": "discutida",
+    "note": "El cántico del mar (15:1–18) muestra rasgos arcaicos de poesía hebrea temprana junto a estratos legales y sacerdotales posteriores."
+  },
+  "canon": {
+    "judio": "Tanaj (Torá — Šemot, segundo libro de la Ley)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Éxodo se lee completo en la NTV (40 capítulos, 1.213 versículos). No sobreviven folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Éxodo articula narración épica, liturgia pascual, legislación casuística y descripción técnica arquitectónica en tres actos: la liberación de la esclavitud en Egipto hasta el mar (caps. 1–15), la marcha por el desierto hasta la teofanía y alianza del Sinaí con el Decálogo y el Código de la Alianza (caps. 15–24), y las instrucciones, crisis del becerro de oro y ejecución del Tabernáculo (caps. 25–40).\n\n[Estudio] Benno Jacob y S. R. Driver (Jewish Encyclopedia) destacan la fuerza dramática de la confrontación con el faraón y el contraste estructural entre el pacto roto (32–34) y la morada de gloria que llena el santuario (40:34–38)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] El relato presupone el trasfondo del Egipto del Imperio Nuevo (nombres como Moisés, Finés, Pitón y Ramsés, uso de ladrillos con paja y trabajos forzados en ciudades-almacén del delta) y un encuentro nómada-sacral en la península del Sinaí-Madián.\n\n[Tradición] En la memoria fundacional de Israel, la salida de «casa de servidumbre» constituye el acta de nacimiento histórico y religioso del pueblo, actualizada año tras año en el rito doméstico de la Pascua."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición sitúa en Moisés el origen de las leyes del Sinaí y del relato fundacional.\n\n[Estudio] La crítica literaria distingue materiales narrativos antiguos —con uno de los textos poéticos más antiguos de la Biblia en el Cántico del Mar (15:1–18)—, la colección jurídica conocida como Código de la Alianza (20:22–23:33) y amplias secciones sacerdotales que describen las instrucciones (25–31) y construcción minuciosa del Tabernáculo (35–40), estas últimas abreviadas y reordenadas notablemente en la Septuaginta."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Éxodo revela el nombre propio de Dios («Yo soy el que soy / Yahvé», 3:14) como Dios que escucha el clamor del oprimido y se define luego en 34:6–7 por la misericordia, la fidelidad y el perdón. La liberación política de Egipto tiene una meta cultual y ética: servir a Dios como «reino de sacerdotes y nación santa» (19:6) bajo los Diez Mandamientos (20:1–17).\n\n[Tradición] El paso del mar, el cordero pascual, el maná, la roca y la sangre de la alianza (24:8) pasan al Nuevo Testamento como lenguaje matriz de la redención en Cristo y la Eucaristía."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Éxodo ofrece una de las divergencias textuales más notables entre el Texto Masorético y la Septuaginta: mientras en los capítulos 1–34 ambos marchan muy cercanos, en los capítulos 35–40 sobre la construcción del Tabernáculo el texto griego presenta un orden distinto y es sensiblemente más breve; los hallazgos de Qumrán (4QpaleoExodm, afín al samaritano) revelan también una tradición textual hebrea expansiva.\n\n[Texto] En esta web está disponible completo en la NTV (40 capítulos, 1.213 versículos); el Codex Sinaiticus perdió íntegramente este libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] El Decálogo (Éx 20) y la liturgia de la Pascua (Éx 12) estructuraron de raíz tanto la Hagadá pascual judía y el tratado Pesajim de la Misná como la Vigilia Pascual cristiana descrita por Melitón de Sardes en su Homilía sobre la Pascua y por Agustín.\n\nEn el Nuevo Testamento, la Última Cena instituye la nueva alianza sobre la copa pascual (Mt 26; 1 Co 11), Pablo interpreta el bautismo y la Eucaristía a la luz del Mar Rojo y el maná (1 Co 10:1–4) y el Apocalipsis celebra la victoria final entonando el «cántico de Moisés y del Cordero» (Ap 15:3)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Observar la secuencia teológica: primero la gracia liberadora (caps. 1–15), luego la ley de la alianza (caps. 19–24) para un pueblo ya rescatado.\n2. Seguir el motivo del «corazón endurecido» del faraón, alternando acciones humanas y juicio divino en el ciclo de las plagas.\n3. Notar el tríptico 25–31 (proyecto celeste del Tabernáculo), 32–34 (crisis y perdón del becerro) y 35–40 (ejecución fiel).\n4. Recordar al leer el Decálogo su vínculo directo con el prólogo de liberación (20:2)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo interpretar históricamente las cifras y el marco cronológico del Éxodo?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la arqueología e historia antigua propone una datación ramésida (s. XIII a. C., bajo Ramsés II) basada en Éx 1:11, o sugiere un éxodo gradual o de un grupo núcleo que cristalizó la identidad panisraelita."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otras lecturas conservan la cronología temprana de 1 Reyes 6:1 (c. 1446 a. C.) defendiendo la historicidad básica del relato bíblico."
+        },
+        {
+          "label": "Estudio",
+          "body": "Corrientes minimalistas concluyen que los detalles del Éxodo reflejan la memoria teológica del primer milenio sin rastro arqueológico directo en el Sinaí."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué versión representa la forma más temprana de Éxodo 35–40?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Estudios textuales recientes sugieren que la Septuaginta antigua pudo traducir un original hebreo más corto y con otra disposición anterior a la expansión masorética."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores consideran que un traductor o revisor griego tardío condensó las repeticiones casi literales respecto a los capítulos 25–31."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-exodus",
+    "ce-pentateuch",
+    "tyndale-ntv-2009",
+    "ce-septuagint"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

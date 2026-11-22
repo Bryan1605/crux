@@ -1,0 +1,101 @@
+{
+  "id": "joel",
+  "title": "Joel",
+  "abbr": "Jl",
+  "order": 29,
+  "testament": "AT",
+  "summary": "Segundo de los Doce en la Biblia hebrea (cuarto en la Septuaginta): tres capítulos en la NTV (cuatro en el Codex Sinaiticus) sobre una devastadora plaga de langostas y sequía en Judá convertida en signo del Día inminente del Señor, llamado al ayuno del corazón, derramamiento universal del Espíritu y juicio final en el valle de Josafat. Protocanónico; el capítulo 4 griego tiene traducción de trabajo en Crux.",
+  "genre": [
+    "oráculo litúrgico de súplica nacional",
+    "profecía del Día del Señor",
+    "anuncio escatológico-apocalíptico"
+  ],
+  "language": "Hebreo bíblico lírico y fluido con numerosas citas e inversiones de otros profetas",
+  "date": {
+    "narrative": "Crisis agrícola y litúrgica en Judá tras una plaga sucesiva de cuatro etapas de langostas",
+    "composition": "Muy debatida: monarquía temprana (siglo IX a. C.) frente a período posexílico persa (siglos V–IV a. C.)",
+    "certainty": "discutida",
+    "note": "La ausencia de mención a reyes o a Asiria/Babilonia, el protagonismo de sacerdotes y ancianos y las citas de Ezequiel, Abdías y Malaquías inclinan hoy a muchos críticos hacia la época persa (c. 400 a. C.)."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — segundo del Libro de los Doce; dividido en 4 capítulos en ediciones modernas o 3 según Tradición)",
+    "catolico": "Antiguo Testamento (protocanónico; dividido en 3 o 4 capítulos)",
+    "ortodoxo": "Antiguo Testamento (cuarto de los Doce en la Septuaginta, 4 capítulos)",
+    "protestante": "Antiguo Testamento (3 capítulos en NTV y biblias inglesas/españolas clásicas)"
+  },
+  "notice": "Atención a la numeración: ambos testigos suman exactamente 73 versículos, pero la NTV sigue la división inglesa-masorética en 3 capítulos (unificando Joel 2:28–32), mientras el Codex Sinaiticus (núm. 17) y la Septuaginta lo dividen en 4 capítulos: Joel 3 LXX corresponde a NTV 2:28–32, y Joel 4 LXX (con traducción de trabajo en Crux) equivale a NTV capítulo 3.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Joel despliega una poderosa liturgia profética en dos tiempos simétricos: la primera mitad describe una invasión catastrófica de langostas en oleadas sucesivas y sequía paralizante que interrumpe las ofrendas del Templo, culminando en el llamado penitencial («Rasguen sus corazones y no sus vestidos», 2:13) seguido de la promesa inmediata de restauración de las cosechas (1:1–2:27). La segunda mitad proyecta el horizonte hacia los tiempos finales: derramamiento del Espíritu sobre toda carne, prodigios celestes y juicio de las naciones en el valle de Josafat (2:28–3:21 NTV / caps. 3–4 LXX).\n\n[Estudio] Michael Faulhaber (Catholic Encyclopedia) destaca su vigor poético casi simfónico y su profunda unidad litúrgica."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] A diferencia de la mayoría de profetas, el encabezamiento (1:1 «Joel hijo de Petuel») omite todo nombre de rey de Judá o Israel. Quienes fechan el libro en época temprana (siglo IX a. C. bajo el niño rey Joás) señalan su ubicación temprana en el orden hebreo y enemigos antiguos como Tiro, Sidón y Filistea. Quienes defienden una fecha posexílica persa (siglos V–IV a. C.) observan la dispersión de Israel entre las naciones (3:2), la reconstrucción de los muros (2:9), el liderazgo comunitario de sacerdotes sin rey y el comercio con los griegos (3:6 / 4:6 LXX)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición atribuyó el conjunto a Joel hijo de Petuel.\n\n[Estudio] Hirsch y Ryssel (Jewish Encyclopedia) recogen las divisiones críticas clásicas sobre si los dos capítulos iniciales (liturgia agrícola en el presente) y la sección escatológica (derramamiento del Espíritu y juicio cósmico en el valle de Josafat) proceden de una misma mano en dos momentos o de una expansión apocalíptica posterior sobre el núcleo de la plaga. Hoy muchos exegetas subrayan cómo la frase «Después de esto» (2:28 / 3:1 LXX) une orgánicamente la respuesta a la plaga presente con la salvación definitiva."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Ante la calamidad ecológica del campo y del altar, Joel rechaza el ritualismo superficial pidiendo un corazón rasgado vuelto a «un Dios clemente y compasivo, lento para la ira y grande en misericordia» (2:13). Su punto culminante universaliza el don profético reservado antes a unos pocos líderes: hijos e hijas, ancianos, jóvenes, siervos y siervas recibirán por igual el Espíritu de Dios, garantizando la salvación a «todo aquel que invoque el nombre del Señor» (2:28–32 / 3:1–5 LXX), aunque invierte la famosa frase de Isaías y Miqueas llamando a las naciones a forjar espadas de sus arados para el juicio final.\n\n[Tradición] En Pentecostés, el apóstol Pedro cita íntegramente este oráculo (Hechos 2:16–21) declarando que «esto es lo dicho por el profeta Joel»."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Presente entre los fragmentos de los Doce Profetas en Qumrán (4QXIIc, 4QXIIg) y en el rollo griego de Nahal Hever, el texto de Joel se ha conservado con gran estabilidad en hebreo y griego salvo divergencias menores de acento y el reparto capitular. En el Codex Sinaiticus (núm. 17), Joel ocupa el cuarto lugar de los Doce (tras Oseas, Amós y Miqueas) y ofrece variantes notables entre la mano original (*) y las correcciones (cb2/cb3) en 4:10, 4:16 y 4:19.\n\n[Texto] Aquí se ofrece en 3 capítulos NTV (73 vv.) frente a los 4 capítulos del Sinaiticus (73 vv.), cuya parte final (Joel 4 LXX) cuenta con traducción de trabajo propia en Crux."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] El oráculo de Joel 2:28–32 (3:1–5 LXX) ocupa un sitial fundacional en el cristianismo desde el discurso inaugural de Pentecostés en Hechos 2 y la afirmación paulina de salvación universal en Romanos 10:13 («Todo aquel que invoque el nombre del Señor será salvo»), mientras las trompetas y langostas del Apocalipsis (Ap 9) evocan el ejército devastador de Joel 1–2.\n\nEn la tradición litúrgica judía y cristiana, Joel 2:12–18 es lectura clásica de penitencia y Miércoles de Ceniza."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Observar la transición teológica entre la plaga agrícola literal (cap. 1), su transfiguración en ejército apocalíptico (2:1–11) y el Día definitivo del Señor (3 / 4 LXX).\n2. Recordar el cambio de capítulos entre NTV y Codex Sinaiticus: NTV 2:28–32 = Codex cap. 3; NTV cap. 3 = Codex cap. 4.\n3. Comparar el llamado de guerra de Joel 3:10 («forjen espadas de sus rejas») frente a la visión de paz de Isaías 2:4 y Miqueas 4:3.\n4. Abrir Joel 4 LXX en modo traducción en Crux para revisar las variantes críticas del Sinaítico."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cuándo se compuso el libro de Joel: en época monárquica preexílica o en el período persa posexílico?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Defensores de una fecha temprana (siglo IX a. C. bajo Joás o preexílica) señalan su colocación al inicio de los Doce tras Oseas y la ausencia de referencia a Babilonia, Siria o Asiria."
+        },
+        {
+          "label": "Estudio",
+          "body": "La mayoría de especialistas actuales (Barton, Wolff, Crenshaw) lo data entre 450 y 350 a. C. por presuposición del destierro ya ocurrido (3:2 / 4:2), el muro intacto (2:9), el comercio griego (3:6) y aparentes ecos de Ezequiel, Abdías y Malaquías."
+        }
+      ]
+    },
+    {
+      "question": "¿Las langostas de Joel 1–2 designan una plaga real de insectos, un ejército metafórico o ambos planos progresivamente?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Muchos comentaristas distinguen una plaga histórica real y devastadora de langostas en el cap. 1 que sirve en el cap. 2 de metáfora tipológica del «ejército del Señor» escatológico."
+        },
+        {
+          "label": "Tradición",
+          "body": "La exégesis alegórica patrística (Jerónimo) leyó las cuatro especies de langostas directamente como cuatro imperios históricos (asirio-babilonio, persa, griego y romano)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-joel",
+    "ce-joel",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

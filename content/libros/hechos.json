@@ -1,0 +1,101 @@
+{
+  "id": "hechos",
+  "title": "Hechos",
+  "abbr": "Hch",
+  "order": 44,
+  "testament": "NT",
+  "summary": "Segundo tomo de la obra de Lucas en veintiocho capítulos y puente histórico único entre los Evangelios y las epístolas: narra la Ascensión, Pentecostés, la vida de la iglesia primitiva en Jerusalén, el martirio de Esteban, la apertura a Samaria y al centurión Cornelio, el Concilio de Jerusalén (cap. 15) y los tres viajes misioneros de Pablo hasta llegar encadenado a Roma predicando sin estorbo. Canónico; completo en NTV y Codex.",
+  "genre": [
+    "historiografía apostólica lucana",
+    "discursos misioneros y apologéticos",
+    "crónica de viajes («secciones nosotros»)"
+  ],
+  "language": "Griego koiné versátil, desde tono bíblico semítico en Judea hasta estilo helenístico culto en los viajes marítimos (cap. 27)",
+  "date": {
+    "narrative": "Desde la Ascensión en Jerusalén (c. 30–33 d. C.) hasta los dos años de arresto domiciliario de Pablo en Roma (c. 60–62 d. C.)",
+    "composition": "Debatida: hacia 62–64 d. C. (al cierre inmediato del relato) o hacia 80–90 d. C. en paralelo con el Evangelio de Lucas",
+    "certainty": "discutida",
+    "note": "Termina abruptamente en 28:30–31 sin narrar la muerte de Pablo ni el incendio de Roma (64 d. C.) ni la caída de Jerusalén (70 d. C.)."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento (Praxis Apostolon)",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Hechos continúa el Evangelio de Lucas siguiendo el programa geográfico trazado por Cristo resucitado en 1:8: «Serán mis testigos en Jerusalén, en toda Judea y Samaria, y hasta lo último de la tierra». Los capítulos 1–12 siguen principalmente a Pedro, Esteban y Felipe en el arraigo judío y la ruptura inicial hacia los gentiles (cap. 10); los capítulos 13–28 acompañan a Bernabé y Pablo desde Antioquía hasta Asia Menor, Grecia, los procesos judiciales en Cesarea y el naufragio rumbo a Roma.\n\n[Estudio] Alrededor de un cuarto del libro consta de veinticuatro discursos directos (Pedro, Esteban, Santiago, Pablo ante el Areópago, Félix y Agripa)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Hechos constituye la fuente histórica principal sobre las tres primeras décadas del movimiento cristiano dentro del Imperio romano (años 30–62 d. C.). Su exactitud topográfica y administrativa se confirma por epigrafía: títulos precisos de funcionarios locales como «politarcas» en Tesalónica (17:6), «procónsul» Galión en Acaya (18:12, cuya inscripción de Delfos fecha exactamente la estancia de Pablo en Corinto en 51–52 d. C.), «asiarcas» en Éfeso y «protós» de Malta.\n\nA la vez documenta las tensiones internas entre creyentes judíos observantes y gentiles incircuncisos resueltas en Jerusalén (cap. 15)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Tanto el Fragmento Muratoriano como Ireneo y los encabezados unánimes atribuyen el libro a Lucas el médico, explicando las célebres «secciones nosotros» en primera persona plural (16:10–17; 20:5–21:18; 27:1–28:16) como diario directo de viaje del propio acompañante de Pablo.\n\n[Estudio] Andrew E. Breen (Catholic Encyclopedia) y la crítica moderna estudian cómo Lucas entretejió tradiciones de la iglesia de Jerusalén y Antioquía, notas de viaje y discursos compuestos según las convenciones historiográficas antiguas (Tucídides) fieles al núcleo del mensaje predicado por los protagonistas."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El verdadero protagonista de Hechos es el Espíritu Santo derramado en Pentecostés (cap. 2), que impulsa cada cruce de fronteras: desarma el prejuicio étnico de Pedro ante Cornelio («Dios no hace acepción de personas», 10:34), guía a Pablo a Europa (16:9) y sella el Concilio de Jerusalén salvando la libertad gentil por gracia («Creemos que por la gracia del Señor Jesús somos salvos, igual que ellos», 15:11). Al final, incluso encadenado en Roma, Pablo predica el Reino de Dios «abiertamente y sin impedimento» (28:31).\n\n[Tradición] Es el texto fundacional de toda eclesiología misionera."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Hechos presenta la mayor divergencia textual entre sus dos recensiones antiguas: el texto «alejandrino» breve y sobrio (representado por el Codex Sinaiticus, el Vaticanus y P45/P75) frente al texto «occidental» (Codex Bezae D, papiros antiguos y citas de Ireneo y Cipriano), casi una décima parte más extenso con vívidas aclaraciones y detalles narrativos adicionales en casi cada capítulo.\n\n[Texto] Aquí la NTV sigue básicamente la base alejandrina (28 caps., 1.003 vv.) en plena concordancia con el Codex Sinaiticus (núm. 51, situado detrás de Hebreos/Filemón; 28 caps., 1.002 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Denominado ya en la Antigüedad «Evangelio del Espíritu Santo», Hechos aseguró la unidad apostólica entre Pedro y Pablo —desmintiendo lecturas escisionistas posteriores— al retratarlos en paralelo perfecto de discursos, milagros y prisiones. Juan Crisóstomo dedicó cincuenta y cinco homilías completas a Hechos subrayando el valor actual de la comunidad de bienes (caps. 2 y 4) y el ardor misionero de Pablo."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Trazar en un mapa el despliegue concéntrico de 1:8: Jerusalén (1–7), Judea-Samaria-Antioquía (8–12) y Asia-Europa-Roma (13–28).\n2. Leer el capítulo 15 junto a Gálatas 2 para cotejar la visión pastoral histórica de Lucas con la perspectiva personal de Pablo.\n3. Observar el paso sutil de «ellos» a «nosotros» en 16:10, 20:5 y 27:1 como rastro del compañero de viaje.\n4. Notar el final abierto de 28:30–31: el libro acaba sin punto final cerrado porque el testimonio de la Palabra libre continúa."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo armonizar el relato de Hechos 15 sobre el Concilio de Jerusalén con Gálatas 2?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Gran número de historiadores identifica Hch 15 y Gá 2:1–10 como el mismo concilio (c. 48–49 d. C.), visto desde el acta comunitaria de reconciliación en Lucas y desde el combate personal de Pablo contra judaizantes en Gálatas."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores (como Ramsay o Bruce en una variante) equiparan Gálatas 2 con la visita anterior de ayuda alimentaria en Hechos 11:27–30 antes del concilio, o consideran que Lucas armonizó y estilizó conflictos apostólicos más agudos."
+        }
+      ]
+    },
+    {
+      "question": "¿Por qué existe una diferencia tan marcada entre el texto alejandrino (Codex Sinaiticus) y el occidental (Codex Bezae) en Hechos?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La postura mayoritaria hoy ve el texto alejandrino como más cercano al original de Lucas y el occidental como una paráfrasis expansiva muy temprana del s. II que amplificó explicaciones piadosas e históricas."
+        },
+        {
+          "label": "Estudio",
+          "body": "Una corriente minoritaria antigua (Blass, Clark, Boismard) sugirió que el propio Lucas pudo emitir dos borradores de su obra o que parte de las variantes occidentales conservan recuerdos históricos fidedignos del siglo I."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-acts",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "csp-acerca-del-codex"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

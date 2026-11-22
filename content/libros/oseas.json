@@ -1,0 +1,100 @@
+{
+  "id": "oseas",
+  "title": "Oseas",
+  "abbr": "Os",
+  "order": 28,
+  "testament": "AT",
+  "summary": "Primero de los Doce Profetas Menores en catorce capítulos: profecía ejercida en el Reino del Norte (Israel/Efraín) en las últimas décadas antes de la caída de Samaria (722 a. C.), expresando la ruptura y misericordia de la alianza mediante la metáfora nupcial del matrimonio de Oseas con Gómer. Protocanónico; ausente del Codex Sinaiticus conservado.",
+  "genre": [
+    "profecía poética de alianza",
+    "acción simbólica conyugal",
+    "pleito judicial divino (riv)"
+  ],
+  "language": "Hebreo norteño israelita (efraimita), conciso, metafórico y textualmente complejo",
+  "date": {
+    "narrative": "Reinados de Jeroboam II hasta Oseas de Israel (c. 755–724 a. C.)",
+    "composition": "Oráculos orales de Oseas hijo de Beeri en el norte (s. VIII a. C.), transmitidos y editados luego en Judá",
+    "certainty": "probable",
+    "note": "Anticipa intrigas golpistas y alianzas desesperadas con Asiria y Egipto anteriores a la conquista asiria de Samaria en 722 a. C."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — primero del Libro de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Osee; primero de los Doce en orden griego)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Oseas se lee completo en la NTV (14 capítulos, 197 versículos). No perduran folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Oseas abre la colección de los Doce Profetas («Menores» por su brevedad, no por importancia) articulando catorce capítulos en dos partes desiguales. Los capítulos 1–3 dramatizan el matrimonio simbólico del profeta con Gómer y los nombres proféticos de sus tres hijos («Jezreel», «No compadecida» y «No es mi pueblo»), pasando del juicio a la promesa de nuevo desposorio en el desierto. Los capítulos 4–14 agrupan oráculos poéticos apasionados donde Dios acusa la idolatría baalista, denuncia la inestabilidad política y suplica el retorno de su hijo Efraín.\n\n[Estudio] Emplea imágenes domésticas cotidianas —esposa, padre que enseña a caminar al niño (11:3), rocío, león, panadero— de incomparable ternura lírica."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Único de los profetas escritores oriundo del Reino del Norte, Oseas ejerció desde la aparente prosperidad final de Jeroboam II hasta los golpes de Estado regicidas tras 745 a. C. y la asfixia asiria bajo Tiglat-pileser III y Salmanasar V (5:13; 7:11; 10:6). Frente al sincretismo religioso que atribuía a los baales cananeos la fecundidad del trigo, el vino y el aceite en Betel y Gilgal, Oseas recuerda que todo don agrícola proviene de Yahvé.\n\nLlevados al sur tras 722 a. C., sus rollos nutrieron la predicación posterior de Jeremías."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atribuido desde antiguo a Oseas hijo de Beeri.\n\n[Estudio] Como analizan Hirsch y Ryssel (Jewish Encyclopedia) y Jean-Marie Calès (Catholic Encyclopedia), los capítulos 1 (en tercera persona) y 3 (en primera persona) preservan distintas narraciones o momentos del signo conyugal de Oseas, mientras en el corpus de caps. 4–14 redactores de Judá tras la caída de Samaria actualizaron puntualmente algunas menciones a Judá y la esperanza davídica (1:7; 3:5)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Oseas inaugura en la Biblia la metáfora nupcial y paternal de Dios hacia su pueblo: frente al adulterio idolátrico de Israel, Dios no responde como marido vengativo sino en lucha consigo mismo («¿Cómo podré abandonarte, oh Efraín?… Mi corazón se conmueve dentro de mí, pues Dios soy y no hombre», 11:8–9). Exige ante todo conocimiento de Dios y jesed solidario: «Misericordia quiero y no sacrificio, y conocimiento de Dios más que holocaustos» (6:6).\n\n[Tradición] Tanto Mateo (2:15 «De Egipto llamé a mi hijo»; 9:13 y 12:7 citando Os 6:6) como Pablo (Ro 9:25–26 sobre «No es mi pueblo» llamado «hijos del Dios viviente») y 1 Pedro 2:10 convierten a Oseas en clave evangélica."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El texto hebreo de Oseas es reconocido entre los más difíciles y corruptos gramaticalmente del Antiguo Testamento, conservando posibles dialectismos efraimitas que tanto los editores del Masorético como los traductores griegos antiguos (LXX, analizada por George Howard en NETS) interpretaron de formas divergentes. Pablo en 1 Corintios 15:55 («¿Dónde está, oh muerte, tu aguijón?») refleja libremente el giro griego de Os 13:14.\n\n[Texto] Aquí la NTV presenta los 14 capítulos completos (197 vv.); faltan los capítulos de Oseas en el Codex Sinaiticus conservado."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Para la teología bíblica cristiana, Oseas 6:6 («Misericordia quiero y no sacrificio») resumió el criterio ético de Jesús frente al legalismo (Mt 9:13; 12:7), y Oseas 11:1 inspiró la lectura tipológica del regreso de Egipto en Mateo 2:15. En el judaísmo, la haftarah de Oseas 14:2–10 («Vuelve, oh Israel, al Señor tu Dios») inaugura el sábado de arrepentimiento entre Rosh Hashaná y Yom Kipur (Shabat Shuvá), haciendo del «amor gratuito» (14:4) himno de reconciliación."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer juntos los capítulos 1 y 3 preguntando cómo el amor persistente hacia una esposa infiel expresa la fidelidad inaudita de Dios.\n2. Notar en los capítulos 4–14 la estructura repetida de «acusación → juicio → ternura restauradora» (esp. 2:14–23; 6:1–3; 11:1–11; 14:1–9).\n3. Observar la densidad política de caps. 5 y 7–8 («Efraín es una torta no volteada», «paloma incauta»): la fe sin alianzas idolátricas.\n4. Buscar las citas de Os 6:6, 11:1 y 13:14 en el Nuevo Testamento."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿El matrimonio de Oseas con Gómer «mujer de fornicaciones» (1:2; 3:1) fue real, retrospectivo o simbólico?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Maimónides, Ibn Ezra y Jerónimo discutieron si el mandato fue una visión simbólica profética (para evitar asociar al profeta con impureza real) o una historia vivida literalmente."
+        },
+        {
+          "label": "Estudio",
+          "body": "La mayoría de exegetas actuales sostiene una experiencia matrimonial dolorosa real (interpretada luego prolepticamente desde la infidelidad ulterior de Gómer) que transformó la vida entera de Oseas en parábola viviente."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo interpretar la relación entre los capítulos 1 y 3?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica ve en el cap. 1 (tercera persona) y el cap. 3 (primera persona) dos relatos secuenciales: Gómer abandona a Oseas y este vuelve a rescatarla."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros ven dos narraciones paralelas de un mismo acontecimiento procedentes de círculos transmisores distintos."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-hosea",
+    "ce-osee",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

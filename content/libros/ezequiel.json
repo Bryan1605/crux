@@ -1,0 +1,100 @@
+{
+  "id": "ezequiel",
+  "title": "Ezequiel",
+  "abbr": "Ez",
+  "order": 26,
+  "testament": "AT",
+  "summary": "Cuarenta y ocho capítulos del sacerdote y profeta deportado Ezequiel en Babilonia (593–571 a. C.): visiones cósmicas del trono carroza (merkabá), signos teatrales del asedio de Jerusalén, huida de la gloria de Yahvé del Templo profanado, promesa del corazón nuevo y el valle de huesos secos (36–37) y visión arquitectónica del Templo restaurado (40–48). Protocanónico; ausente del Sinaiticus.",
+  "genre": [
+    "visión extática y apocalíptica temprana",
+    "acción profética simbólica",
+    "programa arquitectónico-cultual"
+  ],
+  "language": "Hebreo bíblico sacerdotal tardío de época exílica con vocabulario técnico acadio-babilónico",
+  "date": {
+    "narrative": "Fechas precisas desde el quinto año del exilio de Joaquín (593 a. C.) hasta el año veintisiete (571 a. C.) junto al canal Quebar en Babilonia",
+    "composition": "Oráculos y visiones de Ezequiel en Babilonia editados por él o su escuela durante el siglo VI a. C.",
+    "certainty": "probable",
+    "note": "Es el libro profético con cronología interna más rigurosamente fechada mes y año a lo largo de trece dataciones explícitas."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — Profetas Posteriores, tercero tras Isaías y Jeremías)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Iezekiel)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Ezequiel está completo en la NTV (48 capítulos, 1.273 versículos). No perduran folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Ezequiel presenta una simetría arquitectónica notable en cuarenta y ocho capítulos ordenados cronológica y teológicamente en tres paneles: I. Oráculos de juicio contra Jerusalén antes del 586 a. C. —incluyendo la teofanía inaugural de los cuatro seres vivientes, gestos dramáticos de asedio y el abandono del Templo por la Gloria de Dios (caps. 1–24)—; II. Profecías contra siete naciones extranjeras, con Tiro y Egipto al centro (caps. 25–32); III. Mensajes de consolación tras caer Jerusalén: el buen pastor (34), el espíritu y corazón de carne (36), el valle de huesos secos (37), Gog de Magog (38–39) y la visión minuciosa del nuevo Templo y del río sanador que brota del santuario (40–48).\n\n[Estudio] Su nombre final de la ciudad resume todo: «El Señor está allí» (48:35)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Hijo del sacerdote Buzi y deportado a Babilonia junto al rey Joaquín en la primera ola del 597 a. C. (1:2–3), Ezequiel profetizó entre los cautivos instalados en Tel-Abib junto al canal agrícola Quebar (naru kabaru, cerca de Nippur, documentado en archivos neobabilónicos de la familia Murashú).\n\nMientras Jeremías combatía en Jerusalén las vanas esperanzas de un regreso en dos años, Ezequiel destruyó las ilusiones equivalentes de los exiliados babilonios hasta el día mismo en que llegó el fugitivo con la noticia: «¡La ciudad ha caído!» (33:21)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición atribuyó el libro íntegro al propio profeta Ezequiel redactándolo en Babilonia.\n\n[Estudio] Hirsch y Cornill (Jewish Encyclopedia) y Joseph Schets (Catholic Encyclopedia) recogen cómo, tras críticas extremas tempranas sobre redacciones tardías, la mayoría de investigadores modernos (Zimmerli, Greenberg) reconoce una fuerte impronta unitaria personal del profeta en estilo, fechas exactas y memoria sacerdotal, junto a posibles ampliaciones y desarrollos de discípulos de su círculo profético en tramos como caps. 38–39 y 40–48."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] En tierra pagana sin altar ni patria, Ezequiel proclama primero que la presencia de Dios no es prisionera de un edificio físico: la Gloria móvil de Yahvé sobre ruedas abandona un Templo idolátrico (cap. 10) para convertirse en «pequeño santuario» en medio de los desterrados (11:16). Afirma la responsabilidad moral individual frente al fatalismo hereditario («el alma que peque, esa morirá», 18:4) y anuncia una regeneración radical por obra unilateral de Dios «por amor de su santo nombre»: agua limpia, corazón nuevo y Espíritu que resucita huesos secos (36–37).\n\n[Tradición] Su lenguaje nutre directamente al Evangelio de Juan (el Buen Pastor de cap. 34, el agua y el Espíritu de 36:25) y al Apocalipsis entero (el trono de los cuatro seres, Gog y Magog y el río de vida)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El texto hebreo masorético de Ezequiel presenta notables dificultades gramaticales, mientras el papiro griego Chester Beatty 967 (s. II–III d. C.) —testigo prehexaplar de la Septuaginta— ofrece una forma alrededor de un cinco por ciento más breve, omite 36:23b–38 y sitúa el capítulo 37 antes de 38–39 en un orden distinto que abre fértiles hipótesis editoriales.\n\n[Texto] Aquí se lee completo en la NTV (48 capítulos, 1.273 vv.); el Codex Sinaiticus no conserva folios de este libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Por las diferencias legales entre los sacrificios de Ezequiel 40–48 y la Torá de Moisés (cfr. Talmud Shabat 13b) y por el peligro místico atribuido a la visión de la Carroza (Maasé Merkabá en cap. 1, restringida a sabios maduros en Jaguigá 2:1), Ezequiel suscitó veneración cautelosa en el rabinismo, mientras alimentó toda la mística judía de los Palacios Celestes (Hejalot). En el cristianismo, los cuatro rostros vivientes de Ez 1 inspiraron a Ireneo y Jerónimo el tetramorfos simbólico de los cuatro Evangelistas, y el Apocalipsis de Juan reelabora todo el libro de principio a fin."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir el desplazamiento de la «Gloria del Señor» (kabod): entra en Babilonia (cap. 1), abandona Jerusalén (caps. 8–11) y vuelve al nuevo Templo (cap. 43).\n2. Leer los capítulos 18 y 33 juntos sobre la justicia personal, el atalaya y el deseo divino de que el impío viva.\n3. Conectar el valle de los huesos secos (37:1–14) con las dos varas reunidas (Israel y Judá en 37:15–28) antes de la restauración cultual.\n4. Leer Apocalipsis 4, 20 y 21–22 teniendo abierto Ezequiel 1, 38–39 y 47."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Refleja el orden y brevedad del Papiro 967 en los caps. 36–39 una etapa textual más temprana que el Masorético?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Estudiosos como Lust y Tov argumentan que el Papiro 967 traduce una edición hebrea más antigua en la que aún no se había añadido 36:23b–38 ni reordenado el valle de huesos secos tras Gog."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros críticos opinan que la omisión de 36:23b–38 en Papiro 967 pudo deberse a un accidente de lectura (salto visual o homoioteleuton) seguido por reordenamientos litúrgicos."
+        }
+      ]
+    },
+    {
+      "question": "¿Describe Ezequiel 40–48 un proyecto histórico de templo para el retorno persa o una visión simbólica escatológica?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica lo ve como programa ideal sacerdotal diseñado para cuando Israel regresara a su tierra, aunque jamás se edificó con esa geografía ni río sobrenatural."
+        },
+        {
+          "label": "Tradición",
+          "body": "Muchas exégesis judías y cristianas leen 40–48 simbólica o escatológicamente: un santuario perfecto cuya agua viva sana el Mar Muerto y apunta a la Nueva Jerusalén."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-ezekiel",
+    "ce-ezekiel",
+    "tyndale-ntv-2009",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

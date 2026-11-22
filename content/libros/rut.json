@@ -1,0 +1,100 @@
+{
+  "id": "rut",
+  "title": "Rut",
+  "abbr": "Rt",
+  "order": 8,
+  "testament": "AT",
+  "summary": "Breve relato idílico en cuatro capítulos ambientado en los días de los jueces: Noemí regresa empobrecida de Moab a Belén junto a su nuera moabita Rut, quien ejerce la piedad fiel (jesed) y es redimida mediante Booz según la ley del pariente redentor, dando origen al linaje de David. Protocanónico; no sobrevive en el Codex Sinaiticus.",
+  "genre": [
+    "novela corta pastoral",
+    "narración sapiencial-jurídica",
+    "genealogía davídica"
+  ],
+  "language": "Hebreo bíblico elegante y arcaizante de prosa dialogada",
+  "date": {
+    "narrative": "Época de los Jueces, generaciones inmediatamente anteriores al rey David",
+    "composition": "Debatida: período monárquico temprano frente a composición posexílica persa (siglos V–IV a. C.)",
+    "certainty": "discutida",
+    "note": "Quienes proponen época posexílica ven una respuesta tolerante frente a las prohibiciones de matrimonios mixtos en Esdras y Nehemías; otros sitúan su base bajo la monarquía de David o Salomón."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — primera de las Cinco Meguilot, leída en Shavuot)",
+    "catolico": "Antiguo Testamento (protocanónico; ubicado tras Jueces)",
+    "ortodoxo": "Antiguo Testamento (tras Jueces)",
+    "protestante": "Antiguo Testamento (tras Jueces)"
+  },
+  "notice": "En esta web, Rut está completo en la NTV (4 capítulos, 85 versículos). No sobreviven folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Rut es una joya literaria de apenas ochenta y cinco versículos articulada en cuatro actos perfectos que siguen el ritmo de la siembra a la cosecha de cebada y trigo: I. El vacío y el retorno de Moab a Belén con el juramento de lealtad de Rut (cap. 1); II. El encuentro en los campos de espigadores bajo la protección de Booz (cap. 2); III. La audaz petición nocturna en la era (cap. 3); IV. El proceso legal a la puerta de Belén, el rescate de la heredad y la genealogía hasta David (cap. 4).\n\n[Estudio] Francis Gigot (Catholic Encyclopedia) subraya su maestría dramática, libre de milagros espectaculares y centrada en la providencia cotidiana."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Texto] La narración se sitúa «en los días en que gobernaban los jueces» (1:1), cuando una hambruna en Judá obliga a Elimelec y Noemí a emigrar a Moab. Su trama ilustra costumbres jurídicas israelitas antiguas: el espigueo reservado a pobres y forasteros (Lv 19:9–10; Dt 24:19), el rescate de tierras familiares por el pariente cercano (goel, Lv 25) y el espíritu del levirato (Dt 25:5–10).\n\n[Estudio] Como recogen Barton (Jewish Encyclopedia) y comentaristas modernos, la explicación de ritos pasados en 4:7 («esta era la costumbre antigua en Israel…») indica distancia temporal entre los hechos narrados y el redactor."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Bava Batra 14b relaciona la redacción de Rut con Samuel por preceder a la historia de David.\n\n[Estudio] La crítica se divide entre quienes datan el libro en época monárquica (para defender la ascendencia parcialmente moabita del rey David) y quienes, por los arameísmos tardíos, el lenguaje explicativo de 4:7 y su inclusión entre los Escritos (Ketuvim), lo sitúan tras el exilio (siglos V–IV a. C.) como contrapunto abierto en favor de la extranjera piadosa frente a medidas rigoristas como Esdras 9–10."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Sin discursos proféticos ni teofanías visibles, la acción de Dios obra invisiblemente a través del jesed —fidelidad compasiva más allá de todo deber— de tres personajes concretos: Rut la extranjera moabita que se acoge «bajo las alas» del Dios de Israel (2:12), Booz el hombre íntegro que excede la letra de la ley para amparar a dos viudas, y Noemí que pasa de «Mara» («amarga») a sostener en su regazo al abuelo de David.\n\n[Tradición] En la genealogía de Mateo 1:5, Rut figura explícitamente entre las mujeres antepasadas del Mesías."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El hebreo de Rut se conservó con notable limpieza en el Texto Masorético y en cuatro fragmentos de Qumrán (2QRutha-b, 4QRutha-b). En el orden del Tanaj hebreo ocupa lugar entre los Escritos (Ketuvim), como segundo o primer rollo de las cinco Meguilot; en cambio, la Septuaginta, la Vulgata y las Biblias cristianas lo sitúan inmediatamente después de Jueces como antesala cronológica de 1 Samuel.\n\n[Texto] En Crux se lee completo en la NTV (4 capítulos, 85 versículos); falta en los restos conservados del Codex Sinaiticus."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En la liturgia judía, el libro de Rut se recita íntegramente en la fiesta de Shavuot (Pentecostés), cosecha del trigo y entrega de la Torá: tanto por el escenario de la siega en Belén como por presentar a Rut abrazando voluntariamente la fe y el pueblo de Israel y por la tradición que sitúa el nacimiento y muerte de David en esa fecha.\n\nPara el cristianismo, Mateo 1:5 vincula a esta moabita redimida directamente al linaje mesiánico nacido en Belén."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Observar la transformación de Noemí comparando 1:20–21 («llámenme Mara») con los cánticos de las mujeres en 4:14–17.\n2. Seguir el doble uso de «redentor» (goel): Booz como pariente que rescata la tierra y el nombre del difunto, imagen de la fidelidad divina.\n3. Prestar atención a la inclusión de una moabita fiel pese a Deuteronomio 23:3.\n4. Notar la diferencia canónica de ubicación entre el Tanaj judío (Escritos) y el orden griego-cristiano (entre Jueces y Samuel)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue escrito como apología monárquica temprana o como réplica posexílica al exclusivismo nacional?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Una corriente influyente fecha el relato en época persa (s. V–IV a. C.) por rasgos lingüísticos tardíos y su contraste luminoso con la expulsión de esposas extranjeras en Esdras–Nehemías."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros hebraístas señalan que el estilo es prosa clásica preexílica bien preservada (los supuestos arameísmos serían dialectalismos coloquiales) y ven un relato davidico antiguo."
+        }
+      ]
+    },
+    {
+      "question": "¿Pertenece originalmente la genealogía de 4:18–22 al autor o es un añadido editorial?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica considera 4:18–22 un apéndice derivado de 1 Crónicas 2 para enlazar la historia familiar con el trono de David."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros comentaristas destacan que el cierre en 4:17 («es el padre de Isaí, padre de David») ya exige desde dentro del relato su culminación genealógica."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-ruth",
+    "ce-ruth",
+    "tyndale-ntv-2009",
+    "je-bible-canon"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

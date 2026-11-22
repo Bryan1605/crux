@@ -1,0 +1,100 @@
+{
+  "id": "2-corintios",
+  "title": "2 Corintios",
+  "abbr": "2 Co",
+  "order": 47,
+  "testament": "NT",
+  "summary": "La carta más personal, emotiva y autobiográfica de Pablo en trece capítulos (escrita hacia 55–56 d. C. desde Macedonia): consuelo en la aflicción extrema, gloria del ministerio del Espíritu frente a la letra que mata («llevamos este tesoro en vasos de barro», 4:7), llamado a la reconciliación (cap. 5), exhortación a la colecta generosa (8–9) y defensa irónica de sus debilidades apostólicas y el «aguijón en la carne» (10–13). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "carta de reconciliación apostólica",
+    "apología autobiográfica irónica («discurso del necio»)",
+    "exhortación a la colecta"
+  ],
+  "language": "Griego koiné vehemente, abrupto y apasionado que pasa de la ternura al sarcasmo dolido",
+  "date": {
+    "narrative": "Tras abandonar Éfeso hacia Troas y Macedonia esperando noticias de Tito desde Corinto (c. 55–56 d. C.)",
+    "composition": "Otoño de c. 55 o 56 d. C. desde Macedonia",
+    "certainty": "segura",
+    "note": "Escrita poco después de la crisis grave relatada entre lágrimas tras 1 Corintios y poco antes de pasar el invierno en Corinto redactando Romanos."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Corintios desvela sin filtros el corazón del apóstol herido por calumnias y facciones en trece capítulos marcados por tres bloques contrastantes: I. Celebración de la consolación divina tras casi morir en Asia, defensa del nuevo pacto del Espíritu y llamado «en nombre de Cristo: reconcíliense con Dios» (caps. 1–7); II. Teología práctica de la generosidad cristiana al organizar la colecta para los creyentes pobres de Jerusalén según la entrega de Cristo (caps. 8–9); III. Cambio repentino de tono hacia una amarga y brillante autodefensa irónica frente a los «superapóstoles» que despreciaban la apariencia débil de Pablo (caps. 10–13).\n\n[Estudio] El contraste abrupto entre los capítulos 1–9 (reconciliación) y 10–13 (combate abierto) ha originado célebres debates literarios sobre si agrupa varias cartas paulinas a Corinto."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Entre 1 y 2 Corintios medió una historia tensa revelada a retazos: una breve «visita dolorosa» fallida (2:1), una severa «carta escrita entre muchas lágrimas» llevada por Tito (2:4; 7:8), y la irrupción en Corinto de predicadores itinerantes orgullosos de sus cartas de recomendación, elocuencia helenística, visiones extáticas y linaje hebreo (11:13–23). Para ellos, los sufrimientos físicos de Pablo, su pobreza manual y sus derrotas lo descalificaban como apóstol auténtico."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] La autenticidad paulina de los trece capítulos junto a Timoteo (1:1) es prácticamente unánime.\n\n[Estudio] Cornelius Aherne (Catholic Encyclopedia) y la investigación moderna analizan si 2 Corintios nació como un único documento unitario con dos tonos —agradecimiento a la mayoría reconciliada en 1–9 seguido por advertencia firme a la minoría rebelde antes de viajar en 10–13— o como compilación editorial temprana de correspondencia corintia (uniendo los fragmentos de 2:14–7:4, la colecta de 8–9 y quizás la «carta de lágrimas» en 10–13)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Frente al triunfalismo religioso de sus rivales, Pablo formula la paradoja cristiana más radical del poder en la debilidad: «Llevamos este tesoro en vasos de barro, para que la extraordinaria grandeza del poder sea de Dios y no de nosotros» (4:7), y ante su súplica no retirada por un misterioso aguijón físico recibe la respuesta perpetua de Cristo: «Bástate mi gracia, porque mi poder se perfecciona en la debilidad» (12:9). A la vez acuña la síntesis suprema de la reconciliación («Al que no conoció pecado, por nosotros lo hizo pecado… en Cristo Dios estaba reconciliando al mundo consigo mismo», 5:19–21).\n\n[Tradición] Cierra en 13:14 con la bendición trinitaria más completa del Nuevo Testamento."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] P46 (c. 200 d. C.) y el Codex Sinaiticus (núm. 39) transmiten completos los trece capítulos sin evidencia manuscrita de que las secciones circularan jamás por separado; en cambio, 6:14–7:1 suscitó ocasionalmente preguntas estilísticas por su vocabulario qumránico aunque está en todos los testigos antiguos. Un detalle variante notable ocurre en 1:11 o 5:3 («vestidos / desnudos») y el reparto del último versículo.\n\n[Texto] Aquí la NTV cuenta 13 capítulos y 257 versículos; el Codex Sinaiticus presenta los mismos 13 capítulos en 256 versículos."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Además de la bendición litúrgica universal de 13:14 («La gracia del Señor Jesucristo, el amor de Dios y la comunión del Espíritu Santo…»), 2 Corintios ha sido siempre espejo de pastores y creyentes ante la enfermedad, el fracaso y la crítica injusta: Juan Crisóstomo lo comentó en treinta homilías admirando cómo Pablo convierte cada cicatriz («por Cristo somos débiles») en credencial apostólica."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer los caps. 1–7 escuchando el estribillo constante «consuelo / tribulación» y «nueva creación» en 5:17.\n2. Analizar caps. 8–9 como tratado cristiano sobre la generosidad libre y equitativa («dar de lo que se tiene», 8:12–14) cuyo motivo máximo es la pobreza voluntaria de Cristo (8:9).\n3. Observar la fina ironía de caps. 11–12: frente al orgullo de triunfos de los adversarios, Pablo «presume» de azotes, naufragios y huir descolgado en una canasta (11:23–33).\n4. Recordar 12:9 como síntesis de toda la carta."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue escrita 2 Corintios como una sola carta o compilada a partir de varias cartas paulinas a Corinto?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La unidad literaria (defendida por Chrysostom, Aherne y estudios retóricos modernos) explica la transición de caps. 1–9 a 10–13 como el giro clásico de la consolación retórica hacia la peroración polémica final contra un resto obstinado antes de la tercera visita."
+        },
+        {
+          "label": "Estudio",
+          "body": "Hipótesis de partición (Hausrath, Bornkamm) separan hasta dos, tres o cinco billetes paulinos reunidos poco después en Corinto, identificando especialmente 10–13 con la severa «carta de las lágrimas» o un escrito posterior tras romperse la paz."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué era el «aguijón en la carne» que atormentaba a Pablo en 12:7?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de comentaristas sugiere una dolencia física crónica y humillante (afección ocular cfr. Gá 4:15, epilepsia o fiebres recurrentes de malaria) o bien los continuos opositores judaizantes que lo perseguían por todas las sinagogas."
+        },
+        {
+          "label": "Tradición",
+          "body": "Tertuliano pensó en dolor físico de cabeza/oído, mientras autores medievales lo interpretaron espiritualmente como tentaciones carnales o angustia pastoral."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-corinthians",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

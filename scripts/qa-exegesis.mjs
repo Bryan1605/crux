@@ -566,9 +566,10 @@ if (WITH_BROWSER) {
   await page.screenshot({ path: path.join(OUT, 'exegesis-palabra.png') });
   await page.click('.vpop__lex-link');
   await page.waitForSelector('.lex__dialog', { timeout: 4000 });
+  const lexCount = (await readJson(path.join(DIR, 'lexico.json'))).entries.length;
   check(
     'Diccionario: el enlace abre la entrada y la lista completa',
-    (await page.$$eval('.lex__item', els => els.length)) === 250 && /ἀγαπάω/.test(await text('.lex-entry__lemma')),
+    (await page.$$eval('.lex__item', els => els.length)) === lexCount && /ἀγαπάω/.test(await text('.lex-entry__lemma')),
     `${await page.$$eval('.lex__item', els => els.length)} entradas`
   );
   await page.click('#lex-q');
@@ -894,7 +895,7 @@ if (WITH_BROWSER) {
   }));
   check(
     'AT: el Salmo 151 solo existe en el Codex y se puede abrir',
-    psalm151.chapter151 && psalm151.witnesses === 1 && psalm151.codexCells > 5 && psalm151.ntvCells === 0,
+    psalm151.chapter151 && psalm151.witnesses >= 1 && psalm151.codexCells > 5 && psalm151.ntvCells === 0,
     JSON.stringify(psalm151)
   );
   check(

@@ -1,0 +1,100 @@
+{
+  "id": "2-samuel",
+  "title": "2 Samuel",
+  "abbr": "2 S",
+  "order": 10,
+  "testament": "AT",
+  "summary": "Segunda parte del libro de Samuel en veinticuatro capítulos: reinado completo de David en Hebrón y en la conquistada Jerusalén, traslado del arca, el pacto dinástico perpetuo de 2 Samuel 7, el pecado con Betsabé y Urías, la rebelión de Absalón y cuatro capítulos apéndice. Protocanónico; ausente en el Sinaiticus.",
+  "genre": [
+    "historia de sucesión dinástica",
+    "oráculo mesiánico-dinástico",
+    "poesía elegíaca y salmo real"
+  ],
+  "language": "Hebreo bíblico narrativo clásico (incluye poesía cortesana y elegías tempranas)",
+  "date": {
+    "narrative": "Cuarenta años del reinado de David (c. 1010–970 a. C.)",
+    "composition": "Núcleo cortesano antiguo («Historia de la sucesión al trono», caps. 9–20) editado en la Historia Deuteronomista",
+    "certainty": "probable",
+    "note": "Muchos historiadores de la literatura consideran 2 Samuel 9–20 junto a 1 Reyes 1–2 una de las cumbres más tempranas e inmediatas de la historiografía hebrea."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — unido a 1 Samuel)",
+    "catolico": "Antiguo Testamento (protocanónico; tradicionalmente 2 Reyes en Vulgata)",
+    "ortodoxo": "Antiguo Testamento (2 Basileion / 2 Reinos)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, 2 Samuel se lee completo en la NTV (24 capítulos, 695 versículos). No perduran folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Samuel despliega el apogeo y la crisis familiar del rey David en cuatro movimientos claros: I. Elegía por Saúl y Jonatán, reino sobre Judá en Hebrón y unificación de las tribus con la toma de Jerusalén y traslado del arca (caps. 1–6); II. Promesa dinástica del profeta Natán y victorias externas (caps. 7–8); III. Realismo crudo de corte en torno a Betsabé, Amnón, Tamar y la guerra civil de Absalón (caps. 9–20); IV. Cuatro capítulos misceláneos de apéndices, listas de valientes, el Salmo 18 (cap. 22) y la compra de la era de Arauna para futuro altar (caps. 21–24).\n\n[Estudio] Su realismo psicológico evita la hagiografía cortesana usual en los anales reales orientales."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Bajo David (siglo X a. C.), Israel rompe la hegemonía filistea y articula un reino territorial cuyo centro administrativo y cúltico neutral pasa a ser la ciudad jebusea recién tomada de Jerusalén («ciudad de David»). La estela aramea de Tel Dan (s. IX a. C.) atestigua extrabíblicamente la memoria dinástica de la «Casa de David» (byt dwd).\n\n[Texto] A la vez, el texto retrata con severidad las tensiones crónicas entre las tribus norteñas y Judá (rebelión de Seba en cap. 20) que terminarán rompiendo el reino tras Salomón."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Estudio] Leonhard Rost identificó la coherencia literaria de dos bloques internos mayores: la historia del arca (cap. 6) y la brillante «Narrativa de la sucesión» (2 S 9–20 + 1 R 1–2), escrita probablemente por un testigo próximo a la corte de Salomón para explicar cómo ascendió al trono frente a los hijos mayores de David.\n\nPosteriormente, compiladores deuteronomistas integraron los apéndices finales (21–24), enmarcando el capítulo 7 como pilar de toda la historiografía de Reyes."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El eje teológico absoluto reside en el oráculo de Natán (cap. 7): frente al deseo de David de construirle una casa-templo a Dios, Dios promete edificarle a David una «casa» (dinastía) y un trono afirmado para siempre (7:11–16). Sin embargo, esta alianza perpetua no concede impunidad moral: tras el adulterio y asesinato de Urías (caps. 11–12), el profeta confronta al rey («¡Tú eres ese hombre!») y la espada no se aparta de su familia, mostrando a la vez el arrepentimiento sincero de David y la gracia que sobrevive al juicio.\n\n[Tradición] Para el Nuevo Testamento, 2 S 7:12–16 fundamenta la identidad de Jesús como «Hijo de David»."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Como sucede en 1 Samuel, el Texto Masorético conserva lecturas a veces dañadas (por ejemplo en el cántico de 22 frente al Salmo 18 paralelo y en la lista de los valientes del cap. 23), que los rollos 4QSama y 4QSamc de Qumrán y las recensiones de la Septuaginta ayudan a restaurar en numerosos puntos.\n\n[Texto] Aquí se ofrece completo en la NTV (24 capítulos, 695 vv.), mientras falta íntegramente en los cuadernos sobrevivientes del Codex Sinaiticus."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] La promesa de 2 Samuel 7 alimentó toda la expectación mesiánica judía posterior (Salmos de Salomón 17, 4QFlorilegium en Qumrán) y abrió el anuncio cristiano desde Lucas 1:32–33 («el Señor Dios le dará el trono de David su padre») y Hechos 2:30 hasta Hebreos 1:5 («Yo seré para él padre, y él será para mí hijo», citando 7:14).\n\nEl arrepentimiento de David ante Natán (cap. 12) dio marco tradicional además al Salmo penitencial 51."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer el capítulo 7 despacio: el juego literario sobre «casa» (templo frente a dinastía) es el centro de gravedad de todo el libro y de los Salmos reales.\n2. Seguir la causalidad moral de caps. 11–20: el pecado oculto de David desencadena en cadena la violencia y la rebelión en su propia casa.\n3. Notar los apéndices (caps. 21–24) en disposición concéntrica: hambres y plaga, hazañas militares y dos grandes himnos de David (22–23).\n4. Recordar al cerrar 24:25 que la era comprada a Arauna será el emplazamiento futuro del Templo."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue compuesta la «Historia de la sucesión» (2 S 9–20; 1 R 1–2) como apología salomónica o como crítica velada a la corona?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica la lee como defensa política contemporánea que justifica la sucesión de Salomón frente a Absalón y Adonías sin ocultar las debilidades humanas de David."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros analistas subrayan la severidad implícita hacia intrigas palaciegas y venganzas de sangre, viéndola más bien como una meditación sapiencial crítica del poder."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo valora la arqueología la escala del reino unificado de David y Salomón?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Historiadores tradicionales e investigadores como Mazar ven en los hallazgos de Jerusalén, Qeiyafa y la estela de Tel Dan indicios sólidos de una entidad política centralizada ya en el s. X a. C."
+        },
+        {
+          "label": "Estudio",
+          "body": "Corrientes minimalistas (Finkelstein y otros) interpretan el gobierno de David y Salomón como un cacicazgo regional modesto en Judá idealizado siglos más tarde."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-samuel",
+    "ce-samuel-kings",
+    "tyndale-ntv-2009",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

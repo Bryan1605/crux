@@ -1,0 +1,101 @@
+{
+  "id": "zacarias",
+  "title": "Zacarías",
+  "abbr": "Zac",
+  "order": 38,
+  "testament": "AT",
+  "summary": "El libro más extenso de los Profetas Menores en catorce capítulos divididos claramente en dos grandes mitades: I. Ocho visiones nocturnas de reconstrucción en el 520–518 a. C. con Josué, Zorobabel y las promesas sobre el Templo («No con ejército ni con fuerza, sino con mi Espíritu», caps. 1–8); II. Oráculos escatológicos sobre el rey humilde montado en un asno, las treinta piezas de plata, el «traspasado» y el Día final del Señor (caps. 9–14). Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "proto-apocalíptica visionaria",
+    "homilía ética posexílica",
+    "oráculo escatológico-mesiánico (caps. 9–14)"
+  ],
+  "language": "Hebreo posexílico en prosa y visiones simbólicas (1–8); poesía profética densa en los dos «oráculos» finales (9–14)",
+  "date": {
+    "narrative": "Comienza en octubre/noviembre del 520 a. C. (octavo mes de Darío I) hasta diciembre del 518 a. C. en caps. 1–8",
+    "composition": "Caps. 1–8 datados sólidamente en 520–518 a. C.; autoría y fecha de caps. 9–14 muy debatidas entre escuela tardía (siglos V–III a. C.) o vejez del profeta",
+    "certainty": "discutida",
+    "note": "La notable diferencia estilística e histórica entre Zacarías 1–8 y Zacarías 9–14 constituye uno de los problemas literarios más clásicos del Antiguo Testamento."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — undécimo de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Zacharias)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Zacarías despliega catorce capítulos en dos bloques contrastantes. Los capítulos 1–8 (Proto-Zacarías) abren con un llamado al arrepentimiento y presentan en una sola noche ocho visiones enigmáticas explicadas por un ángel intérprete —jinetes entre mirtos, cuatro cuernos, el agrimensor, el sumo sacerdote Josué vestido de gala, el candelabro con dos olivos (4:6: «No con ejército, ni con fuerza, sino con mi Espíritu»), el rollo volante, la mujer en el efá y cuatro carros—, coronadas por la cuestión ética de los ayunos (7–8). Los capítulos 9–14 reúnen dos amplios oráculos sin fecha sobre el rey humilde, los pastores rechazados y el combate definitivo por Jerusalén.\n\n[Estudio] La presencia del ángel intérprete marca la transición histórica de la profecía clásica hacia el género apocalíptico."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] En 520–518 a. C. (caps. 1–8), el profeta-sacerdote Zacarías hijo de Berequías trabaja codo a codo con Hageo para devolver esperanza a Jerusalén mientras Darío I pacifica revueltas en Persia («toda la tierra reposa tranquila», 1:11). En cambio, los capítulos 9–14 carecen de menciones a Darío, Josué o Zorobabel y nombran directamente a «los hijos de Grecia (Yaván)» (9:13), reflejando para muchos historiadores el impacto de las guerras helenísticas tras Alejandro Magno."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición antigua unificada atribuyó los catorce capítulos a Zacarías (cfr. la atribución conjunta compleja en Mateo 27:9).\n\n[Estudio] Emil Hirsch (Jewish Encyclopedia) y Walter Drum (Catholic Encyclopedia) exponen cómo desde el siglo XVII (Joseph Mede observando Mateo 27:9) y la crítica moderna se distinguieron Proto-Zacarías (1–8, fechados y firmados en 520–518 a. C.) y Deutero-Zacarías (9–14, subdividido en dos massa o profecías: 9–11 y 12–14), compuestos bien por el mismo profeta en su vejez sin marco cronológico o por su escuela profética entre los siglos V y III a. C."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El motor de Zacarías 1–8 descansa en la reconstrucción ética junto a la litúrgica: Dios limpia la culpa sacerdotal («he hecho que pase tu iniquidad», 3:4), sostiene la obra «con mi Espíritu» (4:6) y transforma los ayunos de duelo en fiestas de gozo si Jerusalén juzga con verdad y protege a viudas, huérfanos y extranjeros (7:9–10; 8:16–19). En 9–14 emergen imágenes mesiánicas sorprendentes de humildad y herida: el rey justo montado en un pollino que suprime carros de guerra (9:9–10), el pastor tasado en treinta monedas de plata (11:12–13) y el clamor por aquel «a quien traspasaron» mientras se abre una fuente purificadora (12:10–13:1).\n\n[Tradición] Tras Isaías y Salmos, Zacarías 9–14 es el texto del Antiguo Testamento más citado en los relatos evangélicos de la Pasión."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Hallado en fragmentos hebreos de Qumrán y el papiro griego de Nahal Hever, el libro de Zacarías muestra en 12:10 una de las lecturas más discutidas entre el hebreo («mirarán a mí, a quien traspasaron» / variantes hebreas «a él») y la Septuaginta (que suavizó o leyó el verbo con otra raíz: «danzarán/insultarán en triunfo»), mientras Juan 19:37 y Apocalipsis 1:7 siguen una traducción griega más próxima al hebreo («verán al que traspasaron»).\n\n[Texto] Tanto la NTV (14 caps., 211 vv.) como el Codex Sinaiticus (núm. 24; 14 caps., 211 vv.) ofrecen completo el libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Ningún otro profeta menor impregna tanto la última semana de Jesús en los Evangelios: la entrada en pollino (Mt 21:5 citando Zac 9:9), la sangre de la alianza (9:11), las treinta piezas arrojadas al alfarero en la casa del Señor (Mt 27:9 citando Zac 11:12–13 bajo nombre de Jeremías), la dispersión de las ovejas al herir al pastor (Mc 14:27 citando 13:7) y la contemplación del traspasado (Jn 19:37; Ap 1:7 citando 12:10). Los dos olivos y el candelabro del cap. 4 pasan también literalmente a Apocalipsis 11:4."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer 1–8 como ciclo coherente de ocho visiones nocturnas más el sermón ético-festivo de caps. 7–8 durante el gobierno persa.\n2. Seguir en 9–14 cómo se combinan el rey humilde de paz (9:9–10), el pastor rechazado (11 y 13:7) y la purificación final de Jerusalén (12–14).\n3. Tener a la vista los Evangelios de la Pasión al leer Zacarías 9–14 para identificar cada cita directa.\n4. Comparar Zacarías 12:10 entre la NTV y el griego del Codex Sinaiticus frente a Juan 19:37."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Proceden los capítulos 9–14 del propio Zacarías del siglo VI o de autores anónimos posteriores?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Exégesis conservadoras sostienen que Zacarías pudo escribir las visiones juveniles de 1–8 durante el trabajo del Templo y dictar en su vejez los oráculos sin fecha de 9–14 con tono distinto."
+        },
+        {
+          "label": "Estudio",
+          "body": "El consenso histórico-crítico amplio separa 9–14 como obra de siglos posteriores (V–III a. C.) por su estilo poético anónimo, desaparición de Zorobabel/Templo por construir, mención directa a Grecia (9:13) y tono apocalíptico evolucionado."
+        }
+      ]
+    },
+    {
+      "question": "¿Por qué Mateo 27:9 atribuye a «Jeremías» la cita de las treinta monedas de plata tomada de Zacarías 11:12–13?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Muchos comentaristas explican que Mateo fusiona el motivo del campo del alfarero de Jeremías (Jer 19 y 32) con el precio de Zacarías 11, citando por el profeta mayor más emblemático (como Marcos 1:2 cita a Isaías al combinar Malaquías + Isaías)."
+        },
+        {
+          "label": "Tradición",
+          "body": "Orígenes, Jerónimo y exegetas clásicos propusieron también una tradición oral profética o el orden talmúdico antiguo de libros donde Jeremías encabezaba los Profetas Posteriores o un lapsus temprano."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-zechariah",
+    "ce-zacharias",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

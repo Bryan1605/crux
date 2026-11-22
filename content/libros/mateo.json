@@ -1,0 +1,101 @@
+{
+  "id": "mateo",
+  "title": "Mateo",
+  "abbr": "Mt",
+  "order": 40,
+  "testament": "NT",
+  "summary": "Primer libro del Nuevo Testamento en veintiocho capítulos: Evangelio catequético y eclesial que presenta a Jesús de Nazaret como Mesías rey hijo de David y Abraham, cumplimiento de las Escrituras de Israel y nuevo maestro cuya palabra articula cinco grandes discursos culminados en el Sermón del Monte y la Gran Comisión. Canónico en todas las Iglesias; completo en NTV y Codex Sinaiticus.",
+  "genre": [
+    "evangelio sinóptico (bíos teológico)",
+    "cinco discursos catequéticos alternados con narrativa",
+    "exégesis de cumplimiento"
+  ],
+  "language": "Griego koiné ordenado y semitizante (tradición antigua de Papías sobre logia hebreos o arameos)",
+  "date": {
+    "narrative": "Genealogía e infancia en Judea/Egipto, ministerio en Galilea y Pasión y Resurrección en Jerusalén (c. 4 a. C.–30/33 d. C.)",
+    "composition": "Tradición apostólica temprana; consenso crítico mayoritario entre 70 y 90 d. C. (Antioquía de Siria o ámbito siro-palestino)",
+    "certainty": "discutida",
+    "note": "Su lectura de 22:7 y la relación con Marcos dividen entre dataciones anteriores al 70 d. C. y la década de 80 d. C. tras la caída del Templo."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Mateo inaugura el Nuevo Testamento uniendo biografía grecorromana, narrativa mesiánica e instrucción comunitaria en veintiocho capítulos simétricos. Tras los relatos de genealogía e infancia (caps. 1–2), articula cinco grandes bloques donde cada sección narrativa culmina en un discurso extenso cerrado por el mismo estribillo («Cuando Jesús terminó estas palabras…», 7:28; 11:1; 13:53; 19:1; 26:1): el Sermón del Monte (5–7), el discurso misionero (10), las parábolas del Reino (13), el orden fraterno de la comunidad (18) y el discurso escatológico frente al Templo (24–25), rematando con la Pasión y el envío trinitario en Galilea (26–28).\n\n[Estudio] Numerosos exegetas observan en esos cinco discursos un eco estructural intencional de los cinco libros del Pentateuco."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Nacido en la encrucijada dramática entre el judaísmo pos-70 d. C. (en plena reorganización rabínica tras la destrucción de Jerusalén, perceptible en la intensa polémica contra escribas y fariseos del cap. 23 y la defensa sobre el cuerpo robado de 28:11–15) y la misión abierta a todas las naciones (28:19), el Evangelio responde probablemente a una comunidad judeocristiana bilingüe —a menudo ubicada en Antioquía de Siria o Galilea— que necesitaba demostrar que Jesús no abolió la Ley ni los Profetas, sino que les dio cumplimiento definitivo."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Desde Papías de Hierápolis (c. 110–130 d. C., citado por Eusebio HE 3.39.16), Ireneo y Orígenes, la Iglesia antigua atribuyó el primer Evangelio al apóstol y ex recaudador Mateo (cfr. Mt 9:9; 10:3), señalando que «compiló los dichos (logia) en lengua hebrea». En su edición actual no es traducción literal del arameo.\n\n[Estudio] Como exponen Joseph Jacquier y Francis Gigot (Catholic Encyclopedia), la mayoría de críticos modernos adopta la hipótesis de las dos fuentes: Mateo integró cerca del noventa por ciento de Marcos junto con la colección común de dichos de Jesús compartida con Lucas (fuente Q) y material propio judeocristiano (M)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] En Mateo, Jesús es «Emmanuel —Dios con nosotros» desde el primer capítulo hasta la última promesa («Yo estoy con ustedes todos los días hasta el fin del mundo», 1:23; 28:20). Frente a interpretaciones legalistas externas, proclama una «justicia superior» (5:20) arraigada en el corazón (ira, mirada, veracidad, amor a los enemigos en el Sermón del Monte) y sintetizada en «misericordia quiero y no sacrificio» (9:13; 12:7). Es además el único Evangelio que nombra explícitamente la «iglesia» (ekklesia, 16:18; 18:17) edificada sobre la confesión apostólica y el perdón fraterno.\n\n[Tradición] El Padre Nuestro (6:9–13), las Bienaventuranzas (5:3–12) y el juicio misericordioso de 25:31–46 fundaron la ética cristiana universal."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Mateo fue el Evangelio más copiado, citado y comentado en los primeros siglos cristianos; papiros egipcios como P1, P64+67 (siglo II/III) y P45 atestiguan su amplia circulación temprana antes de los grandes códices del siglo IV. La edición crítica SBLGNT (MorphGNT) coincide estrechamente con el texto alejandrino de los códices Vaticano y Sinaítico (donde incluye casos puntuales como la omisión de 17:21 y variaciones menores en la doxología de 6:13 o 27:49).\n\n[Texto] Aquí la NTV (28 capítulos, 1.068 vv.) y el Codex Sinaiticus (núm. 33; 28 capítulos, 1.068 vv.) presentan idéntico número de capítulos y versículos."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Por encabezar tradicionalmente el canon del Nuevo Testamento y agrupar por temas la enseñanza ética y eclesial de Jesús, Mateo se convirtió en el manual catequético por excelencia de la Iglesia antigua: la Didaché, Ignacio de Antioquía, Justino y Clemente de Alejandría citan sus discursos constantemente. Juan Crisóstomo predicó noventa homilías clásicas sobre Mateo en Antioquía, Agustín analizó el Sermón del Monte en clave de ética del Reino, y la Reforma, Tolstói o Bonhoeffer volvieron siempre sobre capítulos 5–7 como piedra de toque del discipulado."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir la fórmula de cumplimiento «Todo esto sucedió para que se cumpliera lo dicho por el Señor por medio del profeta…» desde 1:22 hasta 27:9.\n2. Localizar los cinco grandes bloques de discurso (caps. 5–7; 10; 13; 18; 24–25) y notar la frase de transición final tras cada uno.\n3. Observar la inclusión intencionada entre 1:23 («Dios con nosotros») y 28:20 («estoy con ustedes hasta el fin del mundo»).\n4. Recordar al leer el cap. 23 que el debate intra-judío áspero contra escribas y fariseos no puede sacarse de contexto para justificar antijudaísmo."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Escribió el apóstol Mateo originalmente en hebreo/arameo o el Evangelio canónico griego nació directamente en griego sobre Marcos y dichos comunes?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Comentaristas clásicos siguen literalmente a Papías y Eusebio defendiendo que Mateo escribió un Evangelio semítico temprano (antes del 70 d. C.) vertido y adaptado pronto al griego."
+        },
+        {
+          "label": "Estudio",
+          "body": "La gran mayoría de críticos sinópticos actuales observa que el griego de Mateo reproduce casi literalmente secuencias griegas de Marcos (difíciles de explicar en una mera traducción desde el hebreo) e identifica una redacción griega culta posterior basada en Marcos, Q y tradiciones apostólicas atribuida honoríficamente a Mateo."
+        }
+      ]
+    },
+    {
+      "question": "¿El Sermón del Monte (caps. 5–7) es un ideal escatológico inalcanzable, una ética provisional o norma concreta para el discípulo?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Mientras el luteranismo acentuó a veces su función de espejo que revela el pecado ante la gracia y el anabaptismo practicó sus preceptos literalmente (no jurar, no resistir al mal), la tradición católica distinguió mandamientos generales y consejos."
+        },
+        {
+          "label": "Estudio",
+          "body": "Exégesis contemporáneas leen caps. 5–7 como ética transformadora del Reino ya inaugurado por Jesús: metas reales de intención pura del corazón que exigen fidelidad práctica sostenida por la gracia del Padre."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-matthew",
+    "ce-gospels",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

@@ -204,6 +204,37 @@
   color: var(--muted);
 }
 
+.vpop__lex-base {
+  margin-top: 0.55rem;
+}
+
+.vpop__lex-badge {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #e8c776;
+  background: color-mix(in srgb, #d6b25e 14%, transparent);
+  border: 1px solid color-mix(in srgb, #d6b25e 38%, transparent);
+  border-radius: 999px;
+}
+
+.vpop__lex-base .vpop__lex-gloss {
+  margin-top: 0.2rem !important;
+}
+
+.vpop__lex-morphemes {
+  list-style: none;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
 .vpop__lex-note {
   margin-top: 0.6rem !important;
   padding: 0.5rem 0.6rem;

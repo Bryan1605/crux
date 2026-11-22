@@ -1,0 +1,101 @@
+{
+  "id": "jonas",
+  "title": "Jonás",
+  "abbr": "Jon",
+  "order": 32,
+  "testament": "AT",
+  "summary": "Relato narrativo único entre los Profetas Menores en cuatro capítulos: el profeta hebreo Jonás huye en barco hacia Tarsis para evitar predicar a Nínive, es arrojado al mar y rescatado por un gran pez tras orar un salmo desde el abismo (cap. 2), proclama un mensaje mínimo que convierte a toda la capital asiria y discute con Dios bajo una planta sobre su compasión hacia paganos y animales. Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "parábola narrativa profética",
+    "cuento didáctico irónico",
+    "salmo de acción de gracias inserto (cap. 2)"
+  ],
+  "language": "Hebreo bíblico narrativo con varios arameísmos posexílicos",
+  "date": {
+    "narrative": "Alude al profeta del s. VIII a. C. «Jonás hijo de Amitai» mencionado en 2 Reyes 14:25 bajo Jeroboam II",
+    "composition": "Período persa tardío o helenístico temprano (siglos V–III a. C.)",
+    "certainty": "probable",
+    "note": "Su visión retrospectiva de una Nínive legendaria («era una ciudad muy grande», 3:3), los arameísmos y su tono sapiencial universalista apuntan a la Judea posexílica tras el exilio."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — quinto de los Doce; haftarah central de Yom Kipur)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Ionas, sexto de los Doce)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Frente a los libros de oráculos, Jonás es casi en su totalidad una narración en tercera persona en cuatro escenas simétricas: I. Vocación, fuga hacia Tarsis, tormenta y oración de los marineros paganos con el lanzamiento al mar (cap. 1); II. Oración salmódica de gratitud dentro del vientre del gran pez (cap. 2); III. Segundo envío, predicación de cinco palabras en hebreo y arrepentimiento inmediato de Nínive entera, hasta animales en cilicio (cap. 3); IV. Ira de Jonás ante la misericordia divina y lección irónica de la planta y el gusano cerrada con una pregunta abierta (cap. 4).\n\n[Estudio] Su humor sutil contrapone continuamente a los gentiles temerosos de Dios con el profeta reticente."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Aunque el protagonista evoca al profeta galileo del siglo VIII a. C. de 2 Reyes 14:25 y sitúa la acción en la metrópoli asiria de Nínive (destruida en 612 a. C.), el libro se dirige probablemente a la comunidad judía de los siglos V–IV a. C. tentada de encerrar la misericordia divina tras fronteras étnicas y resentida porque las profecías de castigo sobre las naciones no siempre se cumplen cuando los paganos cambian de rumbo.\n\n[Texto] Por eso Jonás confiesa al fin la verdadera razón de su huida: sabía demasiado bien que «tú eres un Dios clemente y compasivo… que te arrepientes de hacer el mal» (4:2)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] La tradición histórica antigua lo leyó como crónica autobiográfica o memorias del profeta del siglo VIII.\n\n[Estudio] Hirsch y Karl Budde (Jewish Encyclopedia) y James Driscoll (Catholic Encyclopedia) discuten cómo un narrador posexílico maestro —con rasgos lingüísticos tardíos del período persa y referencias a un Nínive pretérito— integró el salmo tradicional de liberación del cap. 2 (compuesto de ecos del Salterio como Sal 18, 42 y 69) en una narración unitaria de extraordinaria economía literaria."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Jonás plantea una de las cumbres de la teología universalista del Antiguo Testamento: los marineros fenicios temen al Señor antes que el profeta; Nínive la sanguinaria se arrepiente en un día; e incluso el ganado inocente cuenta en el cuidado del Creador («¿y no tendré yo compasión de Nínive… donde hay más de ciento veinte mil personas que no distinguen su derecha de su izquierda, y muchos animales?», 4:11). Dios exige primero la vida y conversión del enemigo antes que la satisfacción del orgullo profético.\n\n[Tradición] En los Evangelios (Mt 12:39–41; Lc 11:29–32), Jesús evoca «la señal de Jonás»: tres días en el abismo como signo pascual y la conversión de Nínive como juicio a su generación."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Conservado con notable fidelidad en Qumrán (4QXIIg y Wadi Murabba’at) y en la Septuaginta, sobresale la famosa diferencia entre el término hebreo qiqayon (4:6, planta de ricino/higuerilla) traducido por la LXX como kolokynthe («calabaza») y cambiado por Jerónimo en la Vulgata por hedera («hiedra»), suscitando una célebre polémica epistolar con Agustín sobre cambios en textos litúrgicos familiares.\n\n[Texto] En esta web, tanto la NTV (4 caps., 48 vv.) como el Codex Sinaiticus (núm. 19; 4 caps., 48 vv.) ofrecen íntegro el libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En el judaísmo, Jonás se lee íntegro cada año en la tarde de Yom Kipur (servicio de Minjá) como testimonio supremo de que el arrepentimiento sincero conmueve incluso el decreto ya dictado sobre las naciones. En las catacumbas romanas cristianas, Jonás arrojado al mar, rescatado del pez y reposando bajo la pérgola fue de hecho la escena bíblica más pintada del siglo III–IV como emblema de muerte, resurrección y paz eterna."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir el paralelo irónico de la palabra «grande»: gran viento, gran tempestad, gran temor, gran pez, gran ciudad y el «gran disgusto» de Jonás en 4:1.\n2. Comparar la piedad espontánea de marineros y ninivitas con la obediencia gruñona del profeta.\n3. Notar en 2:2–9 que Jonás no pide dentro del pez perdón por su huida, sino que da gracias por haber sobrevivido al ahogo.\n4. Quedarse pensando en la pregunta sin respuesta con que Dios termina el libro (4:11): interpelación directa al lector."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Debe leerse Jonás como crónica histórica literal o como parábola profética didáctica?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Exégesis literales defienden la historicidad fáctica de los hechos extraordinarios (incluyendo el rescate por un gran pez) basándose en 2 R 14:25 y la referencia de Jesús en Mt 12:40."
+        },
+        {
+          "label": "Estudio",
+          "body": "La gran mayoría de biblistas católicos, protestantes y judíos actuales reconoce el género parabólico o cuento sapiencial profético —similar al buen samaritano— que usa hipérboles deliberadas (todo el ganado ayunando, un rey desconocido en Nínive) para enseñar la compasión universal de Dios."
+        }
+      ]
+    },
+    {
+      "question": "¿Es el salmo de Jonás 2:2–9 una pieza original del narrador o un himno previo insertado después?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Muchos críticos señalan que el salmo es de acción de gracias por haber escapado ya de las olas (no una súplica desde dentro del pez) y carece de referencias al animal o a Nínive, pareciendo una inserción litúrgica posterior."
+        },
+        {
+          "label": "Estudio",
+          "body": "Lectores literarios actuales destacan que el salmo forma un contraste intencional y refinado con el enojo final de Jonás en el cap. 4."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-jonah",
+    "ce-jonah",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

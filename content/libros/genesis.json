@@ -1,0 +1,101 @@
+{
+  "id": "genesis",
+  "title": "Génesis",
+  "abbr": "Gn",
+  "order": 1,
+  "testament": "AT",
+  "summary": "Primer libro de la Torá y de toda la Biblia: cincuenta capítulos que enlazan la historia primordial de la creación, la caída, el diluvio y Babel (caps. 1–11) con los relatos patriarcales de Abraham, Isaac, Jacob y José hasta el descenso a Egipto (caps. 12–50). Protocanónico en todos los cánones bíblicos.",
+  "genre": [
+    "narrativa teológica primordial",
+    "ciclo patriarcal",
+    "genealogía toledot y poesía antigua"
+  ],
+  "language": "Hebreo bíblico clásico; traducción temprana al griego alejandrino (LXX, s. III a. C.)",
+  "date": {
+    "narrative": "Desde los orígenes cósmicos hasta la muerte de José en Egipto (segunda mitad del II milenio a. C. en el marco narrativo)",
+    "composition": "Debatida: redacción mosaica tradicional frente a compilación de tradiciones escritas entre los siglos X y V a. C.",
+    "certainty": "discutida",
+    "note": "Mientras la tradición judía y cristiana clásica atribuye la Torá a Moisés, la crítica moderna sitúa su compilación final entre la monarquía y el período posexílico persa."
+  },
+  "canon": {
+    "judio": "Tanaj (Torá — Berešit, primero de los cinco libros de Moisés)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (primero del Pentateuco griego)",
+    "protestante": "Antiguo Testamento (primero del Pentateuco)"
+  },
+  "notice": "En esta web, Génesis está completo en la NTV (50 capítulos, 1.533 versículos). Del Codex Sinaiticus solo sobreviven fragmentos de los capítulos 21–24 (73 versículos) tras la pérdida casi total de los cuadernos iniciales del Pentateuco.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Génesis abre el canon bíblico estructurando cincuenta capítulos alrededor de once fórmulas genealógicas introductorias («Esta es la historia / descendencia [toledot] de…»). Sus dos grandes bloques contrastan por escala y ritmo: la historia universal de los orígenes (caps. 1–11: creación en seis días, Edén, Caín y Abel, el diluvio de Noé y la dispersión de las lenguas en Babel) y las sagas familiares de los patriarcas en Canaán y Egipto (caps. 12–50: ciclo de Abraham, Isaac y Jacob, y la novela continuada de José en 37–50).\n\n[Estudio] Incluye además himnos primordiales y bendiciones poéticas arcaicas (4:23–24; 49)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los relatos de Génesis dialogan literariamente con el imaginario cultural y jurídico del Antiguo Oriente Próximo (epopeyas mesopotámicas de creación y diluvio, códigos nupciales y pactos de tierras de la Edad del Bronce y del Hierro), subvirtiéndolos en clave monoteísta: el cosmos no nace del conflicto entre dioses sino de la palabra soberana de un solo Creador.\n\n[Tradición] Para el pueblo de Israel tras el Éxodo y durante el destierro babilónico, Génesis legitimaba la promesa de la tierra, la alianza circuncisional y la vocación universal de Abraham."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Tanto el judaísmo antiguo como la patrística reconocieron a Moisés como autor del conjunto del Pentateuco a partir de tradiciones heredadas.\n\n[Estudio] Desde el siglo XVIII–XIX (investigación reseñada en la Jewish Encyclopedia y por Anthony Maas en la Catholic Encyclopedia), el análisis literario de dobletes (dos relatos de creación en 1 y 2, dos presentaciones del diluvio, alternancia de nombres divinos) llevó a distinguir tradiciones jahvistas, elohistas y sacerdotales integradas hacia época posexílica, modelo que la investigación actual matiza valorando compilaciones fragmentarias o suplementarias."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Génesis sienta cuatro columnas teológicas para toda la Escritura: la bondad intrínseca de la creación y la dignidad del ser humano hecho a imagen de Dios (1:26–31); la entrada histórica del pecado y la alienación humana (cap. 3); la elección gratuita y progresiva alianza de promesa y bendición a todas las naciones mediante Abraham (12:1–3; 15; 17); y la providencia oculta que convierte la traición fraternal en preservación de vida (50:20).\n\n[Tradición] Pablo y los Evangelios leen la fe de Abraham (15:6) y la figura de Adán como claves cristológicas esenciales."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El texto hebreo masorético convive con tres testimonios antiguos importantes: el Pentateuco Samaritano, fragmentos de unos veinte rollos del mar Muerto y la versión griega alejandrina de los Setenta (Génesis fue el primer libro vertido al griego, c. 280 a. C.), cuyas cronologías patriarcales difieren notablemente del masorético y del samaritano.\n\n[Texto] En Crux, la NTV ofrece los 50 capítulos completos (1.533 versículos), mientras el Codex Sinaiticus solo conserva restos de los capítulos 21–24 (73 versículos) debido a la pérdida física de los folios iniciales en el desierto."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Es probablemente el libro más citado y reescrito de la tradición bíblica: desde los apocalipsis de Enoc, Jubileos y el Génesis Apócrifo de Qumrán hasta los comentarios alegóricos de Filón de Alejandría, los midrasim rabínicos (Berešit Rabbá) y las homilías sobre el Hexamerón de Basilio, Gregorio de Nisa, Ambrosio y Agustín (De Genesi ad litteram).\n\nEn el Nuevo Testamento sostiene la reflexión sobre el matrimonio (Mt 19), la justicia por la fe (Ro 4; Gá 3), Cristo como último Adán (1 Co 15) y el nuevo cielo y la nueva tierra (Ap 21–22)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Distinguir la arquitectura de dos partes: caps. 1–11 (historia de la humanidad) y caps. 12–50 (elección de una familia para bendecir a todas las familias).\n2. Seguir la frase recurrente toledot («esta es la historia de…») como marcador editorial que divide el libro.\n3. Comparar el tono cósmico y litúrgico de Gn 1:1–2:3 con la cercanía narrativa antropomórfica de Gn 2:4–25.\n4. En los capítulos 21–24, contrastar la NTV con los restos griegos del Codex Sinaiticus conservados."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo se formó el texto actual del libro de Génesis?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La exégesis judía y cristiana clásica atribuye la redacción sustancial a Moisés, integrando registros o tradiciones patriarcales anteriores por inspiración divina."
+        },
+        {
+          "label": "Estudio",
+          "body": "La hipótesis documental y sus revisiones contemporáneas distinguen fuentes y redactores sacerdotales y no sacerdotales ensamblados progresivamente hasta el siglo V a. C."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué género literario debe aplicarse a los capítulos 1–11?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Lecturas históricas literales entienden los días, genealogías y el diluvio como crónica directa de hechos primordiales antiguos."
+        },
+        {
+          "label": "Estudio",
+          "body": "La exégesis histórico-crítica y teológica (incluyendo ya reflexiones antiguas como las de Orígenes y Agustín sobre los días de Gn 1) lee 1–11 como protohistoria simbólica y teopolémica contra los mitos mesopotámicos."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-genesis",
+    "ce-pentateuch",
+    "hiebert-nets-genesis",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

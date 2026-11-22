@@ -1,0 +1,101 @@
+{
+  "id": "sabiduria",
+  "title": "Sabiduría",
+  "abbr": "Sab",
+  "order": 22.1,
+  "testament": "AT",
+  "summary": "Obra sapiencial alejandrina en diecinueve capítulos escrita en griego bajo el nombre literario de Salomón sobre la justicia, la inmortalidad del justo, el elogio de la Sabiduría divina y el éxodo de Israel. Deuterocanónico católico y ortodoxo; fuera del canon hebreo y protestante.",
+  "genre": [
+    "literatura sapiencial",
+    "protréptico filosófico",
+    "midrás sobre el Éxodo"
+  ],
+  "language": "Griego helenístico literario original, con asonancias poéticas y vocabulario filosófico alejandrino",
+  "date": {
+    "narrative": "Alocución atribuida ficticiamente al rey Salomón dirigida a los gobernantes de la tierra",
+    "composition": "Finales del siglo I a. C. o comienzos del I d. C. (Alejandría, entre el 30 a. C. y el 40 d. C.)",
+    "certainty": "probable",
+    "note": "Refleja la dominación romana en Egipto (14:17), la hostilidad alejandrina y el vocabulario de la filosofía media platónica y estoica próximo a Filón de Alejandría."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Deuterocanónico (Hipona 393, Cartago 397, Trento 1546)",
+    "ortodoxo": "Antiguo Testamento (Anagignoskomena; incluido en los unciales de la Septuaginta)",
+    "protestante": "No incluido; se edita entre los apócrifos"
+  },
+  "notice": "En esta web, Sabiduría se lee completo en el griego del Codex Sinaiticus (19 capítulos, 435 versículos). La NTV no incluye este libro.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Sabiduría integra tradiciones sapienciales israelitas y géneros retóricos helenísticos en diecinueve capítulos repartidos en tres secciones nítidas. La primera (caps. 1–5) contrapone el destino del impío y la inmortalidad del justo perseguido; la segunda (caps. 6–9) canta la naturaleza, las virtudes cósmicas y la búsqueda de la Sabiduría (Sophia) en voz de Salomón; la tercera (caps. 10–19) recorre la historia desde Adán hasta el Éxodo mediante siete antítesis entre el castigo a Egipto y el cuidado de Israel, intercalando una aguda crítica de la idolatría (caps. 13–15).\n\n[Estudio] Francis Gigot (Catholic Encyclopedia) y Michael Knibb (NETS) muestran la unidad de vocabulario y ritmo griego que atraviesa las tres partes."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Casi todos los investigadores sitúan la obra en Alejandría de Egipto durante los primeros decenios del dominio romano (fines del s. I a. C. o inicios del I d. C.). En ella se perciben la tensión entre judíos helenizados cultos y apóstatas locales, la veneración imperial de gobernantes lejanos mediante estatuas (14:16–20) y la sátira tradicional egipcia contra el culto a los animales.\n\nSu autor busca fortalecer la fidelidad de jóvenes judíos tentados por el escepticismo y la asimilación social."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Aunque en los títulos antiguos figura como «Sabiduría de Salomón», el nombre regio constituye un recurso literario convencional (seudonimia) frecuente en la tradición sapiencial (cfr. 9:7–8 sin nombrar directamente a Salomón). Ya Jerónimo en su prefacio rechazó la autoría salomónica y señaló la impronta helenística del libro; el Fragmento Muratoriano lo atribuye al círculo o amigos de Filón.\n\n[Estudio] Kaufmann Kohler (Jewish Encyclopedia) y Michael Knibb confirman que se redactó directamente en griego alejandrino de notable riqueza léxica, sin original hebreo ni arameo."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El libro introduce de modo explícito en la Biblia griega la incorruptibilidad e inmortalidad como fruto de la justicia («Dios creó al hombre para la incorruptibilidad», 2:23; «las almas de los justos están en mano de Dios», 3:1). La Sabiduría es presentada como efluvio e imagen de la bondad divina (7:25–26) que penetra el cosmos, ordena el universo «con medida, número y peso» (11:20) y guía la historia salvífica.\n\n[Estudio] Su teología del conocimiento natural del Creador desde las criaturas (13:1–9) guarda estrecha afinidad con pasajes como Romanos 1 y el prólogo joánico."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitido exclusivamente en griego como base textual en el Codex Sinaiticus (núm. 30, precediendo a Sirácida), el Vaticano y el Alejandrino, la edición crítica moderna es la de Joseph Ziegler para Gotinga. De este griego proceden la Vetus Latina —incorporada sin retoques de Jerónimo en la Vulgata—, la Peshitta siríaca y las versiones copta, etiópica y armenia.\n\n[Texto] En esta web está disponible completo en el Codex Sinaiticus con 19 capítulos y 435 versículos transcritos. La NTV no lo contempla en su canon protestante."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque no ingresó en el canon hebreo ni fue comentado por los rabinos clásicos, dejó una huella notable en la literatura cristiana primitiva: numerosos estudios señalan ecos conceptuales en Romanos 1:18–32, 9:20–23, Efesios 6:13–17 (la armadura de Dios de Sab 5:17–20) y Hebreos 1:3 (resplandor de su gloria).\n\nLo citan Clemente de Roma, Ireneo, Clemente de Alejandría, Orígenes, Cipriano y Agustín; Hipona, Cartago y Trento lo consagraron en el canon católico, y las Iglesias ortodoxas lo mantienen entre los Anagignoskomena."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir las tres grandes partes: escatología del justo (1–5), alabanza y oración por la Sabiduría (6–9) e historia comentada del Éxodo (10–19).\n2. Comparar 2:1–24 con 3:1–9 para percibir cómo responde a la crisis del sufrimiento de los justos con la esperanza de la inmortalidad.\n3. Leer Sabiduría 13–15 junto a Romanos 1 para apreciar el debate judío-helenístico sobre la idolatría y la teología natural.\n4. Prestar atención a las aliteraciones y términos filosóficos griegos (hypostasis, pronoia, athanasia) en el texto del Sinaítico."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue escrito por un solo autor alejandrino o mediante la fusión de fuentes diversas?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La hipótesis mayoritaria actual (Larcher, Gilbert, Knibb en NETS) sostiene la unidad esencial de autoría: el léxico refinado, el uso sistemático de palabras enlace y el estilo retórico homogéneo indican un único autor culto alejandrino."
+        },
+        {
+          "label": "Estudio",
+          "body": "Críticos más antiguos postularon dos o tres redactores (uno para los capítulos escatológicos 1–5 o 1–11 y otro posterior para el midrás del Éxodo 10–19) por la transición estilística entre las secciones."
+        }
+      ]
+    },
+    {
+      "question": "¿Alude el justo perseguido de Sabiduría 2 al Siervo de Isaías o representa al justo colectivo en conflicto bajo Roma?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La exégesis patrística (Cipriano, Agustín) leyó Sabiduría 2:12–20 en clave profética mesiánica como prefiguración explícita de la pasión de Cristo."
+        },
+        {
+          "label": "Estudio",
+          "body": "La investigación histórico-crítica observa que Sabiduría 2 adapta motivos de Isaías 52–53 para retratar al judío fiel perseguido por judíos apóstatas y paganos en la Alejandría helenística-romana."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "kohler-1906-wisdom",
+    "gigot-1912-wisdom",
+    "knibb-nets-wissal",
+    "csp-codex-sinaiticus",
+    "ce-canon-ot"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

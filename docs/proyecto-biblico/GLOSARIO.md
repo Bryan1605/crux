@@ -95,6 +95,18 @@ Se fijan en la primera aparición y se repiten. Ejemplos de Tobit:
 | Κασερείν · Ναούμ · Ἀθήρ | Caserín · Nahúm · Asiria (Asur) | **adoptado (2026-11-04, delegado; revisable).** 11:1 · 14:4. |
 | Ναβάδ / Ναδάβ | Nabad / Nadab | **adoptado (2026-11-04, delegado; revisable).** Se respeta la forma de cada pasaje (11:19 / 14:10), con nota. |
 | Ἀχιάχαρος (14:15) | Aquiácaro | **adoptado (2026-11-04, delegado; revisable).** El rey medo que tomó Nínive (Ciáxares); distinto de Ajicar. |
+| Ἰουδείθ (Ἰουδίθ) | Judit | **adoptado (2026-11-20, delegado; revisable).** Judit 1–16. |
+| Ναβουχοδονόσορ · Ἀρφαξάδ · Ὁλοφέρνης | Nabucodonosor · Arfaxad · Holofernes | **adoptado (2026-11-20, delegado; revisable).** Judit 1–3. |
+| Ῥαγαῦ · Ὑδάσπης · Ἐσδρηλών (Ἐσδηρλών) | Ragau · Hidaspes · Esdrelón | **adoptado (2026-11-20, delegado; revisable).** En Judit 3:9 el texto base escribe `εϲδηρλων`; se normaliza a Esdrelón con nota. |
+| Ἀριασέ · Χεσλαιούδα · Ἰαμνία | Ariase · Jeslaiuda · Iamnia | **adoptado (2026-11-20, delegado; revisable).** Formas propias de la primera mano en Judit 1:6–7 (con nota sobre las correcciones `Arioc` y `Jeleud`). |
+| Βαιτουλούα (Βαιτουλία, 2:21) | Betulia | **adoptado (2026-11-20, delegado; revisable).** En Judit 2:21 la primera mano escribe `βαιτουλια` donde `ca` corrige `βεκτιλεθ` (Bectilet); se traduce Betulia y se anota. |
+| Φούδ · Λούδ · Ῥαασσείς · Μαήκ · Χελεών · Χεβρών | Fud · Lud · Raasís · Maec · Jeleón · Jebrón | **adoptado (2026-11-20, delegado; revisable).** Judit 2:23–24 (en 2:23 `μαηκ` se traduce Maec, con nota sobre `ca` `Ismael`). |
+| Τούρ · Ἀμμά · Δωταία · Γαίβαν · Σκυθῶν πόλις | Tur · Amma · Dotea · Geba · Escitópolis | **adoptado (2026-11-20, delegado; revisable).** Judit 2:28 y 3:9–10, respetando las grafías del texto base con nota. |
+| Ἰωακείμ · Ἀχιώρ · Ὀζείας | Joaquín · Ajior · Ozías | **adoptado (2026-11-21, delegado; revisable).** Judit 4–16. |
+| Χαβρείς · Χαρμείς · Μανασσῆς · Μεραρεί (Μαραρεί) | Cabrís · Carmís · Manasés · Merarí | **adoptado (2026-11-21, delegado; revisable).** Judit 6–16; en 16:6 el texto base escribe Μαραρεί (con nota). |
+| Βαγώας · Δωθαείμ · Ἀβελμαΐν / Ἀβελβαΐμ | Bagoas · Dotán · Belmaín | **adoptado (2026-11-21, delegado; revisable).** Judit 4–15; en 4:4 el texto base escribe αβελμαιν y en 7:3 y 15:4 αβελβαιμ (anotado). |
+| Κῶλα · Βαιθωρών · Χωβά · Βαιτομασθέν · Βαλαμών | Cola · Bet-horón · Coba · Betomastén · Balamón | **adoptado (2026-11-21, delegado; revisable).** Topónimos de Judit 4, 8 y 15. |
+| Γολιάδ (Sal 151) · Γαλιλαία ἀλλοφύλων (Jl 4:4) · χίμαρρος τῶν σχοίνων (Jl 4:18) | Goliat · territorio de los extranjeros · torrente de los Juncos | **adoptado (2026-11-21, delegado; revisable).** Pasajes especiales del Codex Sinaiticus (Salmo 151 y Joel 4). |
 
 ## Cómo añadir un término
 

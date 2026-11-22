@@ -1,0 +1,101 @@
+{
+  "id": "habacuc",
+  "title": "Habacuc",
+  "abbr": "Hab",
+  "order": 35,
+  "testament": "AT",
+  "summary": "Tres capítulos de diálogo franco entre el profeta Habacuc y Dios ante la impunidad interna en Judá y el ascenso violento de los caldeos (babilonios) hacia 605 a. C.: cinco ayes contra la rapacidad imperial, la respuesta central de que «el justo vivirá por su fe/fidelidad» (2:4) y un salmo teofánico conclusivo de confianza incondicional aunque fallen higuera y rebaño (3:17–19). Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "diálogo profético de queja (teodicea)",
+    "serie de cinco «¡Ayes!»",
+    "oración teofánica litúrgica (cap. 3)"
+  ],
+  "language": "Hebreo poético clásico de tono elevado (con indicaciones musicales litúrgicas selá / shigionot en cap. 3)",
+  "date": {
+    "narrative": "Finales del siglo VII a. C. (c. 608–598 a. C., entre el ocaso asirio y la irrupción de Babilonia bajo Nabucodonosor)",
+    "composition": "Finales de la monarquía de Judá (c. 605 a. C.), integrando o recogiendo tradiciones salmódicas en el cap. 3",
+    "certainty": "probable",
+    "note": "El asombro ante el «levantamiento de los caldeos, nación amarga e impetuosa» (1:6) refleja con precisión la década de 609–600 a. C. tras la batalla de Carquemis."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — octavo de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Ambakoum, octavo en orden griego)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Habacuc abandona el esquema tradicional donde el profeta habla al pueblo en nombre de Dios para invertir el diálogo: aquí el profeta interpela directamente a Dios con preguntas lacerantes («¿Hasta cuándo clamaré?», 1:2; «¿Por qué callas cuando devora el impío al más justo que él?», 1:13), permanece alerta en su torre de vigilancia aguardando respuesta (2:1), recibe la promesa inscrita en tablas («el justo por su fe vivirá», 2:4) seguida de cinco «¡Ayes!» satíricos contra el saqueo imperial (2:6–20), y concluye en una gran oración hímnica teofánica llena de notas musicales (3:1–19).\n\n[Estudio] Francis Gigot (Catholic Encyclopedia) subraya su notable analogía espiritual con la teodicea de Job y el Salmo 73."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Entre la muerte de Josías en Meguido (609 a. C.), el reinado abusivo de Joacim denunciado también por Jeremías (Jer 22:13–17) y la victoria decisiva de Babilonia en Carquemis (605 a. C.), el pequeño reino de Judá sufría corrupción judicial interna al tiempo que caía bajo la sombra implacable del ejército neobabilónico de Nabucodonosor.\n\nHabacuc afronta el escándalo moral doble de un Dios santo que parece tolerar la injusticia doméstica y luego elige a un imperio aún más brutal («los caldeos», 1:6) como vara de castigo."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Nada biográfico consta con certeza sobre Habacuc fuera de su propio libro; en la sección griega adicional de Bel y el Dragón (Daniel LXX) aparece legendariamente llevando comida a Daniel.\n\n[Estudio] Como resume Emil Hirsch (Jewish Encyclopedia), aunque parte de la crítica investigó si la oración del capítulo 3 (enmarcada por términos musicales propios del Salterio como shigionot, selá y «al director de coro») existió antes de integrarse aquí, hoy muchos comentaristas observan su cohesión teológica perfecta con los capítulos 1–2."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El corazón teológico late en dos polos inseparables: la paciencia vigilante ante una promesa que «tardará, espérala, porque sin duda vendrá» (2:3), condensada en el axioma capital «el justo por su fidelidad/fe vivirá» (2:4, frente a la hinchazón soberbia del tirano que «hace de su propia fuerza su dios», 1:11), y el canto de confianza desinteresada en medio de la carestía total: aunque no florezca la higuera ni haya vacas en los corrales, «con todo, yo me alegraré en el Señor» (3:17–18).\n\n[Tradición] Pablo en Romanos 1:17 y Gálatas 3:11 y la Carta a los Hebreos (10:37–38) hicieron de Habacuc 2:4 el lema teológico central de la justificación por la fe."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El Comentario a Habacuc hallado en la Cueva 1 de Qumrán (1QpHab, s. I a. C.) —uno de los siete grandes rollos originales de 1947— interpreta los caps. 1–2 aplicándolos palabra por palabra a los romanos (Kittim) y al Maestro de Justicia, deteniéndose exactamente al final del cap. 2. El texto griego antiguo (LXX) refleja en 2:4 la lectura clave «el justo vivirá por mi fidelidad» (o «de mi fe», cfr. Heb 10:38), mientras el papiro greco-egipcio de Rahlfs/Barberini conserva una variante antigua independiente en el cap. 3.\n\n[Texto] Tanto la NTV (3 caps., 56 vv.) como el Codex Sinaiticus (núm. 21; 3 caps., 56 vv.) preservan el texto íntegro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Pocos versículos del Antiguo Testamento han tenido un destino tan inmenso como Habacuc 2:4: mientras el Talmud (Makot 24a) proclama que Habacuc resumió toda la Torá en un único precepto («el justo vivirá por su fidelidad»), Pablo en Romanos 1:17 y Gálatas 3:11 lo erigió en piedra angular del Evangelio (reavivada luego decisivamente por Lutero y la Reforma protestante).\n\nEl capítulo 3 sirvió además desde la Antigüedad como cántico litúrgico en las Laudes cristianas y en las oraciones sinagogales."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir el arco dramático de tres actos: quejas (cap. 1), espera vigilante y respuesta divina escrita en tablas (cap. 2), y adoración confiada ante el misterio (cap. 3).\n2. Comparar las palabras de 2:4 en la NTV y en el griego del Codex Sinaiticus con las citas de Ro 1:17, Gá 3:11 y Heb 10:37–38.\n3. Leer 2:6–20 notando la ironía del «¡Ay!» repetido contra la codicia financiera, la violencia urbana y los ídolos mudos («¡Despierta!», 2:19).\n4. Apreciar 3:17–19 como una de las confesiones de fe más maduras de toda la Biblia."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Quiénes son los «impíos» iniciales de 1:2–4: opresores internos en Judá, asirios o babilonios?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La postura más extendida identifica los vv. 1:2–4 con injusticias sociales internas de Judá (bajo Joacim), frente a las cuales Dios anuncia en 1:5–11 que levantará a los caldeos como juicio sorprendentemente peor."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros exegetas opinan que todo el diálogo trata desde el principio de la opresión extranjera (Asiria o Egipto en 1:2–4 seguida por los caldeos en 1:5–11 y 1:12–17)."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo se relaciona el hebreo emuná («fidelidad/fe») de 2:4 con su interpretación paulina?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "En hebreo clásico, emuná designa ante todo firmeza, lealtad perseverante y confianza fiel ante Dios en espera del cumplimiento prometido."
+        },
+        {
+          "label": "Tradición",
+          "body": "Al verter emuná por pistis en griego (Septuaginta), Pablo y Hebreos conectaron sin ruptura esa fidelidad confiada con la fe que acoge la promesa revelada de Dios en Cristo."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-habakkuk",
+    "ce-habacuc",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

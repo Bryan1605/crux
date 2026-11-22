@@ -1,0 +1,101 @@
+{
+  "id": "3-juan",
+  "title": "3 Juan",
+  "abbr": "3 Jn",
+  "order": 64,
+  "testament": "NT",
+  "summary": "El libro más breve del Nuevo Testamento en extensión de palabras (apenas quince versículos en un capítulo): billete personal del Anciano dirigido a su amado amigo Gayo elogiando su hospitalidad generosa con predicadores itinerantes, denunciando el autoritarismo egoísta del dirigente local Diótrefes que expulsa hermanos y rechaza la carta enviada a la iglesia, y recomendando al fiel Demetrio. Canónica; completa en NTV y Codex.",
+  "genre": [
+    "carta personal de elogio y recomendación",
+    "conflicto de autoridad local en iglesia doméstica",
+    "billete en papiro"
+  ],
+  "language": "Griego koiné epistolar coloquial idéntico al molde grecorromano de correspondencia privada",
+  "date": {
+    "narrative": "Inmediatamente contemporánea o poco posterior a 2 Juan ante conflicto jurisdiccional en una iglesia vecina",
+    "composition": "Finales del siglo I d. C. (c. 90–100 d. C., en Asia Menor)",
+    "certainty": "probable",
+    "note": "Conserva una instantánea histórica única del choque entre autoridad apostólica supralocal y líderes locales ambiciosos a fines del siglo I."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento (integrada junto a 2 Juan en el canon del siglo IV)",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 3 Juan sigue fielmente la etiqueta amistosa de las cartas familiares en papiro grecorromanas —incluyendo el deseo clásico de buena salud física y espiritual («Amado, ruego que seas prosperado en todo y tengas salud, así como prospera tu alma», v. 2)— para retratar en apenas quince versículos a tres personajes contrastantes en torno a una iglesia local: I. Gayo el anfitrión leal que camina en la verdad sosteniendo fielmente a misioneros forasteros sin aceptar dinero de paganos (vv. 1–8); II. Diótrefes, «a quien le gusta tener el primer lugar», que difama al Anciano, impide hospedar hermanos y echa de la iglesia a quienes los acogen (vv. 9–10); III. Demetrio, portador avalado por la verdad misma antes de la visita prometida «boca a boca» (vv. 11–15).\n\n[Estudio] Es el escrito más corto de todo el Nuevo Testamento por número de palabras griegas (219 palabras)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Hacia fines del siglo I d. C., cuando las redes misioneras joánicas dependían de anfitriones con casas capaces de alojar congregaciones y mensajeros enviados desde Éfeso, el crecimiento institucional abrió espacio a liderazgos locales personalistas (protomonárquicos o facciosos). Diótrefes no parece acusado de herejía doctrinal (a diferencia de los adversarios de 1–2 Juan), sino de orgullo jurisdiccional («amar el primer puesto», philoproteuon, v. 9) que bloquea la comunión intereclesial expulsando a quienes hospedan enviados de la iglesia madre."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Escrita por el mismo «Anciano / Presbítero» de 2 Juan en idéntico estilo personal («tengo tinta y cálamo… espero verte pronto», vv. 13–14), su inclusión en el canon fue al inicio lenta por su carácter estrictamente privado y brevedad (omitida en la Peshitta siríaca primitiva y debatida en listas hasta Atanasio, Jerónimo y Cartago en 397), reconociéndose pronto como pieza gemela inseparable de 2 Juan.\n\n[Estudio] Walter Drum (Catholic Encyclopedia) destaca cómo su falta de pretensiones apologéticas o dogmáticas artificiales confirma plenamente su autenticidad histórica del siglo I."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Sin discursos doctrinales largos, 3 Juan articula una teología práctica profunda de la solidaridad eclesial y la integridad moral: acoger dignamente a los predicadores itinerantes que salen «por amor del Nombre sin aceptar nada de los gentiles» convierte al anfitrión en «colaborador de la verdad» (synergoi te aletheia, vv. 7–8). Frente al despotismo eclesiástico de Diótrefes —que confunde el servicio cristiano con la ambición de mandar («amar el primer puesto»)—, formula la regla moral concisa: «Amado, no imites lo malo, sino lo bueno. El que hace lo bueno es de Dios; el que hace lo malo, no ha visto a Dios» (v. 11).\n\n[Estudio] La palabra «salud» del alma y del cuerpo en el v. 2 refleja cuidado integral."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitida íntegra en el Codex Sinaiticus (núm. 57, tras 2 Juan), el Vaticanus y el Alexandrinus, prácticamente sin variaciones de sentido —salvo la duda menor de algunos manuscritos entre «conoces» y «sabemos» en el v. 12 («sabes que nuestro testimonio es verdadero» en Sinaiticus y Vaticanus) y «tus amigos / los hermanos» en el saludo final.\n\n[Texto] Tanto la NTV (1 capítulo, 15 vv.) como el Codex Sinaiticus (1 capítulo, 15 vv.) conservan exactamente sus quince versículos."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque poco comentada individualmente en los siglos iniciales debido a su inclusión tardía en Siria, 3 Juan aportó al pensamiento eclesial un realismo inestimable: muestra que la Iglesia apostólica primitiva conoció ya conflictos de poder interno y egos dirigentes, y que la autoridad legítima se acredita por el testimonio de la verdad, el servicio humilde y la hospitalidad misionera («colaboradores con la verdad», v. 8)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Notar el contraste entre los tres retratos: Gayo (servicio humilde y lealtad abierta), Diótrefes (ambición de poder que aísla su iglesia) y Demetrio (buen testimonio ante todos).\n2. Leer el v. 2 en su contexto amistoso epistolar: una bendición epistolar estándar grecorromana transformada en deseo por la prosperidad integral de Gayo.\n3. Observar la frase clave del v. 8: apoyar materialmente a los obreros veraces equivale a ser «cooperadores/colaboradores de la verdad».\n4. Comparar 2 Juan (hospitalidad cerrada al error cristológico) con 3 Juan (hospitalidad abierta al hermano fiel)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Qué motivaba la ruptura abierta de Diótrefes frente al Anciano?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Varios historiadores (Harnack, Käsemann) interpretaron a Diótrefes como un obispo monárquico naciente defendiendo su autonomía local frente a profetas itinerantes, o al revés, un líder carismático rebelde rechazado por la red eclesial ortodoxa."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros comentaristas (Raymond Brown, Malherbe) no ven evidencia de cargos doctrinales contra Diótrefes sino puro afán personal de primacía («le gusta ser el primero», v. 9) en una congregación doméstica independiente."
+        }
+      ]
+    },
+    {
+      "question": "¿Se escribieron 2 y 3 Juan para la misma congregación o para iglesias diferentes?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de los exegetas sugiere la misma comunidad: como Diótrefes suprimió la carta oficial dirigida a la iglesia entera (quizá 2 Juan o una carta perdida mencionada en 3 Jn 9), el Anciano escribe privadamente al fiel Gayo apoyando a Demetrio."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros opinan que 2 Juan aborda una iglesia amenazada por falsos maestros docetas (problema doctrinal), mientras 3 Juan responde a una iglesia distinta bloqueada por Diótrefes (problema disciplinario-hospitalario)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-john-epistles",
+    "ce-canon-nt",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

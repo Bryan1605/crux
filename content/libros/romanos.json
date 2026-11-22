@@ -1,0 +1,101 @@
+{
+  "id": "romanos",
+  "title": "Romanos",
+  "abbr": "Ro",
+  "order": 45,
+  "testament": "NT",
+  "summary": "Carta magistral de Pablo de Tarso en dieciséis capítulos dictada desde Corinto hacia el año 57 d. C. a las iglesias de Roma que aún no había visitado: exposición teológica sistemática del Evangelio como poder de Dios para salvación por la fe tanto de judíos como de griegos, justificación, vida en el Espíritu (cap. 8), misterio de Israel (9–11) y ética práctica del amor y unidad comunitaria (12–16). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "epístola-tratado teológico",
+    "diatriba dialógica retórica",
+    "carta apostólica de presentación y recomendación"
+  ],
+  "language": "Griego koiné denso, argumentativo y vigoroso dictado por medio de Tercio (16:22)",
+  "date": {
+    "narrative": "Finales del tercer viaje misionero de Pablo en Corinto, antes de llevar la colecta a Jerusalén (c. 56–58 d. C.)",
+    "composition": "Invierno del 56/57 o primavera del 57 d. C. desde Corinto/Cencreas",
+    "certainty": "segura",
+    "note": "Su datación, lugar de envío (casa de Gayo en Corinto con Febe de Cencreas, cap. 16) y autenticidad paulina son de las más firmes de toda la Antigüedad."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Romanos constituye el escrito más amplio y estructurado del epistolario paulino. Tras un saludo teológico denso y el lema programático de 1:16–17 («el justo por la fe vivirá»), despliega dieciséis capítulos en cuatro movimientos: I. Universalidad del pecado humano en gentiles y judíos y justificación gratuita mediante la fe en la cruz propiciatoria de Cristo (1:18–4:25); II. Paz con Dios, Adán y Cristo, liberación del dominio del pecado y la Ley, y la cumbre del capítulo 8 en la filiación por el Espíritu («Nada nos podrá separar del amor de Dios», 5–8); III. Angustia y esperanza por la fidelidad irrevocable de Dios hacia Israel (9–11); IV. Exhortación ética en el sacrificio vivo, los dones, las autoridades y la acogida mutua entre «fuertes y débiles», cerrada con saludos personales en Roma (12–16).\n\n[Estudio] Utiliza constantemente el diálogo vivo con interlocutores imaginarios propio de la diatriba grecorromana («¿Qué pues diremos? ¡De ninguna manera!»)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Cuando Pablo escribe desde Corinto rumbo a Jerusalén con la colecta de Macedonia y Acaya (15:25–28), planea proseguir hacia España usando como base logística la comunidad de Roma, que él no fundó. Las iglesias romanas habían pasado por una fuerte sacudida tras la expulsión de judíos por el edicto del emperador Claudio (c. 49 d. C., cfr. Suetonio y Hch 18:2); al regresar judíos cristianos como Prisca y Aquila bajo Nerón (cap. 16), necesitaban reconciliar tensiones prácticas sobre días sagrados y dietas (caps. 14–15) entre una mayoría gentil y una minoría judeocristiana."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] Escrita por Pablo de Tarso y copiada por su amanuense Tercio («Yo Tercio, que escribí la epístola, os saludo en el Señor», 16:22), llevada probablemente por la diaconisa Febe desde Cencreas (16:1–2).\n\n[Estudio] August Merk (Catholic Encyclopedia) analiza la plena autenticidad del corpus completo, estudiando también las variaciones antiguas de manuscritos al final (presencia o ubicación de la doxología de 16:25–27 tras el cap. 14, 15 o 16, probablemente reflejo de circulaciones litúrgicas tempranas o mutilación de Marción)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Frente a cualquier jactancia étnica o moral, Pablo demuestra que «todos pecaron y están destituidos de la gloria de Dios» (3:23), siendo justificados gratuitamente por su gracia mediante la redención en Cristo por medio de la fe (3:24–25). En Cristo, el creyente muere simbólicamente con Él en el bautismo para andar en vida nueva (cap. 6), no bajo condenación sino guiado por el Espíritu que clama «¡Abba, Padre!» y sostiene la creación entera que gime hacia su redención (cap. 8). Lejos de desechar a Israel, Dios injerta a las naciones como olivo silvestre prometiendo que «irrevocables son los dones y el llamamiento de Dios» (11:29).\n\n[Tradición] Este edificio teológico modeló la doctrina occidental de la gracia, la fe y la justicia."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitida en el texto completo en el Papiro P46 (c. 200 d. C., donde salta ciertas secciones finales colocando la doxología después de 15:33) y en el Codex Sinaiticus (núm. 37), donde figura íntegra con 16 capítulos y la doxología en 16:25–27 (aunque 1:7 y 1:15 omitieron o adaptaron en copias muy raras la mención «en Roma», quizá para lectura general).\n\n[Texto] Aquí la NTV (16 capítulos, 432 vv.) y el Codex Sinaiticus (16 capítulos, 432 vv.) concuerdan exactamente verso a verso."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Ningún escrito apostólico ha provocado tantas renovaciones espirituales históricas: Romanos 13:13–14 impulsó la conversión decisiva de Agustín de Hipona en Milán (386 d. C.) y luego toda la teología antipelagiana de la gracia; Romanos 1:17 iluminó a Martín Lutero dando origen a la Reforma protestante; y el prefacio de Lutero a Romanos encendió en 1738 el corazón de John Wesley en Aldersgate. Antes ya Orígenes y Juan Crisóstomo le dedicaron comentarios inmortales."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. No aislar los capítulos 1–8 de los 9–11 ni de los 12–16: la justificación por la fe resuelve precisamente cómo judíos y gentiles forman un mismo pueblo unido en la mesa (15:7–13).\n2. Leer juntos los capítulos 5 y 8 como el díptico luminoso de la esperanza cristiana en medio del sufrimiento presente.\n3. Seguir el método de preguntas y respuestas rápidas en caps. 3, 6 y 7 para entender a qué objeciones concretas responde Pablo.\n4. Notar la lista personal de veintiséis creyentes (hombres y mujeres colaboradores como Junia, Prisca y Febe) en el cap. 16."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿A quién representa el «yo» torturado que dice «el bien que quiero no hago» en Romanos 7:7–25?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Agustín tardío y gran parte de la teología reformada leyeron 7:14–25 como el combate permanente del propio creyente regenerado entre el Espíritu y la carne."
+        },
+        {
+          "label": "Estudio",
+          "body": "La mayoría de Padres griegos (Crisóstomo) y la exégesis crítica moderna ven un recurso retórico (prosopopeya) hablando en nombre de Israel/Adán bajo la Ley antes o fuera del poder liberador del Espíritu proclamado inmediatamente en 8:1–4."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo entiende la investigación actual el énfasis de «obras de la ley» frente a la «fe de/en Cristo»?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La lectura clásica agustiniana-luterana opone el intento humano de ganar salvación por méritos morales frente a la confianza pasiva en la gracia gratuita de Dios."
+        },
+        {
+          "label": "Estudio",
+          "body": "La «Nueva Perspectiva sobre Pablo» (Sanders, Dunn, Wright) subraya además que «obras de la ley» (circuncisión, sábado, pureza alimentaria) funcionaban como fronteras étnicas que excluían a los gentiles del pacto hasta que la fe en Cristo abrió la familia de Abraham."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-romans",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

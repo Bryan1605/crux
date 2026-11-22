@@ -1,0 +1,101 @@
+{
+  "id": "apocalipsis",
+  "title": "Apocalipsis",
+  "abbr": "Ap",
+  "order": 66,
+  "testament": "NT",
+  "summary": "Último libro de la Biblia cristiana en veintidós capítulos: revelación profética y apocalíptica recibida por Juan en la isla de Patmos para consolar y despertar a siete iglesias de Asia Menor bajo presión imperial. Despliega el culto celeste en torno al Cordero inmolado, tres ciclos septenarios de sellos, trompetas y copas, la victoria cósmica sobre el dragón, la bestia y Babilonia, y la visión culminante de los nuevos cielos, la Nueva Jerusalén y «¡Ven, Señor Jesús!». Canónico; completo en NTV y Codex Sinaiticus.",
+  "genre": [
+    "apocalipsis profético-epistolar",
+    "liturgia celeste en visiones simbólicas",
+    "profecía crítica contra el imperio"
+  ],
+  "language": "Griego koiné expresivo cargado de semitismos voluntarios y gramática solemne arcaizante (solecismos proféticos)",
+  "date": {
+    "narrative": "Juan desterrado en la isla de Patmos en el mar Egeo «por causa de la palabra de Dios y el testimonio de Jesús» (1:9)",
+    "composition": "Tradición temprana dominante hacia el final del reinado de Domiciano (c. 95–96 d. C.), frente a hipótesis minoritaria de época neroniana-pre-70 (c. 68–69 d. C.)",
+    "certainty": "probable",
+    "note": "Ireneo de Lyon (Adv. Haer. 5.30.3) testimonió explícitamente hacia 180 d. C. que la visión «fue vista no hace mucho, casi en nuestra generación, al final del reinado de Domiciano»."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento (último en recibirse en el leccionario litúrgico oriental, aunque canónico)",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Apocalipsis («Revelación») fusiona tres géneros bíblicos en veintidós capítulos de arquitectura musical septenaria: es carta pastoral a siete iglesias reales de Asia Menor (caps. 1–3), profecía arraigada en Ezequiel, Daniel, Zacarías e Isaías (1:3; 22:7) y visión apocalíptica cósmica de la historia. Tras la liturgia inaugural ante el trono y el Cordero digno de abrir el rollo (4–5), despliega siete sellos (6–8:1), siete trompetas (8–11), el conflicto simbólico de la Mujer, el Dragón y las dos Bestias (12–14), siete copas de ira (15–16), la caída de Babilonia la Grande (17–18), las bodas del Cordero, el reino de mil años y el juicio del trono blanco (19–20), cerrando en la Nueva Jerusalén descendida del cielo (21–22).\n\n[Estudio] No cita textualmente el AT con fórmulas, pero entreteje más de quinientas alusiones veterotestamentarias."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Las siete ciudades destinatarias formaban una ruta postal circular real en la provincia romana de Asia (Éfeso, Esmirna, Pérgamo, Tiatira, Sardis, Filadelfia y Laodicea), saturada de templos del culto imperial al emperador divinizado y gremios comerciales idolátricos —Pérgamo poseía el primer templo provincial dedicado a Roma y Augusto («donde está el trono de Satanás», 2:13)—. Bajo el reinado de Domiciano (c. 95 d. C.) o el trauma cercano de Nerón y el mito del Nero redivivus, los cristianos sufrían marginación económica (13:17), destierro y primeros martirios como Antipas (2:13)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Identificado tempranamente por Justino Mártir (c. 150 d. C.), Ireneo de Lyon y el Fragmento Muratoriano con el apóstol Juan en Éfeso/Patmos; ya en el siglo III Dionisio de Alejandría notó las enormes diferencias estilísticas con el Cuarto Evangelio sugiriendo otro autor cristiano llamado Juan (como «Juan el Presbítero»).\n\n[Estudio] C. Van den Biesen (Catholic Encyclopedia) recorre las teorías críticas de fuentes o composición unitaria en Patmos y Éfeso, destacando hoy la mayoría de estudiosos la asombrosa coherencia simbólica y numérica de todo el libro compuesto por un profeta judeocristiano asiático del círculo joánico."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Apocalipsis no es un calendario cifrado para atemorizar, sino un himno de consuelo que descorre la cortina del presente: detrás del poder intimidatorio de la Bestia imperial y la seducción económica de Babilonia, el trono del universo nunca ha quedado vacío. Quien reina en la historia es el Cordero que «fue inmolado» y redimió con su sangre gente de toda tribu, lengua, pueblo y nación (5:6–10); los mártires vencen precisamente por la sangre del Cordero, la palabra del testimonio y no amar sus vidas hasta la muerte (12:11). Al final, Dios mismo habita entre los hombres en una ciudad-jardín abierta donde ya no habrá llanto, dolor ni muerte («¡He aquí, yo hago nuevas todas las cosas!», 21:4–5).\n\n[Tradición] Los himnos celestes («Santo, santo, santo», «Digno es el Cordero», «¡Aleluya!») modelaron el culto litúrgico cristiano entero."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Testimoniada desde los papiros P47 (siglo III, caps. 9–17) y P115 (s. III–IV), su testigo mayúsculo más completo antiguo es el Codex Sinaiticus (núm. 59, donde cierra íntegro el códice antes de Bernabé y Pastor de Hermas), junto al Codex Alejandrino (falta en el Vaticanus por pérdida final). Su variante numérica más famosa aparece en 13:18 («el número de la bestia»): aunque casi toda la tradición incluyendo el Sinaiticus lee 666 (heb. qesar neron = 666), P115 y un manuscrito citado por Ireneo conservan 616 (forma latina qesar nero = 616).\n\n[Texto] Tanto la NTV (22 caps., 405 vv.) como el Codex Sinaiticus (22 caps., 405 vv.) conservan completo todo el libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aceptado inmediatamente en Occidente (Justino, Ireneo, Tertuliano), sufrió recelos prolongados en el Oriente griego y siríaco (omitido del canon de Laodicea c. 360 y ausente de la Peshitta siríaca) a causa de interpretaciones milenaristas literales de Apocalipsis 20 en montanistas y ciertos Padres antiguos (Papías, Justino, Ireneo), antes de consolidarse por obra de Atanasio, Andrés de Cesarea y la lectura simbólica eclesial de Ticonio y Agustín (Ciudad de Dios 20)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer 1:1–3 y 22:6–7 juntos: el libro se presenta para bendecir a quienes oyen y guardan sus palabras porque «el tiempo está cerca» para sus lectores asiáticos.\n2. No leer sellos, trompetas y copas siempre como cronología lineal estricta, sino a menudo en «recapitulación» espiral que contempla el mismo juicio final desde ángulos crecientes.\n3. Tener siempre abierto el Antiguo Testamento (Daniel, Ezequiel 1 y 47, Éxodo 7–11, Isaías 65): casi todo símbolo procede de allí, no de tecnología moderna.\n4. Examinar la variante 666 / 616 en 13:18 y gozar los cánticos celestes de caps. 4–5, 7 y 21–22 en NTV y Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cuál es el sentido de los «mil años» de Apocalipsis 20:1–10 en la escatología cristiana?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Mientras algunos autores de los siglos II–III (Papías, Justino, Ireneo) esperaron un reino terrenal futuro de mil años tras el regreso de Cristo («premilenarismo histórico»), Agustín y la tradición católica, ortodoxa y reformada clásica («amilenarismo») leyeron simbólicamente los mil años de Ap 20 como el tiempo presente del reinado espiritual de Cristo y sus santos entre la primera venida y el juicio final único."
+        },
+        {
+          "label": "Estudio",
+          "body": "Exégesis histórico-literarias contemporáneas subrayan la coherencia simbólica apocalíptica del número «mil» (totalidad perfecta contrastada con los tres años y medio del dragón) para vindicar a los mártires cristianos ante la injusticia imperial romana sin requerir reconstrucciones políticas literales modernas."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo deben leerse los símbolos de Apocalipsis 4–19: preterista (siglo I), historicista, futurista o idealista?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La gran mayoría de historiadores bíblicos combina un anclaje preterista sólido (las siete colinas de Roma y el mito de Nerón en 13 y 17, relevancia directa para las siete iglesias del siglo I) con una lectura simbólico-teológica (idealista) de la batalla espiritual en toda época hasta la consumación final (caps. 20–22)."
+        },
+        {
+          "label": "Tradición",
+          "body": "Escuelas futuristas y dispensacionalistas proyectan prácticamente todos los capítulos 4–19 hacia una futura tribulación septenal al fin de la historia humana."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-apocalypse",
+    "ce-canon-nt",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-acerca-del-codex"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

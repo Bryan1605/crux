@@ -1,0 +1,100 @@
+{
+  "id": "colosenses",
+  "title": "Colosenses",
+  "abbr": "Col",
+  "order": 51,
+  "testament": "NT",
+  "summary": "Carta en cuatro capítulos desde cautiverio a la iglesia de Colosas en el valle del Lico (fundada por Epafras sin que Pablo la hubiera visitado personalmente): exalta la supremacía absoluta de Cristo como «imagen del Dios invisible» y cabeza creadora y reconciliadora del universo (1:15–20) frente a filosofías ascéticas, culto a ángeles y rudimentos cósmicos, y exhorta a buscar las cosas de arriba revistiéndose de compasión y gratitud. Canónica; completa en NTV y Codex.",
+  "genre": [
+    "carta apostólica cristológica",
+    "himno cósmico (1:15–20)",
+    "polémica contra sincretismo y código doméstico"
+  ],
+  "language": "Griego koiné denso, rico en vocabulario filosófico-cósmico («plenitud / pleroma», «misterio», «sabiduría»)",
+  "date": {
+    "narrative": "Escrita por Pablo y Timoteo desde prisión junto con Aristarco, Marcos, Lucas, Demas y Epafras, enviada por Tíquico y Onésimo (cap. 4)",
+    "composition": "Debatida: por Pablo en cautiverio romano (c. 60–62 d. C.) o redactada poco después por un colaborador cercano (c. 65–75 d. C.)",
+    "certainty": "discutida",
+    "note": "Los vínculos personales exactos entre Colosenses 4 y Filemón (mismos compañeros y el regreso de Onésimo) muestran que ambas cartas partieron juntas."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Colosenses articula en cuatro capítulos apretados una respuesta teológica y pastoral contra una amenaza espiritual incipiente: I. Saludo, acción de gracias por el fruto del Evangelio llevado por Epafras y el gran himno cristológico sobre la primacía creadora y reconciliadora de Cristo (cap. 1); II. Advertencia firme contra la «filosofía y vana sutileza» —normas alimentarias, fiestas de luna nueva, humildad afectada y veneración de ángeles—, proclamando que en Cristo habita corporalmente toda la plenitud de la Deidad y Él desarmó públicamente en la cruz a los poderes cósmicos (cap. 2); III. Nueva vida oculta con Cristo en Dios: despojarse del hombre viejo, revestirse de amor y paz cantando salmos e himnos, más instrucciones familiares (3:1–4:6); IV. Saludos compartidos con Onésimo, Lucas y la comunidad de Laodicea (4:7–18).\n\n[Estudio] Su núcleo 1:15–20 es pieza clave de la himnología cristiana naciente."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Situada en Frigia (interior de Asia Menor, cerca de Hierápolis y Laodicea), Colosas albergaba una importante colonia judía junto a religiosidades locales fascinadas por espíritus elementales (stoicheia), visiones angélicas y prácticas ascéticas estrictas («no manejes, ni gustes, ni toques», 2:21). Al visitar a Pablo preso, Epafras le expuso la seducción de esa «filosofía» sincretista que degradaba a Cristo a mero intermediario entre muchos poderes espirituales."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atestiguada por Ireneo, Clemente y Tertuliano bajo autoría de Pablo junto a Timoteo (1:1), firmando al cierre de su mano («El saludo de mi propia mano, Pablo. Acuérdense de mis cadenas», 4:18) y compartiendo exactamente los mismos mensajeros y acompañantes que Filemón.\n\n[Estudio] Cornelius Aherne (Catholic Encyclopedia) defiende la autoría paulina frente a críticos del siglo XIX–XX que ven diferencias léxicas (hápax abundantes, tono elevado de una Iglesia ya realizada frente a Gálatas/Romanos) explicables sea por dictado a Timoteo o por la naturaleza nueva del error filosófico frigio, o bien por un discípulo cercano."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La respuesta de Colosenses a todo miedo cósmico o suplemento ritual es la suficiencia absoluta de Jesucristo: «Él es la imagen del Dios invisible, el primogénito de toda creación; en Él fueron creadas todas las cosas… todo fue creado por medio de Él y para Él» (1:15–16). En la cruz, Dios anuló el acta de deuda legal que nos condenaba y exhibió en triunfo público sobre los principados vencidos (2:14–15). Por eso nadie debe juzgar al creyente por comidas, sábados ni ascetismos humanos que tienen «apariencia de sabiduría» pero no frenan el egoísmo (2:16–23).\n\n[Tradición] Junto con Juan 1 y Hebreos 1, Colosenses 1:15–20 fundó la doctrina clásica de la divinidad y mediación cósmica de Cristo."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitida íntegra en P46 (c. 200 d. C.) y los grandes unciales del siglo IV con excelente estabilidad textual; destacan variaciones puntuales sobre un término en 2:18 («cosas que ha visto / no ha visto», donde el Sinaiticus original omite «no», preferido por muchos críticos) y variantes trinitarias en el título de 2:2.\n\n[Texto] Tanto la NTV (4 capítulos, 95 vv.) como el Codex Sinaiticus (núm. 43; 4 capítulos, 95 vv.) presentan completo todo el libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Tanto Ignacio de Antioquía en el siglo II como los Padres en el siglo IV (Atanasio, Gregorio de Nisa, Juan Crisóstomo) acudieron a Colosenses 1:15–20 y 2:9 («en Él habita corporalmente toda la plenitud de la Deidad») para combatir tanto el gnosticismo dualista que despreciaba la materia como el arrianismo (debatiendo el alcance exacto de «primogénito de toda creación» frente a creador de todo). La exhortación musical de 3:16 inspiró también la historia de la himnología comunitaria."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer el himno de 1:15–20 contemplando sus dos estrofas gemelas: supremacía de Cristo en la Creación (15–17) y en la Redención-Iglesia (18–20).\n2. En el cap. 2, identificar los síntomas de la «filosofía colosense» (tabúes alimentarios, cultos angélicos, calendario lunar/sabático, rigorismo corporal) para entender por qué Pablo afirma que son «sombra» frente al cuerpo que es Cristo (2:17).\n3. Observar cómo la ética de 3:1–17 fluye directamente de «haber muerto y resucitado con Cristo» en el bautismo (2:12; 3:1).\n4. Leer Col 4:7–17 junto a la epístola hermana de Filemón."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue redactada por el propio Pablo (o con Timoteo) en prisión o por un discípulo suyo tras su muerte?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Gran parte de comentaristas (Lightfoot, Bruce, Aherne) mantiene la autoría paulina directa en Roma (c. 61 d. C.): la lista idéntica de acompañantes con Filemón y el vocabulario único responden exactamente a la terminología de sus oponentes frigios."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores críticos (Bornkamm, Lohse) proponen autoría deutero-paulina (un discípulo estrecho c. 70 d. C.) citando la ausencia del vocabulario típico de justificación/espíritu y las frases largas similares a Efesios."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo entender el título «primogénito (prototokos) de toda creación» en 1:15?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Los Padres nicenos y la exégesis clásica demuestran por el contexto inmediato de 1:16 («en Él fueron creadas todas las cosas» y «Él es antes de todas las cosas», v. 17) que prototokos indica preeminencia soberana y origen eterno por encima de todo lo creado (como Sal 89:27), no que Cristo sea la primera criatura."
+        },
+        {
+          "label": "Estudio",
+          "body": "Historiadores del pensamiento relacionan la expresión con el lenguaje sapiencial judío de Proverbios 8 y Sabiduría 7 sobre la Sabiduría preexistente como mediadora divina de la creación."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-colossians",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

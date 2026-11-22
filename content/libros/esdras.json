@@ -1,0 +1,101 @@
+{
+  "id": "esdras",
+  "title": "Esdras",
+  "abbr": "Esd",
+  "order": 15,
+  "testament": "AT",
+  "summary": "Diez capítulos sobre el regreso del exilio babilónico bajo el decreto de Ciro, la reconstrucción del altar y del Segundo Templo pese a la oposición regional (caps. 1–6) y la misión posterior de Esdras el escriba para restaurar la observancia de la Ley y disolver matrimonios mixtos (caps. 7–10). Protocanónico; en el Codex Sinaiticus corresponde al inicio de 2 Esdras.",
+  "genre": [
+    "compilación documental oficial",
+    "memorias en primera persona",
+    "crónica de restauración cultual"
+  ],
+  "language": "Bilingüe: hebreo bíblico tardío y amplias secciones en arameo imperial (4:8–6:18; 7:12–26)",
+  "date": {
+    "narrative": "Desde el edicto de Ciro (538 a. C.) y la dedicación del Templo (515 a. C.) hasta la misión de Esdras (c. 458 o 398 a. C.)",
+    "composition": "Siglos IV–III a. C., a partir de documentos oficiales persas y memorias del siglo V a. C.",
+    "certainty": "probable",
+    "note": "Unido originalmente a Nehemías en un único libro hebreo y en 2 Esdras de la Septuaginta."
+  },
+  "canon": {
+    "judio": "Tanaj (Ketuvim — unido tradicionalmente a Nehemías como un solo libro)",
+    "catolico": "Antiguo Testamento (protocanónico; 1 Esdras en Vulgata)",
+    "ortodoxo": "Antiguo Testamento (incluido en 2 Esdras LXX caps. 1–10)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Esdras está completo en la NTV (10 capítulos, 280 versículos). El Codex Sinaiticus unía Esdras y Nehemías bajo el libro de 2 Esdras, pero solo conserva desde 2 Esdras 9:9 (correspondiente a capítulos finales de Esdras en adelante); consulte la ficha de 2 Esdras para el texto griego.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Esdras reúne en diez capítulos edictos imperiales aqueménidas, censos de familias repatriadas, cartas administrativas en arameo oficial y memorias autobiográficas de Esdras en dos actos separados por casi sesenta años: la vuelta inicial de Sesbasar y Zorobabel hasta completar y celebrar el Segundo Templo (caps. 1–6, años 538–515 a. C.), y la llegada de Esdras «experto en la ley de Moisés» bajo Artajerjes con comitiva, donativos y reforma severa contra los matrimonios mixtos (caps. 7–10).\n\n[Estudio] En su texto inserta correspondencia bilingüe aramea (4:8–6:18 y 7:12–26) escrita en la lengua cancilleresca del Imperio persa."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los hallazgos arqueológicos del Cilindro de Ciro (que documenta su política general de repatriar cultos locales), las tablillas de Persépolis y los papiros arameos de la comunidad judía de Elefantina en Egipto (407 a. C., con peticiones a Bagoas gobernador de Judá y a los hijos de Sanbalat) confirman el marco administrativo, titulatura y lengua aramea imperial que respira el libro de Esdras.\n\nEn una pequeña Yehud rodeada de provincias rivales, la Ley y el Templo sustituían al trono perdido como hogar de supervivencia."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Tanto el judaísmo antiguo como la patrística agruparon Esdras y Nehemías en un único volumen hasta la división medieval hebrea (s. XV) y las ediciones impresas.\n\n[Estudio] Jacobs, Seligsohn, Jastrow y Margoliouth (Jewish Encyclopedia) y Charles Souvay (Catholic Encyclopedia) analizan cómo un compilador posexílico reunió las listas de repatriados (cap. 2), una «crónica aramea» del Templo, el decreto de Artajerjes y la memoria en primera persona de Esdras (7:27–9:15), entrelazándola después en tercera persona en el capítulo 10 y continuándola en Nehemías 8."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] En Esdras, la soberanía de Dios no actúa deshaciendo imperios con ejércitos, sino «despertando el espíritu» de reyes extranjeros como Ciro, Darío y Artajerjes (1:1; 6:22; 7:27) para financiar el culto en Jerusalén. La comunidad sobrevive por la continuidad sagrada con el primer Templo (vasos devueltos, altar reconstruido), la oración penitencial solidaria (cap. 9: «nuestras iniquidades han subido hasta el cielo») y la preservación celosa de la identidad santa bajo la Torá.\n\n[Estudio] Su rigor separacionista suscita tensión fértil al leerse dentro del canon junto a Rut o Isaías 56."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Existen dos recensiones griegas paralelas en la tradición de la Septuaginta: 1 Esdras (el llamado «Esdras griego» apócrifo, que reordena pasajes y añade el certamen de los tres guardias de Darío) y 2 Esdras, traducción literal de nuestros libros canónicos de Esdras–Nehemías. De los diez capítulos de Esdras solo un tramo final (a partir de 9:9) perdura hoy en los folios sobrevivientes del Codex Sinaiticus (núm. 8).\n\n[Texto] Aquí la NTV ofrece los 10 capítulos completos (280 vv.); para el griego conservado del Sinaítico conviene enlazar con la ficha de 2 Esdras."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] El judaísmo rabínico honró a Esdras como «segundo Moisés» (Sanedrín 21b), atribuyéndole el establecimiento de la Gran Asamblea, la lectura pública periódica de la Torá y la adopción de la escritura hebrea cuadrada aramea. En la tradición cristiana primitiva causaron también influjo las obras apocalípticas seudónimas posteriores bajo su nombre (4 Esdras), mientras Agustín y Beda leyeron en la edificación del Templo y la lectura de la Ley la figura de la Iglesia renovada por las Escrituras."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Recordar que Esdras y Nehemías constituyen originalmente una sola obra dividida en la tradición cristiana latina.\n2. Notar la ruptura cronológica y lingüística: los capítulos 1–6 (538–515 a. C.) preceden en casi sesenta años la llegada de Esdras en el cap. 7.\n3. Observar la sección aramea de 4:8–6:18 y notar cómo 4:6–23 agrupa temáticamente cartas sobre murallas de reinados posteriores para explicar la oposición local.\n4. Consultar 2 Esdras 9–10 en el Codex Sinaiticus para comparar el cierre del libro."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Llegó Esdras antes que Nehemías (458 a. C., año 7 de Artajerjes I) o después (398 a. C., bajo Artajerjes II)?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La cronología literal del libro (458 a. C., Artajerjes I en Esd 7:7) mantiene a Esdras trece años antes que Nehemías (445 a. C.) y coincide con la tradición histórica común."
+        },
+        {
+          "label": "Estudio",
+          "body": "Numerosos historiadores (Albright, Bright, van Hoonacker) sitúan a Esdras en 398 a. C. (bajo Artajerjes II), señalando que Esdras encuentra una Jerusalén ya habitada y fortificada y menciona a Johanán hijo/nieto de Eliasib (Esd 10:6, sumo sacerdote hacia 407 a. C. según los papiros de Elefantina)."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo evaluar históricamente los edictos reales persas redactados en favor del Templo?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de estudiosos (Williamson, Bickerman) ve detrás de las cartas arameas de Esd 4–7 documentos reales genuinos de la cancillería aqueménida, aunque retocados estilísticamente con lenguaje judío."
+        },
+        {
+          "label": "Estudio",
+          "body": "Una corriente más escéptica cuestiona la generosidad financiera extrema del edicto de Artajerjes (7:12–26) y ve en él reconstrucciones apologéticas judías tardías."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-ezra",
+    "souvay-1909-esdras",
+    "wooden-nets-2esdras",
+    "tyndale-ntv-2009",
+    "ce-canon-ot"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

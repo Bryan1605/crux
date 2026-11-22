@@ -14,6 +14,7 @@ export const MORPH_DIR = path.join(CACHE, 'morphgnt');
 export const TBESG_PATH = path.join(CACHE, 'tbesg.txt');
 export const LEMAS_DIR = path.join(ROOT, 'public/textos/exegesis/lemas');
 export const LEXICO_PATH = path.join(ROOT, 'public/textos/exegesis/lexico.json');
+export const LEXICO_BASE_PATH = path.join(ROOT, 'public/textos/exegesis/lexico-griego-base.json');
 export const SOURCE_PATH = path.join(ROOT, 'content/lexico/griego.json');
 
 /** Ficheros de MorphGNT → id de libro de la web. */

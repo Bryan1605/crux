@@ -12,7 +12,7 @@ function bookMark(passage, title) {
   return book ? book.abbr : String(title || '').trim().charAt(0);
 }
 
-/** Lo que pinta la card, igual para estudios y personajes. */
+/** Lo que pinta la card, igual para estudios, personajes y libros bíblicos. */
 function cardData(entry) {
   const d = entry.data;
   if (entry.kind === 'personaje') {
@@ -31,6 +31,26 @@ function cardData(entry) {
         ['Época', d.epocaCorta || '—']
       ],
       cta: 'Ver la ficha'
+    };
+  }
+  if (entry.kind === 'libro') {
+    const cover = d.portada ? [d.portada] : [];
+    const genre = d.genre ? `${d.genre.charAt(0).toUpperCase()}${d.genre.slice(1)}` : '';
+    return {
+      images: cover,
+      position: 'center',
+      mark: d.abbr,
+      badge: d.badge || '',
+      meta: d.meta || '',
+      title: d.title,
+      sub: genre,
+      desc: d.summary || 'Ficha en preparación.',
+      stats: [
+        ['Capítulos', d.chapters ?? '—'],
+        ['Versículos', d.versesFormatted ?? '—'],
+        ['Testigos', d.witnesses || '—']
+      ],
+      cta: d.cta || 'Leer ficha'
     };
   }
   // Los estudios no llevan imagen: la card muestra el libro del pasaje.
@@ -55,10 +75,10 @@ function cardData(entry) {
 /**
  * Card común de las vistas de tarjetas (fase F del rediseño).
  *
- * `entry` es `{ kind: 'estudio'|'personaje', data, href }`. La raíz conserva
+ * `entry` es `{ kind: 'estudio'|'personaje'|'libro', data, href }`. La raíz conserva
  * `.study-card` para la aparición (`is-revealed`, `--reveal-d`) y la
- * inclinación (`--tilt-x/--tilt-y`) que gestiona `/estudio`. Un solo enlace por
- * card; las flechas del mini carrusel de escenas van fuera del enlace.
+ * inclinación (`--tilt-x/--tilt-y`) que gestiona `/estudio` y `/biblia/libros`.
+ * Un solo enlace por card; las flechas del mini carrusel de escenas van fuera del enlace.
  * Con `linked={false}` (destacados) la card no es enlace: navega su carrusel.
  */
 export default function StudyCard({ entry, headingLevel = 2, index = 0, linked = true, className = '' }) {
@@ -67,6 +87,7 @@ export default function StudyCard({ entry, headingLevel = 2, index = 0, linked =
   const Heading = `h${headingLevel}`;
   const Wrap = linked ? Link : 'div';
   const many = c.images.length > 1;
+  const longMark = String(c.mark || '').length >= 4;
 
   const step = dir => event => {
     event.preventDefault();
@@ -88,7 +109,7 @@ export default function StudyCard({ entry, headingLevel = 2, index = 0, linked =
               style={{ objectPosition: c.position }}
             />
           ) : (
-            <span className="study-card__mark" aria-hidden="true">
+            <span className={`study-card__mark${longMark ? ' study-card__mark--long' : ''}`} aria-hidden="true">
               {c.mark}
             </span>
           )}

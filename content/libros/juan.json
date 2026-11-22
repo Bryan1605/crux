@@ -1,0 +1,101 @@
+{
+  "id": "juan",
+  "title": "Juan",
+  "abbr": "Jn",
+  "order": 43,
+  "testament": "NT",
+  "summary": "Cuarto Evangelio en veintiún capítulos de incomparable hondura teológica y contemplativa: abre en la eternidad del Logos hecho carne (1:1–18), estructura siete signos públicos frente a fiestas judías («Libro de los Signos», 2–12), recoge los discursos íntimos de despedida y la oración sacerdotal en el cenáculo (13–17) y concluye en la hora gloriosa de la cruz, resurrección y encargo junto al lago (18–21). Canónico; completo en NTV y Codex Sinaiticus salvo 7:53–8:11.",
+  "genre": [
+    "evangelio teológico contemplativo",
+    "relatos de señales y discursos revelatorios",
+    "diálogos de hierro irónico"
+  ],
+  "language": "Griego koiné sencillo de vocabulario elemental repetido en espiral simbólica profunda («luz», «vida», «permanecer», «verdad»)",
+  "date": {
+    "narrative": "Varios viajes a Jerusalén durante tres Pascuas sucesivas desde el Jordán hasta la Pasión y Galilea (c. 28–30/33 d. C.)",
+    "composition": "Finales del siglo I d. C. (c. 90–100 d. C., Éfeso en Asia Menor según tradición antigua)",
+    "certainty": "probable",
+    "note": "El Papiro Rylands P52 (c. 125 d. C., conteniendo Jn 18:31–33, 37–38) hallado en Egipto atestigua que circulaba ya ampliamente apenas unas décadas tras su redacción."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento (incluida la perícopa de la adúltera 7:53–8:11 en el canon recibido)",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento (con nota crítica habitual en 7:53–8:11)"
+  },
+  "notice": "Nota textual destacada en Juan 7:53–8:11: el Codex Sinaiticus (núm. 36, 21 capítulos, 866 versículos) —junto con los papiros P66 y P75 y el Codex Vaticanus— omite por completo la perícopa de la mujer adúltera (7:53–8:11) y el v. 5:4, que sí aparecen entre corchetes o notas en la NTV (878 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Distinto en vocabulario, orden cronológico y estructura respecto a los tres sinópticos, el Cuarto Evangelio articula cuatro partes claras en veintiún capítulos: un Prólogo hímnico cósmico (1:1–18) y testimonio inicial (1:19–51); el «Libro de los Signos» en torno a siete obras simbólicas —agua en vino en Caná, curación a distancia, paralítico en Betesda, panes multiplicados, marcha sobre el mar, ciego de nacimiento y resurrección de Lázaro— interpretadas mediante extensos discursos «Yo soy» en las fiestas judías (caps. 2–12); el «Libro de la Gloria» desde el lavatorio de pies hasta la cruz «levantado en alto» y la resurrección (caps. 13–20); y un epílogo galileo de restauración de Pedro (cap. 21).\n\n[Estudio] Su estilo combina narración viva con doble sentido constante («nacer de nuevo / de lo alto», «levantar», «agua viva»)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] El trasfondo geográfico preciso de Jerusalén y Judea antes del 70 d. C. —el estanque de cinco pórticos de Betesda excavado en el siglo XIX, Siloé, el Enón junto a Salim, el pavimento enlosado Litóstrotos— convive con una comunidad cristiana ya expulsada de la sinagoga (aposynagogos en 9:22; 12:42; 16:2) hacia fines del siglo I d. C., probablemente en Asia Menor (Éfeso), dialogando además con el dualismo simbólico luz/tinieblas familiar hoy en Qumrán y con corrientes helenísticas nacientes."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Desde Ireneo de Lyon (quien escuchó a Policarpo, discípulo suyo en Esmirna), el Fragmento Muratoriano y Clemente de Alejandría, la Iglesia identificó al «discípulo a quien Jesús amaba» (21:20–24) con el apóstol Juan hijo de Zebedeo escribiendo en Éfeso en su ancianidad el «evangelio espiritual».\n\n[Estudio] Como resume Leopold Fonck (Catholic Encyclopedia) junto al debate crítico posterior, muchos investigadores contemporáneos proponen una «escuela o círculo joánico» encabezado por el testimonio ocular del Discípulo Amado (quizá Juan el apóstol o «Juan el presbítero») que editó sus memorias y añadió el epílogo de 21:24 («sabemos que su testimonio es verdadero»)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Juan proclama explícitamente su meta en 20:31: «para que crean que Jesús es el Cristo, el Hijo de Dios, y para que creyendo tengan vida en su nombre». La Palabra eterna creadora («el Verbo era Dios», 1:1) «se hizo carne y habitó (puso su tienda) entre nosotros» (1:14) para dar a conocer al Padre invisible. La «hora» suprema de la glorificación no ocurre en un trono terrenal, sino en la cruz, de donde brota el Espíritu como agua viva, mientras el mandamiento nuevo de amarse unos a otros (13:34–35) sella a los discípulos.\n\n[Tradición] Juan 1:1–14, 3:16 («Porque de tal manera amó Dios al mundo…») y 14–17 estructuraron los concilios cristológicos trinitarios de Nicea y Calcedonia."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Juan cuenta con el testimonio papiráceo neotestamentario más temprano conocido: P52 (c. 125 d. C.) y los amplios códices papiráceos P66 y P75 (c. 200 d. C.). Todos estos testigos tempranos, igual que el Codex Sinaiticus y el Vaticanus, carecen de la escena del ángel en el estanque (5:4) y de la mujer sorprendida en adulterio (7:53–8:11), relato oral antiguo autenticado por Papías que circuló en distintos puntos (incluso detrás de Lucas 21:38) hasta arraigar en Juan 8 en el texto occidental y bizantino.\n\n[Texto] La NTV (21 caps., 878 vv.) señala esa historia en notas; el Codex Sinaiticus (núm. 36; 21 caps., 866 vv.) pasa directamente de 7:52 a 8:12."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Clemente de Alejandría llamó al cuarto Evangelio «el evangelio espiritual». Tanto los primeros comentaristas gnósticos (Heracleón) como la gran exégesis eclesial (Orígenes en su monumental Comentario a Juan, Juan Crisóstomo, Cirilo de Alejandría y los 124 tratados de Agustín sobre Juan) meditaron inagotablemente el Prólogo y la oración sacerdotal de Jn 17 («que todos sean uno»). En la teología moderna sigue siendo fuente inagotable de cristología y mística eclesial."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir los siete «signos» de los capítulos 2–11: no son meras exhibiciones prodigiosas, sino ventanas simbólicas que apuntan a la persona de Jesús («Yo soy el pan de vida, la luz, la resurrección»).\n2. Observar la cronología juanina de las fiestas judías (tres Pascuas, Tabernáculos, Dedicación/Janucá) que organizan todo el libro.\n3. Prestar atención al doble sentido del verbo «ser levantado» (3:14; 8:28; 12:32): exaltación en la cruz y exaltación celeste en un mismo acto.\n4. Abrir Juan 7:52–8:12 en NTV y Codex Sinaiticus para observar de primera mano el testimonio de los manuscritos antiguos."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Escribió directamente el apóstol Juan hijo de Zebedeo o un círculo de discípulos sobre su testimonio?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La tradición patrística desde el siglo II identifica firmemente al autor y Discípulo Amado con Juan hijo de Zebedeo —señalando su conocimiento íntimo de Jerusalén y Galilea y el silencio constante sobre el nombre de Juan Zebedeo en todo el libro."
+        },
+        {
+          "label": "Estudio",
+          "body": "Gran número de investigadores críticos (Brown, Bauckham en distintas variantes) subraya la redacción en tercera persona de 21:24 («este es el discípulo… y nosotros sabemos que su testimonio es verdadero»), proponiendo a una comunidad o presbítero joánico elaborando el testimonio de un testigo ocular."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo se relacionan la historia de Juan y los Evangelios Sinópticos (especialmente la fecha de la Pasión)?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Juan presenta múltiples viajes a Jerusalén y sitúa la muerte de Jesús justo en la tarde de preparación pascual (19:14, al inmolarse los corderos), mientras los sinópticos llaman cena pascual a la Última Cena —diferencia debida sea a calendarios pascuales distintos o a teología simbólica del Cordero pascual."
+        },
+        {
+          "label": "Tradición",
+          "body": "Armonizadores antiguos propusieron un calendario lunar/solar diferente (p. ej. Qumrán) o comidas pascuales anticipadas para conciliar ambos relatos históricos complementarios."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-john-gospel",
+    "ce-gospels",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

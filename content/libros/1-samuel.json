@@ -1,0 +1,100 @@
+{
+  "id": "1-samuel",
+  "title": "1 Samuel",
+  "abbr": "1 S",
+  "order": 9,
+  "testament": "AT",
+  "summary": "Primera parte de la obra unitaria hebrea de Samuel (1 Reinos en la Septuaginta), en treinta y un capítulos: nacimiento y ministerio profético-judicial de Samuel, exigencia popular de un rey, reinado trágico de Saúl y ascenso y huida de David hasta la muerte de Saúl en Gilboa. Protocanónico; sin folios conservados en el Sinaiticus.",
+  "genre": [
+    "historiografía profético-cortesana",
+    "relatos vocacionales",
+    "elegía e himno (Cántico de Ana)"
+  ],
+  "language": "Hebreo bíblico narrativo clásico (con variantes importantes en Qumrán y la Septuaginta)",
+  "date": {
+    "narrative": "Transición de los últimos jueces a los reinados de Saúl y David (finales del s. XI a. C.)",
+    "composition": "Fuentes cortesanas y proféticas tempranas compiladas en la Historia Deuteronomista (c. siglos VII–VI a. C.)",
+    "certainty": "probable",
+    "note": "Hasta la imprenta de Daniel Bomberg (1517) y en la tradición griega (1–2 Reinos), 1 y 2 Samuel formaron un solo rollo."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — Profetas Anteriores; unido a 2 Samuel)",
+    "catolico": "Antiguo Testamento (protocanónico; 1 Samuel / tradicionalmente 1 Reyes en Vulgata)",
+    "ortodoxo": "Antiguo Testamento (1 Basileion / 1 Reinos)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, 1 Samuel está completo en la NTV (31 capítulos, 810 versículos). No se conserva ningún folio de 1–4 Reinos en el Codex Sinaiticus actual.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 1 Samuel narra en treinta y un capítulos la metamorfosis política y religiosa más decisiva de Israel: el paso de la confederación de tribus a la monarquía ungida. Su trama se organiza en tres ciclos biográficos enlazados: I. Infancia de Samuel en Silo, pérdida del arca ante los filisteos y judicatura profética (caps. 1–7); II. Elección, victorias iniciales, desobediencia y declive espiritual de Saúl (caps. 8–15); III. Unción oculta de David en Belén, combate contra Goliat, amistad con Jonatán y larga persecución en el desierto hasta la derrota de Gilboa (caps. 16–31).\n\n[Estudio] Sobresale la psicología sutil de sus personajes y la antología dramática del Cántico de Ana (2:1–10)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Hacia el 1050–1000 a. C., la presión militar y monopolio metalúrgico de la pentápolis filistea sobre la sierra central israelita hicieron insostenible el modelo tribal fragmentado (13:19–22). Frente al colapso de Silo, la crisis institucional exigía un mando militar permanente que respetara, sin embargo, los límites teocráticos de la alianza.\n\n[Tradición] Para los lectores del destierro babilónico, el libro explicaba la legitimidad de la dinastía davídica frente al rechazo de Saúl."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] El Talmud asoció el inicio del libro a Samuel y su continuación a los profetas Natán y Gad (cf. 1 Cr 29:29).\n\n[Estudio] Emil Hirsch (Jewish Encyclopedia) y Florentine Bechtel (Catholic Encyclopedia) exponen la presencia de relatos paralelos sobre el origen de la monarquía (unos favorables al rey en 9:1–10:16 y cap. 11, y otros críticos en caps. 8, 10:17–27 y 12) y sobre el ascenso de David (dos versiones de su entrada en la corte en cap. 16 y 17, dos perdonanzas de vida a Saúl en 24 y 26), integrados por redactores proféticos y deuteronomistas."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Desde el Cántico de Ana («el Señor empobrece y enriquece, humilla y exalta», 2:7), el libro invierte la lógica imperial: Dios rechaza a los hijos corruptos de Elí y la estatura imponente de Saúl porque «el Señor no mira lo que mira el hombre… el Señor mira el corazón» (16:7). El criterio supremo del rey ante el profeta lo enuncia Samuel a Saúl en 15:22: «El obedecer es mejor que los sacrificios».\n\n[Tradición] En el Nuevo Testamento, el Magníficat de María (Lc 1:46–55) resuena palabra a palabra en el cántico de Ana, y Jesús cita la acción de David en Nob (cap. 21) en Marcos 2:25–26."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] 1 Samuel constituye uno de los campos más fascinantes de la crítica textual bíblica: el Texto Masorético presenta numerosas corrupciones de copia, mientras la Septuaginta —confirmada espectacularmente por el rollo 4QSama de Qumrán— conserva lecturas más limpias y difiere notablemente en episodios célebres como David y Goliat (caps. 17–18, donde la LXX B omite cerca de la mitad del relato, eliminando duplicaciones).\n\n[Texto] Aquí se lee completo en la NTV (31 capítulos, 810 vv.); no sobrevive en el Codex Sinaiticus."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] La figura de Ana estéril que ora en silencio dio modelo a la oración personal judía en el Talmud (Berajot 31a), y su cántico ingresó como una de las Odas bíblicas en la liturgia cristiana de Oriente y Occidente. En Hebreos 11:32 y Hechos 13:20–22, Samuel y David figuran como bisagras entre los jueces y la promesa mesiánica.\n\nLa tragedia de Saúl ha inspirado además obras maestras de la música y literatura occidental, desde Händel hasta Alfieri."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Comparar las voces favorables a la monarquía (9–11) con las advertencias críticas contra la tiranía real (cap. 8 y 12) para captar la tensión bíblica ante el poder político.\n2. Seguir en paralelo el descenso paranoico de Saúl y la negativa escrupulosa de David a levantar su mano contra «el ungido del Señor» (caps. 24 y 26).\n3. Observar cómo la profecía (Samuel, Gad) acompaña y juzga a la corona desde el principio.\n4. Notar la división tardía en dos libros (originalmente un único libro de Samuel)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cuál versión del duelo de David y Goliat (caps. 17–18) es anterior: el texto breve de la Septuaginta B o el largo del Texto Masorético?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Gran parte de la crítica textual (Tov, McCarter) estima que el texto griego antiguo traduce una edición hebrea previa y más coherente antes de fusionarse dos tradiciones sobre la presentación de David a Saúl."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores (Barthélemy, Rofé) sostienen que el traductor griego o un escriba abrevió deliberadamente un texto hebreo largo para suavizar aparentes contradicciones con 16:14–23."
+        }
+      ]
+    },
+    {
+      "question": "¿Contienen los libros de Samuel fuentes favorables y contrarias a la monarquía originalmente independientes?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La hipótesis clásica de Wellhausen y Noth distingue una corriente promonárquica antigua (Saúl libertador frente a los amonitas) de una teología antimonárquica posterior formada tras el fracaso de los reyes."
+        },
+        {
+          "label": "Texto",
+          "body": "Lecturas literarias unitarias argumentan que ambos acentos conviven deliberadamente desde el origen: la institución real se aprueba solo bajo sujeción estricta a la alianza profética."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-samuel",
+    "ce-samuel-kings",
+    "tyndale-ntv-2009",
+    "ce-septuagint"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

@@ -12,6 +12,7 @@ const Admin = import.meta.env.DEV ? lazy(() => import('./pages/Admin/Admin')) : 
 const Shincheonji = lazy(() => import('./pages/Shincheonji'));
 const Adventismo = lazy(() => import('./pages/Adventismo'));
 const Dispensacionalismo = lazy(() => import('./pages/Dispensacionalismo'));
+const GuiaLectura = lazy(() => import('./pages/GuiaLectura'));
 
 import Home from './pages/Home';
 import Estudio from './pages/Estudio';
@@ -108,6 +109,14 @@ export default function App() {
           <Route path="/biblia/libros" element={<Libros />} />
           <Route path="/biblia/libros/:id" element={<LibroFicha />} />
           <Route path="/exegesis" element={<Exegesis />} />
+          <Route
+            path="/exegesis/guia"
+            element={
+              <Suspense fallback={<main id="main" className="page-loading" aria-busy="true" />}>
+                <GuiaLectura />
+              </Suspense>
+            }
+          />
           <Route path="/videos" element={<Videos />} />
           <Route path="/concilios" element={<Concilios />} />
           <Route path="/buscar" element={<Buscar />} />

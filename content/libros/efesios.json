@@ -1,0 +1,101 @@
+{
+  "id": "efesios",
+  "title": "Efesios",
+  "abbr": "Ef",
+  "order": 49,
+  "testament": "NT",
+  "summary": "Carta circular en seis capítulos sobre el propósito eterno de Dios de reunir en Cristo todas las cosas del cielo y la tierra: abre con una eulogía trinitaria (1:3–14), proclama la salvación por gracia y la reconciliación de judíos y gentiles (caps. 2–3), exhorta a la unidad eclesial (4), ilumina la vida familiar bajo el amor de Cristo (5) y concluye con la armadura espiritual (6). Canónica; completa en NTV y Codex con omisión en 1:1.",
+  "genre": [
+    "carta litúrgico-circular",
+    "eulogía y oración apostólica",
+    "código doméstico y exhortación espiritual"
+  ],
+  "language": "Griego koiné majestuoso y solemne de frases subordinadas larguísimas (eulogía de 1:3–14 en una sola oración griega)",
+  "date": {
+    "narrative": "Escrita por Pablo «prisionero de Cristo Jesús» (3:1; 4:1) enviada por medio de Tíquico (6:21)",
+    "composition": "Debatida: durante el cautiverio de Pablo en Roma hacia 60–62 d. C., o redacción paulina tardía por discípulos en Asia Menor hacia 80–90 d. C.",
+    "certainty": "discutida",
+    "note": "Su estrecho paralelismo verbal con Colosenses y la ausencia de «en Éfeso» en 1:1 en los testigos más antiguos (Sinaítico y Vaticano) hacen pensar en una carta circular dirigida a varias iglesias de Asia."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": "Detalle manuscrito notable en Efesios 1:1: tanto el Codex Sinaiticus (núm. 41, 6 capítulos, 155 versículos) en su escritura original (*), como el Papiro P46 y el Codex Vaticanus, omiten las palabras «en Éfeso» («a los santos que están [en Éfeso] y fieles en Cristo Jesús»), apoyando que circuló originalmente como carta encíclica antes de recibir el título asociado a Éfeso.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Efesios despliega seis capítulos equilibrados exactamente en dos mitades de tres capítulos entre doctrina doxológica e imperativo ético: la primera mitad abre con la gran bendición trinitaria al Padre que elige en Cristo y sella con el Espíritu (1:3–14), continúa con oraciones de iluminación, salvación por gracia (2:1–10), reconciliación cósmica de judíos y gentiles derribando «el muro de separación» (2:11–22) y alabanza final al amor que sobrepasa todo conocimiento (cap. 3). La segunda mitad desciende a las consecuencias prácticas: unidad del Cuerpo y diversidad de ministerios hasta la madurez (cap. 4), vida renovada en luz y amor conyugal reflejo de Cristo y la Iglesia (cap. 5) y armadura completa contra poderes espirituales (cap. 6).\n\n[Estudio] Paulin Ladeuze (Catholic Encyclopedia) subraya su tono sereno sin polémicas locales inmediatas."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Éfeso, metrópoli portuaria de la provincia romana de Asia —donde Pablo predicó casi tres años (Hch 19) en medio de cultos mágicos y veneración a Artemisa—, era centro de redes cristianas regionales (junto a Colosas, Laodicea y Hierápolis). Para creyentes gentiles rodeados de temores cósmicos astrológicos y magia (1:21; 6:12) o tentados de olvidar sus raíces israelitas, la carta sitúa al Cristo exaltado «muy por encima de todo principado, autoridad, poder y dominio» (1:21)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Citada ya muy temprano por Ignacio de Antioquía, Policarpo e Ireneo bajo el nombre de Pablo, la carta refleja exactamente su misión como «prisionero por causa de los gentiles» (3:1).\n\n[Estudio] Al notar que cerca de un tercio del texto comparte paralelismos verbales estrechos con Colosenses, junto con un vocabulario particular y una visión ya madura de «los santos apóstoles y profetas» (3:5), muchos exegetas críticos sugieren redacción por un secretario o discípulo cercano del círculo paulino en Éfeso en las décadas posteriores al 62 d. C., mientras Ladeuze y otros eruditos defienden redacción directa de Pablo en cautiverio romano adaptando Colosenses en clave encíclica."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Efesios contempla la Iglesia no como club religioso sino como misterio cósmico donde Dios «reúne bajo una sola cabeza (Cristo) todas las cosas» (1:10) y hace de pueblos antes enemistados un «solo hombre nuevo» por la cruz (2:14–16). Sostiene radicalmente la gratuidad total de la salvación («Por gracia son salvos por medio de la fe… no por obras, para que nadie se gloríe; porque somos hechura suya, creados en Cristo Jesús para buenas obras», 2:8–10). En el capítulo 5 fundamenta la igualdad y entrega conyugal: «Sométanse unos a otros en el temor de Cristo», mandando al marido amar como Cristo dio su vida por la Iglesia (5:21–33).\n\n[Tradición] Nutrió hondamente la teología ecuménica y nupcial de la Iglesia."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El testimonio conjunto de P46 (c. 200 d. C.), el Codex Sinaiticus (núm. 41, primera mano sin en Epheso en 1:1) y el Vaticanus confirma la omisión primitiva de «en Éfeso» en 1:1, mencionada ya por Orígenes y Basilio el Grande (y vinculada posiblemente a la «carta de Laodicea» de Col 4:16 o a un espacio dejado libre para rellenar por cada iglesia destinataria en Asia).\n\n[Texto] Aquí la NTV (6 caps., 155 vv.) pone «en Éfeso» con nota textual crítica, coincidiendo en todo lo demás con el texto del Sinaiticus (155 vv.)."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Efesios 4:4–6 («un solo Cuerpo y un solo Espíritu… un solo Señor, una sola fe, un solo bautismo») inspiró los credos eclesiales y la oración por la unidad de las Iglesias; Efesios 5:21–33 fundamentó la sacramentalidad o dignidad pactual del matrimonio cristiano en comentarios de Juan Crisóstomo y Jerónimo; y Efesios 6:10–18 (la panoplia o armadura de Dios con el yelmo, la coraza y la espada del Espíritu) dio al monacato antiguo y la espiritualidad protestante el lenguaje clásico del combate espiritual."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Efesios 1–3 («sentados en los lugares celestiales», indicativo de lo que Dios hizo) antes de pasar al «anden pues» de 4–6 (imperativo ético).\n2. Seguir en 2:11–22 cómo «la paz» no es calma interior abstracta, sino derribo real del muro de hostilidad entre judíos y gentiles.\n3. Observar la secuencia de oración y canto de 5:18–21 como transición directa hacia la vida familiar de 5:22–6:9.\n4. Examinar Efesios 1:1 en el Codex Sinaiticus para verificar la omisión original de «en Éfeso»."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue compuesta Efesios directamente por Pablo hacia 60–62 d. C. o por un discípulo de su escuela décadas después?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Defensores de la autoría directa señalan que Tíquico figura como portador idéntico en Col 4:7 y Ef 6:21, que la ausencia de saludos locales se explica al ser carta circular y que las oraciones largas reflejan la contemplación serena de la prisión."
+        },
+        {
+          "label": "Estudio",
+          "body": "Amplios sectores de la crítica (Lincoln, Luz) sostienen un discípulo paulino posterior al 70 d. C. basándose en su reutilización literaria sistemática de Colosenses, el desplazamiento de escatología inminente hacia una Iglesia ya establecida universalmente y la alusión retrospectiva a los «santos apóstoles» (3:5)."
+        }
+      ]
+    },
+    {
+      "question": "¿Por qué falta «en Éfeso» en 1:1 en los manuscritos más antiguos?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La hipótesis mayoritaria entiende la carta como una encíclica circular enviada a varias ciudades de Asia Menor cuyo destino principal terminó siendo Éfeso (conservado luego en el título general), explicando así también la carta de Laodicea aludida en Colosenses 4:16."
+        },
+        {
+          "label": "Tradición",
+          "body": "Basilio y comentaristas antiguos sugirieron una formulación mística («a los santos que son [verdaderamente]») o omisión accidental muy temprana corregida pronto en la tradición mayoritaria."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-ephesians",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

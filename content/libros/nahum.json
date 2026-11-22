@@ -1,0 +1,101 @@
+{
+  "id": "nahum",
+  "title": "Nahum",
+  "abbr": "Nah",
+  "order": 34,
+  "testament": "AT",
+  "summary": "Tres capítulos de poesía bélica y teofánica de Nahum de Elcós celebrando la justicia divina ante la caída inminente de la capital asiria de Nínive (612 a. C.): abre con un salmo acróstico parcial sobre Dios como refugio y juez soberano, describe con vívido realismo cinematográfico el asedio de la ciudad y entona un canto fúnebre por el fin de su tiranía. Protocanónico; completo en NTV y Codex.",
+  "genre": [
+    "himno teofánico acróstico truncado",
+    "oráculo contra Nínive",
+    "poema lírico de asedio y sátira"
+  ],
+  "language": "Hebreo poético de excepcional brillantez visual e impetuosidad rítmica",
+  "date": {
+    "narrative": "Entre el saqueo asirio de Tebas/No-Amón en Egipto (663 a. C., citado como pasado en 3:8) y la destrucción de Nínive en 612 a. C.",
+    "composition": "Probablemente poco antes de 612 a. C. (entre 626 y 612 a. C., época de Josías)",
+    "certainty": "segura",
+    "note": "Las dos referencias históricas extremas (caída de Tebas en 663 a. C. como evento pasado, y Nínive aún en pie aunque condenada) anclan sólidamente el libro entre 663 y 612 a. C."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — séptimo de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (Naoum, séptimo también en griego)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Nahum condensa en apenas cuarenta y siete versículos una de las piezas poéticas más cinematográficas del Antiguo Testamento, desplegada en tres movimientos breves: I. Un himno teofánico solemne con vestigios de acróstico alfabético desde álef hasta kaf proclamando que el Señor es lento para la ira pero no deja impune la violencia imperial, y es fortaleza en día de angustia (cap. 1); II. Pintura trepidante de carros de escudos rojos, antorchas y compuertas fluviales abiertas en la caída de Nínive (cap. 2); III. Sátira fúnebre contra la «ciudad sanguinaria» tan vulnerable como Tebas, terminando con el aplauso de todos los pueblos oprimidos (cap. 3).\n\n[Estudio] Charles Souvay (Catholic Encyclopedia) destaca la fuerza pictórica única del asedio en caps. 2–3."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Durante casi dos siglos, la maquinaria militar del Imperio neoasirio aterrorizó al Próximo Oriente mediante deportaciones masivas, asedios brutales y exacciones (que arrasaron Samaria en 722 a. C. y asolaron Judá en 701 a. C.). En el 663 a. C., Asurbanipal saqueó la gloriosa capital egipcia de Tebas (No-Amón, evocada en 3:8). Dos generaciones después, debilitada Asiria tras la muerte de Asurbanipal (c. 627 a. C.), babilonios y medos sitiaron y destruyeron Nínive en agosto del 612 a. C., evento confirmado por la Crónica de Babilonia (B. M. 21901) incluso en el papel de las aguas desbordadas del Tigris/Khosr (cfr. 2:6)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atribuido a Nahum el elcosita, cuya aldea exacta (Galilea, Judea o cercanías de Nínive) permanecía ya debatida en la época de Jerónimo.\n\n[Estudio] Hirsch e Ira Maurice Price (Jewish Encyclopedia) muestran cómo la crítica ha debatido si el himno teofánico acróstico inicial (1:2–8, interrumpido hacia la mitad del alfabeto) formaba la introducción teológica original escrita o adaptada por el propio Nahum para enmarcar los oráculos históricos de 1:9–3:19 sobre la caída de Nínive."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Frente a la tentación de leer Nahum como mero canto nacionalista de venganza, el capítulo 1 establece la tesis moral del libro retomando el credo de Éxodo 34:6–7: el Señor es paciente, «pero de ningún modo tendrá por inocente al culpable» (1:3), mientras «el Señor es bueno, fortaleza en el día de la angustia; y conoce a los que en él se refugian» (1:7). Ningún imperio terrorista —«cuya maldad ha pasado continuamente sobre todos» (3:19)— es eterno; la caída del opresor es «buena nueva» de paz para los pueblos pequeños («¡He aquí sobre los montes los pies del que trae buenas nuevas!», 1:15).\n\n[Tradición] Pablo ecoa esa imagen profética junto a Isaías 52:7 en Romanos 10:15."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] El descubrimiento del Comentario (Pesher) a Nahum en Qumrán (4QpNah / 4Q169) probó tanto la transmisión fiel del texto bíblico ya en el siglo II–I a. C. como su lectura en clave política contemporánea contra «los leones de la ira» (Alejandro Janneo) y «los buscadores de cosas lisonjeras». La Septuaginta traduce Nahum con notable literalidad siguiendo de cerca el hebreo.\n\n[Texto] Tanto la NTV (3 capítulos, 47 vv.) como el Codex Sinaiticus (núm. 20; 3 capítulos, 47 vv.) conservan completo el libro entero."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Además de la relectura histórica en Qumrán, Nahum fue leído a menudo en contraste fértil con el libro de Jonás (Nínive salvada por su penitencia en Jonás; Nínive destruida un siglo después al reincidir en crueldad en Nahum —cfr. también Tobit 14:4,15 en el Sinaiticus sobre Nínive cayendo según el anuncio de Jonás/Nahum—).\n\nEn el cristianismo, Jerónimo subrayó el valor moral de 1:7–9 y 1:15 como consuelo del creyente frente a los tiranos del mundo."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer el himno inicial (1:2–8) como clave teológica: Dios no destruye por capricho étnico, sino como garante moral de todo el orden cósmico contra la tiranía.\n2. Leer Nahum junto a Jonás: dos visiones distintas de Nínive que enseñan juntas paciencia para el que vuelve y justicia si persiste la crueldad.\n3. Apreciar en caps. 2–3 la secuencia casi visual: sonido de látigos, carros, saqueo, silencio de la guarida de leones y alivio final del mundo entero (3:19).\n4. Cotejar directamente los 3 capítulos entre NTV y Codex Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Fue el acróstico truncado del capítulo 1 compuesto por Nahum o añadido después como prólogo litúrgico?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Desde Gunkel y Bichel, muchos críticos piensan que un editor posexílico colocó un himno acróstico alfabético incompleto (de álef a kaf) antes de 1:9 para dar alcance cósmico universal al oráculo específico contra Asiria."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros comentaristas (Christiansen, Roberts) argumentan que Nahum mismo usó y adaptó deliberadamente ese molde hímnico arraigando el juicio particular sobre Nínive en el carácter eterno de Yahvé (1:2–8)."
+        }
+      ]
+    },
+    {
+      "question": "¿Debe interpretarse Nahum como profecía previa al 612 a. C. o como himno de triunfo compuesto inmediatamente después?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La mayoría de historiadores sitúa los poemas poco antes de 612 a. C. (entre 615 y 612 a. C.), cuando el cerco medo-babilónico ya estrechaba a Asiria y el profeta anticipa vivamente su caída."
+        },
+        {
+          "label": "Estudio",
+          "body": "Algunos estudiosos opinan que la viveza minuciosa del asedio en los caps. 2–3 refleja noticias recientes ya llegadas a Jerusalén justo tras el colapso efectivo de Nínive en 612 a. C."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-nahum",
+    "ce-nahum",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

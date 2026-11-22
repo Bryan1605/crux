@@ -36,13 +36,15 @@ export const loadWitnessBook = (witness, bookId) =>
   loadJson(`/textos/exegesis/${witness}/${bookId}.json`);
 
 /**
- * Mapa de lemas del Codex para un libro: por versículo, una entrada por palabra
- * en el mismo orden que `tokenizeGreek` (`[lema, Strong, parse, ns, categoría]`).
+ * Mapa de lemas del Codex para un libro (formato V1 o V2 compacto).
  */
 export const loadLemmas = bookId => loadJson(`/textos/exegesis/lemas/${bookId}.json`);
 
-/** Diccionario griego → español (250 lemas más frecuentes del Codex). */
+/** Diccionario griego → español (curado, V2). */
 export const loadLexicon = () => loadJson('/textos/exegesis/lexico.json');
+
+/** Respaldo compacto TBESG para el resto de Strongs del NT (carga bajo demanda). */
+export const loadLexiconBase = () => loadJson('/textos/exegesis/lexico-griego-base.json');
 
 /**
  * Índice de búsqueda de un testamento (NTV + Codex). Se descarga solo cuando

@@ -1,0 +1,101 @@
+{
+  "id": "josue",
+  "title": "Josué",
+  "abbr": "Jos",
+  "order": 6,
+  "testament": "AT",
+  "summary": "Primer libro de los Profetas Anteriores en veinticuatro capítulos: el cruce del Jordán bajo Josué hijo de Nun, la toma de Jericó y Hai, las campañas en el sur y norte de Canaán, el reparto tribal y la asamblea renovadora de la alianza en Siquem. Protocanónico; en el Codex Sinaiticus sobreviven los capítulos 12–14.",
+  "genre": [
+    "narrativa teológica de conquista",
+    "catálogo geográfico-tribal",
+    "asamblea de renovación del pacto"
+  ],
+  "language": "Hebreo bíblico clásico deuteronomista; griego septuagintal (Iesous)",
+  "date": {
+    "narrative": "Transición tras la muerte de Moisés hasta la sepultura de Josué en Timnat-sera (Edad del Bronce Tardío / inicios del Hierro I)",
+    "composition": "Debatida: tradiciones locales antiguas compiladas en el marco de la Historia Deuteronomista (siglos VII–VI a. C.)",
+    "certainty": "discutida",
+    "note": "Combina listas fronterizas y relatos etiológicos («hasta el día de hoy») anteriores al exilio con discursos programáticos afines a Deuteronomio."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — Profetas Anteriores, primer libro)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Josué está completo en la NTV (24 capítulos, 658 versículos). Del Codex Sinaiticus solo sobreviven fragmentos de los capítulos 12–14 (55 versículos).",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Josué abre la colección de los Profetas Anteriores narrando en veinticuatro capítulos el cumplimiento de la promesa territorial hecha a los patriarcas. Su diseño simétrico reúne cuatro partes: preparación y entrada solemne por el Jordán hasta Jericó y Hai (caps. 1–5); campañas militares centrales, meridionales y septentrionales (caps. 6–12); reparto minucioso de las heredades por suertes entre las doce tribus y ciudades de refugio (caps. 13–21); y discursos de despedida con el pacto de Siquem («Escojan hoy a quién servirán», 24:15).\n\n[Estudio] Walter Drum (Catholic Encyclopedia) destaca la función litúrgica de los memoriales de piedras en Gilgal y el altar de Ebal."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los textos egipcios de Amarna (s. XIV a. C.) y la estela del faraón Merneptah (c. 1207 a. C., primera mención epigráfica conocida de «Israel» en Canaán) reflejan una tierra fragmentada en ciudades-estado antes de multiplicarse decenas de pequeñas aldeas israelitas en las tierras altas centrales durante el Hierro I (siglos XII–XI a. C.).\n\nPara la audiencia de Judá entre el reinado de Josías y la crisis del exilio babilónico, Josué recordaba con vigor que la tierra heredada jamás era posesión incondicional, sino don gratuito ligado a la obediencia exclusiva a la Torá."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] El Talmud (Bava Batra 14b) atribuye la redacción base a Josué y el cierre a Eleazar y Finés.\n\n[Estudio] Hirsch (Jewish Encyclopedia) resume cómo la crítica moderna analizó primero la continuidad con el Pentateuco («Hexateuco»), mientras desde Martin Noth predomina considerarlo el primer bloque posmosaico de la Historia Deuteronomista (Josué–Reyes), tejido sobre santuarios benjaminitas (Gilgal, Jericó, Hai, Gabaón) y listas administrativas posteriores."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] El verdadero protagonista militar es el Señor, «comandante del ejército del Señor» (5:14), quien entrega las ciudades mientras pide fidelidad valiente a la palabra escrita (1:7–9) y advierte contra el pacto con los dioses cananeos (cap. 23–24). Figuras marginadas como Rahab la cananea (cap. 2) o los gabaonitas hallan lugar en Israel al reconocer al Dios vivo, mientras la codicia de Acán (cap. 7) rompe la solidaridad de toda la comunidad.\n\n[Tradición] La lectura cristiana leyó en Josué (Iesous, mismo nombre griego que Jesús) y en Rahab símbolos de la entrada en el reposo definitivo (Heb 4:8; Stg 2:25)."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] La Septuaginta de Josué es alrededor de un cinco por ciento más breve que el Texto Masorético y sitúa el episodio del altar en el monte Ebal tras 9:2 en lugar de 8:30–35; un rollo de Qumrán (4QJosha) lo coloca incluso antes, revelando distintas ediciones hebreas circulantes en época del Segundo Templo.\n\n[Texto] Aquí la NTV ofrece los 24 capítulos completos (658 vv.). En el Codex Sinaiticus (núm. 5), solo perduran los capítulos 12–14 (55 vv.) con listas de reyes derrotados y comienzos del reparto de Caleb."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Tanto Mateo (genealogía 1:5 que incluye expresamente a Rahab) como Hebreos 11:30–31 y Santiago 2:25 recogen los episodios de Jericó como ejemplos vivos de fe activa. Desde Justino Mártir y Tertuliano hasta Orígenes (en veintiséis homilías célebres) y Agustín, la lectura patrística interpretó el nombre griego de Josué (Iesous) y el cruce del Jordán como anticipación espiritual de Cristo guiando a su pueblo hacia el descanso prometido.\n\nEn la investigación bíblica moderna, Josué sigue siendo obra clave en el diálogo entre teología de la tierra y registro arqueológico."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer 1:1–9 y 23–24 como marco teológico clave: el éxito nunca depende de superioridad bélica, sino de observar la Torá día y noche.\n2. Observar la inclusión de Rahab (cap. 2 y 6:25) frente a la caída de Acán dentro de Israel (cap. 7).\n3. Notar en Jericó (cap. 6) el esquema de procesión litúrgica con arca y trompetas más que táctica de asedio.\n4. Comparar Jos 12–14 en la NTV con los restos griegos conservados del Codex Sinaiticus."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo armonizar el relato de conquista rápida en Josué 1–12 con la ocupación incompleta y la arqueología del Hierro I?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "Exegetas tradicionales distinguen campañas rápidas que destruyeron coaliciones clave sin implicar ocupación inmediata de cada valle, dejando zonas pendientes reconocidas en Jos 13:1 y Jueces 1."
+        },
+        {
+          "label": "Estudio",
+          "body": "Arqueólogos e historiadores señalan la ausencia de estratos de destrucción sincrónicos en sitios como Jericó o Hai en el Bronce Final, proponiendo un surgimiento gradual de Israel en las tierras altas recogido luego en clave épica."
+        }
+      ]
+    },
+    {
+      "question": "¿Existió una edición literaria premasorética reflejada por la Septuaginta y Qumrán?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Críticos textuales (Tov, Greenspoon, Mazor) argumentan que la LXX traduce una Vorlage hebrea más temprana y breve que la edición masorética posterior."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros investigadores sostienen que el Texto Masorético conserva la lectura matriz y el griego y 4QJosha reflejan reordenamientos homiléticos secundarios."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-joshua",
+    "ce-josue",
+    "pietersma-wright-nets-front",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

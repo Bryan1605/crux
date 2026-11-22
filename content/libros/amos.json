@@ -1,0 +1,100 @@
+{
+  "id": "amos",
+  "title": "Amós",
+  "abbr": "Am",
+  "order": 30,
+  "testament": "AT",
+  "summary": "Nueve capítulos del profeta ganadero de Tecoa (Judá) enviado al santuario real norteño de Betel hacia el 760 a. C.: oráculos en cadena contra seis naciones vecinas antes de acusar la opresión económica y el culto hipócrita de Israel, cinco visiones de juicio y promesa final de restauración de la casa de David. Protocanónico; ausente del Sinaiticus conservado.",
+  "genre": [
+    "oráculo profético de justicia social",
+    "oráculos contra las naciones",
+    "relato de cinco visiones simbólicas"
+  ],
+  "language": "Hebreo bíblico vigoroso, rústico y punzante de gran maestría retórica",
+  "date": {
+    "narrative": "Reinados contemporáneos de Uzías en Judá y Jeroboam II en Israel (c. 760–750 a. C.), dos años antes del terremoto",
+    "composition": "Predicación original de Amós en el s. VIII a. C. recogida pronto por escrito con actualización davídica final posible durante o tras el exilio",
+    "certainty": "probable",
+    "note": "Es probablemente el libro profético escrito más antiguo del canon bíblico."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — tercero de los Doce)",
+    "catolico": "Antiguo Testamento (protocanónico)",
+    "ortodoxo": "Antiguo Testamento (segundo tras Oseas en orden griego)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, Amós está completo en la NTV (9 capítulos, 146 versículos). No perduran folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Amós despliega en nueve capítulos una construcción retórica implacable: arranca con un ciclo de oráculos en forma numérica escalonada («Por tres pecados de… y por cuatro…», caps. 1–2) contra Damasco, Gaza, Tiro, Edom, Amón, Moab y Judá hasta atrapar al oyente israelita al estallar contra el propio Israel. Siguen sermones de denuncia (caps. 3–6), cinco visiones en ascenso de juicio inevitable —langostas, fuego, plomada, cesta de fruta madura (qayits = fin [qets]) y ruina del altar— interrumpidas por el choque directo con el sacerdote Amasías de Betel (caps. 7–9), cerrando súbitamente con promesas de la «cabaña caída de David» (9:11–15).\n\n[Estudio] Francis Gigot (Catholic Encyclopedia) destaca el contraste rudo y directo de sus comparaciones rurales."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Hacia mediados del siglo VIII a. C., bajo el largo y próspero reinado de Jeroboam II en Samaria, una minoría enriquecida en «casas de invierno y de verano» con camas de marfil (3:15; 6:4 —hallazgos confirmados en las excavaciones de los marfiles de Samaria—) acumulaba tierras a costa de campesinos endeudados («venden al justo por plata y al pobre por un par de sandalias», 2:6). Mientras las romerías a Betel y Gilgal multiplicaban sacrificios vistosos, el pastor de Tecoa anuncia una catástrofe política y telúrica (el gran sismo del c. 760 a. C. identificado arqueológicamente en Hazor y Gezer)."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Atribuido a Amós, pastor y cultivador de higos silvestres (sicómoros) originario de Tecoa en Judá que rechaza ser profeta profesional asalariado («No soy profeta ni hijo de profeta», 7:14).\n\n[Estudio] Gerson B. Levi (Jewish Encyclopedia) y Gigot observan la frescura unitaria de la colección central del siglo VIII a. C., junto a un posible epílogo editorial de Judá (9:11–15) añadido cuando Jerusalén asumió el legado del reino norteño caído para abrir la esperanza tras la ruina anunciada."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Amós demuele el nacionalismo religioso privilegiado: el Éxodo no otorga inmunidad sino responsabilidad («Solo a ustedes he conocido… por eso los castigaré por todas sus iniquidades», 3:2), recordando que Dios mismo sacó también a los filisteos de Caftor y a los arameos de Quir (9:7). Al culto espléndido lleno de arpas y ofrendas sin equidad, Dios opone un rechazo cortante: «Aborrezco y desprecio sus fiestas… ¡Que corra el juicio como las aguas y la justicia como arroyo impetuoso!» (5:21–24).\n\n[Tradición] En Hechos 7:42 y 15:16–18 (Concilio de Jerusalén), Esteban y Santiago citan Amós 5:25–27 y 9:11–12 siguiendo la Septuaginta."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] La variante más célebre entre el hebreo masorético y el griego de la Septuaginta aparece precisamente en 9:12: donde el TM dice «para que posean el remanente de Edom», el texto griego leyó vocalizando Adam («hombres»): «para que me busquen el resto de los hombres y todas las naciones sobre las cuales es invocado mi nombre», lectura usada explícitamente por Santiago en Hechos 15:16–17 para acoger a los gentiles.\n\n[Texto] Aquí se ofrece completo en la NTV (9 capítulos, 146 vv.); no sobrevive en el Codex Sinaiticus conservado."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Además de Hechos 7 y 15 en el Nuevo Testamento, el libro de Amós fue voz profética incisiva contra la opulencia injusta en homilías de Basilio y Juan Crisóstomo. En la historia moderna de la ética social —particularmente en los movimientos por los derechos civiles de Martin Luther King Jr. evocando Amós 5:24 («Que corra el derecho como las aguas»)— el libro adquirió una resonancia pública imperecedera."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir el mapa de los ocho oráculos de los capítulos 1–2 y notar la trampa retórica con que pasa de extranjeros vecinos (1:3–2:3) a Judá (2:4–5) e Israel (2:6–16).\n2. Leer 5:18–24 como crítica profética radical al «Día del Señor» mal entendido y al culto hipócrita.\n3. Comparar el enfrentamiento político-profético de 7:10–17 con Jeremías 26 y Hechos 4.\n4. Revisar Hechos 15:16–17 frente a Amós 9:11–12 en la NTV para apreciar las diferencias entre TM y LXX."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Pertenecen los versículos de restauración final (9:11–15) al propio Amós o a un editor posexílico de Judá?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Gran número de comentaristas críticos (desde Wellhausen hasta Wolff) consideran 9:11–15 una adición posterior al 586 a. C. que reinterpreta «la cabaña caída de David» cuando la dinastía ya había colapsado."
+        },
+        {
+          "label": "Tradición",
+          "body": "Otros exegetas señalan que el «remanente de José» esperado en 5:15 deja abierta la esperanza y que en el s. VIII a. C. la casa de David estaba debilitada frente al auge del norte o tras las guerras asirias."
+        }
+      ]
+    },
+    {
+      "question": "¿Condena Amós 5:21–25 el culto sacrificial en sí mismo o su divorcio de la justicia?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Lectores literales tempranos sugirieron un rechazo profético absoluto de todo sacrificio animal como ajeno al ideal del desierto."
+        },
+        {
+          "label": "Texto",
+          "body": "El consenso actual entiende la frase como contraste retórico hebreo: Dios rechaza rotundamente rituales ofrecidos por quienes pisan al débil («vayan a Betel y pequen», 4:4), pero no anula la adoración íntegra."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-amos",
+    "ce-amos",
+    "howard-nets-twelve",
+    "tyndale-ntv-2009"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

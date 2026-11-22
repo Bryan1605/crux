@@ -1,0 +1,101 @@
+{
+  "id": "hebreos",
+  "title": "Hebreos",
+  "abbr": "He",
+  "order": 58,
+  "testament": "NT",
+  "summary": "Sermón teológico escrito enviado como epístola en trece capítulos por un autor culto anónimo del siglo I: proclama la supremacía definitiva del Hijo sobre profetas, ángeles, Moisés y el sacerdocio levítico según el orden de Melquisedec, interpretando la muerte de Cristo como el sacrificio único que abre el Lugar Santísimo celestial y culmina en la nube de testigos de la fe (cap. 11). Canónica; colocada tras 2 Tesalonicenses en el Codex Sinaiticus.",
+  "genre": [
+    "homilía exhortativa escrita («palabra de exhortación», 13:22)",
+    "exégesis tipológica del Antiguo Testamento",
+    "protréptico ante la apostasía"
+  ],
+  "language": "El griego koiné más elegante, rítmico, periódico y retóricamente culto de todo el Nuevo Testamento",
+  "date": {
+    "narrative": "Comunidad cristiana de segunda generación (2:3) que ya sufrió prisiones y despojo de bienes (10:32–34) y encara tentación de abandono",
+    "composition": "Debatida: principalmente antes de la caída del Templo en 70 d. C. (c. 64–69 d. C.), o antes de 95 d. C. (citada ya por Clemente de Roma)",
+    "certainty": "probable",
+    "note": "Habla constantemente del culto sacrificial levítico en tiempo presente (8:4; 10:1–2) y es citada por Clemente de Roma (1 Clemente 36) hacia 96 d. C."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento (confirmada por la tradición alejandrina y sínodos occidentales del s. IV)",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": "Ubicación distinta en los manuscritos: mientras las Biblias modernas sitúan Hebreos detrás de Filemón antes de Santiago, el Codex Sinaiticus (núm. 46) la coloca en medio del corpus paulino inmediatamente después de 2 Tesalonicenses y antes de 1 Timoteo, en consonancia con la antigua tradición oriental alejandrina.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] Hebreos carece de saludo epistolar inicial y comienza súbitamente como homilía retórica solemne alternando exposición escriturística del Antiguo Testamento con cinco graves advertencias contra la indiferencia o apostasía (2:1–4; 3:7–4:13; 5:11–6:12; 10:26–39; 12:25–29), antes de cerrar con saludos epistolares de «los de Italia» y noticia sobre Timoteo (cap. 13). Traza la superioridad del Hijo sobre los ángeles (1–2), Moisés y Josué (3–4), Aarón según el orden eterno de Melquisedec (5–7), el santuario terreno y antiguos sacrificios por el Nuevo Pacto en Jeremías 31 (8–10), cerrando en el elogio de la fe (11) y el altar celestial de Sión (12–13).\n\n[Estudio] Es la pieza exegética sostenida más elaborada sobre la Septuaginta dentro del Nuevo Testamento."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Dirigida probablemente a una comunidad cristiana de origen mayoritariamente helenista-judío —tal vez una iglesia doméstica en Roma (13:24 «los de Italia te saludan»), Jerusalén o Alejandría— tentada de desaliento tras años de espera y ante presiones sociales renovadas («aún no han resistido hasta la sangre», 12:4), con nostalgia por la visibilidad sensible del culto israelita y los ángeles mediadores."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Aunque en Oriente (Alejandría) pronto se asoció a Pablo —razón por la cual entró tras Tesalonicenses o Romanos en P46 y el Sinaiticus—, ya los propios autores antiguos percibieron la diferencia abismal de su griego retórico respecto a las epístolas paulinas firmadas: Clemente de Alejandría propuso una traducción griega de Lucas desde hebreo de Pablo; Tertuliano la atribuyó a Bernabé; Lutero sugirió a Apolos; y Orígenes pronunció su dictamen célebre recogido por Eusebio: «Quién escribió la epístola, en verdad solo Dios lo sabe».\n\n[Estudio] Leopold Fonck y George Reid (Catholic Encyclopedia) discuten esa larga historia entre la tradición paulina mediata y su anonimato real."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Hebreos desarrolla la única cristología explícita del Nuevo Testamento sobre Cristo como Sumo Sacerdote: a la vez plenamente divino —«resplandor de su gloria e imagen exacta de su sustancia» (1:3)— y plenamente humano tentado en todo sin pecado, capaz de compadecerse de nuestras debilidades (2:17–18; 4:15). Su ofrenda voluntaria «una vez para siempre» (ephapax, 7:27; 9:12; 10:10) invalida cualquier repetición sacrificial de toros y machos cabríos, purifica la conciencia interior y nos abre libre acceso con confianza (parresia) al trono de la gracia.\n\n[Tradición] La galería de fe de Hebreos 11 («certeza de lo que se espera, convicción de lo que no se ve») se convirtió en epopeya espiritual universal."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] En el papiro más temprano de cartas paulinas, P46 (c. 200 d. C.), Hebreos aparece sorprendentemente justo después de Romanos y antes de 1 Corintios; el Codex Sinaiticus (núm. 46) y el Vaticanus reflejan la ordenación oriental anterior a las epístolas pastorales. Destaca en 2:9 la variante célebre entre «por la gracia de Dios» (chariti Theou, lectura casi unánime incluyendo Sinaiticus) y «apartado de Dios» (choris Theou, atestiguada por Orígenes y pocos manuscritos).\n\n[Texto] Tanto la NTV (13 caps., 303 vv.) como el Codex Sinaiticus (13 caps., 303 vv.) ofrecen completo el libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Aunque en Occidente Roma tardó hasta finales del siglo IV (Jerónimo, Agustín, sínodos de Hipona y Cartago) en aceptar sin reservas su canonicidad por dudas sobre la autoría paulina directa y el rigor de 6:4–6 contra los lapsos penitenciales —usado por los novacianos—, Oriente (especialmente desde 1 Clemente en 96 d. C. y Atanasio/Crisóstomo) la abrazó desde el inicio. Su lectura sacerdotal de Melquisedec y la cruz sustenta las liturgias eucarísticas antiguas y la teología reformada del pacto."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer Hebreos teniendo abierto el libro de Levítico (esp. cap. 16, Yom Kipur) y los Salmos 2, 8, 95 y 110.\n2. Seguir la palabra clave «mejor» (superior): mejor nombre, mejor esperanza, mejor pacto, mejores promesas, mejor sacrificio y mejor resurrección.\n3. Prestar atención a las cinco advertencias intercaladas (esp. 6:4–8 y 10:26–31), dirigidas no contra caídas comunes sino contra el rechazo deliberado y público de Cristo.\n4. En 11:1–12:3, notar cómo la lista de testigos de la fe apunta finalmente la mirada hacia Jesús, «autor y consumador de la fe»."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Quién redactó la Epístola a los Hebreos?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La tradición oriental tardía defendió autoría paulina indirecta (pensamiento de Pablo redactado libremente por un colaborador como Lucas, Bernabé o Clemente de Roma), permitiendo su inclusión en el corpus."
+        },
+        {
+          "label": "Estudio",
+          "body": "Prácticamente la totalidad de críticos modernos descarta a Pablo (por el griego clásico distinto, el uso exclusivo de citas de la Septuaginta sin fórmula «escrito está», la declaración en 2:3 de haber recibido el Evangelio de oídas tras otros testigos y la cristología sacerdotal única) favoreciendo figuras cultas del círculo apostólico como Apolos (sugerido por Lutero), Bernabé o Priscila."
+        }
+      ]
+    },
+    {
+      "question": "¿Qué enseña Hebreos 6:4–6 y 10:26 sobre la imposibilidad de un «segundo arrepentimiento»?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "En los siglos III–IV los rigores novacianos y montanistas negaron readmisión en la Iglesia a quienes cayeron tras el bautismo; la Iglesia mayoritaria (Crisóstomo, Agustín) interpretó 6:4–6 como advertencia contra un rechazo total e irreversible de Cristo (la apostasía definitiva), o como imposibilidad de repetir un segundo bautismo."
+        },
+        {
+          "label": "Estudio",
+          "body": "Exégesis modernas añaden que la retórica apremiante busca despertar el temor saludable sin cerrar la misericordia real mientras haya arrepentimiento (cfr. 4:16 y 12:12–13)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-hebrews",
+    "ce-canon-nt",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

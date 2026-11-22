@@ -185,3 +185,37 @@ preferencia guardada sin sobrescribirla.
 Pendiente para el hebreo: el ancho de la rejilla
 (`exg-grid--3`) y la columna hebrea **apagada por defecto** (§1), que
 no debe entrar en el paralelo si no alinea.
+
+## 10. Léxico V2 multi-idioma y mapas de lemas compactos
+
+**Decidido e implementado el 2026-11-22.**
+
+- **Agregación por código Strong (`G####`)**: `scripts/lexico-lib.mjs` agrupa
+  frecuencias, formas del Codex y citas representativas (`refs`) por Strong
+  (`morph.strong`) en lugar de por lema plegado. Esto elimina colisiones entre
+  homógrafos de distinta raíz/categoría (en especial `εἰς` `G1519` vs. `εἷς`
+  `G1520`, y `τίς` `G5101` vs. `τις` `G5100`), limpia los falsos *nomina sacra*
+  (solo abreviaturas contraídas reales: **4.498** ocurrencias en el NT) y logra
+  un **99,88 %** de palabras alineadas con lema y con Strong gracias a alias
+  TBESG verificados y plegado de itacismo.
+- **Mapas de lemas V2 compactos**: `public/textos/exegesis/lemas/*.json` pasa al
+  esquema `{ version: 2, lang: 'grc', book, dict, verses }`, con diccionario local
+  `[lemma, strong, pos]` y tuplas `[dictIdx, parse?, ns?]` —o arrays de
+  morfemas `[[dictIdx, parse?, ns?], …]` preparados para prefijos/sufijos
+  hebreos—. Los 27 ficheros del NT (136.612 tokens) pasan de 5,20 MB en V1 a
+  **2,76 MB** (**2.828,4 KB**).
+- **Núcleo compartido multi-idioma**: `src/lib/lexicon.js` centraliza la
+  decodificación (`decodeToken`, `decodeVerseLemmas`), el registro de adaptadores
+  `LEXICON_LANGS` (`grc` activo; listo para añadir `heb` con `dir: 'rtl'`), los
+  filtros/ordenación y la búsqueda por relevancia (Strong exacto con o sin ceros
+  como `25` o `G25`, lema, acepción principal en glosa y formas del códice). Se
+  elimina el techo fijo de 250 entradas en `scripts/build-lexico.mjs` y en
+  `scripts/validate-content.mjs`.
+- **Respaldo TBESG y AT no interactivo**: `scripts/build-lexico.mjs` genera,
+  además de las **252** fichas curadas en `public/textos/exegesis/lexico.json`
+  (87 KB, **77,35 %** del NT), el respaldo bajo demanda
+  `public/textos/exegesis/lexico-griego-base.json` (332,8 KB, **5.077** Strongs
+  adicionales de TBESG, hasta **5.329** Strongs totales del NT), presentado con
+  la insignia explícita «Glosa base (TBESG · inglés)». En capítulos del AT en el
+  Codex, las palabras griegas se muestran sin botón interactivo (`.exg-word--plain`,
+  conservando las sobrelíneas de *nomina sacra*) mientras no exista lematización LXX.

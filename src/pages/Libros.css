@@ -1,85 +1,503 @@
-/* --- índice de libros ------------------------------------------------------ */
+/* --- índice de libros: hero + eje cronológico + secciones con StudyCard -- */
 
-.libros__filtros {
-  margin-top: var(--sp-5);
+.libros {
+  --libros-gold: #c9a96a;
+  --libros-gold-hi: #e2c588;
 }
 
-.libros__lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: var(--sp-3);
+/* --- hero banner ----------------------------------------------------------- */
+
+.libros__hero {
+  position: relative;
+  padding: clamp(5.5rem, 11vh, 7.5rem) 0 var(--sp-6);
+  background:
+    radial-gradient(ellipse 72% 48% at 50% 0%, rgba(201, 169, 106, 0.11), transparent 72%),
+    var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.libros__hero-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.libros__crest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: var(--sp-4);
+  color: var(--libros-gold);
+}
+
+.libros__crest-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(180deg, transparent, rgba(201, 169, 106, 0.65));
+}
+
+.libros__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 0 var(--sp-3);
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--libros-gold);
+}
+
+.libros__eyebrow::before,
+.libros__eyebrow::after {
+  content: '';
+  width: clamp(20px, 5vw, 48px);
+  height: 1px;
+  background: rgba(201, 169, 106, 0.45);
+}
+
+.libros__hero h1 {
   margin: 0;
+  font-size: clamp(2.4rem, 5.4vw, 3.9rem);
+  letter-spacing: -0.015em;
+}
+
+.libros__lead {
+  margin: var(--sp-3) auto 0;
+  max-width: 64ch;
+  text-align: center;
+}
+
+.libros__pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: var(--sp-5) 0 0;
   padding: 0;
   list-style: none;
 }
 
-.libros__link {
-  display: grid;
-  grid-template-columns: 3.2rem minmax(0, 1fr) auto;
-  align-items: start;
-  gap: var(--sp-3);
-  height: 100%;
-  padding: 0.9rem 1rem;
+.libros__pills li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.48rem 0.95rem;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 999px;
   background: var(--panel);
+  font-size: 0.84rem;
   color: var(--muted);
 }
 
-.libros__item.has-ficha .libros__link {
-  border-color: var(--border-strong);
+.libros__pills strong {
   color: var(--text);
+  font-weight: 600;
+}
+
+.libros__pills svg {
+  color: var(--libros-gold);
+  flex: none;
+}
+
+.libros__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--libros-gold);
+  flex: none;
+}
+
+/* --- eje cronológico ------------------------------------------------------- */
+
+.libros__crono {
+  width: 100%;
+  margin-top: var(--sp-6);
+  padding: clamp(1rem, 2.2vw, 1.45rem);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025) 0%, var(--panel) 100%);
+  text-align: left;
+}
+
+.libros__crono-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.libros__crono-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.libros__crono-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.libros__crono-reset {
+  min-height: 44px;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(201, 169, 106, 0.48);
+  border-radius: 999px;
+  background: rgba(201, 169, 106, 0.1);
+  color: var(--libros-gold-hi);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.libros__crono-reset:hover {
+  background: var(--libros-gold);
+  color: var(--ink);
+  border-color: var(--libros-gold);
+}
+
+.libros__eras {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: var(--sp-4);
+}
+
+/* Línea guía que une los nodos circulares en escritorio. */
+.libros__eras::before {
+  content: '';
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 21px;
+  height: 1px;
+  background: var(--border);
+  pointer-events: none;
+}
+
+.libros__era {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  min-height: 44px;
+  padding: 0.9rem 0.65rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(16, 16, 20, 0.88);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.libros__era:hover {
+  border-color: rgba(201, 169, 106, 0.55);
+  background: var(--panel-hover);
+  transform: translateY(-2px);
+}
+
+.libros__era.is-active {
+  border-color: var(--libros-gold);
+  background: rgba(201, 169, 106, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(201, 169, 106, 0.35);
+}
+
+.libros__era-node {
+  width: 11px;
+  height: 11px;
+  margin-bottom: 0.35rem;
+  border-radius: 50%;
+  border: 2px solid var(--border-strong);
+  background: var(--bg);
   transition:
     background-color 0.2s ease,
     border-color 0.2s ease;
 }
 
-.libros__item.has-ficha .libros__link:hover {
-  background: var(--panel-hover);
-  border-color: #c9a96a;
+.libros__era:hover .libros__era-node,
+.libros__era.is-active .libros__era-node {
+  border-color: var(--libros-gold);
+  background: var(--libros-gold);
 }
 
-.libros__abbr {
+.libros__era-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--libros-gold-hi);
+}
+
+.libros__era-title {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: #c9a96a;
-}
-
-.libros__item:not(.has-ficha) .libros__abbr {
-  color: var(--muted);
-}
-
-.libros__main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  min-width: 0;
-}
-
-.libros__name {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.2;
   color: var(--text);
 }
 
-.libros__summary {
-  font-size: 0.86rem;
-  line-height: 1.5;
+.libros__era-sub {
+  font-size: 0.76rem;
+  line-height: 1.3;
   color: var(--muted);
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
-.libros__estado {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+/* --- catálogo, filtros y búsqueda ------------------------------------------ */
+
+.libros__catalogo {
+  padding: var(--sp-6) 0 var(--sp-8);
+}
+
+.libros__toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--border);
+}
+
+.libros__filtros {
+  margin-top: 0;
+}
+
+.libros__chip {
+  min-height: 44px;
+}
+
+.libros__chip .chip__count {
+  opacity: 1;
+  color: #b6bcc4;
+}
+
+.libros__chip[aria-pressed='true'] .chip__count {
+  color: inherit;
+}
+
+.libros__chip--codex {
+  border-color: rgba(201, 169, 106, 0.45);
+  background: rgba(201, 169, 106, 0.08);
+  color: var(--libros-gold-hi);
+}
+
+.libros__chip--codex .chip__count {
+  color: var(--libros-gold-hi);
+}
+
+.libros__chip--codex:hover {
+  border-color: var(--libros-gold);
+  color: var(--text);
+}
+
+.libros__chip--codex[aria-pressed='true'] {
+  background: var(--libros-gold);
+  border-color: var(--libros-gold);
+  color: var(--ink);
+}
+
+.libros__search-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.libros__search {
+  flex: 1 1 320px;
+  max-width: 560px;
+}
+
+.libros__search-input {
+  width: 100%;
+  min-height: 44px;
+}
+
+.libros__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 
-/* --- ficha ------------------------------------------------------------------ */
+.libros__clear {
+  min-height: 44px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.82rem;
+  text-transform: none;
+  letter-spacing: normal;
+  cursor: pointer;
+}
+
+.libros__clear:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* --- bloques estructurados (AT · 7 del Codex · NT) ------------------------- */
+
+.libros__bloques {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+  margin-top: var(--sp-6);
+}
+
+.libros__bloque-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.libros__bloque-head h2 {
+  margin: var(--sp-2) 0 0;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+}
+
+.libros__bloque-count {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.libros__bloque--codex {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid rgba(201, 169, 106, 0.32);
+  border-radius: var(--r-lg);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(201, 169, 106, 0.08), transparent 55%),
+    rgba(255, 255, 255, 0.015);
+}
+
+.libros__codex-kicker {
+  display: inline-block;
+  margin: 0;
+  padding: 0.24rem 0.65rem;
+  border: 1px solid rgba(201, 169, 106, 0.45);
+  border-radius: 999px;
+  background: rgba(201, 169, 106, 0.12);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--libros-gold-hi);
+}
+
+.libros__bloque-note {
+  max-width: 78ch;
+  margin: 0 0 var(--sp-5);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.libros__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.libros__grid .study-card {
+  --reveal-y: 20px;
+  --reveal-o: 0;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  translate: 0 var(--reveal-y);
+  opacity: var(--reveal-o);
+  transition:
+    translate 0.5s ease var(--reveal-d, 0ms),
+    opacity 0.5s ease var(--reveal-d, 0ms);
+}
+
+.libros__grid .study-card.is-revealed {
+  --reveal-y: 0px;
+  --reveal-o: 1;
+}
+
+.libros__vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-7);
+  padding: var(--sp-7) var(--sp-4);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-md);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 1080px) {
+  .libros__eras {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .libros__eras::before {
+    display: none;
+  }
+
+  .libros__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .libros__eras {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .libros__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .libros__eras {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .libros__era,
+  .libros__era-node,
+  .libros__grid .study-card {
+    --reveal-y: 0px;
+    --reveal-o: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* --- ficha individual ------------------------------------------------------ */
 
 .ficha__estado {
   margin-top: var(--sp-3);

@@ -33,6 +33,70 @@
       "consultado": "2026-11-04",
       "verificado": "GI (texto corto: Vaticano, Alejandrino…) y GII (texto largo, unas 1700 palabras más), GII casi solo en el Sinaítico, con errores de copista y dos lagunas (4:7–18 y 13:7–9 en su numeración); la Vetus Latina muy cercana al Sinaítico; Qumrán: cuatro fragmentos arameos y uno hebreo, que concuerdan en general con el texto largo (Fitzmyer), copiados hacia 100 a. C.–50 d. C.; la mayoría de los estudiosos da prioridad a GII; Deselaers y Gross defienden GI; en 2:6 el Sinaítico lee «caminos» frente a la conjetura «cantos» (Am 8:10)."
     },
+    "gottheil-1906-esdras": {
+      "autor": "Richard Gottheil, Enno Littmann y Kaufmann Kohler",
+      "titulo": "Esdras, Books of",
+      "obra": "The Jewish Encyclopedia, vol. 5, pp. 219–222",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/5836-esdras-books-of",
+      "tipo": "publica",
+      "consultado": "2026-11-20",
+      "verificado": "Nomenclatura de los libros de Esdras en las tradiciones hebrea, griega y latina: en el canon hebreo antiguo Esdras y Nehemías formaban un solo libro («Esdras»); en la Septuaginta «Esdras B» (2 Esdras) reúne Esdras y Nehemías en traducción griega continua, mientras que «Esdras A» (1 Esdras; 3 Esdras en la Vulgata) es la compilación griega con el relato de los tres guardias de Darío, y «4 Esdras» (llamado 2 Esdras en los apócrifos ingleses) es el apocalipsis judío de finales del siglo I d. C."
+    },
+    "souvay-1909-esdras": {
+      "autor": "Charles L. Souvay",
+      "titulo": "Esdras (Ezra)",
+      "obra": "The Catholic Encyclopedia, vol. 5",
+      "editorial": "Robert Appleton Company",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/05535a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-20",
+      "verificado": "Tabla de equivalencias entre la Biblia hebrea, la Septuaginta (Esdras B), la Vulgata (1 Esdras = Esdras, 2 Esdras = Nehemías, 3 Esdras = apócrifo griego, 4 Esdras = apocalipsis) y las Biblias protestantes; unidad antigua de Esdras–Nehemías atestiguada por el Talmud, Melitón, Orígenes, Hilarión y Jerónimo; secciones en arameo (Esdras 4:8–6:18 y 7:12–26); discusión sobre la composición, la relación con Crónicas y la secuencia histórica de las misiones de Esdras y Nehemías."
+    },
+    "wooden-nets-2esdras": {
+      "autor": "R. Glenn Wooden",
+      "titulo": "2 Esdras: To the Reader",
+      "obra": "A New English Translation of the Septuagint (NETS), edición electrónica de la 2.ª impresión",
+      "editorial": "Oxford University Press",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/16-2esdras-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-20",
+      "verificado": "El «2 Esdras» (Esdras B) de la Septuaginta traduce de forma continua Esdras 1–10 (caps. 1–10) y Nehemías 1–13 (caps. 11–23) desde un texto hebreo-arameo muy cercano al masorético; edición crítica de Robert Hanhart (Göttingen XVIII.2, 1993); perfil de traducción extremadamente literal, mecánico e «interlineal», muy distinto del griego literario de 1 Esdras (Esdras A); distinción entre este libro y el 2 Esdras/4 Ezra de la tradición latina e inglesa."
+    },
+    "toy-torrey-1906-judith": {
+      "autor": "Crawford Howell Toy y Charles C. Torrey",
+      "titulo": "Judith, Book of",
+      "obra": "The Jewish Encyclopedia, vol. 7, pp. 388–390",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/9085-judith-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-20",
+      "verificado": "Estructura en dos mitades (caps. 1–7 campaña de Holofernes y cerco de Betulia; caps. 8–16 acción de Judit y victoria); anacronismos deliberados («Nabucodonosor, rey de los asirios en Nínive» después del regreso del cautiverio) propios de un relato patriótico y religioso antes que de una crónica; original hebreo perdido deducido de los hebraísmos del griego (los midrashim hebreos medievales son tardíos y secundarios); autor judío de Palestina (entorno de Siquem/Dotán) hacia finales del s. II o comienzos del s. I a. C. (época asmonea); primera cita externa en 1 Clemente 55."
+    },
+    "pope-1910-judith": {
+      "autor": "Hugh Pope",
+      "titulo": "Book of Judith",
+      "obra": "The Catholic Encyclopedia, vol. 8",
+      "editorial": "Robert Appleton Company",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08554a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-20",
+      "verificado": "Ausencia en el canon judío y exclusión protestante; recepción patrística (Clemente de Roma, Clemente de Alejandría, Orígenes, Tertuliano, Ambrosio, Jerónimo) y listas canónicas (Hipona, Cartago, Trento); diferencia entre el griego de la Septuaginta y la Vulgata latina, que Jerónimo tradujo en «una sola velada» (unam lucubratiunculam) desde un texto arameo (caldeo) más breve; debate sobre el género e historicidad (lectura histórica tradicional, núcleo histórico amplificado o parábola/relato edificante)."
+    },
+    "boyd-taylor-nets-judith": {
+      "autor": "Cameron Boyd-Taylor",
+      "titulo": "Ioudith: To the Reader",
+      "obra": "A New English Translation of the Septuagint (NETS), edición electrónica de la 2.ª impresión",
+      "editorial": "Oxford University Press",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/18-ioudith-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-20",
+      "verificado": "Edición crítica de Robert Hanhart (Göttingen VIII.4: Iudith, 1979); consenso mayoritario sobre una traducción griega de un original semítico (muy probablemente hebreo) perdido en la Antigüedad, junto a estudios recientes que destacan rasgos propios del griego de la Septuaginta; estilo paratáctico (repetición de καί) e interlineal; testigos unciales principales (Vaticano, Alejandrino y Sinaítico) y versiones antiguas (Vetus Latina, siríaca)."
+    },
     "csp-codex-sinaiticus": {
       "autor": "The Codex Sinaiticus Project",
       "titulo": "Codex Sinaiticus: transcripción y facsímil",
@@ -41,8 +105,8 @@
       "anio": "2009",
       "url": "https://www.codexsinaiticus.org/en/",
       "tipo": "texto",
-      "consultado": "2026-11-04",
-      "verificado": "Texto griego de Tobit que usa el sitio (public/textos/exegesis/codex/tobit.json, generado de la transcripción del proyecto): 14 capítulos, 232 versículos, y los saltos 4:7→4:19, 9:2→9:4, 13:7→13:11 y 14:7→14:9."
+      "consultado": "2026-11-20",
+      "verificado": "Textos griegos del Codex Sinaiticus que usa el sitio (public/textos/exegesis/codex/*.json, generados de la transcripción del proyecto): Tobit (14 caps., 232 vv., saltos 4:7→4:19, 9:2→9:4, 13:7→13:11 y 14:7→14:9), 2 Esdras (15 caps. conservados: caps. 9–23 desde 9:9, 454 vv., sin 13:7 ni 17:69) y Judit (16 caps., 327 vv., con lagunas en el folio dañado 38.8: 11:13→11:19, 12:3→12:5, 12:16→12:18 y 13:2→13:9)."
     },
     "csp-acerca-del-codex": {
       "autor": "The Codex Sinaiticus Project",
@@ -54,6 +118,1176 @@
       "tipo": "publica",
       "consultado": "2026-11-13",
       "verificado": "Datos del recuadro de /apologetica/shincheonji: escrito a mediados del siglo IV («written in the middle of the fourth century»), a mano y en griego («handwritten well over 1600 years ago»), con la copia completa más antigua del Nuevo Testamento; el AT en la Septuaginta; preparado en pergamino (página Production); cuatro instituciones socias: British Library, Biblioteca Nacional de Rusia, Monasterio de Santa Catalina y Biblioteca Universitaria de Leipzig; manuscrito reunido en forma digital y en línea desde julio de 2009. El sitio no respondía desde aquí: se leyó en copias de web.archive.org (2024-12-07 y 2025-01-12)."
+    },
+    "je-bible-canon": {
+      "autor": "Emil G. Hirsch, Ludwig Blau, Kaufmann Kohler y Nathaniel Schmidt",
+      "titulo": "Bible Canon",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/3259-bible-canon",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: formación tripartita del canon hebreo (Torá, Neviim, Ketuvim) y debates rabínicos antiguos sobre libros discutidos."
+    },
+    "ce-canon-ot": {
+      "autor": "George Reid",
+      "titulo": "Canon of the Old Testament",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1908",
+      "url": "https://www.newadvent.org/cathen/03267a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: historia del canon del Antiguo Testamento en el judaísmo, listas patrísticas, Hipona, Cartago y Trento."
+    },
+    "ce-canon-nt": {
+      "autor": "George Reid",
+      "titulo": "Canon of the New Testament",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1908",
+      "url": "https://www.newadvent.org/cathen/03274a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: formación del canon neotestamentario, listas tempranas (Muratori, Eusebio, Atanasio) y recepción sinodal."
+    },
+    "ce-septuagint": {
+      "autor": "Achille Vander Heeren",
+      "titulo": "Septuagint Version",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/13722a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: origen alejandrino de la Septuaginta, versiones griegas y ordenamiento de los libros en los grandes unciales."
+    },
+    "ce-prophecy": {
+      "autor": "Jean-Marie Calès",
+      "titulo": "Prophecy, Prophet, and Prophetess",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/12477a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: profetismo bíblico en Israel, transmisión escrita de oráculos y lectura mesiánica clásica."
+    },
+    "ce-gospels": {
+      "autor": "Francis Gigot",
+      "titulo": "Gospel and Gospels",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/06655b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: género evangélico, testimonio apostólico temprano y formación del corpus de cuatro Evangelios."
+    },
+    "ce-synoptics": {
+      "autor": "Francis Gigot",
+      "titulo": "Synoptics",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/14389b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: cuestión sinóptica entre Mateo, Marcos y Lucas, fuentes escritas y tradición oral."
+    },
+    "pietersma-wright-nets-front": {
+      "autor": "Albert Pietersma y Benjamin G. Wright",
+      "titulo": "To the Reader of NETS (Preliminary Materials)",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/00-front-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): principios metodológicos, base crítica de Gotinga/Rahlfs y relación con el Texto Masorético."
+    },
+    "morphgnt-sblgnt": {
+      "autor": "Michael W. Holmes y James Tauber",
+      "titulo": "The Greek New Testament: SBL Edition (MorphGNT)",
+      "obra": "SBL Greek New Testament",
+      "anio": "2010",
+      "url": "https://github.com/morphgnt/sblgnt",
+      "tipo": "texto",
+      "consultado": "2026-11-21",
+      "verificado": "Repositorio verificado: texto griego crítico del Nuevo Testamento con análisis morfológico usado para lemas y lecturas."
+    },
+    "tyndale-ntv-2009": {
+      "autor": "Tyndale House Foundation",
+      "titulo": "Santa Biblia, Nueva Traducción Viviente (NTV)",
+      "obra": "Nueva Traducción Viviente",
+      "anio": "2009",
+      "url": "https://www.bibliantv.com",
+      "tipo": "texto",
+      "consultado": "2026-11-21",
+      "verificado": "Sitio oficial verificado: criterios de traducción en español de la NTV y relación con el texto masorético y griego."
+    },
+    "ccel-early-fathers": {
+      "autor": "Philip Schaff y colaboradores (ed.)",
+      "titulo": "Ante-Nicene & Nicene and Post-Nicene Fathers",
+      "obra": "Early Church Fathers (CCEL)",
+      "anio": "1885",
+      "url": "https://www.ccel.org/fathers",
+      "tipo": "texto",
+      "consultado": "2026-11-21",
+      "verificado": "Archivo patrístico verificado: referencias tempranas de los Padres de la Iglesia a los libros bíblicos."
+    },
+    "toy-barton-1906-maccabees": {
+      "autor": "Crawford Howell Toy, George A. Barton, Joseph Jacobs e Israel Abrahams",
+      "titulo": "Maccabees, Books of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/10237-maccabees-books-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: análisis crítico de 1–4 Macabeos, fecha asmonea/helenística, lengua original hebrea de 1 Mac y griega retórica de 4 Mac."
+    },
+    "bechtel-1910-machabees": {
+      "autor": "Florentine Bechtel",
+      "titulo": "The Books of Machabees",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/09495a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: historia textual, canonicidad católica de 1–2 Mac y estatus de apéndice o fuera del canon de 3–4 Mac."
+    },
+    "zervos-nets-1makk": {
+      "autor": "George Themelis Zervos",
+      "titulo": "1 Makkabees",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/20-1makk-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): introducción textual e historia de la traducción griega desde un original hebreo perdido."
+    },
+    "westerholm-nets-4makk": {
+      "autor": "Stephen Westerholm",
+      "titulo": "4 Makkabees",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/23-4makk-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): retórica filosófica griega sobre la razón piadosa y las pasiones, testigo principal en Sinaítico y Alejandrino."
+    },
+    "kohler-1906-wisdom": {
+      "autor": "Kaufmann Kohler",
+      "titulo": "Wisdom of Solomon, Book of the",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/14951-wisdom-of-solomon-book-of-the",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: origen alejandrino, seudonimia salomónica, fusión de tradición sapiencial judía y vocabulario helenístico."
+    },
+    "gigot-1912-wisdom": {
+      "autor": "Francis Gigot",
+      "titulo": "Book of Wisdom",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/15666a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: estructura tripartita, unidad literaria, composición griega alejandrina y recepción en los concilios antiguos."
+    },
+    "knibb-nets-wissal": {
+      "autor": "Michael A. Knibb",
+      "titulo": "Wisdom of Salomon",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/29-wissal-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): perfil textual griego, estilo poético helenístico e historia crítica del texto (Ziegler)."
+    },
+    "toy-levi-1906-sirach": {
+      "autor": "Crawford Howell Toy e Israel Lévi",
+      "titulo": "Sirach, The Wisdom of Jesus the Son of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/13785-sirach-the-wisdom-of-jesus-the-son-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: datación en Jerusalén c. 180 a. C., prólogo del nieto en Egipto (132 a. C.) y manuscritos hebreos de la Guenizá."
+    },
+    "gigot-1909-ecclesiasticus": {
+      "autor": "Francis Gigot",
+      "titulo": "Ecclesiasticus",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/05263a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: autoría de Jesús ben Sirá, transmisión griega doble, Vulgata y recepción deuterocanónica."
+    },
+    "wright-nets-sirach": {
+      "autor": "Benjamin G. Wright",
+      "titulo": "Sirach",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/30-sirach-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): relación entre el griego I de los grandes unciales (Sinaítico), las adiciones griegas II y los fragmentos hebreos."
+    },
+    "je-pentateuch": {
+      "autor": "Emil G. Hirsch y Joseph Jacobs",
+      "titulo": "Pentateuch",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/12011-pentateuch",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: tradición mosaica de la Torá, estructura quíntuple y análisis documental clásico."
+    },
+    "ce-pentateuch": {
+      "autor": "Anthony Maas",
+      "titulo": "Pentateuch",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/11646c.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: unidad literaria de los cinco libros de Moisés y debates históricos sobre fuentes y redacción."
+    },
+    "je-genesis": {
+      "autor": "Benno Jacob y Emil G. Hirsch",
+      "titulo": "Genesis, The Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/6580-genesis-the-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: historia primitiva y patriarcal, fórmulas toledot y cuestiones críticas sobre Génesis."
+    },
+    "hiebert-nets-genesis": {
+      "autor": "Robert J. V. Hiebert",
+      "titulo": "Genesis",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/01-gen-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): introducción al Génesis griego de Gotinga (Wevers) frente al Texto Masorético."
+    },
+    "je-exodus": {
+      "autor": "Emil G. Hirsch, Benno Jacob y S. R. Driver",
+      "titulo": "Exodus, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/5940-exodus-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: salida de Egipto, alianza del Sinaí, Código de la Alianza y sección del santuario."
+    },
+    "je-leviticus": {
+      "autor": "Emil G. Hirsch y George A. Barton",
+      "titulo": "Leviticus",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/9867-leviticus",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: legislación sacrificial, pureza ritual y Código de Santidad (caps. 17–26)."
+    },
+    "ce-leviticus": {
+      "autor": "The Catholic Encyclopedia",
+      "titulo": "Leviticus",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/09207a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: teología cultual y sacerdotal de Levítico en la lectura cristiana antigua."
+    },
+    "je-numbers": {
+      "autor": "Emil G. Hirsch, M. Seligsohn y George A. Barton",
+      "titulo": "Numbers, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/11617-numbers-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: censos, travesía del desierto, oráculos de Balaam y organización legal."
+    },
+    "je-deuteronomy": {
+      "autor": "Morris Jastrow Jr., S. R. Driver, Emil G. Hirsch y Benno Jacob",
+      "titulo": "Deuteronomy",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/5132-deuteronomy",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: discursos de Moisés en Moab, código legal centralizado y reforma de Josías (622 a. C.)."
+    },
+    "ce-deuteronomy": {
+      "autor": "Anthony Maas",
+      "titulo": "Deuteronomy",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1908",
+      "url": "https://www.newadvent.org/cathen/04761b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: estructura homilética y jurídica de Deuteronomio y su transmisión textual."
+    },
+    "je-joshua": {
+      "autor": "Emil G. Hirsch",
+      "titulo": "Joshua, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/8907-joshua-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: conquista de Canaán, reparto tribal, pacto de Siquem y comparación entre TM y LXX."
+    },
+    "ce-josue": {
+      "autor": "Walter Drum",
+      "titulo": "Josue (Joshua)",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08524a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: estructura de Josué, geografía tribal e interpretación tipológica cristiana."
+    },
+    "je-judges": {
+      "autor": "Emil G. Hirsch y Victor Ryssel",
+      "titulo": "Judges, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/9051-judges-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: ciclo teológico de los libertadores carismáticos y apéndices finales de la época premonárquica."
+    },
+    "ce-judges": {
+      "autor": "Walter Drum",
+      "titulo": "Judges",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08547a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: marco cronológico y redacción deuteronomista del libro de los Jueces."
+    },
+    "je-ruth": {
+      "autor": "George A. Barton y Comité Editorial",
+      "titulo": "Ruth, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/12947-ruth-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: idilio moabita en Belén, ley del goel y debate sobre datación posexílica frente a tradición premonárquica."
+    },
+    "ce-ruth": {
+      "autor": "Francis Gigot",
+      "titulo": "Book of Ruth",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/13276a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: lugar canónico de Rut (Ketuvim frente a Jueces en LXX) y genealogía davídica."
+    },
+    "je-samuel": {
+      "autor": "Emil G. Hirsch",
+      "titulo": "Samuel, Books of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/13080-samuel-books-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: paso del sistema tribal a la monarquía con Samuel, Saúl y David, y divergencias TM–LXX."
+    },
+    "ce-samuel-kings": {
+      "autor": "Florentine Bechtel",
+      "titulo": "First and Second Books of Kings (Samuel)",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08647b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: título griego de 1–2 Reinos, fuentes cortesanas e historiografía profética."
+    },
+    "je-kings": {
+      "autor": "Isidore Singer, M. Seligsohn, Emil G. Hirsch y George A. Barton",
+      "titulo": "Kings, Books of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/9329-kings-books-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: monarquía salomónica, cisma de los dos reinos, ciclos de Elías y Eliseo y caída de Jerusalén."
+    },
+    "ce-kings-3-4": {
+      "autor": "Joseph Schets",
+      "titulo": "Third and Fourth Books of Kings",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08652a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: fuentes reales citadas (Anales), teología de la historia y variantes entre 3–4 Reinos griego y TM."
+    },
+    "je-chronicles": {
+      "autor": "Emil G. Hirsch y W. H. Bennett",
+      "titulo": "Chronicles, Books of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/4371-chronicles-books-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: relectura posexílica de la historia de Judá centrada en el Templo, los levitas y la casa de David."
+    },
+    "ce-paralipomenon": {
+      "autor": "Florentine Bechtel",
+      "titulo": "The Books of Paralipomenon (Chronicles)",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/11472a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: nombre griego Paralipomenon y comparación historiográfica con Samuel y Reyes."
+    },
+    "je-ezra": {
+      "autor": "Joseph Jacobs, M. Seligsohn, Morris Jastrow Jr. y D. S. Margoliouth",
+      "titulo": "Ezra, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/5968-ezra-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: decreto de Ciro, reconstrucción del Templo, secciones en arameo imperial y misión de Esdras."
+    },
+    "je-nehemiah": {
+      "autor": "Emil G. Hirsch y David Samuel Margoliouth",
+      "titulo": "Nehemiah, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/11423-nehemiah-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: memorias del copero persa, reedificación de los muros de Jerusalén y renovación del pacto."
+    },
+    "je-esther": {
+      "autor": "Emil G. Hirsch, John Dyneley Prince y Solomon Schechter",
+      "titulo": "Esther",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/5872-esther",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: relato cortesano en Susa, institución de Purim, ausencia del nombre divino en hebreo y adiciones griegas."
+    },
+    "ce-esther": {
+      "autor": "Arthur McMahon",
+      "titulo": "Esther",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/05549a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: relación entre el texto masorético breve y las seis secciones griegas de Ester."
+    },
+    "jobes-nets-esther": {
+      "autor": "Karen H. Jobes",
+      "titulo": "Esther",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/17-esther-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): comparación del Texto Antiguo Griego y el Texto Alfa frente al hebreo de Ester."
+    },
+    "je-job": {
+      "autor": "M. Seligsohn, Emil G. Hirsch y Carl Siegfried",
+      "titulo": "Job, The Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/8693-job-the-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: prólogo y epílogo en prosa, ciclos poéticos de diálogo sobre la teodicea y discursos de Yahvé."
+    },
+    "ce-job": {
+      "autor": "Joseph Hontheim",
+      "titulo": "Job",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08413a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: problema del sufrimiento del justo, inserción de los discursos de Eliú e historia textual."
+    },
+    "cox-nets-iob": {
+      "autor": "Claude E. Cox",
+      "titulo": "Iob",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/28-iob-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): abrevación original del griego de Job frente al TM y adiciones asteriscadas de Orígenes."
+    },
+    "je-psalms": {
+      "autor": "Emil G. Hirsch",
+      "titulo": "Psalms",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/12409-psalms",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: división en cinco libros del Salterio, títulos litúrgicos e himnario del Segundo Templo."
+    },
+    "ce-psalms": {
+      "autor": "Walter Drum",
+      "titulo": "Psalms",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/12533a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: tipología de salmos, numeración doble TM/LXX y presencia del Salmo 151 en la tradición griega."
+    },
+    "pietersma-nets-psalms": {
+      "autor": "Albert Pietersma",
+      "titulo": "Psalms (and Prayer of Manasses)",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/24-ps-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): traducción griega de los Salmos (incluido el Salmo 151) y numeración septuagintal."
+    },
+    "je-proverbs": {
+      "autor": "Crawford Howell Toy",
+      "titulo": "Proverbs, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/12400-proverbs-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: colecciones sapienciales de Salomón, Agur y Lemuel, Sabiduría personificada (cap. 8) y variantes LXX."
+    },
+    "ce-proverbs": {
+      "autor": "Francis Gigot",
+      "titulo": "Book of Proverbs",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/12505b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: forma poética del paralelismo hebreo, secciones del libro y reordenamiento griego de caps. 24–31."
+    },
+    "cook-nets-proverbs": {
+      "autor": "Johann Cook",
+      "titulo": "Proverbs",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/25-proverbs-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): carácter libre de la traducción griega de Proverbios y desplazamiento de secciones respecto al TM."
+    },
+    "je-ecclesiastes": {
+      "autor": "Morris Jastrow Jr. y David Samuel Margoliouth",
+      "titulo": "Ecclesiastes, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/5415-ecclesiastes-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: lema hevel («vapor/vanidad») de Qohélet, lengua hebrea tardía y debates rabínicos de canonicidad."
+    },
+    "ce-ecclesiastes": {
+      "autor": "Gerhard Gietmann",
+      "titulo": "Ecclesiastes",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/05244b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: estructura sapiencial, epílogo redaccional y lectura patrística de Eclesiastés."
+    },
+    "je-song": {
+      "autor": "Emil G. Hirsch y Crawford Howell Toy",
+      "titulo": "Song of Songs, The",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/13916-song-of-songs-the",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: poesía amatoria hebrea en las Cinco Meguilot y tradición exegética de Akiva."
+    },
+    "ce-canticle": {
+      "autor": "Gerhard Gietmann",
+      "titulo": "Canticle of Canticles",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1908",
+      "url": "https://www.newadvent.org/cathen/03302a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: forma dramática/lírica del Cantar e interpretación alegórica judía y patrística."
+    },
+    "je-isaiah": {
+      "autor": "Emil G. Hirsch y Thomas Kelly Cheyne",
+      "titulo": "Isaiah, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/8236-isaiah-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: ministerio de Isaías en Jerusalén (caps. 1–39) y cuestión crítica de Deutero y Trito-Isaías (caps. 40–66)."
+    },
+    "ce-isaias": {
+      "autor": "Charles Souvay",
+      "titulo": "Isaias",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08179b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: historia textual de Isaías, cánticos del Siervo y unidad o composición en etapas."
+    },
+    "silva-nets-esaias": {
+      "autor": "Moisés Silva",
+      "titulo": "Esaias",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/33-esaias-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): perfil libre y contextualizado del traductor alejandrino de Isaías griego."
+    },
+    "je-jeremiah": {
+      "autor": "Emil G. Hirsch y Victor Ryssel",
+      "titulo": "Jeremiah, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/8587-jeremiah-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: oráculos antes de 586 a. C., secretario Baruc y divergencia estructural severa entre el TM y la LXX."
+    },
+    "ce-jeremias": {
+      "autor": "Michael Faulhaber",
+      "titulo": "Jeremias",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08334a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: profeta de Anatot, confesiones, oráculos a las naciones y relación LXX–TM."
+    },
+    "pietersma-saunders-nets-ieremias": {
+      "autor": "Albert Pietersma y Marc Saunders",
+      "titulo": "Ieremias (with Excursus on Bisectioning Ieremias)",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/34-ieremias-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): texto más breve (~1/7 menor) y ubicación distinta de los oráculos contra las naciones en la LXX."
+    },
+    "je-lamentations": {
+      "autor": "Emil G. Hirsch, Max Löhr y Solomon Schechter",
+      "titulo": "Lamentations",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/8589-jeremiah-the-lamentations-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: cinco elegías tras la caída de Jerusalén (586 a. C.), acrósticos alfabéticos y uso litúrgico en Tishá BeAv."
+    },
+    "je-ezekiel": {
+      "autor": "Emil G. Hirsch y Karl Heinrich Cornill",
+      "titulo": "Ezekiel, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/5952-ezekiel-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: visiones sacerdotales en Babilonia junto al río Quebar y visión del Templo restaurado (caps. 40–48)."
+    },
+    "ce-ezekiel": {
+      "autor": "Joseph Schets",
+      "titulo": "Ezekiel",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/05737b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: simbolismo de la carroza-trono, responsabilidad individual y texto masorético frente a LXX."
+    },
+    "je-daniel": {
+      "autor": "Emil G. Hirsch y Eduard König",
+      "titulo": "Daniel, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/4874-daniel-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: relatos cortesanos bilingües (hebreo/arameo), visiones apocalípticas de cuatro reinos y recepción Macabea."
+    },
+    "ce-daniel": {
+      "autor": "Francis Gigot",
+      "titulo": "Book of Daniel",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1908",
+      "url": "https://www.newadvent.org/cathen/04621b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: composición del libro, versión griega de Teodoción frente a OG y adiciones deuterocanónicas."
+    },
+    "howard-nets-twelve": {
+      "autor": "George E. Howard",
+      "titulo": "The Twelve Prophets",
+      "obra": "A New English Translation of the Septuagint (NETS, Oxford University Press)",
+      "anio": "2009",
+      "url": "https://ccat.sas.upenn.edu/nets/edition/32-twelve-nets.pdf",
+      "tipo": "estudio",
+      "consultado": "2026-11-21",
+      "verificado": "Edición NETS verificada (PDF 200): orden griego de los Doce Profetas Menores (incluyendo Joel 4 en LXX) frente al TM."
+    },
+    "je-hosea": {
+      "autor": "Emil G. Hirsch y Victor Ryssel",
+      "titulo": "Hosea, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/7895-hosea-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: profeta en el reino norteño de Israel en el siglo VIII a. C. y metáfora nupcial de alianza y fidelidad."
+    },
+    "ce-osee": {
+      "autor": "Jean-Marie Calès",
+      "titulo": "Osee",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/11337a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: trasfondo histórico asirio de Oseas y citas neotestamentarias (Mt 2:15; 9:13; Ro 9:25)."
+    },
+    "je-joel": {
+      "autor": "Emil G. Hirsch y Victor Ryssel",
+      "titulo": "Joel, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/8703-joel-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: plaga de langostas, Día del Señor, efusión del Espíritu y numeración en 3 vs 4 capítulos."
+    },
+    "ce-joel": {
+      "autor": "Michael Faulhaber",
+      "titulo": "Joel",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08419a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: debate cronológico (monarquía temprana vs posexílica) y lectura de Hch 2 en Pentecostés."
+    },
+    "je-amos": {
+      "autor": "Gerson B. Levi",
+      "titulo": "Amos, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/1424-amos-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: pastor de Tecoa en Betel (s. VIII a. C.), oráculos contra las naciones y denuncia de la injusticia social."
+    },
+    "ce-amos": {
+      "autor": "Francis Gigot",
+      "titulo": "Amos",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1907",
+      "url": "https://www.newadvent.org/cathen/01435a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: estructura de cinco visiones e integridad del epílogo de restauración davídica (9:11–15)."
+    },
+    "je-obadiah": {
+      "autor": "Emil G. Hirsch y George A. Barton",
+      "titulo": "Obadiah, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/11642-obadiah-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: libro más breve del canon hebreo (21 vv.), oráculo contra Edom y paralelismo con Jeremías 49."
+    },
+    "ce-abdias": {
+      "autor": "Francis Gigot",
+      "titulo": "Abdias",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1907",
+      "url": "https://www.newadvent.org/cathen/01030b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: trasfondo de la caída de Jerusalén (586 a. C.) o épocas anteriores frente a la participación edomita."
+    },
+    "je-jonah": {
+      "autor": "Emil G. Hirsch y Karl Budde",
+      "titulo": "Jonah, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/8751-jonah-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: relato narrativo sobre el profeta renuente enviado a Nínive, oración poética (cap. 2) y universalismo."
+    },
+    "ce-jonah": {
+      "autor": "James F. Driscoll",
+      "titulo": "Jonah",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08497b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: género parabólico frente a histórico en la exégesis clásica y señal de Jonás en los Evangelios."
+    },
+    "je-micah": {
+      "autor": "Isidore Singer y M. Seligsohn",
+      "titulo": "Micah, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/10777-micah-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: profeta de Moreset contemporáneo de Isaías, crítica social y promesa mesiánica sobre Belén (Miq 5:2)."
+    },
+    "je-nahum": {
+      "autor": "Emil G. Hirsch y Ira Maurice Price",
+      "titulo": "Nahum, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/11291-nahum-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: poema hímnico acróstico truncado y oráculos sobre la caída de Nínive (612 a. C.)."
+    },
+    "ce-nahum": {
+      "autor": "Charles Souvay",
+      "titulo": "Nahum",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/10670a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: datación entre la caída de Tebas (663 a. C.) y la destrucción asiria de Nínive."
+    },
+    "je-habakkuk": {
+      "autor": "Emil G. Hirsch",
+      "titulo": "Habakkuk, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/6976-habakkuk-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: diálogo profético sobre el auge babilonio, «el justo vivirá por su fe» (2:4) y salmo teofánico (cap. 3)."
+    },
+    "ce-habacuc": {
+      "autor": "Francis Gigot",
+      "titulo": "Habacuc (Habakkuk)",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/07097a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: teodicea de Habacuc y recepción en el Pesher de Qumrán y las epístolas paulinas."
+    },
+    "je-zephaniah": {
+      "autor": "Emil G. Hirsch e Ira Maurice Price",
+      "titulo": "Zephaniah",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/15242-zephaniah",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: profecía bajo el reinado de Josías sobre el Día de Yahvé (1:14–18) y salvación del resto humilde."
+    },
+    "ce-sophonias": {
+      "autor": "Michael Faulhaber",
+      "titulo": "Sophonias (Zephaniah)",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/14146a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: contexto de la reforma de Josías y lenguaje escatológico recogido en el Dies Irae medieval."
+    },
+    "je-haggai": {
+      "autor": "Emil G. Hirsch",
+      "titulo": "Haggai, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/7032-haggai-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: cuatro oráculos fechados con precisión en el año segundo de Darío I (520 a. C.) para reanudar el Templo."
+    },
+    "ce-aggeus": {
+      "autor": "Francis Gigot",
+      "titulo": "Aggeus (Haggai)",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1907",
+      "url": "https://www.newadvent.org/cathen/01209d.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: Zorobabel, Josué el sumo sacerdote y promesa de la gloria futura del Segundo Templo."
+    },
+    "je-zechariah": {
+      "autor": "Emil G. Hirsch",
+      "titulo": "Zechariah, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/15199-zechariah-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: ocho visiones nocturnas (caps. 1–8, 520–518 a. C.) frente a los oráculos apocalípticos de caps. 9–14."
+    },
+    "ce-zacharias": {
+      "autor": "Walter Drum",
+      "titulo": "Zacharias",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/15741b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: cuestión de unidad o Deutero-Zacarías y citas de la Pasión en los Evangelios."
+    },
+    "je-malachi": {
+      "autor": "Isidore Singer y Adolf Guttmacher",
+      "titulo": "Malachi, Book of",
+      "obra": "The Jewish Encyclopedia (Funk & Wagnalls)",
+      "anio": "1906",
+      "url": "https://www.jewishencyclopedia.com/articles/10321-malachi-book-of",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: libro anónimo o de nombre simbólico («mi mensajero») en época persa sobre culto, diezmos y regreso de Elías."
+    },
+    "ce-malachias": {
+      "autor": "Albin Van Hoonacker",
+      "titulo": "Malachias (Malachi)",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/09562b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: estructura de disputas dialogadas y cierre de los Profetas antes del ministerio del Bautista."
+    },
+    "ce-matthew": {
+      "autor": "Joseph E. Jacquier",
+      "titulo": "Gospel of St. Matthew",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/10057a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: estructura en cinco discursos, testimonio de Papías sobre logia hebreos/arameos y citas de cumplimiento."
+    },
+    "ce-mark": {
+      "autor": "Joseph MacRory",
+      "titulo": "Gospel of Saint Mark",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/09674b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: Evangelio más breve y vivo, vínculo patrístico con la predicación de Pedro y cuestión del final largo (16:9–20)."
+    },
+    "ce-luke": {
+      "autor": "Cornelius Aherne",
+      "titulo": "Gospel of Saint Luke",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/09420a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: prólogo historiográfico dedicado a Teófilo, unidad Lucas–Hechos y material propio (Buen Samaritano, Hijo Pródigo)."
+    },
+    "ce-john-gospel": {
+      "autor": "Leopold Fonck",
+      "titulo": "Gospel of St. John",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08438a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: prólogo del Logos, Libro de los Signos y de la Gloria, perícopa adúltera (ausente en el Sinaítico) y autoría joánica."
+    },
+    "ce-acts": {
+      "autor": "Andrew E. Breen",
+      "titulo": "Acts of the Apostles",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1907",
+      "url": "https://www.newadvent.org/cathen/01117a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: continuación lucana de Pentecostés a Roma, discursos misioneros, secciones «nosotros» y texto occidental vs alejandrino."
+    },
+    "ce-romans": {
+      "autor": "August Merk",
+      "titulo": "Epistle to the Romans",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/13156a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: carta escrita desde Corinto c. 57 d. C., justificación por la fe, Israel en caps. 9–11 e historia textual de 15–16."
+    },
+    "ce-corinthians": {
+      "autor": "Cornelius Aherne",
+      "titulo": "Epistles to the Corinthians",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1908",
+      "url": "https://www.newadvent.org/cathen/04364a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: correspondencia apostólica con Corinto sobre divisiones, carismas, resurrección (1 Co 15) y ministerio en 2 Co."
+    },
+    "ce-galatians": {
+      "autor": "Cornelius Aherne",
+      "titulo": "Epistle to the Galatians",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/06336a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: polémica contra judaizantes, libertad en Cristo y debate entre teoría de Galacia del Norte vs Galacia del Sur."
+    },
+    "ce-ephesians": {
+      "autor": "Paulin Ladeuze",
+      "titulo": "Epistle to the Ephesians",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1909",
+      "url": "https://www.newadvent.org/cathen/05485a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: epístola de la cautividad sobre la unidad cósmica eclesial y la ausencia de «en Éfeso» en Ef 1:1 del Sinaítico."
+    },
+    "ce-philippians": {
+      "autor": "Achille Vander Heeren",
+      "titulo": "Epistle to the Philippians",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/12008a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: carta de gratitud desde prisión, himno cristológico de kénosis (2:6–11) y debate sobre lugar de cautiverio."
+    },
+    "ce-colossians": {
+      "autor": "Cornelius Aherne",
+      "titulo": "Epistle to the Colossians",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1908",
+      "url": "https://www.newadvent.org/cathen/04131b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: supremacía cósmica de Cristo frente a la «filosofía» y culto angélico en el valle del Lico."
+    },
+    "ce-thessalonians": {
+      "autor": "Walter Drum",
+      "titulo": "Epistles to the Thessalonians",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/14629d.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: escritos paulinos más tempranos (c. 50–51 d. C.) sobre la esperanza de la Parusía y el «hombre de pecado»."
+    },
+    "ce-pastorals": {
+      "autor": "Cornelius Aherne",
+      "titulo": "Epistles to Timothy and Titus",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/14727b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: instrucciones a delegados apostólicos sobre organización presbiteral/episcopal, sana doctrina y debate de autoría."
+    },
+    "ce-titus": {
+      "autor": "Klemens Löffler",
+      "titulo": "Titus",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1912",
+      "url": "https://www.newadvent.org/cathen/14746b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: colaborador gentil de Pablo en Jerusalén, Corinto y misión organizativa en Creta."
+    },
+    "ce-philemon": {
+      "autor": "Achille Vander Heeren",
+      "titulo": "Philemon",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/11797b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: intercesión epistolar personal por el esclavo Onésimo vinculada al grupo de Colosenses."
+    },
+    "ce-hebrews": {
+      "autor": "Leopold Fonck",
+      "titulo": "Epistle to the Hebrews",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/07181a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: homilía teológica sobre el sacerdocio de Melquisedec, posición en los unciales orientales (tras 2 Ts en el Sinaítico) y debate de autoría."
+    },
+    "ce-james": {
+      "autor": "Achille Camerlynck",
+      "titulo": "Epistle of St. James",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08275b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: sabiduría parenética, fe y obras (2:14–26), relación con el Sermón del Monte y recepción en Oriente y Occidente."
+    },
+    "ce-peter": {
+      "autor": "Achille Vander Heeren",
+      "titulo": "Epistles of Saint Peter",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1911",
+      "url": "https://www.newadvent.org/cathen/11752a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: contraste entre la temprana recepción universal de 1 Pedro («Babilonia», Silvano) y el largo debate antiguo sobre 2 Pedro."
+    },
+    "ce-john-epistles": {
+      "autor": "Walter Drum",
+      "titulo": "Epistles of Saint John",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08435a.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: crisis cristológica antidoceta en 1–2 Juan, hospitalidad eclesial en 3 Juan y ausencia del Comma Johanneum en el Sinaítico."
+    },
+    "ce-jude": {
+      "autor": "Achille Camerlynck",
+      "titulo": "Epistle of St. Jude",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1910",
+      "url": "https://www.newadvent.org/cathen/08542b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: advertencia contra falsos maestros, relación literaria con 2 Pedro 2 y cita explícita de 1 Enoc 1:9."
+    },
+    "ce-apocalypse": {
+      "autor": "C. Van den Biesen",
+      "titulo": "Apocalypse",
+      "obra": "The Catholic Encyclopedia (Robert Appleton Company)",
+      "anio": "1907",
+      "url": "https://www.newadvent.org/cathen/01594b.htm",
+      "tipo": "publica",
+      "consultado": "2026-11-21",
+      "verificado": "Artículo verificado: cartas a las siete iglesias de Asia, ciclos septenarios de visión bajo Domiciano/Nerón e historia temprana de la canonicidad."
     }
   }
 }

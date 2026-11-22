@@ -1,0 +1,101 @@
+{
+  "id": "2-juan",
+  "title": "2 Juan",
+  "abbr": "2 Jn",
+  "order": 63,
+  "testament": "NT",
+  "summary": "Carta brevísima de trece versículos enviada por «el Anciano» a una iglesia local personificada como «la señora elegida y sus hijos»: celebra a quienes caminan en la verdad, resume el mandato recibido «desde el principio» en amarse unos a otros guardando sus mandamientos y advierte tajantemente contra maestros itinerantes que no confiesan a Jesucristo venido en carne para no acogerlos ni apoyarlos en su obra falsa. Canónica; completa en NTV y Codex.",
+  "genre": [
+    "carta apostólica breve en papiro",
+    "exhortación de discernimiento comunitario",
+    "advertencia sobre hospitalidad"
+  ],
+  "language": "Griego koiné epistolar directo idéntico al estilo y vocabulario de 1 y 3 Juan",
+  "date": {
+    "narrative": "El «Anciano» proyecta visitar personalmente pronto la congregación vecina tras enviar este breve aviso (v. 12)",
+    "composition": "Finales del siglo I d. C. (c. 90–100 d. C., en el entorno de Asia Menor / Éfeso)",
+    "certainty": "probable",
+    "note": "Su extensión exacta equivale al tamaño estándar de una única hoja comercial de papiro grecorromano."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento (consolidada en el canon en el s. IV tras vacilación inicial en algunas regiones)",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 2 Juan es una carta auténtica de una sola hoja de papiro (apenas 245 palabras griegas en trece versículos) que sigue punto por punto las convenciones epistolares grecorromanas cristianizadas: I. Remitente («el Anciano / Presbítero») y destinataria («la señora elegida y sus hijos», probablemente metáfora afectiva de una iglesia hermana, como «tu hermana elegida» en el v. 13), con saludo de gracia, misericordia y paz (vv. 1–3); II. Gozo al encontrar a algunos de sus hijos caminando en la verdad y recordatorio del mandamiento antiguo del amor y la obediencia (vv. 4–6); III. Alerta urgente frente a los engañadores que niegan a Jesucristo «viniendo en carne», prohibiendo darles hospedaje o saludo de bienvenida como apoyo misionero (vv. 7–11); IV. Promesa de visita «cara a cara» («boca a boca») y saludos finales (vv. 12–13).\n\n[Estudio] Su brevedad explica su carácter urgente de aviso previo."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] En el cristianismo misionero del siglo I, carente de albergues seguros, la hospitalidad doméstica (hogar + provisiones de viaje + carta de recomendación) permitía a los predicadores itinerantes extender sus enseñanzas de ciudad en ciudad. Frente a la misma corriente protognóstica antidoceta combatida en 1 Juan —que negaba la carne real de Cristo y presumía de «ir más allá» (proagon, v. 9)—, abrir la asamblea doméstica a esos propagandistas significaba legitimar y financiar su error ante toda la comunidad."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] Citada ya por Ireneo de Lyon hacia 180 d. C. (aunque confundiendo brevemente un versículo con 1 Juan) y mencionada explícitamente en el Fragmento Muratoriano junto con otra carta breve como patrimonio de Juan de Éfeso, fue recibida en Roma y Alejandría, aunque Eusebio y la tradición siríaca antigua mencionaron vacilaciones debidas a su brevedad y al título modesto «el Anciano».\n\n[Estudio] Walter Drum (Catholic Encyclopedia) y la investigación actual observan que casi la mitad de sus frases coinciden verbalmente con 1 Juan y su fórmula introductoria coincide exactamente con 3 Juan."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La teología entera de 2 Juan descansa en el abrazo indisoluble de «verdad y amor»: la verdad que habita en nosotros eternamente exige un amor que «no es mero sentimiento» sino «caminar conforme a sus mandamientos» (v. 6). A la vez marca el límite necesario de la caridad ante el engaño doctrinal: quien «se extravía y no permanece en la enseñanza de Cristo, no tiene a Dios» (v. 9). Por ello negar al falso maestro hospedaje comunitario y el saludo oficial de respaldo evita «participar en sus malas obras» (v. 11).\n\n[Tradición] En la historia cristiana equilibró la tolerancia fraterna (cfr. 3 Jn) con la firmeza doctrinal."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Transmitida completa en todos los grandes códices del siglo IV, incluido el Codex Sinaiticus (núm. 56) y el Vaticanus, con variaciones menores como el cambio entre «ustedes» y «nosotros» en la recompensa plena del v. 8 («para que reciban / recibamos», lectura del Sinaiticus) y en el saludo «con nosotros» frente a «con ustedes» del v. 3.\n\n[Texto] Tanto la NTV (1 capítulo, 13 vv.) como el Codex Sinaiticus (1 capítulo, 13 vv.) la transmiten completa."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] En las controversias cristológicas de los siglos III–IV (Cipriano en Cartago, Atanasio contra los arrianos y Alejandro de Alejandría), 2 Juan 10–11 sirvió frecuentemente como norma disciplinaria contra maestros que negaban la encarnación o divinidad de Cristo —aunque Clemente de Alejandría y comentaristas posteriores recordaron siempre que el rechazo apunta al respaldo oficial a propagadores falsos y no prohíbe ayudar humanamente al prójimo necesitado (cfr. Lc 10)."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Leer juntos 2 Juan y 3 Juan como díptico complementario: 2 Juan advierte contra hospedar falsos maestros; 3 Juan exige hospedar con generosidad a los misioneros fieles rechazados por Diótrefes.\n2. Notar en los vv. 1–4 cómo la palabra «verdad» se repite cinco veces y se une inseparable a «amor».\n3. Fijarse en el v. 7: el tiempo presente griego «viniendo en carne» (erchomenon) subraya tanto la encarnación histórica como la presencia permanente o retorno del Cristo encarnado.\n4. Observar el v. 12: la escritura rápida en papiro nunca reemplaza la comunión viva «boca a boca»."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿A quién designa «la señora elegida y sus hijos» en el versículo 1?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La amplísima mayoría de exegetas identifica una metáfora eclesiológica cariñosa para una iglesia local («tu hermana elegida» que saluda al cierre en v. 13 sería la congregación desde donde escribe el Anciano, paralelo a «la elegida en Babilonia» de 1 P 5:13)."
+        },
+        {
+          "label": "Tradición",
+          "body": "Algunos intérpretes antiguos (como Clemente de Alejandría y comentaristas minoritarios) tomaron literalmente el sustantivo como nombre propio femenino («Eklecte» o «Kyria» —«Señora»—), una cristiana piadosa y su familia."
+        }
+      ]
+    },
+    {
+      "question": "¿Quién es «el Anciano» (ho presbyteros) que firma 2 y 3 Juan?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La tradición eclesial clásica lo identifica con el anciano apóstol Juan hijo de Zebedeo (en su vejez en Éfeso, cfr. cómo Pedro se llama también «co-anciano» en 1 P 5:1)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Numerosos historiadores críticos recuerdan el testimonio de Papías (citado por Eusebio HE 3.39.4), quien distingue entre el apóstol Juan y otro discípulo del Señor llamado «el Anciano/Presbítero Juan» en Asia Menor como posible autor inmediato de estas dos cartas."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-john-epistles",
+    "ce-canon-nt",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

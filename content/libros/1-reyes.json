@@ -1,0 +1,100 @@
+{
+  "id": "1-reyes",
+  "title": "1 Reyes",
+  "abbr": "1 R",
+  "order": 11,
+  "testament": "AT",
+  "summary": "Primera parte del libro unitario de Reyes (3 Reinos en la Septuaginta), en veintidós capítulos: coronación, sabiduría y Templo de Salomón, cisma de los dos reinos tras Roboam y Jeroboam, y el ministerio profético de Elías contra el culto baalista bajo Acab. Protocanónico; ausente en el Sinaiticus.",
+  "genre": [
+    "crónica dinástica real",
+    "relato de edificación cultual",
+    "ciclo hagiográfico profético (Elías)"
+  ],
+  "language": "Hebreo bíblico deuteronomista con fuentes analísticas antiguas",
+  "date": {
+    "narrative": "Desde los últimos días de David hasta Ocozías de Israel y Josafat de Judá (c. 970–853 a. C.)",
+    "composition": "Edición deuteronomista apoyada en crónicas reales, completada tras el 560 a. C. en el exilio",
+    "certainty": "probable",
+    "note": "Incluye referencias explícitas a los «Hechos de Salomón» y a las «Crónicas de los reyes de Israel y de Judá», hoy perdidas."
+  },
+  "canon": {
+    "judio": "Tanaj (Nevi’im — unido a 2 Reyes)",
+    "catolico": "Antiguo Testamento (protocanónico; tradicionalmente 3 Reyes en Vulgata)",
+    "ortodoxo": "Antiguo Testamento (3 Basileion / 3 Reinos)",
+    "protestante": "Antiguo Testamento"
+  },
+  "notice": "En esta web, 1 Reyes se lee completo en la NTV (22 capítulos, 816 versículos). No perduran folios de este libro en el Codex Sinaiticus conservado.",
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 1 Reyes relata en veintidós capítulos el paso de la monarquía gloriosa al reino dividido y al conflicto abierto entre la corona y la profecía. Se articula en tres bloques nítidos: I. El ascenso, la sabiduría jurídica, las alianzas comerciales, la edificación y dedicación del Templo por Salomón y su desvío idolátrico final (caps. 1–11); II. La ruptura en dos Estados tras Roboam en el sur y Jeroboam I con los becerros de Betel y Dan en el norte, seguida por listas sincronizadas de reyes (caps. 12–16); III. La aparición súbita de Elías tisbita ante Acab y Jezabel (caps. 17–22).\n\n[Estudio] Entrelaza fórmulas archivísticas sobrias con narraciones épicas de gran intensidad como el Carmelo (cap. 18) y el Horeb (cap. 19)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Los reinados centrales del libro corresponden al apogeo de la dinastía omrida en Samaria (Omrí y Acab en el s. IX a. C.) y su enlace político-religioso con los fenicios de Tiro, reflejados en fuentes epigráficas externas como la estela de Mesa de Moab y las inscripciones asirias de Salmanasar III (batalla de Qarqar, 853 a. C., donde figura «Acab el israelita»).\n\nEl cisma norte-sur y las campañas del faraón Sisac (c. 925 a. C., registrada también en el templo de Karnak) marcan la fragilidad geopolítica de los dos pequeños Estados."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Tradición] El Talmud atribuyó la redacción de Reyes al profeta Jeremías por sus fuertes afinidades lingüísticas y teológicas.\n\n[Estudio] Como explican Singer, Hirsch y Barton (Jewish Encyclopedia) y Joseph Schets (Catholic Encyclopedia), los compiladores reunieron extractos de los anales oficiales de palacio, tradiciones del Templo y leyendas populares sobre los ciclos proféticos de Elías y Eliseo bajo un marco teológico unificado —la Historia Deuteronomista— que juzga a cada monarca según su fidelidad exclusiva al único Templo de Jerusalén."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] La oración de Salomón al dedicar el Templo (cap. 8) afirma que ni «el cielo ni lo más alto de los cielos» pueden contener a Dios, convirtiendo el santuario en lugar de escucha incluso para el extranjero y el cautivo lejano. Tras la división política, el eje pasa al conflicto entre el Dios vivo de Israel y Baal en el monte Carmelo (18:21) y al descubrimiento del Señor en «el sonido de un murmullo suave y delicado» en el Horeb (19:12), no en el huracán ni en el fuego.\n\n[Tradición] La viuda de Sarepta, el Carmelo y la viña de Nabot resuenan en Lucas 4 y en la predicación profética."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] En 1 Reyes (3 Reinos), el Texto Masorético y la Septuaginta divergen profundamente en la sección de Salomón y en el orden de los capítulos 20–22: la LXX agrega pasajes largos («misceláneas» en 2:35 y 46), retrasa el relato de Nabot antes de las guerras arameas e invierte episodios de Jeroboam, atestiguando recensiones hebreas distintas antes de la estandarización.\n\n[Texto] En esta web está disponible íntegro en la NTV (22 capítulos, 816 vv.); el Codex Sinaiticus no conserva este libro."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] La figura de Elías —conservador fiel del monoteísmo en el Horeb, confrontador de la injusticia regia en Nabot (cap. 21) y defensor del pobre en Sarepta— devino en tipo profético por excelencia para el judaísmo (esperado precursor según Mal 4:5 y la silla de Elías en la circuncisión) y para el Nuevo Testamento, que presenta a Juan el Bautista «con el espíritu y el poder de Elías» (Lc 1:17) y muestra a Elías con Moisés en la Transfiguración (Mt 17).\n\nLa petición de Salomón por «un corazón entendido» (3:9) inspiró la literatura sapiencial."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Seguir el juicio recurrente sobre cada monarca: los reyes de Israel se evalúan por «el pecado de Jeroboam» (altares cismáticos) y los de Judá por fidelidad como David.\n2. Leer 1 R 8 (oración del Templo) junto al contraste de 1 R 11 (extranjerización y desgarro del reino).\n3. Notar en los caps. 17–21 cómo el profeta Elías desplaza al rey como verdadero representante de la palabra divina.\n4. Tener presente que 1 y 2 Reyes formaron originalmente un solo libro continuo."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Se redactó el libro de Reyes en dos ediciones (preexílica bajo Josías y definitiva en el exilio) o de una vez tras 560 a. C.?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "La escuela de Frank Moore Cross defiende una doble redacción: una primera optimista en tiempo de Josías (c. 622 a. C.) actualizada brevemente en el exilio tras la caída de Jerusalén."
+        },
+        {
+          "label": "Estudio",
+          "body": "La línea de Martin Noth sostiene una redacción unitaria exílica (después de 2 R 25:27, c. 560 a. C.) para explicar al pueblo deportado por qué sobrevino el juicio."
+        }
+      ]
+    },
+    {
+      "question": "¿Cómo explicar las discrepancias cronológicas entre los años de reinado de Israel y Judá?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Estudios detallados (Thiele) demostraron que muchas aparentes contradicciones se resuelven considerando distintos calendarios (nisán frente a tishrí), años de ascenso frente a no ascenso y corregencias."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros críticos señalan además alteraciones editoriales y armonizaciones secundarias entre el texto masorético y los testigos griegos (LXX)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "je-kings",
+    "ce-kings-3-4",
+    "tyndale-ntv-2009",
+    "ce-canon-ot"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}

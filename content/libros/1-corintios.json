@@ -1,0 +1,101 @@
+{
+  "id": "1-corintios",
+  "title": "1 Corintios",
+  "abbr": "1 Co",
+  "order": 46,
+  "testament": "NT",
+  "summary": "Carta pastoral de Pablo en dieciséis capítulos enviada desde Éfeso hacia el año 54–55 d. C. a la turbulenta iglesia de Corinto: responde punto por punto a informes de divisiones partidarias, litigios e inmoralidad, matrimonio, carne sacrificada a ídolos, orden en la Cena del Señor, dones del Espíritu coronados en el himno al amor (cap. 13) y la defensa histórica de la resurrección corporal (cap. 15). Canónica; completa en NTV y Codex.",
+  "genre": [
+    "epístola pastoral responsiva",
+    "teología de la cruz y eclesialidad",
+    "himno parenético (cap. 13) y credo temprano (cap. 15)"
+  ],
+  "language": "Griego koiné directo, irónico, emotivo y sumamente rico en vocabulario urbano grecorromano",
+  "date": {
+    "narrative": "Estancia prolongada de Pablo en Éfeso durante su tercer viaje misionero (c. 53–55 d. C.)",
+    "composition": "Primavera de c. 54 o 55 d. C. desde Éfeso (16:8)",
+    "certainty": "segura",
+    "note": "Confirmada por la fecha délfica del proconsulado de Galión (51–52 d. C.) tras la primera estancia paulina de dieciocho meses en Corinto."
+  },
+  "canon": {
+    "judio": "No incluido",
+    "catolico": "Nuevo Testamento",
+    "ortodoxo": "Nuevo Testamento",
+    "protestante": "Nuevo Testamento"
+  },
+  "notice": null,
+  "sections": [
+    {
+      "id": "genero",
+      "title": "Género y forma",
+      "body": "[Texto] 1 Corintios nos abre como ninguna otra carta el laboratorio cotidiano de una congregación cristiana urbana del siglo I en sus tensiones reales. Sus dieciséis capítulos responden sucesivamente a dos vías de información: noticias orales de los de Cloe sobre facciones rivales en torno a Pablo, Apolos y Cefas junto a graves desórdenes sexuales y judiciales (caps. 1–6), y preguntas escritas enviadas por la iglesia («En cuanto a lo que me escribieron…» en 7:1; 8:1; 12:1; 16:1) sobre celibato y matrimonio, comida sacrificial pagana, asamblea litúrgica y Cena del Señor, dones espirituales con el himno al ágape (cap. 13) y la resurrección de los muertos (cap. 15).\n\n[Estudio] Incluye el testimonio escrito cristiano más antiguo de la Cena (11:23–26) y del credo pascual (15:3–8)."
+    },
+    {
+      "id": "contexto",
+      "title": "Contexto histórico",
+      "body": "[Estudio] Refundada como colonia romana por Julio César en el 44 a. C., Corinto era un puerto cosmopolita próspero, famoso por sus cultos mistéricos, banquetes en templos gremiales y culto a la retórica sofística competitiva. Esa cultura de estatus y rivalidad invadió la joven iglesia: unos patronos adinerados humillaban en la Cena común a los hermanos pobres que llegaban tarde del trabajo (11:17–22), otros presumían de sabiduría espiritual («¡Ya son reyes!»), y corrientes influidas por el desprecio platónico al cuerpo negaban la resurrección corporal futura."
+    },
+    {
+      "id": "composicion",
+      "title": "Composición y autoría",
+      "body": "[Texto] La carta se identifica abiertamente desde el saludo como obra de Pablo junto a Sóstenes (1:1), dictada en Éfeso con la colaboración epistolar final autógrafa de Pablo («La salutación de mi propia mano», 16:21), aludiendo además a una carta previa perdida (5:9).\n\n[Estudio] Cornelius Aherne (Catholic Encyclopedia) destaca su autenticidad paulina indiscutida a lo largo de la historia crítica, ya citada expresamente por Clemente de Roma hacia 96 d. C. (1 Clem 47:1: «Tomad en vuestras manos la epístola del bienaventurado apóstol Pablo»)."
+    },
+    {
+      "id": "teologia",
+      "title": "Mensaje y teología",
+      "body": "[Texto] Contra toda arrogancia partidista o espiritualista, Pablo planta la «locura de la cruz» como única sabiduría y poder de Dios (1:18–25) y enseña que todos los creyentes son «miembros del cuerpo de Cristo», donde los órganos aparentemente más débiles son indispensables (cap. 12). Incluso el don más deslumbrante de lenguas o profecía sin amor «nada es» (cap. 13). Al cierre, ancla toda la esperanza cristiana en un hecho histórico corpóreo: «Si Cristo no resucitó, vana es nuestra fe», anunciando la transformación en cuerpo espiritual incorruptible (cap. 15).\n\n[Tradición] Los pasajes de 1 Co 11, 13 y 15 son columnas litúrgicas permanentes de toda la cristiandad."
+    },
+    {
+      "id": "texto",
+      "title": "Texto y transmisión",
+      "body": "[Estudio] Presente ya en el papiro P46 (c. 200 d. C.) y en todos los grandes unciales, posee un debate textual muy conocido en 14:34–35 (silencio de las mujeres en las asambleas), pasaje que los manuscritos occidentales desplazan al final del capítulo tras 14:40 mientras el Codex Sinaiticus (núm. 38), el Vaticano y P46 lo mantienen en 14:34–35; destacan también variantes tempranas en 13:3 («entregar mi cuerpo para ser quemado / para gloriarme», lectura kauxesomai en el Sinaiticus y P46) y 15:51.\n\n[Texto] Tanto la NTV (16 caps., 437 vv.) como el Codex Sinaiticus (16 caps., 437 vv.) están completos."
+    },
+    {
+      "id": "recepcion",
+      "title": "Recepción e historia de la lectura",
+      "body": "[Tradición] Es el primer escrito del Nuevo Testamento citado por su nombre fuera del canon en la Carta de Clemente de Roma a los propios corintios (c. 96 d. C.) y por Ignacio y Policarpo pocos años después. Juan Crisóstomo dedicó cuarenta y cuatro homilías brillantes a 1 Corintios; el capítulo 13 («El amor es paciente, es bondadoso…») trascendió al patrimonio literario y moral universal, y 1 Corintios 15 constituye el texto funeral cristiano clásico desde la Antigüedad."
+    },
+    {
+      "id": "lectura",
+      "title": "Claves de lectura",
+      "body": "1. Identificar la fórmula «En cuanto a…» (7:1, 25; 8:1; 12:1; 16:1) para ver cómo Pablo contesta una a una las consultas de Corinto.\n2. Leer el capítulo 13 dentro de su contexto real: en medio de caps. 12 y 14 sobre dones que dividían a la iglesia, el amor no es romanticismo sino criterio comunitario.\n3. Notar cómo en 15:3–5 Pablo declara explícitamente haber «recibido» ese resumen pascual pocos años tras la resurrección.\n4. Comparar la variante de 1 Co 13:3 entre el griego del Codex Sinaiticus («gloriarme») y traducciones castellanas («para ser quemado»)."
+    }
+  ],
+  "debates": [
+    {
+      "question": "¿Cómo conciliar la norma de 1 Corintios 14:34–35 («que las mujeres guarden silencio») con 11:5 donde las mujeres oran y profetizan en público?",
+      "positions": [
+        {
+          "label": "Estudio",
+          "body": "Parte de la crítica textual (Fee, Payne) considera 14:34–35 una glosa marginal muy temprana insertada desde el círculo de 1 Timoteo 2, basándose en su desplazamiento errático tras 14:40 en los manuscritos occidentales."
+        },
+        {
+          "label": "Estudio",
+          "body": "Otros comentaristas defienden su presencia en todos los testigos (incluido P46 y el Sinaiticus) explicando que Pablo prohíbe un tipo concreto de interrogatorio ruidoso o juicio crítico sobre profecías en 14:29–35, no el orar ni profetizar ya aprobados en 11:5."
+        }
+      ]
+    },
+    {
+      "question": "¿Alcanza 1 Corintios 15 un cuerpo futuro enteramente espiritual o una transformación física del cuerpo mortal?",
+      "positions": [
+        {
+          "label": "Tradición",
+          "body": "La tradición católica y ortodoxa (y reformada clásica) enfatiza la continuidad somática de la resurrección carnal glorificada siguiendo el modelo del sepulcro vacío de Jesús («este corruptible se vista de incorrupción», 15:53)."
+        },
+        {
+          "label": "Estudio",
+          "body": "Exegetas subrayan que soma pneumatikon (15:44) no significa «cuerpo hecho de espíritu inmaterial», sino un cuerpo animado y transformado soberanamente por el Espíritu de Dios, en contraste con la mera carne perecedera («carne y sangre», 15:50)."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ce-corinthians",
+    "morphgnt-sblgnt",
+    "tyndale-ntv-2009",
+    "csp-codex-sinaiticus",
+    "ccel-early-fathers"
+  ],
+  "status": "borrador",
+  "updated": "2026-11-21"
+}
