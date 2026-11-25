@@ -147,7 +147,7 @@ check('«arrianismo» encuentra la herejía', has(q('arrianismo'), 'herejia', 'a
 check('«tobit» encuentra la ficha del libro', has(q('tobit'), 'libro', 'tobit'), top(q('tobit')));
 check('«shincheonji» encuentra la página de 100 preguntas', has(q('shincheonji'), 'apologetica', 'shincheonji'), top(q('shincheonji')));
 if (apoloById.has('adventismo')) {
-  check('«adventismo» encuentra el fascículo de 50 preguntas', has(q('adventismo'), 'apologetica', 'adventismo'), top(q('adventismo')));
+  check('«adventismo» encuentra el fascículo de 100 preguntas', has(q('adventismo'), 'apologetica', 'adventismo'), top(q('adventismo')));
 }
 if (apoloById.has('dispensacionalismo')) {
   check('«dispensacionalismo» encuentra el fascículo de 50 preguntas', has(q('dispensacionalismo'), 'apologetica', 'dispensacionalismo'), top(q('dispensacionalismo')));

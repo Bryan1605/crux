@@ -40,6 +40,8 @@ const PAGINAS = [
   '/biblia',
   '/biblia/ntv?libro=juan&cap=3',
   '/biblia/ntv?libro=genesis&cap=1',
+  '/biblia/hebreo?libro=genesis&cap=1',
+  '/biblia/hebreo?libro=daniel&cap=2',
   '/exegesis?libro=juan&cap=3&vv=16-21',
   '/exegesis?libro=genesis&cap=1',
   '/exegesis?libro=tobit&cap=1',

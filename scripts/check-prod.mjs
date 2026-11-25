@@ -42,6 +42,7 @@ const cases = [
   { url: `${BASE}/biblia/ntv?libro=juan&cap=3`, label: '/biblia/ntv (lector NTV)', selector: '.ntv-grid, .ntv-page, main' },
   { url: `${BASE}/biblia/ntv?libro=genesis&cap=1`, label: '/biblia/ntv (AT, Génesis 1)', selector: '.ntv-grid, main' },
   { url: `${BASE}/biblia/ntv?libro=tobit&cap=1`, label: '/biblia/ntv (Tobit solo Codex)', selector: '.empty-state, main' },
+  { url: `${BASE}/biblia/hebreo?libro=genesis&cap=1`, label: '/biblia/hebreo (lector hebreo RTL)', selector: '.heb-grid, main' },
   { url: `${BASE}/exegesis?libro=juan&cap=3&vv=16-21`, label: '/exegesis (lectura paralela)', selector: '.exg-grid, main' },
   { url: `${BASE}/exegesis?libro=genesis&cap=1`, label: '/exegesis (AT solo NTV)', selector: '.exg-grid, main' },
   { url: `${BASE}/exegesis?libro=tobit&cap=1`, label: '/exegesis (Tobit solo Codex)', selector: '.exg-grid, main' },

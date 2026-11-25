@@ -12,6 +12,9 @@ src/assets/texts/.cache-codex/
 # Cache de las fuentes del diccionario (se regenera con scripts/fetch-lexico.mjs)
 src/assets/texts/.cache-lexico/
 
+# Cache de las fuentes hebreas OSHB/WLC y Ezra SIL (se regenera con scripts/fetch-hebreo.mjs)
+src/assets/texts/.cache-hebreo/
+
 # Entorno
 .env
 .env.*

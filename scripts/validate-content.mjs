@@ -541,6 +541,13 @@ export function validateApologeticaDoctrina(obj, slug = 'shincheonji', ctx = {})
   const label = `apologetica/${slug}-doctrina`;
   const partes = required(obj, 'partes', 'array', label);
   required(obj, 'libro', 'object', label);
+  if (obj.obras !== undefined) {
+    const obras = required(obj, 'obras', 'array', label);
+    if (!obras.length) throw new Error(`${label}: "obras" vacío`);
+    for (const o of obras) {
+      for (const k of ['autor', 'titulo', 'edicion']) required(o, k, 'string', `${label}.obras`);
+    }
+  }
   const privado = /\d{3}-\d{3,4}-\d{4}|@|[가-힯]/;
   if (!partes.length) throw new Error(`${label}: sin partes`);
   for (const p of partes) {
@@ -552,6 +559,9 @@ export function validateApologeticaDoctrina(obj, slug = 'shincheonji', ctx = {})
       const es = required(c, 'es', 'string', at).trim();
       if (!es) throw new Error(`${at}: cita con "es" vacío`);
       if (privado.test(es)) throw new Error(`${at}: la cita lleva datos de la marca de agua`);
+      if (c.obra !== undefined && !required(c, 'obra', 'string', at).trim()) {
+        throw new Error(`${at}: cita con "obra" vacío`);
+      }
       const needsEn = Boolean(ctx.bilingual) || c.en !== undefined;
       if (needsEn) {
         const en = required(c, 'en', 'string', at).trim();
@@ -566,11 +576,29 @@ export function validateApologeticaDoctrina(obj, slug = 'shincheonji', ctx = {})
         throw new Error(`${at}: "paginas" debe tener números de página`);
       }
     }
+    if (p.patristica !== undefined) {
+      const pat = required(p, 'patristica', 'object', at);
+      for (const pc of optional(pat, 'citas', 'array', `${at}.patristica`, [])) {
+        for (const k of ['autor', 'obra', 'fecha', 'cita']) {
+          if (!required(pc, k, 'string', `${at}.patristica`).trim()) {
+            throw new Error(`${at}.patristica: "${k}" vacío`);
+          }
+        }
+      }
+      for (const ph of optional(pat, 'historia', 'array', `${at}.patristica`, [])) {
+        for (const k of ['titulo', 'texto']) {
+          if (!required(ph, k, 'string', `${at}.patristica`).trim()) {
+            throw new Error(`${at}.patristica.historia: "${k}" vacío`);
+          }
+        }
+      }
+    }
     required(p, 'confiesa', 'object', at);
     required(p, 'biblia', 'object', at);
   }
   for (const q of optional(obj, 'preguntas', 'array', label, [])) {
     if (!Number.isInteger(q.pagina) || !isString(q.texto) || !isString(q.ref)) throw new Error(`${label}: pregunta mal formada`);
+    if (q.obra !== undefined && (!isString(q.obra) || !q.obra.trim())) throw new Error(`${label}: pregunta con "obra" inválido`);
   }
   return true;
 }

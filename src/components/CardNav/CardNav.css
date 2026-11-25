@@ -184,55 +184,8 @@
 }
 
 @media (max-width: 768px) {
+  /* En móvil (<= 768 px) toma el relevo <MobileNav /> (barra inferior + drawer). */
   .card-nav-container {
-    width: 90%;
-    top: calc(var(--marquee-h, 0px) + 1.2em);
-  }
-
-  .card-nav-top {
-    padding: 0.5rem 1rem;
-    justify-content: space-between;
-  }
-
-  .hamburger-menu {
-    order: 2;
-  }
-
-  .logo-container {
-    position: static;
-    transform: none;
-    order: 1;
-  }
-
-  .card-nav-cta-button {
     display: none;
-  }
-
-  .card-nav-content {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    padding: 0.5rem;
-    bottom: 0;
-    justify-content: flex-start;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
-
-  .nav-card {
-    height: auto;
-    min-height: 60px;
-    flex: 1 1 auto;
-    max-height: none;
-  }
-
-  .nav-card-label {
-    font-size: 18px;
-  }
-
-  .nav-card-link {
-    font-size: 15px;
-    min-height: 40px;
-    padding: 0.25rem 0;
   }
 }

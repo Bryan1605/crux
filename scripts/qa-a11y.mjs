@@ -53,12 +53,21 @@ const ROUTES = [
   { label: 'biblia NTV (lector)', path: '/biblia/ntv?libro=juan&cap=3' },
   { label: 'biblia NTV (AT)', path: '/biblia/ntv?libro=genesis&cap=1' },
   { label: 'biblia NTV (narración)', path: '/biblia/ntv?libro=judas&cap=1' },
+  { label: 'biblia hebrea (Génesis 1)', path: '/biblia/hebreo?libro=genesis&cap=1' },
+  { label: 'biblia hebrea (Génesis 31, arameo)', path: '/biblia/hebreo?libro=genesis&cap=31&v=47' },
+  { label: 'biblia hebrea (Daniel 2, arameo)', path: '/biblia/hebreo?libro=daniel&cap=2&v=4' },
+  { label: 'biblia hebrea (Rut 3, ketiv/qere)', path: '/biblia/hebreo?libro=rut&cap=3' },
   { label: 'exégesis (comparada)', path: '/exegesis?libro=juan&cap=3&vv=16-21' },
   { label: 'exégesis (AT, NTV)', path: '/exegesis?libro=genesis&cap=1' },
+  { label: 'exégesis (AT, Hebreo × NTV)', path: '/exegesis?libro=genesis&cap=1&hebreo=1' },
+  { label: 'exégesis (AT, Hebreo × Codex × NTV)', path: '/exegesis?libro=genesis&cap=21&hebreo=1' },
+  { label: 'exégesis (AT, Hebreo sin paralelo forzado)', path: '/exegesis?libro=genesis&cap=31&hebreo=1' },
   { label: 'exégesis (Codex × traducción de trabajo)', path: '/exegesis?libro=tobit&cap=1' },
   { label: 'exégesis (solo traducción de trabajo)', path: '/exegesis?libro=tobit&cap=1&modo=trad' },
   { label: 'exégesis (Judit Codex × Trad)', path: '/exegesis?libro=judit&cap=1' },
-  { label: 'exégesis (solo Codex)', path: '/exegesis?libro=sabiduria&cap=1' },
+  { label: 'exégesis (Sabiduría Codex × Trad)', path: '/exegesis?libro=sabiduria&cap=1' },
+  { label: 'exégesis (Sirácida Codex × Trad)', path: '/exegesis?libro=siracida&cap=1' },
+  { label: 'exégesis (solo Codex · 2 Esdras)', path: '/exegesis?libro=2-esdras&cap=9' },
   { label: 'exégesis (Salmo 151)', path: '/exegesis?libro=salmos&cap=151' },
   { label: 'exégesis (diccionario)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=G3056' },
   { label: 'exégesis (diccionario, lista)', path: '/exegesis?libro=juan&cap=3&vv=16-21&dic=' },
@@ -76,6 +85,8 @@ const ROUTES = [
   { label: 'apologética (¿Qué cree Shincheonji?, móvil)', path: '/apologetica/shincheonji?vista=doctrina', mobile: true },
   { label: 'apologética (Adventismo)', path: '/apologetica/adventismo' },
   { label: 'apologética (Adventismo, móvil)', path: '/apologetica/adventismo', mobile: true },
+  { label: 'apologética (¿Qué cree el Adventismo?)', path: '/apologetica/adventismo?vista=doctrina' },
+  { label: 'apologética (¿Qué cree el Adventismo?, móvil)', path: '/apologetica/adventismo?vista=doctrina', mobile: true },
   { label: 'apologética (Dispensacionalismo)', path: '/apologetica/dispensacionalismo' },
   { label: 'apologética (Dispensacionalismo, móvil)', path: '/apologetica/dispensacionalismo', mobile: true },
   { label: 'apologética (¿Qué enseña el dispensacionalismo?)', path: '/apologetica/dispensacionalismo?vista=doctrina' },
@@ -93,7 +104,9 @@ const STATES = [
   { label: 'exégesis (móvil, Codex × traducción)', path: '/exegesis?libro=tobit&cap=1', mobile: true },
   { label: 'exégesis (ficha de palabra)', path: '/exegesis?libro=juan&cap=3&vv=16-21&v=16', action: 'word' },
   { label: 'biblia NTV (móvil)', path: '/biblia/ntv?libro=juan&cap=3', mobile: true },
-  { label: 'biblia NTV (móvil, AT)', path: '/biblia/ntv?libro=genesis&cap=1', mobile: true }
+  { label: 'biblia NTV (móvil, AT)', path: '/biblia/ntv?libro=genesis&cap=1', mobile: true },
+  { label: 'biblia hebrea (ficha ketiv/qere)', path: '/biblia/hebreo?libro=rut&cap=3', action: 'heb-kq' },
+  { label: 'estudio (barra móvil + índice)', path: '/estudio/01-fundamentos--01-perdon', mobile: true, action: 'mnav-toc' }
 ];
 
 // Objetivos táctiles: la WCAG 2.2 (AA) exige 24 × 24 como mínimo y 44 × 44 es el
@@ -109,7 +122,7 @@ const TAP_BLOCK = Number(process.env.CRUX_TAP_BLOCK || 24);
  * del texto que los rodea, así que caen en la excepción «Inline» de la norma y
  * no se miden. El resto de controles pequeños sí se corrigen.
  */
-const TAP_INLINE_OK = ['.ntv-fn', '.exg-fn', '.exg-sigil', '.exg-note__ref--fn'];
+const TAP_INLINE_OK = ['.ntv-fn', '.exg-fn', '.exg-sigil', '.exg-note__ref--fn', '.heb-kq'];
 
 /*
  * Controles con «control equivalente» en la misma página (excepción de la WCAG
@@ -225,9 +238,20 @@ try {
     await page.goto(`${BASE}${state.path}`, { waitUntil: 'domcontentloaded' });
     await wait(2400);
     if (state.action === 'nav-desktop') await page.evaluate(() => document.querySelector('.hamburger-menu')?.click());
-    if (state.action === 'nav-mobile') await page.evaluate(() => document.querySelector('.hamburger-menu')?.click());
+    if (state.action === 'nav-mobile') {
+      await page.evaluate(() => document.querySelector('.mnav-bottom__btn--menu')?.click());
+      await page.waitForSelector('.mnav-drawer__panel', { timeout: 4000 }).catch(() => {});
+    }
+    if (state.action === 'mnav-toc') {
+      await page.evaluate(() => document.querySelector('.mnav-top__btn')?.click());
+      await page.waitForSelector('#mnav-toc-panel', { timeout: 4000 }).catch(() => {});
+    }
     if (state.action === 'word') {
       await page.evaluate(() => document.querySelector('.exg-row[data-v="16"] .exg-word')?.click());
+      await page.waitForSelector('.vpop', { timeout: 4000 }).catch(() => {});
+    }
+    if (state.action === 'heb-kq') {
+      await page.evaluate(() => document.querySelector('.heb-kq')?.click());
       await page.waitForSelector('.vpop', { timeout: 4000 }).catch(() => {});
     }
     await wait(1000);

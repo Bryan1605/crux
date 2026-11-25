@@ -1,0 +1,843 @@
+{
+  "version": 1,
+  "libro": {
+    "autor": "Asociación Ministerial de la Asociación General (IASD)",
+    "titulo": "Creencias de los Adventistas del Séptimo Día",
+    "edicion": "Buenos Aires: ACES / Asociación Ministerial, 2007"
+  },
+  "obras": [
+    {
+      "autor": "Asociación Ministerial de la Asociación General (IASD)",
+      "titulo": "Creencias de los Adventistas del Séptimo Día",
+      "edicion": "Buenos Aires: ACES / Asociación Ministerial, 2007"
+    },
+    {
+      "autor": "Asociación General de los Adventistas del Séptimo Día",
+      "titulo": "Manual de la Iglesia",
+      "edicion": "10.ª ed., 2025"
+    },
+    {
+      "autor": "Elena G. de White",
+      "titulo": "El conflicto de los siglos",
+      "edicion": "Edición estándar en español (ACES / Pacific Press)"
+    },
+    {
+      "autor": "Asociación General de los Adventistas del Séptimo Día",
+      "titulo": "Los adventistas del séptimo día responden a preguntas sobre doctrina",
+      "edicion": "1957; edición anotada por George R. Knight, 2008"
+    },
+    {
+      "autor": "LeRoy Edwin Froom",
+      "titulo": "Movement of Destiny",
+      "edicion": "Washington, D.C.: Review and Herald, 1971"
+    }
+  ],
+  "etiquetas": {
+    "introTitulo": "Lo que enseña el adventismo, con sus libros en la mano",
+    "citas": "Lo que enseñan las fuentes adventistas",
+    "preguntasId": "preguntas-libro",
+    "preguntasNav": "Preguntas con sus libros",
+    "preguntasTitulo": "Preguntas con sus libros en la mano",
+    "preguntasIntro": "Cada pregunta indica la obra, la página impresa y el pasaje de la Biblia, para leerlos juntos."
+  },
+  "equidad": "Valoramos la seriedad moral, el aprecio por las Escrituras y la obra médica y educativa de muchos creyentes adventistas. Además, el adventismo mayoritario contemporáneo confiesa la Trinidad y la salvación por gracia mediante Cristo (a diferencia del arrianismo de varios de sus pioneros). Aquí no juzgamos corazones ni generalizamos opiniones marginales: examinamos únicamente sus doctrinas distintivas y oficiales tal como constan en sus publicaciones institucionales, contrastándolas con el texto bíblico completo, la historia documental de los Padres de la Iglesia y la fe confesada históricamente por el cristianismo.",
+  "partes": [
+    {
+      "id": "I",
+      "titulo": "El sábado, el reposo en Cristo y el Día del Señor",
+      "citas": [
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [280],
+          "es": "El bondadoso Creador, después de los seis días de la creación, descansó el séptimo día, e instituyó el sábado para todos los hombres como un monumento conmemorativo de la Creación. El cuarto mandamiento de la inmutable ley de Dios requiere la observancia del séptimo día, sábado, como día de reposo, adoración y ministerio en armonía con las enseñanzas y la práctica de Jesús, el Señor del sábado. … El sábado es la señal perpetua del pacto eterno entre él y su pueblo.",
+          "nota": "Creencia Fundamental n.º 20 («El sábado»)."
+        },
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [293, 294],
+          "es": "ningún escritor de los siglos III y IV jamás citó un solo versículo bíblico como autoridad para justificar la observancia del domingo en lugar del sábado. … El emperador Constantino promulgó la primera ley dominical civil el 7 de marzo del año 321 d.C. … El Concilio de Laodicea (alrededor del año 364 d.C.), que no fue un concilio universal sino católico romano, promulgó la primera ley dominical eclesiástica.",
+          "nota": "Relato histórico oficial en el capítulo de la Creencia n.º 20, seguido en pp. 294–295 por citas de Petrus de Ancharano, John Eck, Gaspare de Fosso en Trento y el Convert's Catechism (1977)."
+        },
+        {
+          "obra": "Manual de la Iglesia (2025)",
+          "paginas": [59],
+          "es": "¿Aceptas que los Diez Mandamientos son una expresión del carácter de Dios, y que revelan su voluntad? Si es así, ¿te propones, por el poder de la presencia de Cristo en tu corazón, guardar esta ley, incluyendo el cuarto mandamiento, que requiere que observemos el séptimo día de la semana como el sábado del Señor y como monumento conmemorativo de la creación?",
+          "nota": "Voto bautismal n.º 6 exigido a todo candidato antes del bautismo."
+        }
+      ],
+      "significa": {
+        "texto": "El adventismo convierte una señal pactual dada exclusivamente a Israel en ley moral perpetua para todas las naciones, descalifica la adoración dominical de los apóstoles como apostasía constantiniana y católica, y afirma que Cristo observó el sábado para imponérselo a la iglesia.",
+        "puntos": [
+          "Génesis 2:2-3 describe el descanso terminado de Dios tras crear, sin ordenanza dirigida a Adán ni fórmula de cierre «tarde y mañana» (a diferencia de los seis días previos). Desde Adán hasta Moisés ningún patriarca recibió mandato sabático.",
+          "Éxodo 31:13-17 y Deuteronomio 5:2-3, 15 declaran explícitamente que el sábado fue establecido «para los israelitas» como «señal del pacto» tras la liberación de Egipto, no como pacto adámico universal; el adjetivo olam («perpetua») es el mismo aplicado al Día anual de Expiación (Lv 16:34) y al sacerdocio aarónico (Éx 29:9).",
+          "Colosenses 2:16-17 nombra explícitamente el plural sabbata —la palabra habitual en griego koiné para el sábado semanal— entre las «sombras» cumplidas en Cristo; Romanos 14:5-6 deja la distinción de días a la conciencia, Gálatas 4:9-11 reprende la observancia obligatoria de días y el Concilio de Jerusalén (Hch 15:28-29) no impuso el sábado a los gentiles.",
+          "La hipótesis judaizante del Motza'ei Shabbat («salida del sábado» tras el ocaso) no explica ni Hechos 20:7 ni 1 Corintios 16:2: Lucas emplea el cómputo grecorromano de día civil (Hch 20:7-11: la cena ocurre de noche y Pablo parte «al día siguiente» por la mañana), el verbo klan ton arton designa la asamblea eucarística apostólica (Hch 2:42, 46), la colecta de 1 Corintios 16:2 se dirige a gentiles que no guardaban calendario rabínico y el Talmud (Shabbat 119b) es siglos posterior.",
+          "Apocalipsis 1:10 usa la expresión técnica kyriakē hēmera («el día del Señor») —paralela al adjetivo kyriakos de la Cena del Señor (1 Co 11:20)— para el primer día de la semana, día de la resurrección (Jn 20:1, 19, 26) y de Pentecostés (Hch 2:1-4), mientras Hebreos 4:9-11 muestra que el sabbatismos definitivo del pueblo de Dios es entrar por la fe en el reposo espiritual de Cristo."
+        ]
+      },
+      "patristica": {
+        "titulo": "Lo que testifican los Padres de la Iglesia y la historia",
+        "intro": "Lejos de ser un invento del emperador Constantino en el siglo IV, la reunión cristiana en el Día del Señor (domingo) —y la distinción consciente frente al sábado judío como sombra ya cumplida en Cristo— está documentada desde la primera generación posapostólica:",
+        "citas": [
+          {
+            "autor": "Didaché 14,1",
+            "obra": "Enseñanza de los doce apóstoles",
+            "fecha": "c. 70–100 d.C.",
+            "cita": "Reuníos cada día del Señor para partir el pan y dar gracias, confesando vuestros pecados, para que vuestro sacrificio sea puro.",
+            "nota": "Usa la misma expresión griega de Ap 1:10 (kyriakē) más de dos siglos antes de Constantino.",
+            "enBiblia": true
+          },
+          {
+            "autor": "Ignacio de Antioquía",
+            "obra": "Carta a los Magnesios 9–10",
+            "fecha": "c. 107 d.C.",
+            "cita": "Si, pues, quienes fueron educados en el antiguo orden de las cosas han llegado a la posesión de una nueva esperanza, y ya no observan el sábado, sino que viven en la observancia del Día del Señor, en el que también nuestra vida ha brotado de nuevo por Él y por su muerte… Es absurdo profesar a Jesucristo y judaizar.",
+            "nota": "Obispo martirizado bajo Trajano; opone explícitamente sabbatizein (sabatizar) a vivir según el Día del Señor.",
+            "enBiblia": true
+          },
+          {
+            "autor": "Epístola de Bernabé 15",
+            "obra": "Bernabé 15,8",
+            "fecha": "c. 70–135 d.C.",
+            "cita": "Además, les dice: “Vuestras lunas nuevas y vuestro sábado no los puedo soportar” (cf. Is 1,13)… Por eso también celebramos con alegría el día octavo, día también en que Jesús resucitó de entre los muertos.",
+            "nota": "Llama «día octavo» al primer día después del sábado por la resurrección de Cristo.",
+            "enBiblia": true
+          },
+          {
+            "autor": "Epístola a Diogneto 4",
+            "obra": "A Diogneto 4,1–5",
+            "fecha": "c. 130–200 d.C.",
+            "cita": "En cuanto a su escrupulosidad respecto de los alimentos, a su superstición acerca de los sábados… Y en cuanto a observar meses y días (cf. Ga 4,10)… ¿quién lo tendría por parte del culto divino, y no más bien por una manifestación de necedad?",
+            "nota": "Apología temprana del cristianismo ante lectores grecorromanos.",
+            "enBiblia": true
+          },
+          {
+            "autor": "Justino Mártir",
+            "obra": "Primera Apología 67",
+            "fecha": "c. 155 d.C.",
+            "cita": "En el día llamado domingo, todos los que viven en las ciudades o en el campo se reúnen en un mismo lugar, y se leen las memorias de los apóstoles o los escritos de los profetas. Luego el que preside instruye y exhorta a la imitación de estas cosas buenas. Entonces oramos, y se traen pan y vino y agua, y el que preside ofrece oraciones y acciones de gracias, y el pueblo asiente diciendo Amén.",
+            "nota": "Escrita en Roma 166 años antes del edicto de Constantino; describe la liturgia semanal completa en el día de la resurrección.",
+            "enBiblia": true
+          },
+          {
+            "autor": "Tertuliano de Cartago",
+            "obra": "Contra los Judíos 4 / Sobre la Idolatría 14 / Sobre la Oración 23",
+            "fecha": "c. 197–200 d.C.",
+            "cita": "se demuestra consumada en sus tiempos propios, también la observancia del sábado se demuestra temporal. … En fin, que nos enseñen… que Adán observó el sábado; o que Abel… o que Enoc… o que Noé… o que Abraham… o que Melquisedec en su sacerdocio recibió la ley del sábado. … Nosotros, a quienes los sábados son extraños… tú tienes un día festivo cada octavo día. … solo en el día de la Resurrección del Señor debemos guardarnos no solo de arrodillarnos, sino de toda postura y oficio de solicitud; difiriendo incluso nuestros negocios",
+            "nota": "Descarta el argumento del «sábado edénico» ya en el año 200 y llama «día festivo cada octavo día» y «día de la Resurrección» al culto cristiano.",
+            "enBiblia": true
+          },
+          {
+            "autor": "Cipriano de Cartago (y 66 obispos)",
+            "obra": "Carta 58 (Ep. 64), §4",
+            "fecha": "c. 253 d.C.",
+            "cita": "Porque dado que el octavo día, esto es, el primer día después del sábado, había de ser aquel en que el Señor resucitara, nos vivificara y nos otorgara la circuncisión del espíritu, el octavo día —que es el día siguiente al sábado y el día del Señor— precedió como figura; figura que cesó en cuanto llegó la verdad y nos fue conferida la circuncisión espiritual.",
+            "nota": "Concilio norteafricano de 66 obispos, casi sesenta años antes del edicto de Constantino.",
+            "enBiblia": true
+          }
+        ],
+        "historiaTitulo": "Precisiones históricas sobre Constantino, Laodicea y las citas católicas",
+        "historia": [
+          {
+            "titulo": "Plinio el Joven al emperador Trajano",
+            "fecha": "c. 111–113 d.C.",
+            "texto": "En Epístola 10.96, un gobernador romano pagano en Bitinia informa que los cristianos acostumbran reunirse antes del amanecer en «un día fijo» (stato die) para cantar himnos a Cristo como a Dios, comprometerse moralmente y compartir comida común, más de dos siglos antes de Constantino."
+          },
+          {
+            "titulo": "El edicto civil de Constantino (Codex Justinianus 3.12.3)",
+            "fecha": "7 de marzo de 321 d.C.",
+            "texto": "No abolió el sábado ni decretó culto religioso ni tuvo relación con el papado: fue una ley laboral civil para magistrados, ciudadanos y talleres en las ciudades en el «venerable día del Sol» (permitiendo expresamente trabajos agrícolas), reconociendo cívicamente un día en que los cristianos ya se reunían desde el siglo I."
+          },
+          {
+            "titulo": "El Concilio regional de Laodicea (Cánones 16 y 29)",
+            "fecha": "c. 363–364 d.C.",
+            "texto": "Contrariamente a Creencias de los Adventistas del Séptimo Día (p. 294), Laodicea no fue un concilio «católico romano», sino un sínodo regional oriental de alrededor de treinta obispos en Frigia (Asia Menor). Su Canon 16 aún manda leer los Evangelios los sábados en esa región y su Canon 29 censura específicamente el judaizar con descanso sabático por encima del Día del Señor."
+          },
+          {
+            "titulo": "Citas católicas sacadas de contexto (Catholic Mirror, Trento, catechisms)",
+            "fecha": "ss. XVI–XIX",
+            "texto": "Cuando polémicas católicas como el Catholic Mirror (1893), Gaspare de Fosso en Trento (1562) o el canciller H. F. Thomas (1895) interpelan a los protestantes sobre el domingo, su argumento no era jactarse de «haber anulado un mandamiento bíblico frente a los apóstoles», sino sostener que los protestantes dependen de la tradición apostólica conservada por la Iglesia para identificar el domingo como Día del Señor."
+          }
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "La iglesia histórica desde la Didaché, Ignacio, Bernabé, Justino y Tertuliano confesó el primer día de la semana («Día del Señor» y «octavo día») como memorial semanal de la resurrección y la nueva creación en Cristo, reconociendo el sábado del séptimo día como señal pactual temporal de Israel."
+        ],
+        "reforma": [
+          "Confesión de Augsburgo (1530), art. XXVIII: la observancia del sábado ha cesado y fue abrogada bajo el Evangelio, de modo que quienes enseñan que es necesaria para la salvación confunden la sombra con Cristo.",
+          "Catecismo de Heidelberg (1563), P. 103 y Confesión de Westminster (1647), XXI.7: el principio moral de apartar tiempo para el culto pertenece a todos los pueblos, pero el séptimo día de la semana correspondía a los judíos hasta la resurrección de Cristo; desde entonces el descanso cristiano es espiritual en Cristo y el culto congregacional se celebra el primer día, el Día del Señor."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Colosenses 2:16-17",
+          "texto": "Por lo tanto, no permitan que nadie los condene por lo que comen o beben, o porque no celebran ciertos días santos ni ceremonias por luna nueva ni los días de descanso. Pues esas reglas son sólo sombras de la realidad que vendrá. Y Cristo mismo es esa realidad."
+        },
+        "puntos": [
+          {
+            "ref": "Gn 2:2-3",
+            "refs": ["Génesis 2:2-3"],
+            "cita": ["descansó de toda su obra de creación"],
+            "texto": "narra el reposo de Dios al concluir la creación, sin imponer mandato alguno a Adán ni fórmula nocturna de cierre."
+          },
+          {
+            "ref": "Éx 31:13, 16-17",
+            "refs": ["Éxodo 31:13", "Éxodo 31:16-17"],
+            "cita": ["una señal del pacto entre ustedes y yo de generación en generación", "señal perpetua de mi pacto con el pueblo de Israel"],
+            "texto": "define el sábado expresamente como señal del pacto con Israel (Dt 5:2-3, 15)."
+          },
+          {
+            "ref": "He 4:9-10",
+            "refs": ["Hebreos 4:9-10"],
+            "cita": ["hay un descanso especial en espera para el pueblo de Dios", "han descansado de su trabajo"],
+            "texto": "interpreta el reposo sabático del pueblo de Dios cristológicamente: descansar de las propias obras mediante la fe."
+          },
+          {
+            "ref": "Ro 14:5-6",
+            "refs": ["Romanos 14:5-6"],
+            "cita": ["todos los días son iguales", "plenamente convencido"],
+            "texto": "prohíbe convertir la distinción de días sagrados en ley obligatoria para todos los cristianos."
+          },
+          {
+            "ref": "Hch 20:7; 1 Co 16:2; Ap 1:10",
+            "refs": ["Hechos 20:7", "1 Corintios 16:2", "Apocalipsis 1:10"],
+            "cita": ["El primer día de la semana", "para participar de la Cena del Señor", "el día del Señor"],
+            "texto": "documentan el culto cristiano en domingo desde el libro de los Hechos hasta el Apocalipsis."
+          }
+        ]
+      }
+    },
+    {
+      "id": "II",
+      "titulo": "La ley de Dios, los alimentos inmundos y el diezmo",
+      "citas": [
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [262],
+          "es": "Los grandes principios de la ley de Dios están incorporados en los Diez Mandamientos y ejemplificados en la vida de Cristo. Expresan el amor, la voluntad y el propósito de Dios con respecto a la conducta y a las relaciones humanas, y son obligatorios para todas las personas en todas las épocas. Estos preceptos constituyen la base del pacto de Dios con su pueblo y son la norma del juicio divino.",
+          "nota": "Creencia Fundamental n.º 19 («La ley de Dios»)."
+        },
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [312, 321],
+          "es": "debemos adoptar un régimen alimentario lo más saludable posible, y abstenernos de los alimentos inmundos, identificados como tales en las Escrituras. … El Nuevo Testamento no abolió la distinción que se hace entre las carnes limpias e inmundas. … Como principios de salud, estas leyes relativas a la alimentación mantienen su calidad obligatoria.",
+          "nota": "Creencia Fundamental n.º 22 («La conducta cristiana»)."
+        },
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [301, 307],
+          "es": "Reconocemos el derecho de propiedad por parte de Dios mediante nuestro servicio fiel a él y a nuestros semejantes, y mediante la devolución de los diezmos y las ofrendas que damos para la proclamación de su evangelio y para el sostén y desarrollo de su iglesia. … el diezmo constituye la prueba básica de mayordomía",
+          "nota": "Creencia Fundamental n.º 21 («La mayordomía»)."
+        },
+        {
+          "obra": "Manual de la Iglesia (2025)",
+          "paginas": [60],
+          "es": "¿Crees en la organización de la iglesia, y te propones adorar a Dios y sostener a la iglesia con tus diezmos y ofrendas, con tu esfuerzo personal y tu influencia? … ¿Crees que el cuerpo es templo del Espíritu Santo, y que es tu deber honrar a Dios cuidándolo, evitando el uso de todo lo que es perjudicial; absteniéndote de comer alimentos inmundos…?",
+          "nota": "Votos bautismales n.º 9 y n.º 10."
+        }
+      ],
+      "significa": {
+        "texto": "La teología adventista divide artificialmente la Torá en dos compartimentos estancos —«ley moral» eterna (donde coloca el sábado ceremonial y, en práctica bautismal, la dieta levítica y el diezmo) frente a «ley ceremonial» abolida—, ignorando la unidad pactual de la Ley de Moisés y su cumplimiento integral en Cristo.",
+        "puntos": [
+          "La Ley mosaica es santa, justa y buena (Ro 7:12), pero el Nuevo Testamento la trata como un pacto unitario ligado al sacerdocio levítico: «si se cambia el sacerdocio, también es necesario cambiar la ley» (He 7:12), llamando al código grabado en piedra ministerio que ya fue reemplazado por el ministerio superior del Espíritu (2 Co 3:7-11; Gá 3:24-25).",
+          "Cristo no abolió la ley destruyéndola, sino cumpliéndola (Mt 5:17-18); bajo el Nuevo Pacto el creyente está «libre de la ley» mosaica (Ro 7:4-6) y sujeto a «la ley de Cristo» (1 Co 9:20-21; Gá 6:2), donde la exigencia moral permanente se resume en el amor (Ro 13:8-10).",
+          "Respecto a los alimentos inmundos (Lv 11; Dt 14), el propio Antiguo Testamento aclara que su función era separar pactualmente a Israel de los pueblos vecinos (Lv 20:24-26; Dt 14:21 permitía dárselos o venderlos al extranjero). En el Nuevo Testamento, Jesús «declaró que toda clase de comida es aceptable a los ojos de Dios» (Mr 7:18-19), y Pablo afirma sin rodeos que «ningún alimento en sí mismo está mal» (Ro 14:14, 20) y que «todo lo que Dios creó es bueno» (1 Ti 4:3-5; He 13:9).",
+          "En cuanto al diezmo, la Escritura lo destinó al sostenimiento de los levitas, las fiestas del templo y el socorro en Israel (Nm 18:21-24; Dt 14:22-29), nunca como impuesto bautismal eclesiástico obligatorio; el Nuevo Testamento exhorta a dar voluntariamente y con alegría según cada cual propuso en su corazón (2 Co 9:7)."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Desde el Concilio apostólico de Jerusalén (Hch 15) y el consenso patrístico temprano (Diogneto 4; Tertuliano), la iglesia rechazó imponer a los cristianos las leyes rituales mosaicas de días y alimentos puros e impuros."
+        ],
+        "reforma": [
+          "Confesión de Westminster XIX.3–4: las leyes ceremoniales y judiciales dadas a Israel como cuerpo político cesaron con el advenimiento de Cristo y no obligan bajo el evangelio; los preceptos morales obligan en cuanto reflejan el amor a Dios y al prójimo resumidos en la ley de Cristo."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Gálatas 3:24-25",
+          "texto": "Dicho de otra manera, la ley fue nuestra tutora hasta que vino Cristo; nos protegió hasta que se nos declarara justos ante Dios por medio de la fe. Y ahora que ha llegado el camino de la fe, ya no necesitamos que la ley sea nuestra tutora."
+        },
+        "puntos": [
+          {
+            "ref": "He 7:11-12",
+            "refs": ["Hebreos 7:11-12"],
+            "cita": ["si se cambia el sacerdocio, también es necesario cambiar la ley"],
+            "texto": "sacerdocio levítico y ley sinaítica van unidos; al establecerse el sacerdocio eterno de Cristo cambia el pacto completo (2 Co 3:7-11)."
+          },
+          {
+            "ref": "Ro 7:6",
+            "refs": ["Romanos 7:6"],
+            "cita": ["ahora fuimos liberados de la ley"],
+            "texto": "servimos a Dios en la novedad del Espíritu y bajo la ley de Cristo (1 Co 9:20-21; Gá 6:2)."
+          },
+          {
+            "ref": "Mr 7:18-19",
+            "refs": ["Marcos 7:18-19"],
+            "cita": ["declaró que toda clase de comida es aceptable a los ojos de Dios"],
+            "texto": "el propio Jesús abolió la distinción ritual entre alimentos limpios e inmundos (Ro 14:14, 20; 1 Ti 4:3-5)."
+          },
+          {
+            "ref": "He 13:9",
+            "refs": ["Hebreos 13:9"],
+            "cita": ["no depende de reglas sobre los alimentos"],
+            "texto": "la firmeza espiritual proviene de la gracia, no de reglamentos dietéticos (He 9:9-10)."
+          },
+          {
+            "ref": "2 Co 9:7",
+            "refs": ["2 Corintios 9:7"],
+            "texto": "la ofrenda cristiana bajo el Nuevo Pacto es libre, proporcional y alegre, no un tributo levítico obligatorio."
+          }
+        ]
+      }
+    },
+    {
+      "id": "III",
+      "titulo": "El santuario celestial, 1844 y el juicio investigador",
+      "citas": [
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [348],
+          "es": "Cristo llegó a ser nuestro gran Sumo Sacerdote y comenzó su ministerio intercesor en ocasión de su ascensión. En 1844, al concluir el período profético de los 2.300 días, inició la segunda y última fase de su ministerio expiatorio. Esta obra es un juicio investigador, que forma parte de la eliminación definitiva del pecado, prefigurada por la purificación del antiguo santuario hebreo en el Día de la Expiación.",
+          "nota": "Creencia Fundamental n.º 24 («El ministerio de Cristo en el santuario celestial»)."
+        },
+        {
+          "obra": "El conflicto de los siglos",
+          "paginas": [408, 409],
+          "es": "El asunto del santuario fue la clave que aclaró el misterio del desengaño de 1844. … El error no estaba en el cómputo de los períodos proféticos, sino en el acontecimiento que debía verificarse al fin de los 2.300 días.",
+          "nota": "Reinterpretación tras el Gran Chasco del 22 de octubre de 1844."
+        },
+        {
+          "obra": "El conflicto de los siglos",
+          "paginas": [579, 580],
+          "es": "Cuando él abandone el santuario, las tinieblas envolverán a los habitantes de la tierra. Durante ese tiempo terrible, los justos deben vivir sin intercesor, a la vista del santo Dios.",
+          "nota": "Consecuencia directa del cierre del juicio investigador antes de la segunda venida."
+        }
+      ],
+      "significa": {
+        "texto": "Para explicar por qué Cristo no regresó el 22 de octubre de 1844 como predijo William Miller, el adventismo desplazó el acontecimiento a un cambio invisible de compartimento celestial e introdujo un «juicio investigador» de los santos que deja la salvación en suspenso.",
+        "puntos": [
+          "Hebreos contradice de raíz un ingreso tardío al Lugar Santísimo en 1844: afirma que Cristo «ya entró allí por nosotros» detrás de la cortina al ascender (He 6:19-20), que entró en el Lugar Santísimo «una sola vez y para siempre» asegurando redención eterna (He 9:12), y que tras su sacrificio «se sentó» a la derecha del Padre porque «perfeccionó para siempre» a los creyentes (He 10:12-14).",
+          "En el lenguaje bíblico el cielo no está contaminado por los pecados de los santos para necesitar una «purificación» decimonónica; Daniel 8:13-14 trata del cuerno pequeño que profana el santuario de Jerusalén y su culto diario durante «2.300 tardes y mañanas» (el contexto inmediato nombra a Medopersia y Grecia en Dn 8:20-21), no de Cristo limpiando registros celestiales en 1844.",
+          "Además, la fórmula aritmética «un día = un año» tomada de Números 14:34 y Ezequiel 4:6 fue un decreto puntual de castigo explícitamente nombrado en aquellos textos, no una clave hermeneútica universal para convertir los sacrificios vespertinos y matutinos de Daniel 8 en años hasta 1844.",
+          "Enseñarle al creyente que tras la cruz quedó pendiente una segunda fase expiatoria —y que al final tendrá que estar en pie «sin intercesor» ante la santidad divina— contradice la certeza de la justificación presente (Ro 8:1; Jn 5:24; 1 Jn 5:13)."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381): Cristo «subió al cielo y está sentado a la derecha del Padre» como Señor glorificado cuya obra expiatoria quedó acabada, y volverá para juzgar a vivos y muertos."
+        ],
+        "reforma": [
+          "Catecismo de Heidelberg, P. 31 y Westminster VIII.5–8: por su única obediencia y sacrificio Cristo satisfizo plenamente la justicia del Padre y compró redención eterna; aplica continuamente ese sacrificio completo mediante una intercesión ininterrumpida hasta el fin."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Hebreos 9:12",
+          "texto": "Con su propia sangre —no con la sangre de cabras ni de becerros— entró en el Lugar Santísimo una sola vez y para siempre, y aseguró nuestra redención eterna."
+        },
+        "puntos": [
+          {
+            "ref": "He 6:19-20",
+            "refs": ["Hebreos 6:19-20"],
+            "cita": ["a través de la cortina al santuario interior de Dios", "Jesús ya entró allí por nosotros"],
+            "texto": "el precursor entró al Lugar Santísimo celestial en su ascensión, dieciocho siglos antes de 1844."
+          },
+          {
+            "ref": "He 10:12-14",
+            "refs": ["Hebreos 10:12-14"],
+            "cita": ["un solo sacrificio por los pecados, válido para siempre. Luego se sentó", "perfeccionó para siempre"],
+            "texto": "su sacrificio no fue incompleto ni quedó pendiente de una segunda fase expiatoria."
+          },
+          {
+            "ref": "Dn 8:13-14",
+            "refs": ["Daniel 8:13-14"],
+            "cita": ["dos mil trescientas noches y mañanas; después el templo será restaurado"],
+            "texto": "el pasaje profetiza la profanación y restauración del templo terrenal tras la opresión del rey griego (Dn 8:20-21), no un tribunal celestial en 1844."
+          },
+          {
+            "ref": "Jn 5:24",
+            "refs": ["Juan 5:24"],
+            "cita": ["tienen vida eterna. Nunca serán condenados", "ya han pasado de la muerte a la vida"],
+            "texto": "quien cree en Cristo ya tiene vida eterna y no entra en juicio condenatorio (Ro 8:1)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "IV",
+      "titulo": "Azazel: ¿lleva Satanás los pecados de los redimidos?",
+      "citas": [
+        {
+          "obra": "El conflicto de los siglos",
+          "paginas": [407],
+          "es": "mientras que el holocausto señalaba a Cristo como sacrificio, y el sumo sacerdote representaba a Cristo como mediador, el macho cabrío simbolizaba a Satanás, autor del pecado, sobre quien serán colocados finalmente los pecados de los verdaderamente arrepentidos. … Cuando Cristo, en virtud de su propia sangre, quite del santuario celestial los pecados de su pueblo al fin de su ministerio, los pondrá sobre Satanás",
+          "nota": "Interpretación distintiva del macho cabrío para Azazel en Levítico 16."
+        },
+        {
+          "obra": "Preguntas sobre doctrina (ed. anotada 2008)",
+          "paginas": [336],
+          "es": "El otro cabrito, en antítesis, simbolizaba a Satanás, que deberá cargar con la responsabilidad no solo de sus propios pecados, sino con la del papel que ha desempeñado en todos los pecados que ha hecho cometer a otras personas, tanto justas como malvadas.",
+          "nota": "Respuesta a la Pregunta 35 («¿Por qué enseñan los adventistas del séptimo día que el macho cabrío expiatorio de Levítico 16 representa a Satanás?»)."
+        }
+      ],
+      "significa": {
+        "texto": "El sistema adventista asigna a Satanás una parte indispensable en el drama final de la eliminación del pecado: Cristo solo transfiere los pecados confesados del creyente desde la tierra al santuario celestial, y solo en el cierre del tiempo los descarga sobre Satanás como Azazel.",
+        "puntos": [
+          "Según el Nuevo Testamento, el único portador del pecado es el Cordero de Dios: Cristo «mismo cargó nuestros pecados sobre su cuerpo en la cruz» (1 P 2:24) y se presentó una sola vez para quitar el pecado (He 9:26). Jamás recibe el diablo los pecados de los creyentes.",
+          "En Levítico 16:5-10 los dos machos cabríos constituyen «una ofrenda por el pecado»: uno muere en el altar por expiación de sangre y el otro lleva simbólicamente los pecados confesados lejos del campamento hacia el desierto para mostrar su remoción definitiva —dos caras de la única obra salvífica de Cristo (Jn 1:29; Sal 103:12)—.",
+          "Atribuir a Satanás la carga final de los pecados de los arrepentidos menoscaba la suficiencia exclusiva del Calvario («¡Todo ha terminado!», Jn 19:30) y hace necesaria una doble eliminación del pecado."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "La iglesia histórica ha visto en el rito doble de Levítico 16 una prefiguración unitaria de Cristo: sacrificado por el pecado e infamado fuera de las puertas llevando nuestra iniquidad lejos de nosotros."
+        ],
+        "reforma": [
+          "Catecismo de Heidelberg, P. 29–30 y Confesión Belga, art. 21: Jesucristo es nuestro único Salvador y quien busca la expiación o remoción final del pecado fuera de su único sacrificio en la cruz niega que él sea Salvador completo."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "1 Pedro 2:24",
+          "texto": "Él mismo cargó nuestros pecados sobre su cuerpo en la cruz, para que nosotros podamos estar muertos al pecado y vivir para lo que es recto. Por sus heridas, son sanados."
+        },
+        "puntos": [
+          {
+            "ref": "He 9:26",
+            "refs": ["Hebreos 9:26"],
+            "cita": ["se presentó una sola vez y para siempre para quitar el pecado"],
+            "texto": "solo Cristo quita el pecado; ningún pecado perdonado espera al fin de los tiempos para ser transferido a Satanás."
+          },
+          {
+            "ref": "He 10:18",
+            "refs": ["Hebreos 10:18"],
+            "cita": ["cuando los pecados han sido perdonados, ya no hace falta ofrecer más sacrificios"],
+            "texto": "la remisión en la cruz es completa y definitiva."
+          },
+          {
+            "ref": "Lv 16:21-22",
+            "refs": ["Levítico 16:21-22"],
+            "cita": ["llevará todos los pecados del pueblo sobre sí mismo a una tierra desolada"],
+            "texto": "representa el alejamiento total del pecado expiado, obra atribuida en el NT únicamente al Cordero de Dios (Jn 1:29)."
+          },
+          {
+            "ref": "Ro 8:33-34; He 7:25",
+            "refs": ["Romanos 8:33-34", "Hebreos 7:25"],
+            "cita": ["intercede por nosotros", "quien vive para siempre, a fin de interceder con Dios a favor de ellos"],
+            "texto": "la intercesión sacerdotal de Cristo permanece viva e irrenunciable para todo el que se acerca a Dios."
+          }
+        ]
+      }
+    },
+    {
+      "id": "V",
+      "titulo": "La iglesia remanente, la marca de la bestia y el domingo",
+      "citas": [
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [180, 197],
+          "es": "La iglesia universal está compuesta de todos los que creen verdaderamente en Cristo; pero en los últimos días, una época de apostasía generalizada, se llamó a un remanente para que guarde los mandamientos de Dios y la fe de Jesús. … Cuando este punto se presente claramente delante del mundo, los que rechacen el memorial de la creación divina —el sábado bíblico—, eligiendo adorar y dar honor al domingo, conociendo claramente que no es el día de adoración dado por Dios, recibirán la “marca de la bestia”.",
+          "nota": "Creencia Fundamental n.º 13 («El remanente y su misión»)."
+        },
+        {
+          "obra": "El conflicto de los siglos",
+          "paginas": [428, 431],
+          "es": "La “imagen de la bestia” representa la forma de protestantismo apóstata que se desarrollará cuando las iglesias protestantes busquen la ayuda del poder civil para la imposición de sus dogmas. … La imposición de la observancia del domingo por parte de las iglesias protestantes es una imposición de que se adore al papado, o sea la bestia.",
+          "nota": "Escatología profética que identifica a las demás confesiones cristianas como Babilonia cuando se promulgue una «ley dominical nacional»."
+        },
+        {
+          "obra": "Manual de la Iglesia (2025)",
+          "paginas": [59, 60],
+          "es": "¿Crees que la Iglesia Adventista del Séptimo Día es la iglesia remanente mencionada en la profecía bíblica, y que personas de todas las naciones, razas y lenguas son invitadas a formar parte de esta comunión y ser aceptadas en su feligresía? ¿Deseas ser miembro de esta congregación local de la iglesia mundial?",
+          "nota": "Voto bautismal n.º 13."
+        },
+        {
+          "obra": "Preguntas sobre doctrina (ed. anotada 2008)",
+          "paginas": [167, 168],
+          "es": "Creemos que la profecía de Apocalipsis 12:17 señala la experiencia y la obra de la Iglesia Adventista del Séptimo Día, pero no creemos que solo nosotros constituyamos los verdaderos hijos de Dios…",
+          "nota": "Respuesta a la Pregunta 20, matizando frente al tono más exclusivo de otros escritos denominacionales."
+        }
+      ],
+      "significa": {
+        "texto": "Aunque Preguntas sobre doctrina reconoce hijos de Dios en otras confesiones, la dogmática oficial del remanente sigue atando la fidelidad escatológica de Apocalipsis 12:17 y 14:12 a un movimiento nacido tras 1844 —identificando al sábado como el «sello de Dios» y a la adoración dominical futura como la «marca de la bestia».",
+        "puntos": [
+          "Jesús prometió edificar su iglesia de modo que el poder de la muerte nunca la derrotara (Mt 16:18), y Pablo define la unidad de la iglesia por «un solo Señor, una sola fe, un solo bautismo» (Ef 4:4-6), no por un movimiento surgido dieciocho siglos después en Nueva Inglaterra.",
+          "El «sello de Dios» en el Nuevo Testamento no es el día sábado, sino explícitamente el Espíritu Santo dado a todo creyente en el instante en que cree en el Evangelio (Ef 1:13; 4:30; 2 Co 1:21-22). En Apocalipsis 7:3 y 14:1 el sello lleva el nombre de Dios y del Cordero, nunca el día séptimo.",
+          "Apocalipsis jamás menciona el domingo ni el sábado cuando habla de la marca de la bestia (Ap 13:16-18; 14:9-11): la marca y el 666 simbolizan la lealtad idolátrica al imperio perseguidor y al Anticristo. Tampoco existe base histórica ni aramea en Daniel 7:25 (zemanin wᵉdat) para proyectar un «cambio del sábado al domingo» por parte del papado."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381): confesamos «una iglesia santa, católica y apostólica» presente en todo lugar y siglo donde se predica el Evangelio verdadero, nunca restringida a una organización restauracionista moderna."
+        ],
+        "reforma": [
+          "Confesión de Augsburgo, art. VII y Westminster XXV.1–5: la iglesia verdadera consiste en la congregación de los santos donde el Evangelio se enseña puramente y los sacramentos se administran conforme a Cristo; las iglesias particulares pueden errar más o menos, pero siempre existirá en la tierra una iglesia verdadera."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Mateo 16:18",
+          "texto": "Ahora te digo que tú eres Pedro (que quiere decir «roca»), y sobre esta roca edificaré mi iglesia, y el poder de la muerte no la conquistará."
+        },
+        "puntos": [
+          {
+            "ref": "Ef 4:4-6",
+            "refs": ["Efesios 4:4-6"],
+            "cita": ["hay un solo cuerpo y un solo Espíritu", "Hay un solo Señor, una sola fe, un solo bautismo"],
+            "texto": "la iglesia de Cristo es una y continua desde los apóstoles, no un remanente exclusivo fundado en el siglo XIX (Ro 11:5-6)."
+          },
+          {
+            "ref": "Ef 1:13; 4:30",
+            "refs": ["Efesios 1:13", "Efesios 4:30"],
+            "cita": ["Dios los identificó como suyos al darles el Espíritu Santo", "les ha garantizado que serán salvos el día de la redención"],
+            "texto": "el sello de Dios en el Nuevo Pacto es la morada del Espíritu Santo al creer, no el sábado semanal."
+          },
+          {
+            "ref": "Ap 13:16-18; 14:9-11",
+            "refs": ["Apocalipsis 13:16-18", "Apocalipsis 14:9-11"],
+            "cita": ["se les pusiera una marca en la mano derecha o en la frente", "Su número es 666"],
+            "texto": "la marca de la bestia representa adoración idolátrica al poder anticristiano, jamás la reunión cristiana dominical."
+          },
+          {
+            "ref": "Dn 7:25",
+            "refs": ["Daniel 7:25"],
+            "cita": ["Procurará cambiar las leyes de los santos y sus festivales sagrados"],
+            "texto": "describe la opresión tiránica que intenta suprimir el culto a Dios (cumplida inicialmente bajo Antíoco IV), no una sustitución del sábado por el domingo."
+          }
+        ]
+      }
+    },
+    {
+      "id": "VI",
+      "titulo": "El sueño del alma, la aniquilación y el milenio desolado",
+      "citas": [
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [389],
+          "es": "Hasta ese día, la muerte constituye un estado de inconsciencia para todos los que han fallecido. … La segunda resurrección, la resurrección de los impíos, ocurrirá mil años después.",
+          "nota": "Creencia Fundamental n.º 26 («La muerte y la resurrección»)."
+        },
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [403],
+          "es": "El milenio es el reino de mil años de Cristo con sus santos en el cielo, que se extiende entre la primera y la segunda resurrección. Durante ese tiempo serán juzgados los impíos; la tierra estará completamente desolada, sin habitantes humanos con vida, pero sí ocupada por Satanás y sus ángeles. … el fuego de Dios los consumirá y purificará la Tierra.",
+          "nota": "Creencia Fundamental n.º 27 («El milenio y el fin del pecado»)."
+        }
+      ],
+      "significa": {
+        "texto": "El adventismo niega la existencia consciente del alma entre la muerte y la resurrección (psicopanniquía o «sueño del alma»), rechaza el castigo consciente eterno (aniquilacionismo) e interpreta el milenio como un período celeste mientras la tierra yace despoblada y Satanás vaga «atado» sobre ella.",
+        "puntos": [
+          "Eclesiastés 9:5 observa desde la perspectiva terrenal «debajo del sol» que los muertos ya no participan de la vida bajo el sol (Ecl 9:6), mientras el propio libro afirma en 12:7 que el espíritu regresa a Dios. El Nuevo Testamento enseña presencia consciente inmediata con Cristo tras morir: «hoy estarás conmigo en el paraíso» (Lc 23:43), «partir y estar con Cristo» (Flp 1:21-23), «fuera de este cuerpo… en el hogar celestial con el Señor» (2 Co 5:6-8) y las almas de los mártires clamando delante de Dios en Apocalipsis 6:9-11.",
+          "En Mateo 25:46 Jesús coloca en paralelo estricto aionios («eterno») para el «castigo eterno» y la «vida eterna»; Marcos 9:48 y Apocalipsis 14:11 / 20:10 hablan de tormento consciente «día y noche por siempre jamás» y fuego que nunca se apaga.",
+          "El juicio final de Mateo 25:31-46 y Juan 5:28-29 sucede en una sola «hora» ante la voz de Cristo para separar a todas las naciones, y en Apocalipsis 20:1-6 el abismo donde Satanás es atado impide específicamente que engañe a las naciones que están sobre la tierra —lo opuesto a dejarle vagar en una tierra vacía sin habitantes."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo de los Apóstoles y Concilio de Constantinopla: Cristo vendrá a juzgar a vivos y muertos, y confesamos la resurrección del cuerpo y la vida perdurable, reconociendo que las almas de los justos descansan en presencia consciente del Señor hasta la resurrección."
+        ],
+        "reforma": [
+          "Confesión de Westminster XXXII.1: los cuerpos vuelven al polvo, pero las almas de los justos «regresan inmediatamente a Dios» y son recibidas en el cielo supremo contemplando el rostro de Dios, mientras las de los impíos son arrojadas al infierno esperando el juicio del gran día."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "2 Corintios 5:8",
+          "texto": "Sí, estamos plenamente confiados, y preferiríamos estar fuera de este cuerpo terrenal porque entonces estaríamos en el hogar celestial con el Señor."
+        },
+        "puntos": [
+          {
+            "ref": "Lc 23:43",
+            "refs": ["Lucas 23:43"],
+            "cita": ["hoy estarás conmigo en el paraíso"],
+            "texto": "promesa explícita de comunión consciente inmediata tras la muerte, el mismo día de la crucifixión (Flp 1:21-23)."
+          },
+          {
+            "ref": "Ap 6:9-10",
+            "refs": ["Apocalipsis 6:9-10"],
+            "cita": ["vi debajo del altar las almas"],
+            "texto": "presenta a los mártires conscientes, orando y recibiendo consuelo antes de la resurrección corporal (Mt 17:3)."
+          },
+          {
+            "ref": "Mt 25:46",
+            "refs": ["Mateo 25:46"],
+            "cita": ["castigo eterno", "vida eterna"],
+            "texto": "usa exactamente el mismo término griego de duración perpetua (aionios) para el destino de impíos y justos (Mr 9:47-48)."
+          },
+          {
+            "ref": "Ap 20:10",
+            "refs": ["Apocalipsis 20:10"],
+            "cita": ["serán atormentados día y noche por siempre jamás"],
+            "texto": "refuta la extinción instantánea: tras mil años, la bestia y el falso profeta siguen conscientes en el lago de fuego junto con el diablo."
+          },
+          {
+            "ref": "Jn 5:28-29",
+            "refs": ["Juan 5:28-29"],
+            "cita": ["todos los que están en las tumbas oirán la voz del Hijo de Dios"],
+            "texto": "muestra una resurrección universal en la misma «hora», no separada por un milenio vacío."
+          }
+        ]
+      }
+    },
+    {
+      "id": "VII",
+      "titulo": "Elena G. de White y el espíritu de profecía",
+      "citas": [
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [246],
+          "es": "Uno de los dones del Espíritu Santo es el de profecía. Este don es una señal identificadora de la iglesia remanente y se manifestó en el ministerio de Elena G. de White. Como mensajera del Señor, sus escritos son una permanente y autorizada fuente de verdad que proporciona consuelo, dirección, instrucción y corrección a la iglesia.",
+          "nota": "Creencia Fundamental n.º 18 («El don de profecía»)."
+        },
+        {
+          "obra": "Manual de la Iglesia (2025)",
+          "paginas": [59],
+          "es": "¿Aceptas la enseñanza bíblica de los dones espirituales, y crees que el don de profecía es una de las señales que identifican a la iglesia remanente?",
+          "nota": "Voto bautismal n.º 8, exigido para ser miembro de la Iglesia Adventista del Séptimo Día."
+        },
+        {
+          "obra": "Preguntas sobre doctrina (ed. anotada 2008)",
+          "paginas": [83, 84],
+          "es": "1. Que no consideramos los escritos de Elena G. de White como una adición al canon sagrado de la Biblia. 2. Que no pensamos que sean de aplicación universal, cosa que sí es la Biblia, sino de aplicación particular para la Iglesia Adventista del Séptimo Día. … Sometemos a prueba los escritos de Elena G. de White con la Biblia, pero en sentido alguno sometemos la Biblia a prueba con los escritos de la Señora White.",
+          "nota": "Respuesta a la Pregunta 9 frente a los cuestionamientos evangélicos de 1955–1956."
+        },
+        {
+          "obra": "Movement of Destiny (1971)",
+          "paginas": [118],
+          "en": "Concerning these primary principles, provisions, and Divine Personalities of Salvation, Ellen White was usually the pathfinder in emphasis and clarity. She was often far out in front—with certain others but slowly following…",
+          "es": "En cuanto a estos principios primarios, provisiones y Personalidades Divinas de la Salvación, Elena de White solía ser la pionera en énfasis y claridad. A menudo iba muy por delante —mientras algunos otros la seguían lentamente…",
+          "nota": "El historiador oficial de la IASD LeRoy Edwin Froom atribuye a las visiones de White un papel guía previo incluso a la exégesis bíblica de los demás líderes."
+        }
+      ],
+      "significa": {
+        "texto": "Aunque la teología adventista afirma teóricamente la sola Scriptura y niega añadir libros al canon, en su confesión oficial y voto bautismal eleva los escritos de Elena G. de White a «permanente y autorizada fuente de verdad» vinculada a la identidad exclusiva de la iglesia remanente.",
+        "puntos": [
+          "En Apocalipsis 19:10 «el testimonio de Jesús es el espíritu de la profecía»: el texto griego —confirmado por el versículo paralelo 22:9 («tus hermanos los profetas»)— no designa a una autora del siglo XIX ni una insignia denominacional, sino a la fidelidad profética al Evangelio de Jesús en todos los profetas y creyentes fieles.",
+          "Cuando una escritura posbíblica se declara «fuente permanente y autorizada de verdad» para toda una iglesia —especialmente en doctrinas que no surgen de la exégesis sino que pretenden resolver el chasco de 1844 (como la «puerta cerrada» inicial y el santuario en dos fases)— funciona de hecho como magisterio normativo por encima de la lectura directa de la Biblia.",
+          "Deuteronomio 18:20-22 ordena juzgar a todo pretendido profeta por el cumplimiento exacto de sus anuncios (además del examen doctrinal de Gá 1:8-9 y 1 Jn 4:1); los errores en torno a 1844, el tiempo de cierre de la gracia y otras declaraciones históricas desautorizan cualquier autoridad profética vinculante después de los apóstoles (He 1:1-2; Jud 1:3)."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "El canon de la Escritura apostólica quedó cerrado con los escritos del Nuevo Testamento (Jud 3; Ef 2:20); los Padres rechazaron frente a los montanistas toda nueva profecía con autoridad normativa sobre la iglesia."
+        ],
+        "reforma": [
+          "Confesión de Westminster I.6 y I.10: todo el consejo de Dios necesario para su gloria y la salvación está expresado o deducido en la Escritura, «a la cual nada se ha de añadir en ningún tiempo, ni por nuevas revelaciones del Espíritu, ni por tradiciones de los hombres»; el Juez supremo en toda controversia religiosa es únicamente el Espíritu hablando en la Escritura."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Hebreos 1:1-2",
+          "texto": "Hace mucho tiempo, Dios habló muchas veces y de diversas maneras a nuestros antepasados por medio de los profetas. Y ahora, en estos últimos días, nos ha hablado por medio de su Hijo. Dios le prometió todo al Hijo como herencia y, mediante el Hijo, creó el universo."
+        },
+        "puntos": [
+          {
+            "ref": "Jud 1:3; Ef 2:20",
+            "refs": ["Judas 1:3", "Efesios 2:20"],
+            "cita": ["la fe que Dios ha confiado una vez y para siempre a su pueblo santo", "edificada sobre el fundamento de los apóstoles y los profetas"],
+            "texto": "el fundamento apostólico es irrepetible; ninguna mensajera posterior forma parte de las señales normativas de la iglesia."
+          },
+          {
+            "ref": "Dt 18:20-22",
+            "refs": ["Deuteronomio 18:20-22"],
+            "cita": ["su profecía no se cumple ni ocurre lo que predice", "ese mensaje no proviene del SEÑOR"],
+            "texto": "la Escritura no disculpa profecías fallidas redefiniendo su significado después del chasco (Mt 24:36)."
+          },
+          {
+            "ref": "Gá 1:8-9",
+            "refs": ["Gálatas 1:8-9"],
+            "cita": ["que le caiga la maldición de Dios"],
+            "texto": "ninguna revelación posterior puede añadir requisitos al evangelio apostólico."
+          },
+          {
+            "ref": "1 Jn 4:1; Hch 17:11",
+            "refs": ["1 Juan 4:1", "Hechos 17:11"],
+            "cita": ["Pónganlos a prueba para averiguar si el espíritu que tienen realmente proviene de Dios", "examinaban las Escrituras"],
+            "texto": "todo reclamo profético debe examinarse con total libertad desde la sola Escritura (2 Ti 3:16-17)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "VIII",
+      "titulo": "Cristología, el arcángel Miguel y el semi-arrianismo de los pioneros",
+      "citas": [
+        {
+          "obra": "Preguntas sobre doctrina (ed. anotada 2008)",
+          "paginas": [69, 70],
+          "es": "Creemos que el término «Miguel» no es sino uno de los muchos títulos aplicados al Hijo de Dios, la segunda persona de la Divinidad.",
+          "nota": "Respuesta a la Pregunta 8. Aunque confiesa la deidad eterna del Hijo, la edición anotada documenta que pioneros como Urías Smith enseñaron en el siglo XIX que Cristo fue un ser creado e identificaron ese origen con «Miguel»."
+        },
+        {
+          "obra": "Preguntas sobre doctrina (ed. anotada 2008)",
+          "paginas": [594],
+          "es": "En él no había ni engaño ni pecado; siempre fue puro e incontaminado; y sin embargo tomó sobre sí nuestra naturaleza pecaminosa.",
+          "nota": "Cita de Elena G. de White recogida en el Apéndice B (citando Review and Herald, 15 de diciembre de 1896). En la introducción histórica de la edición anotada (p. xvii), George R. Knight señala el contraste entre el epígrafe elegido por los autores de 1957 («naturaleza humana inmaculada») y la insistencia reiterada de White y dirigentes como W. H. Branson en que Cristo asumió «nuestra naturaleza pecaminosa»."
+        },
+        {
+          "obra": "Movement of Destiny (1971)",
+          "paginas": [148, 149],
+          "en": "At first these semi-Arian concepts were regarded as the personal views of those who so held. But in time these ideas came to be regarded by their holders as positions to be publicly championed… Such began to put forth the presumption of a subordinate position for Christ—a Christ of derived origin and lower relationship.",
+          "es": "Al principio, estos conceptos semiarrianos eran considerados opiniones personales de quienes los sostenían. Pero con el tiempo sus defensores pasaron a considerar estas ideas como posturas que debían defender públicamente… Tales autores comenzaron a plantear la presunción de una posición subordinada para Cristo: un Cristo de origen derivado y de rango inferior.",
+          "nota": "Testimonio histórico oficial de LeRoy E. Froom sobre la corriente semiarriana dominante entre varios fundadores adventistas."
+        },
+        {
+          "obra": "Movement of Destiny (1971)",
+          "paginas": [150, 409],
+          "en": "Uriah Smith, of rugged New England, and Joseph H. Waggoner, of the sturdy Midwest, were the outstanding proponents of Arianism in our ranks. … After 87 years of conflicting viewpoints over the Deity of Christ, the Trinity, and the Personality of the Holy Spirit, a unified position that honored Bible truth—and was in accord with the Spirit of Prophecy—came to be accepted by both sides.",
+          "es": "Urías Smith, de la recia Nueva Inglaterra, y Joseph H. Waggoner, del firme Medio Oeste, fueron los exponentes más destacados del arrianismo en nuestras filas. … Después de 87 años de puntos de vista contrapuestos sobre la deidad de Cristo, la Trinidad y la personalidad del Espíritu Santo, ambas partes llegaron a aceptar una posición unificada que honraba la verdad bíblica —y armonizaba con el Espíritu de Profecía—.",
+          "nota": "Froom reconoce explícitamente que la iglesia tardó casi nueve décadas desde 1844 en alcanzar consenso trinitario pleno."
+        },
+        {
+          "obra": "Creencias de los Adventistas del Séptimo Día (2007)",
+          "paginas": [109],
+          "es": "Observado por toda la creación, este mundo se convirtió en el campo de batalla del conflicto universal, a cuyo término el Dios de amor quedará finalmente vindicado.",
+          "nota": "Creencia Fundamental n.º 8 («El gran conflicto»)."
+        }
+      ],
+      "significa": {
+        "texto": "El adventismo oficial actual confiesa la Trinidad bíblica (Creencias 2–5) y el carácter divino eterno de Cristo, pero arrastra vestigios problemáticos en tres frentes: identificar al Hijo eterno con el arcángel Miguel, debatir internamente si Cristo asumió naturaleza caída con tendencias pecaminosas, y haber sostenido durante décadas entre sus fundadores un semiarrianismo que contradice cualquier pretensión de «iglesia remanente infalible desde 1844».",
+        "puntos": [
+          "Hebreos 1:4-8 demuestra que el Hijo es «muy superior a los ángeles» y nunca es llamado ángel ni arcángel; en Daniel 10:13 Miguel es «uno de los arcángeles» (de un grupo plural), y en Judas 1:9 Miguel no se atreve a pronunciar juicio contra el diablo sino dice «¡Que el Señor te reprenda!», mientras Jesús expulsa demonios y reprende a Satanás con autoridad divina propia (Mt 4:10; Mr 1:25).",
+          "En su humanidad verdadera Cristo experimentó debilidad física y tentación real sin heredar concupiscencia ni «naturaleza caída» pecaminosa (Lc 1:35; He 4:15; 7:26; 2 Co 5:21); fue Dios manifestado en semejanza de carne de pecado, no en carne pecaminosa (Ro 8:3).",
+          "El dato histórico documentado por Froom en Movement of Destiny plantea una pregunta teológica seria al Voto bautismal n.º 13: si Dios levantó una «iglesia remanente» única desde 1844, ¿cómo pasaron casi noventa años con figuras centrales —James White, José Bates, J. H. Waggoner, Urías Smith— enseñando posturas antitrinitarias y semiarrianas?",
+          "Asimismo, el paradigma del «gran conflicto» tiende a reducir la cruz a una demostración judicial para convencer al universo de la bondad de Dios, olvidando que Cristo fue propiciación vicaria delante de la santa justicia del Padre (Ro 3:25-26) y ya triunfó públicamente en el Calvario (Col 2:15; Jn 12:31)."
+        ]
+      },
+      "confiesa": {
+        "ortodoxia": [
+          "Credo Niceno-Constantinopolitano (381) y Definición de Calcedonia (451): Jesucristo es «Dios verdadero de Dios verdadero, engendrado, no creado, consustancial con el Padre», verdadero Dios y verdadero hombre, semejante a nosotros en todo excepto en el pecado."
+        ],
+        "reforma": [
+          "Confesión Belga, art. 10 y 18, y Westminster VIII.2: la segunda persona de la Trinidad tomó una humanidad verdadera e incontaminada en una sola persona sin confusión ni cambio, negando tanto el arrianismo como la idea de una humanidad caída contaminada por el pecado."
+        ]
+      },
+      "biblia": {
+        "cita": {
+          "ref": "Colosenses 2:9",
+          "texto": "Pues en Cristo habita toda la plenitud de Dios en un cuerpo humano."
+        },
+        "puntos": [
+          {
+            "ref": "He 1:4-8",
+            "refs": ["Hebreos 1:4-8"],
+            "cita": ["el Hijo es muy superior a los ángeles", "Que lo adoren todos los ángeles de Dios", "Tu trono, oh Dios, permanece por siempre y para siempre"],
+            "texto": "excluye categóricamente colocar al Hijo eterno dentro del orden angélico; Miguel es «uno de los arcángeles» (Dn 10:13; Jud 1:9)."
+          },
+          {
+            "ref": "Jn 1:1-3; Col 1:16",
+            "refs": ["Juan 1:1-3", "Colosenses 1:16"],
+            "cita": ["la Palabra era Dios", "Todo fue creado por medio de él y para él"],
+            "texto": "el Hijo es Creador eterno (Jn 8:58), no un ser derivado o subordinado como enseñaban los pioneros semiarrianos."
+          },
+          {
+            "ref": "He 4:15; 7:26",
+            "refs": ["Hebreos 4:15", "Hebreos 7:26"],
+            "cita": ["sin embargo él nunca pecó", "es santo y no tiene culpa ni mancha de pecado. Él ha sido apartado de los pecadores"],
+            "texto": "Cristo compartió la debilidad de nuestra humanidad sin participación alguna en la corrupción pecaminosa (Ro 8:3; 2 Co 5:21)."
+          },
+          {
+            "ref": "Mt 28:19; Hch 5:3-4",
+            "refs": ["Mateo 28:19", "Hechos 5:3-4"],
+            "cita": ["en el nombre del Padre y del Hijo y del Espíritu Santo", "¡No nos mentiste a nosotros sino a Dios!"],
+            "texto": "Padre, Hijo y Espíritu Santo comparten una única naturaleza divina eterna."
+          }
+        ]
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "obra": "28 Creencias",
+      "pagina": 280,
+      "ref": "Éxodo 31:13",
+      "texto": "Si la Creencia n.º 20 enseña que el sábado fue instituido «para todos los hombres» en el Edén, ¿por qué Éxodo 31:13 dice expresamente a los israelitas que es «una señal del pacto entre ustedes y yo», y no aparece mandato sabático alguno entre Adán y Moisés?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 293,
+      "ref": "Apocalipsis 1:10",
+      "texto": "Si «ningún escritor de los siglos III y IV» —ni antes— tuvo apoyo para el Día del Señor antes de Constantino (321 d.C.), ¿por qué la Didaché (c. 70–100), Ignacio de Antioquía (c. 107), Justino Mártir (c. 155) y Cipriano (c. 253) ya llamaban al domingo el «Día del Señor» o «día octavo» siguiendo Hechos 20:7 y Apocalipsis 1:10?"
+    },
+    {
+      "obra": "Manual de la Iglesia",
+      "pagina": 59,
+      "ref": "Colosenses 2:16-17",
+      "texto": "Si el voto bautismal n.º 6 obliga al creyente a guardar el cuarto mandamiento semanal, ¿por qué Pablo incluye «los días de descanso» (sabbata) entre las «sombras de la realidad que vendrá» y prohíbe condenar a otros por ellos?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 262,
+      "ref": "Hebreos 7:11-12",
+      "texto": "Si los Diez Mandamientos siguen vigentes intactos como «base del pacto» actual, ¿por qué Hebreos 7:12 afirma que al cambiar el sacerdocio «también es necesario cambiar la ley», y Romanos 7:6 dice que «fuimos liberados de la ley»?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 321,
+      "ref": "Marcos 7:18-19",
+      "texto": "Si «el Nuevo Testamento no abolió la distinción que se hace entre las carnes limpias e inmundas», ¿qué quiso decir Jesús cuando «declaró que toda clase de comida es aceptable» y Pablo cuando escribió que «ningún alimento en sí mismo está mal» (Romanos 14:14)?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 307,
+      "ref": "2 Corintios 9:7",
+      "texto": "Si el diezmo constituye «la prueba básica de mayordomía» en la iglesia, ¿dónde ordenan Cristo o los apóstoles el diezmo obligatorio del 10 %, en lugar de dar con generosidad y libertad según 2 Corintios 9:7?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 348,
+      "ref": "Hebreos 9:11-12",
+      "texto": "Si Cristo no inició la segunda fase de su obra en el Lugar Santísimo sino hasta 1844, ¿cómo explica Hebreos 9:12 que ya «entró en el Lugar Santísimo una sola vez y para siempre, y aseguró nuestra redención eterna»?"
+    },
+    {
+      "obra": "El conflicto de los siglos",
+      "pagina": 579,
+      "ref": "Hebreos 10:11-14",
+      "texto": "Si un día los creyentes deberán vivir «sin intercesor» después de un juicio investigador secreto, ¿cómo queda la promesa de que Cristo «se sentó» tras perfeccionar para siempre a los suyos (Hebreos 10:12-14) y que «nunca serán condenados» (Juan 5:24)?"
+    },
+    {
+      "obra": "El conflicto de los siglos",
+      "pagina": 407,
+      "ref": "1 Pedro 2:24",
+      "texto": "Si Cristo al final de su ministerio quitará del cielo los pecados de su pueblo para «ponerlos sobre Satanás», ¿en qué sentido «él mismo cargó nuestros pecados sobre su cuerpo en la cruz» y «se presentó una sola vez y para siempre para quitar el pecado» (Hebreos 9:26)?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 197,
+      "ref": "Efesios 1:13",
+      "texto": "Si el sábado es el sello de Dios y rechazarlo por el domingo constituirá la marca de la bestia, ¿por qué Pablo enseña que Dios selló a los creyentes «al darles el Espíritu Santo» cuando creyeron el evangelio, y Apocalipsis jamás menciona el domingo?"
+    },
+    {
+      "obra": "Manual de la Iglesia",
+      "pagina": 60,
+      "ref": "Mateo 16:18",
+      "texto": "Si el voto bautismal n.º 13 exige confesar que la Iglesia Adventista es «la iglesia remanente» de la profecía, ¿dónde estaba la iglesia verdadera antes de 1844 si Jesús prometió que el poder de la muerte no conquistaría su iglesia?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 389,
+      "ref": "2 Corintios 5:8",
+      "texto": "Si «la muerte constituye un estado de inconsciencia para todos los que han fallecido», ¿por qué Pablo deseaba estar «fuera de este cuerpo terrenal» porque entonces estaría «en el hogar celestial con el Señor» (2 Corintios 5:8) y Jesús prometió al ladrón «hoy estarás conmigo en el paraíso» (Lucas 23:43)?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 403,
+      "ref": "Apocalipsis 20:10",
+      "texto": "Si al término del milenio el fuego destruirá hasta extinguir por completo toda existencia de los impíos, ¿por qué Apocalipsis 20:10 dice que serán «atormentados día y noche por siempre jamás» y Mateo 25:46 usa la misma palabra («eterno») para la vida y el castigo?"
+    },
+    {
+      "obra": "28 Creencias",
+      "pagina": 246,
+      "ref": "Hebreos 1:1-2",
+      "texto": "Si los escritos de Elena G. de White son «una permanente y autorizada fuente de verdad» para la iglesia, ¿cómo se concilia eso con Hebreos 1:1-2 —Dios habló finalmente por su Hijo— y la fe confiada «una vez y para siempre» (Judas 1:3)?"
+    },
+    {
+      "obra": "Movement of Destiny (1971)",
+      "pagina": 409,
+      "ref": "Hebreos 1:4-8",
+      "texto": "Si la organización necesitó «87 años de puntos de vista contrapuestos sobre la deidad de Cristo y la Trinidad» mientras pioneros como Urías Smith defendían el arrianismo y reducían a Jesús a «Miguel», ¿cómo puede reclamarse infalibilidad doctrinal como «iglesia remanente» desde 1844?"
+    }
+  ]
+}

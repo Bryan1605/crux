@@ -1,0 +1,1956 @@
+{
+  "id": "sabiduria",
+  "name": "Sabiduría",
+  "abbr": "Sab",
+  "base": "codex",
+  "label": "Traducción de trabajo · Borrador",
+  "status": "borrador",
+  "license": "CC BY-NC-SA 3.0",
+  "scope": "Libro completo (caps. 1–19, 435 versículos), según los versículos que conserva el Codex Sinaiticus. Borrador sin revisar.",
+  "chapters": [
+    {
+      "num": 1,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Amen la justicia, ustedes que juzgan la tierra; piensen acerca del Señor con bondad y búsquenlo con sencillez de corazón."
+        },
+        {
+          "n": 2,
+          "text": "Porque se deja hallar por quienes no lo ponen a prueba, y se manifiesta a quienes no desconfían de él."
+        },
+        {
+          "n": 3,
+          "text": "Porque los razonamientos torcidos apartan de Dios, y el poder, puesto a prueba, reprende a los insensatos."
+        },
+        {
+          "n": 4,
+          "text": "Porque en un alma maquinadora del mal no entrará la sabiduría, ni habitará en un cuerpo esclavo del pecado."
+        },
+        {
+          "n": 5,
+          "text": "Porque el santo espíritu de instrucción huirá del engaño, se alzará y apartará de los razonamientos insensatos, y será rechazado al sobrevenir la injusticia."
+        },
+        {
+          "n": 6,
+          "text": "Porque la sabiduría es un espíritu amigo de los hombres, y no dejará impune al blasfemo por sus labios; pues Dios es testigo de sus riñones, vigilante verdadero de su corazón y oyente de su lengua."
+        },
+        {
+          "n": 7,
+          "text": "Porque el espíritu del Señor ha llenado el orbe, y lo que sostiene todas las cosas tiene conocimiento de la voz."
+        },
+        {
+          "n": 8,
+          "text": "Por esto, nadie que profiera palabras injustas podrá ocultarse, ni pasará de largo junto a él la justicia que reprende."
+        },
+        {
+          "n": 9,
+          "text": "Porque habrá examen de las maquinaciones del impío, y el eco de sus palabras llegará hasta el Señor para denuncia de sus iniquidades."
+        },
+        {
+          "n": 10,
+          "text": "Porque un oído celoso lo escucha todo, y el murmullo de las quejas no queda oculto.",
+          "note": "El texto base omite la sigma final y escribe ου («no»); se sigue la corrección ca (ουϲ, «oído»)."
+        },
+        {
+          "n": 11,
+          "text": "Guárdense, pues, de la murmuración inútil y refrenen su lengua de la maledicencia; porque una palabra secreta no pasará en vano, y la boca mentirosa mata el alma.",
+          "note": "La primera mano omite el verbo al final de la cláusula («…una palabra oculta [es] vana»); se sigue la adición del corrector ca (ου πορευϲεται, «no pasará en vano»)."
+        },
+        {
+          "n": 12,
+          "text": "No busquen con afán la muerte en el extravío de su vida, ni atraigan sobre sí la destrucción con las obras de sus manos."
+        },
+        {
+          "n": 13,
+          "text": "Porque Dios no hizo la muerte, ni se complace en la perdición de los vivientes."
+        },
+        {
+          "n": 14,
+          "text": "Pues él creó todas las cosas para que existan, y saludables son las criaturas del mundo; no hay en ellas veneno de destrucción, ni reino del Hades sobre la tierra.",
+          "note": "La primera mano introduce por error «ου γαρ» y un «ειϲ» repetido antes de «εκτιϲεν γαρ ειϲ το ειναι τα παντα»; el propio escriba S1 los suprime."
+        },
+        {
+          "n": 15,
+          "text": "Porque la justicia es inmortal."
+        },
+        {
+          "n": 16,
+          "text": "Mas los impíos, con sus manos y sus palabras, lo llamaron; teniéndolo por amigo, se consumieron e hicieron un pacto con él, porque son dignos de pertenecer a su parte.",
+          "note": "El texto base escribe προϲεκαλεϲατο en singular por omisión de la ν; S1 corrige en προϲεκαλεϲαντο («lo llamaron»)."
+        }
+      ]
+    },
+    {
+      "num": 2,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Porque dijeron entre sí, razonando sin rectitud: «Breve y triste es nuestra vida, y no hay remedio en el fin del hombre, ni se ha conocido a nadie que regrese del Hades."
+        },
+        {
+          "n": 2,
+          "text": "Porque por azar fuimos engendrados, y después de esto seremos como si no hubiéramos existido; pues humo en las narices es nuestro aliento, y la palabra, una chispa en el latir de nuestro corazón."
+        },
+        {
+          "n": 3,
+          "text": "Apagada esa chispa, el cuerpo se volverá ceniza, y el espíritu se disipará como aire tenue."
+        },
+        {
+          "n": 4,
+          "text": "Y nuestro nombre será olvidado con el tiempo, y nadie se acuerda de nuestras obras; nuestra vida pasará como huellas de una nube y se disipará como niebla ahuyentada por los rayos del sol y abatida por su calor."
+        },
+        {
+          "n": 5,
+          "text": "Porque paso de una sombra es nuestro tiempo, y no hay vuelta atrás de nuestro fin, pues ha quedado sellado y nadie regresa."
+        },
+        {
+          "n": 6,
+          "text": "Vengan, pues, y disfrutemos de los bienes presentes, y usemos de la creación con el ardor propio de la juventud."
+        },
+        {
+          "n": 7,
+          "text": "Sacémonos de vino costoso y de perfumes, y que no pase de largo ante mí la flor del aire.",
+          "note": "El texto base escribe με («a mí», en singular frente al plural del contexto; el corrector ca enmienda en ημαϲ, «a nosotros») y αεροϲ («del aire», metátesis/variante por εαροϲ, «de la primavera»)."
+        },
+        {
+          "n": 8,
+          "text": "Coronémonos con capullos de rosas antes de que se marchiten."
+        },
+        {
+          "n": 9,
+          "text": "Que ninguno de nosotros quede privado de nuestro desenfreno; dejemos por todas partes señales de nuestra alegría, porque esta es nuestra parte y este nuestro lote."
+        },
+        {
+          "n": 10,
+          "text": "Oprimamos al pobre justo; no tengamos piedad de la viuda, ni respetemos las canas añosas del anciano."
+        },
+        {
+          "n": 11,
+          "text": "Sea nuestra fuerza la ley de la justicia, pues lo débil queda demostrado inútil."
+        },
+        {
+          "n": 12,
+          "text": "Tendamos emboscadas al justo, porque nos resulta incómodo y se opone a nuestras obras; nos reprocha los pecados contra la ley y nos echa en cara las faltas contra nuestra educación."
+        },
+        {
+          "n": 13,
+          "text": "Se jacta de tener conocimiento de Dios y se llama a sí mismo siervo del Señor.",
+          "note": "«Siervo» traduce παιδα, que también puede significar «hijo» (cf. v. 18)."
+        },
+        {
+          "n": 14,
+          "text": "Se ha vuelto para nosotros un reproche de nuestros pensamientos; nos resulta pesado hasta el verlo,"
+        },
+        {
+          "n": 15,
+          "text": "porque su vida es distinta a la de los demás, y singulares son sus sendas."
+        },
+        {
+          "n": 16,
+          "text": "Hemos resultado escoria para él, y se aparta de nuestros caminos como de impurezas; declara dichoso el fin de los justos y se jacta de tener a Dios por padre."
+        },
+        {
+          "n": 17,
+          "text": "Y veamos si sus palabras son verdaderas, y probemos lo que sucederá en su desenlace."
+        },
+        {
+          "n": 18,
+          "text": "Pues si el justo es hijo de Dios, él lo sostendrá y lo librará de mano de sus adversarios."
+        },
+        {
+          "n": 19,
+          "text": "Con ultraje y tormento pongámoslo a prueba, para conocer su mansedumbre y comprobar su paciencia ante el mal."
+        },
+        {
+          "n": 20,
+          "text": "Condenémoslo a una muerte afrentosa, pues habrá visitación para él según sus propias palabras»."
+        },
+        {
+          "n": 21,
+          "text": "Esto razonaron, y se extraviaron; porque su maldad los cegó,"
+        },
+        {
+          "n": 22,
+          "text": "y no conocieron los misterios de Dios, ni esperaron recompensa de la santidad, ni estimaron el premio de las almas irreprochables.",
+          "note": "El texto base escribe ψυχαν por ψυχων, como corrige ca («almas»)."
+        },
+        {
+          "n": 23,
+          "text": "Porque Dios creó al hombre para la incorruptibilidad, y lo hizo imagen de su propia naturaleza."
+        },
+        {
+          "n": 24,
+          "text": "Mas por envidia del diablo entró la muerte en el mundo, y la experimentan quienes pertenecen a su parte."
+        }
+      ]
+    },
+    {
+      "num": 3,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Pero las almas de los justos están en mano de Dios, y ningún tormento las tocará."
+        },
+        {
+          "n": 2,
+          "text": "A los ojos de los insensatos parecieron haber muerto, y su partida fue tenida por desgracia,"
+        },
+        {
+          "n": 3,
+          "text": "y su marcha lejos de nosotros, por quebranto; pero ellos están en paz."
+        },
+        {
+          "n": 4,
+          "text": "Pues aunque a la vista de los hombres sean castigados, su esperanza está llena de inmortalidad;"
+        },
+        {
+          "n": 5,
+          "text": "y tras ser brevemente corregidos, recibirán grandes bienes, porque Dios los puso a prueba y los halló dignos de sí."
+        },
+        {
+          "n": 6,
+          "text": "Como oro en el crisol los probó, y como holocausto de sacrificio los aceptó."
+        },
+        {
+          "n": 7,
+          "text": "Y en el tiempo de su visitación resplandecerán, y correrán como chispas por el rastrojo."
+        },
+        {
+          "n": 8,
+          "text": "Juzgarán a las naciones y dominarán pueblos, y el Señor reinará sobre ellos por los siglos."
+        },
+        {
+          "n": 9,
+          "text": "Los que confían en él comprenderán la verdad, y los fieles permanecerán con él en amor; porque gracia y misericordia hay para sus santos, y visitación entre sus elegidos."
+        },
+        {
+          "n": 10,
+          "text": "Pero los impíos recibirán castigo conforme a lo que razonaron, los que despreciaron al justo y se apartaron del Señor."
+        },
+        {
+          "n": 11,
+          "text": "Mas desdichado es quien menosprecia la sabiduría y la instrucción; vana es la esperanza de ellos, inútiles sus fatigas e inservibles sus obras."
+        },
+        {
+          "n": 12,
+          "text": "Sus mujeres son insensatas y malvados sus hijos; maldita es su descendencia."
+        },
+        {
+          "n": 13,
+          "text": "Porque dichosa es la estéril sin mancha, que no conoció lecho en pecado: tendrá fruto en la visitación de las almas."
+        },
+        {
+          "n": 14,
+          "text": "Y el eunuco que no obró iniquidad con su mano ni maquinó maldades contra el Señor: a él le será dada por su fidelidad una gracia escogida y una heredad más apetecible en el santuario del Señor."
+        },
+        {
+          "n": 15,
+          "text": "Porque glorioso es el fruto de los buenos trabajos, e indefectible la raíz de la prudencia."
+        },
+        {
+          "n": 16,
+          "text": "Mas los hijos de adúlteros quedarán malogrados, y la descendencia de un lecho ilícito desaparecerá."
+        },
+        {
+          "n": 17,
+          "text": "Pues aunque lleguen a tener larga vida, en nada serán tenidos, y deshonrosa será al final su vejez;"
+        },
+        {
+          "n": 18,
+          "text": "y si mueren pronto, no tendrán esperanza ni consuelo en el día de la sentencia.",
+          "note": "La primera mano duplica por error parte del v. 17 y del inicio del v. 18 («εαν τε γαρ οξεωϲ τελευτηϲουϲιν ειϲ ουθεν λογιϲθηϲονται και ατιμον επ εϲχατων το γηραϲ αυτω») antes de retomar el versículo; se sigue la supresión del corrector ca."
+        },
+        {
+          "n": 19,
+          "text": "Porque duros son los fines de una generación injusta."
+        }
+      ]
+    },
+    {
+      "num": 4,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Porque mejor es la falta de hijos con virtud, pues hay inmortalidad en su memoria, ya que es reconocida tanto ante Dios como ante los hombres."
+        },
+        {
+          "n": 2,
+          "text": "Cuando está presente, la imitan, y cuando parte, la añoran; y en la eternidad marcha en cortejo llevando la corona, vencedora en el certamen de combates sin mancha."
+        },
+        {
+          "n": 3,
+          "text": "Pero la numerosa prole de los impíos de nada servirá, y de vástagos bastardos no echará raíz en lo hondo ni afirmará un cimiento seguro.",
+          "note": "El texto base omite una ϲ y escribe μοχευματων; se sigue la corrección ca (μοϲχευματων, «vástagos/retoños»)."
+        },
+        {
+          "n": 4,
+          "text": "Pues aunque por un tiempo reverdezca en sus ramas, habiendo vivido de modo inestable, será sacudido por el viento y desarraigado por la violencia de los vientos.",
+          "note": "El texto base escribe και (por καν, «aunque», que exige el subjuntivo αναθαλη; corregido por ca) y βεβιωκοτα («habiendo vivido», frente a βεβηκοτα «asentados» de ca)."
+        },
+        {
+          "n": 5,
+          "text": "Sus ramas tiernas se quebrarán sin madurar, y su fruto será inútil, sin sazón para comer y bueno para nada."
+        },
+        {
+          "n": 6,
+          "text": "Pues los hijos engendrados de uniones ilícitas son testigos de maldad contra sus padres en el día de su examen."
+        },
+        {
+          "n": 7,
+          "text": "Pero el justo, aunque muera prematuramente, estará en descanso.",
+          "note": "El texto base escribe ετελευτηϲαι por τελευτηϲαι, corregido por S1 y ca."
+        },
+        {
+          "n": 8,
+          "text": "Porque la vejez honorable no es la de muchos años, ni se mide por el número de años;"
+        },
+        {
+          "n": 9,
+          "text": "sino que las canas son la prudencia para los hombres, y la edad avanzada, una vida sin mancha."
+        },
+        {
+          "n": 10,
+          "text": "Habiéndose hecho agradable a Dios, fue amado; y viviendo entre pecadores, fue trasladado."
+        },
+        {
+          "n": 11,
+          "text": "Fue arrebatado para que la maldad no alterara la inteligencia ni el engaño sedujera su alma;"
+        },
+        {
+          "n": 12,
+          "text": "porque la fascinación de la vileza oscurece lo bueno, y el vértigo de la pasión pervierte una mente inocente."
+        },
+        {
+          "n": 13,
+          "text": "Perfeccionado en poco tiempo, cumplió largos años;"
+        },
+        {
+          "n": 14,
+          "text": "porque su alma era grata ante el Señor; por eso salió deprisa de en medio de la maldad. Pero los pueblos, al verlo, no comprendieron ni pusieron en su mente esto:"
+        },
+        {
+          "n": 15,
+          "text": "que gracia y misericordia hay para sus elegidos, y visitación entre sus santos."
+        },
+        {
+          "n": 16,
+          "text": "Y el justo que ha muerto condenará a los impíos que viven, y la juventud llegada a plenitud, la ancianidad de muchos años del injusto."
+        },
+        {
+          "n": 17,
+          "text": "Pues verán el fin del sabio, pero no comprenderán qué dispuso acerca de él ni para qué lo puso a salvo el Señor.",
+          "note": "El texto base escribe ηϲφαλιϲα por ηϲφαλιϲατο («lo puso a salvo»)."
+        },
+        {
+          "n": 18,
+          "text": "Lo verán y lo despreciarán, pero de ellos el Señor se reirá.",
+          "note": "La primera mano duplica αυτουϲ antes de αυτουϲ δε; se sigue la supresión del corrector ca (conservando αυτον, «lo verán», donde ca enmienda en γαρ)."
+        },
+        {
+          "n": 19,
+          "text": "Y después de esto vendrán a ser un cadáver deshonroso y objeto de oprobio entre los muertos para siempre; porque los precipitará mudos de cabeza, los sacudirá desde los cimientos, quedarán del todo desolados, estarán en dolor, y su memoria perecerá."
+        },
+        {
+          "n": 20,
+          "text": "Vendrán temerosos al recuento de sus pecados, y sus iniquidades los acusarán cara a cara."
+        }
+      ]
+    },
+    {
+      "num": 5,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Entonces estará en pie con gran denuedo el justo frente a quienes lo afligieron y despreciaron sus fatigas."
+        },
+        {
+          "n": 2,
+          "text": "Al verlo, se turbarán con terrible temor y quedarán atónitos ante lo prodigioso de su salvación."
+        },
+        {
+          "n": 3,
+          "text": "Se dirán entre sí, arrepentidos, y gemirán por la angustia de espíritu, los cuales también dirán:"
+        },
+        {
+          "n": 4,
+          "text": "«Este era aquel a quien un día tuvimos por objeto de risa y por refrán de oprobio; ¡insensatos de nosotros!, consideramos su vida una locura y su fin una deshonra."
+        },
+        {
+          "n": 5,
+          "text": "¿Cómo ha sido contado entre los hijos de Dios, y entre los santos está su heredad?"
+        },
+        {
+          "n": 6,
+          "text": "Conque nos extraviamos del camino de la verdad, y la luz de la justicia no brilló para nosotros, ni el sol salió para nosotros."
+        },
+        {
+          "n": 7,
+          "text": "Nos llenamos de sendas de iniquidad y de perdición, y atravesamos desiertos intransitables; pero el camino del Señor no lo conocimos."
+        },
+        {
+          "n": 8,
+          "text": "¿De qué nos aprovechó la soberbia, y qué nos aportó la riqueza junto con la jactancia?"
+        },
+        {
+          "n": 9,
+          "text": "Todo aquello pasó como una sombra y como una noticia que corre de paso;"
+        },
+        {
+          "n": 10,
+          "text": "como una nave que surca el agua agitada, de la que, una vez pasada, no es posible hallar huella ni estela de su quilla en las olas;"
+        },
+        {
+          "n": 11,
+          "text": "o como de un ave que cruza volando el aire: no se halla rastro alguno de su travesía, sino que el aire ligero, azotado por el batir de sus alas y hendido por el impulso silbante de sus plumas agitadas, es atravesado, y después de esto no se encuentra señal de su paso;",
+          "note": "El texto base escribe por descuido πονηριαϲ («maldad»); se sigue la corrección ca (ποριαϲ, «travesía/vuelo»)."
+        },
+        {
+          "n": 12,
+          "text": "o como de una flecha disparada hacia un blanco: hendido el aire, al instante vuelve sobre sí mismo, de modo que no se conoce su camino."
+        },
+        {
+          "n": 13,
+          "text": "Así también nosotros, apenas nacidos, nos consumimos, y ninguna señal de virtud tuvimos que mostrar, sino que en nuestra maldad fuimos del todo gastados»."
+        },
+        {
+          "n": 14,
+          "text": "Porque la esperanza del impío es como pelusa llevada por el viento, como escarcha ligera ahuyentada por el torbellino, y como humo dispersado por el viento; pasa como el recuerdo de un huésped de un solo día.",
+          "note": "El texto base escribe μνιαν por μνια («recuerdo»; ca añade η, «o como…») y διωδευϲεν («pasó», frente a παρωδευϲεν de ca)."
+        },
+        {
+          "n": 15,
+          "text": "Pero los justos viven para siempre; en el Señor está su recompensa, y su cuidado junto al Altísimo."
+        },
+        {
+          "n": 16,
+          "text": "Por esto recibirán el reino de esplendor y la diadema de hermosura de mano del Señor; porque con su diestra los cubrirá y con su brazo los protegerá como un escudo.",
+          "note": "El texto base escribe αυτου en singular; se sigue la corrección ca/cc (αυτων, «los protegerá»)."
+        },
+        {
+          "n": 17,
+          "text": "Tomará por armadura su celo y abrirá paso a la creación para castigo de sus enemigos;",
+          "note": "El texto base escribe οδοποιηϲει («abrirá paso / encaminará»); el corrector ca enmienda en οπλοποιηϲει («armará»)."
+        },
+        {
+          "n": 18,
+          "text": "se vestirá con la coraza de la justicia y se pondrá por yelmo el juicio sin fingimiento;"
+        },
+        {
+          "n": 19,
+          "text": "tomará por escudo invencible la santidad;"
+        },
+        {
+          "n": 20,
+          "text": "afilará como espada una ira implacable, y el mundo luchará junto con él contra los insensatos."
+        },
+        {
+          "n": 21,
+          "text": "Partirán certeros los dardos de los relámpagos, y como desde un arco bien curvado de las nubes saltarán hacia el blanco;"
+        },
+        {
+          "n": 22,
+          "text": "desde una catapulta serán arrojados granizos llenos de furor; se enfurecerá contra ellos el agua del mar, y los ríos los inundarán implacablemente."
+        },
+        {
+          "n": 23,
+          "text": "Se alzará contra ellos un soplo de poder y como un torbellino los aventará; la iniquidad dejará desierta toda la tierra, y el mal obrar derribará los tronos de los poderosos."
+        }
+      ]
+    },
+    {
+      "num": 6,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Escuchen, pues, reyes, y entiendan; aprendan, jueces de los confines de la tierra.",
+          "note": "El texto base escribe βαϲιλευϲ en singular; se sigue la corrección cc (βαϲιλειϲ, «reyes», acorde con el plural del versículo)."
+        },
+        {
+          "n": 2,
+          "text": "Presten oído los que dominan multitudes y se enorgullecen sobre las muchedumbres de las naciones."
+        },
+        {
+          "n": 3,
+          "text": "Porque de parte del Señor les fue dado el dominio, y el poder de parte del Altísimo, quien examinará las obras de ustedes y escudriñará sus designios."
+        },
+        {
+          "n": 4,
+          "text": "Porque siendo servidores de su reino, no juzgaron rectamente, ni guardaron la ley, ni anduvieron conforme al designio de Dios."
+        },
+        {
+          "n": 5,
+          "text": "Espantosa y prontamente vendrá sobre ustedes, porque un juicio implacable recae sobre los que están en lo alto."
+        },
+        {
+          "n": 6,
+          "text": "Porque el más pequeño es digno de perdón por misericordia, mas los poderosos serán examinados poderosamente.",
+          "note": "El texto base escribe ευγνωϲτοϲ («bien conocido»); se sigue la corrección ca (ϲυγνωϲτοϲ, «perdonable / digno de perdón»)."
+        },
+        {
+          "n": 7,
+          "text": "Porque no retrocederá ante persona alguna el Soberano de todo, ni sentirá respeto ante la grandeza; pues al pequeño y al grande él mismo los hizo, y de igual modo vela por todos."
+        },
+        {
+          "n": 8,
+          "text": "Mas sobre los poderosos se cierne una rigurosa indagación."
+        },
+        {
+          "n": 9,
+          "text": "A ustedes, pues, oh tiranos, se dirigen mis palabras, para que aprendan sabiduría y no caigan."
+        },
+        {
+          "n": 10,
+          "text": "Porque quienes guardaron santamente las cosas santas serán santificados, y quienes fueron instruidos en ellas hallarán defensa."
+        },
+        {
+          "n": 11,
+          "text": "Deseen, pues, mis palabras; anhélenlas, y serán instruidos."
+        },
+        {
+          "n": 12,
+          "text": "Resplandeciente e inmarchitable es la sabiduría; fácilmente se deja contemplar por quienes la aman y es hallada por quienes la buscan."
+        },
+        {
+          "n": 13,
+          "text": "Se anticipa a darse a conocer primero a quienes la desean."
+        },
+        {
+          "n": 14,
+          "text": "Quien madruga por ella no se fatigará, pues la hallará sentada junto a sus puertas.",
+          "note": "El texto base escribe πλουτων αυτου («sus riquezas»); se sigue la corrección ca (πυλων, «puertas»)."
+        },
+        {
+          "n": 15,
+          "text": "Porque reflexionar acerca de ella es perfección de la prudencia, y quien por ella vela pronto estará libre de afanes."
+        },
+        {
+          "n": 16,
+          "text": "Porque ella misma anda alrededor buscando a los que son dignos de ella, en los senderos se les muestra benévola y en todo pensamiento les sale al encuentro."
+        },
+        {
+          "n": 17,
+          "text": "Porque el principio más verdadero de ella es el deseo de instrucción, y el cuidado de la instrucción es amor;",
+          "note": "La primera mano repite por error επιθυμια («deseo») al final del versículo; se sigue la corrección de S1 y ca (αγαπη, «amor», que enlaza con el v. 18)."
+        },
+        {
+          "n": 18,
+          "text": "el amor es la observancia de sus leyes, y la atención a las leyes es garantía de incorruptibilidad,",
+          "note": "El texto base escribe αφθαρϲια en nominativo; se sigue la corrección ca (αφθαρϲιαϲ, «de incorruptibilidad»)."
+        },
+        {
+          "n": 19,
+          "text": "y la incorruptibilidad hace estar cerca de Dios;"
+        },
+        {
+          "n": 20,
+          "text": "así pues, el deseo de sabiduría eleva a un reino.",
+          "note": "El texto base presenta una corrupción de escriba (επιθυμιαϲ γαρ αναιρει, sin «ϲοφιαϲ» y con «αναιρει» en lugar de «αναγει»); se siguen las correcciones ca y cc (επιθυμια γαρ ϲοφιαϲ αναγει, «el deseo de sabiduría eleva»)."
+        },
+        {
+          "n": 21,
+          "text": "Así pues, si se deleitan en tronos y cetros, tiranos de pueblos, honren la sabiduría, para que reinen por los siglos."
+        },
+        {
+          "n": 22,
+          "text": "Qué es la sabiduría y cómo llegó a ser, lo anunciaré, y no les ocultaré misterios; sino que seguiré sus huellas desde el principio de su origen, pondré a plena luz su conocimiento y no pasaré de largo junto a la verdad.",
+          "note": "El texto base escribe απογρυψω por αποκρυψω («ocultaré»), como corrige ca."
+        },
+        {
+          "n": 23,
+          "text": "Ni tampoco caminaré en compañía de la envidia corrosiva, porque esta no tendrá parte con la sabiduría."
+        },
+        {
+          "n": 24,
+          "text": "Pero la multitud de sabios es salvación del mundo, y un rey prudente, estabilidad de su pueblo."
+        },
+        {
+          "n": 25,
+          "text": "Por lo tanto, déjense instruir por mis palabras, y sacarán provecho."
+        }
+      ]
+    },
+    {
+      "num": 7,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Soy también yo un hombre mortal, igual a todos, y descendiente del primero que fue modelado de la tierra; en el vientre de una madre fui esculpido en carne,"
+        },
+        {
+          "n": 2,
+          "text": "cuajado en sangre en el tiempo de diez meses, a partir de simiente de varón y del placer del lecho que concurrió con ella."
+        },
+        {
+          "n": 3,
+          "text": "Y también yo, al nacer, aspiré el aire común y caí sobre la tierra de igual condición, profiriendo, al llorar, el primer grito igual al de todos."
+        },
+        {
+          "n": 4,
+          "text": "En pañales fui criado y entre cuidados;"
+        },
+        {
+          "n": 5,
+          "text": "porque ningún rey tuvo otro principio de nacimiento,"
+        },
+        {
+          "n": 6,
+          "text": "sino que una sola es para todos la entrada en el mundo, e igual la salida."
+        },
+        {
+          "n": 7,
+          "text": "Por esto rogué, y me fue dada la prudencia; supliqué, y vino a mí un espíritu de sabiduría."
+        },
+        {
+          "n": 8,
+          "text": "La preferí a cetros y tronos, y la riqueza la tuve por nada en comparación con ella;"
+        },
+        {
+          "n": 9,
+          "text": "ni la comparé con piedra de incalculable precio; porque todo el oro ante su vista es un poco de arena, y como barro será considerada la plata delante de ella."
+        },
+        {
+          "n": 10,
+          "text": "Más que la salud y la hermosura la amé, y preferí tenerla en lugar de la luz, porque inextinguible es el resplandor que de ella brota."
+        },
+        {
+          "n": 11,
+          "text": "Mas me vinieron todos los bienes juntamente con ella, y una riqueza innumerable en su mano.",
+          "note": "El texto base escribe αγα por omisión silábica; S1 corrige en αγαθα («bienes»)."
+        },
+        {
+          "n": 12,
+          "text": "Me alegré de todos ellos, porque a su frente va la sabiduría; aunque ignoraba entonces que ella era el origen de todos estos."
+        },
+        {
+          "n": 13,
+          "text": "Sin engaño aprendí y sin envidia comparto; su riqueza no la escondo."
+        },
+        {
+          "n": 14,
+          "text": "Porque es un tesoro inagotable para los hombres; quienes se valen de él entablan amistad con Dios, recomendados por los dones de la instrucción."
+        },
+        {
+          "n": 15,
+          "text": "Concédame Dios hablar con acierto y concebir pensamientos dignos de lo que se dice; porque él mismo es guía de la sabiduría y enderezador de los sabios."
+        },
+        {
+          "n": 16,
+          "text": "Porque en su mano estamos nosotros y nuestras palabras, así como toda prudencia y el conocimiento de los oficios."
+        },
+        {
+          "n": 17,
+          "text": "Pues él mismo me dio un conocimiento infalible de lo que existe, para saber la constitución del mundo y la fuerza de los elementos,"
+        },
+        {
+          "n": 18,
+          "text": "el principio, el fin y el medio de los tiempos, los cambios de los solsticios y las mudanzas de las estaciones,"
+        },
+        {
+          "n": 19,
+          "text": "el ciclo del año y la disposición de los astros,"
+        },
+        {
+          "n": 20,
+          "text": "las naturalezas de los animales y los instintos de las fieras, la violencia de los vientos y los pensamientos de los hombres, las variedades de las plantas y las virtudes de las raíces.",
+          "note": "El texto base escribe νομουϲ και («y leyes y») delante de θηριων; se sigue la corrección ca (θυμουϲ, «instintos/arrebatos de las fieras»). «Vientos» traduce πνατων (también «espíritus»)."
+        },
+        {
+          "n": 21,
+          "text": "Cuantas cosas están ocultas y manifiestas conocí, pues la artífice de todas las cosas me instruyó: la sabiduría."
+        },
+        {
+          "n": 22,
+          "text": "Porque hay en ella un espíritu inteligente, santo, único, múltiple, sutil, ágil, penetrante, incontaminado, claro, indemne, amante del bien, agudo,"
+        },
+        {
+          "n": 23,
+          "text": "sin trabas, bienhechor, amigo de los hombres, firme, seguro, sereno, todopoderoso, que todo lo vigila y que penetra todos los espíritus inteligentes, puros y sutilísimos."
+        },
+        {
+          "n": 24,
+          "text": "Porque más ágil que todo movimiento es la sabiduría; todo lo atraviesa y penetra por su pureza."
+        },
+        {
+          "n": 25,
+          "text": "Pues es hálito del poder de Dios y emanación pura de la gloria del Todopoderoso; por esto nada manchado se desliza en ella."
+        },
+        {
+          "n": 26,
+          "text": "Porque es resplandor de la luz eterna, espejo sin mancha de la acción de Dios e imagen de su bondad."
+        },
+        {
+          "n": 27,
+          "text": "Siendo una sola, todo lo puede, y permaneciendo en sí misma, todo lo renueva; de generación en generación, pasando a almas santas, forma amigos de Dios y profetas.",
+          "note": "El texto base escribe προϲφηταϲ por descuido; S1 corrige en προφηταϲ («profetas»)."
+        },
+        {
+          "n": 28,
+          "text": "Porque a nadie ama Dios sino al que convive con la sabiduría.",
+          "note": "El texto base escribe por error de escriba θ θϲ; se sigue la corrección cc (ο θϲ, «Dios»)."
+        },
+        {
+          "n": 29,
+          "text": "Porque es ella más hermosa que el sol, y sobrepasa toda constelación de astros; comparada con la luz, resulta superior,",
+          "note": "El texto base escribe ευπρεπρεϲτερα por dittografía de ρ; S1 corrige en ευπρεπεϲτερα («más hermosa»)."
+        },
+        {
+          "n": 30,
+          "text": "pues a aquella la sucede la noche, mas contra la sabiduría no prevalece la maldad."
+        }
+      ]
+    },
+    {
+      "num": 8,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Se extiende con vigor de un extremo al otro, y todo lo gobierna bondadosamente."
+        },
+        {
+          "n": 2,
+          "text": "A esta amé y la busqué desde mi juventud; procuré tomarla por esposa para mí y me hice enamorado de su hermosura."
+        },
+        {
+          "n": 3,
+          "text": "Glorifica su noble linaje al tener convivencia con Dios, y el Soberano de todo la amó."
+        },
+        {
+          "n": 4,
+          "text": "Porque es iniciada en el conocimiento de Dios y quien elige sus obras."
+        },
+        {
+          "n": 5,
+          "text": "Y si la riqueza es un bien deseable en la vida, ¿qué es más preciado que la sabiduría, la que todo lo obra?",
+          "note": "El texto base escribe περιεργαζομενηϲ; S1 corrige en εργαζομενηϲ («que todo lo obra»)."
+        },
+        {
+          "n": 6,
+          "text": "Y si la prudencia actúa, ¿quién, entre cuanto existe, es más artífice que ella?"
+        },
+        {
+          "n": 7,
+          "text": "Y si alguien ama la justicia, los trabajos de ella son virtudes; pues enseña templanza y prudencia, justicia y fortaleza, cosas que son más útiles que ninguna otra en la vida para los hombres."
+        },
+        {
+          "n": 8,
+          "text": "Y si alguien desea además mucha experiencia, ella conoce las cosas antiguas y sabe conjeturar las venideras, conoce los giros de los discursos y las soluciones de los enigmas; conoce de antemano señales y prodigios, y los desenlaces de los momentos y los tiempos."
+        },
+        {
+          "n": 9,
+          "text": "Decidí, por tanto, traerla para convivir conmigo, sabiendo que sería para mí consejera de bienes y consuelo en las preocupaciones y la tristeza."
+        },
+        {
+          "n": 10,
+          "text": "Tendré por ella gloria entre las muchedumbres, y honor ante los ancianos, aunque joven;"
+        },
+        {
+          "n": 11,
+          "text": "seré hallado agudo en el juicio, y ante la vista de los poderosos seré admirado."
+        },
+        {
+          "n": 12,
+          "text": "Cuando calle, me esperarán; cuando hable, me prestarán atención; y si me extiendo hablando, pondrán sus manos sobre su boca."
+        },
+        {
+          "n": 13,
+          "text": "Tendré por ella inmortalidad, y dejaré un recuerdo eterno a quienes vengan después de mí."
+        },
+        {
+          "n": 14,
+          "text": "Gobernaré pueblos, y las naciones se me someterán;"
+        },
+        {
+          "n": 15,
+          "text": "al oír de mí temerán tiranos terribles; ante la multitud me mostraré bueno, y en la guerra valiente."
+        },
+        {
+          "n": 16,
+          "text": "Al entrar en mi casa, descansaré junto a ella; pues no tiene amargura su trato ni dolor su convivencia, sino regocijo y alegría."
+        },
+        {
+          "n": 17,
+          "text": "Habiendo meditado estas cosas en mi interior y considerado en mi corazón que el parentesco con la sabiduría es inmortalidad,"
+        },
+        {
+          "n": 18,
+          "text": "que en su amistad hay buen deleite, en las obras de sus manos deleite inagotable, en el ejercicio de su trato prudencia, y buena fama en la comunión con sus palabras, anduve dando vueltas buscando cómo traerla hacia mí.",
+          "note": "El texto base repite τερψιϲ («deleite») en la segunda cláusula; el corrector ca enmienda en πλουτοϲ («riqueza»)."
+        },
+        {
+          "n": 19,
+          "text": "Era yo un muchacho bien dotado, y me tocó en suerte un alma buena;"
+        },
+        {
+          "n": 20,
+          "text": "o más bien, siendo bueno, entré en un cuerpo sin mancha."
+        },
+        {
+          "n": 21,
+          "text": "Y comprendiendo que no de otro modo la poseería si Dios no me la diera —y también esto era ya señal de prudencia: saber de quién proviene tal don—, acudí al Señor, le supliqué y dije de todo mi corazón:"
+        }
+      ]
+    },
+    {
+      "num": 9,
+      "verses": [
+        {
+          "n": 1,
+          "text": "«Dios de los padres y Señor de tu misericordia, que hiciste todas las cosas con tu palabra,"
+        },
+        {
+          "n": 2,
+          "text": "y con tu sabiduría formaste al hombre, para que dominara sobre las criaturas hechas por ti"
+        },
+        {
+          "n": 3,
+          "text": "y gobernara el mundo con santidad y justicia, y juzgara con rectitud de alma:"
+        },
+        {
+          "n": 4,
+          "text": "dame la sabiduría que se sienta junto a tus tronos, y no me deseches de entre tus siervos.",
+          "note": "«Siervos» traduce παιδων, que también puede entenderse «hijos»."
+        },
+        {
+          "n": 5,
+          "text": "Porque yo soy tu siervo e hijo de tu esclava, un hombre débil y de breve vida, y demasiado pequeño para comprender el juicio y las leyes."
+        },
+        {
+          "n": 6,
+          "text": "Pues aunque alguien sea perfecto entre los hijos de los hombres, faltando la sabiduría que procede de ti, nada serán tenidos en cuenta.",
+          "note": "El texto base usa el plural λογιϲθηϲονται («serán tenidos»); el corrector ca ajusta al singular λογιϲθηϲεται."
+        },
+        {
+          "n": 7,
+          "text": "Tú me escogiste por rey de tu pueblo, y por juez de tus hijos y tus hijas."
+        },
+        {
+          "n": 8,
+          "text": "Me mandaste edificar un santuario en tu monte santo y, en la ciudad de tu morada, un altar, copia de la tienda santa que habías preparado desde el principio.",
+          "note": "La primera mano duplica οι antes de οικοδομηϲαι; se sigue la supresión del corrector ca."
+        },
+        {
+          "n": 9,
+          "text": "Contigo está la sabiduría, la que conoce tus obras y estaba presente cuando hacías el mundo, y sabe qué es agradable ante tus ojos y qué es recto en tus mandamientos."
+        },
+        {
+          "n": 10,
+          "text": "Envíala desde los santos cielos, y mándala desde el trono de tu gloria, para que, asistiendo conmigo, trabaje y yo sepa qué es grato delante de ti."
+        },
+        {
+          "n": 11,
+          "text": "Porque ella todo lo conoce y lo comprende, y me guiará con sensatez en mis acciones y me guardará en su gloria."
+        },
+        {
+          "n": 12,
+          "text": "Y serán aceptas mis obras, juzgaré a tu pueblo con justicia y seré digno del trono de mi padre.",
+          "note": "El texto base escribe por descuido αυτου («de él»); S1 y ca corrigen en μου («mis obras»)."
+        },
+        {
+          "n": 13,
+          "text": "Pues ¿qué hombre conocerá el designio de Dios, o quién alcanzará a concebir qué quiere el Señor?"
+        },
+        {
+          "n": 14,
+          "text": "Porque los razonamientos de los mortales son tímidos, e inseguras nuestras invenciones;",
+          "note": "La primera mano duplica αι delante de επιϲφαλιϲ; S1 lo suprime."
+        },
+        {
+          "n": 15,
+          "text": "porque un cuerpo corruptible abruma el alma, y la tienda terrenal pesa sobre la mente llena de cuidados."
+        },
+        {
+          "n": 16,
+          "text": "A duras penas conjeturamos las cosas de la tierra, y con fatiga hallamos lo que está al alcance de los pies; mas lo que hay en los cielos, ¿quién lo rastreó?"
+        },
+        {
+          "n": 17,
+          "text": "Y tu designio, ¿quién lo conoció, si tú no hubieras dado sabiduría y no hubieras enviado tu santo espíritu desde las alturas?"
+        },
+        {
+          "n": 18,
+          "text": "Y así fueron enderezadas las sendas de los que están en la tierra, los hombres fueron instruidos en lo que te agrada, y por tu sabiduría fueron salvados»."
+        }
+      ]
+    },
+    {
+      "num": 10,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Ella custodió al primero que fue modelado, padre del mundo, creado solo, y lo libró de su propia caída,"
+        },
+        {
+          "n": 2,
+          "text": "y le dio fuerza para dominar sobre todas las cosas."
+        },
+        {
+          "n": 3,
+          "text": "Mas un injusto, habiéndose apartado de ella en su ira, pereció juntamente con sus furores fratricidas."
+        },
+        {
+          "n": 4,
+          "text": "Por lo cual, cuando la tierra estaba siendo inundada, la sabiduría la salvó de nuevo, gobernando al justo por medio de un humilde madero."
+        },
+        {
+          "n": 5,
+          "text": "Ella también, cuando las naciones fueron confundidas en su unanimidad de maldad, reconoció al justo, lo conservó irreprensible delante de Dios y lo mantuvo fuerte frente a la ternura por su hijo.",
+          "note": "El texto base escribe τεκνουϲ por atracción de ϲπλαγχνοιϲ; el corrector corrige en τεκνου («de su hijo»)."
+        },
+        {
+          "n": 6,
+          "text": "Ella libró al justo, mientras perecían los impíos, cuando huía del fuego que descendía sobre la Pentápolis;"
+        },
+        {
+          "n": 7,
+          "text": "de cuya maldad aún permanece testimonio: una tierra árida y humeante, plantas que dan fruto en estaciones sin sazón, y una columna de sal erigida como monumento de un alma incrédula."
+        },
+        {
+          "n": 8,
+          "text": "Porque quienes pasaron de largo junto a la sabiduría no solo se perjudicaron al no conocer lo bueno, sino que además dejaron a la vida un recuerdo de su insensatez, para que ni siquiera en aquello en que tropezaron pudieran pasar inadvertidos."
+        },
+        {
+          "n": 9,
+          "text": "Pero la sabiduría libró de las fatigas a quienes la sirven."
+        },
+        {
+          "n": 10,
+          "text": "Ella guió por sendas rectas al justo que huía de la ira de su hermano; le mostró el reino de Dios y le dio conocimiento de cosas santas; lo hizo prosperar en sus trabajos y multiplicó el fruto de sus fatigas."
+        },
+        {
+          "n": 11,
+          "text": "En la codicia de quienes lo oprimían estuvo a su lado y lo enriqueció;"
+        },
+        {
+          "n": 12,
+          "text": "lo guardó de sus enemigos y lo puso a salvo de quienes le tendían emboscadas; y en un duro combate le adjudicó la victoria, para que supiera que la piedad es en todo caso más poderosa."
+        },
+        {
+          "n": 13,
+          "text": "Ella no abandonó al justo que había sido vendido, sino que lo libró del pecado;"
+        },
+        {
+          "n": 14,
+          "text": "descendió con él al pozo y en las cadenas no lo dejó, hasta traerle cetros de realeza y autoridad sobre quienes lo tiranizaban; mostró mentirosos a quienes lo calumniaron y le dio gloria eterna."
+        },
+        {
+          "n": 15,
+          "text": "Ella libró a un pueblo santo y a una descendencia irreprensible de una nación de opresores."
+        },
+        {
+          "n": 16,
+          "text": "Entró en el alma de un siervo del Señor e hizo frente a reyes terribles con prodigios y señales.",
+          "note": "El texto base escribe ανεϲτη βαϲιλευϲ delante del dativo plural φοβεροιϲ; se siguen las correcciones ca (αντεϲτη, «hizo frente») y cc (βαϲιλευϲι, «a reyes»)."
+        },
+        {
+          "n": 17,
+          "text": "Dio a los santos la recompensa de sus fatigas, los guió por un camino admirable, y se convirtió para ellos en refugio durante el día y en llamas de estrellas durante la noche.",
+          "note": "El texto base escribe αυτου en singular tras οϲιοιϲ; se sigue la corrección ca (αυτων, «de sus fatigas»)."
+        },
+        {
+          "n": 18,
+          "text": "Los hizo cruzar al mar Rojo y los llevó a través de muchas aguas;"
+        },
+        {
+          "n": 19,
+          "text": "mas a sus enemigos los sumergió y desde lo profundo del abismo los arrojó fuera.",
+          "note": "La primera mano escribe κατεπαυϲε («hizo cesar»), εκ θαμβουϲ αβραϲεν (por salto/metátesis de εκ βαθουϲ αβυϲϲου ανεβραϲεν) y repite al final el v. 16; se siguen las enmiendas de S1 y ca."
+        },
+        {
+          "n": 20,
+          "text": "Por esto los justos despojaron a los impíos y cantaron himnos, Señor, a tu santo nombre, y alabaron unánimes tu mano protectora;"
+        },
+        {
+          "n": 21,
+          "text": "porque la sabiduría abrió la boca de los mudos e hizo elocuentes las lenguas de los niños."
+        }
+      ]
+    },
+    {
+      "num": 11,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Hizo prosperar las obras de ellos por mano de un profeta santo."
+        },
+        {
+          "n": 2,
+          "text": "Atravesaron un desierto inhabitado y en lugares intransitables plantaron tiendas."
+        },
+        {
+          "n": 3,
+          "text": "Hicieron frente a los adversarios y rechazaron a los enemigos."
+        },
+        {
+          "n": 4,
+          "text": "Tuvieron sed y te invocaron, y les fue dada agua de una roca escarpada y remedio contra la sed de una piedra dura."
+        },
+        {
+          "n": 5,
+          "text": "Pues por medio de aquello con lo que fueron castigados sus enemigos, por eso mismo, hallándose en apuros, fueron ellos beneficiados."
+        },
+        {
+          "n": 6,
+          "text": "En lugar de la fuente de un río perenne, enturbiado con sangre impura,"
+        },
+        {
+          "n": 7,
+          "text": "para reprensión de un decreto infanticida, les diste agua abundante inesperadamente,"
+        },
+        {
+          "n": 8,
+          "text": "mostrando por la sed de entonces cómo castigaste a los adversarios.",
+          "note": "El texto base escribe κολαϲαϲ (sin aumento); se sigue al corrector ca, εκολαϲαϲ («castigaste»)."
+        },
+        {
+          "n": 9,
+          "text": "Pues cuando fueron puestos a prueba, aunque disciplinados con misericordia, comprendieron cómo los impíos, juzgados con ira, eran atormentados.",
+          "note": "El texto base escribe εν ε ει por caída de letras; se sigue al corrector ca, ελεει («con misericordia»)."
+        },
+        {
+          "n": 10,
+          "text": "Pues a estos los examinaste como un padre que amonesta, pero a aquellos los sometiste a juicio como un rey severo que condena."
+        },
+        {
+          "n": 11,
+          "text": "Y tanto ausentes como presentes eran atormentados por igual,"
+        },
+        {
+          "n": 12,
+          "text": "pues un doble pesar se apoderó de ellos, y gemido por el recuerdo de lo pasado."
+        },
+        {
+          "n": 13,
+          "text": "Pues cuando oyeron que, por medio de sus propios castigos, aquellos habían sido beneficiados, percibieron al Señor.",
+          "note": "Se conserva του κυ («al Señor») del texto base; el corrector ca cambia a ϲου κε («a ti, Señor»)."
+        },
+        {
+          "n": 14,
+          "text": "Pues a aquel que antiguamente había sido arrojado al abandono y a quien rechazaron con burlas, al final de los acontecimientos lo admiraron, tras haber padecido una sed distinta de la de los justos."
+        },
+        {
+          "n": 15,
+          "text": "En cambio, por los razonamientos insensatos de su injusticia, con los cuales extraviados rendían culto a reptiles irracionales y a viles alimañas, les enviaste una multitud de animales irracionales para escarmiento,",
+          "note": "El texto base escribe εθνηϲκευον (error de copia); se sigue al corrector ca, εθρηϲκευον («rendían culto»)."
+        },
+        {
+          "n": 16,
+          "text": "a fin de que conozcan que, por medio de las mismas cosas con que uno peca, por esas mismas también es castigado."
+        },
+        {
+          "n": 17,
+          "text": "Porque no carecía de recursos tu mano todopoderosa, que también creó el mundo de materia informe, para enviar contra ellos una multitud de osos o leones feroces,"
+        },
+        {
+          "n": 18,
+          "text": "o fieras desconocidas recién creadas, llenas de furor, que exhalaban un aliento ardiente, o lanzaban un bramido esparciendo torbellinos de humo, o hacían centellear terribles chispas desde sus ojos,",
+          "note": "El texto base escribe θραϲυγνωϲτουϲ y πινθηραϲ (errores de copia); se sigue al corrector ca, θηραϲ αγνωϲτουϲ («fieras desconocidas») y ϲπινθηραϲ («chispas»)."
+        },
+        {
+          "n": 19,
+          "text": "cuyo daño no solo podía destruirlos por completo, sino incluso su aspecto, al espantarlos, acabar con ellos."
+        },
+        {
+          "n": 20,
+          "text": "Y aun sin estas cosas, de un solo soplo habrían podido caer, perseguidos por la justicia y aventados por el espíritu de tu poder; pero tú todo lo dispusiste con medida, número y peso.",
+          "note": "El texto base deja el artículo ϋπο τηϲ sin sustantivo; se sigue al corrector ca, que suple δικηϲ («la justicia»)."
+        },
+        {
+          "n": 21,
+          "text": "Pues el ser sumamente poderoso siempre está en ti, y al poder de tu brazo, ¿quién resistirá?"
+        },
+        {
+          "n": 22,
+          "text": "Porque como una leve inclinación de la balanza es todo el mundo delante de ti, y como una gota de rocío matutino que desciende sobre la tierra."
+        },
+        {
+          "n": 23,
+          "text": "Pero tienes misericordia de todos, porque todo lo puedes, y pasas por alto los pecados de los hombres para el arrepentimiento."
+        },
+        {
+          "n": 24,
+          "text": "Porque amas todo lo que existe y nada aborreces de lo que hiciste; pues ni siquiera habrías formado algo odiándolo."
+        },
+        {
+          "n": 25,
+          "text": "¿Y cómo habría permanecido algo si tú no lo hubieras querido, o cómo se habría conservado lo que no fue llamado por ti?",
+          "note": "El texto base escribe εναντιον (probable error por repetición del v. 22); se sigue al corrector ca, ἄν τι («habría permanecido algo»)."
+        },
+        {
+          "n": 26,
+          "text": "Pero perdonas a todos, porque son tuyos, Soberano amante de las almas."
+        }
+      ]
+    },
+    {
+      "num": 12,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Pues tu espíritu incorruptible está en todas las cosas."
+        },
+        {
+          "n": 2,
+          "text": "Por eso, a los que tropiezan los reprendes poco a poco, y en aquello en que pecan los amonestas haciéndoselo recordar, para que, apartándose de la maldad, crean en ti, Señor.",
+          "note": "El texto base omite el verbo y escribe αυτου (dejando sin verbo finito la cláusula final); se sigue al corrector ca, que suple πιϲτευϲωϲιν («crean») y suprime αυτου."
+        },
+        {
+          "n": 3,
+          "text": "Pues también a los antiguos habitantes de tu tierra santa,"
+        },
+        {
+          "n": 4,
+          "text": "habiéndolos aborrecido por practicar las obras más detestables de hechicerías y ritos impíos,"
+        },
+        {
+          "n": 5,
+          "text": "despiadados asesinos de hijos, y banquete de devoradores de entrañas, de carnes humanas y de sangre, iniciados de en medio de una cofradía,",
+          "note": "El texto base escribe μυϲτα (omisión de -ϲ final); se sigue al corrector ca, μυϲταϲ («iniciados»)."
+        },
+        {
+          "n": 6,
+          "text": "y a padres asesinos de almas indefensas, decidiste destruirlos por manos de nuestros padres,",
+          "note": "El texto base escribe εαν βουληθηϲ (error que deja la oración sin verbo principal); se sigue al corrector ca, εβουληθηϲ («decidiste»)."
+        },
+        {
+          "n": 7,
+          "text": "para que recibiera una colonia digna de los hijos de Dios la tierra más estimada ante ti de todas.",
+          "note": "El texto base escribe κατα en lugar de ϊνα (dejando sin nexo el subjuntivo δεξηται); se sigue al corrector ca, ϊνα («para que»)."
+        },
+        {
+          "n": 8,
+          "text": "Pero incluso a estos, como a hombres, los trataste con indulgencia, y enviaste como precursores de tu campamento a los avispones, para que los exterminaran poco a poco,",
+          "note": "El texto base escribe τουϲ ϲτρατοπεδουϲ (por asimilación con ϲφηκαϲ); se sigue al corrector ca, του ϲτρατοπεδου («de tu campamento»)."
+        },
+        {
+          "n": 9,
+          "text": "no porque fueras incapaz de entregar en batalla a los impíos en manos de los justos, o de aniquilarlos de un solo golpe con fieras terribles o con una palabra severa;"
+        },
+        {
+          "n": 10,
+          "text": "sino que, juzgando poco a poco, les dabas lugar al arrepentimiento, sin ignorar que su origen era malo y su maldad innata, y que su razonamiento jamás cambiaría;",
+          "note": "El texto base escribe κεινων γαρ (error de copia por κρινων); se sigue al corrector ca, κρεινων δε («sino que, juzgando»)."
+        },
+        {
+          "n": 11,
+          "text": "pues era una descendencia maldita desde el principio; y no por temor a nadie dabas tregua a aquello en que pecaban."
+        },
+        {
+          "n": 12,
+          "text": "Pues ¿quién dirá: «¿Qué hiciste?» o ¿quién resistirá a tu sentencia? ¿Quién te acusará por las naciones destruidas que tú hiciste, o quién se presentará ante ti como defensor por hombres injustos?"
+        },
+        {
+          "n": 13,
+          "text": "Porque ni hay Dios fuera de ti, que cuidas de todas las cosas, para que tengas que demostrar que no juzgaste injustamente;"
+        },
+        {
+          "n": 14,
+          "text": "ni rey ni tirano podrá sostenerte la mirada acerca de aquellos a quienes castigaste."
+        },
+        {
+          "n": 15,
+          "text": "Y siendo justo, todo lo administras con justicia, considerando ajeno a tu poder el condenar a quien no merece ser castigado.",
+          "note": "El texto base incluye una δ suelta (suprimida por el corrector) y escribe ηγουμενον; se sigue al corrector ca, ηγουμενοϲ («considerando»)."
+        },
+        {
+          "n": 16,
+          "text": "Porque tu fuerza es principio de justicia, y el ser tú dueño soberano de todo hace que perdones a todos."
+        },
+        {
+          "n": 17,
+          "text": "Pues demuestras fuerza cuando se duda de la perfección de tu poder, y entre los que te conocen, la insolencia queda puesta en evidencia.",
+          "note": "En la primera parte el texto base escribe ϊϲχυϲ γαρ ενδεικνυϲο; se sigue al corrector ca, ϊϲχυν ... ενδεικνυϲαι («demuestras fuerza»). En la segunda mitad se conserva la lectura del texto base, «entre los que te conocen, la insolencia queda puesta en evidencia» (ca cambia a «entre los que conocen tu poder, reprendes»)."
+        },
+        {
+          "n": 18,
+          "text": "Mas tú, dueño de la fuerza, juzgas con clemencia y nos gobiernas con mucha indulgencia; pues cuando quieras, el poder está en tu mano."
+        },
+        {
+          "n": 19,
+          "text": "Y enseñaste a tu pueblo, por medio de tales obras, que es justo ser benévolo con los hombres, y llenaste de buena esperanza a tus hijos, porque concedes arrepentimiento por los pecados.",
+          "note": "El texto base lee οτι δικαιον ειναι φιλανθρωπον («que es justo ser benévolo con los hombres»); el corrector ca intercala δει τον («que el justo debe ser…»)."
+        },
+        {
+          "n": 20,
+          "text": "Pues si a los enemigos de tus hijos, y merecedores de muerte, los castigaste con tanta consideración e indulgencia, dándoles tiempo y ocasión para que se aparten de la maldad,"
+        },
+        {
+          "n": 21,
+          "text": "¡con cuánta exactitud juzgaste a tus hijos, a cuyos padres diste juramentos y pactos de buenas promesas!",
+          "note": "Se conserva μετα ποϲηϲ («con cuánta») del texto base; al final se sigue al corrector ca, ϋποϲχεϲεων («promesas»), en lugar del defectuoso υποϲχηϲ."
+        },
+        {
+          "n": 22,
+          "text": "Así pues, al disciplinarnos a nosotros, azotas a nuestros enemigos diez mil veces más, para que cuando juzguemos meditemos en tu bondad, y cuando seamos juzgados esperemos misericordia."
+        },
+        {
+          "n": 23,
+          "text": "Por eso, también a los injustos que vivieron su vida en insensateces los atormentaste por medio de sus propias abominaciones."
+        },
+        {
+          "n": 24,
+          "text": "Porque se extraviaron aún más lejos de los caminos del error, tomando por dioses a los que hasta entre los animales de sus enemigos son despreciables, engañados como niños sin entendimiento."
+        },
+        {
+          "n": 25,
+          "text": "Por esto, como a niños sin razón, les enviaste el juicio para escarnio."
+        },
+        {
+          "n": 26,
+          "text": "Mas los que no se dejaron corregir por reprensiones de burla, experimentarán un juicio digno de Dios."
+        },
+        {
+          "n": 27,
+          "text": "Pues por aquellas mismas cosas que ellos, al padecerlas, se indignaban, siendo castigados por medio de aquellos mismos a quienes tenían por dioses, al ver al que antes negaban, reconocieron al Dios verdadero; por eso también el colmo de la condenación vino sobre ellos.",
+          "note": "El texto base escribe ουν y επ αυτον; se sigue al corrector ca, ουϲ («a quienes») y επ αυτων («sobre ellos»)."
+        }
+      ]
+    },
+    {
+      "num": 13,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Pues vanos por naturaleza son todos los hombres en quienes había desconocimiento de Dios, y por los bienes visibles no pudieron conocer al que es, ni atendiendo a las obras reconocieron al artífice;"
+        },
+        {
+          "n": 2,
+          "text": "sino que al fuego, o al viento, o al aire veloz, o al círculo de los astros, o al agua impetuosa, o a las lumbreras del cielo los consideraron dioses gobernadores del mundo.",
+          "note": "Aquí πνα vale por «viento» o «soplo» (en el códice figura abreviado como nomen sacrum)."
+        },
+        {
+          "n": 3,
+          "text": "Si deleitándose con la hermosura de estas cosas las tuvieron por tales, sepan cuánto mejor es el Soberano de ellas; pues el autor mismo de la belleza las creó."
+        },
+        {
+          "n": 4,
+          "text": "Y si por su poder y eficacia también quedaron asombrados, comprendan por ellas cuánto más poderoso es el que las formó."
+        },
+        {
+          "n": 5,
+          "text": "Pues por la grandeza, la hermosura y las criaturas, por analogía se contempla al creador de ellas.",
+          "note": "El texto base repite por error ο γενεϲιουργοϲ; se sigue la supresión de ca."
+        },
+        {
+          "n": 6,
+          "text": "Sin embargo, sobre estos recae un reproche menor; pues también ellos quizá se extravían buscando a Dios y queriendo hallarlo."
+        },
+        {
+          "n": 7,
+          "text": "Pues moviéndose en medio de sus obras, investigan, y se dejan persuadir por la vista, porque son hermosas las cosas que se ven."
+        },
+        {
+          "n": 8,
+          "text": "Pero, por otra parte, ni siquiera ellos tienen excusa;"
+        },
+        {
+          "n": 9,
+          "text": "porque si alcanzaron a saber tanto como para poder escrutar el universo, ¿cómo no hallaron antes al Soberano de estas cosas?"
+        },
+        {
+          "n": 10,
+          "text": "Mas desdichados son, y puestas en cosas muertas están sus esperanzas, quienes llamaron dioses a obras de manos humanas: oro y plata, primor del arte y figuras de animales, o una piedra inútil, obra de una mano antigua."
+        },
+        {
+          "n": 11,
+          "text": "Y si algún carpintero leñador, tras aserrar un árbol fácil de trabajar, le raspó hábilmente toda su corteza y, labrándolo con destreza, fabricó un utensilio útil para el servicio de la vida;"
+        },
+        {
+          "n": 12,
+          "text": "y en cuanto a los desechos del trabajo para preparar el alimento, se sació al consumirlos;",
+          "note": "El Codex lee literalmente αναλωϲεωϲ («de consumo», genitivo) junto a ενεπληϲθη, sin el participio αναλωϲαϲ de otros manuscritos."
+        },
+        {
+          "n": 13,
+          "text": "pero tomando el desecho de aquellos —un madero torcido y lleno de nudos, inútil para nada—, lo talló con el esmero de su ocio y lo modeló con la destreza de su tiempo libre, y lo asemejó a la imagen de un hombre,",
+          "note": "El texto base escribe ι̣αβων por λαβων («tomando», ca y cc). Se conservan αργιαϲ («ocio») y ανεϲεωϲ («tiempo libre») del texto base (ca cambia a «trabajo» e «inteligencia»)."
+        },
+        {
+          "n": 14,
+          "text": "o lo asemejó a algún animal despreciable, untándole con bermellón y carmín el rubor de su color, y cubriendo con pintura toda mancha que había en él;"
+        },
+        {
+          "n": 15,
+          "text": "y haciéndole una morada digna, lo colocó en la pared asegurándolo con hierro."
+        },
+        {
+          "n": 16,
+          "text": "Así pues, cuidó de él para que no se cayera, sabiendo que es incapaz de ayudarse a sí mismo; porque es una imagen y necesita ayuda."
+        },
+        {
+          "n": 17,
+          "text": "Pero al rogar por sus bienes, sus bodas y sus hijos, no se avergüenza de hablar a lo inanimado; y por la salud invoca a lo débil;"
+        },
+        {
+          "n": 18,
+          "text": "por la vida suplica a lo muerto; por la pericia, a lo más inexperto; por un viaje, a lo que ni siquiera puede servirse de sus pies;"
+        },
+        {
+          "n": 19,
+          "text": "y por la ganancia, el trabajo y el éxito de las manos, pide vigor a lo que tiene las manos impotentes.",
+          "note": "El texto base repite αδρανιαν («impotencia») por asimilación con αδρανεϲ; se sigue al corrector ca, ευδρανιαν («vigor»)."
+        }
+      ]
+    },
+    {
+      "num": 14,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Otro, disponiéndose a navegar y a punto de atravesar olas embravecidas, invoca a un madero más frágil que la nave que lo lleva."
+        },
+        {
+          "n": 2,
+          "text": "Porque a aquella la ideó el afán de lucro, y la sabiduría artífice la construyó;"
+        },
+        {
+          "n": 3,
+          "text": "pero tu providencia, Padre, la gobierna, porque diste también en el mar un camino y entre las olas una senda segura,"
+        },
+        {
+          "n": 4,
+          "text": "mostrando que de todo eres capaz de salvar, para que aun sin pericia se embarque alguien."
+        },
+        {
+          "n": 5,
+          "text": "Pero tú quieres que no sean vanas las obras de la sabiduría; por eso los hombres confían sus vidas incluso a un madero pequeñísimo y, atravesando el oleaje, se salvan en una balsa."
+        },
+        {
+          "n": 6,
+          "text": "Pues también en el principio, cuando perecían los soberbios gigantes, la esperanza del mundo, refugiándose en una embarcación y guiada por tu mano, legó al siglo semilla de generación."
+        },
+        {
+          "n": 7,
+          "text": "Porque bendito es el madero por medio del cual se obra en justicia;",
+          "note": "El texto base incluye εν («en justicia»); el corrector ca lo suprime para leer «se realiza la justicia»."
+        },
+        {
+          "n": 8,
+          "text": "pero el ídolo hecho a mano, maldito es él y quien lo hizo: y este lo fabricó, y aquello, siendo corruptible, fue llamado dios.",
+          "note": "El texto base escribe ηργαζενητο (fusión errónea de ηργαζετο y το); se sigue a los correctores ca y cc, ηργαζετο το («lo fabricó, y aquello…»)."
+        },
+        {
+          "n": 9,
+          "text": "Pues por igual son odiosos a Dios tanto el impío como su impiedad;"
+        },
+        {
+          "n": 10,
+          "text": "porque también la obra hecha será castigada juntamente con su autor."
+        },
+        {
+          "n": 11,
+          "text": "Por esto habrá juicio sobre los ídolos de las naciones, porque en la creación de Dios se convirtieron en abominación, y en tropiezo para las almas de los hombres, y en trampa para los pies de los necios.",
+          "note": "El texto base escribe εν ιϲ (error de copia); se sigue a S1 y cc, ειϲ («en abominación»)."
+        },
+        {
+          "n": 12,
+          "text": "Pues principio de fornicación es la invención de los ídolos, y su hallazgo es corrupción de la vida.",
+          "note": "Aquí πορνιαϲ conserva el sentido bíblico de «fornicación» (infidelidad idolátrica y disolución moral), distinto de «lujuria» en Tob 8:7."
+        },
+        {
+          "n": 13,
+          "text": "Porque ni existían desde el principio, ni existirán para siempre;"
+        },
+        {
+          "n": 14,
+          "text": "pues por la vanagloria de los hombres entró la muerte en el mundo, y por esto se ideó un fin rápido para ellos.",
+          "note": "El texto base incluye θανατοϲ («la muerte»); el corrector ca lo suprime, con lo que el sujeto de «entró» pasan a ser los ídolos del v. 13."
+        },
+        {
+          "n": 15,
+          "text": "Porque un padre, atormentado por un duelo prematuro, habiendo hecho una imagen del hijo prontamente arrebatado, al hombre entonces muerto ahora lo honró como a dios, y transmitió a sus subordinados misterios y ritos."
+        },
+        {
+          "n": 16,
+          "text": "Después, consolidada con el tiempo la impía costumbre, fue guardada como ley,",
+          "note": "El texto base escribe εθνοϲ («nación»); se sigue la corrección de S1, εθοϲ («costumbre»), que es lo que se guarda como ley (ca cambia también νομον en νομοϲ)."
+        },
+        {
+          "n": 17,
+          "text": "y por mandatos de tiranos se rendía culto a las esculturas. A aquellos a quienes los hombres no podían honrar en presencia, por habitar lejos, reproduciendo su aspecto distante, hicieron una imagen visible del rey honrado, para adular con su celo al ausente como si estuviera presente."
+        },
+        {
+          "n": 18,
+          "text": "Y hacia un acrecentamiento del culto impulsó incluso a los que no lo conocían la ambición del artífice;"
+        },
+        {
+          "n": 19,
+          "text": "pues este, queriendo acaso agradar al gobernante, forzó con su arte la semejanza hacia lo más hermoso;",
+          "note": "El texto base escribe οι ante el singular βουλομενοϲ; se sigue al corrector (corr), ο («este»)."
+        },
+        {
+          "n": 20,
+          "text": "y la multitud, atraída por el encanto de la obra, al hombre honrado poco antes ahora lo tuvieron por objeto de adoración."
+        },
+        {
+          "n": 21,
+          "text": "Y esto se convirtió para la vida en una trampa, porque los hombres, esclavizados por la desgracia o por la tiranía, impusieron a piedras y maderos el Nombre incomunicable."
+        },
+        {
+          "n": 22,
+          "text": "Luego no les bastó extraviarse respecto al conocimiento de Dios, sino que además, viviendo grandemente en guerra de ignorancia, llaman paz a tantos males.",
+          "note": "El texto base lee μεγαλωϲ («grandemente»); el corrector ca corrige en εν μεγαλω («en una gran guerra de ignorancia»)."
+        },
+        {
+          "n": 23,
+          "text": "Pues ya celebrando ritos infanticidas, o misterios ocultos, o festejos frenéticos de extraños preceptos,"
+        },
+        {
+          "n": 24,
+          "text": "ya no guardan puros ni sus vidas ni sus matrimonios, sino que uno a otro se mata asechando, o aflige cometiendo adulterio."
+        },
+        {
+          "n": 25,
+          "text": "Todo contiene confusión: sangre y asesinato, robo y engaño, corrupción, infidelidad, alboroto, perjurio,"
+        },
+        {
+          "n": 26,
+          "text": "perturbación de los bienes, olvido de la gratitud, contaminación de las almas, perversión de la naturaleza, desorden en los matrimonios, adulterio y desenfreno."
+        },
+        {
+          "n": 27,
+          "text": "Porque el culto a los ídolos sin nombre es principio, causa y fin de todo mal."
+        },
+        {
+          "n": 28,
+          "text": "Pues o delirando se divierten, o profetizan mentiras, o viven injustamente, o juran en falso con ligereza."
+        },
+        {
+          "n": 29,
+          "text": "Porque confiados en ídolos sin alma, al jurar malvadamente, no esperan recibir daño."
+        },
+        {
+          "n": 30,
+          "text": "Pero por ambas cosas los alcanzará la justa retribución: porque pensaron mal acerca de Dios atendiendo a los ídolos, y porque juraron injustamente con engaño despreciando la santidad."
+        },
+        {
+          "n": 31,
+          "text": "Pues no el poder de aquello por lo que se jura, sino la justicia contra los que pecan persigue siempre la transgresión de los injustos."
+        }
+      ]
+    },
+    {
+      "num": 15,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Pero tú, Dios nuestro, eres bondadoso y veraz, paciente, y gobiernas todas las cosas con misericordia."
+        },
+        {
+          "n": 2,
+          "text": "Pues aun si pecamos, tuyos somos, conociendo tu juicio; pero no pecaremos, sabiendo que somos contados como tuyos."
+        },
+        {
+          "n": 3,
+          "text": "Porque conocerte a ti es justicia íntegra, y saber tu poder es raíz de inmortalidad."
+        },
+        {
+          "n": 4,
+          "text": "Pues no nos extravió el invento de mala arte de los hombres, ni la labor estéril de los pintores, una figura manchada con colores abigarrados,",
+          "note": "El texto base escribe ϲπινωθεν y διηλλαγμενοι; se sigue al corrector ca, ϲπιλωθεν («manchada») y διηλλαγμενοιϲ («abigarrados»)."
+        },
+        {
+          "n": 5,
+          "text": "cuya visión despierta el deseo en el insensato, y anhela la figura sin aliento de una imagen muerta."
+        },
+        {
+          "n": 6,
+          "text": "Amantes de males son, y dignos de tales esperanzas, tanto los que los hacen como los que los desean y los que los veneran."
+        },
+        {
+          "n": 7,
+          "text": "Pues también el alfarero, amasando la blanda y fatigosa tierra, modela cada objeto para nuestro servicio; pero del mismo barro modela tanto las vasijas destinadas a usos limpios como todas las contrarias, por igual; y cuál ha de ser el uso de cada una de estas distintas piezas, el juez es el alfarero."
+        },
+        {
+          "n": 8,
+          "text": "Y con perverso afán modela del mismo barro un dios vano, él, que poco antes nació de la tierra y dentro de poco vuelve a aquella de donde fue tomado, cuando se le reclame la deuda de su alma."
+        },
+        {
+          "n": 9,
+          "text": "Pero no le preocupa que vaya a fatigarse, ni que tenga una vida efímera, sino que rivaliza con orfebres y plateros, imita a los fundidores de bronce, y tiene por gloria el modelar falsificaciones."
+        },
+        {
+          "n": 10,
+          "text": "Ceniza es su corazón, más vil que la tierra su esperanza, y menos estimada que el barro su vida,",
+          "note": "El texto base escribe ευτερα por caída de sílabas de ευτελεϲτερα; se sigue al corrector ca, ευτελεϲτερα («más vil»)."
+        },
+        {
+          "n": 11,
+          "text": "porque desconoció a aquel que lo modeló, y al que le inspiró un alma activa y le insufló un espíritu vital;"
+        },
+        {
+          "n": 12,
+          "text": "sino que consideraron que nuestra existencia es un juego y la vida una feria lucrativa, pues es preciso —dice— sacar ganancia aun del mal."
+        },
+        {
+          "n": 13,
+          "text": "Pues este sabe mejor que todos que peca al fabricar de materia terrosa vasijas frágiles e imágenes talladas."
+        },
+        {
+          "n": 14,
+          "text": "Mas todos los enemigos de tu pueblo que lo oprimieron son más insensatos y desdichados que el alma de un niño;"
+        },
+        {
+          "n": 15,
+          "text": "porque hasta a todos los ídolos de las naciones tuvieron por dioses, los cuales ni tienen uso de ojos para ver, ni narices para aspirar aire, ni oídos para oír, ni dedos de manos para palpar, y cuyos pies son inútiles para caminar."
+        },
+        {
+          "n": 16,
+          "text": "Porque un hombre los hizo, y el espíritu recibido en préstamo los modeló; pues ningún hombre puede modelar un dios semejante.",
+          "note": "El texto base lee το πνα δεδανιϲμενον («el espíritu recibido en préstamo»); el corrector ca lee ο το πνα δεδανιϲμενοϲ («el que recibió el espíritu en préstamo»)."
+        },
+        {
+          "n": 17,
+          "text": "Siendo mortal, fabrica algo muerto con manos inicuas; pues él es mejor que los objetos de adoración, por cuanto él al menos vivió, pero aquellos nunca.",
+          "note": "El texto base incluye una ο suelta ante δε, suprimida por S1 y el corrector."
+        },
+        {
+          "n": 18,
+          "text": "Y hasta a los animales más detestables adoran, pues comparados en insensatez son peores que los demás;"
+        },
+        {
+          "n": 19,
+          "text": "ni siquiera tienen tanta hermosura como para inspirar afecto entre el aspecto de los animales, sino que han quedado excluidos de la alabanza de Dios y de su bendición."
+        }
+      ]
+    },
+    {
+      "num": 16,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Por esto fueron castigados justamente por medio de seres semejantes, y por una multitud de alimañas fueron atormentados."
+        },
+        {
+          "n": 2,
+          "text": "En lugar de tal castigo, beneficiaste a tu pueblo: para el deseo de su apetito le preparaste un alimento de sabor extraordinario, codornices;",
+          "note": "El texto base escribe ευηργετηϲεν (3.ª persona); se sigue al corrector ca, ευηργετηϲαϲ («beneficiaste»), conforme a τον λαον ϲου y ητοιμαϲαϲ."
+        },
+        {
+          "n": 3,
+          "text": "a fin de que aquellos, deseando alimento, a causa de la apariencia mostrada de los animales enviados se hastiaran incluso del apetito necesario; pero estos, habiendo pasado necesidad por poco tiempo, participaran también de un sabor extraordinario.",
+          "note": "El texto base escribe χθειϲαν (omisión de δι-); se sigue a S1, διχθειϲαν («mostrada», femenino que sobreentiende la fealdad o el aspecto)."
+        },
+        {
+          "n": 4,
+          "text": "Pues era preciso que a aquellos, por tiranizar, les sobreviniera una escasez inexorable, y que a estos solamente se les mostrara cómo eran atormentados sus enemigos."
+        },
+        {
+          "n": 5,
+          "text": "Porque aun cuando les sobrevino una terrible furia de fieras y perecían por las mordeduras de serpientes sinuosas, no duró hasta el final tu ira;"
+        },
+        {
+          "n": 6,
+          "text": "sino que para amonestación fueron turbados por poco tiempo, teniendo un consejero de salvación para recuerdo del mandamiento de la ley.",
+          "note": "El texto base escribe εταραχθη (singular, por pérdida de -ϲαν ante el plural εχοντεϲ); se sigue al corrector ca, εταραχθηϲαν («fueron turbados»). Además el códice lee ϲυμβουλον («consejero», no «símbolo»)."
+        },
+        {
+          "n": 7,
+          "text": "Porque el que se volvía hacia ella no se salvaba por lo que contemplaba, sino por ti, el salvador de todos."
+        },
+        {
+          "n": 8,
+          "text": "Y también en esto convenciste a tus enemigos de que tú eres el que libra de todo mal."
+        },
+        {
+          "n": 9,
+          "text": "A unos las picaduras de langostas y moscas los mataron, y no se halló remedio para su vida, porque merecían ser castigados por estos;",
+          "note": "El texto base escribe δηματα y ευρηεθη (errores de copia); se siguen las correcciones de ca/cc y S1, δηγματα («picaduras») y ευρεθη («se halló»)."
+        },
+        {
+          "n": 10,
+          "text": "pero a tus hijos ni siquiera los dientes de serpientes venenosas los vencieron, pues tu misericordia salió al encuentro y los sanó."
+        },
+        {
+          "n": 11,
+          "text": "Pues para recuerdo de tus oráculos eran aguijoneados y prontamente salvados, para que, cayendo en un profundo olvido, no se desentendieran de tu beneficio.",
+          "note": "El texto base omite por laguna ϊνα μη ειϲ βαθιαν (dejando sin nexo ni negación al subjuntivo γενωνται); se sigue al corrector ca, que suple ϊνα μη ειϲ βαθιαν."
+        },
+        {
+          "n": 12,
+          "text": "Porque ni hierba ni emplasto los curó, sino tu palabra, Señor, que todo lo sana."
+        },
+        {
+          "n": 13,
+          "text": "Pues tú tienes autoridad sobre la vida y la muerte, y haces bajar a las puertas del Hades y haces subir."
+        },
+        {
+          "n": 14,
+          "text": "El hombre ciertamente mata con su maldad, pero al espíritu que salió no lo hará volver, ni liberará al alma que ya fue tomada."
+        },
+        {
+          "n": 15,
+          "text": "Pero escapar de tu mano es imposible."
+        },
+        {
+          "n": 16,
+          "text": "Pues los impíos que se negaban a conocerte fueron azotados por la fuerza de tu brazo, perseguidos por lluvias extrañas, granizos y aguaceros inexorables, y consumidos por el fuego."
+        },
+        {
+          "n": 17,
+          "text": "Porque —lo más prodigioso— en el agua que todo lo apaga, el fuego actuaba con más fuerza; pues el mundo es defensor de los justos."
+        },
+        {
+          "n": 18,
+          "text": "Unas veces se amansaba la llama para no abrasar lo que había sido enviado contra los impíos, sino para que, al verlo, reconocieran que por juicio de Dios eran acosados;"
+        },
+        {
+          "n": 19,
+          "text": "y otras veces, aun en medio del agua, arde por encima de la fuerza del fuego, para destruir los frutos de una tierra injusta."
+        },
+        {
+          "n": 20,
+          "text": "En cambio, con alimento de ángeles sustentaste a tu pueblo, y pan ya preparado desde el cielo les diste sin fatiga, capaz de todo deleite y para toda armonía del paladar.",
+          "note": "Al final el texto base escribe αρμονιαν γευϲιν (ambos en acusativo) donde otros manuscritos leen αρμονιον γευϲει («adaptado a todo gusto»)."
+        },
+        {
+          "n": 21,
+          "text": "Pues tu sustento manifestaba tu dulzura para con tus hijos y, sirviendo al deseo de quien lo tomaba, se transformaba en lo que cada uno quería.",
+          "note": "El texto base escribe την ante el dativo επιθυμια; se sigue la corrección (corr), τη. Se conserva μετεκιρνατο («se transformaba») del texto base."
+        },
+        {
+          "n": 22,
+          "text": "Y la nieve y el hielo soportaban el fuego y no se derretían, para que conocieran que los frutos de los enemigos los destruía un fuego que ardía en el granizo y relampagueaba en las lluvias;"
+        },
+        {
+          "n": 23,
+          "text": "esto mismo, en cambio, para que fueran alimentados los justos, hasta de su propia fuerza se había olvidado."
+        },
+        {
+          "n": 24,
+          "text": "Porque la creación, sirviéndote a ti, su Hacedor, se tensa para castigo contra los injustos y se afloja para beneficio en favor de los que confían en ti."
+        },
+        {
+          "n": 25,
+          "text": "Por esto también entonces, transformándose en todo, servía a tu dádiva que todo lo nutre, conforme a la voluntad de los necesitados,"
+        },
+        {
+          "n": 26,
+          "text": "para que aprendan tus hijos, a quienes amaste, Señor, que no son las cosechas de los frutos las que alimentan al hombre, sino que tu palabra sustenta a los que creen en ti."
+        },
+        {
+          "n": 27,
+          "text": "Pues lo que no era destruido por el fuego, simplemente calentado por un breve rayo de sol se derretía,",
+          "note": "El texto base omite la negación μη ante διαφθειρομενον (contradiciendo el v. 22); se sigue al corrector ca, que suple μη («lo que no era destruido»)."
+        },
+        {
+          "n": 28,
+          "text": "a fin de que sea sabido que es preciso adelantarse al sol para darte gracias, y al despuntar la luz acudir a ti.",
+          "note": "El texto base escribe δια ante los infinitivos φθανιν y εντυγχανιν, sin verbo principal (el corrector ca corrige hacia δει, «es preciso»); se sigue esa lectura. Al final se conserva προϲ ανατολην φωτοϲ («al despuntar la luz») del texto base."
+        },
+        {
+          "n": 29,
+          "text": "Porque la esperanza del ingrato se derretirá como escarcha invernal y correrá como agua inútil."
+        }
+      ]
+    },
+    {
+      "num": 17,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Pues grandes son tus juicios e inenarrables; por esto las almas sin instrucción se extraviaron."
+        },
+        {
+          "n": 2,
+          "text": "Porque habiendo pensado los inicuos oprimir a una nación santa, prisioneros de las tinieblas y cautivos de una larga noche, encerrados bajo sus techos, yacían desterrados de la eterna providencia.",
+          "note": "El texto base escribe ανομον y δεϲμιοιϲ por asimilación de caso; se sigue a los correctores ca/cc, ανομοι («los inicuos») y δεϲμιοι («prisioneros»)."
+        },
+        {
+          "n": 3,
+          "text": "Pues creyendo pasar inadvertidos en sus pecados ocultos bajo el sombrío velo del olvido, fueron dispersados, espantados terriblemente y perturbados por espectros."
+        },
+        {
+          "n": 4,
+          "text": "Porque ni siquiera el rincón que los resguardaba los mantenía sin temor, sino que ruidos perturbadores resonaban alrededor de ellos, y se les aparecían espectros lúgubres con rostros sombríos.",
+          "note": "El texto base escribe μοιχοϲ (itacismo por μυχοϲ); se sigue al corrector ca, μυχοϲ («rincón / escondrijo»)."
+        },
+        {
+          "n": 5,
+          "text": "Y ninguna fuerza de fuego lograba alumbrar, ni las resplandecientes llamas de los astros soportaban iluminar aquella noche sombría.",
+          "note": "El texto base escribe καταγαυζειν (metátesis por καταυγαζειν); se sigue al corrector ca, καταυγαζειν («iluminar»)."
+        },
+        {
+          "n": 6,
+          "text": "Solo brillaba entre ellos una hoguera espontánea; y llenos de terror, espantados por aquella visión que no se dejaba ver, juzgaban peores las cosas que veían.",
+          "note": "El texto base escribe τε τεηϲ (errata); se sigue a S1, τε τηϲ."
+        },
+        {
+          "n": 7,
+          "text": "Yacían abatidas las burlas del arte mágico, y la jactancia de la pretendida sabiduría resultaba una refutación afrentosa;",
+          "note": "El texto base lee τηϲ επιφερομενηϲ φρονηϲι αλαζονια («la jactancia de la pretendida sabiduría»); el corrector ca lee τηϲ επι φρονηϲει αλαζονιαϲ («de la jactancia en sabiduría»)."
+        },
+        {
+          "n": 8,
+          "text": "pues quienes prometían expulsar del alma enferma terrores y perturbaciones, esos mismos enfermaban de un miedo ridículo.",
+          "note": "El texto base escribe καταρχαϲ y ευλοβιαν (errores de copia); se sigue al corrector ca, ταραχαϲ («perturbaciones») y ευλαβιαν («miedo»)."
+        },
+        {
+          "n": 9,
+          "text": "Pues aunque nada perturbador los asustara, sobresaltados por el paso de alimañas y por silbidos de reptiles, perecían temblorosos, negándose a mirar siquiera el aire, de ningún modo eludible.",
+          "note": "El texto base escribe το ante el masculino αερα (enmendado en τον por ca) y αφευκτον (donde S1 y ca corrigen φευκτον, «eludible»)."
+        },
+        {
+          "n": 10,
+          "text": "Porque cosa cobarde es en sí misma la maldad, condenada por testigo; y siempre trae consigo lo penoso, acosada por la conciencia.",
+          "note": "El texto base lee ϊδιωϲ («en sí misma») y προϲειληφεν («trae consigo»); el corrector ca suple ϊδιω ante μαρτυρι («por su propio testigo») y lee προειληφεν («presiente»)."
+        },
+        {
+          "n": 11,
+          "text": "Pues el miedo no es otra cosa que la espera de los auxilios que vienen de la razón;",
+          "note": "El Codex lee literalmente προϲδοκια («espera / expectación»); otros manuscritos de la Septuaginta leen προδοσία («abandono / renuncia»)."
+        },
+        {
+          "n": 12,
+          "text": "y cuando esa expectación es más débil por dentro, estima mayor la ignorancia que la causa que provoca el tormento."
+        },
+        {
+          "n": 13,
+          "text": "Pero ellos, durante aquella noche verdaderamente impotente y venida de los senos del impotente Hades, durmiendo el mismo sueño,"
+        },
+        {
+          "n": 14,
+          "text": "unas veces eran acosados por prodigios de fantasmas, y otras quedaban paralizados por el abandono de su alma; pues un temor repentino e inesperado se derramó sobre ellos.",
+          "note": "El texto base incluye una ε suelta ante φοβοϲ (suprimida por S1 y ca)."
+        },
+        {
+          "n": 15,
+          "text": "Así pues, cualquiera que caía allí quedaba preso, encerrado en aquella cárcel sin hierros."
+        },
+        {
+          "n": 16,
+          "text": "Pues fuera alguien labrador, pastor o trabajador de fatigas en el desierto, sorprendido de antemano, aguardaba aquella inevitable necesidad; porque todos quedaron atados con una sola cadena de tinieblas."
+        },
+        {
+          "n": 17,
+          "text": "Ya fuera un viento que silbaba, o el canto melodioso de aves entre ramas frondosas, o el compás del agua que corre con fuerza, o el estruendo violento de rocas que se desploman,",
+          "note": "El texto base escribe αμφιϲ (omisión de sílaba); se sigue a los correctores ca y cc, αμφιλαφιϲ («frondosas»)."
+        },
+        {
+          "n": 18,
+          "text": "o la carrera invisible de animales que saltan, o la voz de fieras salvajes que rugen, o el eco que resuena desde la concavidad de los montes, todo los paralizaba espantándolos.",
+          "note": "El texto base incluye una τ suelta ante ζωων (suprimida por S1 y ca) y escribe εκφοβουντα; se sigue al corrector ca, εκφοβουϲα («espantándolos»)."
+        },
+        {
+          "n": 19,
+          "text": "Pues todo el mundo resplandecía con luz brillante y se ocupaba en trabajos sin estorbo;"
+        },
+        {
+          "n": 20,
+          "text": "solo sobre aquellos se cernía una noche pesada, imagen de las tinieblas que habían de sucederles; pero para sí mismos eran más pesados que las tinieblas.",
+          "note": "El texto base escribe επκεινοιϲ y αυτου; se siguen las correcciones de S1/corr, εκεινοιϲ («aquellos»), y de ca, αυτουϲ («a ellos»)."
+        }
+      ]
+    },
+    {
+      "num": 18,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Para tus santos, en cambio, había una luz grandísima; de aquellos oían la voz pero no veían la figura, y porque también ellos habían padecido, los tenían por dichosos;",
+          "note": "El Codex lee literalmente οτι μεν ουν κακεινοι επεπονθιϲαν («porque también ellos habían padecido»), sin la negación ουκ que traen otros manuscritos."
+        },
+        {
+          "n": 2,
+          "text": "y porque no ven, aunque antes habían sido agraviados, dan gracias, y por haber estado en desacuerdo pedían perdón.",
+          "note": "El texto base escribe βλαϲτουϲιν («brotan») y οδοντων («de dientes»), errores evidentes de copia; se sigue al corrector ca, βλεπουϲιν («ven») y εδεοντο («pedían»)."
+        },
+        {
+          "n": 3,
+          "text": "En cambio, proveyó una columna ardiente como guía de una travesía desconocida, y un sol inofensivo de magnificencia.",
+          "note": "El texto base escribe ολιγον («pequeño»); se sigue al corrector ca, οδηγον («guía»). Al final se conserva φιλοτιμιαϲ παρεϲχε («proveyó de magnificencia») del texto base (ca cambia a φιλοτιμου ξενιτιαϲ παρεϲχεϲ)."
+        },
+        {
+          "n": 4,
+          "text": "Porque dignos eran aquellos de ser privados de la luz y encarcelados en tinieblas, quienes retenían encerrados a tus hijos, por medio de los cuales había de darse al mundo lo incorruptible de la luz de la ley."
+        },
+        {
+          "n": 5,
+          "text": "Habiendo tramado ellos matar a los niños pequeños de los santos —y habiendo sido expuesto un solo hijo y salvado para acusación de ellos—, les quitaste la multitud de sus hijos, y a los enemigos del pueblo los destruiste a una en agua impetuosa."
+        },
+        {
+          "n": 6,
+          "text": "Aquella noche fue conocida de antemano por nuestros padres, para que, sabiendo con certeza en qué juramentos habían confiado, se llenaran de anhelo.",
+          "note": "El Codex lee literalmente επιθυμηϲωϲιν («se llenaran de anhelo / desearan»); otros manuscritos leen ευθυμηϲωϲιν («cobraran ánimo»)."
+        },
+        {
+          "n": 7,
+          "text": "Fue esperada por tu pueblo la salvación de los justos, mas la perdición de los enemigos;"
+        },
+        {
+          "n": 8,
+          "text": "porque como castigaste a los adversarios, con eso mismo, llamándonos a ti, nos glorificaste."
+        },
+        {
+          "n": 9,
+          "text": "Pues en secreto ofrecían sacrificios los santos hijos de los buenos, y establecieron de común acuerdo la ley de la santidad: que los santos participarían por igual tanto de los mismos bienes como de los peligros, entonando ya de antemano los padres los cantos de alabanza."
+        },
+        {
+          "n": 10,
+          "text": "Mas resonaba en respuesta el clamor discordante de los enemigos, y se esparcía una voz lastimera por los hijos llorados."
+        },
+        {
+          "n": 11,
+          "text": "Con igual castigo fue castigado el esclavo juntamente con su amo, y el hombre del pueblo padecía lo mismo que el rey.",
+          "note": "El texto base escribe βαϲιλεια (error de copia); se sigue al corrector ca, βαϲιλει («que el rey»)."
+        },
+        {
+          "n": 12,
+          "text": "Todos a una, bajo un mismo nombre de muerte, tenían muertos innumerables; pues ni siquiera los vivos bastaban para sepultar, ya que en un solo instante había sido destruida su descendencia más preciada."
+        },
+        {
+          "n": 13,
+          "text": "Porque no habiendo creído nada a causa de sus hechicerías, ante la destrucción de los primogénitos confesaron que aquel pueblo era hijo de Dios."
+        },
+        {
+          "n": 14,
+          "text": "Pues cuando un silencio apacible envolvía todas las cosas y la noche iba a la mitad de su propio curso veloz,"
+        },
+        {
+          "n": 15,
+          "text": "tu palabra todopoderosa, desde los cielos, desde los tronos reales, como implacable guerrero saltó en medio de la tierra condenada a destrucción, llevando cual espada aguda tu mandato inexorable;",
+          "note": "El texto base escribe ανϋποκριτν (omisión de ο); se sigue a S1, ανϋποκριτον («inexorable / sin fingimiento»)."
+        },
+        {
+          "n": 16,
+          "text": "y deteniéndose, lo llenó todo de muerte; tocaba el cielo, pero tenía puestos los pies en la tierra."
+        },
+        {
+          "n": 17,
+          "text": "Entonces, al instante, apariciones de sueños terribles los perturbaron, y espantos imprevistos cayeron sobre ellos."
+        },
+        {
+          "n": 18,
+          "text": "Y arrojado cada uno por un lado medio muerto, manifestaba la causa por la que morían;"
+        },
+        {
+          "n": 19,
+          "text": "porque los sueños que los turbaron se lo anunciaron de antemano, para que no perecieran ignorando por qué padecían ese mal."
+        },
+        {
+          "n": 20,
+          "text": "Pero también a los justos alcanzó entonces una prueba de muerte, y hubo mortandad de una multitud en el desierto; mas no duró mucho tiempo tu ira."
+        },
+        {
+          "n": 21,
+          "text": "Pues apresurándose un varón irreprochable, salió a combatir llevando el arma de su propio ministerio, la oración, y la expiación del incienso; hizo frente a la cólera y puso fin a la desgracia, mostrando que es servidor tuyo."
+        },
+        {
+          "n": 22,
+          "text": "Y venció a la multitud no con fuerza del cuerpo ni con eficacia de armas, sino que con la palabra sometió al que castigaba, recordándole los juramentos y las alianzas de los padres.",
+          "note": "El Codex lee literalmente τον οχλον («a la multitud»); otros manuscritos leen τον χολον («la cólera / ira»)."
+        },
+        {
+          "n": 23,
+          "text": "Pues habiendo caído ya los muertos en montones unos sobre otros, poniéndose en medio detuvo la ira y dividió el camino hacia los vivos."
+        },
+        {
+          "n": 24,
+          "text": "Porque sobre su vestidura talar estaba el mundo entero, y las glorias de los padres en el grabado de las cuatro hileras de piedras, y tu majestad sobre la diadema de su cabeza."
+        },
+        {
+          "n": 25,
+          "text": "Ante estas cosas cedió el exterminador, y a estas temió; pues bastaba la sola prueba de tu ira.",
+          "note": "El texto base escribe δε εφοβηθηϲαν (plural sin sujeto plural); se sigue al corrector ca, εφοβηθη («temió», referido al exterminador)."
+        }
+      ]
+    },
+    {
+      "num": 19,
+      "verses": [
+        {
+          "n": 1,
+          "text": "Mas sobre los impíos se abatió hasta el fin una cólera sin misericordia; pues conocía de antemano también lo que había de sucederles:"
+        },
+        {
+          "n": 2,
+          "text": "que ellos mismos, tras haberles permitido marcharse y haberlos despedido con premura, los perseguirían arrepentidos.",
+          "note": "El texto base escribe επεϲτρεψαντεϲ («volviéndose»); se sigue al corrector ca, επιτρεψαντεϲ («habiéndoles permitido»)."
+        },
+        {
+          "n": 3,
+          "text": "Porque teniendo aún entre manos los duelos y lamentándose junto a los sepulcros de los muertos, adoptaron otro razonamiento, y a quienes habían expulsado con súplicas, a esos perseguían como fugitivos."
+        },
+        {
+          "n": 4,
+          "text": "Pues los arrastraba hacia este fin la merecida necesidad, y les infundió olvido de lo acontecido, para que completaran el castigo que faltaba a sus tormentos,"
+        },
+        {
+          "n": 5,
+          "text": "y tu pueblo emprendiera una travesía prodigiosa, mientras aquellos hallaran una muerte extraña."
+        },
+        {
+          "n": 6,
+          "text": "Pues toda la creación, en su propia naturaleza, fue configurada de nuevo desde arriba, sirviendo a tus mandatos, para que tus hijos fueran guardados ilesos."
+        },
+        {
+          "n": 7,
+          "text": "La nube que cubría con su sombra el campamento; de entre el agua que antes allí estaba se veía emerger tierra seca: desde el Mar Rojo un camino sin obstáculo y una llanura verdeante salida del oleaje impetuoso,"
+        },
+        {
+          "n": 8,
+          "text": "por donde pasaron como un solo pueblo entero los que eran amparados por tu mano, contemplando prodigios admirables.",
+          "note": "El texto base incluye una η suelta tras δι (suprimida por S1 y el corrector) y escribe πανεθνοϲ (enmendado por ca en πανεθνι, «como un pueblo entero»)."
+        },
+        {
+          "n": 9,
+          "text": "Porque como caballos pacieron, y como corderos saltaron de júbilo, alabándote a ti, Señor, que los librabas."
+        },
+        {
+          "n": 10,
+          "text": "Pues todavía se acordaban de lo sucedido en su estadía de extranjeros: cómo en vez de la procreación de animales, produjo la tierra mosquitos, y en vez de seres acuáticos, vomitó el río ranas."
+        },
+        {
+          "n": 11,
+          "text": "Y más tarde vieron también una nueva generación de aves, cuando impulsados por el apetito pidieron manjares delicados;"
+        },
+        {
+          "n": 12,
+          "text": "pues para su consuelo subieron para ellos codornices desde el mar."
+        },
+        {
+          "n": 13,
+          "text": "Y los castigos sobrevinieron a los pecadores no sin los presagios ocurridos antes por la fuerza de los rayos; pues justamente padecían por sus propias maldades, y practicaron una hostilidad contra los huéspedes aún más cruel."
+        },
+        {
+          "n": 14,
+          "text": "Porque aquellos no recibían a desconocidos cuando llegaban, pero estos esclavizaron a huéspedes benefactores."
+        },
+        {
+          "n": 15,
+          "text": "Y no solo eso, sino que todavía habrá un juicio sobre ellos, ya que recibieron con hostilidad a los extranjeros;"
+        },
+        {
+          "n": 16,
+          "text": "pero estos, tras haber acogido con festejos a quienes ya habían compartido sus mismos derechos, los maltrataron con terribles trabajos."
+        },
+        {
+          "n": 17,
+          "text": "Pero también fueron heridos de ceguera, como aquellos ante las puertas del justo, cuando, rodeados de tiniebla insondable, cada uno buscaba la entrada de sus propias puertas."
+        },
+        {
+          "n": 18,
+          "text": "Pues los elementos, reordenándose entre sí —como en un salterio las notas cambian el nombre del ritmo, permaneciendo siempre en el sonido—, esto puede conjeturarse con exactitud a partir de la vista de lo sucedido."
+        },
+        {
+          "n": 19,
+          "text": "Porque los seres terrestres se transformaban en acuáticos, y los que nadan pasaban a tierra;",
+          "note": "El texto base escribe ενεδρα («emboscadas», error de copia); se sigue al corrector ca, ενϋδρα («acuáticos»)."
+        },
+        {
+          "n": 20,
+          "text": "el fuego conservaba el vigor de su propia fuerza en el agua, y el agua olvidaba su naturaleza extintora."
+        },
+        {
+          "n": 21,
+          "text": "Las llamas, por el contrario, no consumieron las carnes de seres corruptibles que caminaban entre ellas, ni esa clase derretible, cristalina y fácil de fundir de exquisita ambrosía."
+        },
+        {
+          "n": 22,
+          "text": "Pues en todo, Señor, engrandeciste a tu pueblo y lo glorificaste, y no lo desatendiste, asistiéndolo en todo tiempo y por la mañana.",
+          "note": "El Codex lee literalmente και το πρωϊ παριϲταμενοϲ («y por la mañana», sin variante de corrector); otros manuscritos de la Septuaginta leen και τοπω («y lugar»)."
+        }
+      ]
+    }
+  ]
+}

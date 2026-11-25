@@ -4,8 +4,8 @@ import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
 import './CardNav.css';
 
-/** Alto del menú abierto en escritorio: cabe un grupo de cuatro enlaces. */
-const DESKTOP_H = 300;
+/** Alto del menú abierto en escritorio: cabe un grupo de cinco enlaces. */
+const DESKTOP_H = 340;
 
 const CardNav = ({
   logo,

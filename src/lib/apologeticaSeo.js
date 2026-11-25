@@ -37,19 +37,27 @@ export const APOLOGETICA_FASCICULOS = [
     path: '/apologetica/adventismo',
     preguntasFile: 'adventismo-preguntas.json',
     clavesFile: 'adventismo-claves.json',
-    doctrinaFile: null,
+    doctrinaFile: 'adventismo-doctrina.json',
     bilingualDoctrina: false,
-    expectedCount: 50,
-    expectedBlocks: 6,
+    expectedCount: 100,
+    expectedBlocks: 10,
     seo: brand => ({
-      title: `Adventismo: 50 preguntas, solo con la Biblia — ${brand}`,
+      title: `Adventismo: 100 preguntas, solo con la Biblia — ${brand}`,
       description:
-        'Para miembros y estudiantes adventistas: 50 preguntas sobre el sábado, la ley, el santuario celestial, 1844, el juicio investigador, el estado intermedio y la profecía, en el griego del Codex Sinaiticus y en español.'
+        'Para miembros y estudiantes adventistas: 100 preguntas en 10 temas y análisis «¿Qué cree el Adventismo?» con fuentes oficiales y patrística sobre el sábado, el Día del Señor, 1844, el juicio investigador, Azazel, el remanente, Elena G. de White y la cristología, en el Codex Sinaiticus y la NTV.'
     }),
     search: {
-      title: 'Adventismo — 50 preguntas, solo con la Biblia',
-      desc: '50 preguntas con el texto griego del Codex Sinaiticus frente a la NTV sobre el sábado, la ley, 1844, el juicio investigador, el estado intermedio y el don de profecía.',
-      tags: ['adventismo', 'apologética', 'sábado', '1844', 'juicio investigador', 'codex sinaiticus'],
+      title: 'Adventismo — 100 preguntas y contraste doctrinal',
+      desc: '100 preguntas con el Codex Sinaiticus y la NTV más contraste documental «¿Qué cree el Adventismo?» sobre el sábado, el Día del Señor (patrística), la ley, 1844, Azazel, el remanente, Elena G. de White y Miguel.',
+      tags: [
+        'adventismo',
+        'apologética',
+        'sábado',
+        'día del señor',
+        '1844',
+        'juicio investigador',
+        'codex sinaiticus'
+      ],
       extra: [
         'adventistas del septimo dia',
         'ellen white',
@@ -57,7 +65,14 @@ export const APOLOGETICA_FASCICULOS = [
         'santuario celestial',
         'sueno del alma',
         'aniquilacionismo',
-        'ley ceremonial'
+        'ley ceremonial',
+        'que cree el adventismo',
+        'arcangel miguel',
+        'marca de la bestia',
+        'iglesia remanente',
+        'domingo patrística',
+        'leroy froom',
+        'azazel'
       ]
     }
   },

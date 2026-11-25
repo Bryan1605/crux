@@ -289,3 +289,86 @@
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
+
+/* --- ficha Ketiv / Qere (hebreo y arameo) ---------------------------------- */
+
+.vpop__kq p {
+  margin: 0;
+}
+
+.vpop__kq .vpop__ref {
+  margin-bottom: 0.5rem;
+}
+
+.vpop__kq-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem !important;
+}
+
+.vpop__kq-badge {
+  display: inline-block;
+  padding: 0.12rem 0.48rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f0ad76;
+  background: color-mix(in srgb, #f0ad76 12%, transparent);
+  border: 1px solid color-mix(in srgb, #f0ad76 38%, transparent);
+  border-radius: 999px;
+}
+
+.vpop__kq-badge--arc {
+  color: #6fd6c8;
+  background: color-mix(in srgb, #6fd6c8 12%, transparent);
+  border-color: color-mix(in srgb, #6fd6c8 38%, transparent);
+}
+
+.vpop__kq-pairs {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0 0 0.7rem;
+}
+
+.vpop__kq-pair {
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+}
+
+.vpop__kq-pair dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.vpop__kq-pair dd {
+  margin: 0;
+}
+
+.vpop__kq-heb {
+  font-family: var(--font-hebrew, 'Ezra SIL', 'SBL Hebrew', serif);
+  font-size: 1.45rem;
+  line-height: 1.7;
+  color: #f0ad76;
+}
+
+.vpop__kq-heb--q {
+  color: #89bfff;
+}
+
+.vpop__kq-empty {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.vpop__kq-help {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}

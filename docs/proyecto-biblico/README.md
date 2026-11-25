@@ -16,8 +16,8 @@ Si eres un agente nuevo, lee en este orden:
 
 ## Estado en una línea
 
-Versión **0.11.0**, **287 rutas** (**286** en `sitemap.xml`), **73 libros**: 66 con NTV, 59 con Codex y
-**7 solo-Codex**; **708 paralelos**. Están publicadas **4 traducciones de trabajo** en `borrador` (**587 versículos**: Tobit completo con 232 vv., Judit completo con 327 vv., Salmo 151 con 7 vv. y Joel 4 LXX con 21 vv.) y **todas las 73 fichas de libros** (`/biblia/libros/:id`, en `borrador`, con 128 fuentes verificadas en `content/libros/fuentes.json`). En apologética están publicados **3 fascículos** (`shincheonji`, `adventismo`, `dispensacionalismo`). Quedan pendientes el módulo de hebreo (`/biblia/hebreo`) y las traducciones de Sabiduría, 4 Macabeos, 1 Macabeos y Sirácida.
+Versión **0.12.0**, **289 rutas** (**288** en `sitemap.xml`), **73 libros**: 66 con NTV, 59 con Codex,
+**7 solo-Codex** y **39 AT en Hebreo/Arameo (WLC / OSHB, Fases 1 y 2)**; **708 paralelos** Codex/NTV y **789 / 929** capítulos hebreos alineados con NTV en `/exegesis` (apagada por defecto, con paralelo de 2 o 3 testigos y fallback sin paralelo forzado en los 140 restantes). Están publicadas **8 traducciones de trabajo** en `borrador` (**3.789 versículos**: los **6/6 libros solo-Codex** —Tobit 232, Judit 327, Sabiduría 435, 4 Macabeos 479, 1 Macabeos 924 y Sirácida 1.364 = **3.761 vv.**— más Salmo 151 con 7 vv. y Joel 4 LXX con 21 vv., con tablas de revisión en `docs/proyecto-biblico/revision/`) y **todas las 73 fichas de libros** (`/biblia/libros/:id`, en `borrador`, con 128 fuentes verificadas en `content/libros/fuentes.json`). En apologética figuran **9 fascículos** (3 publicados: `shincheonji`, `adventismo` y `dispensacionalismo`; 6 anunciados «Próximamente»: Catolicismo Romano Papista, Gnósticos, Islam, Mormonismo · Santos de los Últimos Días, Testigos de Jehová y Judaizantes y Raíces Hebreas). Quedan pendientes la revisión humana de traducciones y fichas, los futuros comentarios capítulo a capítulo y una eventual lematización hebrea.
 Los datos actuales están verificados en `ESTADO.md`.
 
 ## Reglas que no se negocian
@@ -55,9 +55,10 @@ Los datos actuales están verificados en `ESTADO.md`.
 | Salida Codex | `public/textos/exegesis/codex/*.json` | generada y versionada |
 | Índice y buscadores | `public/textos/exegesis/index.json`, `buscar-at.json`, `buscar-nt.json` | generados |
 | Léxico y lemas | `public/textos/exegesis/lexico.json`, `lemas/*.json`; fuente `content/lexico/griego.json` | generados/editable |
-| Traducción (propuesta) | `src/assets/texts/trad/<libro>.json` → `public/textos/exegesis/trad/<libro>.json` | **Tobit (232 vv) + Judit (327 vv) + Salmo 151 (7 vv) + Joel 4 LXX (21 vv), borrador (587 vv)** (columna «Trad» en `/exegesis`) |
+| Traducción (`trad/`) | `src/assets/texts/trad/<libro>.json` → `public/textos/exegesis/trad/<libro>.json` | **8/8 archivos (3.789 vv., `borrador`)**: 6/6 libros solo-Codex (`3.761 vv.`) + Salmo 151 (`7 vv.`) + Joel 4 LXX (`21 vv.`); tablas en `docs/proyecto-biblico/revision/` (columna «Trad» en `/exegesis`) |
 | Fichas | `content/libros/<id>.json` + registro `content/libros/fuentes.json` → `/biblia/libros/<id>` | **73/73 fichas** (66 NTV + 7 solo-Codex, en `borrador`, 128 fuentes) |
-| Hebreo (propuesta) | `public/textos/hebreo/` y `/biblia/hebreo` | **no existe aún** |
+| Hebreo (Fase 1) | `public/textos/hebreo/` (`39` libros WLC/OSHB, `6,47 MB`), `src/assets/fonts/ezra-sil/` y `/biblia/hebreo` | **implementado (Fase 1)**: RTL, Ezra SIL, arameo y ketiv/qere |
+| Hebreo (Fase 2) | `src/components/HebrewVerseTokens.jsx` y columna `hebreo` en `src/pages/Exegesis.jsx` | **implementado (2026-11-23, `0.12.0`)**: apagada por defecto, 2/3 cols (`789/929`) y fallback sin paralelo forzado (`140`) |
 
 ## Cómo continuar
 
@@ -66,11 +67,11 @@ El orden acordado es:
 (Reordenado el 2026-10-31; ver `DECISIONES.md` §6.)
 
 1. ~~**Refactor de columnas de `/exegesis`**~~ — hecho el 2026-11-02 (`DECISIONES.md` §9).
-2. ~~**Tobit**: traducción piloto + ficha + panel + índice + registro de fuentes~~ (hecho).
-3. ~~**73 fichas introductorias + Judit completo + Salmo 151 y Joel 4 LXX**~~ (hecho en `borrador`); pendientes traducciones de Sabiduría, 4 Macabeos, 1 Macabeos y Sirácida.
-4. **Hebreo** (fase 1: datos y lector, solo texto y marcas; fase 2: columna de
-   exégesis y alineación; versión 0.12.0).
-5. Comentarios capítulo a capítulo (fase futura; no están en el alcance actual).
+2. ~~**Tobit**: traducción piloto + ficha + panel + índice + registro de fuentes~~ (hecho; pendiente revisión humana).
+3. ~~**73 fichas introductorias + 6/6 solo-Codex + Salmo 151 y Joel 4 LXX**~~ — completadas en `borrador` (`3.789 vv.` en 8 archivos; Sabiduría, 4 Macabeos, 1 Macabeos y Sirácida añadidos el 2026-11-24); pendiente revisión humana de los borradores y fichas.
+4. ~~**Hebreo, fase 1**~~ — hecho el 2026-11-22 (`public/textos/hebreo/` + lector RTL `/biblia/hebreo`).
+5. ~~**Hebreo, fase 2**~~ — hecho el 2026-11-23 (columna de exégesis apagada por defecto en `/exegesis`, paralelo 2/3 cols, fallback sin paralelo forzado y versión `0.12.0`).
+6. Comentarios capítulo a capítulo (fase futura; no están en el alcance actual).
 
 No empieces por las 73 fichas ni por traducir los seis libros a la vez. El piloto
 de Tobit y la primera ficha existen para fijar el formato y que el usuario lo

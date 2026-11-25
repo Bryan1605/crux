@@ -2,11 +2,12 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 
 import BibleSearch from '../components/BibleSearch';
+import HebrewVerseTokens from '../components/HebrewVerseTokens';
 import ReaderMenu from '../components/ReaderMenu';
 import BibleCta from '../components/BibleCta';
 import LexiconPanel from '../components/LexiconPanel';
 import NtvInline from '../components/NtvInline';
-import VersePopover, { ApparatusBody, LexiconBody, NoteBody } from '../components/VersePopover';
+import VersePopover, { ApparatusBody, KetivQereBody, LexiconBody, NoteBody } from '../components/VersePopover';
 import {
   NT_BOOKS,
   OT_BOOKS,
@@ -17,6 +18,15 @@ import {
 } from '../data/exegesis';
 import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadLemmas, loadLexicon, loadLexiconBase, loadWitnessBook } from '../lib/exegesisTexts';
+import { loadHebreoBook } from '../lib/hebreoTexts';
+import {
+  EZRA_SIL_URL,
+  HEBREW_BOOK_BY_ID,
+  HEBREW_LICENSE_URL,
+  HEBREW_SOURCE_URL,
+  stripCantillation,
+  stripNiqqud
+} from '../lib/hebrew';
 import { hasSelection } from '../lib/selection';
 import { splitOverline, tokenizeGreek } from '../lib/greek';
 import { decodeToken } from '../lib/lexicon';
@@ -25,6 +35,7 @@ import BookIntroPanel from '../components/BookIntroPanel/BookIntroPanel';
 
 import './Biblia.css';
 import './Exegesis.css';
+import './BibliaHebreo.css';
 
 /* -------------------------------------------------------------------------- */
 /* Preferencias y constantes                                                  */
@@ -35,7 +46,9 @@ const FS_MAX = 26;
 const KEYS = {
   size: 'crux.exegesis.letra',
   theme: 'crux.exegesis.papel',
-  mode: 'crux.exegesis.columnas'
+  mode: 'crux.exegesis.columnas',
+  cantillation: 'crux.hebreo.cantilacion',
+  vowels: 'crux.hebreo.vocales'
 };
 
 const THEMES = [
@@ -54,6 +67,7 @@ const THEMES = [
  * nombre accesible debe contener el texto visible (`label-content-name-mismatch`).
  */
 const COLUMNS = [
+  { id: 'hebreo', short: 'Hebreo', label: 'Solo el Hebreo · texto masorético (WLC / OSHB)' },
   { id: 'codex', short: 'Codex', label: 'Solo el Codex Sinaiticus' },
   { id: 'ntv', short: 'NTV', label: 'Solo la NTV · Nueva Traducción Viviente' },
   { id: 'trad', short: 'Trad', label: 'Solo la Trad · traducción de trabajo del Codex (borrador)' }
@@ -114,6 +128,8 @@ const readMode = () => {
   const stored = read(KEYS.mode, 'paralelo');
   if (stored === 'dos') return 'paralelo';
   if (stored === 'uno') return 'codex';
+  // La columna hebrea arranca apagada por defecto salvo que la pida la URL o el usuario.
+  if (stored === 'hebreo') return 'paralelo';
   return stored === PARALLEL.id || COLUMNS.some(c => c.id === stored) ? stored : 'paralelo';
 };
 
@@ -121,12 +137,19 @@ const readMode = () => {
 /* Iconos                                                                     */
 /* -------------------------------------------------------------------------- */
 
-/** Icono del conmutador de columnas: un rectángulo con (o sin) divisoria. */
-function LayoutGlyph({ two }) {
+/** Icono del conmutador de columnas: un rectángulo con 1 o 2 divisorias. */
+function LayoutGlyph({ cols = 2, two }) {
+  const n = two ? 2 : cols;
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
       <rect x="1" y="2" width="14" height="12" rx="1.5" fill="none" stroke="currentColor" strokeWidth="1.3" />
-      {two ? <line x1="8" y1="2" x2="8" y2="14" stroke="currentColor" strokeWidth="1.3" /> : null}
+      {n === 2 ? <line x1="8" y1="2" x2="8" y2="14" stroke="currentColor" strokeWidth="1.3" /> : null}
+      {n >= 3 ? (
+        <>
+          <line x1="5.7" y1="2" x2="5.7" y2="14" stroke="currentColor" strokeWidth="1.3" />
+          <line x1="10.3" y1="2" x2="10.3" y2="14" stroke="currentColor" strokeWidth="1.3" />
+        </>
+      ) : null}
     </svg>
   );
 }
@@ -275,6 +298,7 @@ export default function Exegesis() {
   const [ntv, setNtv] = useState(null);
   const [codex, setCodex] = useState(undefined);
   const [trad, setTrad] = useState(null);
+  const [hebreo, setHebreo] = useState(null);
   const [lemas, setLemas] = useState(null);
   const [lexicon, setLexicon] = useState(null);
   const [lexiconStatus, setLexiconStatus] = useState('idle');
@@ -294,6 +318,8 @@ export default function Exegesis() {
   });
   const [size, setSize] = useState(() => Number(read(KEYS.size, 19)));
   const [mode, setMode] = useState(readMode);
+  const [showCantillation, setShowCantillation] = useState(() => read(KEYS.cantillation, '1') !== '0');
+  const [showVowels, setShowVowels] = useState(() => read(KEYS.vowels, '1') !== '0');
   const [pop, setPop] = useState(null);
   const [navOpen, setNavOpen] = useState(false);
 
@@ -306,6 +332,7 @@ export default function Exegesis() {
   const selected = Number(params.get('v')) || null;
   const dicOpen = params.has('dic');
   const dicValue = params.get('dic') || '';
+  const hebreoParam = params.get('hebreo') === '1' || params.get('modo') === 'hebreo';
 
   /* ------------------------------- índice --------------------------------- */
 
@@ -366,6 +393,9 @@ export default function Exegesis() {
   const hasNtv = Boolean(bookMeta?.ntv.verses);
   const hasCodex = Boolean(bookMeta?.codex.verses);
   const hasTrad = Boolean(bookMeta?.trad?.verses);
+  const hasHebreo = HEBREW_BOOK_BY_ID.has(bookId);
+  const hebreoMeta = HEBREW_BOOK_BY_ID.get(bookId) || null;
+  const hebreoActive = hasHebreo && hebreoParam;
 
   /* ------------------------------- testigos ------------------------------- */
 
@@ -421,6 +451,22 @@ export default function Exegesis() {
     };
   }, [bookId, bookMeta, hasTrad]);
 
+  /* Texto masorético hebreo y arameo (WLC / OSHB): solo se descarga si está activo en el AT. */
+  useEffect(() => {
+    if (!bookMeta || !hebreoActive) {
+      setHebreo(null);
+      return undefined;
+    }
+    let alive = true;
+    setHebreo(undefined);
+    loadHebreoBook(bookId)
+      .then(data => alive && setHebreo(data))
+      .catch(() => alive && setHebreo(null));
+    return () => {
+      alive = false;
+    };
+  }, [bookId, bookMeta, hebreoActive]);
+
   /* Mapas de lemas del libro abierto: una entrada por palabra del Codex.
      MorphGNT solo cubre el NT; el AT no tiene mapas y no debe pedirlos. */
   useEffect(() => {
@@ -453,9 +499,16 @@ export default function Exegesis() {
     [trad, chapterNum]
   );
 
+  const hebreoChapter = useMemo(
+    () => (hebreo ? hebreo.chapters.find(c => c.num === chapterNum) || null : null),
+    [hebreo, chapterNum]
+  );
+
   const chapterHasNtv = Boolean(ntvChapter);
   const chapterHasTrad = Boolean(tradChapter);
   const chapterHasCodex = Boolean(codexChapter);
+  const chapterHasHebreo = Boolean(hebreoChapter);
+  const hebreoAligned = Boolean(hebreoChapter?.ntvAligned);
 
   /* Precarga el léxico al abrir `?dic=` o en capítulos del NT con Codex para evitar parpadeos al pulsar palabras. */
   useEffect(() => {
@@ -471,22 +524,64 @@ export default function Exegesis() {
     const codexChapters = hasCodex
       ? codex?.chapters?.map(c => c.num) || bookMeta?.codex.chapters || []
       : [];
-    return [...new Set([...ntvChapters, ...codexChapters])].sort((a, b) => a - b);
-  }, [hasNtv, hasCodex, ntv, codex, bookMeta]);
+    const hebreoChapters =
+      hasHebreo && hebreoActive ? hebreo?.chapters?.map(c => c.num) || hebreoMeta?.chapters || [] : [];
+    return [...new Set([...ntvChapters, ...codexChapters, ...hebreoChapters])].sort((a, b) => a - b);
+  }, [hasNtv, hasCodex, hasHebreo, hebreoActive, ntv, codex, hebreo, bookMeta, hebreoMeta]);
 
   const loading =
     !bookMeta ||
     (hasNtv && !ntv) ||
     (hasCodex && codex === undefined) ||
-    (hasTrad && trad === undefined);
+    (hasTrad && trad === undefined) ||
+    (hebreoActive && hebreo === undefined);
+
+  /* ------------------------------- columnas ------------------------------- */
+
+  const baseColumns = [
+    chapterHasCodex && 'codex',
+    chapterHasNtv && 'ntv',
+    chapterHasTrad && 'trad'
+  ].filter(Boolean);
+
+  const canShowHebreo = hebreoActive && chapterHasHebreo;
+  // Capítulos con versificación masorética distinta a la NTV (140/929) no se fuerzan en paralelo.
+  const hebreoSoloForced = canShowHebreo && !hebreoAligned;
+
+  const availableColumns = hebreoSoloForced
+    ? ['hebreo']
+    : [canShowHebreo && 'hebreo', ...baseColumns].filter(Boolean);
+
+  const availableModes = hebreoSoloForced
+    ? [COLUMNS.find(c => c.id === 'hebreo'), ...modesFor(baseColumns)]
+        .filter(Boolean)
+        .map(m => (m.id === 'hebreo' ? { ...m, columns: ['hebreo'] } : m))
+    : modesFor(availableColumns);
+
+  // `?modo=` (p. ej. `?modo=trad`, `?modo=hebreo`) manda sobre la preferencia guardada, sin cambiarla.
+  const modeParam = params.get('modo');
+  const effectiveStoredMode = canShowHebreo && !modeParam && !hebreoSoloForced ? 'paralelo' : mode;
+  const view = hebreoSoloForced
+    ? availableModes[0] || { id: 'hebreo', columns: ['hebreo'] }
+    : availableModes.find(m => m.id === modeParam) ||
+      availableModes.find(m => m.id === effectiveStoredMode) ||
+      availableModes[0] || { id: 'ntv', columns: [] };
+  const viewMode = view.id;
+  const shown = view.columns;
+  const columns = shown.length;
+  const includeHebreoRows = shown.includes('hebreo');
+  const soloHebreoMode = includeHebreoRows && shown.length === 1;
 
   /* ------------------------------- rangos --------------------------------- */
 
   const chapterVerseMax = useMemo(() => {
+    const fromHebreo =
+      includeHebreoRows && hebreoChapter ? hebreoChapter.verses.reduce((a, v) => Math.max(a, v.n), 0) : 0;
+    if (soloHebreoMode) return fromHebreo;
     const fromNtv = ntvChapter ? ntvChapter.verses.reduce((a, v) => Math.max(a, v.n), 0) : 0;
     const fromCodex = codexChapter ? codexChapter.verses.reduce((a, v) => Math.max(a, v.n), 0) : 0;
-    return Math.max(fromNtv, fromCodex);
-  }, [ntvChapter, codexChapter]);
+    return Math.max(fromHebreo, fromNtv, fromCodex);
+  }, [includeHebreoRows, soloHebreoMode, hebreoChapter, ntvChapter, codexChapter]);
 
   const ranges = useMemo(() => {
     if (!chapterVerseMax) return [];
@@ -501,6 +596,11 @@ export default function Exegesis() {
   const range = useMemo(
     () => ranges.find(r => r.id === rangeParam) || ranges[0] || { from: 1, to: 0 },
     [ranges, rangeParam]
+  );
+
+  const visibleHebreo = useMemo(
+    () => (hebreoChapter ? hebreoChapter.verses.filter(v => v.n >= range.from && v.n <= range.to) : []),
+    [hebreoChapter, range]
   );
 
   const visibleNtv = useMemo(
@@ -522,10 +622,21 @@ export default function Exegesis() {
    * el hueco marcado) y una por título de sección, en su sitio.
    */
   const rows = useMemo(() => {
+    if (soloHebreoMode) {
+      return visibleHebreo.map(v => ({
+        kind: 'verse',
+        n: v.n,
+        hebreo: v,
+        codex: null,
+        ntv: null,
+        trad: null
+      }));
+    }
+    const hebreoByN = includeHebreoRows ? new Map(visibleHebreo.map(v => [v.n, v])) : new Map();
     const codexByN = new Map(visibleCodex.map(v => [v.n, v]));
     const ntvByN = new Map(visibleNtv.map(v => [v.n, v]));
     const tradByN = new Map(visibleTrad.map(v => [v.n, v]));
-    const numbers = [...new Set([...codexByN.keys(), ...ntvByN.keys()])].sort((a, b) => a - b);
+    const numbers = [...new Set([...hebreoByN.keys(), ...codexByN.keys(), ...ntvByN.keys()])].sort((a, b) => a - b);
     const sections = new Map();
     for (const section of ntvChapter?.sections || []) {
       if (!sections.has(section.verse)) sections.set(section.verse, []);
@@ -537,13 +648,14 @@ export default function Exegesis() {
       list.push({
         kind: 'verse',
         n,
+        hebreo: hebreoByN.get(n) || null,
         codex: codexByN.get(n) || null,
         ntv: ntvByN.get(n) || null,
         trad: tradByN.get(n) || null
       });
     }
     return list;
-  }, [visibleCodex, visibleNtv, visibleTrad, ntvChapter]);
+  }, [soloHebreoMode, includeHebreoRows, visibleHebreo, visibleCodex, visibleNtv, visibleTrad, ntvChapter]);
 
   const verseNumbers = useMemo(() => rows.filter(r => r.kind === 'verse').map(r => r.n), [rows]);
 
@@ -597,6 +709,17 @@ export default function Exegesis() {
   useEffect(() => write(KEYS.theme, theme), [theme]);
   useEffect(() => write(KEYS.size, size), [size]);
   useEffect(() => write(KEYS.mode, mode), [mode]);
+  useEffect(() => write(KEYS.cantillation, showCantillation ? '1' : '0'), [showCantillation]);
+  useEffect(() => write(KEYS.vowels, showVowels ? '1' : '0'), [showVowels]);
+
+  const formatHebrewSurface = useCallback(
+    text => {
+      if (!showVowels) return stripNiqqud(text);
+      if (!showCantillation) return stripCantillation(text);
+      return text;
+    },
+    [showVowels, showCantillation]
+  );
 
   const themeDef = THEMES.find(t => t.id === theme) || THEMES[0];
   const cycleTheme = () =>
@@ -607,7 +730,13 @@ export default function Exegesis() {
   const goto = useCallback(
     (next, push = false) => {
       const q = new URLSearchParams(params);
-      if (next.bookId) q.set('libro', next.bookId);
+      if (next.bookId) {
+        q.set('libro', next.bookId);
+        if (!HEBREW_BOOK_BY_ID.has(next.bookId)) {
+          q.delete('hebreo');
+          if (q.get('modo') === 'hebreo') q.delete('modo');
+        }
+      }
       if (next.chapter) q.set('cap', String(next.chapter));
       if (next.range !== undefined) q.set('vv', next.range);
       else q.delete('vv');
@@ -684,19 +813,44 @@ export default function Exegesis() {
     body.scrollTo({ top: Math.max(0, top), behavior: prefersReduced() ? 'auto' : 'smooth' });
   }, [loading, selected, bookId, chapterNum, range.id, rows]);
 
-  /* ------------------------------- columnas ------------------------------- */
+  /* ------------------------- controles de columnas ------------------------ */
 
-  const availableColumns = [chapterHasCodex && 'codex', chapterHasNtv && 'ntv', chapterHasTrad && 'trad'].filter(Boolean);
-  const availableModes = modesFor(availableColumns);
-  // `?modo=` (p. ej. `?modo=trad`) manda sobre la preferencia guardada, sin cambiarla.
-  const modeParam = params.get('modo');
-  const view =
-    availableModes.find(m => m.id === modeParam) ||
-    availableModes.find(m => m.id === mode) ||
-    availableModes[0] || { id: 'ntv', columns: [] };
-  const viewMode = view.id;
-  const shown = view.columns;
-  const columns = shown.length;
+  const toggleHebreo = useCallback(() => {
+    const q = new URLSearchParams(params);
+    if (hebreoActive) {
+      q.delete('hebreo');
+      if (q.get('modo') === 'hebreo') q.delete('modo');
+      if (mode === 'hebreo') setMode('paralelo');
+    } else {
+      q.delete('modo');
+      q.set('hebreo', '1');
+      setMode('paralelo');
+    }
+    setPop(null);
+    setParams(q, { replace: true });
+  }, [params, setParams, hebreoActive, mode]);
+
+  const hebreoToggleButton = hasHebreo ? (
+    <button
+      type="button"
+      className={`rb-btn exg-heb-toggle${hebreoActive ? ' is-active' : ''}`}
+      aria-pressed={hebreoActive}
+      title={
+        hebreoActive
+          ? 'Ocultar la columna hebrea (WLC / OSHB)'
+          : 'Mostrar el texto hebreo y arameo (WLC / OSHB)'
+      }
+      onClick={toggleHebreo}
+    >
+      <span className="exg-heb-toggle__glyph" aria-hidden="true">
+        א
+      </span>
+      <span>Hebreo</span>
+      <span className="sr-only">
+        {hebreoActive ? ' (columna activa, pulsar para ocultar)' : ' (activar testigo WLC)'}
+      </span>
+    </button>
+  ) : null;
 
   /** Botones de columnas (en la barra o, en móvil, dentro del menú «Aa»). */
   const modeButtons = (
@@ -710,15 +864,37 @@ export default function Exegesis() {
           title={m.label}
           aria-label={m.label}
           onClick={() => {
-            setMode(m.id);
-            if (modeParam) {
+            if (m.id === 'hebreo') {
+              setMode('paralelo');
               const q = new URLSearchParams(params);
+              q.set('modo', 'hebreo');
+              q.delete('hebreo');
+              setParams(q, { replace: true });
+              return;
+            }
+            if (!m.columns.includes('hebreo') && (params.has('hebreo') || modeParam === 'hebreo')) {
+              setMode(m.id);
+              const q = new URLSearchParams(params);
+              q.delete('hebreo');
+              q.delete('modo');
+              setParams(q, { replace: true });
+              return;
+            }
+            setMode(m.id);
+            const q = new URLSearchParams(params);
+            if (m.id === 'paralelo' && canShowHebreo) {
+              q.delete('modo');
+              q.set('hebreo', '1');
+              setParams(q, { replace: true });
+              return;
+            }
+            if (modeParam) {
               q.delete('modo');
               setParams(q, { replace: true });
             }
           }}
         >
-          {m.columns.length > 1 ? <LayoutGlyph two /> : m.short}
+          {m.columns.length > 1 ? <LayoutGlyph cols={m.columns.length} /> : m.short}
         </button>
       ))}
     </>
@@ -726,8 +902,13 @@ export default function Exegesis() {
 
   /* --------------------------------- SEO ---------------------------------- */
 
-  const seoWitness =
-    chapterHasCodex && chapterHasNtv
+  const seoWitness = includeHebreoRows
+    ? shown.includes('codex') && shown.includes('ntv')
+      ? 'Hebreo (WLC), Codex Sinaiticus y NTV'
+      : shown.includes('ntv')
+        ? 'Hebreo (WLC) y NTV'
+        : 'Biblia Hebrea (WLC / OSHB)'
+    : chapterHasCodex && chapterHasNtv
       ? 'Codex Sinaiticus y NTV'
       : chapterHasCodex && chapterHasTrad
         ? 'Codex Sinaiticus y traducción de trabajo'
@@ -740,8 +921,9 @@ export default function Exegesis() {
 
   useSeo({
     title: seoTitle,
-    description:
-      chapterHasCodex && chapterHasNtv
+    description: includeHebreoRows
+      ? 'Lectura comparada con el texto masorético hebreo y arameo (WLC / OSHB) en tipografía Ezra SIL, junto al Codex Sinaiticus y la Nueva Traducción Viviente.'
+      : chapterHasCodex && chapterHasNtv
         ? 'Lectura paralela de la Biblia, versículo a versículo: la transcripción del Codex Sinaiticus con su aparato crítico frente a la Nueva Traducción Viviente.'
         : chapterHasCodex
           ? 'Transcripción diplomática del Codex Sinaiticus, versículo a versículo, con su aparato crítico.'
@@ -779,6 +961,14 @@ export default function Exegesis() {
     [select]
   );
 
+  const openKetivQere = useCallback(
+    (anchor, data) => {
+      setPop({ kind: 'kq', anchor, ...data });
+      select(data.verse, { keepPop: true });
+    },
+    [select]
+  );
+
   /** Ficha de una palabra del Codex: lema, morfología y glosa curada o base TBESG. */
   const openWord = useCallback(
     (anchor, verse, wordIndex, token) => {
@@ -807,6 +997,10 @@ export default function Exegesis() {
       const q = new URLSearchParams(params);
       q.delete('dic');
       q.delete('vv');
+      if (!HEBREW_BOOK_BY_ID.has(targetBookId)) {
+        q.delete('hebreo');
+        if (q.get('modo') === 'hebreo') q.delete('modo');
+      }
       q.set('libro', targetBookId);
       q.set('cap', String(cap));
       q.set('v', String(verse));
@@ -880,6 +1074,22 @@ export default function Exegesis() {
 
   /** Cabecera de la columna de un testigo. */
   const renderHead = id => {
+    if (id === 'hebreo') {
+      return (
+        <>
+          <b>
+            Hebreo (WLC) ·{' '}
+            <span className="exg-grid__heb-name" lang="he" dir="rtl">
+              {hebreoMeta?.hebrewName || hebreo?.hebrewName}
+            </span>
+          </b>
+          <span>
+            Westminster Leningrad Codex · OSHB
+            {hebreoAligned ? '' : ' · numeración masorética'}
+          </span>
+        </>
+      );
+    }
     if (id === 'trad') {
       return (
         <>
@@ -914,6 +1124,21 @@ export default function Exegesis() {
 
   /** Celda de un testigo en una fila (o el aviso de que no trae el versículo). */
   const renderCell = (id, row) => {
+    if (id === 'hebreo') {
+      return row.hebreo ? (
+        <div className="exg-hebreo" dir="rtl" lang="he">
+          <HebrewVerseTokens
+            tokens={row.hebreo.t}
+            verseNum={row.n}
+            formatSurface={formatHebrewSurface}
+            activeKqId={pop?.kind === 'kq' ? pop.id : null}
+            onKetivQere={openKetivQere}
+          />
+        </div>
+      ) : (
+        <span className="exg-gap">El texto hebreo no trae este versículo.</span>
+      );
+    }
     if (id === 'trad') {
       return row.trad ? (
         <p className="exg-trad">
@@ -949,7 +1174,7 @@ export default function Exegesis() {
   };
 
   return (
-    <main id="main" className={`exg papel--${theme}`} data-theme={theme}>
+    <main id="main" className={`exg papel--${theme}${columns >= 3 ? ' exg--cols-3' : ''}`} data-theme={theme}>
       <div className="exg__shell">
         <nav className="breadcrumb exg__crumbs" aria-label="Migas de pan">
           <Link to="/">Inicio</Link>
@@ -961,23 +1186,53 @@ export default function Exegesis() {
 
         <header className="exg__head">
           <p className="eyebrow">
-            {chapterHasCodex && chapterHasNtv
-              ? 'Exégesis comparada'
-              : chapterHasCodex
-                ? 'Codex Sinaiticus'
-                : 'Biblia NTV'}
-          </p>
-          <h1>
-            {chapterHasCodex && chapterHasNtv
-              ? 'Codex Sinaiticus × Nueva Traducción Viviente'
-              : chapterHasCodex && chapterHasTrad
-                ? 'Codex Sinaiticus × traducción de trabajo'
+            {includeHebreoRows
+              ? shown.length > 1
+                ? 'Exégesis comparada'
+                : 'Texto masorético · WLC / OSHB'
+              : chapterHasCodex && chapterHasNtv
+                ? 'Exégesis comparada'
                 : chapterHasCodex
                   ? 'Codex Sinaiticus'
-                  : 'Nueva Traducción Viviente'}
+                  : 'Biblia NTV'}
+          </p>
+          <h1>
+            {includeHebreoRows
+              ? shown.includes('codex') && shown.includes('ntv')
+                ? 'Hebreo (WLC) × Codex Sinaiticus × NTV'
+                : shown.includes('ntv')
+                  ? 'Hebreo (WLC) × Nueva Traducción Viviente'
+                  : 'Biblia Hebrea (WLC / OSHB)'
+              : chapterHasCodex && chapterHasNtv
+                ? 'Codex Sinaiticus × Nueva Traducción Viviente'
+                : chapterHasCodex && chapterHasTrad
+                  ? 'Codex Sinaiticus × traducción de trabajo'
+                  : chapterHasCodex
+                    ? 'Codex Sinaiticus'
+                    : 'Nueva Traducción Viviente'}
           </h1>
           <p className="exg__lead">
-            {chapterHasCodex && chapterHasNtv ? (
+            {includeHebreoRows ? (
+              shown.length >= 3 ? (
+                <>
+                  El mismo pasaje leído en tres testigos, versículo a versículo: el texto
+                  masorético hebreo y arameo (WLC / OSHB) en lectura RTL, el uncial griego del
+                  siglo &nbsp;IV y la Nueva Traducción Viviente.
+                </>
+              ) : shown.includes('ntv') ? (
+                <>
+                  El mismo pasaje leído en dos testigos, versículo a versículo: el texto masorético
+                  hebreo y arameo (WLC / OSHB) en lectura RTL con tipografía <b>Ezra SIL</b> y la
+                  Nueva Traducción Viviente.
+                </>
+              ) : (
+                <>
+                  Texto masorético hebreo y arameo del <em>Westminster Leningrad Codex</em> (OSHB)
+                  en lectura de derecha a izquierda con tipografía <b>Ezra SIL</b>, arameo señalado
+                  palabra por palabra y variantes <em>ketiv / qere</em> visibles.
+                </>
+              )
+            ) : chapterHasCodex && chapterHasNtv ? (
               <>
                 El mismo pasaje leído en dos testigos, versículo a versículo: el uncial griego del
                 siglo &nbsp;IV, con su aparato crítico, y la traducción al español. Pulsa un versículo
@@ -1023,7 +1278,7 @@ export default function Exegesis() {
           </div>
         </header>
 
-        {(bookMeta?.notice || (hasNtv && !chapterHasCodex) || (hasCodex && !chapterHasNtv)) && (
+        {!(hebreoSoloForced) && (bookMeta?.notice || (hasNtv && !chapterHasCodex) || (hasCodex && !chapterHasNtv)) && (
           <p className="exg__notice">
             {bookMeta?.notice ||
               (hasNtv && !chapterHasCodex
@@ -1036,7 +1291,30 @@ export default function Exegesis() {
           </p>
         )}
 
-        {bookMeta && NUMBERING_NOTICE[bookMeta.id] && chapterHasCodex && (
+        {hebreoSoloForced && (
+          <p className="exg__notice exg__notice--hebreo" role="note">
+            <strong>Numeración masorética:</strong> en {bookMeta?.name} {chapterNum}, la división de
+            versículos del hebreo ({hebreoChapter.verses.length} vv.)
+            {hebreoChapter.ntvVerseCount
+              ? ` difiere de la NTV (${hebreoChapter.ntvVerseCount} vv.)`
+              : ' no tiene capítulo equivalente en la NTV'}
+            , así que no se fuerza un paralelo versículo a versículo.{' '}
+            <Link to={`/biblia/hebreo?libro=${bookId}&cap=${chapterNum}${selected ? `&v=${selected}` : ''}`}>
+              Abrir en Biblia Hebrea
+            </Link>
+            .
+          </p>
+        )}
+
+        {includeHebreoRows && hebreoChapter?.aramaicVerses > 0 && (
+          <p className="exg__notice heb__notice--arc" role="note">
+            <strong>Arameo bíblico en este capítulo:</strong> {hebreoChapter.aramaicVerses}{' '}
+            {hebreoChapter.aramaicVerses === 1 ? 'versículo' : 'versículos'} ({hebreoChapter.aramaicWords}{' '}
+            palabras) marcados palabra por palabra con subrayado punteado.
+          </p>
+        )}
+
+        {bookMeta && NUMBERING_NOTICE[bookMeta.id] && (chapterHasCodex || includeHebreoRows) && (
           <p className="exg__notice">{NUMBERING_NOTICE[bookMeta.id]}</p>
         )}
 
@@ -1179,6 +1457,10 @@ export default function Exegesis() {
               const q = new URLSearchParams(params);
               q.set('libro', record.bookId);
               q.set('cap', String(record.chapter));
+              if (!HEBREW_BOOK_BY_ID.has(record.bookId)) {
+                q.delete('hebreo');
+                if (q.get('modo') === 'hebreo') q.delete('modo');
+              }
               q.delete('vv');
               q.set('v', String(record.verse));
               setPop(null);
@@ -1189,12 +1471,14 @@ export default function Exegesis() {
           </div>
 
           <div className="reader__bar-group exg__modes-bar">
+            {hebreoToggleButton}
             <div className="exg__modes" role="group" aria-label="Columnas que se ven">
               {modeButtons}
             </div>
           </div>
 
           <ReaderMenu>
+            {hasHebreo && <div className="exg__heb-menu">{hebreoToggleButton}</div>}
             <div className="exg__modes exg__modes--menu" role="group" aria-label="Columnas que se ven">
               {modeButtons}
             </div>
@@ -1227,6 +1511,29 @@ export default function Exegesis() {
               <span aria-hidden="true">{themeDef.glyph}</span>
               <span className="rmenu__text">{themeDef.label}</span>
             </button>
+            {includeHebreoRows && (
+              <>
+                <button
+                  type="button"
+                  className="rb-btn"
+                  aria-pressed={showCantillation}
+                  disabled={!showVowels}
+                  onClick={() => setShowCantillation(v => !v)}
+                >
+                  <span aria-hidden="true">{showCantillation && showVowels ? '☑' : '☐'}</span>
+                  <span className="rmenu__text">Cantilación (te&apos;amim)</span>
+                </button>
+                <button
+                  type="button"
+                  className="rb-btn"
+                  aria-pressed={showVowels}
+                  onClick={() => setShowVowels(v => !v)}
+                >
+                  <span aria-hidden="true">{showVowels ? '☑' : '☐'}</span>
+                  <span className="rmenu__text">Vocales (niqqud)</span>
+                </button>
+              </>
+            )}
             <button
               type="button"
               className="rb-btn"
@@ -1258,29 +1565,34 @@ export default function Exegesis() {
 
         {/* ------------------------------ testigos ----------------------------- */}
         <div className="exg__witness">
-          {chapterHasCodex && (
+          {includeHebreoRows && (
+            <span className="exg-chip">
+              א <b>Hebreo (WLC / OSHB)</b> · texto masorético RTL · Ezra SIL
+            </span>
+          )}
+          {!hebreoSoloForced && chapterHasCodex && (
             <span className="exg-chip">
               📜 <b>Codex Sinaiticus</b> · s. IV · uncial griego
             </span>
           )}
-          {chapterHasCodex && codexChapter?.folio && (
+          {!hebreoSoloForced && chapterHasCodex && codexChapter?.folio && (
             <span className="exg-chip">
               Cuaderno <b>{codexChapter.quire}</b> · folio <b>{codexChapter.folio}{codexChapter.side}</b>
               {codexChapter.library ? ` · ${codexChapter.library}` : ''}
               {codexChapter.scribe ? ` · escriba ${codexChapter.scribe}` : ''}
             </span>
           )}
-          {chapterHasNtv && (
+          {!hebreoSoloForced && chapterHasNtv && (
             <span className="exg-chip">
               NTV · <b>Nueva Traducción Viviente</b> (es)
             </span>
           )}
-          {chapterHasTrad && (
+          {!hebreoSoloForced && chapterHasTrad && (
             <span className="exg-chip">
               Trad · <b>traducción de trabajo</b> (es) · borrador
             </span>
           )}
-          {!chapterHasNtv && chapterHasCodex && !chapterHasTrad && (
+          {!hebreoSoloForced && !chapterHasNtv && chapterHasCodex && !chapterHasTrad && (
             <span className="exg-chip">Solo Codex · pasaje no incluido en la NTV</span>
           )}
         </div>
@@ -1338,6 +1650,16 @@ export default function Exegesis() {
                         {row.n}
                       </button>
                       <span className="exg-row__marks">
+                        {includeHebreoRows && row.hebreo?.ar > 0 ? (
+                          <span className="heb-mark heb-mark--arc" title="Contiene arameo bíblico">
+                            אר
+                          </span>
+                        ) : null}
+                        {includeHebreoRows && row.hebreo?.kq > 0 ? (
+                          <span className="heb-mark heb-mark--kq" title="Contiene ketiv/qere">
+                            ק
+                          </span>
+                        ) : null}
                         {row.codex?.apparatus?.length ? (
                           <span
                             className="exg-mark-chip exg-mark-chip--codex"
@@ -1373,7 +1695,10 @@ export default function Exegesis() {
         )}
 
         {/* ------------------------------ paneles ------------------------------ */}
-        {!loading && rows.length > 0 && (chapterHasCodex || chapterHasNtv || chapterHasTrad) && (
+        {!loading &&
+          rows.length > 0 &&
+          (!soloHebreoMode || hebreoAligned) &&
+          (chapterHasCodex || chapterHasNtv || chapterHasTrad) && (
           <div
             className={`exg__panels${[chapterHasCodex, chapterHasNtv, chapterHasTrad].filter(Boolean).length > 1 ? '' : ' exg__panels--one'}`}
           >
@@ -1505,7 +1830,9 @@ export default function Exegesis() {
           passage={`${bookMeta?.name} ${chapterNum}${selected ? `:${selected}` : ''}`}
           title={
             chapterHasNtv
-              ? 'El mismo pasaje, en los otros dos lectores'
+              ? hasHebreo
+                ? 'El mismo pasaje, en los otros tres lectores'
+                : 'El mismo pasaje, en los otros dos lectores'
               : 'El mismo pasaje, en el otro lector'
           }
         />
@@ -1524,6 +1851,26 @@ export default function Exegesis() {
           <p>
             <strong>NTV:</strong> Nueva Traducción Viviente, con sus notas del traductor.
           </p>
+          {hasHebreo && (
+            <p>
+              <strong>Biblia Hebrea (WLC / OSHB):</strong> texto hebreo y arameo base del{' '}
+              <em>Westminster Leningrad Codex</em> (dominio público); marcado OSIS, arameo palabra
+              por palabra, <em>ketiv / qere</em> y mapa de versificación de{' '}
+              <a href={HEBREW_SOURCE_URL} target="_blank" rel="noopener noreferrer">
+                Open Scriptures Hebrew Bible
+              </a>{' '}
+              (
+              <a href={HEBREW_LICENSE_URL} target="_blank" rel="noopener noreferrer">
+                CC BY 4.0
+              </a>
+              ). Tipografía{' '}
+              <a href={EZRA_SIL_URL} target="_blank" rel="noopener noreferrer">
+                Ezra SIL 2.51
+              </a>{' '}
+              (SIL Open Font License 1.1), conservando el texto Unicode masorético sin normalizar
+              (sin NFC/NFD).
+            </p>
+          )}
           {hasTrad && (
             <p>
               <strong>Traducción de trabajo · Borrador:</strong> traducción española de {bookMeta?.name}{' '}
@@ -1537,8 +1884,24 @@ export default function Exegesis() {
         <p className="exg__hint">
           Pulsa un versículo para fijarlo · <b>∗</b> abre la variante · un número en azul abre la nota
           del traductor
+          {includeHebreoRows ? ' · un ketiv/qere abre su explicación masorética' : ''}
         </p>
       </div>
+
+      {pop?.kind === 'kq' && (
+        <VersePopover
+          anchor={pop.anchor}
+          label={`Ketiv / Qere · ${bookMeta?.name} ${chapterNum}:${pop.verse}`}
+          onClose={() => setPop(null)}
+        >
+          <KetivQereBody
+            ketiv={pop.ketiv}
+            qere={pop.qere}
+            aramaic={pop.aramaic}
+            reference={`${bookMeta?.name} ${chapterNum}:${pop.verse}`}
+          />
+        </VersePopover>
+      )}
 
       {pop?.kind === 'apparatus' && (
         <VersePopover

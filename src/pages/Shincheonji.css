@@ -747,3 +747,54 @@
 .scj-col--en .scj-lee__nota {
   color: #5b5143;
 }
+
+.scj-doc-intro .scj-doc-list {
+  margin-bottom: var(--sp-3);
+}
+
+.scj-patr-list {
+  display: grid;
+  gap: var(--sp-3);
+  margin: var(--sp-3) 0 var(--sp-4);
+}
+
+.scj-patr-quote {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--scj-paper);
+  color: var(--scj-ink);
+}
+
+.scj-patr-quote .scj-lab {
+  color: #5b5143;
+}
+
+.scj-patr-quote blockquote {
+  margin: 0;
+}
+
+.scj-patr-foot {
+  margin: 0.55rem 0 0;
+  color: var(--scj-ink-soft);
+  font-size: 0.86rem;
+}
+
+.scj-patr-foot a {
+  color: #6b4d14;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.scj-patr-sub {
+  margin: var(--sp-4) 0 var(--sp-2);
+  color: var(--scj-gold);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.scj-patr-hist {
+  margin-bottom: var(--sp-4);
+}

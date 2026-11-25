@@ -668,7 +668,8 @@ try {
     await wait(1500);
     const libro = await pl.evaluate(() => {
       const bar = document.querySelector('.reader__bar').getBoundingClientRect();
-      const nav = document.querySelector('.card-nav').getBoundingClientRect();
+      const topSel = window.innerWidth <= 768 ? '.mnav-top' : '.card-nav';
+      const nav = document.querySelector(topSel).getBoundingClientRect();
       const book = document.querySelector('.book').getBoundingClientRect();
       const ctrls = [...document.querySelectorAll('.reader__bar :is(button, a, input)')].filter(e => {
         const b = e.getBoundingClientRect();
@@ -792,29 +793,93 @@ try {
 
   // El menú abierto muestra todos los grupos de content/site.json y ningún enlace queda cortado.
   const site = JSON.parse(await readFile(new URL('../content/site.json', import.meta.url), 'utf8'));
+  const expectedHrefs = site.nav.flatMap(g => g.links.map(l => l.href));
   for (const [w, h] of [[1280, 900], [390, 844]]) {
+    const isMob = w <= 768;
     const pmenu = await browser.newPage();
-    await pmenu.setViewport({ width: w, height: h, isMobile: w < 800, hasTouch: w < 800 });
+    await pmenu.setViewport({ width: w, height: h, isMobile: isMob, hasTouch: isMob });
     await pmenu.goto(`${BASE}/`, { waitUntil: 'networkidle2' });
     await wait(1200);
-    await pmenu.click('.hamburger-menu');
-    await wait(1200);
-    const menu = await pmenu.evaluate(() => {
-      const nav = document.querySelector('.card-nav').getBoundingClientRect();
-      const links = [...document.querySelectorAll('.nav-card-link')];
-      return {
-        grupos: document.querySelectorAll('.nav-card').length,
-        hrefs: links.map(a => a.getAttribute('href')),
-        cortados: links.filter(a => a.getBoundingClientRect().bottom > nav.bottom + 1).map(a => a.textContent)
-      };
-    });
-    const total = site.nav.reduce((n, g) => n + g.links.length, 0);
-    check(
-      `menú ${w}px: los ${site.nav.length} grupos y sus ${total} enlaces, sin cortes`,
-      menu.grupos === site.nav.length && menu.hrefs.length === total && !menu.cortados.length,
-      `${menu.grupos} grupos · ${menu.hrefs.length} enlaces · cortados: ${menu.cortados.join(', ') || 'ninguno'}`
-    );
-    check(`menú ${w}px: enlaza el índice de libros`, menu.hrefs.some(hr => /\/biblia\/libros$/.test(hr)));
+    if (!isMob) {
+      await pmenu.click('.hamburger-menu');
+      await wait(1200);
+      const menu = await pmenu.evaluate(() => {
+        const nav = document.querySelector('.card-nav').getBoundingClientRect();
+        const links = [...document.querySelectorAll('.nav-card-link')];
+        return {
+          grupos: document.querySelectorAll('.nav-card').length,
+          hrefs: links.map(a => a.getAttribute('href')),
+          cortados: links.filter(a => a.getBoundingClientRect().bottom > nav.bottom + 1).map(a => a.textContent)
+        };
+      });
+      const total = expectedHrefs.length;
+      check(
+        `menú ${w}px: los ${site.nav.length} grupos y sus ${total} enlaces, sin cortes`,
+        menu.grupos === site.nav.length && menu.hrefs.length === total && !menu.cortados.length,
+        `${menu.grupos} grupos · ${menu.hrefs.length} enlaces · cortados: ${menu.cortados.join(', ') || 'ninguno'}`
+      );
+      check(`menú ${w}px: enlaza el índice de libros`, menu.hrefs.some(hr => /\/biblia\/libros$/.test(hr)));
+    } else {
+      const barInfo = await pmenu.evaluate(() => {
+        const btns = [...document.querySelectorAll('.mnav-bottom__btn')];
+        return {
+          count: btns.length,
+          labels: btns.map(b => b.textContent.trim()),
+          minH: Math.min(...btns.map(b => Math.round(b.getBoundingClientRect().height)))
+        };
+      });
+      check(
+        `móvil ${w}px: barra inferior con 4 accesos (Inicio, Estudio, Buscar, Menú) ≥ 44px`,
+        barInfo.count === 4 && barInfo.labels.join(',') === 'Inicio,Estudio,Buscar,Menú' && barInfo.minH >= 44,
+        `${barInfo.labels.join(' · ')} (min ${barInfo.minH}px)`
+      );
+      await pmenu.screenshot({ path: `${OUT}/mob-home.png` });
+
+      // Auto-hide al hacer scroll hacia abajo y reaparecer al subir
+      await pmenu.evaluate(() => window.scrollTo(0, 420));
+      await wait(350);
+      const hiddenOnDown = await pmenu.$eval('.mnav-bottom', el => el.classList.contains('is-hidden'));
+      await pmenu.screenshot({ path: `${OUT}/mob-scroll-hide.png` });
+      await pmenu.evaluate(() => window.scrollTo(0, 120));
+      await wait(350);
+      const shownOnUp = await pmenu.$eval('.mnav-bottom', el => !el.classList.contains('is-hidden'));
+      check('móvil 390px: barra inferior se oculta al bajar scroll y vuelve al subir', hiddenOnDown && shownOnUp);
+
+      await pmenu.click('.mnav-bottom__btn--menu');
+      await pmenu.waitForSelector('.mnav-drawer__panel', { timeout: 5000 });
+      await wait(350);
+      const drawer = await pmenu.evaluate(expected => {
+        const groups = [...document.querySelectorAll('.mnav-drawer__group')];
+        const links = [...document.querySelectorAll('.mnav-drawer__link')];
+        const rects = groups.map(g => g.getBoundingClientRect());
+        const overlap = rects.some((r, i) => i > 0 && r.top < rects[i - 1].bottom - 1);
+        const hrefs = links.map(a => a.getAttribute('href'));
+        const missing = expected.filter(hr => !hrefs.includes(hr));
+        return { grupos: groups.length, hrefs, missing, overlap };
+      }, expectedHrefs);
+      check(
+        `drawer móvil ${w}px: los ${site.nav.length} grupos y todos los enlaces sin solaparse ni recortarse`,
+        drawer.grupos === site.nav.length && drawer.missing.length === 0 && !drawer.overlap,
+        `${drawer.grupos} grupos · ${drawer.hrefs.length} enlaces · faltan: ${drawer.missing.join(', ') || 'ninguno'}`
+      );
+      await pmenu.screenshot({ path: `${OUT}/mob-drawer.png` });
+      await pmenu.click('.mnav-drawer__close');
+      await wait(250);
+
+      // Contexto de lectura larga en móvil: barra superior con Índice + Aa
+      await pmenu.goto(`${BASE}/estudio/01-fundamentos--01-perdon`, { waitUntil: 'networkidle2' });
+      await wait(900);
+      const studyBar = await pmenu.evaluate(() => ({
+        btns: [...document.querySelectorAll('.mnav-top__btn')].map(b => b.textContent.trim()),
+        ctx: document.querySelector('.mnav-top__ctx')?.textContent?.trim() || ''
+      }));
+      check(
+        'móvil 390px lectura larga: barra superior muestra contexto, Índice y Aa',
+        studyBar.ctx === 'Estudio' && studyBar.btns.includes('Índice') && studyBar.btns.includes('Aa'),
+        `${studyBar.ctx} · ${studyBar.btns.join(' · ')}`
+      );
+      await pmenu.screenshot({ path: `${OUT}/mob-study-top.png` });
+    }
     await pmenu.close();
   }
 

@@ -649,7 +649,7 @@
 
 .study-prose {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: calc(1.02rem * var(--reading-scale, 1));
   line-height: 1.75;
   max-width: 86ch;
   margin-inline: auto;
@@ -773,6 +773,13 @@
 @media (max-width: 900px) {
   .study-detail__body {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-head,
+  .study-detail {
+    padding-top: calc(52px + var(--sp-5));
   }
 }
 

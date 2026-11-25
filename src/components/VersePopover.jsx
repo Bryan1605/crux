@@ -252,3 +252,43 @@ export function LexiconBody({
     </div>
   );
 }
+
+/** Ficha de variante masorética Ketiv / Qere (Biblia Hebrea WLC / OSHB). */
+export function KetivQereBody({ ketiv, qere, aramaic = false, reference }) {
+  const lang = aramaic ? 'arc' : 'he';
+  const kind =
+    ketiv && qere
+      ? 'Ketiv y Qere'
+      : ketiv
+        ? 'Ketiv sin Qere (escrito, no leído)'
+        : 'Qere sin Ketiv (leído, no escrito en consonantes)';
+
+  return (
+    <div className="vpop__kq">
+      <p className="vpop__ref">{reference}</p>
+      <p className="vpop__kq-badges">
+        <span className="vpop__kq-badge">{kind}</span>
+        {aramaic ? <span className="vpop__kq-badge vpop__kq-badge--arc">Arameo</span> : null}
+      </p>
+
+      <dl className="vpop__kq-pairs">
+        <div className="vpop__kq-pair">
+          <dt>Ketiv · texto escrito en el códice</dt>
+          <dd className="vpop__kq-heb" dir="rtl" lang={lang}>
+            {ketiv ? ketiv : <span className="vpop__kq-empty">(omitido en el texto consonántico)</span>}
+          </dd>
+        </div>
+        <div className="vpop__kq-pair">
+          <dt>Qere · lectura tradicional masorética</dt>
+          <dd className="vpop__kq-heb vpop__kq-heb--q" dir="rtl" lang={lang}>
+            {qere ? qere : <span className="vpop__kq-empty">(no se pronuncia al leer en voz alta)</span>}
+          </dd>
+        </div>
+      </dl>
+
+      <p className="vpop__kq-help">
+        La tradición masorética conserva intactas las consonantes heredadas (<em>ketiv</em>) e indica al margen qué forma se lee en voz alta (<em>qere</em>), sin sustituir una por la otra.
+      </p>
+    </div>
+  );
+}

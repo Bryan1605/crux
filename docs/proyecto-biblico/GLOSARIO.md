@@ -39,23 +39,23 @@ traducción: eso solo lo marca el usuario.
 | δικαιοσύνη | dikaiosýnē | justicia, rectitud | **aprobado (2026-11-02)**: «justicia»; en plural, «obras de justicia» | La norma y la rectitud ante Dios; en la Septuaginta traduce *tsedeq*/*tsedaqá*, que incluye fidelidad y ayuda al necesitado. En Tobit va unida a ἐλεημοσύνη (1:3, 2:14): no fusionarlas. |
 | σοφία | sophía | sabiduría | **provisional: sabiduría** | En Sabiduría/Sirácida es un concepto estructurante; revisar mayúsculas. |
 | ἀρετή | aretḗ | virtud, excelencia | **provisional: virtud** | Es clave en 4 Macabeos; no traducir como “fuerza” sin contexto. |
-| λογισμός | logismós | razonamiento, cálculo, argumento | **pendiente** | En 4 Macabeos es un término técnico; “razón” puede ser demasiado estrecho. |
+| λογισμός | logismós | razonamiento, cálculo, razón | **adoptado (2026-11-23, delegado; revisable): «razón» (facultad rectora en 4 Macabeos: «la razón piadosa») / «razonamiento» (argumento o discurso)** | En 4 Macabeos es el eje filosófico del libro (`ὁ εὐσεβὴς λογισμός`). |
 | εὐσέβεια | eusébeia | piedad, reverencia | **provisional: piedad** | Distinguir de “religión” y de “justicia”. |
-| μαρτύριον | martyrion | testimonio; martirio | **pendiente** | En 4 Macabeos el sentido de “martirio” es posterior; no retroproyectar sin nota. |
-| διαθήκη | diathḗkē | alianza, pacto, testamento | **pendiente** | “Alianza” suele ser mejor en contextos bíblicos; “testamento” solo si el texto lo pide. |
+| μαρτύριον | martyrion | testimonio; martirio | **adoptado (2026-11-23, delegado; revisable): «testimonio»** | No retroproyectar el sentido técnico posterior de «martirio» sin nota. |
+| διαθήκη | diathḗkē | alianza, pacto, testamento | **adoptado (2026-11-23, delegado; revisable): «alianza» (pacto de Dios con Israel / los padres); «pacto» si es tratado político-militar (1 Macabeos)** | Distingue la alianza teológica de los pactos diplomáticos en 1 Macabeos. |
 | ἀλήθεια | alḗtheia | verdad, fidelidad | **provisional: verdad** | En “caminos de verdad” (Tobit) puede ser “fidelidad”; revisar. |
 | ψυχή | psychḗ | alma, vida, persona | **adoptado (2026-11-04, delegado; revisable): «alma» en las expresiones; reflexivo si es la persona (1:11)** | No traducir siempre “alma”; en griego puede ser la vida entera. |
 | πνεῦμα | pneûma | espíritu, aliento, viento | **provisional: espíritu** | Distinguir mayúscula/minúscula según el contexto; no dogmatizar. |
 | σάρξ | sárx | carne, cuerpo | **provisional: carne** | En 4 Macabeos puede ser “cuerpo” frente a “razón”; revisar. |
-| μετάνοια | metánoia | cambio de mente, arrepentimiento | **pendiente** | “Arrepentimiento” puede moralizar; “conversión” puede ser confesional. |
+| μετάνοια | metánoia | cambio de mente, arrepentimiento | **adoptado (2026-11-23, delegado; revisable): «arrepentimiento»** | En Sabiduría (11:23; 12:10, 19) y Sirácida (17:24; 44:16). |
 | Ἰουδαῖος | Ioudaîos | judío, de Judea | **provisional: judío** | No usar “judaizante” ni “judío” como insulto. |
 | Ἕλλην | Héllēn | griego, no judío | **provisional: griego** | En 2 Macabeos/4 Macabeos puede ser “griego” o “pagano”; el contexto decide. |
 | τύραννος | týrannos | tirano, rey absoluto | **provisional: tirano** | En 4 Macabeos es el antagonista; no convertirlo en “rey” sin más. |
 | βασιλεία | basileía | reino, reinado | **provisional: reino** | Distinguir “reino” de “rey”. |
 | ναός / ἱερόν | naós / hierón | santuario / recinto del templo | **aprobado (2026-11-02)**: ναός «santuario»; ἱερόν «templo» | ναός es el santuario, la morada de la presencia de Dios (Mt 27:51; 1 Co 6:19); ἱερόν es el recinto del templo. No son sinónimos. |
 | σωτηρία | sōtēría | salvación, liberación | **provisional: salvación** | En contextos de peligro físico puede ser “liberación”; revisar. |
-| πίστις | pístis | fe, fidelidad, confianza | **pendiente** | “Fe” y “fidelidad” no son intercambiables. |
-| ἐκκλησία | ekklēsía | asamblea, comunidad | **pendiente** | En libros solo-Codex no siempre es “iglesia” en sentido posterior. |
+| πίστις | pístis | fe, fidelidad, confianza | **adoptado (2026-11-23, delegado; revisable): «fidelidad» (lealtad ante Dios o pacto); «fe» o «confianza» según contexto** | En 1 Macabeos (10:27; 14:35) y Sirácida suele significar «fidelidad / lealtad». |
+| ἐκκλησία | ekklēsía | asamblea, comunidad | **adoptado (2026-11-23, delegado; revisable): «asamblea»** | Congregación o asamblea de Israel en Sirácida y 1 Macabeos. |
 | ἔθνος / τὰ ἔθνη | éthnos / tà éthnē | pueblo, nación / las naciones, los gentiles | **adoptado (2026-11-04, delegado; revisable): sg. «pueblo»; pl. «las naciones»** | «Gentiles» suena posterior; «naciones» conserva el contraste con Israel. |
 | δαιμόνιον | daimónion | demonio, espíritu | **adoptado (2026-11-04, delegado; revisable): demonio** | Asmodeo, «el demonio malvado» (3:8, 3:17). |
 | ᾅδης | hádēs | Hades, lugar de los muertos | **adoptado (2026-11-04, delegado; revisable): Hades** | No «infierno»: en el texto no es un lugar de castigo. |
@@ -107,6 +107,11 @@ Se fijan en la primera aparición y se repiten. Ejemplos de Tobit:
 | Βαγώας · Δωθαείμ · Ἀβελμαΐν / Ἀβελβαΐμ | Bagoas · Dotán · Belmaín | **adoptado (2026-11-21, delegado; revisable).** Judit 4–15; en 4:4 el texto base escribe αβελμαιν y en 7:3 y 15:4 αβελβαιμ (anotado). |
 | Κῶλα · Βαιθωρών · Χωβά · Βαιτομασθέν · Βαλαμών | Cola · Bet-horón · Coba · Betomastén · Balamón | **adoptado (2026-11-21, delegado; revisable).** Topónimos de Judit 4, 8 y 15. |
 | Γολιάδ (Sal 151) · Γαλιλαία ἀλλοφύλων (Jl 4:4) · χίμαρρος τῶν σχοίνων (Jl 4:18) | Goliat · territorio de los extranjeros · torrente de los Juncos | **adoptado (2026-11-21, delegado; revisable).** Pasajes especiales del Codex Sinaiticus (Salmo 151 y Joel 4). |
+| Σολομών · Πεντάπολις | Salomón · Pentápolis | **adoptado (2026-11-23, delegado; revisable).** Sabiduría 10:6 y menciones patriarcales/históricas. |
+| Ἀντίοχος Ἐπιφανής · Ἐλεάζαρος · Σίμων · Ὀνίας · Ἀπολλώνιος · Σέλευκος | Antíoco Epífanes · Eleazar · Simón · Onías · Apolonio · Seleuco | **adoptado (2026-11-23, delegado; revisable).** 4 Macabeos 1–18 y 1 Macabeos. |
+| Ματταθίας · Ἰούδας (Μακκαβαῖος) · Ἰωνάθαν · Λυσίας · Νικάνωρ · Βακχίδης · Δημήτριος · Ἀλέξανδρος | Matatías · Judas (Macabeo) · Jonatán · Lisias · Nicanor · Báquides · Demetrio · Alejandro | **adoptado (2026-11-23, delegado; revisable).** 1 Macabeos 1–16. |
+| Μωδεείν · Βαιθσούρα · Γάζαρα · Ἀσίδαιοι · Ἐμμαούς · Βηθωρών | Modín · Bet-sur · Gázara · asideos · Emaús · Bet-horón | **adoptado (2026-11-23, delegado; revisable).** Topónimos y grupos de 1 Macabeos. |
+| Ἰησοῦς υἱὸς Σιράχ · Σίμων υἱὸς Ὀνίου | Jesús, hijo de Sirac · Simón, hijo de Onías | **adoptado (2026-11-23, delegado; revisable).** Sirácida (prólogo si consta, cap. 50 y colofón 51). |
 
 ## Cómo añadir un término
 

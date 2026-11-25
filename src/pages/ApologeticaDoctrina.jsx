@@ -17,9 +17,8 @@ const pages = list => (list.length > 1 ? `pp. ${list.join(', ')}` : `p. ${list[0
 function Quote({ c }) {
   const pag = pages(c.paginas);
   if (!c.en) {
-    const label = c.autorCitado
-      ? `Español · texto del libro (citando a ${c.autorCitado})`
-      : 'Español · texto del libro';
+    const base = c.obra || 'Español · texto del libro';
+    const label = c.autorCitado ? `${base} (citando a ${c.autorCitado})` : base;
     return (
       <figure className="scj-pair scj-pair--single scj-lee">
         <blockquote className="scj-col scj-col--en" lang="es">
@@ -33,11 +32,12 @@ function Quote({ c }) {
       </figure>
     );
   }
+  const enLabel = c.obra ? `Inglés · ${c.obra}` : 'Inglés · texto del libro';
   return (
     <figure className="scj-pair scj-lee">
       <blockquote className="scj-col scj-col--en" lang="en">
         <p className="scj-lab">
-          <span>Inglés · texto del libro</span>
+          <span>{enLabel}</span>
           <span>{pag}</span>
         </p>
         <p className="scj-en">“{c.en}”</p>
@@ -51,6 +51,61 @@ function Quote({ c }) {
         {c.nota && <p className="scj-lee__nota">{c.nota}</p>}
       </div>
     </figure>
+  );
+}
+
+function Patristica({ patristica }) {
+  const citas = patristica.citas || [];
+  const historia = patristica.historia || [];
+  return (
+    <>
+      <h3>{patristica.titulo || 'Lo que testifican los Padres y la historia'}</h3>
+      {patristica.intro && <p>{patristica.intro}</p>}
+      {citas.length > 0 && (
+        <div className="scj-patr-list">
+          {citas.map(c => (
+            <figure key={`${c.autor}-${c.obra}-${c.cita.slice(0, 20)}`} className="scj-patr-quote">
+              <p className="scj-lab">
+                <span>
+                  {c.autor} · {c.obra}
+                </span>
+                <span>{c.fecha}</span>
+              </p>
+              <blockquote lang="es">
+                <p className="scj-en">«{c.cita}»</p>
+              </blockquote>
+              {(c.nota || c.enBiblia) && (
+                <figcaption className="scj-patr-foot">
+                  {c.nota}
+                  {c.nota && c.enBiblia ? ' ' : ''}
+                  {c.enBiblia && (
+                    <>
+                      Fuente: <Link to="/biblia">Biblia Patrística</Link>.
+                    </>
+                  )}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      )}
+      {historia.length > 0 && (
+        <>
+          <h4 className="scj-patr-sub">{patristica.historiaTitulo || 'Precisiones históricas'}</h4>
+          <ul className="scj-doc-list scj-patr-hist">
+            {historia.map(h => (
+              <li key={h.titulo}>
+                <strong>
+                  {h.titulo}
+                  {h.fecha ? ` (${h.fecha})` : ''}:
+                </strong>{' '}
+                {h.texto}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </>
   );
 }
 
@@ -83,6 +138,8 @@ function Parte({ p, etiquetas }) {
           )}
         </>
       )}
+
+      {p.patristica && <Patristica patristica={p.patristica} />}
 
       {(ortodoxia.length > 0 || reforma.length > 0) && (
         <>
@@ -172,7 +229,22 @@ export default function ApologeticaDoctrina({ doctrina }) {
       <div className="scj-blocks">
         <section className="scj-card scj-doc-intro" aria-labelledby="scj-doc-t">
           <h2 id="scj-doc-t">{introTitulo}</h2>
-          {bilingue ? (
+          {doctrina.obras?.length > 0 ? (
+            <>
+              <p>
+                Todas las citas proceden literalmente de publicaciones oficiales de la denominación, con indicación de
+                la obra y el número de página impreso para que puedas buscarlas y comprobarlas directamente (en obras en
+                inglés, se muestra el original junto a la traducción de Crux):
+              </p>
+              <ul className="scj-doc-list">
+                {doctrina.obras.map(o => (
+                  <li key={`${o.titulo}-${o.edicion}`}>
+                    <strong>{o.autor}:</strong> <em>{o.titulo}</em> ({o.edicion}).
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : bilingue ? (
             <p>
               Todas las citas son del libro de {libro.autor} <em>{libro.titulo}</em> ({libro.edicion}), su obra
               doctrinal más completa. A un lado está el texto tal como está impreso en inglés, con su página; al otro,
@@ -203,9 +275,9 @@ export default function ApologeticaDoctrina({ doctrina }) {
             <p>{preguntasIntro}</p>
             <ol className="scj-doc-questions">
               {doctrina.preguntas.map(q => (
-                <li key={`${q.pagina}-${q.ref}-${q.texto.slice(0, 16)}`}>
+                <li key={`${q.obra || ''}-${q.pagina}-${q.ref}-${q.texto.slice(0, 16)}`}>
                   <span className="scj-doc-questions__ref">
-                    p. {q.pagina} · <Link to={exegesisPath(q.ref)}>{q.ref}</Link>
+                    {q.obra ? `${q.obra} · ` : ''}p. {q.pagina} · <Link to={exegesisPath(q.ref)}>{q.ref}</Link>
                   </span>
                   {q.texto}
                 </li>

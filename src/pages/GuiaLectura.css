@@ -6,7 +6,7 @@
   --guia-accent: #d6b25e;
   --guia-accent-soft: color-mix(in srgb, #d6b25e 12%, transparent);
   --font-greek: 'Palatino Linotype', 'Times New Roman', 'Noto Serif', Georgia, serif;
-  --font-hebrew: 'SBL Hebrew', 'Ezra SIL', 'Frank Ruhl Libre', 'David Libre', 'Times New Roman', 'Noto Serif Hebrew', Georgia, serif;
+  --font-hebrew: 'Ezra SIL', 'SBL Hebrew', 'Frank Ruhl Libre', 'David Libre', 'Times New Roman', 'Noto Serif Hebrew', Georgia, serif;
 }
 
 .guia__head {

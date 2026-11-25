@@ -1115,6 +1115,10 @@
   color: var(--bone);
 }
 
+#preguntas-con-la-biblia {
+  scroll-margin-top: calc(var(--marquee-h, 0px) + 74px);
+}
+
 @media (max-width: 960px) {
   .apolo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

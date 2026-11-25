@@ -13,7 +13,7 @@
         { "label": "Fundamentos", "href": "/estudio?cat=01-fundamentos", "ariaLabel": "Estudios de fundamentos doctrinales" },
         { "label": "Parábolas", "href": "/estudio?cat=09-parabolas", "ariaLabel": "Estudios de las parábolas de Jesús" },
         { "label": "Apologética", "href": "/estudio?cat=06-apologetica", "ariaLabel": "Estudios de apologética" },
-        { "label": "Preguntas a Shincheonji", "href": "/apologetica/shincheonji", "ariaLabel": "Preguntas a Shincheonji: 100 preguntas solo con la Biblia" }
+        { "label": "Preguntas con la Biblia", "href": "/#preguntas-con-la-biblia", "ariaLabel": "Preguntas con la Biblia: todos los fascículos de apologética" }
       ]
     },
     {
@@ -31,6 +31,7 @@
       "links": [
         { "label": "Biblia Patrística", "href": "/biblia", "ariaLabel": "Leer la Biblia Patrística completa" },
         { "label": "Biblia NTV", "href": "/biblia/ntv", "ariaLabel": "Leer la Biblia NTV capítulo a capítulo" },
+        { "label": "Biblia Hebrea", "href": "/biblia/hebreo", "ariaLabel": "Biblia Hebrea: leer el Antiguo Testamento en hebreo y arameo (WLC / OSHB)" },
         { "label": "Exégesis comparada", "href": "/exegesis", "ariaLabel": "Exégesis comparada: el Codex Sinaiticus y la NTV, versículo a versículo" },
         { "label": "Libros de la Biblia", "href": "/biblia/libros", "ariaLabel": "Fichas de los libros de la Biblia" }
       ]
@@ -56,6 +57,7 @@
       { "label": "Buscar", "href": "/buscar" },
       { "label": "Biblia Patrística", "href": "/biblia" },
       { "label": "Biblia NTV", "href": "/biblia/ntv" },
+      { "label": "Biblia Hebrea", "href": "/biblia/hebreo" },
       { "label": "Libros de la Biblia", "href": "/biblia/libros" },
       { "label": "Exégesis comparada", "href": "/exegesis" },
       { "label": "Guía de lectura", "href": "/exegesis/guia" },

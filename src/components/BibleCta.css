@@ -77,6 +77,14 @@
   --bcta-tone: #5e81d6;
 }
 
+.bcta__card--hebreo {
+  --bcta-tone: #c78d4e;
+}
+
+.bcta__card--hebreo .bcta__glyph {
+  font-family: var(--font-hebrew);
+}
+
 .bcta__card--exegesis {
   --bcta-tone: #4fa89a;
 }

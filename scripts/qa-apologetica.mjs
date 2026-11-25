@@ -2,11 +2,14 @@
  * QA de /apologetica/adventismo y /apologetica/dispensacionalismo
  * (necesita `npm run dev`; CRUX_BASE para otra base).
  *
- * - Datos: 6 bloques y 50 preguntas en cada fascículo, 100 % en NTV y Codex
- *   sincronizado, checkClaves 50/50 y citas NTV literales en doctrina.
+ * - Datos:
+ *   - Adventismo: 10 bloques y 100 preguntas, 100 % en NTV y Codex sincronizado,
+ *     checkClaves 100/100, doctrina en 8 partes con citas primarias oficiales y
+ *     sección patrística sobre el sábado y el Día del Señor.
+ *   - Dispensacionalismo: 6 bloques y 50 preguntas, checkClaves 50/50 y doctrina
+ *     de Pentecost (24 citas).
  * - Página (1280px y 390px): tarjetas activas en portada, preguntas, griego + NTV,
- *   resaltes, notas LXX (Jer 31->38, Sal 110->109, Joel 2->3), aviso AT sin Codex,
- *   pestaña doctrinal de Pentecost (24 citas) y 0 errores JS / 0 overflow.
+ *   resaltes, notas LXX, avisos AT sin Codex, pestañas doctrinales y 0 errores JS / 0 overflow.
  */
 import puppeteer from 'puppeteer-core';
 import { mkdtempSync, readFileSync } from 'node:fs';
@@ -35,12 +38,18 @@ const loadBook = (map, dir, libro) => {
 };
 
 // ------------------------------------------------------------------ datos
-for (const slug of ['adventismo', 'dispensacionalismo']) {
+for (const spec of [
+  { slug: 'adventismo', bloques: 10, preguntas: 100 },
+  { slug: 'dispensacionalismo', bloques: 6, preguntas: 50 }
+]) {
+  const { slug } = spec;
   const data = readJson(`../content/apologetica/${slug}-preguntas.json`);
   const preguntas = data.bloques.flatMap(b => b.preguntas);
   check(
-    `${slug} datos: 6 bloques y 50 preguntas numeradas`,
-    data.bloques.length === 6 && preguntas.length === 50 && preguntas.every((p, i) => p.n === i + 1),
+    `${slug} datos: ${spec.bloques} bloques y ${spec.preguntas} preguntas numeradas`,
+    data.bloques.length === spec.bloques &&
+      preguntas.length === spec.preguntas &&
+      preguntas.every((p, i) => p.n === i + 1),
     `${data.bloques.length} bloques · ${preguntas.length} preguntas`
   );
 
@@ -78,13 +87,12 @@ for (const slug of ['adventismo', 'dispensacionalismo']) {
   const claves = readJson(`../content/apologetica/${slug}-claves.json`).claves;
   const malClaves = checkClaves(preguntas, claves);
   check(
-    `${slug} datos: 50 preguntas con palabra clave en NTV y Codex`,
+    `${slug} datos: ${spec.preguntas} preguntas con palabra clave en NTV y Codex`,
     malClaves.length === 0,
     malClaves.slice(0, 4).join(' | ')
   );
 }
 
-const dispDoctrina = readJson('../content/apologetica/dispensacionalismo-doctrina.json');
 const ntvRango = label => {
   const m = /^(.+?)\s(\d+):(\d+)(?:-(\d+))?$/.exec(label);
   const book = m && BOOK_BY_NAME.get(m[1]);
@@ -97,19 +105,47 @@ const ntvRango = label => {
     .map(v => v.text.replace(/\[[a-z]{1,2}\]/g, ''))
     .join(' ');
 };
-const malDocNtv = [];
-for (const p of dispDoctrina.partes) {
-  const c = p.biblia?.cita;
-  if (c && !ntvRango(c.ref)?.includes(c.texto)) malDocNtv.push(`Parte ${p.id}: cita ${c.ref}`);
-  for (const b of p.biblia?.puntos || []) {
-    for (const r of b.refs) if (!ntvRango(r)) malDocNtv.push(`Parte ${p.id}: falta ${r}`);
-    const txt = b.refs.map(ntvRango).join(' ');
-    for (const frase of b.cita || []) if (!txt.includes(frase)) malDocNtv.push(`Parte ${p.id}: «${frase}» fuera de ${b.ref}`);
+
+const checkDoctrinaNtv = doc => {
+  const mal = [];
+  for (const p of doc.partes || []) {
+    const c = p.biblia?.cita;
+    if (c && !ntvRango(c.ref)?.includes(c.texto)) mal.push(`Parte ${p.id}: cita ${c.ref}`);
+    for (const b of p.biblia?.puntos || []) {
+      for (const r of b.refs) if (!ntvRango(r)) mal.push(`Parte ${p.id}: falta ${r}`);
+      const txt = b.refs.map(ntvRango).join(' ');
+      for (const frase of b.cita || []) if (!txt.includes(frase)) mal.push(`Parte ${p.id}: «${frase}» fuera de ${b.ref}`);
+    }
+    for (const cita of p.citas || []) {
+      if (cita.en && cita.en.split('…').length !== cita.es.split('…').length) {
+        mal.push(`Parte ${p.id}: tramos «…» no coinciden`);
+      }
+    }
   }
-}
-for (const q of dispDoctrina.preguntas || []) {
-  if (!ntvRango(q.ref)) malDocNtv.push(`Pregunta p.${q.pagina}: falta ${q.ref}`);
-}
+  for (const q of doc.preguntas || []) {
+    if (!ntvRango(q.ref)) mal.push(`Pregunta p.${q.pagina}: falta ${q.ref}`);
+  }
+  return mal;
+};
+
+const advDoctrina = readJson('../content/apologetica/adventismo-doctrina.json');
+const malAdvDocNtv = checkDoctrinaNtv(advDoctrina);
+const totalCitasAdv = advDoctrina.partes.reduce((n, p) => n + p.citas.length, 0);
+const patristicaParteI = advDoctrina.partes[0]?.patristica;
+check(
+  'adventismo doctrina: 8 partes, citas primarias, patrística sobre el Día del Señor y citas NTV literales',
+  advDoctrina.partes.length === 8 &&
+    totalCitasAdv >= 25 &&
+    (patristicaParteI?.citas?.length || 0) >= 7 &&
+    (patristicaParteI?.historia?.length || 0) >= 4 &&
+    advDoctrina.partes.every(p => p.citas.every(c => c.es && c.paginas?.length)) &&
+    malAdvDocNtv.length === 0,
+  malAdvDocNtv.slice(0, 4).join(' | ') ||
+    `${totalCitasAdv} citas · ${patristicaParteI?.citas?.length || 0} patrísticas · ${patristicaParteI?.historia?.length || 0} históricas`
+);
+
+const dispDoctrina = readJson('../content/apologetica/dispensacionalismo-doctrina.json');
+const malDocNtv = checkDoctrinaNtv(dispDoctrina);
 const totalCitasDisp = dispDoctrina.partes.reduce((n, p) => n + p.citas.length, 0);
 check(
   'dispensacionalismo doctrina: 6 partes, 24 citas de Pentecost y citas NTV literales',
@@ -143,12 +179,16 @@ try {
     }))
   );
   check(
-    'portada: tarjetas Adventismo y Dispensacionalismo activas',
+    'portada: tarjetas Adventismo y Dispensacionalismo activas y fascículos futuros visibles',
     homeRes?.status() < 400 &&
       cards.some(c => c.title === 'Adventismo' && c.cta === '/apologetica/adventismo') &&
       cards.some(c => c.title === 'Dispensacionalismo' && c.cta === '/apologetica/dispensacionalismo') &&
       cards.some(c => /Catolicismo/.test(c.title || '') && c.soon) &&
-      cards.some(c => c.title === 'Gnósticos' && c.soon),
+      cards.some(c => c.title === 'Gnósticos' && c.soon) &&
+      cards.some(c => c.title === 'Islam' && c.soon) &&
+      cards.some(c => /Mormonismo/.test(c.title || '') && c.soon) &&
+      cards.some(c => c.title === 'Testigos de Jehová' && c.soon) &&
+      cards.some(c => /Judaizantes/.test(c.title || '') && c.soon),
     cards.filter(c => c.title).map(c => `${c.title}:${c.cta || 'soon'}`).join(' | ')
   );
   await home.close();
@@ -171,46 +211,78 @@ try {
       bloques: document.querySelectorAll('#scj-panel-preguntas .scj-block').length,
       tabs: Boolean(document.getElementById('scj-tabs')),
       docPanel: Boolean(document.getElementById('scj-panel-doctrina')),
-      folio: document.querySelector('#p-4 .scj-lab span:last-child')?.textContent || '',
+      folio: document.querySelector('#p-5 .scj-lab span:last-child')?.textContent || '',
       estudioLink: Boolean(document.querySelector('a[href*="/estudio/06-apologetica--origenes-usa--03-adventismo"]')),
-      p4Grc: document.querySelector('#p-4 .scj-grc')?.textContent || '',
-      p4Es: document.querySelector('#p-4 .scj-es')?.textContent || '',
-      p4MarksGrc: [...document.querySelectorAll('#p-4 .scj-grc mark')].map(m => m.textContent.trim()),
-      p4MarksEs: [...document.querySelectorAll('#p-4 .scj-es mark')].map(m => m.textContent.trim()),
-      p4Exg: Boolean(document.querySelector('#p-4 a[href*="/exegesis?libro=colosenses&cap=2"]')),
-      p4Ms: [...document.querySelectorAll('#p-4 a')].some(a => a.href.includes('codexsinaiticus.org') && a.rel.includes('noopener')),
-      p26Text: document.getElementById('p-26')?.textContent || '',
+      judaizantesLink: Boolean(document.querySelector('a[href*="/estudio/06-apologetica--judaizantes"]')),
+      p5Grc: document.querySelector('#p-5 .scj-grc')?.textContent || '',
+      p5Es: document.querySelector('#p-5 .scj-es')?.textContent || '',
+      p5MarksGrc: [...document.querySelectorAll('#p-5 .scj-grc mark')].map(m => m.textContent.trim()),
+      p5MarksEs: [...document.querySelectorAll('#p-5 .scj-es mark')].map(m => m.textContent.trim()),
+      p5Exg: Boolean(document.querySelector('#p-5 a[href*="/exegesis?libro=colosenses&cap=2"]')),
+      p5Ms: [...document.querySelectorAll('#p-5 a')].some(a => a.href.includes('codexsinaiticus.org') && a.rel.includes('noopener')),
+      p37Text: document.getElementById('p-37')?.textContent || '',
       over: document.documentElement.scrollWidth - window.innerWidth
     }));
     check(
-      `adventismo ${w}px: 6 bloques, 50 preguntas, folio manuscrito y sin pestañas`,
+      `adventismo ${w}px: 10 bloques, 100 preguntas, folio manuscrito y pestañas`,
       resAdv?.status() < 400 &&
-        /50 preguntas/.test(advInfo.h1 || '') &&
-        advInfo.bloques === 6 &&
-        advInfo.q === 50 &&
-        !advInfo.tabs &&
-        !advInfo.docPanel &&
+        /100 preguntas/.test(advInfo.h1 || '') &&
+        advInfo.bloques === 10 &&
+        advInfo.q === 100 &&
+        advInfo.tabs &&
+        advInfo.docPanel &&
         /^cuaderno \d+ · f\. \d+[rv]$/.test(advInfo.folio),
       `${advInfo.bloques} bloques · ${advInfo.q} preg · ${advInfo.folio}`
     );
     check(
-      `adventismo ${w}px: Col 2:16-17 en griego/NTV, resaltes, enlaces y enlace al estudio histórico`,
-      /ϲαββατων/.test(advInfo.p4Grc) &&
-        /días de descanso/.test(advInfo.p4Es) &&
-        advInfo.p4MarksGrc.includes('η ϲαββατων') &&
-        advInfo.p4MarksEs.includes('los días de descanso') &&
-        advInfo.p4Exg &&
-        advInfo.p4Ms &&
-        advInfo.estudioLink
+      `adventismo ${w}px: Col 2:16-17 en griego/NTV, resaltes y enlaces a estudios`,
+      /ϲαββατων/.test(advInfo.p5Grc) &&
+        /días de descanso/.test(advInfo.p5Es) &&
+        advInfo.p5MarksGrc.includes('η ϲαββατων') &&
+        advInfo.p5MarksEs.includes('los días de descanso') &&
+        advInfo.p5Exg &&
+        advInfo.p5Ms &&
+        advInfo.estudioLink &&
+        advInfo.judaizantesLink
     );
     check(
       `adventismo ${w}px: Dn 8:13-14 avisa que el Codex no lo conserva y cita hebreo`,
-      /no conserva este pasaje/.test(advInfo.p26Text) && /hebreo/.test(advInfo.p26Text)
+      /no conserva este pasaje/.test(advInfo.p37Text) && /hebreo/.test(advInfo.p37Text)
     );
-    await pAdv.click('#p-4 summary');
-    const advOpen = await pAdv.evaluate(() => document.querySelector('#p-4 details').open);
+    await pAdv.click('#p-5 summary');
+    const advOpen = await pAdv.evaluate(() => document.querySelector('#p-5 details').open);
     check(`adventismo ${w}px: <details> abre la respuesta al pulsar`, advOpen);
     check(`adventismo ${w}px: sin scroll horizontal ni errores JS`, advInfo.over <= 1 && advErr.length === 0, `${advInfo.over}px · err=${advErr.length}`);
+
+    await pAdv.click('#scj-tab-doctrina');
+    await wait(500);
+    const advDoc = await pAdv.evaluate(() => ({
+      url: location.search,
+      visible: !document.getElementById('scj-panel-doctrina').hidden,
+      partes: document.querySelectorAll('#scj-panel-doctrina .scj-parte').length,
+      singleCol: document.querySelectorAll('#scj-panel-doctrina .scj-pair--single').length,
+      bilingue: document.querySelectorAll('#scj-panel-doctrina .scj-pair:not(.scj-pair--single)').length,
+      patrCitas: document.querySelectorAll('#parte-I .scj-patr-quote').length,
+      patrHist: document.querySelectorAll('#parte-I .scj-patr-hist li').length,
+      bibliaLink: Boolean(document.querySelector('#parte-I a[href*="/biblia"]')),
+      preguntasFinales: document.querySelectorAll('#preguntas-libro li').length,
+      over: document.documentElement.scrollWidth - window.innerWidth
+    }));
+    check(
+      `adventismo ${w}px: pestaña «¿Qué cree?» abre 8 partes, patrística y preguntas con sus libros`,
+      advDoc.url.includes('vista=doctrina') &&
+        advDoc.visible &&
+        advDoc.partes === 8 &&
+        advDoc.singleCol > 0 &&
+        advDoc.bilingue > 0 &&
+        advDoc.patrCitas >= 7 &&
+        advDoc.patrHist >= 4 &&
+        advDoc.bibliaLink &&
+        advDoc.preguntasFinales >= 12 &&
+        advDoc.over <= 1 &&
+        advErr.length === 0,
+      `${advDoc.partes} partes · ${advDoc.singleCol}+${advDoc.bilingue} citas · ${advDoc.patrCitas} patr · ${advDoc.patrHist} hist · ${advDoc.over}px`
+    );
     await pAdv.close();
 
     // -------------------- Dispensacionalismo --------------------

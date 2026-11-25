@@ -1,0 +1,455 @@
+/* ==========================================================================
+   Navegación móvil híbrida (<= 768 px):
+   1. Barra superior minimalista (52 px) + controles contextuales (Índice / Aa).
+   2. Barra inferior de 4 accesos con Auto-hide + env(safe-area-inset-bottom).
+   3. Drawer inferior (Bottom Sheet) con scroll propio para todas las secciones.
+   ========================================================================== */
+
+.mnav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mnav {
+    display: block;
+  }
+
+  /* --- 1. Barra superior minimalista --------------------------------------- */
+
+  .mnav-top {
+    position: fixed;
+    top: var(--marquee-h, 0px);
+    left: 0;
+    right: 0;
+    z-index: 98;
+    background: rgba(12, 12, 16, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mnav-top__inner {
+    height: 52px;
+    padding: 0 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .mnav-top__left {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    min-width: 0;
+  }
+
+  .mnav-top__brand {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-inline: 0.25rem;
+  }
+
+  .mnav-top__logo {
+    height: 26px;
+    width: auto;
+  }
+
+  .mnav-top__ctx {
+    font-size: 0.74rem;
+    color: var(--muted);
+    padding-left: 0.55rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mnav-top__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex: none;
+  }
+
+  .mnav-top__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+  }
+
+  .mnav-top__btn--aa {
+    font-family: var(--font-display);
+    font-weight: 600;
+    padding: 0 0.65rem;
+  }
+
+  .mnav-top__btn:hover,
+  .mnav-top__btn.is-on {
+    border-color: #d6b25e;
+    color: #e8c776;
+    background: rgba(214, 178, 94, 0.12);
+  }
+
+  .mnav-top__btn:focus-visible {
+    outline: 2px solid #e8c776;
+    outline-offset: 2px;
+  }
+
+  /* --- Subpaneles contextuales (Índice / Aa) ------------------------------- */
+
+  .mnav-pop {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0.75rem;
+    right: 0.75rem;
+    max-height: min(56dvh, 24rem);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #14141a;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65);
+  }
+
+  .mnav-pop__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0.5rem 0.45rem 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #d6b25e;
+    font-weight: 600;
+  }
+
+  .mnav-pop__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .mnav-pop__list {
+    list-style: none;
+    margin: 0;
+    padding: 0.4rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .mnav-pop__item {
+    width: 100%;
+    text-align: left;
+    min-height: 44px;
+    padding: 0.55rem 0.75rem;
+    background: transparent;
+    border: 0;
+    border-radius: 10px;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    cursor: pointer;
+  }
+
+  .mnav-pop__item:hover,
+  .mnav-pop__item:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e8c776;
+  }
+
+  .mnav-aa__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.75rem;
+  }
+
+  .mnav-aa__step {
+    flex: 1 1 0;
+    min-height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .mnav-aa__step:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .mnav-aa__val {
+    min-width: 3.4rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+  }
+
+  /* --- 2. Barra inferior fija (Auto-hide + Safe Area) ---------------------- */
+
+  .mnav-bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    background: rgba(14, 14, 19, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;
+    will-change: transform;
+  }
+
+  .mnav-bottom.is-hidden {
+    transform: translateY(110%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mnav-bottom__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.2rem;
+    padding: 0.3rem 0.4rem 0.35rem;
+  }
+
+  .mnav-bottom__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    min-height: 48px;
+    padding: 0.25rem 0.2rem;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: #a6abb2;
+    font: inherit;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.18s ease, background-color 0.18s ease;
+  }
+
+  .mnav-bottom__btn.is-active {
+    color: #e8c776;
+    background: rgba(214, 178, 94, 0.12);
+    font-weight: 600;
+  }
+
+  .mnav-bottom__btn:focus-visible {
+    outline: 2px solid #e8c776;
+    outline-offset: -2px;
+  }
+
+  /* --- 3. Drawer tipo Hoja Inferior (Bottom Sheet) ------------------------- */
+
+  .mnav-drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+  }
+
+  .mnav-drawer__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(2px);
+    animation: mnav-fade 200ms ease;
+  }
+
+  .mnav-drawer__panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 85dvh;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background: #121218;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -18px 50px rgba(0, 0, 0, 0.65);
+    overflow: hidden;
+    animation: mnav-slide-up 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes mnav-fade {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes mnav-slide-up {
+    from {
+      transform: translateY(36px);
+      opacity: 0.6;
+    }
+  }
+
+  .mnav-drawer__head {
+    flex: none;
+    padding: 0.55rem 1rem 0.85rem 1.15rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mnav-drawer__handle {
+    width: 38px;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.26);
+    margin: 0 auto 0.6rem;
+  }
+
+  .mnav-drawer__head-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .mnav-drawer__eyebrow {
+    margin: 0;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #d6b25e;
+  }
+
+  .mnav-drawer__title {
+    margin: 0.15rem 0 0;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .mnav-drawer__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .mnav-drawer__close:focus-visible {
+    outline: 2px solid #e8c776;
+    outline-offset: 2px;
+  }
+
+  .mnav-drawer__body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.9rem 1rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .mnav-drawer__group {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .mnav-drawer__group-title {
+    margin: 0 0 0.45rem;
+    padding: 0 0.35rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  .mnav-drawer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  .mnav-drawer__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    min-height: 46px;
+    padding: 0.45rem 0.55rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.18s ease;
+  }
+
+  .mnav-drawer__link:hover,
+  .mnav-drawer__link:focus-visible {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .mnav-drawer__link:focus-visible {
+    outline: 2px solid #e8c776;
+    outline-offset: -2px;
+  }
+
+  .mnav-drawer__arrow {
+    opacity: 0.7;
+    flex: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mnav-bottom,
+    .mnav-drawer__backdrop,
+    .mnav-drawer__panel {
+      transition: none;
+      animation: none;
+    }
+  }
+}

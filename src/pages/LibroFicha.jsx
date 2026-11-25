@@ -81,6 +81,11 @@ export default function LibroFicha() {
                 Leer en la NTV
               </Link>
             )}
+            {ficha.testament === 'AT' && hasNtv && (
+              <Link className="btn btn--ghost" to={`/biblia/hebreo?libro=${ficha.id}&cap=1`}>
+                Leer en hebreo (WLC)
+              </Link>
+            )}
             <Link className={`btn ${hasNtv ? 'btn--ghost' : 'btn--primary'}`} to={`/exegesis?libro=${ficha.id}&cap=${firstCap}`}>
               Leer en el Codex
             </Link>

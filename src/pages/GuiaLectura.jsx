@@ -377,8 +377,11 @@ function ReadingPractice({ items, isHebrew }) {
           <button type="button" className="btn btn--primary guia-btn" onClick={restart}>
             Volver a practicar
           </button>
-          <Link className="btn btn--ghost guia-btn" to={isHebrew ? '/exegesis?libro=genesis&cap=1' : '/exegesis?libro=juan&cap=1'}>
-            Ir a Exégesis comparada →
+          <Link
+            className="btn btn--ghost guia-btn"
+            to={isHebrew ? '/biblia/hebreo?libro=genesis&cap=1' : '/exegesis?libro=juan&cap=1'}
+          >
+            {isHebrew ? 'Abrir la Biblia Hebrea →' : 'Ir a Exégesis comparada →'}
           </Link>
         </div>
       </div>
@@ -485,10 +488,23 @@ export default function GuiaLectura() {
   const isHebrew = lang === 'hebreo';
 
   const rawBack = params.get('volver') || '';
+  const fromHebreo = params.get('origen') === 'hebreo';
   const backBook = BOOK_BY_ID.get(rawBack);
   const backCap = Math.max(1, Number(params.get('cap')) || 1);
-  const backHref = backBook ? `/exegesis?libro=${backBook.id}&cap=${backCap}` : '/exegesis';
-  const backLabel = backBook ? `Volver a ${backBook.name} ${backCap}` : 'Abrir Exégesis comparada';
+  const backHref = fromHebreo
+    ? backBook && backBook.testament === 'AT' && !backBook.codexOnly
+      ? `/biblia/hebreo?libro=${backBook.id}&cap=${backCap}`
+      : '/biblia/hebreo'
+    : backBook
+      ? `/exegesis?libro=${backBook.id}&cap=${backCap}`
+      : '/exegesis';
+  const backLabel = fromHebreo
+    ? backBook && backBook.testament === 'AT' && !backBook.codexOnly
+      ? `Volver a ${backBook.name} ${backCap} (hebreo)`
+      : 'Volver a la Biblia Hebrea'
+    : backBook
+      ? `Volver a ${backBook.name} ${backCap}`
+      : 'Abrir Exégesis comparada';
 
   useEffect(() => {
     if (langParam && !GUIDES[langParam]) {
@@ -546,7 +562,7 @@ export default function GuiaLectura() {
             <span aria-hidden="true">/</span>
             <Link to="/biblia">Biblia</Link>
             <span aria-hidden="true">/</span>
-            <Link to={backHref}>Exégesis comparada</Link>
+            <Link to={backHref}>{fromHebreo ? 'Biblia Hebrea' : 'Exégesis comparada'}</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page">Guía de lectura</span>
           </nav>
@@ -555,7 +571,13 @@ export default function GuiaLectura() {
             <Link className="btn btn--ghost guia-btn" to={backHref}>
               ← {backLabel}
             </Link>
-            {!isHebrew && (
+            {isHebrew ? (
+              !fromHebreo && (
+                <Link className="btn btn--ghost guia-btn" to="/biblia/hebreo?libro=genesis&cap=1">
+                  Abrir Biblia Hebrea (WLC)
+                </Link>
+              )
+            ) : (
               <Link className="btn btn--ghost guia-btn" to={`${backHref}${backHref.includes('?') ? '&' : '?'}dic=`}>
                 Abrir diccionario griego
               </Link>

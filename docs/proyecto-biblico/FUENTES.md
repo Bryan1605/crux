@@ -82,39 +82,36 @@ Notas:
   tienen mapa de lemas. Si se amplía, hay que elegir una fuente nueva y
   documentarla aquí.
 
-## 4. Hebreo (planificado, aún no implementado)
+## 4. Hebreo y arameo (Fases 1 y 2 implementadas)
 
-| Campo | Decisión |
+| Campo | Dato verificado (2026-11-23) |
 |---|---|
-| Fuente | **OSHB** (Open Scriptures Hebrew Bible) sobre **WLC** (Westminster Leningrad Codex) |
+| Fuente | **OSHB** (*Open Scriptures Hebrew Bible*, `openscriptures/morphhb`, rev. `db6c5c9` del `2026-11-14`) sobre **WLC** (*Westminster Leningrad Codex*) |
 | Texto | WLC, dominio público |
-| Morfología/OSHB | CC BY 4.0 |
-| Enlace previsto | <https://github.com/openscriptures/morphhb> |
-| Tipografía | **Ezra SIL** (SIL Open Font License) |
-| Cobertura | 39 libros del AT, 23.213 versículos |
-| Arameo | 269 versículos, marcados palabra por palabra |
-| Ketiv/qere | 1.254 casos |
-| Alineables con la NTV | 789 de 929 capítulos (según el análisis de diseño) |
-| Ruta | `/biblia/hebreo` (nueva; 215 rutas) |
-| Versión prevista | 0.12.0 |
+| Marcado OSIS / `VerseMap.xml` | **CC BY 4.0** (atribución: *Open Scriptures Hebrew Bible Project*) |
+| Enlace oficial | <https://github.com/openscriptures/morphhb> |
+| Scripts y caché | `scripts/fetch-hebreo.mjs` (`src/assets/texts/.cache-hebreo/`, ignorada por git: 39 XML + `VerseMap.xml` + `LICENSE.md` + `README.md` + `meta.json` + zip de fuente), `scripts/hebreo-lib.mjs` y `scripts/build-hebreo.mjs` |
+| Salida publicada | `public/textos/hebreo/<id>.json` (39 archivos minificados, **6,47 MB**) + `public/textos/hebreo/index.json` |
+| Tipografía | **Ezra SIL 2.51** (`src/assets/fonts/ezra-sil/SILEOT.woff`, 62,0 KB + `OFL.txt`, **SIL Open Font License 1.1**) |
+| Cobertura | **39** libros del AT, **929** capítulos, **23.213** versículos, **305.499** palabras |
+| Arameo | **4** libros, **269** versículos, **4.828** palabras marcadas **palabra por palabra** (por prefijo `morph="A..."` en OSHB) |
+| Ketiv / Qere | **1.260** casos (`1.245` Ketiv+Qere, `6` Ketiv sin Qere, `9` Qere sin Ketiv) visibles e interactivos |
+| Alineación con la NTV | **789 / 929** capítulos con coincidencia exacta de numeración (`140` difieren —incluido Joel 4—; `119` anotados en `VerseMap.xml`) |
+| Rutas y lectores | `/biblia/hebreo` (RTL, buscador insensible a vocales, raíl) + columna `hebreo` en `/exegesis` (apagada por defecto, paralelo 2/3 cols en los 789 capítulos alineados, fallback a solo Hebreo en los 140 restantes; componente compartido `<HebrewVerseTokens />`) |
+| Versión actual | **`0.12.0`** (Fases 1 y 2 completadas; lematización/diccionario hebreo fuera de esta fase) |
 
-Rangos de arameo que hay que respetar:
+Rangos de arameo verificados palabra por palabra:
 
-- Daniel 2:4–7:28
-- Esdras 4:8–6:18 y 7:12–26
-- Génesis 31:47
-- Jeremías 10:11
+- Daniel 2:4–7:28 (`200` versículos; Daniel 2:4 incluye la transición hebreo → arameo dentro del versículo)
+- Esdras 4:8–6:18 y 7:12–26 (`67` versículos)
+- Génesis 31:47 (`1` versículo, palabras arameas de Labán junto al texto hebreo)
+- Jeremías 10:11 (`1` versículo completo)
 
-Notas:
+Notas verificadas de implementación:
 
-- El lector debe ser **RTL**, con el arameo marcado por palabra y el ketiv/qere
-  visible sin convertir el texto en una reconstrucción.
-- La columna de exegesis hebrea irá **apagada por defecto**; si un capítulo no
-  alinea, se muestra el texto hebreo sin forzar el paralelo.
-- No normalices el texto hebreo a NFC/NFD sin una decisión explícita: los
-  acentos y la morfología dependen de la forma transmitida.
-- Esta sección es un **plan**, no una fuente ya descargada. Antes de implementar,
-  verifica la versión, la licencia y el número de archivos; actualiza `ESTADO.md`.
+- El texto se conserva **sin normalización NFC/NFD** (`normalization: "none"`): los 39 XML de OSHB difieren de su forma NFC y las marcas masoréticas dependen del orden transmitido.
+- Se han eliminado las `3.239` notas editoriales WLC no-`variant` (diferencias acentuales/comparativas frente a BHS) del flujo de lectura y se ha preservado el texto completo en las `11` palabras que contienen `<seg type="x-large|x-suspended|x-small">` anidado (p. ej. Dt 6:4).
+- Las Fases 1 (`/biblia/hebreo`) y 2 (columna opcional en `/exegesis` con paralelo de hasta 3 testigos y fallback honesto) quedan implementadas en `0.12.0`; cualquier futuro léxico o análisis morfológico hebreo exigirá elegir y documentar una fuente específica.
 
 ## 5. Traducción nueva de los libros solo-Codex
 
@@ -124,7 +121,8 @@ Notas:
 | Libros | Tobit, Judit, Sabiduría, 4 Macabeos, 1 Macabeos, Sirácida |
 | Total | 3.761 versículos; 67.487 palabras griegas (conteo del tokenizador del sitio) |
 | 2 Esdras | **No se traduce**: es Esdras–Nehemías griego del Codex, ya cubierto por la NTV |
-| Salmo 151 / Joel 4 | Se traducen después de Tobit, como pasajes especiales (7 y 21 vv) |
+| Salmo 151 / Joel 4 | Publicados como pasajes especiales (7 y 21 vv; total en `trad/`: 8 archivos · 3.789 vv.) |
+| Estado | 8/8 archivos publicados en `public/textos/exegesis/trad/` (`borrador`, tablas en `docs/proyecto-biblico/revision/`); pendiente revisión humana |
 | Licencia | CC BY-NC-SA 3.0 (obra derivada del Codex) |
 | Etiqueta | «Traducción de trabajo · Borrador»; nunca «NTV» |
 | Método | Borrador asistido + revisión del usuario |

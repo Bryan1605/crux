@@ -969,3 +969,14 @@
     right: 0.9rem;
   }
 }
+
+@media (max-width: 768px) {
+  .biblia--reader .biblia__reader {
+    padding-top: calc(52px + 0.65rem);
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .reader__bar {
+    top: calc(var(--marquee-h, 0px) + 58px);
+  }
+}

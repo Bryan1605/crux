@@ -1,0 +1,405 @@
+/* ==========================================================================
+   Biblia Hebrea (WLC / OSHB) — Lector RTL con Ezra SIL
+   Reutiliza la barra, los temas de papel y el raíl de `Exegesis.css`.
+   ========================================================================== */
+
+.heb__cover {
+  background:
+    radial-gradient(640px 260px at 90% 10%, rgba(199, 141, 78, 0.14), transparent 70%),
+    linear-gradient(135deg, #171412, #0d0d10);
+}
+
+.heb-tool-glyph {
+  font-family: var(--font-hebrew);
+  font-size: 1.05rem;
+}
+
+.heb__notice--arc {
+  border-left-color: #4fa89a;
+  background: color-mix(in srgb, #4fa89a 10%, transparent);
+}
+
+/* --- temas de papel y contraste AA para marcas hebreas/arameas ------------ */
+
+.exg[data-theme='claro'],
+.heb-page[data-theme='claro'] {
+  --heb-arc: #135b52;
+  --heb-arc-bg: rgba(19, 91, 82, 0.08);
+  --heb-k: #8f4714;
+  --heb-q: #1f4f8c;
+  --heb-kq-bg: rgba(143, 71, 20, 0.07);
+  --heb-kq-bd: rgba(143, 71, 20, 0.34);
+  --heb-parashah: #705b32;
+}
+
+.exg[data-theme='sepia'],
+.heb-page[data-theme='sepia'] {
+  --heb-arc: #11524a;
+  --heb-arc-bg: rgba(17, 82, 74, 0.09);
+  --heb-k: #823f10;
+  --heb-q: #1b4880;
+  --heb-kq-bg: rgba(130, 63, 16, 0.08);
+  --heb-kq-bd: rgba(130, 63, 16, 0.36);
+  --heb-parashah: #624e28;
+}
+
+.exg[data-theme='noche'],
+.heb-page[data-theme='noche'] {
+  --heb-arc: #6fd6c8;
+  --heb-arc-bg: rgba(111, 214, 200, 0.11);
+  --heb-k: #f0ad76;
+  --heb-q: #89bfff;
+  --heb-kq-bg: rgba(240, 173, 118, 0.1);
+  --heb-kq-bd: rgba(240, 173, 118, 0.38);
+  --heb-parashah: #d6b25e;
+}
+
+/* --- buscador del libro abierto ------------------------------------------- */
+
+.heb-search__input[dir='auto'] {
+  unicode-bidi: plaintext;
+}
+
+.heb-search__clear {
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heb-search__hit {
+  grid-template-columns: 4.8rem minmax(0, 1fr);
+  align-items: start;
+}
+
+.heb-search__text {
+  font-family: var(--font-hebrew);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: right;
+  color: var(--text);
+}
+
+/* --- rejilla RTL por versículo -------------------------------------------- */
+
+.heb-grid {
+  --exg-grid-h: min(76vh, 52rem);
+}
+
+.heb-grid__head,
+.heb-row {
+  display: grid;
+  grid-template-columns: 3.8rem minmax(0, 1fr);
+}
+
+.heb-grid__gutter-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hebrew);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  border-left: 1px solid var(--rule);
+  padding: 0.5rem 0.25rem;
+}
+
+.heb-grid__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.3rem 0.9rem;
+}
+
+.heb-grid__title-row b {
+  font-family: var(--font-hebrew);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.heb-grid__es-title {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-top: 0;
+}
+
+/* Exegesis.css aplica `display: block` a cualquier `span` dentro de
+   `.exg-grid__witness`: devolvemos flujo en línea a la leyenda y sus insignias. */
+.heb-grid__witness .heb-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.15rem;
+  margin-top: 0.45rem;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.heb-grid__witness .heb-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0;
+  font-size: inherit;
+  line-height: 1.4;
+}
+
+.heb-grid__witness .heb-legend span:not(.heb-legend__item) {
+  display: inline;
+  margin-top: 0;
+  font-size: inherit;
+  line-height: 1.4;
+}
+
+.heb-grid__witness .heb-legend .heb-w--arc {
+  color: var(--heb-arc);
+}
+
+.heb-grid__witness .heb-legend .heb-kq__k {
+  color: var(--heb-k);
+}
+
+.heb-grid__witness .heb-legend .heb-kq__q {
+  color: var(--heb-q);
+}
+
+.heb-grid__witness .heb-legend .heb-parashah {
+  color: var(--heb-parashah);
+}
+
+.heb-row {
+  align-items: stretch;
+  border-top: 1px solid var(--rule);
+  cursor: pointer;
+  transition: background 0.16s ease;
+}
+
+.heb-row:hover {
+  background: color-mix(in srgb, #d6b25e 7%, transparent);
+}
+
+.heb-row.is-active {
+  background: color-mix(in srgb, #d6b25e 15%, transparent);
+}
+
+.heb-row__gutter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.6rem 0.25rem;
+  border-left: 1px solid var(--rule);
+}
+
+.heb-row__n {
+  font: inherit;
+  font-family: var(--font-body, system-ui, sans-serif);
+  font-size: 0.76rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.15rem 0.35rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
+}
+
+.heb-row__n:hover,
+.heb-row__n:focus-visible {
+  color: var(--ink);
+  background: color-mix(in srgb, #d6b25e 24%, transparent);
+}
+
+.heb-row.is-active .heb-row__n {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.heb-row__marks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.18rem;
+}
+
+.heb-mark {
+  font-family: var(--font-hebrew);
+  font-size: 0.68rem;
+  line-height: 1;
+  padding: 0.08rem 0.22rem;
+  border-radius: 4px;
+}
+
+.heb-mark--arc {
+  color: var(--heb-arc);
+  background: var(--heb-arc-bg);
+}
+
+.heb-mark--kq {
+  color: var(--heb-k);
+  background: var(--heb-kq-bg);
+}
+
+.heb-row__text {
+  min-width: 0;
+  padding: 0.7rem 1.15rem 0.85rem;
+  font-family: var(--font-hebrew);
+  font-size: var(--heb-fs, 26px);
+  line-height: 2.15;
+  text-align: right;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'mark' 1, 'mkmk' 1;
+  overflow-wrap: break-word;
+}
+
+/* --- marcas palabra por palabra (arameo, ketiv/qere, parashá) ------------ */
+
+.heb-w--arc {
+  color: var(--heb-arc);
+  background: var(--heb-arc-bg);
+  border-bottom: 1.5px dotted var(--heb-arc);
+  border-radius: 4px;
+  padding: 0.02em 0.14em;
+}
+
+.heb-kq {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.12em;
+  margin: 0 0.06em;
+  padding: 0.02em 0.26em;
+  font: inherit;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--heb-kq-bg);
+  border: 1px solid var(--heb-kq-bd);
+  border-radius: 6px;
+  cursor: pointer;
+  vertical-align: baseline;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.heb-kq:hover,
+.heb-kq:focus-visible,
+.heb-kq.is-active {
+  border-color: #d6b25e;
+  box-shadow: 0 0 0 2px color-mix(in srgb, #d6b25e 28%, transparent);
+}
+
+.heb-kq--arc {
+  border-bottom-width: 2px;
+  border-bottom-style: dotted;
+  border-bottom-color: var(--heb-arc);
+}
+
+.heb-kq__k {
+  color: var(--heb-k);
+}
+
+.heb-kq__sep {
+  font-family: var(--font-sans);
+  font-size: 0.56em;
+  color: var(--ink-soft);
+}
+
+.heb-kq__q {
+  color: var(--heb-q);
+}
+
+.heb-kq__mute {
+  font-family: var(--font-sans);
+  font-size: 0.5em;
+  color: var(--ink-soft);
+  padding-inline: 0.15em;
+}
+
+.heb-parashah {
+  display: inline-block;
+  margin-inline: 0.18em;
+  font-size: 0.78em;
+  color: var(--heb-parashah);
+  opacity: 0.92;
+}
+
+/* --- raíl lateral y créditos ---------------------------------------------- */
+
+.heb-rail-arc {
+  box-shadow: inset 0 -2px 0 color-mix(in srgb, #6fd6c8 60%, transparent);
+}
+
+.heb__rail-verses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.heb__rail-tag {
+  font: inherit;
+  font-size: 0.76rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt, #101014);
+  color: var(--muted);
+  cursor: pointer;
+  min-height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.heb__rail-tag--arc:hover,
+.heb__rail-tag--arc:focus-visible {
+  color: #6fd6c8;
+  border-color: #6fd6c8;
+}
+
+.heb__rail-tag--kq:hover,
+.heb__rail-tag--kq:focus-visible {
+  color: #f0ad76;
+  border-color: #f0ad76;
+}
+
+.heb__credits a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --- responsive ----------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .heb-grid__head,
+  .heb-row {
+    grid-template-columns: 3.1rem minmax(0, 1fr);
+  }
+
+  .heb-row__text {
+    padding: 0.65rem 0.8rem 0.8rem;
+    line-height: 2.05;
+  }
+
+  .heb-grid__body {
+    max-height: none;
+  }
+
+  .heb-search__clear,
+  .heb-search__hit,
+  .heb-row__n,
+  .heb-page .ntv__rail-book,
+  .heb-page .ntv__rail-chapter,
+  .heb__rail-tag {
+    min-height: 44px;
+  }
+
+  .heb-row__n {
+    min-width: 2.75rem;
+  }
+}

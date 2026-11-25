@@ -494,7 +494,7 @@ export default function Home() {
       </section>
 
       {/* Apologética: exámenes y preguntas con la Biblia frente a distintas corrientes */}
-      <section className="section apologetica-home" aria-labelledby="apologetica-home-title">
+      <section id="preguntas-con-la-biblia" className="section apologetica-home" aria-labelledby="apologetica-home-title">
         <div className="container">
           <div className="apolo-head">
             <div className="apolo-head__copy">

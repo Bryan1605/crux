@@ -129,6 +129,11 @@ function resolveLxxEquiv(r) {
       nota: `En la Septuaginta (Codex Sinaiticus) es el Salmo 109:${rng}: entre el Salmo 10 y el 147 la numeración griega va un número detrás.`
     };
   }
+  if (r.libro === 'malaquias' && r.cap === 3 && r.desde >= 1 && r.hasta <= 18) {
+    return {
+      codex: { cap: 3, desde: r.desde, hasta: r.hasta }
+    };
+  }
   if (r.libro === 'malaquias' && r.cap === 4 && r.desde >= 1 && r.hasta <= 6) {
     // Mal 4:1-6 en NTV corresponde a Mal 3:19-24 en LXX (v.5->3:22 o 3:23 según códice).
     // Si hiciera falta en preguntas, mapear versículo a versículo; por ahora se bloquea si no está mapeado.
@@ -155,7 +160,7 @@ function assertSafeCodexMapping(r) {
 const mk = (libro, cap, desde, hasta) => {
   const r = { libro, cap: Number(cap), desde: Number(desde), hasta: Number(hasta || desde) };
   const eq = resolveLxxEquiv(r);
-  const out = { ...r, label: label(r), ...(eq ? { codex: eq.codex, nota: eq.nota } : {}) };
+  const out = { ...r, label: label(r), ...(eq ? { codex: eq.codex, ...(eq.nota ? { nota: eq.nota } : {}) } : {}) };
   assertSafeCodexMapping(out);
   return out;
 };
@@ -354,6 +359,9 @@ for (const slug of SLUGS) {
           if (!texto.includes(frase)) malNtv.push(`Parte ${part.id}: «${frase}» no está en ${punto.ref}`);
         }
       }
+    }
+    for (const q of doc.preguntas || []) {
+      if (q.ref && !ntvRango(q.ref)) malNtv.push(`Pregunta p.${q.pagina}: ${q.ref} no existe en la NTV`);
     }
     if (malNtv.length) {
       console.error(`DOCTRINA NTV INVÁLIDA (${slug}):\n  ${malNtv.join('\n  ')}`);

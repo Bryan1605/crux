@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-do
 
 import ClickSpark from './components/ClickSpark/ClickSpark';
 import CardNav from './components/CardNav/CardNav';
+import MobileNav from './components/MobileNav/MobileNav';
 import MarqueeBar from './components/MarqueeBar/MarqueeBar';
 import { useSite } from './lib/site';
 
@@ -13,6 +14,7 @@ const Shincheonji = lazy(() => import('./pages/Shincheonji'));
 const Adventismo = lazy(() => import('./pages/Adventismo'));
 const Dispensacionalismo = lazy(() => import('./pages/Dispensacionalismo'));
 const GuiaLectura = lazy(() => import('./pages/GuiaLectura'));
+const BibliaHebreo = lazy(() => import('./pages/BibliaHebreo'));
 
 import Home from './pages/Home';
 import Estudio from './pages/Estudio';
@@ -32,15 +34,23 @@ import NotFound from './pages/NotFound';
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
-    // Con ancla (#nicea) no se vuelve arriba: se lleva el foco al destino.
+    // Con ancla (#nicea, #preguntas-con-la-biblia) lleva el foco al destino.
     if (hash) {
-      const target = document.getElementById(hash.slice(1));
+      const id = hash.slice(1);
+      const target = document.getElementById(id);
       if (target) {
         target.scrollIntoView({ block: 'start' });
-        return;
+        return undefined;
       }
+      const raf = requestAnimationFrame(() => {
+        const delayed = document.getElementById(id);
+        if (delayed) delayed.scrollIntoView({ block: 'start' });
+        else window.scrollTo(0, 0);
+      });
+      return () => cancelAnimationFrame(raf);
     }
     window.scrollTo(0, 0);
+    return undefined;
   }, [pathname, hash]);
   return null;
 }
@@ -97,6 +107,7 @@ export default function App() {
           ctaLabel={home.hero.ctaPrimary.label}
           ctaHref={home.hero.ctaPrimary.href}
         />
+        <MobileNav logo={marca.logo} logoAlt={marca.nombre} items={nav} />
         <ScrollToTop />
         <MarqueeBar />
         <Routes>
@@ -106,6 +117,14 @@ export default function App() {
           <Route path="/estudio/:slug" element={<EstudioDetalle />} />
           <Route path="/biblia" element={<Biblia />} />
           <Route path="/biblia/ntv" element={<BibliaNtv />} />
+          <Route
+            path="/biblia/hebreo"
+            element={
+              <Suspense fallback={<main id="main" className="page-loading" aria-busy="true" />}>
+                <BibliaHebreo />
+              </Suspense>
+            }
+          />
           <Route path="/biblia/libros" element={<Libros />} />
           <Route path="/biblia/libros/:id" element={<LibroFicha />} />
           <Route path="/exegesis" element={<Exegesis />} />

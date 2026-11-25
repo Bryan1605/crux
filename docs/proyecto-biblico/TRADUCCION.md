@@ -15,6 +15,8 @@ no:
 | Sirácida | `siracida` | 1.364 | 18.418 |
 | **Total** | | **3.761** | **67.487** |
 
+> **Estado (2026-11-24):** los **6/6 libros completos** (**3.761 vv.**) más **Salmo 151** (7 vv.) y **Joel 4 LXX** (21 vv.) están publicados en `public/textos/exegesis/trad/` (**8 archivos · 3.789 vv.** en `borrador`), con tablas de revisión en `docs/proyecto-biblico/revision/` (`tobit-01-03.md`, `tobit-04-14.md`, `judit-01-03.md`, `judit-04-16.md`, `pasajes-especiales.md`, `sabiduria-01-19.md`, `4-macabeos-01-18.md`, `1-macabeos-01-16.md` y `siracida-01-51.md`). Queda pendiente la revisión humana.
+
 Conteo hecho con el tokenizador de `src/lib/greek.js` sobre
 `public/textos/exegesis/codex/`. Si el Codex se regenera, vuelve a contar.
 
@@ -115,7 +117,7 @@ La traducción es una **obra derivada** de la transcripción del Codex:
 
 ## 5. Datos: esquema
 
-> Estado: **implementado el 2026-11-04** con el piloto de Tobit (caps. 1–3).
+> Estado: **implementado el 2026-11-04** con el piloto de Tobit (caps. 1–3) y completado en `borrador` el **2026-11-24** para los **8 archivos** (**3.789 versículos**: los 6 libros solo-Codex + Salmo 151 + Joel 4 LXX).
 > Diferencias con la propuesta original: las notas van **por versículo**
 > (`verses[].note`, opcional) en vez de un `notes` general; la fuente admite un
 > `scope` (texto) que explica la cobertura parcial; `name`, `abbr`, `order` y
@@ -261,7 +263,7 @@ Orden del piloto:
 4. Completar 4–14 y revisar. *(Traducido el 2026-11-04; la revisión del usuario
    queda pendiente.)*
 5. Publicar con etiqueta y ficha; actualizar `ESTADO.md`.
-6. Solo entonces empezar Judit.
+6. Solo entonces empezar Judit. *(Judit, Salmo 151 y Joel 4 LXX traducidos en `borrador` el 2026-11-21; Sabiduría, 4 Macabeos, 1 Macabeos y Sirácida completados en `borrador` el 2026-11-24; revisión humana pendiente.)*
 
 No empieces por Sirácida (1.364 vv) ni por 1 Macabeos (924 vv): son los más
 largos y esconden los problemas de formato hasta el final.

@@ -20,6 +20,7 @@ import { fileURLToPath } from 'node:url';
 
 import { APOLOGETICA_FASCICULOS } from '../src/lib/apologeticaSeo.js';
 import { guiaLecturaSeo } from '../src/lib/guiaSeo.js';
+import { hebreoSeo } from '../src/lib/hebreoSeo.js';
 import { libroSeo, librosIndexSeo } from '../src/lib/librosSeo.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -143,6 +144,13 @@ export function siteRoutes() {
       description:
         'La Nueva Traducción Viviente completa, versículo a versículo: 39 libros del Antiguo Testamento y 27 del Nuevo, en rejilla o en pliego de dos páginas, con sus notas del traductor y un buscador por palabras.',
       type: 'website',
+      indexable: true
+    },
+    {
+      path: '/biblia/hebreo',
+      ...hebreoSeo(brand),
+      type: 'website',
+      ogImage: OG_IMAGE,
       indexable: true
     },
     {

@@ -572,7 +572,7 @@
 .ficha__cuerpo {
   max-width: 72ch;
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: calc(1.02rem * var(--reading-scale, 1));
   line-height: 1.75;
 }
 

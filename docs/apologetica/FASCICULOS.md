@@ -7,10 +7,14 @@
 | # | Fascículo | Slug | Preguntas | Pestaña doctrinal | Estado |
 |---|---|---|---|---|---|
 | I | Shincheonji | `shincheonji` | 100 (10 bloques) | «¿Qué cree Shincheonji?» (Lee Man-hee, bilingüe) | Publicado |
-| II | Adventismo | `adventismo` | 50 (6 bloques) | Pendiente | Publicado (1 pestaña) |
+| II | Adventismo | `adventismo` | 100 (10 bloques) | «¿Qué enseña el Adventismo?» (8 partes + patrística) | Publicado |
 | III | Catolicismo Romano Papista | `catolicismo-romano` | — | — | Próximamente |
 | IV | Dispensacionalismo | `dispensacionalismo` | 50 (6 bloques) | «¿Qué enseña el dispensacionalismo?» (Pentecost, 24 citas) | Publicado |
 | V | Gnósticos | `gnosticos` | — | — | Próximamente |
+| VI | Islam | `islam` | — | — | Próximamente |
+| VII | Mormonismo · Santos de los Últimos Días | `mormonismo` | — | — | Próximamente |
+| VIII | Testigos de Jehová | `testigos-de-jehova` | — | — | Próximamente |
+| IX | Judaizantes y Raíces Hebreas | `judaizantes-raices-hebreas` | — | — | Próximamente |
 
 ## Piezas de un fascículo
 
@@ -49,7 +53,8 @@ No edites a mano `*-preguntas.json`, `content/busquedas.json` ni `content/estudi
 ## Pendientes conocidos
 
 - **Adventismo, pestaña 2** («¿Qué enseñan los adventistas?»): requiere texto oficial (*28 Creencias Fundamentales* y/o Ellen G. White) con página. Hasta entonces, la página enlaza al estudio `/estudio/06-apologetica--origenes-usa--03-adventismo`.
-- **Catolicismo** y **Gnósticos**: fuentes sugeridas — Catecismo (CIC) con numeración de párrafo y Padres apostólicos; Nag Hammadi (traducción citada con edición/página) y Ireneo, *Contra las herejías*.
+- **Catolicismo Romano Papista** (III) y **Gnósticos** (V): fuentes sugeridas — Catecismo (CIC) con numeración de párrafo y Padres apostólicos; Nag Hammadi (traducción citada con edición/página) y Ireneo, *Contra las herejías*.
+- **Islam** (VI), **Mormonismo · Santos de los Últimos Días** (VII), **Testigos de Jehová** (VIII) y **Judaizantes y Raíces Hebreas** (IX): listados en la sección de «Preguntas con la Biblia» como próximos fascículos para análisis y elaboración de cuestionarios con el Codex Sinaiticus y la NTV.
 - Si se añade una pestaña doctrinal a un fascículo existente: poner `doctrinaFile` en el registro, importar el JSON en su página y pasar `doctrina` a `ApologeticaFasciculo` (aparecen solas las pestañas).
 
 ## Verificación antes de dar por terminado

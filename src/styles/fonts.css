@@ -1,0 +1,9 @@
+/* Tipografías empaquetadas localmente (sin dependencias ni peticiones externas). */
+
+@font-face {
+  font-family: 'Ezra SIL';
+  src: url('../assets/fonts/ezra-sil/SILEOT.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

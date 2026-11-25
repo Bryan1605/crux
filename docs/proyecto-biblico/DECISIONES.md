@@ -10,15 +10,15 @@ una cifra, se verificó en el árbol de trabajo el **2026-10-28**.
 
 | Decisión | Detalle | Estado |
 |---|---|---|
-| Fuente | OSHB sobre WLC; WLC dominio público, morfología OSHB CC BY 4.0 | planificado |
-| Cobertura | 39 libros del AT, 23.213 versículos | planificado |
-| Arameo | 269 versículos, marcados **palabra por palabra**; rangos Daniel 2:4–7:28, Esdras 4:8–6:18 y 7:12–26, Génesis 31:47, Jeremías 10:11 | planificado |
-| Ketiv/qere | 1.254 casos, visibles sin convertir el texto en reconstrucción | planificado |
-| Alineación | 789 de 929 capítulos alineables con la NTV; el resto cae a texto hebreo sin paralelo | planificado |
-| Lector | `/biblia/hebreo`, RTL, tipografía Ezra SIL (OFL) | planificado |
-| Exegesis | columna hebrea **apagada por defecto**; no forzar el paralelo si no alinea | planificado |
-| Normalización | no normalizar NFC/NFD sin decisión explícita | planificado |
-| Rutas/versión | 215 rutas; versión 0.12.0 | planificado |
+| Fuente | OSHB (`openscriptures/morphhb`, rev. `db6c5c9`, `2026-11-14`) sobre WLC; WLC dominio público, marcado OSHB CC BY 4.0 | implementado (Fase 1) |
+| Cobertura | 39 libros del AT, **929** capítulos, **23.213** versículos, **305.499** palabras (`6,47 MB`) | implementado (Fase 1) |
+| Arameo | **269** versículos (**4.828** palabras) marcados **palabra por palabra**; Daniel 2:4–7:28, Esdras 4:8–6:18 y 7:12–26, Génesis 31:47, Jeremías 10:11 | implementado (Fase 1) |
+| Ketiv/qere | **1.260** casos (`1.245` K+Q, `6` solo K, `9` solo Q), visibles sin convertir el texto en reconstrucción | implementado (Fase 1) |
+| Lector | `/biblia/hebreo`, RTL, tipografía **Ezra SIL 2.51** (`SILEOT.woff`, SIL OFL 1.1) | implementado (Fase 1) |
+| Normalización | `normalization: "none"` — no normalizar NFC/NFD sin decisión explícita | implementado (Fase 1) |
+| Alineación | **789 / 929** capítulos con alineación exacta NTV; los **140** restantes avisan en el lector y en `/exegesis` caen a texto hebreo sin forzar el paralelo | implementado (Fase 2) |
+| Exegesis | columna hebrea **apagada por defecto** (`א Hebreo` / `?hebreo=1` / `?modo=hebreo`); no fuerza paralelo si no alinea; `.exg-grid--3` para 3 testigos | implementado (Fase 2) |
+| Rutas/versión | Ruta `#289` (`/biblia/hebreo`) + columna en `/exegesis`; versión **`0.12.0`** tras completar Fase 2 | implementado (0.12.0) |
 
 Por qué: el hebreo es el texto base del AT y permite comparar la NTV con el
 testimonio hebreo, pero la alineación no es total. Marcar el arameo y el
@@ -28,7 +28,7 @@ ketiv/qere evita presentar una reconstrucción como si fuera el texto recibido.
 
 | Decisión | Detalle | Estado |
 |---|---|---|
-| Libros | Tobit, Judit, Sabiduría, 4 Macabeos, 1 Macabeos, Sirácida | planificado |
+| Libros | Tobit, Judit, Sabiduría, 4 Macabeos, 1 Macabeos, Sirácida | implementado (borrador) |
 | Total | 3.761 versículos; 67.487 palabras griegas | verificado |
 | 2 Esdras | **no se traduce**: es Esdras–Nehemías griego del Codex, ya cubierto por la NTV | decidido |
 | Salmo 151 / Joel 4 | se traducen después de Tobit, como pasajes especiales (7 y 21 vv) | decidido |
@@ -44,7 +44,7 @@ ketiv/qere evita presentar una reconstrucción como si fuera el texto recibido.
 | UI | modo `paralelo` = Codex × Trad en libros solo-Codex; `?modo=trad` = solo traducción; `codex` = solo Codex | propuesto |
 | Admin | sin editor en `/admin` para el piloto | decidido |
 | Archivos | `src/assets/texts/trad/<id>.json` → `public/textos/exegesis/trad/<id>.json` | propuesto |
-| QA | `qa:trad` (a crear) + `qa:exegesis` + `qa:lexico` | planificado |
+| QA | `qa:trad` + `qa:exegesis` + `qa:lexico` | implementado (qa:trad) |
 
 Por qué: la NTV no cubre estos libros y el Codex es el único testigo griego
 completo del sitio. Traducir el aparato o rellenar lagunas crearía una falsa
@@ -139,8 +139,7 @@ la elección:
   más fichas, porque el canon solo consta en las fichas escritas).
 - **Revisión**: cómo marca el usuario una traducción/ficha como `revisado`
   (comentario, commit, checklist firmado). Hasta entonces, `borrador`.
-- **Hebreo**: formato exacto de los datos, tipografía y estrategia de alineación
-  en la fase 2; no fijar sin verificar OSHB.
+- ~~**Hebreo**~~ — formato y lector verificados el **2026-11-22** (ver §11); **Fase 2 completada el 2026-11-23** con columna apagada por defecto, paralelo 2/3 columnas y fallback sin paralelo forzado en `/exegesis`, versión **`0.12.0`** (ver §12). Quedan para una fase futura la lematización y diccionario morfológico hebreo/arameo del AT.
 - **Audio**: la fuente/licencia de los `.ogg` no está documentada; no ampliar
   narraciones sin resolverlo.
 
@@ -182,9 +181,12 @@ la elección:
 paralelo es Codex × NTV o Codex × Trad. `?modo=<id>` en la URL manda sobre la
 preferencia guardada sin sobrescribirla.
 
-Pendiente para el hebreo: el ancho de la rejilla
-(`exg-grid--3`) y la columna hebrea **apagada por defecto** (§1), que
-no debe entrar en el paralelo si no alinea.
+**2026-11-23**: entra la columna `hebreo` en `COLUMNS` de `/exegesis` (ver §12),
+**apagada por defecto** (`readMode()` ignora `'hebreo'` guardado si no media
+`?hebreo=1`, `?modo=hebreo` o el botón `א Hebreo`). Cuando un capítulo del AT
+alinea 1:1 con la NTV (`ntvAligned: true`), permite 2 columnas (`Hebreo × NTV`)
+o 3 columnas (`.exg-grid--3`, `Hebreo × Codex × NTV`); si no alinea (`140 / 929`
+capítulos), cae a solo Hebreo sin forzar el paralelo.
 
 ## 10. Léxico V2 multi-idioma y mapas de lemas compactos
 
@@ -219,3 +221,20 @@ no debe entrar en el paralelo si no alinea.
   la insignia explícita «Glosa base (TBESG · inglés)». En capítulos del AT en el
   Codex, las palabras griegas se muestran sin botón interactivo (`.exg-word--plain`,
   conservando las sobrelíneas de *nomina sacra*) mientras no exista lematización LXX.
+
+## 11. Hebreo — Fase 1 (esquema de texto, Ezra SIL y lector RTL `/biblia/hebreo`)
+
+**Decidido e implementado el 2026-11-22.**
+
+- **Fuente verificada y preservación textual**: se consume el subconjunto `wlc/*.xml` + `wlc/VerseMap.xml` de `openscriptures/morphhb` (rev. `db6c5c9`, `2026-11-14`) mediante `scripts/fetch-hebreo.mjs` → `scripts/build-hebreo.mjs` (`scripts/hebreo-lib.mjs`), eliminando únicamente el separador morfológico `/` de OSHB dentro de `<w>`, conservando el texto completo de las 11 palabras con `<seg type="x-large|x-suspended|x-small">` anidado (p. ej. Dt 6:4), descartando notas editoriales no-`variant` y prohibiendo `.normalize()` en todo el flujo (`normalization: "none"`).
+- **Marcado de arameo y Ketiv/Qere sin reconstrucción**: al verificarse que OSHB no utiliza `xml:lang` en `<w>`, el arameo se detecta por el prefijo `morph="A..."` (**269** versículos, **4.828** palabras) emitiendo `{ "a": "…" }` (`lang="arc"`). Las **1.260** notas `<note type="variant">` se representan como `{ "k": "…", "q": "…" }` (y `"a": 1` si el ketiv o el qere es arameo), cubriendo las **1.245** parejas completas, los **6** *ketiv veló qeré* (`q: ""`) y los **9** *qeré veló ketiv* (`k: ""`), visibles ambos inline con explicación emergente en `<VersePopover>`.
+- **Tipografía y filtros no destructivos**: `Ezra SIL 2.51` (`SILEOT.woff` SIL OFL 1.1) se versiona bajo `src/assets/fonts/ezra-sil/` e importa vía CSS relativo (`src/styles/fonts.css`) para funcionar idénticamente bajo `/` y `/crux/`. Los conmutadores del lector (`Cantilación` y `Vocales`) se aplican solo al renderizar desde `src/lib/hebrew.js` sin alterar los JSON fuente.
+- **Alcance respetado**: no se emiten códigos Strong, lemas ni morfología hebreos en `public/textos/hebreo/`, ni se activa la columna en `/exegesis`, manteniendo `package.json` en `0.11.0` hasta completar la Fase 2.
+
+## 12. Hebreo — Fase 2 (columna en `/exegesis`, alineación 789/929, fallback y `0.12.0`)
+
+**Decidido e implementado el 2026-11-23.**
+
+- **Columna apagada por defecto**: `COLUMNS` en `src/pages/Exegesis.jsx` antepone `hebreo` únicamente para los 39 libros del AT cuando el usuario pulsa el conmutador **`א Hebreo`** (`?hebreo=1`) o abre `?modo=hebreo`. Sin esos parámetros, `/exegesis` conserva por defecto la vista `Codex × NTV` o `NTV`, y `readMode()` devuelve `paralelo` si quedase `'hebreo'` en `localStorage`, evitando además peticiones de JSON hebreos cuando está apagada.
+- **Paralelo 2/3 columnas en capítulos alineados (`789 / 929`) y fallback honesto (`140 / 929`)**: si `chapter.ntvAligned === true`, el usuario dispone de 2 columnas (`Hebreo × NTV`), 3 columnas (`.exg-grid--3` con anchura ensanchada `.exg--cols-3 .exg__shell` hasta `1420 px`, e.g. Génesis 21: `Hebreo × Codex × NTV`, apiladas con `.exg-cell__tag` bajo `1024 px`), o solo Hebreo (`?modo=hebreo`). Si `chapter.ntvAligned === false` (p. ej. Génesis 31, Salmos con sobrescritura masorética, Malaquías 3 o Joel 4), `/exegesis` no fuerza la correspondencia verso a verso: cae a solo Hebreo (`1` columna masorética completa) con el aviso `.exg__notice--hebreo` y enlace a `/biblia/hebreo`.
+- **Renderizado compartido y fidelidad textual**: `<HebrewVerseTokens />` (`src/components/HebrewVerseTokens.jsx`) unifica `/biblia/hebreo` y `/exegesis` conservando la prohibición de normalizar NFC/NFD, el arameo palabra por palabra (`lang="arc"`), las fichas interactivas *ketiv / qere* en `<VersePopover>`, las marcas de margen (`אר` / `ק`), los conmutadores no destructivos de cantilación y *niqqud* en `ReaderMenu`, la barra de herramienta en una sola fila de escritorio y la atribución WLC / OSHB (`CC BY 4.0`) / Ezra SIL (`SIL OFL 1.1`). Se sube `package.json` a la versión **`0.12.0`**.

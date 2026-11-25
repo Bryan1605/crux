@@ -340,4 +340,13 @@ export const exegesisPath = passage => {
   return `/exegesis?${query.toString()}`;
 };
 
+/** Ruta a la Biblia Hebrea (WLC / OSHB) para una referencia del Antiguo Testamento. */
+export const hebreoPath = passage => {
+  const parsed = typeof passage === 'string' ? parsePassage(passage) : passage;
+  if (!parsed || parsed.testament !== 'AT' || parsed.codexOnly) return '/biblia/hebreo';
+  const query = new URLSearchParams({ libro: parsed.bookId, cap: String(parsed.chapter) });
+  if (parsed.verse) query.set('v', String(parsed.verse));
+  return `/biblia/hebreo?${query.toString()}`;
+};
+
 export default BIBLE_BOOKS;

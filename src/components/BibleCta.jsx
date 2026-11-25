@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-import { ALL_BOOKS, exegesisPath, ntvPath, parsePassage } from '../data/exegesis';
+import { ALL_BOOKS, exegesisPath, hebreoPath, ntvPath, parsePassage } from '../data/exegesis';
 
 import './BibleCta.css';
 
 /**
- * Puente entre los tres lectores de la casa: la Biblia Patrística, la NTV y la
- * exégesis comparada con el Codex.
+ * Puente entre los lectores de la casa: la Biblia Patrística, la NTV, la
+ * Biblia Hebrea (WLC) y la exégesis comparada con el Codex.
  *
  * Quien llega desde un estudio con una cita («Mateo 11:28») aterriza en el
  * mismo pasaje, no en la portada del lector: `parsePassage` traduce la cita a
@@ -30,6 +30,14 @@ const CARDS = [
     to: '/biblia/ntv'
   },
   {
+    id: 'hebreo',
+    glyph: 'א',
+    eyebrow: 'Biblia Hebrea',
+    title: 'Hebreo y arameo (WLC)',
+    text: 'Los 39 libros del Antiguo Testamento en lectura RTL con Ezra SIL, arameo marcado y ketiv/qere visibles.',
+    to: '/biblia/hebreo'
+  },
+  {
     id: 'exegesis',
     glyph: '⌘',
     eyebrow: 'Exégesis comparada',
@@ -42,12 +50,32 @@ const CARDS = [
 export default function BibleCta({ passage = '', exclude = '', title = 'Sigue leyendo', className = '' }) {
   const parsed = passedPassage(passage);
   const meta = parsed ? ALL_BOOKS.find(book => book.id === parsed.bookId) : null;
+  const allowHebreo = !meta || (meta.testament === 'AT' && !meta.codexOnly);
   const cards = CARDS.filter(
-    card => card.id !== exclude && (card.id !== 'ntv' || !meta?.codexOnly)
+    card =>
+      card.id !== exclude &&
+      (card.id !== 'ntv' || !meta?.codexOnly) &&
+      (card.id !== 'hebreo' || allowHebreo)
   ).map(card => ({
     ...card,
-    to: card.id === 'ntv' ? ntvPath(parsed) : card.id === 'exegesis' ? exegesisPath(parsed) : card.to
+    to:
+      card.id === 'ntv'
+        ? ntvPath(parsed)
+        : card.id === 'hebreo'
+          ? hebreoPath(parsed)
+          : card.id === 'exegesis'
+            ? exegesisPath(parsed)
+            : card.to
   }));
+
+  const countLabel =
+    cards.length === 4
+      ? 'en los cuatro lectores.'
+      : cards.length === 3
+        ? 'en los tres lectores.'
+        : cards.length === 2
+          ? 'en los dos lectores disponibles.'
+          : 'en el lector disponible.';
 
   return (
     <section className={`bcta ${className}`.trim()} aria-label={title}>
@@ -56,12 +84,7 @@ export default function BibleCta({ passage = '', exclude = '', title = 'Sigue le
         <p className="bcta__lead">
           {parsed ? (
             <>
-              El mismo pasaje, <b>{passage}</b>,{' '}
-              {cards.length === 3
-                ? 'en los tres lectores.'
-                : cards.length === 2
-                  ? 'en los dos lectores disponibles.'
-                  : 'en el lector disponible.'}
+              El mismo pasaje, <b>{passage}</b>, {countLabel}
             </>
           ) : passage ? (
             <>
@@ -69,7 +92,7 @@ export default function BibleCta({ passage = '', exclude = '', title = 'Sigue le
               para buscarla por palabras.
             </>
           ) : (
-            'La Escritura en tres lectores: la tradición de los Padres, el texto en español y el griego del Sinaítico.'
+            'La Escritura en cuatro lectores: la tradición de los Padres, el texto en español, el texto masorético hebreo y el griego del Sinaítico.'
           )}
         </p>
       </header>
