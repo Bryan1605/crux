@@ -469,6 +469,38 @@
   color: inherit;
 }
 
+.lex__lemma[lang='he'],
+.lex-entry__lemma[lang='he'],
+.lex-entry__forms[lang='he'],
+.lex-rel__lemma[lang='he'],
+.lex__letter--heb {
+  font-family: var(--font-hebrew, 'Ezra SIL', 'SBL Hebrew', serif);
+  font-feature-settings: 'kern' 1, 'liga' 1, 'mark' 1, 'mkmk' 1;
+}
+
+.lex__lemma[lang='he'] {
+  font-size: 1.28rem;
+  line-height: 1.45;
+}
+
+.lex-entry__lemma[lang='he'] {
+  font-size: clamp(2.15rem, 4.4vw, 3rem);
+  line-height: 1.35;
+}
+
+.lex-entry__forms[lang='he'] {
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.lex-rel__lemma[lang='he'] {
+  font-size: 1.05rem;
+}
+
+.lex__letter--heb {
+  font-size: 0.96rem;
+}
+
 .lex-entry__source {
   margin: 1.4rem 0 0;
   font-size: 0.7rem;

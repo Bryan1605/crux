@@ -100,13 +100,21 @@ function contentGuard() {
         }
       }
 
-      // Léxico: la fuente editable vive en content/lexico/griego.json.
+      // Léxico: las fuentes editables viven en content/lexico/.
       const lexicoFile = path.join(CONTENT, 'lexico', 'griego.json');
       if (fs.existsSync(lexicoFile)) {
         try {
           validate('lexico', JSON.parse(fs.readFileSync(lexicoFile, 'utf8')));
         } catch (e) {
           errors.push(`content/lexico/griego.json → ${e.message}`);
+        }
+      }
+      const lexicoHebreoFile = path.join(CONTENT, 'lexico', 'hebreo.json');
+      if (fs.existsSync(lexicoHebreoFile)) {
+        try {
+          validate('lexico-hebreo', JSON.parse(fs.readFileSync(lexicoHebreoFile, 'utf8')));
+        } catch (e) {
+          errors.push(`content/lexico/hebreo.json → ${e.message}`);
         }
       }
 

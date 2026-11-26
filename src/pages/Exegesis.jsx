@@ -18,18 +18,24 @@ import {
 } from '../data/exegesis';
 import { buildRecords } from '../lib/bibleSearch';
 import { loadExegesisIndex, loadLemmas, loadLexicon, loadLexiconBase, loadWitnessBook } from '../lib/exegesisTexts';
-import { loadHebreoBook } from '../lib/hebreoTexts';
+import {
+  loadHebreoBook,
+  loadHebreoLemas,
+  loadHebreoLexico,
+  loadHebreoLexicoBase
+} from '../lib/hebreoTexts';
 import {
   EZRA_SIL_URL,
   HEBREW_BOOK_BY_ID,
   HEBREW_LICENSE_URL,
   HEBREW_SOURCE_URL,
+  TBESH_SOURCE_URL,
   stripCantillation,
   stripNiqqud
 } from '../lib/hebrew';
 import { hasSelection } from '../lib/selection';
 import { splitOverline, tokenizeGreek } from '../lib/greek';
-import { decodeToken } from '../lib/lexicon';
+import { decodeToken, decodeVerseLemmas, pickPrimaryMorpheme } from '../lib/lexicon';
 import { useSeo } from '../lib/site';
 import BookIntroPanel from '../components/BookIntroPanel/BookIntroPanel';
 
@@ -300,10 +306,16 @@ export default function Exegesis() {
   const [trad, setTrad] = useState(null);
   const [hebreo, setHebreo] = useState(null);
   const [lemas, setLemas] = useState(null);
+  const [hebreoLemas, setHebreoLemas] = useState(null);
   const [lexicon, setLexicon] = useState(null);
   const [lexiconStatus, setLexiconStatus] = useState('idle');
   const [lexiconBase, setLexiconBase] = useState(null);
   const [lexiconBaseStatus, setLexiconBaseStatus] = useState('idle');
+  const [hebreoLexicon, setHebreoLexicon] = useState(null);
+  const [hebreoLexiconStatus, setHebreoLexiconStatus] = useState('idle');
+  const [hebreoLexiconBase, setHebreoLexiconBase] = useState(null);
+  const [hebreoLexiconBaseStatus, setHebreoLexiconBaseStatus] = useState('idle');
+  const [dicLangOverride, setDicLangOverride] = useState(null);
   const mountedRef = useRef(true);
   useEffect(() => {
     mountedRef.current = true;
@@ -385,6 +397,45 @@ export default function Exegesis() {
     [lexicon]
   );
 
+  const ensureHebreoLexicon = useCallback(() => {
+    if (hebreoLexicon) return Promise.resolve(hebreoLexicon);
+    setHebreoLexiconStatus(prev => (prev === 'ok' ? prev : 'loading'));
+    return loadHebreoLexico()
+      .then(data => {
+        if (mountedRef.current) {
+          setHebreoLexicon(data);
+          setHebreoLexiconStatus('ok');
+        }
+        return data;
+      })
+      .catch(() => {
+        if (mountedRef.current) setHebreoLexiconStatus('error');
+        return null;
+      });
+  }, [hebreoLexicon]);
+
+  const ensureHebreoLexiconBase = useCallback(() => {
+    if (hebreoLexiconBase) return Promise.resolve(hebreoLexiconBase);
+    setHebreoLexiconBaseStatus(prev => (prev === 'ok' ? prev : 'loading'));
+    return loadHebreoLexicoBase()
+      .then(data => {
+        if (mountedRef.current) {
+          setHebreoLexiconBase(data);
+          setHebreoLexiconBaseStatus('ok');
+        }
+        return data;
+      })
+      .catch(() => {
+        if (mountedRef.current) setHebreoLexiconBaseStatus('error');
+        return null;
+      });
+  }, [hebreoLexiconBase]);
+
+  const hebreoLexiconMap = useMemo(
+    () => new Map((hebreoLexicon?.entries || []).map(item => [item.strong, item])),
+    [hebreoLexicon]
+  );
+
   const bookMeta = useMemo(
     () => (index.data ? index.data.books.find(b => b.id === bookId) || index.data.books[0] : null),
     [index.data, bookId]
@@ -396,6 +447,11 @@ export default function Exegesis() {
   const hasHebreo = HEBREW_BOOK_BY_ID.has(bookId);
   const hebreoMeta = HEBREW_BOOK_BY_ID.get(bookId) || null;
   const hebreoActive = hasHebreo && hebreoParam;
+  const activeDicLang = /^H\d/i.test(dicValue)
+    ? 'heb'
+    : /^G\d/i.test(dicValue)
+      ? 'grc'
+      : dicLangOverride || (hebreoActive ? 'heb' : 'grc');
 
   /* ------------------------------- testigos ------------------------------- */
 
@@ -467,8 +523,7 @@ export default function Exegesis() {
     };
   }, [bookId, bookMeta, hebreoActive]);
 
-  /* Mapas de lemas del libro abierto: una entrada por palabra del Codex.
-     MorphGNT solo cubre el NT; el AT no tiene mapas y no debe pedirlos. */
+  /* Mapas de lemas del libro abierto: MorphGNT para NT, OSHB/WLC para AT si hebreo está activo. */
   useEffect(() => {
     if (!bookMeta || !hasCodex || bookMeta.testament !== 'NT') {
       setLemas(null);
@@ -483,6 +538,21 @@ export default function Exegesis() {
       alive = false;
     };
   }, [bookId, bookMeta, hasCodex]);
+
+  useEffect(() => {
+    if (!bookMeta || !hebreoActive) {
+      setHebreoLemas(null);
+      return undefined;
+    }
+    let alive = true;
+    setHebreoLemas(null);
+    loadHebreoLemas(bookId)
+      .then(data => alive && setHebreoLemas(data))
+      .catch(() => alive && setHebreoLemas(null));
+    return () => {
+      alive = false;
+    };
+  }, [bookId, bookMeta, hebreoActive]);
 
   const ntvChapter = useMemo(
     () => (ntv && !ntv.error ? ntv.chapters.find(c => c.num === chapterNum) || null : null),
@@ -510,12 +580,24 @@ export default function Exegesis() {
   const chapterHasHebreo = Boolean(hebreoChapter);
   const hebreoAligned = Boolean(hebreoChapter?.ntvAligned);
 
-  /* Precarga el léxico al abrir `?dic=` o en capítulos del NT con Codex para evitar parpadeos al pulsar palabras. */
+  /* Precarga el léxico correspondiente al abrir `?dic=` o un capítulo con lemas activos. */
   useEffect(() => {
-    if (dicOpen || (bookMeta?.testament === 'NT' && chapterHasCodex)) {
+    if ((dicOpen && activeDicLang === 'grc') || (bookMeta?.testament === 'NT' && chapterHasCodex)) {
       ensureLexicon();
     }
-  }, [dicOpen, bookMeta?.testament, chapterHasCodex, ensureLexicon]);
+    if ((dicOpen && activeDicLang === 'heb') || (hebreoActive && chapterHasHebreo)) {
+      ensureHebreoLexicon();
+    }
+  }, [
+    dicOpen,
+    activeDicLang,
+    bookMeta?.testament,
+    chapterHasCodex,
+    hebreoActive,
+    chapterHasHebreo,
+    ensureLexicon,
+    ensureHebreoLexicon
+  ]);
 
   const chapterNums = useMemo(() => {
     const ntvChapters = hasNtv
@@ -969,27 +1051,70 @@ export default function Exegesis() {
     [select]
   );
 
-  /** Ficha de una palabra del Codex: lema, morfología y glosa curada o base TBESG. */
+  /** Ficha de una palabra (Codex griego o WLC hebreo/arameo): lema, morfología y glosa curada o TBES*. */
+  const openWordAnalysis = useCallback(
+    ({ lang, anchor, id = null, verse, wordIndex, token, morphemes }) => {
+      const primary = pickPrimaryMorpheme(morphemes, lang);
+      const primaryStrong = primary?.strong || null;
+      const lex = lang === 'heb' ? hebreoLexicon : lexicon;
+      const map = lang === 'heb' ? hebreoLexiconMap : lexiconMap;
+      const loadMain = lang === 'heb' ? ensureHebreoLexicon : ensureLexicon;
+      const loadBase = lang === 'heb' ? ensureHebreoLexiconBase : ensureLexiconBase;
+
+      setPop({ kind: 'word', lang, id, anchor, verse, wordIndex, token, morphemes });
+      select(verse, { keepPop: true });
+      if (lex) {
+        if (primaryStrong && !map.has(primaryStrong)) loadBase();
+        return;
+      }
+      loadMain().then(lexData => {
+        if (!primaryStrong) return;
+        const inCurated = lexData?.entries?.some(item => item.strong === primaryStrong);
+        if (!inCurated) loadBase();
+      });
+    },
+    [
+      hebreoLexicon,
+      lexicon,
+      hebreoLexiconMap,
+      lexiconMap,
+      select,
+      ensureHebreoLexicon,
+      ensureLexicon,
+      ensureHebreoLexiconBase,
+      ensureLexiconBase
+    ]
+  );
+
   const openWord = useCallback(
     (anchor, verse, wordIndex, token) => {
       const map = lemas?.verses?.[`${chapterNum}:${verse.n}`];
       const morphemes = decodeToken(map?.[wordIndex], lemas?.dict);
-      const primaryStrong = morphemes[0]?.strong;
-      setPop({ kind: 'word', anchor, verse: verse.n, wordIndex, token, morphemes });
-      select(verse.n, { keepPop: true });
-      if (lexicon) {
-        if (primaryStrong && !lexiconMap.has(primaryStrong)) {
-          ensureLexiconBase();
-        }
-        return;
-      }
-      ensureLexicon().then(lexData => {
-        if (!primaryStrong) return;
-        const inCurated = lexData?.entries?.some(item => item.strong === primaryStrong);
-        if (!inCurated) ensureLexiconBase();
+      openWordAnalysis({
+        lang: 'grc',
+        anchor,
+        verse: verse.n,
+        wordIndex,
+        token,
+        morphemes
       });
     },
-    [lemas, chapterNum, lexicon, lexiconMap, select, ensureLexicon, ensureLexiconBase]
+    [lemas, chapterNum, openWordAnalysis]
+  );
+
+  const openHebrewWord = useCallback(
+    (anchor, data) => {
+      openWordAnalysis({
+        lang: 'heb',
+        anchor,
+        id: data.id,
+        verse: data.verse,
+        wordIndex: data.wordIndex,
+        token: data.token,
+        morphemes: data.morphemes
+      });
+    },
+    [openWordAnalysis]
   );
 
   const goToVerseFromLexicon = useCallback(
@@ -997,7 +1122,10 @@ export default function Exegesis() {
       const q = new URLSearchParams(params);
       q.delete('dic');
       q.delete('vv');
-      if (!HEBREW_BOOK_BY_ID.has(targetBookId)) {
+      setDicLangOverride(null);
+      if (activeDicLang === 'heb' && HEBREW_BOOK_BY_ID.has(targetBookId)) {
+        q.set('hebreo', '1');
+      } else if (!HEBREW_BOOK_BY_ID.has(targetBookId)) {
         q.delete('hebreo');
         if (q.get('modo') === 'hebreo') q.delete('modo');
       }
@@ -1008,22 +1136,25 @@ export default function Exegesis() {
       setNavOpen(false);
       setParams(q);
     },
-    [params, setParams]
+    [params, setParams, activeDicLang]
   );
 
   const openLexicon = useCallback(
-    (strong = '') => {
+    (strong = '', langOverride = null) => {
       const q = new URLSearchParams(params);
       q.set('dic', strong);
+      if (langOverride) setDicLangOverride(langOverride);
+      else if (!strong) setDicLangOverride(hebreoActive ? 'heb' : 'grc');
       setPop(null);
       setParams(q, { replace: true });
     },
-    [params, setParams]
+    [params, setParams, hebreoActive]
   );
 
   const closeLexicon = useCallback(() => {
     const q = new URLSearchParams(params);
     q.delete('dic');
+    setDicLangOverride(null);
     setParams(q, { replace: true });
   }, [params, setParams]);
 
@@ -1067,10 +1198,18 @@ export default function Exegesis() {
     );
   }
 
-  const wordPrimaryStrong = pop?.kind === 'word' ? pop.morphemes?.[0]?.strong : null;
-  const wordEntry = wordPrimaryStrong ? lexiconMap.get(wordPrimaryStrong) || null : null;
+  const wordLang = pop?.kind === 'word' ? pop.lang || 'grc' : 'grc';
+  const wordPrimaryStrong =
+    pop?.kind === 'word'
+      ? pickPrimaryMorpheme(pop.morphemes, wordLang)?.strong || null
+      : null;
+  const wordLexMap = wordLang === 'heb' ? hebreoLexiconMap : lexiconMap;
+  const wordLexStatus = wordLang === 'heb' ? hebreoLexiconStatus : lexiconStatus;
+  const wordBaseData = wordLang === 'heb' ? hebreoLexiconBase : lexiconBase;
+  const wordBaseStatus = wordLang === 'heb' ? hebreoLexiconBaseStatus : lexiconBaseStatus;
+  const wordEntry = wordPrimaryStrong ? wordLexMap.get(wordPrimaryStrong) || null : null;
   const wordBaseEntry =
-    wordPrimaryStrong && !wordEntry ? lexiconBase?.entries?.[wordPrimaryStrong] || null : null;
+    wordPrimaryStrong && !wordEntry ? wordBaseData?.entries?.[wordPrimaryStrong] || null : null;
 
   /** Cabecera de la columna de un testigo. */
   const renderHead = id => {
@@ -1131,8 +1270,11 @@ export default function Exegesis() {
             tokens={row.hebreo.t}
             verseNum={row.n}
             formatSurface={formatHebrewSurface}
+            verseLemmas={decodeVerseLemmas(hebreoLemas, chapterNum, row.n)}
             activeKqId={pop?.kind === 'kq' ? pop.id : null}
+            activeWordId={pop?.kind === 'word' && pop.lang === 'heb' ? pop.id : null}
             onKetivQere={openKetivQere}
+            onWord={openHebrewWord}
           />
         </div>
       ) : (
@@ -1258,10 +1400,23 @@ export default function Exegesis() {
             )}
           </p>
           <div className="exg__tools" role="group" aria-label="Herramientas de lectura">
+            {hebreoActive && (
+              <button
+                type="button"
+                className="exg-tool"
+                onClick={() => openLexicon('', 'heb')}
+                aria-haspopup="dialog"
+              >
+                <span className="exg-tool__glyph heb-tool-glyph" lang="he" aria-hidden="true">
+                  מ
+                </span>
+                <span>Diccionario hebreo</span>
+              </button>
+            )}
             <button
               type="button"
               className="exg-tool"
-              onClick={() => openLexicon('')}
+              onClick={() => openLexicon('', 'grc')}
               aria-haspopup="dialog"
             >
               <span className="exg-tool__glyph" aria-hidden="true">
@@ -1537,11 +1692,13 @@ export default function Exegesis() {
             <button
               type="button"
               className="rb-btn"
-              onClick={() => openLexicon('')}
-              title="Diccionario griego → español"
+              onClick={() => openLexicon('', hebreoActive ? 'heb' : 'grc')}
+              title={hebreoActive ? 'Diccionario hebreo y arameo → español' : 'Diccionario griego → español'}
               aria-haspopup="dialog"
             >
-              <span aria-hidden="true">α</span>
+              <span aria-hidden="true" lang={hebreoActive ? 'he' : undefined}>
+                {hebreoActive ? 'מ' : 'α'}
+              </span>
               <span className="rmenu__text">Diccionario</span>
             </button>
             <Link className="rb-btn" to={guiaHref} title="Guía didáctica para leer griego, hebreo y arameo">
@@ -1854,8 +2011,9 @@ export default function Exegesis() {
           {hasHebreo && (
             <p>
               <strong>Biblia Hebrea (WLC / OSHB):</strong> texto hebreo y arameo base del{' '}
-              <em>Westminster Leningrad Codex</em> (dominio público); marcado OSIS, arameo palabra
-              por palabra, <em>ketiv / qere</em> y mapa de versificación de{' '}
+              <em>Westminster Leningrad Codex</em> (dominio público); marcado OSIS, lemas,
+              morfología, arameo palabra por palabra, <em>ketiv / qere</em> y mapa de versificación
+              de{' '}
               <a href={HEBREW_SOURCE_URL} target="_blank" rel="noopener noreferrer">
                 Open Scriptures Hebrew Bible
               </a>{' '}
@@ -1863,7 +2021,11 @@ export default function Exegesis() {
               <a href={HEBREW_LICENSE_URL} target="_blank" rel="noopener noreferrer">
                 CC BY 4.0
               </a>
-              ). Tipografía{' '}
+              ). Glosas base del léxico hebreo de{' '}
+              <a href={TBESH_SOURCE_URL} target="_blank" rel="noopener noreferrer">
+                TBESH / STEPBible
+              </a>{' '}
+              (CC BY 4.0). Tipografía{' '}
               <a href={EZRA_SIL_URL} target="_blank" rel="noopener noreferrer">
                 Ezra SIL 2.51
               </a>{' '}
@@ -1937,27 +2099,32 @@ export default function Exegesis() {
           onClose={() => setPop(null)}
         >
           <LexiconBody
+            lang={wordLang}
             morphemes={pop.morphemes}
             entry={wordEntry}
             baseEntry={wordBaseEntry}
             loading={
-              lexiconStatus === 'loading' ||
-              (Boolean(wordPrimaryStrong) && !wordEntry && lexiconBaseStatus === 'loading')
+              wordLexStatus === 'loading' ||
+              (Boolean(wordPrimaryStrong) && !wordEntry && wordBaseStatus === 'loading')
             }
             token={pop.token}
             reference={`${bookMeta?.name} ${chapterNum}:${pop.verse}`}
-            onOpenDictionary={() => openLexicon(wordPrimaryStrong || '')}
+            onOpenDictionary={() => openLexicon(wordPrimaryStrong || '', wordLang)}
           />
         </VersePopover>
       )}
 
       {dicOpen && (
         <LexiconPanel
-          lexicon={lexicon}
-          loading={lexiconStatus === 'loading' || lexiconStatus === 'idle'}
-          error={lexiconStatus === 'error'}
+          lang={activeDicLang}
+          lexicon={activeDicLang === 'heb' ? hebreoLexicon : lexicon}
+          loading={
+            (activeDicLang === 'heb' ? hebreoLexiconStatus : lexiconStatus) === 'loading' ||
+            (activeDicLang === 'heb' ? hebreoLexiconStatus : lexiconStatus) === 'idle'
+          }
+          error={(activeDicLang === 'heb' ? hebreoLexiconStatus : lexiconStatus) === 'error'}
           value={dicValue}
-          onSelect={openLexicon}
+          onSelect={s => openLexicon(s, activeDicLang)}
           onGoToVerse={goToVerseFromLexicon}
           onClose={closeLexicon}
         />

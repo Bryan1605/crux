@@ -41,6 +41,7 @@ content/.history/
 src/assets/imgs/**/*.jpg
 src/assets/imgs/**/*.jpeg
 src/assets/imgs/Portadas_Para_Biblía_Patrística_Optimizadas/
+src/assets/imgs/Fundamentos/
 
 # Claude Code: ajustes personales (los comandos y launch.json sí se versionan)
 .claude/settings.local.json

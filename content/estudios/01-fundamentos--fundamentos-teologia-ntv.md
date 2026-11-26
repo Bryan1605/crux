@@ -5,6 +5,7 @@ description: "Basado exclusivamente en la NTV (Nueva Traducción Viviente)."
 tags: ["fundamento", "doctrina/general"]
 aliases: []
 updated: "2026-09-26"
+portada: "/img/estudios/fundamentos/portada.webp"
 ---
 
 # Fundamentos de doctrina — NTV

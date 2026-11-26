@@ -82,23 +82,24 @@ Notas:
   tienen mapa de lemas. Si se amplía, hay que elegir una fuente nueva y
   documentarla aquí.
 
-## 4. Hebreo y arameo (Fases 1 y 2 implementadas)
+## 4. Hebreo y arameo (Fases 1–3 implementadas)
 
-| Campo | Dato verificado (2026-11-23) |
+| Campo | Dato verificado (2026-11-24) |
 |---|---|
 | Fuente | **OSHB** (*Open Scriptures Hebrew Bible*, `openscriptures/morphhb`, rev. `db6c5c9` del `2026-11-14`) sobre **WLC** (*Westminster Leningrad Codex*) |
 | Texto | WLC, dominio público |
-| Marcado OSIS / `VerseMap.xml` | **CC BY 4.0** (atribución: *Open Scriptures Hebrew Bible Project*) |
-| Enlace oficial | <https://github.com/openscriptures/morphhb> |
-| Scripts y caché | `scripts/fetch-hebreo.mjs` (`src/assets/texts/.cache-hebreo/`, ignorada por git: 39 XML + `VerseMap.xml` + `LICENSE.md` + `README.md` + `meta.json` + zip de fuente), `scripts/hebreo-lib.mjs` y `scripts/build-hebreo.mjs` |
-| Salida publicada | `public/textos/hebreo/<id>.json` (39 archivos minificados, **6,47 MB**) + `public/textos/hebreo/index.json` |
+| Marcado OSIS, lemas, morfología y `VerseMap.xml` | **CC BY 4.0** (atribución: *Open Scriptures Hebrew Bible Project*) |
+| Léxico base | **TBESH** — STEPBible, *Translators Brief lexicon of Extended Strongs for Hebrew* (**CC BY 4.0**, base BDB abreviado / Tyndale House); glosas y notas en español propias en `content/lexico/hebreo.json` |
+| Enlace oficial | <https://github.com/openscriptures/morphhb> · <https://www.stepbible.org/> |
+| Scripts y caché | `scripts/fetch-hebreo.mjs`, `scripts/fetch-hebreo-lexico.mjs`, `scripts/hebreo-lib.mjs`, `scripts/hebreo-lexico-lib.mjs`, `scripts/build-hebreo.mjs`, `scripts/build-hebreo-lemas.mjs`, `scripts/build-hebreo-lexico.mjs` (`src/assets/texts/.cache-hebreo/`, ignorada por git) |
+| Salida publicada | `public/textos/hebreo/<id>.json` (`39` libros, `6,47 MB`), `public/textos/hebreo/index.json`, `public/textos/hebreo/lemas/<id>.json` (`39` mapas V2, `7,68 MB`, `304.239/304.239` = `100 %`, `8.531` Strongs), `public/textos/hebreo/lexico.json` (`331` entradas curadas, `79,0 %` morfemas) y `public/textos/hebreo/lexico-hebreo-base.json` (`8.200` base) |
 | Tipografía | **Ezra SIL 2.51** (`src/assets/fonts/ezra-sil/SILEOT.woff`, 62,0 KB + `OFL.txt`, **SIL Open Font License 1.1**) |
-| Cobertura | **39** libros del AT, **929** capítulos, **23.213** versículos, **305.499** palabras |
+| Cobertura | **39** libros del AT, **929** capítulos, **23.213** versículos, **305.499** palabras (`304.239` lematizadas) |
 | Arameo | **4** libros, **269** versículos, **4.828** palabras marcadas **palabra por palabra** (por prefijo `morph="A..."` en OSHB) |
 | Ketiv / Qere | **1.260** casos (`1.245` Ketiv+Qere, `6` Ketiv sin Qere, `9` Qere sin Ketiv) visibles e interactivos |
 | Alineación con la NTV | **789 / 929** capítulos con coincidencia exacta de numeración (`140` difieren —incluido Joel 4—; `119` anotados en `VerseMap.xml`) |
-| Rutas y lectores | `/biblia/hebreo` (RTL, buscador insensible a vocales, raíl) + columna `hebreo` en `/exegesis` (apagada por defecto, paralelo 2/3 cols en los 789 capítulos alineados, fallback a solo Hebreo en los 140 restantes; componente compartido `<HebrewVerseTokens />`) |
-| Versión actual | **`0.12.0`** (Fases 1 y 2 completadas; lematización/diccionario hebreo fuera de esta fase) |
+| Rutas y lectores | `/biblia/hebreo` (RTL, palabras clicables, diccionario `?dic=`, buscador insensible a vocales, raíl) + columna `hebreo` en `/exegesis` (apagada por defecto, paralelo 2/3 cols en los 789 capítulos alineados, fallback a solo Hebreo en los 140 restantes; componente compartido `<HebrewVerseTokens />`) |
+| Versión actual | **`0.13.0`** (Fases 1–3 completadas; pendiente lematización LXX si algún día se añade para griego del AT) |
 
 Rangos de arameo verificados palabra por palabra:
 

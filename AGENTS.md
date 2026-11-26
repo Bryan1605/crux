@@ -35,7 +35,8 @@ npm run dev        # http://localhost:5173/  (panel /admin solo en dev)
 | `npm run exegesis:trad` | Valida y publica las traducciones de trabajo (`src/assets/texts/trad/` → `public/textos/exegesis/trad/`). No está dentro de `exegesis`; después, `exegesis:index`. |
 | `npm run hebreo` | Descarga OSHB/WLC + Ezra SIL (`hebreo:fetch`) y regenera los 39 JSON en `public/textos/hebreo/` (`hebreo:build`). No lo ejecuta el build. |
 | `npm run hebreo:fetch` / `:build` | Pasos sueltos de descarga en caché `.cache-hebreo/` y generación estática del AT hebreo/arameo. |
-| `npm run qa:hebreo` | QA de Hebreo Fase 1: datos, preservación sin NFC, rangos de arameo, 3 tipos de ketiv/qere y navegador real (Ezra SIL + RTL). Va dentro de `npm run qa`. |
+| `npm run hebreo:fetch-lexico` / `:lemas` / `:lexico` | Descarga TBESH (STEPBible, CC BY 4.0), genera los 39 mapas de lemas en `public/textos/hebreo/lemas/` y construye `public/textos/hebreo/lexico.json` + `lexico-hebreo-base.json`. |
+| `npm run qa:hebreo` | QA de Hebreo Fases 1–3: datos, preservación sin NFC, rangos de arameo, 3 tipos de ketiv/qere, lemas 1:1, léxico hebreo/TBESH y navegador real (Ezra SIL, RTL, palabras clicables, arameo y diccionario). Va dentro de `npm run qa`. |
 | `npm run qa:libros` | QA de las fichas de libros: validador, registro de fuentes, rutas, páginas y panel en los lectores. Va dentro de `npm run qa`. |
 | `npm run qa:admin` | Editor visual de `/admin`: los estudios pasan por el editor sin cambiar su HTML y prueba de uso (no guarda). Va dentro de `npm run qa`. |
 | `npm run qa:shincheonji` | Página `/apologetica/shincheonji`: datos, texto copiado igual a NTV/Codex, griego, avisos del AT y navegación. Va dentro de `npm run qa`. |

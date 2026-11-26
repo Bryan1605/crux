@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { api, Field, Status } from './shared';
+import MediaPicker from './MediaPicker';
 
 function Section({ title, children }) {
   return (
@@ -11,6 +12,14 @@ function Section({ title, children }) {
   );
 }
 
+function swapItems(list, i, delta) {
+  const j = i + delta;
+  if (j < 0 || j >= list.length) return list;
+  const copy = [...list];
+  [copy[i], copy[j]] = [copy[j], copy[i]];
+  return copy;
+}
+
 function NavEditor({ site, set }) {
   const nav = site.nav;
   const setCard = (i, key, value) => set(d => {
@@ -18,10 +27,15 @@ function NavEditor({ site, set }) {
     d.nav[i] = { ...d.nav[i], [key]: value };
     return d;
   });
+  const moveCard = (i, delta) => set(d => ({ ...d, nav: swapItems(d.nav, i, delta) }));
   const setLink = (ci, li, key, value) => set(d => {
     d.nav = d.nav.map((c, i) =>
       i === ci ? { ...c, links: c.links.map((l, j) => (j === li ? { ...l, [key]: value } : l)) } : c
     );
+    return d;
+  });
+  const moveLink = (ci, li, delta) => set(d => {
+    d.nav = d.nav.map((c, i) => (i === ci ? { ...c, links: swapItems(c.links, li, delta) } : c));
     return d;
   });
   const addCard = () => set(d => ({ ...d, nav: [...d.nav, { label: 'Nuevo', bgColor: '#16161b', textColor: '#f4f4f5', links: [] }] }));
@@ -38,13 +52,17 @@ function NavEditor({ site, set }) {
   return (
     <Section title="Menú de navegación">
       <p className="muted admin__hint">
-        Cada tarjeta del menú con sus enlaces. Los colores son los del fondo y del texto de la tarjeta.
+        Cada tarjeta del menú con sus enlaces. Usa ↑/↓ para ordenar tanto las tarjetas como cada enlace.
       </p>
       {nav.map((card, i) => (
         <div className="admin__card" key={i}>
           <div className="admin__card-head">
             <strong>{card.label || `Tarjeta ${i + 1}`}</strong>
-            <button type="button" className="admin__btn admin__btn--danger" onClick={() => removeCard(i)}>Quitar tarjeta</button>
+            <div className="admin__body-actions">
+              <button type="button" className="admin__btn" onClick={() => moveCard(i, -1)} disabled={i === 0} title="Subir tarjeta">↑</button>
+              <button type="button" className="admin__btn" onClick={() => moveCard(i, 1)} disabled={i === nav.length - 1} title="Bajar tarjeta">↓</button>
+              <button type="button" className="admin__btn admin__btn--danger" onClick={() => removeCard(i)}>Quitar tarjeta</button>
+            </div>
           </div>
           <div className="admin__row">
             <Field label="Título">
@@ -58,7 +76,7 @@ function NavEditor({ site, set }) {
             </Field>
           </div>
           {card.links.map((link, li) => (
-            <div className="admin__row admin__row--tight" key={li}>
+            <div className="admin__row admin__row--link" key={li}>
               <input
                 value={link.label}
                 placeholder="Etiqueta"
@@ -74,7 +92,11 @@ function NavEditor({ site, set }) {
                 placeholder="ariaLabel (accesibilidad)"
                 onChange={e => setLink(i, li, 'ariaLabel', e.target.value)}
               />
-              <button type="button" className="admin__btn admin__btn--danger" onClick={() => removeLink(i, li)}>✕</button>
+              <div className="admin__body-actions">
+                <button type="button" className="admin__btn" onClick={() => moveLink(i, li, -1)} disabled={li === 0} title="Subir">↑</button>
+                <button type="button" className="admin__btn" onClick={() => moveLink(i, li, 1)} disabled={li === card.links.length - 1} title="Bajar">↓</button>
+                <button type="button" className="admin__btn admin__btn--danger" onClick={() => removeLink(i, li)}>✕</button>
+              </div>
             </div>
           ))}
           <button type="button" className="admin__btn" onClick={() => addLink(i)}>+ Enlace</button>
@@ -85,11 +107,23 @@ function NavEditor({ site, set }) {
   );
 }
 
-export default function SiteEditor() {
+const DEFAULT_APARIENCIA = {
+  accent: '',
+  showManifesto: true,
+  showBanner: true,
+  showBridges: true,
+  showApologetica: true
+};
+
+export default function SiteEditor({ onDirtyChange }) {
   const [site, setSite] = useState(null);
   const [msg, setMsg] = useState(null);
   const [saving, setSaving] = useState(false);
   const [dirty, setDirty] = useState(false);
+
+  useEffect(() => {
+    onDirtyChange?.(dirty);
+  }, [dirty, onDirtyChange]);
 
   const load = async () => {
     setMsg(null);
@@ -121,7 +155,6 @@ export default function SiteEditor() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(site)
       });
-      // refrescar los componentes del sitio en vivo
       const mod = await import('../../lib/site');
       await mod.reloadSite();
       setMsg({ type: 'ok', text: 'Guardado: content/site.json' });
@@ -137,7 +170,6 @@ export default function SiteEditor() {
 
   const setMarca = (key, value) => set(d => ({ ...d, marca: { ...d.marca, [key]: value } }));
 
-  // setHome('hero.title', v) / setHome('bridges.cards.0.meta1', v) / setHome('manifesto.0', v)
   const setHome = (path, value) => set(d => {
     const home = JSON.parse(JSON.stringify(d.home));
     const keys = path.split('.');
@@ -147,6 +179,10 @@ export default function SiteEditor() {
     cur[last] = value;
     return { ...d, home };
   });
+
+  const apariencia = { ...DEFAULT_APARIENCIA, ...(site.apariencia || {}) };
+  const setApariencia = (key, value) =>
+    set(d => ({ ...d, apariencia: { ...DEFAULT_APARIENCIA, ...(d.apariencia || {}), [key]: value } }));
 
   return (
     <section className="admin__editor admin__editor--full">
@@ -169,13 +205,58 @@ export default function SiteEditor() {
           <Field label="Nombre">
             <input value={site.marca.nombre} onChange={e => setMarca('nombre', e.target.value)} />
           </Field>
-          <Field label="Ruta del logo" hint="/imgs/…">
-            <input value={site.marca.logo} onChange={e => setMarca('logo', e.target.value)} />
-          </Field>
+          <MediaPicker
+            label="Logo (/img/…)"
+            value={site.marca.logo}
+            onChange={v => setMarca('logo', v)}
+          />
         </div>
         <Field label="Tagline">
           <input value={site.marca.tagline} onChange={e => setMarca('tagline', e.target.value)} />
         </Field>
+      </Section>
+
+      <Section title="Apariencia y secciones de portada">
+        <div className="admin__row">
+          <Field label="Color de acento opcional" hint="Vacío = tema monocromo base">
+            <div className="admin__media-field">
+              <input
+                type="color"
+                value={apariencia.accent || '#d6b36a'}
+                onChange={e => setApariencia('accent', e.target.value)}
+                style={{ width: '52px', padding: '0.2rem' }}
+                aria-label="Selector de color de acento"
+              />
+              <input
+                value={apariencia.accent}
+                placeholder="#d6b36a (vacío = predeterminado)"
+                onChange={e => setApariencia('accent', e.target.value)}
+              />
+              {apariencia.accent && (
+                <button type="button" className="admin__btn" onClick={() => setApariencia('accent', '')}>
+                  Restablecer
+                </button>
+              )}
+            </div>
+          </Field>
+        </div>
+        <div className="admin__checks">
+          {[
+            ['showManifesto', 'Mostrar manifiesto'],
+            ['showBridges', 'Mostrar puertas de la Biblia'],
+            ['showBanner', 'Mostrar banner visual'],
+            ['showApologetica', 'Mostrar «Preguntas con la Biblia»']
+          ].map(([key, label]) => (
+            <label className="admin__check" key={key}>
+              <input
+                type="checkbox"
+                checked={apariencia[key] !== false}
+                onChange={e => setApariencia(key, e.target.checked)}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
       </Section>
 
       <NavEditor site={site} set={set} />
@@ -185,7 +266,7 @@ export default function SiteEditor() {
           <input value={site.footer.tagline} onChange={e => set(d => ({ ...d, footer: { ...d.footer, tagline: e.target.value } }))} />
         </Field>
         {site.footer.links.map((l, i) => (
-          <div className="admin__row admin__row--tight" key={i}>
+          <div className="admin__row admin__row--footer-link" key={i}>
             <input
               value={l.label}
               placeholder="Etiqueta"
@@ -202,15 +283,44 @@ export default function SiteEditor() {
                 return { ...d, footer: { ...d.footer, links } };
               })}
             />
-            <button
-              type="button"
-              className="admin__btn admin__btn--danger"
-              onClick={() => set(d => ({ ...d, footer: { ...d.footer, links: d.footer.links.filter((_, j) => j !== i) } }))}
-            >
-              ✕
-            </button>
+            <div className="admin__body-actions">
+              <button
+                type="button"
+                className="admin__btn"
+                disabled={i === 0}
+                onClick={() => set(d => ({ ...d, footer: { ...d.footer, links: swapItems(d.footer.links, i, -1) } }))}
+                title="Subir enlace"
+              >
+                ↑
+              </button>
+              <button
+                type="button"
+                className="admin__btn"
+                disabled={i === site.footer.links.length - 1}
+                onClick={() => set(d => ({ ...d, footer: { ...d.footer, links: swapItems(d.footer.links, i, 1) } }))}
+                title="Bajar enlace"
+              >
+                ↓
+              </button>
+              <button
+                type="button"
+                className="admin__btn admin__btn--danger"
+                onClick={() => set(d => ({ ...d, footer: { ...d.footer, links: d.footer.links.filter((_, j) => j !== i) } }))}
+              >
+                ✕
+              </button>
+            </div>
           </div>
         ))}
+        <div>
+          <button
+            type="button"
+            className="admin__btn"
+            onClick={() => set(d => ({ ...d, footer: { ...d.footer, links: [...d.footer.links, { label: '', href: '' }] } }))}
+          >
+            + Enlace
+          </button>
+        </div>
         <div className="admin__row">
           <Field label="Copyright" hint='Usa {year} para el año actual'>
             <input value={site.footer.copyright} onChange={e => set(d => ({ ...d, footer: { ...d.footer, copyright: e.target.value } }))} />
@@ -338,9 +448,11 @@ export default function SiteEditor() {
         <Field label="Descripción global">
           <textarea rows={2} value={site.seo.description} onChange={e => set(d => ({ ...d, seo: { ...d.seo, description: e.target.value } }))} />
         </Field>
-        <Field label="Imagen OG" hint="/imgs/…">
-          <input value={site.seo.ogImage} onChange={e => set(d => ({ ...d, seo: { ...d.seo, ogImage: e.target.value } }))} />
-        </Field>
+        <MediaPicker
+          label="Imagen OG (/img/…)"
+          value={site.seo.ogImage}
+          onChange={v => set(d => ({ ...d, seo: { ...d.seo, ogImage: v } }))}
+        />
       </Section>
 
       <Section title="Ajustes avanzados">

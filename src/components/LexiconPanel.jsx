@@ -10,21 +10,15 @@ const number = new Intl.NumberFormat('es-ES');
 
 const SOURCE_TBESG = 'https://github.com/STEPBible/STEPBible-Data';
 const SOURCE_MORPH = 'https://github.com/morphgnt/morphological-analysis-of-greek-new-testament';
+const SOURCE_OSHB = 'https://hb.openscriptures.org/';
 
-const FILTERS = [
+const BASE_FILTERS = [
   { id: 'all', label: 'Todo' },
   { id: 'V', label: 'Verbos' },
   { id: 'N', label: 'Sustantivos' },
   { id: 'A', label: 'Adjetivos' },
   { id: 'func', label: 'Nexos / pronombres' },
-  { id: 'notes', label: 'Con nota' },
-  { id: 'ns', label: 'Nomina sacra' }
-];
-
-const SORTS = [
-  { id: 'freq', label: 'Frecuencia' },
-  { id: 'alpha', label: 'Alfabético (Α–Ω)' },
-  { id: 'strong', label: 'Strong (G0001…)' }
+  { id: 'notes', label: 'Con nota' }
 ];
 
 /**
@@ -61,6 +55,22 @@ export default function LexiconPanel({
   onCloseRef.current = onClose;
 
   const adapter = LEXICON_LANGS[lang] || LEXICON_LANGS.grc;
+  const isHeb = adapter.id === 'heb';
+  const filters = useMemo(
+    () => [
+      ...BASE_FILTERS,
+      isHeb ? { id: 'arc', label: 'Arameo' } : { id: 'ns', label: 'Nomina sacra' }
+    ],
+    [isHeb]
+  );
+  const sorts = useMemo(
+    () => [
+      { id: 'freq', label: 'Frecuencia' },
+      { id: 'alpha', label: isHeb ? 'Alfabético (א–ת)' : 'Alfabético (Α–Ω)' },
+      { id: 'strong', label: isHeb ? 'Strong (H0001…)' : 'Strong (G0001…)' }
+    ],
+    [isHeb]
+  );
   const entries = useMemo(() => lexicon?.entries || [], [lexicon]);
   const strongMap = useMemo(() => new Map(entries.map(item => [item.strong, item])), [entries]);
 
@@ -72,6 +82,11 @@ export default function LexiconPanel({
     return normalized ? strongMap.get(normalized.toUpperCase()) || strongMap.get(normalized) || null : null;
   }, [strongMap, value, adapter.strongPrefix]);
   const letters = lexicon?.letters || [];
+
+  useEffect(() => {
+    setLetter('');
+    setFilter('all');
+  }, [lang]);
 
   const filtered = useMemo(
     () => searchLexiconEntries(entries, { query, letter, filter, sort, lang }),
@@ -189,6 +204,7 @@ export default function LexiconPanel({
       <p className="lex-entry__strong">
         {entry.strong}
         {entry.ns ? ' · nomen sacrum' : ''}
+        {entry.arc ? ' · arameo bíblico' : ''}
       </p>
       <h3
         id="lex-entry-title"
@@ -208,7 +224,7 @@ export default function LexiconPanel({
 
       <dl className="lex-entry__meta">
         <div>
-          <dt>Frecuencia en el NT</dt>
+          <dt>{isHeb ? 'Frecuencia en el AT' : 'Frecuencia en el NT'}</dt>
           <dd>
             {number.format(entry.count)} apariciones{' '}
             {lexicon?.tokens ? (
@@ -220,15 +236,15 @@ export default function LexiconPanel({
         </div>
         {entry.forms?.length ? (
           <div>
-            <dt>Formas en el códice</dt>
-            <dd className="lex-entry__forms" lang={adapter.langAttr}>
+            <dt>{isHeb ? 'Formas en el texto masorético' : 'Formas en el códice'}</dt>
+            <dd className="lex-entry__forms" dir={adapter.dir} lang={adapter.langAttr}>
               {entry.forms.join(' · ')}
             </dd>
           </div>
         ) : null}
         {entry.refs?.length ? (
           <div>
-            <dt>Pasajes en el códice</dt>
+            <dt>{isHeb ? 'Pasajes en el AT' : 'Pasajes en el códice'}</dt>
             <dd className="lex-entry__chips">
               {entry.refs.map(ref => {
                 const label = formatRef(ref);
@@ -260,7 +276,7 @@ export default function LexiconPanel({
                     className="lex-rel"
                     onClick={() => onSelect(relStrong)}
                   >
-                    <span className="lex-rel__lemma" lang={adapter.langAttr}>
+                    <span className="lex-rel__lemma" dir={adapter.dir} lang={adapter.langAttr}>
                       {rel.lemma}
                     </span>{' '}
                     <span className="lex-rel__strong">{relStrong}</span>
@@ -273,8 +289,9 @@ export default function LexiconPanel({
       </dl>
 
       <p className="lex-entry__source">
-        Frecuencia y formas medidas sobre la transcripción del Codex Sinaiticus (NT); lema y morfología de
-        MorphGNT; glosa base adaptada de TBESG (STEPBible).
+        {isHeb
+          ? 'Frecuencia y formas medidas sobre el texto masorético del Westminster Leningrad Codex (OSHB, CC BY 4.0); glosas base adaptadas de TBESH (STEPBible, CC BY 4.0).'
+          : 'Frecuencia y formas medidas sobre la transcripción del Codex Sinaiticus (NT); lema y morfología de MorphGNT; glosa base adaptada de TBESG (STEPBible).'}
       </p>
     </article>
   ) : (
@@ -289,8 +306,10 @@ export default function LexiconPanel({
       </p>
       <p>
         {value
-          ? `La entrada ${value} no figura entre las ${lexicon?.count || ''} fichas curadas publicadas del NT.`
-          : 'Busca un lema griego, una forma del códice (θϲ, εϲτιν), transcripción, glosa o Strong (25, G3056).'}
+          ? `La entrada ${value} no figura entre las ${lexicon?.count || ''} fichas curadas publicadas del ${isHeb ? 'AT' : 'NT'}.`
+          : isHeb
+            ? 'Busca un lema hebreo o arameo (אֱלֹהִים, מֶלֶךְ), transcripción (reshit), glosa en español o Strong (7225, H430).'
+            : 'Busca un lema griego, una forma del códice (θϲ, εϲτιν), transcripción, glosa o Strong (25, G3056).'}
       </p>
     </div>
   );
@@ -301,11 +320,13 @@ export default function LexiconPanel({
       <div className={`lex__dialog${entry || value ? ' lex--detail' : ''}`} ref={dialogRef}>
         <header className="lex__head">
           <div>
-            <p className="eyebrow">Léxico del Codex</p>
+            <p className="eyebrow">{isHeb ? 'Léxico masorético · OSHB / WLC' : 'Léxico del Codex'}</p>
             <h2 id="lex-title">{adapter.title}</h2>
             <p className="lex__sub">
               {lexicon
-                ? `${lexicon.count} lemas curados · ${(lexicon.coverage * 100).toFixed(1)} % de las palabras del NT en el códice`
+                ? isHeb
+                  ? `${lexicon.count} lemas curados · ${(lexicon.coverage * 100).toFixed(1)} % de los morfemas del AT en la WLC`
+                  : `${lexicon.count} lemas curados · ${(lexicon.coverage * 100).toFixed(1)} % de las palabras del NT en el códice`
                 : 'Preparando el léxico…'}
             </p>
           </div>
@@ -322,6 +343,7 @@ export default function LexiconPanel({
                 id="lex-q"
                 ref={searchRef}
                 type="search"
+                dir="auto"
                 value={query}
                 onChange={event => setQuery(event.target.value)}
                 onKeyDown={handleSearchKeyDown}
@@ -343,7 +365,7 @@ export default function LexiconPanel({
                   value={filter}
                   onChange={event => setFilter(event.target.value)}
                 >
-                  {FILTERS.map(f => (
+                  {filters.map(f => (
                     <option key={f.id} value={f.id}>
                       {f.label}
                     </option>
@@ -360,7 +382,7 @@ export default function LexiconPanel({
                   value={sort}
                   onChange={event => setSort(event.target.value)}
                 >
-                  {SORTS.map(s => (
+                  {sorts.map(s => (
                     <option key={s.id} value={s.id}>
                       Orden: {s.label}
                     </option>
@@ -369,7 +391,12 @@ export default function LexiconPanel({
               </div>
             </div>
 
-            <div className="lex__letters" role="group" aria-label="Filtrar por letra inicial">
+            <div
+              className="lex__letters"
+              dir={adapter.dir}
+              role="group"
+              aria-label="Filtrar por letra inicial"
+            >
               <button
                 type="button"
                 className={`lex__letter${letter ? '' : ' is-active'}`}
@@ -382,7 +409,8 @@ export default function LexiconPanel({
                 <button
                   key={item}
                   type="button"
-                  className={`lex__letter${letter === item ? ' is-active' : ''}`}
+                  lang={adapter.langAttr}
+                  className={`lex__letter${isHeb ? ' lex__letter--heb' : ''}${letter === item ? ' is-active' : ''}`}
                   aria-pressed={letter === item}
                   onClick={() => setLetter(current => (current === item ? '' : item))}
                 >
@@ -449,9 +477,11 @@ export default function LexiconPanel({
 
             <Link
               className="lex__guide"
-              to="/exegesis/guia?lengua=griego"
+              to={isHeb ? '/exegesis/guia?lengua=hebreo' : '/exegesis/guia?lengua=griego'}
             >
-              ¿Empiezas con el alfabeto? Abrir guía de lectura →
+              {isHeb
+                ? '¿Empiezas con el alefato? Abrir guía de lectura →'
+                : '¿Empiezas con el alfabeto? Abrir guía de lectura →'}
             </Link>
           </section>
 
@@ -464,16 +494,20 @@ export default function LexiconPanel({
           <span>
             Glosas: adaptación propia de{' '}
             <a href={SOURCE_TBESG} target="_blank" rel="noopener noreferrer">
-              TBESG
+              {isHeb ? 'TBESH (STEPBible)' : 'TBESG'}
             </a>{' '}
             (CC BY 4.0)
           </span>
           <span>
             Lematización:{' '}
-            <a href={SOURCE_MORPH} target="_blank" rel="noopener noreferrer">
-              MorphGNT
+            <a
+              href={isHeb ? SOURCE_OSHB : SOURCE_MORPH}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {isHeb ? 'OSHB / WLC' : 'MorphGNT'}
             </a>{' '}
-            (CC BY-SA 3.0)
+            {isHeb ? '(CC BY 4.0)' : '(CC BY-SA 3.0)'}
           </span>
           <span>Strong: dominio público</span>
         </footer>

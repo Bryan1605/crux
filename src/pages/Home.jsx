@@ -267,74 +267,78 @@ export default function Home() {
       </section>
 
       {/* Textos que aparecen al bajar */}
-      <section className="section manifesto">
-        <div className="container manifesto__inner">
-          {home.manifesto.map((line, i) => (
-            <ScrollReveal
-              key={i}
-              containerClassName="manifesto__line"
-              baseOpacity={0.4}
-              baseRotation={i % 2 === 0 ? 4 : -3}
-              blurStrength={8}
-            >
-              {line}
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
+      {site.apariencia?.showManifesto !== false && (
+        <section className="section manifesto">
+          <div className="container manifesto__inner">
+            {home.manifesto.map((line, i) => (
+              <ScrollReveal
+                key={i}
+                containerClassName="manifesto__line"
+                baseOpacity={0.4}
+                baseRotation={i % 2 === 0 ? 4 : -3}
+                blurStrength={8}
+              >
+                {line}
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* La biblioteca: Biblia Patrística, NTV y exégesis comparada */}
-      <section className="section puertas" aria-labelledby="biblia-title">
-        <div className="container">
-          <div className="home-head home-head--split">
-            <div>
-              <p className="eyebrow home-kicker">{home.bridges.eyebrow}</p>
-              <h2 id="biblia-title">{home.bridges.title}</h2>
+      {site.apariencia?.showBridges !== false && (
+        <section className="section puertas" aria-labelledby="biblia-title">
+          <div className="container">
+            <div className="home-head home-head--split">
+              <div>
+                <p className="eyebrow home-kicker">{home.bridges.eyebrow}</p>
+                <h2 id="biblia-title">{home.bridges.title}</h2>
+              </div>
+              <p className="lead">
+                El mismo texto desde tres lugares: los Padres que lo leyeron primero, la traducción de hoy
+                y el manuscrito completo más antiguo.
+              </p>
             </div>
-            <p className="lead">
-              El mismo texto desde tres lugares: los Padres que lo leyeron primero, la traducción de hoy
-              y el manuscrito completo más antiguo.
-            </p>
-          </div>
 
-          <div className="puertas__grid">
-            {home.bridges.cards.map((card, i) => {
-              const puerta = PUERTAS[i] || PUERTAS[0];
-              return (
-                <Link className="card puerta" key={i} to={puerta.href}>
-                  {puerta.image ? (
-                    <div className="puerta__img">
-                      <img src={assetUrl(puerta.image)} alt="" loading="lazy" />
+            <div className="puertas__grid">
+              {home.bridges.cards.map((card, i) => {
+                const puerta = PUERTAS[i] || PUERTAS[0];
+                return (
+                  <Link className="card puerta" key={i} to={puerta.href}>
+                    {puerta.image ? (
+                      <div className="puerta__img">
+                        <img src={assetUrl(puerta.image)} alt="" loading="lazy" />
+                      </div>
+                    ) : (
+                      <div className="puerta__img puerta__img--texto" aria-hidden="true">
+                        <span className="puerta__testigo">Juan 1:1 · Codex Sinaiticus</span>
+                        <span className="puerta__griego" lang="grc">
+                          ΕΝ ΑΡΧΗ ΗΝ Ο ΛΟΓΟϹ ΚΑΙ Ο ΛΟΓΟϹ ΗΝ ΠΡΟϹ ΤΟΝ ΘΝ
+                        </span>
+                        <span className="puerta__regla" />
+                        <span className="puerta__ntv">En el principio la Palabra ya existía. La Palabra estaba con Dios…</span>
+                        <span className="puerta__testigo">NTV</span>
+                      </div>
+                    )}
+                    <div className="puerta__body">
+                      <div className="card__meta">
+                        <span>{card.meta1}</span>
+                        <span aria-hidden="true">·</span>
+                        <span>{card.meta2}</span>
+                      </div>
+                      <h3 className="card__title">{card.title}</h3>
+                      <p className="card__desc">{card.desc}</p>
+                      <p className="puerta__cta">
+                        {card.cta} <Flecha />
+                      </p>
                     </div>
-                  ) : (
-                    <div className="puerta__img puerta__img--texto" aria-hidden="true">
-                      <span className="puerta__testigo">Juan 1:1 · Codex Sinaiticus</span>
-                      <span className="puerta__griego" lang="grc">
-                        ΕΝ ΑΡΧΗ ΗΝ Ο ΛΟΓΟϹ ΚΑΙ Ο ΛΟΓΟϹ ΗΝ ΠΡΟϹ ΤΟΝ ΘΝ
-                      </span>
-                      <span className="puerta__regla" />
-                      <span className="puerta__ntv">En el principio la Palabra ya existía. La Palabra estaba con Dios…</span>
-                      <span className="puerta__testigo">NTV</span>
-                    </div>
-                  )}
-                  <div className="puerta__body">
-                    <div className="card__meta">
-                      <span>{card.meta1}</span>
-                      <span aria-hidden="true">·</span>
-                      <span>{card.meta2}</span>
-                    </div>
-                    <h3 className="card__title">{card.title}</h3>
-                    <p className="card__desc">{card.desc}</p>
-                    <p className="puerta__cta">
-                      {card.cta} <Flecha />
-                    </p>
-                  </div>
-                </Link>
-              );
-            })}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Categorías: el mapa del estudio, como índice */}
       <section className="section section--alt mapa" aria-labelledby="categorias-title">
@@ -376,48 +380,50 @@ export default function Home() {
       </section>
 
       {/* Hero-banner (LiquidSwap) */}
-      <section className="banner" aria-label="Banner de estudios">
-        <LiquidSwap
-          images={SLIDES.map(s => s.image)}
-          transitionDuration={2.2}
-          autoCycle={SLIDES.length > 1}
-          autoCycleDelay={5000}
-          startAtCursor
-          onChange={setSlide}
-        />
-        <div className="banner__overlay">
-          <div className="container banner__row">
-            <span className="banner__kicker">{home.banner.kicker}</span>
-            {/* El pie y el enlace siguen a la imagen que está en pantalla. */}
-            {actual?.caption && (
-              <span className="banner__caption" aria-live="polite">
-                {/* La `key` reinicia el fundido en cada diapositiva; la región
-                    viva se queda montada para que el lector la anuncie. */}
-                <span key={slide} className="banner__caption-text">
-                  {actual.caption}
+      {site.apariencia?.showBanner !== false && (
+        <section className="banner" aria-label="Banner de estudios">
+          <LiquidSwap
+            images={SLIDES.map(s => s.image)}
+            transitionDuration={2.2}
+            autoCycle={SLIDES.length > 1}
+            autoCycleDelay={5000}
+            startAtCursor
+            onChange={setSlide}
+          />
+          <div className="banner__overlay">
+            <div className="container banner__row">
+              <span className="banner__kicker">{home.banner.kicker}</span>
+              {/* El pie y el enlace siguen a la imagen que está en pantalla. */}
+              {actual?.caption && (
+                <span className="banner__caption" aria-live="polite">
+                  {/* La `key` reinicia el fundido en cada diapositiva; la región
+                      viva se queda montada para que el lector la anuncie. */}
+                  <span key={slide} className="banner__caption-text">
+                    {actual.caption}
+                  </span>
                 </span>
-              </span>
-            )}
-            {SLIDES.length > 1 && (
-              <span className="banner__dots" aria-hidden="true">
-                {SLIDES.map((s, i) => (
-                  <span key={s.image} className={i === slide ? 'is-on' : undefined} />
-                ))}
-              </span>
-            )}
-            {/* Enlace discreto: la acción primaria sigue siendo una sola (el estudio). */}
-            {actual?.href ? (
-              <Link className="banner__link" to={actual.href} aria-label={`Abrir: ${actual.caption || 'el estudio'}`}>
-                Abrir <Flecha />
-              </Link>
-            ) : (
-              <Link className="banner__link" to={home.banner.cta.href}>
-                {home.banner.cta.label} <Flecha />
-              </Link>
-            )}
+              )}
+              {SLIDES.length > 1 && (
+                <span className="banner__dots" aria-hidden="true">
+                  {SLIDES.map((s, i) => (
+                    <span key={s.image} className={i === slide ? 'is-on' : undefined} />
+                  ))}
+                </span>
+              )}
+              {/* Enlace discreto: la acción primaria sigue siendo una sola (el estudio). */}
+              {actual?.href ? (
+                <Link className="banner__link" to={actual.href} aria-label={`Abrir: ${actual.caption || 'el estudio'}`}>
+                  Abrir <Flecha />
+                </Link>
+              ) : (
+                <Link className="banner__link" to={home.banner.cta.href}>
+                  {home.banner.cta.label} <Flecha />
+                </Link>
+              )}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Personajes con la ficha completa */}
       <section className="section" aria-labelledby="personajes-title">
@@ -494,88 +500,90 @@ export default function Home() {
       </section>
 
       {/* Apologética: exámenes y preguntas con la Biblia frente a distintas corrientes */}
-      <section id="preguntas-con-la-biblia" className="section apologetica-home" aria-labelledby="apologetica-home-title">
-        <div className="container">
-          <div className="apolo-head">
-            <div className="apolo-head__copy">
-              <p className="eyebrow apolo-eyebrow">Apologética bíblica</p>
-              <h2 id="apologetica-home-title">Preguntas con la Biblia</h2>
-              <p className="lead">
-                Cuestionarios directos y contraste textual para examinar cada doctrina a la luz de la
-                Escritura y del testimonio histórico.
-              </p>
-            </div>
-            <Link className="apolo-head__btn" to="/estudio">
-              Ver todos los estudios <Flecha />
-            </Link>
-          </div>
-
-          <div className="apolo-grid">
-            {APOLOGETICA_EXAMS.map(item =>
-              item.href ? (
-                <article className="apolo-card apolo-card--active" key={item.id}>
-                  <div className="apolo-card__top">
-                    <span className="apolo-card__status">
-                      <span className="apolo-card__dot" aria-hidden="true" />
-                      {item.badge}
-                    </span>
-                    <span className="apolo-card__tag">{item.tag}</span>
-                  </div>
-                  <h3 className="apolo-card__title">{item.nombre}</h3>
-                  <p className="apolo-card__desc">{renderApoloDesc(item.desc)}</p>
-                  <div className="apolo-card__foot">
-                    <span>{item.footLeft}</span>
-                    <strong>{item.footRight}</strong>
-                  </div>
-                  <Link className="apolo-card__cta" to={item.href}>
-                    {item.cta} <Flecha />
-                  </Link>
-                </article>
-              ) : (
-                <article className="apolo-card apolo-card--soon" key={item.id}>
-                  <div className="apolo-card__top">
-                    <span className="apolo-card__status">
-                      <span aria-hidden="true">† </span>
-                      {item.badge}
-                    </span>
-                    <span className="apolo-card__tag">{item.tag}</span>
-                  </div>
-                  <h3 className="apolo-card__title">{item.nombre}</h3>
-                  <p className="apolo-card__desc">{renderApoloDesc(item.desc)}</p>
-                  <div className="apolo-card__foot">
-                    <span>{item.footLeft}</span>
-                    <span>{item.footRight}</span>
-                  </div>
-                </article>
-              )
-            )}
-
-            <aside className="apolo-card apolo-card--quote" aria-label="Cita bíblica del método Crux">
-              <div className="apolo-quote__top">
-                <span>{APOLOGETICA_QUOTE.label}</span>
-                <span className="apolo-quote__cross" aria-hidden="true">
-                  †
-                </span>
+      {site.apariencia?.showApologetica !== false && (
+        <section id="preguntas-con-la-biblia" className="section apologetica-home" aria-labelledby="apologetica-home-title">
+          <div className="container">
+            <div className="apolo-head">
+              <div className="apolo-head__copy">
+                <p className="eyebrow apolo-eyebrow">Apologética bíblica</p>
+                <h2 id="apologetica-home-title">Preguntas con la Biblia</h2>
+                <p className="lead">
+                  Cuestionarios directos y contraste textual para examinar cada doctrina a la luz de la
+                  Escritura y del testimonio histórico.
+                </p>
               </div>
-              <blockquote className="apolo-quote__text">{APOLOGETICA_QUOTE.texto}</blockquote>
-              <p className="apolo-quote__ref">
-                <span aria-hidden="true">† </span>
-                {APOLOGETICA_QUOTE.cita}
-              </p>
-            </aside>
-          </div>
+              <Link className="apolo-head__btn" to="/estudio">
+                Ver todos los estudios <Flecha />
+              </Link>
+            </div>
 
-          <div className="apolo-bar">
-            <p className="apolo-bar__text">
-              ¿Buscas un cotejo bíblico sobre otro movimiento?{' '}
-              <strong>Publicamos nuevos cuestionarios periódicamente.</strong>
-            </p>
-            <Link className="apolo-bar__link" to="/estudio?cat=06-apologetica">
-              Explorar estudios de apologética <Flecha />
-            </Link>
+            <div className="apolo-grid">
+              {APOLOGETICA_EXAMS.map(item =>
+                item.href ? (
+                  <article className="apolo-card apolo-card--active" key={item.id}>
+                    <div className="apolo-card__top">
+                      <span className="apolo-card__status">
+                        <span className="apolo-card__dot" aria-hidden="true" />
+                        {item.badge}
+                      </span>
+                      <span className="apolo-card__tag">{item.tag}</span>
+                    </div>
+                    <h3 className="apolo-card__title">{item.nombre}</h3>
+                    <p className="apolo-card__desc">{renderApoloDesc(item.desc)}</p>
+                    <div className="apolo-card__foot">
+                      <span>{item.footLeft}</span>
+                      <strong>{item.footRight}</strong>
+                    </div>
+                    <Link className="apolo-card__cta" to={item.href}>
+                      {item.cta} <Flecha />
+                    </Link>
+                  </article>
+                ) : (
+                  <article className="apolo-card apolo-card--soon" key={item.id}>
+                    <div className="apolo-card__top">
+                      <span className="apolo-card__status">
+                        <span aria-hidden="true">† </span>
+                        {item.badge}
+                      </span>
+                      <span className="apolo-card__tag">{item.tag}</span>
+                    </div>
+                    <h3 className="apolo-card__title">{item.nombre}</h3>
+                    <p className="apolo-card__desc">{renderApoloDesc(item.desc)}</p>
+                    <div className="apolo-card__foot">
+                      <span>{item.footLeft}</span>
+                      <span>{item.footRight}</span>
+                    </div>
+                  </article>
+                )
+              )}
+
+              <aside className="apolo-card apolo-card--quote" aria-label="Cita bíblica del método Crux">
+                <div className="apolo-quote__top">
+                  <span>{APOLOGETICA_QUOTE.label}</span>
+                  <span className="apolo-quote__cross" aria-hidden="true">
+                    †
+                  </span>
+                </div>
+                <blockquote className="apolo-quote__text">{APOLOGETICA_QUOTE.texto}</blockquote>
+                <p className="apolo-quote__ref">
+                  <span aria-hidden="true">† </span>
+                  {APOLOGETICA_QUOTE.cita}
+                </p>
+              </aside>
+            </div>
+
+            <div className="apolo-bar">
+              <p className="apolo-bar__text">
+                ¿Buscas un cotejo bíblico sobre otro movimiento?{' '}
+                <strong>Publicamos nuevos cuestionarios periódicamente.</strong>
+              </p>
+              <Link className="apolo-bar__link" to="/estudio?cat=06-apologetica">
+                Explorar estudios de apologética <Flecha />
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Cierre: la puerta abierta */}
       <section className="closing" aria-labelledby="cierre-title">

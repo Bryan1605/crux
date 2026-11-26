@@ -18,7 +18,7 @@ una cifra, se verificó en el árbol de trabajo el **2026-10-28**.
 | Normalización | `normalization: "none"` — no normalizar NFC/NFD sin decisión explícita | implementado (Fase 1) |
 | Alineación | **789 / 929** capítulos con alineación exacta NTV; los **140** restantes avisan en el lector y en `/exegesis` caen a texto hebreo sin forzar el paralelo | implementado (Fase 2) |
 | Exegesis | columna hebrea **apagada por defecto** (`א Hebreo` / `?hebreo=1` / `?modo=hebreo`); no fuerza paralelo si no alinea; `.exg-grid--3` para 3 testigos | implementado (Fase 2) |
-| Rutas/versión | Ruta `#289` (`/biblia/hebreo`) + columna en `/exegesis`; versión **`0.12.0`** tras completar Fase 2 | implementado (0.12.0) |
+| Rutas/versión | Ruta `#289` (`/biblia/hebreo`) + columna en `/exegesis` + lematización y léxico hebreo/arameo (`0.13.0`) | implementado (0.13.0) |
 
 Por qué: el hebreo es el texto base del AT y permite comparar la NTV con el
 testimonio hebreo, pero la alineación no es total. Marcar el arameo y el
@@ -84,7 +84,7 @@ las más urgentes porque no tienen NTV que las explique.
 | 2 Esdras | Esdras–Nehemías griego del Codex (caps. 9–23), no 2 Esdras/4 Ezra | existente |
 | Búsqueda | índices AT/NT separados; no se busca el hebreo hasta que exista | existente |
 | Numeración | avisos para Salmos (incl. 151), Jeremías, Ester y solo-Codex; no forzar la NTV | existente |
-| Léxico | solo NT (MorphGNT/Strong); no hay léxico hebreo | existente |
+| Léxico | NT (`MorphGNT / TBESG`, `252` + `5.077` Strongs) y AT hebreo/arameo (`OSHB / TBESH`, `331` + `8.200` Strongs); sin lematización LXX | implementado (0.13.0) |
 | NTV | 66 libros; los deuterocanónicos no están en la NTV | existente |
 
 ## 5. Reglas de contenido y publicación
@@ -238,3 +238,12 @@ capítulos), cae a solo Hebreo sin forzar el paralelo.
 - **Columna apagada por defecto**: `COLUMNS` en `src/pages/Exegesis.jsx` antepone `hebreo` únicamente para los 39 libros del AT cuando el usuario pulsa el conmutador **`א Hebreo`** (`?hebreo=1`) o abre `?modo=hebreo`. Sin esos parámetros, `/exegesis` conserva por defecto la vista `Codex × NTV` o `NTV`, y `readMode()` devuelve `paralelo` si quedase `'hebreo'` en `localStorage`, evitando además peticiones de JSON hebreos cuando está apagada.
 - **Paralelo 2/3 columnas en capítulos alineados (`789 / 929`) y fallback honesto (`140 / 929`)**: si `chapter.ntvAligned === true`, el usuario dispone de 2 columnas (`Hebreo × NTV`), 3 columnas (`.exg-grid--3` con anchura ensanchada `.exg--cols-3 .exg__shell` hasta `1420 px`, e.g. Génesis 21: `Hebreo × Codex × NTV`, apiladas con `.exg-cell__tag` bajo `1024 px`), o solo Hebreo (`?modo=hebreo`). Si `chapter.ntvAligned === false` (p. ej. Génesis 31, Salmos con sobrescritura masorética, Malaquías 3 o Joel 4), `/exegesis` no fuerza la correspondencia verso a verso: cae a solo Hebreo (`1` columna masorética completa) con el aviso `.exg__notice--hebreo` y enlace a `/biblia/hebreo`.
 - **Renderizado compartido y fidelidad textual**: `<HebrewVerseTokens />` (`src/components/HebrewVerseTokens.jsx`) unifica `/biblia/hebreo` y `/exegesis` conservando la prohibición de normalizar NFC/NFD, el arameo palabra por palabra (`lang="arc"`), las fichas interactivas *ketiv / qere* en `<VersePopover>`, las marcas de margen (`אר` / `ק`), los conmutadores no destructivos de cantilación y *niqqud* en `ReaderMenu`, la barra de herramienta en una sola fila de escritorio y la atribución WLC / OSHB (`CC BY 4.0`) / Ezra SIL (`SIL OFL 1.1`). Se sube `package.json` a la versión **`0.12.0`**.
+
+## 13. Hebreo — Fase 3 (lematización OSHB, léxico TBESH, morfología OSHM en español y `0.13.0`)
+
+**Decidido e implementado el 2026-11-24.**
+
+- **Fuentes y licencia unificada**: lemas y morfología de **OSHB** (`openscriptures/morphhb`, **CC BY 4.0**) cruzados con **TBESH** de STEPBible (*Translators Brief lexicon of Extended Strongs for Hebrew*, **CC BY 4.0**), descargado mediante `scripts/fetch-hebreo-lexico.mjs` en `src/assets/texts/.cache-hebreo/tbesh.txt` (sin tocar `public/textos/hebreo/<libro>.json` ni aplicar normalización NFC/NFD).
+- **Mapas V2 alineados 1:1**: `scripts/build-hebreo-lemas.mjs` reutiliza `parseOsisVerse` para garantizar alineación índice a índice con `verse.t` (**39** archivos en `public/textos/hebreo/lemas/<libro>.json`, **7,68 MB**, **304.239 / 304.239** palabras `<w>` = **100 %**, **8.531** Strongs únicos, `0` ausentes en TBESH), conservando prefijos inseparables, raíz léxica y sufijos en arrays ordenados de morfemas. En `indexTbesh()` se penalizan homónimos de nombre propio (`N:N-`) y subsentidos para que prevalezca el lema léxico común y se desambiguan sufijos OSHB (`a/b`).
+- **Léxico curado y respaldo TBESH**: `content/lexico/hebreo.json` (validado en build por `validateLexicoHebreo`) aporta **331** entradas curadas en español (cubriendo el **79,0 %** de los morfemas del AT, con prefijos `H9002–H9009`, sufijos clave y vocabulario arameo frecuente) y `scripts/build-hebreo-lexico.mjs` publica `public/textos/hebreo/lexico.json` junto con **8.200** glosas base bajo demanda en `public/textos/hebreo/lexico-hebreo-base.json`.
+- **Decodificación OSHM e interfaz dual**: `src/lib/hebrew.js` (`describeHebrewMorph`) traduce al español todos los códigos OSHM hebreos y arameos (tronco verbal, conjugación, persona/género/número/estado, partículas y sufijos); `src/lib/lexicon.js` registra `LEXICON_LANGS.heb` (`dir: 'rtl'`, filtro `Arameo` y `pickPrimaryMorpheme`, que prioriza la raíz léxica sobre los prefijos `H9001–H9019`). Tanto `/biblia/hebreo` como la columna hebrea de `/exegesis` (`?hebreo=1`) permiten pulsar cualquier palabra `<w>` con lema y abrir `<LexiconPanel lang="heb" />` (`0.13.0`).

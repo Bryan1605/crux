@@ -142,3 +142,223 @@ export function versePlainText(tokens, { qere = true } = {}) {
   }
   return out;
 }
+
+/* -------------------------------------------------------------------------- */
+/* Morfología y léxico OSHB / TBESH                                           */
+/* -------------------------------------------------------------------------- */
+
+export const TBESH_SOURCE_URL = 'https://www.stepbible.org/';
+export const OSHB_SOURCE_URL = 'https://hb.openscriptures.org/';
+export const HEBREW_LEXICON_ATTRIBUTION =
+  'Lemas y morfología OSHB / WLC (CC BY 4.0) · Glosas base TBESH / STEPBible (CC BY 4.0)';
+
+const HEBREW_FINALS = { ך: 'כ', ם: 'מ', ן: 'נ', ף: 'פ', ץ: 'צ' };
+
+export function hebrewLetter(value) {
+  const ch = foldHebrew(value).replace(/[^\u05D0-\u05EA]/g, '')[0] || '';
+  return HEBREW_FINALS[ch] || ch;
+}
+
+export function hebrewSortKey(value) {
+  return [...foldHebrew(value)]
+    .map(ch => {
+      const normalized = HEBREW_FINALS[ch] || ch;
+      const code = normalized.codePointAt(0);
+      if (code >= 0x05d0 && code <= 0x05ea) {
+        return String(code - 0x05d0).padStart(2, '0');
+      }
+      return '99';
+    })
+    .join('');
+}
+
+const HEB_POS_LABEL = {
+  V: 'verbo',
+  N: 'sustantivo',
+  A: 'adjetivo',
+  P: 'preposición',
+  R: 'preposición',
+  C: 'conjunción',
+  D: 'adverbio',
+  T: 'artículo / partícula',
+  RP: 'pronombre',
+  X: 'partícula'
+};
+
+const HEB_STEMS = {
+  q: 'qal',
+  N: 'nifal',
+  p: 'piel',
+  P: 'pual',
+  h: 'hifil',
+  H: 'hofal',
+  t: 'hitpael',
+  c: 'poel',
+  m: 'poal',
+  o: 'polel',
+  O: 'polal',
+  r: 'hitpoel',
+  l: 'pilpel',
+  f: 'hitpalpel',
+  k: 'palel',
+  K: 'pulal',
+  L: 'polpal',
+  j: 'pealal',
+  z: 'hitpolel',
+  u: 'hotpaal',
+  D: 'nitpael',
+  M: 'poel',
+  Q: 'qal pasivo',
+  v: 'hishtafal'
+};
+
+const ARC_STEMS = {
+  q: 'peal',
+  Q: 'peil',
+  e: 'etpeel',
+  p: 'pael',
+  P: 'etpaal',
+  h: 'hafel',
+  H: 'hofal',
+  a: 'afel',
+  s: 'shafel',
+  u: 'eshtafal',
+  t: 'hitpeel',
+  i: 'itpaal',
+  M: 'hitpaal',
+  o: 'polel',
+  r: 'hitpolel',
+  z: 'ittafal',
+  v: 'hishtafel'
+};
+
+const HEB_CONJ = {
+  p: 'perfecto',
+  q: 'perfecto consecutivo',
+  i: 'imperfecto',
+  w: 'imperfecto consecutivo',
+  h: 'coortativo',
+  j: 'yusivo',
+  v: 'imperativo',
+  r: 'participio activo',
+  s: 'participio pasivo',
+  a: 'infinitivo absoluto',
+  c: 'infinitivo constructo'
+};
+
+const HEB_PERSON = { 1: '1.ª', 2: '2.ª', 3: '3.ª' };
+const HEB_GENDER = { m: 'masc.', f: 'fem.', b: 'ambos gén.', c: 'común' };
+const HEB_NUMBER = { s: 'sg.', p: 'pl.', d: 'dual' };
+const HEB_STATE = { a: 'absoluto', c: 'constructo', d: 'determinado' };
+const HEB_PARTICLE = {
+  a: 'partícula de afirmación',
+  d: 'artículo determinado',
+  e: 'partícula exhortativa',
+  i: 'partícula interrogativa',
+  j: 'interjección',
+  m: 'partícula demostrativa',
+  n: 'partícula negativa',
+  o: 'marca de objeto directo',
+  r: 'partícula relativa'
+};
+const HEB_PRONOUN = {
+  d: 'pronombre demostrativo',
+  f: 'pronombre indefinido',
+  i: 'pronombre interrogativo',
+  p: 'pronombre personal',
+  r: 'pronombre relativo'
+};
+const HEB_SUFFIX = {
+  d: 'sufijo he direccional',
+  h: 'sufijo he paragógico',
+  n: 'sufijo nun paragógico',
+  p: 'sufijo pronominal'
+};
+
+function decodePgn(str) {
+  const parts = [];
+  for (const ch of str) {
+    if (HEB_PERSON[ch]) parts.push(HEB_PERSON[ch]);
+    else if (HEB_GENDER[ch]) parts.push(HEB_GENDER[ch]);
+    else if (HEB_NUMBER[ch]) parts.push(HEB_NUMBER[ch]);
+    else if (HEB_STATE[ch]) parts.push(HEB_STATE[ch]);
+  }
+  return parts.join(' ');
+}
+
+/** Etiqueta española de una categoría básica hebrea (`V`, `N`, `A`, `P`, `C`, `T`, `RP`, `D`, `X`). */
+export const hebrewPosLabel = pos => HEB_POS_LABEL[String(pos || '').trim()] || '';
+
+/**
+ * Decodifica un código morfológico OSHM de un morfema individual
+ * (`HVqp3ms`, `HNcfsa`, `ANcmsd`, `HTo`, `ATd`, `HSp3ms`, …) al español.
+ */
+export function describeHebrewMorph(pos, parse) {
+  const code = String(parse || '').trim();
+  if (!code) return hebrewPosLabel(pos);
+  const langPrefix = code[0];
+  const isArc = langPrefix === 'A';
+  const arcTag = isArc ? ' (arameo)' : '';
+  const body = langPrefix === 'H' || langPrefix === 'A' ? code.slice(1) : code;
+  if (!body) return hebrewPosLabel(pos);
+
+  const head = body[0];
+
+  if (head === 'V') {
+    const stems = isArc ? ARC_STEMS : HEB_STEMS;
+    const stem = stems[body[1]] || '';
+    const conj = HEB_CONJ[body[2]] || '';
+    const pgn = decodePgn(body.slice(3));
+    const verbal = [`verbo${arcTag}`, stem, conj].filter(Boolean).join(' ');
+    return [verbal, pgn].filter(Boolean).join(', ');
+  }
+
+  if (head === 'N') {
+    const kind = body[1];
+    if (kind === 'p') return `nombre propio${arcTag}`;
+    const kindLabel = kind === 'g' ? `gentilicio${arcTag}` : `sustantivo${arcTag}`;
+    const mods = decodePgn(body.slice(2));
+    return [kindLabel, mods].filter(Boolean).join(', ');
+  }
+
+  if (head === 'A') {
+    const kind = body[1];
+    const kindLabel =
+      kind === 'c'
+        ? `numeral cardinal${arcTag}`
+        : kind === 'o'
+          ? `numeral ordinal${arcTag}`
+          : kind === 'g'
+            ? `adjetivo gentilicio${arcTag}`
+            : `adjetivo${arcTag}`;
+    const mods = decodePgn(body.slice(2));
+    return [kindLabel, mods].filter(Boolean).join(', ');
+  }
+
+  if (head === 'P') {
+    const base = HEB_PRONOUN[body[1]] || 'pronombre';
+    const mods = decodePgn(body.slice(2));
+    return [`${base}${arcTag}`, mods].filter(Boolean).join(', ');
+  }
+
+  if (head === 'R') {
+    if (body[1] === 'd') return `preposición${arcTag} + artículo`;
+    return `preposición${arcTag}`;
+  }
+
+  if (head === 'C') return `conjunción${arcTag}`;
+  if (head === 'D') return `adverbio${arcTag}`;
+
+  if (head === 'T') {
+    const label = HEB_PARTICLE[body[1]] || 'partícula';
+    return `${label}${arcTag}`;
+  }
+
+  if (head === 'S') {
+    const base = HEB_SUFFIX[body[1]] || 'sufijo';
+    const mods = decodePgn(body.slice(2));
+    return [`${base}${arcTag}`, mods].filter(Boolean).join(', ');
+  }
+
+  return hebrewPosLabel(pos);
+}

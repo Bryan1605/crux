@@ -1,7 +1,7 @@
 {
   "name": "web-crux",
   "private": true,
-  "version": "0.12.0",
+  "version": "0.13.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -29,6 +29,9 @@
     "exegesis": "npm run exegesis:ntv && npm run exegesis:codex && npm run exegesis:index && npm run exegesis:search && npm run exegesis:lemas && npm run exegesis:lexico",
     "hebreo:fetch": "node scripts/fetch-hebreo.mjs",
     "hebreo:build": "node scripts/build-hebreo.mjs",
+    "hebreo:fetch-lexico": "node scripts/fetch-hebreo-lexico.mjs",
+    "hebreo:lemas": "node scripts/build-hebreo-lemas.mjs",
+    "hebreo:lexico": "node scripts/build-hebreo-lexico.mjs",
     "hebreo": "npm run hebreo:fetch && npm run hebreo:build",
     "qa:hebreo": "node scripts/qa-hebreo.mjs --browser",
     "qa:exegesis": "node scripts/qa-exegesis.mjs --browser",

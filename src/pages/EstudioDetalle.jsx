@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 
 import { parseFrontmatter } from '../lib/frontmatter';
@@ -6,10 +6,13 @@ import { renderProse } from '../lib/markdown';
 import ScrapbookGallery from '../components/ScrapbookGallery/ScrapbookGallery';
 import BibleCta from '../components/BibleCta';
 import { studyBySlug, STUDIES, STUDY_CATEGORIES } from '../data/estudios';
+import { FUNDAMENTOS_SLUG } from '../data/fundamentosDoctrina';
 import { PERSONAJES } from '../data/personajes';
 import { useSite, useSeo } from '../lib/site';
 
 import './Estudio.css';
+
+const FundamentosShowcase = lazy(() => import('../components/FundamentosShowcase/FundamentosShowcase'));
 
 const contentModules = import.meta.glob('../../content/estudios/*.md', {
   query: '?raw',
@@ -29,7 +32,7 @@ export default function EstudioDetalle() {
   });
 
   useEffect(() => {
-    if (!study) {
+    if (!study || slug === FUNDAMENTOS_SLUG) {
       setDoc({ status: 'idle', html: '' });
       return undefined;
     }
@@ -79,6 +82,7 @@ export default function EstudioDetalle() {
 
   const category = STUDY_CATEGORIES.find(c => c.id === study.category);
   const related = STUDIES.filter(s => s.category === study.category && s.slug !== slug).slice(0, 6);
+  const isFundamentosShowcase = slug === FUNDAMENTOS_SLUG;
 
   return (
     <main id="main" className="study-detail">
@@ -91,88 +95,107 @@ export default function EstudioDetalle() {
           <Link to={`/estudio?cat=${study.category}`}>{study.categoryLabel}</Link>
         </nav>
 
-        {study.portada && (
-          <figure className="study-detail__hero">
-            <img src={study.portada} alt="" />
-          </figure>
-        )}
-
-        <header className="study-detail__head">
-          <p className="eyebrow">
-            {study.subcategory ? `${study.categoryLabel} · ${study.subcategory}` : study.categoryLabel}
-          </p>
-          <h1>{study.title}</h1>
-          <p className="lead">{study.description}</p>
-
-          <div className="study-detail__facts">
-            <span className="fact">
-              Pasaje clave <strong>{study.passage || '—'}</strong>
-            </span>
-            <span className="fact">
-              Categoría <strong>{category?.label || study.categoryLabel}</strong>
-            </span>
-            <span className="fact">
-              Actualizado <strong>{study.updated || '—'}</strong>
-            </span>
-          </div>
-        </header>
-
-        {(study.aliases.length > 0 || study.tags.length > 0) && (
-          <div className="study-detail__meta">
-            {study.aliases.length > 0 && (
-              <div className="study-detail__meta-group">
-                <h2>También conocido como</h2>
-                <div className="tag-list">
-                  {study.aliases.map(a => (
-                    <span className="tag" key={a}>
-                      {a}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {study.tags.length > 0 && (
-              <div className="study-detail__meta-group">
-                <h2>Etiquetas</h2>
-                <div className="tag-list">
-                  {study.tags.map(t => (
-                    <span className="tag" key={t}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
-        <div className="study-detail__body">
-          <div className="study-detail__main">
-            {doc.status === 'loading' && (
+        {isFundamentosShowcase ? (
+          <Suspense
+            fallback={
               <div className="study-detail__loading">
                 <div className="loader-pulse" role="status" aria-label="Cargando">
                   <span />
                   <span />
                   <span />
                 </div>
-                <p className="muted">Cargando el contenido del estudio…</p>
+                <p className="muted">Preparando el recorrido doctrinal…</p>
+              </div>
+            }
+          >
+            <FundamentosShowcase study={study} />
+          </Suspense>
+        ) : (
+          <>
+            {study.portada && (
+              <figure className="study-detail__hero">
+                <img src={study.portada} alt="" />
+              </figure>
+            )}
+
+            <header className="study-detail__head">
+              <p className="eyebrow">
+                {study.subcategory ? `${study.categoryLabel} · ${study.subcategory}` : study.categoryLabel}
+              </p>
+              <h1>{study.title}</h1>
+              <p className="lead">{study.description}</p>
+
+              <div className="study-detail__facts">
+                <span className="fact">
+                  Pasaje clave <strong>{study.passage || '—'}</strong>
+                </span>
+                <span className="fact">
+                  Categoría <strong>{category?.label || study.categoryLabel}</strong>
+                </span>
+                <span className="fact">
+                  Actualizado <strong>{study.updated || '—'}</strong>
+                </span>
+              </div>
+            </header>
+
+            {(study.aliases.length > 0 || study.tags.length > 0) && (
+              <div className="study-detail__meta">
+                {study.aliases.length > 0 && (
+                  <div className="study-detail__meta-group">
+                    <h2>También conocido como</h2>
+                    <div className="tag-list">
+                      {study.aliases.map(a => (
+                        <span className="tag" key={a}>
+                          {a}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {study.tags.length > 0 && (
+                  <div className="study-detail__meta-group">
+                    <h2>Etiquetas</h2>
+                    <div className="tag-list">
+                      {study.tags.map(t => (
+                        <span className="tag" key={t}>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
-            {doc.status === 'missing' && (
-              <div className="empty-state">
-                <h2>Este estudio aún no tiene contenido</h2>
-                <p className="muted">
-                  La ficha existe, pero falta el archivo Markdown. Añádelo en el panel de edición o vuelve
-                  a sincronizar desde el wiki.
-                </p>
-              </div>
-            )}
+            <div className="study-detail__body">
+              <div className="study-detail__main">
+                {doc.status === 'loading' && (
+                  <div className="study-detail__loading">
+                    <div className="loader-pulse" role="status" aria-label="Cargando">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                    <p className="muted">Cargando el contenido del estudio…</p>
+                  </div>
+                )}
 
-            {doc.status === 'ok' && <div className="study-prose" dangerouslySetInnerHTML={{ __html: doc.html }} />}
-          </div>
-        </div>
+                {doc.status === 'missing' && (
+                  <div className="empty-state">
+                    <h2>Este estudio aún no tiene contenido</h2>
+                    <p className="muted">
+                      La ficha existe, pero falta el archivo Markdown. Añádelo en el panel de edición o vuelve
+                      a sincronizar desde el wiki.
+                    </p>
+                  </div>
+                )}
+
+                {doc.status === 'ok' && <div className="study-prose" dangerouslySetInnerHTML={{ __html: doc.html }} />}
+              </div>
+            </div>
+          </>
+        )}
 
         <BibleCta
           passage={study.passage}

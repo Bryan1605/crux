@@ -1,7 +1,8 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 import { parseNote, witnessLabel } from '../data/exegesis';
-import { describeMorph, posLabel, splitOverline } from '../lib/greek';
+import { splitOverline } from '../lib/greek';
+import { LEXICON_LANGS, pickPrimaryMorpheme } from '../lib/lexicon';
 
 import './VersePopover.css';
 
@@ -148,6 +149,7 @@ export function NoteBody({ note, reference }) {
  * `baseEntry` (respaldo TBESG para Strongs fuera de la selección curada).
  */
 export function LexiconBody({
+  lang = 'grc',
   morphemes,
   analysis,
   entry,
@@ -157,6 +159,9 @@ export function LexiconBody({
   reference,
   onOpenDictionary
 }) {
+  const adapter = LEXICON_LANGS[lang] || LEXICON_LANGS.grc;
+  const isHeb = adapter.id === 'heb';
+
   const resolved = useMemo(() => {
     if (Array.isArray(morphemes) && morphemes.length) return morphemes;
     if (Array.isArray(analysis) && analysis.length) {
@@ -171,50 +176,82 @@ export function LexiconBody({
     return [];
   }, [morphemes, analysis]);
 
-  const primary = resolved[0] || null;
+  const primary = pickPrimaryMorpheme(resolved, adapter.id);
   const lemma = primary?.lemma || '';
   const strong = primary?.strong || '';
   const parse = primary?.parse || '';
   const pos = primary?.pos || '';
-  const isNs = resolved.some(m => m.ns);
-  const morph = describeMorph(pos, parse);
-  const kind = morph || entry?.posLabel || baseEntry?.[2] || posLabel(pos);
+  const isNs = !isHeb && resolved.some(m => m.ns);
+  const isArc =
+    isHeb &&
+    (Boolean(token?.aramaic) || resolved.some(m => /^A/.test(m.parse || '')));
+  const wordLang = isHeb ? (isArc ? 'arc' : 'he') : adapter.langAttr;
+  const morph = adapter.formatMorph(pos, parse);
+  const kind = morph || entry?.posLabel || baseEntry?.[2] || adapter.posLabel(pos);
   const translit = entry?.translit || baseEntry?.[1] || '';
   const baseGloss = baseEntry?.[3] || '';
-  const surface = splitOverline(token?.v || token?.plain || '');
+  const surfaceText = token?.v || token?.plain || '';
+  const surface = isHeb ? null : splitOverline(surfaceText);
 
   return (
     <div className="vpop__lex">
       <p className="vpop__ref">{reference}</p>
-      <p className="vpop__lex-word" aria-label={`Palabra: ${token?.plain || lemma || ''}`}>
-        {surface.map((part, i) =>
-          part.overline ? (
-            <i key={i} className="vpop__overline">
-              {part.text}
-            </i>
-          ) : (
-            <span key={i}>{part.text}</span>
-          )
-        )}
-      </p>
+      {isHeb ? (
+        <p
+          className="vpop__lex-word vpop__lex-word--heb"
+          dir="rtl"
+          lang={wordLang}
+          aria-label={`Palabra: ${token?.plain || surfaceText || lemma}`}
+        >
+          {surfaceText || lemma}
+        </p>
+      ) : (
+        <p className="vpop__lex-word" aria-label={`Palabra: ${token?.plain || lemma || ''}`}>
+          {surface.map((part, i) =>
+            part.overline ? (
+              <i key={i} className="vpop__overline">
+                {part.text}
+              </i>
+            ) : (
+              <span key={i}>{part.text}</span>
+            )
+          )}
+        </p>
+      )}
 
       {primary ? (
         <>
           <p className="vpop__lex-head">
-            <span className="vpop__lex-lemma">{lemma}</span>
+            <span
+              className={`vpop__lex-lemma${isHeb ? ' vpop__lex-lemma--heb' : ''}`}
+              dir={isHeb ? 'rtl' : undefined}
+              lang={wordLang}
+            >
+              {lemma}
+            </span>
             {translit ? <span className="vpop__lex-translit">{translit}</span> : null}
           </p>
           {kind ? <p className="vpop__lex-pos">{kind}</p> : null}
 
           {resolved.length > 1 && (
             <ul className="vpop__lex-morphemes" aria-label="Desglose de morfemas">
-              {resolved.map((m, idx) => (
-                <li key={`${m.lemma}-${idx}`}>
-                  <b>{m.lemma}</b>
-                  {m.strong ? <span> · {m.strong}</span> : null}
-                  {describeMorph(m.pos, m.parse) ? <span> · {describeMorph(m.pos, m.parse)}</span> : null}
-                </li>
-              ))}
+              {resolved.map((m, idx) => {
+                const mDesc = adapter.formatMorph(m.pos, m.parse);
+                const mLang = isHeb ? (/^A/.test(m.parse || '') ? 'arc' : 'he') : adapter.langAttr;
+                return (
+                  <li key={`${m.lemma}-${idx}`}>
+                    <b
+                      className={isHeb ? 'vpop__lex-heb-m' : undefined}
+                      dir={isHeb ? 'rtl' : undefined}
+                      lang={mLang}
+                    >
+                      {m.lemma}
+                    </b>
+                    {m.strong ? <span> · {m.strong}</span> : null}
+                    {mDesc ? <span> · {mDesc}</span> : null}
+                  </li>
+                );
+              })}
             </ul>
           )}
 
@@ -222,7 +259,7 @@ export function LexiconBody({
             <p className="vpop__lex-gloss">{entry.gloss}</p>
           ) : baseGloss ? (
             <div className="vpop__lex-base">
-              <span className="vpop__lex-badge">Glosa base (TBESG · inglés)</span>
+              <span className="vpop__lex-badge">Glosa base (TBESH · inglés)</span>
               <p className="vpop__lex-gloss">{baseGloss}</p>
             </div>
           ) : loading ? (
@@ -236,13 +273,16 @@ export function LexiconBody({
         </>
       ) : (
         <p className="vpop__lex-missing">
-          No se pudo alinear esta palabra con MorphGNT. El texto del códice se conserva tal cual.
+          {isHeb
+            ? 'Esta pieza no tiene entrada léxica independiente en OSHB.'
+            : 'No se pudo alinear esta palabra con MorphGNT. El texto del códice se conserva tal cual.'}
         </p>
       )}
 
       <div className="vpop__lex-foot">
         {strong ? <span className="vpop__lex-strong">Strong {strong}</span> : null}
         {isNs ? <span className="vpop__lex-ns">nomen sacrum</span> : null}
+        {isArc ? <span className="vpop__lex-arc">arameo bíblico</span> : null}
         {entry ? (
           <button type="button" className="vpop__lex-link" onClick={onOpenDictionary}>
             Abrir en el diccionario <span aria-hidden="true">→</span>

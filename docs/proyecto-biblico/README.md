@@ -16,8 +16,8 @@ Si eres un agente nuevo, lee en este orden:
 
 ## Estado en una línea
 
-Versión **0.12.0**, **289 rutas** (**288** en `sitemap.xml`), **73 libros**: 66 con NTV, 59 con Codex,
-**7 solo-Codex** y **39 AT en Hebreo/Arameo (WLC / OSHB, Fases 1 y 2)**; **708 paralelos** Codex/NTV y **789 / 929** capítulos hebreos alineados con NTV en `/exegesis` (apagada por defecto, con paralelo de 2 o 3 testigos y fallback sin paralelo forzado en los 140 restantes). Están publicadas **8 traducciones de trabajo** en `borrador` (**3.789 versículos**: los **6/6 libros solo-Codex** —Tobit 232, Judit 327, Sabiduría 435, 4 Macabeos 479, 1 Macabeos 924 y Sirácida 1.364 = **3.761 vv.**— más Salmo 151 con 7 vv. y Joel 4 LXX con 21 vv., con tablas de revisión en `docs/proyecto-biblico/revision/`) y **todas las 73 fichas de libros** (`/biblia/libros/:id`, en `borrador`, con 128 fuentes verificadas en `content/libros/fuentes.json`). En apologética figuran **9 fascículos** (3 publicados: `shincheonji`, `adventismo` y `dispensacionalismo`; 6 anunciados «Próximamente»: Catolicismo Romano Papista, Gnósticos, Islam, Mormonismo · Santos de los Últimos Días, Testigos de Jehová y Judaizantes y Raíces Hebreas). Quedan pendientes la revisión humana de traducciones y fichas, los futuros comentarios capítulo a capítulo y una eventual lematización hebrea.
+Versión **0.13.0**, **289 rutas** (**288** en `sitemap.xml`), **73 libros**: 66 con NTV, 59 con Codex,
+**7 solo-Codex** y **39 AT en Hebreo/Arameo (WLC / OSHB, Fases 1–3 con lematización 100 % y léxico español TBESH)**; **708 paralelos** Codex/NTV y **789 / 929** capítulos hebreos alineados con NTV en `/exegesis` (apagada por defecto, con paralelo de 2 o 3 testigos y fallback sin paralelo forzado en los 140 restantes). Están publicadas **8 traducciones de trabajo** en `borrador` (**3.789 versículos**: los **6/6 libros solo-Codex** —Tobit 232, Judit 327, Sabiduría 435, 4 Macabeos 479, 1 Macabeos 924 y Sirácida 1.364 = **3.761 vv.**— más Salmo 151 con 7 vv. y Joel 4 LXX con 21 vv., con tablas de revisión en `docs/proyecto-biblico/revision/`) y **todas las 73 fichas de libros** (`/biblia/libros/:id`, en `borrador`, con 128 fuentes verificadas en `content/libros/fuentes.json`). En apologética figuran **9 fascículos** (3 publicados: `shincheonji`, `adventismo` y `dispensacionalismo`; 6 anunciados «Próximamente»: Catolicismo Romano Papista, Gnósticos, Islam, Mormonismo · Santos de los Últimos Días, Testigos de Jehová y Judaizantes y Raíces Hebreas). Quedan pendientes la revisión humana de traducciones y fichas y los futuros comentarios capítulo a capítulo.
 Los datos actuales están verificados en `ESTADO.md`.
 
 ## Reglas que no se negocian
@@ -59,6 +59,7 @@ Los datos actuales están verificados en `ESTADO.md`.
 | Fichas | `content/libros/<id>.json` + registro `content/libros/fuentes.json` → `/biblia/libros/<id>` | **73/73 fichas** (66 NTV + 7 solo-Codex, en `borrador`, 128 fuentes) |
 | Hebreo (Fase 1) | `public/textos/hebreo/` (`39` libros WLC/OSHB, `6,47 MB`), `src/assets/fonts/ezra-sil/` y `/biblia/hebreo` | **implementado (Fase 1)**: RTL, Ezra SIL, arameo y ketiv/qere |
 | Hebreo (Fase 2) | `src/components/HebrewVerseTokens.jsx` y columna `hebreo` en `src/pages/Exegesis.jsx` | **implementado (2026-11-23, `0.12.0`)**: apagada por defecto, 2/3 cols (`789/929`) y fallback sin paralelo forzado (`140`) |
+| Hebreo (Fase 3) | `content/lexico/hebreo.json`, `public/textos/hebreo/{lemas/*,lexico,lexico-hebreo-base}.json`, `describeHebrewMorph` | **implementado (2026-11-24, `0.13.0`)**: 39 mapas V2 (`100 %`), 331 curadas (`79,0 %` morfemas) + 8.200 TBESH base |
 
 ## Cómo continuar
 
@@ -71,7 +72,8 @@ El orden acordado es:
 3. ~~**73 fichas introductorias + 6/6 solo-Codex + Salmo 151 y Joel 4 LXX**~~ — completadas en `borrador` (`3.789 vv.` en 8 archivos; Sabiduría, 4 Macabeos, 1 Macabeos y Sirácida añadidos el 2026-11-24); pendiente revisión humana de los borradores y fichas.
 4. ~~**Hebreo, fase 1**~~ — hecho el 2026-11-22 (`public/textos/hebreo/` + lector RTL `/biblia/hebreo`).
 5. ~~**Hebreo, fase 2**~~ — hecho el 2026-11-23 (columna de exégesis apagada por defecto en `/exegesis`, paralelo 2/3 cols, fallback sin paralelo forzado y versión `0.12.0`).
-6. Comentarios capítulo a capítulo (fase futura; no están en el alcance actual).
+6. ~~**Hebreo, fase 3**~~ — hecho el 2026-11-24 (lematización OSHB, léxico curado español + respaldo TBESH, decodificación OSHM y diccionario interactivo en `/biblia/hebreo` y `/exegesis`, versión `0.13.0`).
+7. Comentarios capítulo a capítulo (fase futura; no están en el alcance actual).
 
 No empieces por las 73 fichas ni por traducir los seis libros a la vez. El piloto
 de Tobit y la primera ficha existen para fijar el formato y que el usuario lo

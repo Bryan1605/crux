@@ -9,18 +9,68 @@ import { needsSpaceBefore } from '../lib/hebrew';
  * REGLA: no normaliza el texto Unicode del WLC (sin NFC/NFD); `formatSurface`
  * aplica únicamente filtros visuales de cantilación o niqqud al renderizar.
  */
-export default function HebrewVerseTokens({ tokens, verseNum, formatSurface, onKetivQere, activeKqId }) {
+export default function HebrewVerseTokens({
+  tokens,
+  verseNum,
+  formatSurface,
+  onKetivQere,
+  activeKqId,
+  verseLemmas = null,
+  onWord = null,
+  activeWordId = null
+}) {
   if (!Array.isArray(tokens)) return null;
 
   return tokens.map((tok, idx) => {
     const prev = idx > 0 ? tokens[idx - 1] : null;
     const space = prev && needsSpaceBefore(prev, tok) ? ' ' : null;
+    const morphemes = Array.isArray(verseLemmas?.[idx]) ? verseLemmas[idx] : null;
+
+    const renderLexWord = (rawText, isArc) => {
+      const display = formatSurface(rawText);
+      const wordId = `w-${verseNum}-${idx}`;
+      const active = activeWordId === wordId;
+      const arcClass = isArc ? ' heb-w--arc' : '';
+
+      if (onWord && morphemes?.length) {
+        return (
+          <button
+            type="button"
+            className={`heb-w${arcClass} heb-w--lex${active ? ' is-active' : ''}`}
+            lang={isArc ? 'arc' : undefined}
+            title={isArc ? 'Arameo bíblico · ver análisis léxico' : undefined}
+            aria-expanded={active}
+            onClick={event => {
+              event.stopPropagation();
+              onWord(event.currentTarget, {
+                id: wordId,
+                verse: verseNum,
+                wordIndex: idx,
+                token: { v: display, plain: rawText, aramaic: isArc },
+                morphemes
+              });
+            }}
+          >
+            {display}
+          </button>
+        );
+      }
+
+      if (isArc) {
+        return (
+          <span className="heb-w heb-w--arc" lang="arc" title="Arameo bíblico">
+            {display}
+          </span>
+        );
+      }
+      return display;
+    };
 
     if (typeof tok === 'string') {
       return (
         <Fragment key={idx}>
           {space}
-          {formatSurface(tok)}
+          {renderLexWord(tok, false)}
         </Fragment>
       );
     }
@@ -29,9 +79,7 @@ export default function HebrewVerseTokens({ tokens, verseNum, formatSurface, onK
       return (
         <Fragment key={idx}>
           {space}
-          <span className="heb-w heb-w--arc" lang="arc" title="Arameo bíblico">
-            {formatSurface(tok.a)}
-          </span>
+          {renderLexWord(tok.a, true)}
         </Fragment>
       );
     }

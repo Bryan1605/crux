@@ -8,6 +8,13 @@
  * ordenación por relevancia.
  */
 import { describeMorph, foldGreek, foldText, greekLetter, posLabel } from './greek.js';
+import {
+  describeHebrewMorph,
+  foldHebrew,
+  hebrewLetter,
+  hebrewPosLabel,
+  hebrewSortKey
+} from './hebrew.js';
 
 const GREEK_ORDER = 'αβγδεζηθικλμνξοπρστυφχψω';
 
@@ -38,6 +45,20 @@ export const LEXICON_LANGS = {
     sortKey: greekSortKey,
     formatMorph: describeMorph,
     posLabel
+  },
+  heb: {
+    id: 'heb',
+    label: 'Hebreo y arameo (AT)',
+    title: 'Diccionario hebreo y arameo → español',
+    dir: 'rtl',
+    langAttr: 'he',
+    strongPrefix: 'H',
+    placeholder: 'בְּרֵאשִׁית, reshit, pacto, H7225, 430',
+    fold: foldHebrew,
+    letterOf: hebrewLetter,
+    sortKey: hebrewSortKey,
+    formatMorph: describeHebrewMorph,
+    posLabel: hebrewPosLabel
   }
 };
 
@@ -184,6 +205,7 @@ export function searchLexiconEntries(
     if (letter && adapter.letterOf(item.lemma) !== letter) continue;
     if (filter === 'notes' && !item.note) continue;
     if (filter === 'ns' && !item.ns) continue;
+    if (filter === 'arc' && !item.arc && !item.aramaicCount) continue;
     if ((filter === 'V' || filter === 'N' || filter === 'A' || filter === 'func') && posBucket(item.pos) !== filter) {
       continue;
     }
@@ -208,4 +230,21 @@ export function searchLexiconEntries(
   });
 
   return matched.map(m => m.item);
+}
+
+/**
+ * Selecciona el morfema léxico principal de un token (en hebreo/arameo omite
+ * prefijos inseparables `H9001–H9019` cuando van seguidos de una raíz léxica).
+ */
+export function pickPrimaryMorpheme(morphemes, lang = 'grc') {
+  const list = Array.isArray(morphemes) ? morphemes.filter(Boolean) : [];
+  if (!list.length) return null;
+  if (lang === 'heb') {
+    return (
+      list.find(m => m.strong && !/^H90(0[1-9]|1[0-9])$/.test(m.strong)) ||
+      list.find(m => m.strong) ||
+      list[0]
+    );
+  }
+  return list[0];
 }

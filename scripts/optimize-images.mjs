@@ -72,6 +72,28 @@ if (existsSync(portadaBiblia)) {
   jobs.push([portadaBiblia, join(OUT, 'biblia', 'portada.webp'), 1400, 80]);
 }
 
+// Portadas e ilustraciones de estudios → public/img/estudios/<Rel>.webp
+const estudiosRoot = join(IMG, 'Estudios');
+if (existsSync(estudiosRoot)) {
+  for (const src of walk(estudiosRoot)) {
+    const rel = relative(estudiosRoot, src).replace(/\\/g, '/').replace(/\.(jpe?g|png|webp)$/i, '.webp');
+    jobs.push([src, join(OUT, 'estudios', rel), 1400, 78]);
+  }
+}
+
+// Fundamentos de doctrina — NTV → public/img/estudios/fundamentos/*.webp
+const fundDir = join(IMG, 'Fundamentos', '01_Fundamentos_Teología');
+const fundSources = [
+  ['1_Portada_Estudio.png', 'portada.webp'],
+  ['2_Bloque_I_Posición.png', 'bloque-1-posicion.webp'],
+  ['3_Bloque_II_Gracia_Irrevocable.png', 'bloque-2-gracia.webp'],
+  ['4_Bloque_III_Crecimiento.png', 'bloque-3-crecimiento.webp'],
+  ['5_Bloque_IV_Vocación_y_Misión.png', 'bloque-4-vocacion.webp']
+];
+for (const [srcName, outName] of fundSources) {
+  jobs.push([join(fundDir, srcName), join(OUT, 'estudios', 'fundamentos', outName), 1400, 78]);
+}
+
 let converted = 0;
 let bytes = 0;
 for (const [src, dest, width, quality, force] of jobs) {

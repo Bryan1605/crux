@@ -4,22 +4,31 @@ import { Link, useSearchParams } from 'react-router-dom';
 import BibleCta from '../components/BibleCta';
 import BookIntroPanel from '../components/BookIntroPanel/BookIntroPanel';
 import HebrewVerseTokens from '../components/HebrewVerseTokens';
+import LexiconPanel from '../components/LexiconPanel';
 import ReaderMenu from '../components/ReaderMenu';
-import VersePopover, { KetivQereBody } from '../components/VersePopover';
+import VersePopover, { KetivQereBody, LexiconBody } from '../components/VersePopover';
 import { BOOK_BY_ID } from '../data/exegesis';
 import { hebreoSeo } from '../lib/hebreoSeo';
-import { loadHebreoBook, loadHebreoIndex } from '../lib/hebreoTexts';
+import {
+  loadHebreoBook,
+  loadHebreoIndex,
+  loadHebreoLemas,
+  loadHebreoLexico,
+  loadHebreoLexicoBase
+} from '../lib/hebreoTexts';
 import {
   EZRA_SIL_URL,
   HEBREW_BOOK_BY_ID,
   HEBREW_BOOKS,
   HEBREW_LICENSE_URL,
   HEBREW_SOURCE_URL,
+  TBESH_SOURCE_URL,
   foldHebrew,
   stripCantillation,
   stripNiqqud,
   versePlainText
 } from '../lib/hebrew';
+import { decodeVerseLemmas, pickPrimaryMorpheme } from '../lib/lexicon';
 import { hasSelection } from '../lib/selection';
 import { useSeo, useSite } from '../lib/site';
 
@@ -198,7 +207,20 @@ export default function BibliaHebreo() {
 
   const [index, setIndex] = useState(null);
   const [book, setBook] = useState(null);
+  const [lemas, setLemas] = useState(null);
+  const [lexicon, setLexicon] = useState(null);
+  const [lexiconStatus, setLexiconStatus] = useState('idle');
+  const [lexiconBase, setLexiconBase] = useState(null);
+  const [lexiconBaseStatus, setLexiconBaseStatus] = useState('idle');
   const [error, setError] = useState(false);
+
+  const mountedRef = useRef(true);
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   const [theme, setTheme] = useState(() => {
     const stored = read(KEYS.theme, 'claro');
@@ -222,6 +244,8 @@ export default function BibliaHebreo() {
   const bookId = params.get('libro') || 'genesis';
   const chapterNum = Math.max(1, Number(params.get('cap') || 1));
   const selected = Number(params.get('v')) || null;
+  const dicOpen = params.has('dic');
+  const dicValue = params.get('dic') || '';
 
   const isHebrewBook = HEBREW_BOOK_BY_ID.has(bookId);
   const requestedBookMeta = BOOK_BY_ID.get(bookId);
@@ -246,23 +270,71 @@ export default function BibliaHebreo() {
     };
   }, []);
 
+  const ensureLexicon = useCallback(() => {
+    if (lexicon) return Promise.resolve(lexicon);
+    setLexiconStatus(prev => (prev === 'ok' ? prev : 'loading'));
+    return loadHebreoLexico()
+      .then(data => {
+        if (mountedRef.current) {
+          setLexicon(data);
+          setLexiconStatus('ok');
+        }
+        return data;
+      })
+      .catch(() => {
+        if (mountedRef.current) setLexiconStatus('error');
+        return null;
+      });
+  }, [lexicon]);
+
+  const ensureLexiconBase = useCallback(() => {
+    if (lexiconBase) return Promise.resolve(lexiconBase);
+    setLexiconBaseStatus(prev => (prev === 'ok' ? prev : 'loading'));
+    return loadHebreoLexicoBase()
+      .then(data => {
+        if (mountedRef.current) {
+          setLexiconBase(data);
+          setLexiconBaseStatus('ok');
+        }
+        return data;
+      })
+      .catch(() => {
+        if (mountedRef.current) setLexiconBaseStatus('error');
+        return null;
+      });
+  }, [lexiconBase]);
+
+  const lexiconMap = useMemo(
+    () => new Map((lexicon?.entries || []).map(item => [item.strong, item])),
+    [lexicon]
+  );
+
   useEffect(() => {
     if (!isHebrewBook) {
       setBook(null);
+      setLemas(null);
       setError(false);
       return undefined;
     }
     let alive = true;
     setBook(null);
+    setLemas(null);
     setError(false);
     scrolled.current = null;
     loadHebreoBook(bookId)
       .then(data => alive && setBook(data))
       .catch(() => alive && setError(true));
+    loadHebreoLemas(bookId)
+      .then(data => alive && setLemas(data))
+      .catch(() => alive && setLemas(null));
     return () => {
       alive = false;
     };
   }, [bookId, isHebrewBook]);
+
+  useEffect(() => {
+    if (dicOpen || isHebrewBook) ensureLexicon();
+  }, [dicOpen, isHebrewBook, ensureLexicon]);
 
   useEffect(() => write(KEYS.theme, theme), [theme]);
   useEffect(() => write(KEYS.size, size), [size]);
@@ -305,6 +377,7 @@ export default function BibliaHebreo() {
   const goto = useCallback(
     (next, push = true) => {
       const q = new URLSearchParams(params);
+      if (next.clearDic) q.delete('dic');
       if (next.bookId) q.set('libro', next.bookId);
       if (next.chapter) q.set('cap', String(next.chapter));
       if (next.verse) q.set('v', String(next.verse));
@@ -315,6 +388,41 @@ export default function BibliaHebreo() {
     },
     [params, setParams]
   );
+
+  const openWord = useCallback(
+    (anchor, data) => {
+      const primary = pickPrimaryMorpheme(data.morphemes, 'heb');
+      const primaryStrong = primary?.strong || null;
+      setPop({ kind: 'word', anchor, ...data });
+      select(data.verse, { keepPop: true });
+      if (lexicon) {
+        if (primaryStrong && !lexiconMap.has(primaryStrong)) ensureLexiconBase();
+        return;
+      }
+      ensureLexicon().then(lexData => {
+        if (!primaryStrong) return;
+        const inCurated = lexData?.entries?.some(item => item.strong === primaryStrong);
+        if (!inCurated) ensureLexiconBase();
+      });
+    },
+    [lexicon, lexiconMap, select, ensureLexicon, ensureLexiconBase]
+  );
+
+  const openLexicon = useCallback(
+    (strong = '') => {
+      const q = new URLSearchParams(params);
+      q.set('dic', strong);
+      setPop(null);
+      setParams(q, { replace: true });
+    },
+    [params, setParams]
+  );
+
+  const closeLexicon = useCallback(() => {
+    const q = new URLSearchParams(params);
+    q.delete('dic');
+    setParams(q, { replace: true });
+  }, [params, setParams]);
 
   useEffect(() => {
     if (!navOpen) return undefined;
@@ -459,6 +567,12 @@ export default function BibliaHebreo() {
     );
   }
 
+  const wordPrimaryStrong =
+    pop?.kind === 'word' ? pickPrimaryMorpheme(pop.morphemes, 'heb')?.strong || null : null;
+  const wordEntry = wordPrimaryStrong ? lexiconMap.get(wordPrimaryStrong) || null : null;
+  const wordBaseEntry =
+    wordPrimaryStrong && !wordEntry ? lexiconBase?.entries?.[wordPrimaryStrong] || null : null;
+
   const commitShort = index?.source?.commit ? index.source.commit.slice(0, 7) : 'OSHB';
 
   return (
@@ -508,6 +622,17 @@ export default function BibliaHebreo() {
               </span>
               <span>Comparar en Exégesis</span>
             </Link>
+            <button
+              type="button"
+              className="exg-tool"
+              onClick={() => openLexicon('')}
+              aria-haspopup="dialog"
+            >
+              <span className="exg-tool__glyph heb-tool-glyph" lang="he" aria-hidden="true">
+                מ
+              </span>
+              <span>Diccionario hebreo</span>
+            </button>
           </div>
         </header>
 
@@ -671,6 +796,16 @@ export default function BibliaHebreo() {
               <span aria-hidden="true">{showVowels ? '☑' : '☐'}</span>
               <span className="rmenu__text">Vocales (niqqud)</span>
             </button>
+            <button
+              type="button"
+              className="rb-btn"
+              onClick={() => openLexicon('')}
+              title="Diccionario hebreo y arameo → español"
+              aria-haspopup="dialog"
+            >
+              <span aria-hidden="true" lang="he">מ</span>
+              <span className="rmenu__text">Diccionario</span>
+            </button>
           </ReaderMenu>
         </div>
 
@@ -764,11 +899,14 @@ export default function BibliaHebreo() {
                         tokens={verse.t}
                         verseNum={verse.n}
                         formatSurface={formatSurface}
-                        activeKqId={pop?.id || null}
+                        verseLemmas={decodeVerseLemmas(lemas, chapter.num, verse.n)}
+                        activeKqId={pop?.kind === 'kq' ? pop.id : null}
+                        activeWordId={pop?.kind === 'word' ? pop.id : null}
                         onKetivQere={(anchor, data) => {
-                          setPop({ anchor, ...data });
+                          setPop({ kind: 'kq', anchor, ...data });
                           select(verse.n, { keepPop: true });
                         }}
+                        onWord={openWord}
                       />
                     </div>
                   </div>
@@ -851,8 +989,9 @@ export default function BibliaHebreo() {
         <footer className="exg__credits heb__credits">
           <p>
             <strong>Fuentes y licencias:</strong> texto hebreo y arameo base del{' '}
-            <em>Westminster Leningrad Codex</em> (WLC, dominio público); marcado OSIS, arameo
-            palabra por palabra, variantes <em>ketiv / qere</em> y mapa de versificación de{' '}
+            <em>Westminster Leningrad Codex</em> (WLC, dominio público); marcado OSIS, lemas,
+            morfología, arameo palabra por palabra, variantes <em>ketiv / qere</em> y mapa de
+            versificación de{' '}
             <a href={HEBREW_SOURCE_URL} target="_blank" rel="noopener noreferrer">
               Open Scriptures Hebrew Bible (OSHB, rev. {commitShort})
             </a>{' '}
@@ -860,7 +999,11 @@ export default function BibliaHebreo() {
             <a href={HEBREW_LICENSE_URL} target="_blank" rel="noopener noreferrer">
               CC BY 4.0
             </a>
-            . Tipografía{' '}
+            . Léxico base de{' '}
+            <a href={TBESH_SOURCE_URL} target="_blank" rel="noopener noreferrer">
+              TBESH / STEPBible
+            </a>{' '}
+            (CC BY 4.0), con traducción y decodificación morfológica propias al español. Tipografía{' '}
             <a href={EZRA_SIL_URL} target="_blank" rel="noopener noreferrer">
               Ezra SIL 2.51
             </a>{' '}
@@ -879,12 +1022,13 @@ export default function BibliaHebreo() {
         />
 
         <p className="exg__hint">
-          Usa ← → para cambiar de capítulo · lectura de derecha a izquierda (RTL) · pulsa sobre un{' '}
-          <em>ketiv / qere</em> para ver la nota masorética
+          Usa ← → para cambiar de capítulo · lectura de derecha a izquierda (RTL) · pulsa una palabra
+          para ver su lema, morfología y glosa · pulsa un <em>ketiv / qere</em> para ver la nota
+          masorética
         </p>
       </div>
 
-      {pop && (
+      {pop?.kind === 'kq' && (
         <VersePopover
           anchor={pop.anchor}
           label={`Ketiv / Qere · ${book?.name} ${chapterNum}:${pop.verse}`}
@@ -897,6 +1041,43 @@ export default function BibliaHebreo() {
             reference={`${book?.name} ${chapterNum}:${pop.verse}`}
           />
         </VersePopover>
+      )}
+
+      {pop?.kind === 'word' && (
+        <VersePopover
+          anchor={pop.anchor}
+          label={`Palabra · ${book?.name} ${chapterNum}:${pop.verse}`}
+          onClose={() => setPop(null)}
+        >
+          <LexiconBody
+            lang="heb"
+            morphemes={pop.morphemes}
+            entry={wordEntry}
+            baseEntry={wordBaseEntry}
+            loading={
+              lexiconStatus === 'loading' ||
+              (Boolean(wordPrimaryStrong) && !wordEntry && lexiconBaseStatus === 'loading')
+            }
+            token={pop.token}
+            reference={`${book?.name} ${chapterNum}:${pop.verse}`}
+            onOpenDictionary={() => openLexicon(wordPrimaryStrong || '')}
+          />
+        </VersePopover>
+      )}
+
+      {dicOpen && (
+        <LexiconPanel
+          lang="heb"
+          lexicon={lexicon}
+          loading={lexiconStatus === 'loading' || lexiconStatus === 'idle'}
+          error={lexiconStatus === 'error'}
+          value={dicValue}
+          onSelect={openLexicon}
+          onGoToVerse={(targetBook, cap, v) =>
+            goto({ bookId: targetBook, chapter: cap, verse: v, clearDic: true })
+          }
+          onClose={closeLexicon}
+        />
       )}
     </main>
   );

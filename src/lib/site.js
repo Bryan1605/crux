@@ -126,6 +126,13 @@ const DEFAULTS = {
     description: 'Crux: estudios bíblicos, videos y recursos para aprender la Escritura con fundamento.',
     ogImage: '/img/banners/herobanner1.webp'
   },
+  apariencia: {
+    accent: '',
+    showManifesto: true,
+    showBanner: true,
+    showBridges: true,
+    showApologetica: true
+  },
   personajesCategoryId: '03-personajes'
 };
 
@@ -159,7 +166,21 @@ function buildSite(raw) {
   return normalizeAssets(deepMerge(DEFAULTS, raw || {}));
 }
 
+function applySiteTheme(site) {
+  if (typeof document === 'undefined') return;
+  const root = document.documentElement;
+  const accent = String(site?.apariencia?.accent || '').trim();
+  if (accent) {
+    root.style.setProperty('--site-accent', accent);
+    root.dataset.siteAccent = 'custom';
+  } else {
+    root.style.removeProperty('--site-accent');
+    delete root.dataset.siteAccent;
+  }
+}
+
 let SITE = buildSite(siteData);
+applySiteTheme(SITE);
 
 export function getSite() {
   return SITE;
@@ -175,6 +196,7 @@ export async function reloadSite() {
       if (res.ok) {
         const { raw } = await res.json();
         SITE = buildSite(JSON.parse(raw));
+        applySiteTheme(SITE);
         window.dispatchEvent(new CustomEvent('crux:site-updated', { detail: SITE }));
         return SITE;
       }
@@ -190,6 +212,9 @@ export async function reloadSite() {
  */
 export function useSite() {
   const [site, setSite] = useState(SITE);
+  useEffect(() => {
+    applySiteTheme(site);
+  }, [site]);
   useEffect(() => {
     if (!import.meta.env.DEV) return undefined;
     const handler = e => setSite(e.detail);

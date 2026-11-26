@@ -7,6 +7,8 @@ export default function PublishBar() {
   const [diff, setDiff] = useState(null);
   const [showDiff, setShowDiff] = useState(false);
   const [publishing, setPublishing] = useState(false);
+  const [restoring, setRestoring] = useState('');
+  const [commitMsg, setCommitMsg] = useState('');
   const [msg, setMsg] = useState(null);
   const [history, setHistory] = useState(null);
 
@@ -15,7 +17,7 @@ export default function PublishBar() {
       const s = await api('/status');
       setStatus(s);
       setMsg(null);
-    } catch (e) {
+    } catch {
       // no git repo: ignorar
       setStatus(null);
     }
@@ -44,8 +46,13 @@ export default function PublishBar() {
     setPublishing(true);
     setMsg(null);
     try {
-      const r = await api('/publish', { method: 'POST' });
+      const r = await api('/publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: commitMsg.trim() })
+      });
       setMsg({ type: 'ok', text: '¡Publicado! ' + (r.commit || '') });
+      setCommitMsg('');
       await check();
       setShowDiff(false);
     } catch (e) {
@@ -66,6 +73,28 @@ export default function PublishBar() {
     loadHistory();
   }, []);
 
+  const restore = async backup => {
+    if (!window.confirm(`¿Restaurar ${backup}? Se guardará una copia de seguridad de la versión actual.`)) return;
+    setRestoring(backup);
+    setMsg(null);
+    try {
+      const res = await api('/history/restore', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ backup })
+      });
+      setMsg({
+        type: 'ok',
+        text: `Restaurado content/${res.restored}. Recarga el editor correspondiente si lo tenías abierto.`
+      });
+      await Promise.all([check(), loadHistory()]);
+    } catch (e) {
+      setMsg({ type: 'error', text: `No se pudo restaurar: ${e.message}` });
+    } finally {
+      setRestoring('');
+    }
+  };
+
   return (
     <section className="admin__publish">
       <div className="admin__publish-head">
@@ -80,6 +109,7 @@ export default function PublishBar() {
           {status && !status.clean && (
             <ul className="admin__publish-changes">
               {status.changes.slice(0, 12).map((c, i) => <li key={i}><code>{c}</code></li>)}
+              {status.changes.length > 12 && <li className="muted">… y {status.changes.length - 12} más</li>}
             </ul>
           )}
         </div>
@@ -93,6 +123,18 @@ export default function PublishBar() {
           </button>
         </div>
       </div>
+
+      {status && !status.clean && (
+        <div className="admin__publish-msg">
+          <input
+            value={commitMsg}
+            onChange={e => setCommitMsg(e.target.value)}
+            placeholder="Mensaje del commit (opcional, p. ej. feat(estudios): nuevo tema)"
+            aria-label="Mensaje del commit"
+          />
+        </div>
+      )}
+
       {msg && (
         <p className="admin__status">
           <span className={msg.type === 'error' ? 'is-error' : 'is-ok'}>{msg.text}</span>
@@ -100,7 +142,7 @@ export default function PublishBar() {
       )}
       {showDiff && diff && (
         <details className="admin__diff" open>
-          <summary>Diff (content/ + public/img/)</summary>
+          <summary>Diff (content/ + public/img/ + trad/)</summary>
           <pre className="admin__diff-body">{diff.slice(0, 8000)}{diff.length > 8000 ? '\n…(truncado)' : ''}</pre>
         </details>
       )}
@@ -109,7 +151,17 @@ export default function PublishBar() {
           <summary>Historial de backups ({history.length})</summary>
           <ul className="admin__history-list">
             {history.slice(0, 30).map(h => (
-              <li key={h}><code>{h}</code></li>
+              <li key={h} className="admin__history-item">
+                <code>{h}</code>
+                <button
+                  type="button"
+                  className="admin__btn"
+                  disabled={restoring === h}
+                  onClick={() => restore(h)}
+                >
+                  {restoring === h ? 'Restaurando…' : 'Restaurar'}
+                </button>
+              </li>
             ))}
           </ul>
         </details>

@@ -100,6 +100,17 @@ export function validateSite(obj) {
   required(obj.seo, 'ogImage', 'string', 'seo');
 
   required(obj, 'personajesCategoryId', 'string', 'site');
+
+  const apariencia = optional(obj, 'apariencia', 'object', 'site', undefined);
+  if (apariencia) {
+    const accent = optional(apariencia, 'accent', 'string', 'apariencia', '');
+    if (accent && !/^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(accent)) {
+      throw new Error('apariencia: "accent" debe ser un color hexadecimal (#rgb o #rrggbb)');
+    }
+    for (const k of ['showManifesto', 'showBanner', 'showBridges', 'showApologetica']) {
+      if (k in apariencia) required(apariencia, k, 'boolean', 'apariencia');
+    }
+  }
   return true;
 }
 
@@ -499,6 +510,28 @@ export function validateLexico(obj) {
   return true;
 }
 
+// --- léxico hebreo/arameo (fuente editable) ---
+export function validateLexicoHebreo(obj) {
+  const label = 'lexico-hebreo';
+  required(obj, 'version', 'number', label);
+  if (![1, 2].includes(obj.version)) throw new Error(`${label}: versión desconocida (${obj.version})`);
+
+  const glosas = required(obj, 'glosas', 'object', label);
+  const keys = Object.keys(glosas);
+  if (keys.length < 250) throw new Error(`${label}.glosas: se esperaban al menos 250 entradas y hay ${keys.length}`);
+  for (const [strong, gloss] of Object.entries(glosas)) {
+    if (!/^H\d{4,5}[A-Z]?$/.test(strong)) throw new Error(`${label}.glosas: Strong inválido "${strong}"`);
+    if (!isString(gloss) || !gloss.trim()) throw new Error(`${label}.glosas.${strong}: glosa vacía`);
+  }
+
+  const notas = optional(obj, 'notas', 'object', label, {});
+  for (const [strong, note] of Object.entries(notas)) {
+    if (!(strong in glosas)) throw new Error(`${label}.notas.${strong}: no existe esa glosa`);
+    if (!isString(note) || !note.trim()) throw new Error(`${label}.notas.${strong}: nota vacía`);
+  }
+  return true;
+}
+
 /**
  * Valida un archivo `content/apologetica/<slug>-preguntas.json`: bloques,
  * cantidad esperada de preguntas numeradas, clave y referencias válidas.
@@ -660,6 +693,7 @@ export const VALIDATORS = {
   narraciones: validateNarraciones,
   'obras-patristica': validateObrasPatristica,
   lexico: validateLexico,
+  'lexico-hebreo': validateLexicoHebreo,
   fuentes: validateFuentes,
   libro: validateLibro,
   'apologetica-preguntas': validateApologeticaPreguntas,

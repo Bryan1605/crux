@@ -162,6 +162,7 @@ function iterateVerseNodes(body) {
 export function parseOsisVerse(verseNum, verseBody, osisID) {
   const nodes = iterateVerseNodes(verseBody);
   const tokens = [];
+  const lemmas = [];
   let ketivParts = [];
 
   const stats = {
@@ -202,6 +203,10 @@ export function parseOsisVerse(verseNum, verseBody, osisID) {
       } else {
         tokens.push(wordText);
       }
+      lemmas.push({
+        lemma: node.attrs.lemma || '',
+        morph: node.attrs.morph || ''
+      });
       continue;
     }
 
@@ -224,18 +229,25 @@ export function parseOsisVerse(verseNum, verseBody, osisID) {
 
       if (segType === 'x-maqqef') {
         tokens.push(segText || '\u05BE');
+        lemmas.push(null);
       } else if (segType === 'x-sof-pasuq') {
         tokens.push(segText || '\u05C3');
+        lemmas.push(null);
       } else if (segType === 'x-paseq') {
         tokens.push(segText || '\u05C0');
+        lemmas.push(null);
       } else if (segType === 'x-pe') {
         tokens.push({ p: segText || '\u05E4' });
+        lemmas.push(null);
       } else if (segType === 'x-samekh') {
         tokens.push({ p: segText || '\u05E1' });
+        lemmas.push(null);
       } else if (segType === 'x-reversednun') {
         tokens.push({ p: segText || '\u05C6', t: 'nun' });
+        lemmas.push(null);
       } else if (segText) {
         tokens.push({ p: segText, t: segType.replace(/^x-/, '') });
+        lemmas.push(null);
       }
       continue;
     }
@@ -280,6 +292,7 @@ export function parseOsisVerse(verseNum, verseBody, osisID) {
       else throw new Error(`${osisID}: note variant vacía (sin ketiv ni qere)`);
 
       tokens.push(entry);
+      lemmas.push(null);
     }
   }
 
@@ -289,7 +302,7 @@ export function parseOsisVerse(verseNum, verseBody, osisID) {
     throw new Error(`${osisID}: versículo vacío tras parsear`);
   }
 
-  return { n: verseNum, tokens, stats };
+  return { n: verseNum, tokens, lemmas, stats };
 }
 
 /**

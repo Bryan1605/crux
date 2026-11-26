@@ -53,9 +53,9 @@ function cardData(entry) {
       cta: d.cta || 'Leer ficha'
     };
   }
-  // Los estudios no llevan imagen: la card muestra el libro del pasaje.
+  // Si el estudio tiene portada en su frontmatter, la mostramos; si no, el libro del pasaje.
   return {
-    images: [],
+    images: d.portada ? [d.portada] : [],
     position: 'center',
     mark: bookMark(d.passage, d.title),
     badge: d.number ? `Nº ${d.number}` : '',

@@ -157,6 +157,14 @@
   overflow-wrap: anywhere;
 }
 
+.vpop__lex-word--heb {
+  font-family: var(--font-hebrew, 'Ezra SIL', 'SBL Hebrew', serif);
+  font-size: 1.85rem;
+  line-height: 1.65;
+  text-align: right;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'mark' 1, 'mkmk' 1;
+}
+
 .vpop__overline {
   font-style: normal;
   text-decoration: overline;
@@ -175,6 +183,19 @@
   font-family: var(--font-greek, 'Palatino Linotype', 'Times New Roman', 'Noto Serif', Georgia, serif);
   font-size: 1.05rem;
   color: var(--text);
+}
+
+.vpop__lex-lemma--heb,
+.vpop__lex-heb-m {
+  font-family: var(--font-hebrew, 'Ezra SIL', 'SBL Hebrew', serif);
+  font-size: 1.22rem;
+  line-height: 1.5;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'mark' 1, 'mkmk' 1;
+}
+
+.vpop__lex-heb-m {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .vpop__lex-translit {
@@ -257,7 +278,8 @@
 }
 
 .vpop__lex-strong,
-.vpop__lex-ns {
+.vpop__lex-ns,
+.vpop__lex-arc {
   padding: 0.1rem 0.4rem;
   font-size: 0.66rem;
   letter-spacing: 0.06em;
@@ -269,6 +291,11 @@
 .vpop__lex-ns {
   color: #d6b25e;
   border-color: color-mix(in srgb, #d6b25e 45%, transparent);
+}
+
+.vpop__lex-arc {
+  color: #6fd6c8;
+  border-color: color-mix(in srgb, #6fd6c8 45%, transparent);
 }
 
 .vpop__lex-link {

@@ -32,3 +32,12 @@ export const loadHebreoIndex = () => loadJson('/textos/hebreo/index.json');
  * @param {string} bookId p. ej. `genesis`, `daniel`, `rut`
  */
 export const loadHebreoBook = bookId => loadJson(`/textos/hebreo/${bookId}.json`);
+
+/** Mapa de lemas palabra a palabra (OSHB / WLC, formato V2 compacto). */
+export const loadHebreoLemas = bookId => loadJson(`/textos/hebreo/lemas/${bookId}.json`);
+
+/** Diccionario curado hebreo/arameo → español (con conteos del AT). */
+export const loadHebreoLexico = () => loadJson('/textos/hebreo/lexico.json');
+
+/** Respaldo bajo demanda TBESH completo (8 200 Strongs adicionales en inglés). */
+export const loadHebreoLexicoBase = () => loadJson('/textos/hebreo/lexico-hebreo-base.json');

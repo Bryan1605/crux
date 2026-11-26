@@ -36,7 +36,7 @@ const readJson = async file => JSON.parse(await readFile(file, 'utf8'));
 /* -------------------------------------------------------------------------- */
 
 const pkg = await readJson(path.join(ROOT, 'package.json'));
-check('Versión de package.json en 0.12.0 (Hebreo Fase 2)', pkg.version === '0.12.0', pkg.version);
+check('Versión de package.json en 0.13.0 (Hebreo Fase 3)', pkg.version === '0.13.0', pkg.version);
 
 const index = await readJson(path.join(DATA_DIR, 'index.json'));
 check(
@@ -216,6 +216,50 @@ check(
   'Ruta /biblia/hebreo registrada en routes-lib.mjs con SEO coincidente',
   Boolean(registered && registered.indexable && registered.title === expectedSeo.title && registered.description === expectedSeo.description),
   `${routes.length} rutas totales`
+);
+
+// Fase 3: mapas de lemas 1:1 y léxico curado + respaldo TBESH
+let alignedLemmaVerses = 0;
+let alignedLemmaTokens = 0;
+let lemmaMismatch = 0;
+for (const meta of HEBREW_BOOKS) {
+  const book = booksById.get(meta.id);
+  const lemas = await readJson(path.join(DATA_DIR, 'lemas', `${meta.id}.json`));
+  if (lemas?.version !== 2 || !Array.isArray(lemas.dict)) {
+    lemmaMismatch += 1;
+    continue;
+  }
+  for (const ch of book.chapters) {
+    for (const v of ch.verses) {
+      const row = lemas.verses?.[`${ch.num}:${v.n}`];
+      if (!Array.isArray(row) || row.length !== v.t.length) {
+        lemmaMismatch += 1;
+      } else {
+        alignedLemmaVerses += 1;
+        alignedLemmaTokens += row.filter(Boolean).length;
+      }
+    }
+  }
+}
+check(
+  '39 mapas hebreos V2 alineados 1:1 con cada token WLC',
+  lemmaMismatch === 0 && alignedLemmaVerses === sumVerses && alignedLemmaTokens >= 300000,
+  `${alignedLemmaVerses} vv · ${alignedLemmaTokens} tokens lematizados · desajustes=${lemmaMismatch}`
+);
+
+const hebLexico = await readJson(path.join(DATA_DIR, 'lexico.json'));
+const hebLexBase = await readJson(path.join(DATA_DIR, 'lexico-hebreo-base.json'));
+check(
+  'Léxico hebreo V2 y respaldo TBESH completos',
+  hebLexico?.version === 2 &&
+    hebLexico?.lang === 'heb' &&
+    hebLexico?.count >= 250 &&
+    hebLexico?.entries?.some(e => e.strong === 'H7225') &&
+    hebLexico?.entries?.some(e => e.strong === 'H0430') &&
+    hebLexico?.entries?.some(e => e.strong === 'H4430' && e.arc) &&
+    hebLexBase?.version === 2 &&
+    hebLexBase?.count >= 8000,
+  `${hebLexico?.count} curadas (${((hebLexico?.coverage || 0) * 100).toFixed(1)} % morfemas) + ${hebLexBase?.count} base TBESH`
 );
 
 /* -------------------------------------------------------------------------- */
@@ -484,10 +528,89 @@ if (WITH_BROWSER) {
       /Ketiv/.test(exgKqText) && /Qere/.test(exgKqText) && exgKqClosed
     );
 
+    // Fase 3: palabras clicables, popover morfológico, arameo y diccionario hebreo
+    await goto('/biblia/hebreo?libro=genesis&cap=1', 700);
+    await page.click('.heb-row[data-v="1"] .heb-w--lex');
+    await page.waitForSelector('.vpop__lex', { timeout: 5000 });
+    const hebPopGen = await page.$eval('.vpop__lex', el => ({
+      text: el.textContent,
+      morphemes: el.querySelectorAll('.vpop__lex-morphemes li').length
+    }));
+    check(
+      'Biblia Hebrea Fase 3: pulsar בְּרֵאשִׁית abre ficha con H7225 y desglose prefijo + raíz',
+      /H7225/.test(hebPopGen.text) && hebPopGen.morphemes === 2 && /principio/i.test(hebPopGen.text),
+      `morfemas=${hebPopGen.morphemes}`
+    );
+    await page.click('.vpop__lex-link');
+    await page.waitForSelector('.lex[role="dialog"]', { timeout: 5000 });
+    await wait(300);
+    const dicGenPanel = await page.$eval('.lex', el => ({
+      title: el.querySelector('#lex-title')?.textContent || '',
+      strong: el.querySelector('.lex-entry__strong')?.textContent || '',
+      letters: el.querySelectorAll('.lex__letter--heb').length
+    }));
+    await page.select('#lex-filter', 'arc');
+    await wait(200);
+    const arcCount = await page.$$eval('.lex__item', els => els.length);
+    await page.keyboard.press('Escape');
+    await wait(200);
+    check(
+      'Biblia Hebrea Fase 3: diccionario hebreo abre ficha H7225, alefato y filtro Arameo',
+      /hebreo/i.test(dicGenPanel.title) &&
+        /H7225/.test(dicGenPanel.strong) &&
+        dicGenPanel.letters >= 20 &&
+        arcCount >= 20,
+      `letras=${dicGenPanel.letters} · filtroArc=${arcCount}`
+    );
+
+    // Arameo clicable en Gn 31:47 y Dn 2:4
+    await goto('/biblia/hebreo?libro=genesis&cap=31&v=47', 600);
+    await page.click('.heb-row[data-v="47"] .heb-w--arc.heb-w--lex');
+    await page.waitForSelector('.vpop__lex', { timeout: 5000 });
+    const g31LexText = await page.$eval('.vpop__lex', el => el.textContent);
+    await page.keyboard.press('Escape');
+    await wait(150);
+    check(
+      'Biblia Hebrea Fase 3: palabra aramea en Génesis 31:47 muestra insignia de arameo bíblico',
+      /arameo bíblico/i.test(g31LexText) && /H3026/.test(g31LexText)
+    );
+
+    await goto('/biblia/hebreo?libro=daniel&cap=2&v=4', 600);
+    await page.click('.heb-row[data-v="4"] .heb-w--arc.heb-w--lex');
+    await page.waitForSelector('.vpop__lex', { timeout: 5000 });
+    const d2LexText = await page.$eval('.vpop__lex', el => el.textContent);
+    await page.keyboard.press('Escape');
+    await wait(150);
+    check(
+      'Biblia Hebrea Fase 3: palabra aramea en Daniel 2:4 abre análisis morfológico arameo',
+      /arameo bíblico/i.test(d2LexText) && /H4430/.test(d2LexText) && /arameo/i.test(d2LexText)
+    );
+
+    // Exégesis Fase 3: palabra hebrea clicable + LexiconPanel H0430
+    await goto('/exegesis?libro=genesis&cap=1&hebreo=1', 700);
+    await page.click('.exg-row[data-v="1"] .exg-hebreo .heb-w--lex');
+    await page.waitForSelector('.vpop__lex', { timeout: 5000 });
+    const exgHebPop = await page.$eval('.vpop__lex', el => el.textContent);
+    await page.keyboard.press('Escape');
+    await wait(150);
+    await goto('/exegesis?libro=genesis&cap=1&hebreo=1&dic=H0430', 700);
+    await page.waitForSelector('.lex[role="dialog"]', { timeout: 5000 });
+    const exgDicHeb = await page.$eval('.lex-entry', el => ({
+      strong: el.querySelector('.lex-entry__strong')?.textContent || '',
+      lemma: el.querySelector('.lex-entry__lemma')?.getAttribute('dir') || ''
+    }));
+    await page.keyboard.press('Escape');
+    await wait(150);
+    check(
+      'Exégesis Fase 3: columna hebrea abre análisis léxico y LexiconPanel en H0430 (RTL)',
+      /H7225/.test(exgHebPop) && /H0430/.test(exgDicHeb.strong) && exgDicHeb.lemma === 'rtl'
+    );
+
     // Móvil 390px sin desbordamiento horizontal
     await page.setViewport({ width: 390, height: 844 });
     for (const mobileUrl of [
       '/biblia/hebreo?libro=genesis&cap=1',
+      '/biblia/hebreo?libro=genesis&cap=1&dic=H7225',
       '/biblia/hebreo?libro=daniel&cap=2',
       '/exegesis?libro=genesis&cap=21&hebreo=1'
     ]) {
